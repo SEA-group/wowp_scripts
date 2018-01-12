@@ -288,8 +288,6 @@
           <health>50%</health>
           <componentType>Engine</componentType>
           <componentPosition>	Left	</componentPosition>
-          <componentXml>
-          </componentXml>
           <repairDestructedAfter>	20.000000	</repairDestructedAfter>
           <states>
             <state>
@@ -323,33 +321,27 @@
               <effectsTriggered>
                 <effect>
                   <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <name>nzf_pegas</name>
                   <mountPoint>plane/HP_nozzle_01</mountPoint>
                 </effect>
                 <effect>
                   <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <name>nzf_pegas</name>
                   <mountPoint>plane/HP_nozzle_02</mountPoint>
                 </effect>
                 <effect>
                   <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <name>nzf_pegas_forsage</name>
                   <mountPoint>plane/HP_nozzle_01</mountPoint>
                 </effect>
                 <effect>
                   <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <name>nzf_pegas_forsage</name>
                   <mountPoint>plane/HP_nozzle_02</mountPoint>
                 </effect>
               </effectsTriggered>
               <stateAction>	0	</stateAction>
               <stateFireChance>	0.200000	</stateFireChance>
-              <animationController>
-              </animationController>
-              <fallingOutModel>
-              </fallingOutModel>
-              <stateAnimation>
-              </stateAnimation>
               <effectState>
                 <effect>
                   <name>aim_trail_on_engine</name>
@@ -385,6 +377,30 @@
                   <animatorName>PropellorTextureForsageControllerR</animatorName>
                 </item>
               </subItems>
+              <effectsTriggered>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>nzf_pegas</name>
+                  <mountPoint>plane/HP_nozzle_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>nzf_pegas</name>
+                  <mountPoint>plane/HP_nozzle_02</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>nzf_pegas_forsage</name>
+                  <mountPoint>plane/HP_nozzle_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>nzf_pegas_forsage</name>
+                  <mountPoint>plane/HP_nozzle_02</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
               <effectState>
                 <effect>
                   <name>crit_engine_damaged_yellow</name>
@@ -399,36 +415,6 @@
                   <mountPoint>HP_engineL</mountPoint>
                 </effect>
               </effectState>
-              <effectsTriggered>
-                <effect>
-                  <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
-                  <mountPoint>plane/HP_nozzle_01</mountPoint>
-                </effect>
-                <effect>
-                  <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
-                  <mountPoint>plane/HP_nozzle_02</mountPoint>
-                </effect>
-                <effect>
-                  <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
-                  <mountPoint>plane/HP_nozzle_01</mountPoint>
-                </effect>
-                <effect>
-                  <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
-                  <mountPoint>plane/HP_nozzle_02</mountPoint>
-                </effect>
-              </effectsTriggered>
-              <stateAction>	0	</stateAction>
-              <stateFireChance>	0.200000	</stateFireChance>
-              <animationController>
-              </animationController>
-              <fallingOutModel>
-              </fallingOutModel>
-              <stateAnimation>
-              </stateAnimation>
             </state>
             <state>
               <id>	3	</id>
@@ -458,6 +444,30 @@
                   <animatorName>PropellorTextureForsageControllerR</animatorName>
                 </item>
               </subItems>
+              <effectsTriggered>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>nzf_pegas</name>
+                  <mountPoint>plane/HP_nozzle_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>nzf_pegas</name>
+                  <mountPoint>plane/HP_nozzle_02</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>nzf_pegas_forsage</name>
+                  <mountPoint>plane/HP_nozzle_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>nzf_pegas_forsage</name>
+                  <mountPoint>plane/HP_nozzle_02</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
               <effectState>
                 <effect>
                   <name>crit_engine_damaged</name>
@@ -472,36 +482,6 @@
                   <mountPoint>HP_engineL</mountPoint>
                 </effect>
               </effectState>
-              <effectsTriggered>
-                <effect>
-                  <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
-                  <mountPoint>plane/HP_nozzle_01</mountPoint>
-                </effect>
-                <effect>
-                  <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
-                  <mountPoint>plane/HP_nozzle_02</mountPoint>
-                </effect>
-                <effect>
-                  <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
-                  <mountPoint>plane/HP_nozzle_01</mountPoint>
-                </effect>
-                <effect>
-                  <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
-                  <mountPoint>plane/HP_nozzle_02</mountPoint>
-                </effect>
-              </effectsTriggered>
-              <stateAction>	0	</stateAction>
-              <stateFireChance>	0.200000	</stateFireChance>
-              <animationController>
-              </animationController>
-              <fallingOutModel>
-              </fallingOutModel>
-              <stateAnimation>
-              </stateAnimation>
               <effectOnStart>
                 <effect>
                   <name>crit_engine_expl</name>
@@ -536,6 +516,8 @@
                   <animatorName>PropellorTextureForsageControllerR</animatorName>
                 </item>
               </subItems>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
               <effectState>
                 <effect>
                   <name>EFFECT_FIRE_ENGINE_small</name>
@@ -546,18 +528,8 @@
                   <mountPoint>plane/HP_nozzle_02</mountPoint>
                 </effect>
               </effectState>
-              <stateAction>	0	</stateAction>
-              <stateFireChance>	0.200000	</stateFireChance>
-              <animationController>
-              </animationController>
-              <fallingOutModel>
-              </fallingOutModel>
-              <stateAnimation>
-              </stateAnimation>
             </state>
           </states>
-          <fireMountPoint>
-          </fireMountPoint>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
         </upgrade>
         <groupId>	0	</groupId>
@@ -581,8 +553,6 @@
           <health>50%</health>
           <componentType>Engine</componentType>
           <componentPosition>Right</componentPosition>
-          <componentXml>
-          </componentXml>
           <repairDestructedAfter>	20.000000	</repairDestructedAfter>
           <states>
             <state>
@@ -616,33 +586,27 @@
               <effectsTriggered>
                 <effect>
                   <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <name>nzf_pegas</name>
                   <mountPoint>plane/HP_nozzle_03</mountPoint>
                 </effect>
                 <effect>
                   <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <name>nzf_pegas</name>
                   <mountPoint>plane/HP_nozzle_04</mountPoint>
                 </effect>
                 <effect>
                   <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <name>nzf_pegas_forsage</name>
                   <mountPoint>plane/HP_nozzle_03</mountPoint>
                 </effect>
                 <effect>
                   <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <name>nzf_pegas_forsage</name>
                   <mountPoint>plane/HP_nozzle_04</mountPoint>
                 </effect>
               </effectsTriggered>
               <stateAction>	0	</stateAction>
               <stateFireChance>	0.200000	</stateFireChance>
-              <animationController>
-              </animationController>
-              <fallingOutModel>
-              </fallingOutModel>
-              <stateAnimation>
-              </stateAnimation>
               <effectState>
                 <effect>
                   <name>aim_trail_on_engine</name>
@@ -678,6 +642,30 @@
                   <animatorName>PropellorTextureForsageControllerR</animatorName>
                 </item>
               </subItems>
+              <effectsTriggered>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>nzf_pegas</name>
+                  <mountPoint>plane/HP_nozzle_03</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>nzf_pegas</name>
+                  <mountPoint>plane/HP_nozzle_04</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>nzf_pegas_forsage</name>
+                  <mountPoint>plane/HP_nozzle_03</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>nzf_pegas_forsage</name>
+                  <mountPoint>plane/HP_nozzle_04</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
               <effectState>
                 <effect>
                   <name>crit_engine_damaged_yellow</name>
@@ -692,36 +680,6 @@
                   <mountPoint>HP_engineR</mountPoint>
                 </effect>
               </effectState>
-              <effectsTriggered>
-                <effect>
-                  <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
-                  <mountPoint>plane/HP_nozzle_03</mountPoint>
-                </effect>
-                <effect>
-                  <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
-                  <mountPoint>plane/HP_nozzle_04</mountPoint>
-                </effect>
-                <effect>
-                  <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
-                  <mountPoint>plane/HP_nozzle_03</mountPoint>
-                </effect>
-                <effect>
-                  <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
-                  <mountPoint>plane/HP_nozzle_04</mountPoint>
-                </effect>
-              </effectsTriggered>
-              <stateAction>	0	</stateAction>
-              <stateFireChance>	0.200000	</stateFireChance>
-              <animationController>
-              </animationController>
-              <fallingOutModel>
-              </fallingOutModel>
-              <stateAnimation>
-              </stateAnimation>
             </state>
             <state>
               <id>	3	</id>
@@ -751,6 +709,30 @@
                   <animatorName>PropellorTextureForsageControllerR</animatorName>
                 </item>
               </subItems>
+              <effectsTriggered>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>nzf_pegas</name>
+                  <mountPoint>plane/HP_nozzle_03</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>nzf_pegas</name>
+                  <mountPoint>plane/HP_nozzle_04</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>nzf_pegas_forsage</name>
+                  <mountPoint>plane/HP_nozzle_03</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>nzf_pegas_forsage</name>
+                  <mountPoint>plane/HP_nozzle_04</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
               <effectState>
                 <effect>
                   <name>crit_engine_damaged</name>
@@ -765,36 +747,6 @@
                   <mountPoint>HP_engineR</mountPoint>
                 </effect>
               </effectState>
-              <effectsTriggered>
-                <effect>
-                  <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
-                  <mountPoint>plane/HP_nozzle_03</mountPoint>
-                </effect>
-                <effect>
-                  <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
-                  <mountPoint>plane/HP_nozzle_04</mountPoint>
-                </effect>
-                <effect>
-                  <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
-                  <mountPoint>plane/HP_nozzle_03</mountPoint>
-                </effect>
-                <effect>
-                  <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
-                  <mountPoint>plane/HP_nozzle_04</mountPoint>
-                </effect>
-              </effectsTriggered>
-              <stateAction>	0	</stateAction>
-              <stateFireChance>	0.200000	</stateFireChance>
-              <animationController>
-              </animationController>
-              <fallingOutModel>
-              </fallingOutModel>
-              <stateAnimation>
-              </stateAnimation>
               <effectOnStart>
                 <effect>
                   <name>crit_engine_expl</name>
@@ -829,6 +781,8 @@
                   <animatorName>PropellorTextureForsageControllerR</animatorName>
                 </item>
               </subItems>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
               <effectState>
                 <effect>
                   <name>EFFECT_FIRE_ENGINE_small</name>
@@ -839,18 +793,8 @@
                   <mountPoint>plane/HP_nozzle_03</mountPoint>
                 </effect>
               </effectState>
-              <stateAction>	0	</stateAction>
-              <stateFireChance>	0.200000	</stateFireChance>
-              <animationController>
-              </animationController>
-              <fallingOutModel>
-              </fallingOutModel>
-              <stateAnimation>
-              </stateAnimation>
             </state>
           </states>
-          <fireMountPoint>
-          </fireMountPoint>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
         </upgrade>
         <groupId>	0	</groupId>
@@ -2923,6 +2867,11 @@
                 <id>	199	</id>
                 <texture>vehicles/airplanes/common/decals/decor/flags/44.dds</texture>
                 <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/44.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	200	</id>
+                <texture>vehicles/airplanes/common/decals/decor/128.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/128.dds</icoPath>
               </decal>
             </decals>
           </decalGroup>

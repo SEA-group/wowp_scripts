@@ -322,6 +322,7 @@ class Lobby(GUIWindowAccount):
          'settings.getMapping': self.__getKeyMapping,
          'browser2.initialize': self.__onBrowser2Initialize,
          'browser2.dispose': self.__onBrowser2Dispose,
+         'openExternalBrowser': self.__openExternalBrowser,
          self.FLASH_ERROR_CB_NAME: self.__logFlashError,
          self.FLASH_TRACE_CB_NAME: self.__logFlashTrace,
          self.FLASH_WAITING_START_CB_NAME: BWPersonality.g_waitingInfoHelper.startWaiting,
@@ -385,6 +386,9 @@ class Lobby(GUIWindowAccount):
             self.__browser2.fini()
             self.__browser2 = None
         return
+
+    def __openExternalBrowser(self, link):
+        WebPageHolder().openUrl(link)
 
     def __onDenunciation(self, DBId, denunciationID, violatorKind):
         """

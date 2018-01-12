@@ -10,6 +10,7 @@ from _ifaces import CACHE_TYPE
 from exchangeapi.IfaceUtils import getIface, IfaceNotFound, getChildIfaceNames
 from debug_utils import LOG_ERROR, LOG_DEBUG
 from Helpers import sqlcache as cacheUtility
+from Helpers import browser_cache
 from exchangeapi.CommonUtils import generateUUID, generateID, splitIDTypeList, idFromList
 from Helpers.i18n import localizeLobby
 from _functools import partial
@@ -172,6 +173,7 @@ def init():
         EXPIRING_CALLBACKS = []
         import BWPersonality
         cacheUtility.init(os.path.join(os.path.abspath(tempfile.gettempdir()), 'wargaming.net', 'wowp', 'cache', str(BWPersonality.g_initPlayerInfo.databaseID)))
+        browser_cache.init(os.path.join(BigWorld.getUserDataDirectory(), 'profile', 'cef_cache'))
         SERVER_SESSION_KEY = BWPersonality.g_initPlayerInfo.serverSessionKey
         LOG_DEBUG('Initialized server session key, {}'.format(SERVER_SESSION_KEY))
         INITIALIZED = True

@@ -1,4 +1,4 @@
-# Embedded file name: scripts/client/Account.py
+# Embedded file name: res/scripts\client\Account.py
 from functools import partial
 import time
 import cPickle
@@ -12,7 +12,7 @@ from Event import Event, EventManager
 from Helpers.AccountOperationsMgr import AccountOperationsMgr, ifaceDataCallback
 from Helpers.i18n import localizeLobby, localizeMessages
 from OperationCodes import OPERATION_CODE
-from clientConsts import GUI_TYPES, HANGAR_MODE, GUI_TYPES_DICT
+from clientConsts import GUI_TYPES, HANGAR_MODE, GUI_TYPES_DICT, HANGAR_VISUAL_EVENT
 import config_consts
 from consts import RESPONSE_TYPE, ECONOMICS_PROMO_PARAMS, EMPTY_IDTYPELIST, PLANE_MARKET_STATUS, PKG_SEND_INTERVAL, PREBATLE_DATA, WAITING_INFO_TYPE, MAX_SEND_DATA_SIZE, ALLOW_CREDIT_BUYS, MESSAGE_TYPE
 from debug_utils import LOG_CURRENT_EXCEPTION, LOG_ERROR, LOG_DEBUG, LOG_TRACE, LOG_INFO, LOG_NOTE, LOG_WARNING, LOG_MX, LOG_INFO_FORMAT
@@ -68,7 +68,7 @@ class PlayerAccount(BigWorld.Entity):
         self.__queueVSEData = collections.deque()
         return
 
-    def version_230(self):
+    def version_233(self):
         pass
 
     def isPendingResponses(self):
@@ -565,6 +565,8 @@ class PlayerAccount(BigWorld.Entity):
             NEW_YEAR_EVENT = 'NY_2017'
             if NEW_YEAR_EVENT in BWPersonality.g_initPlayerInfo.activeEvents:
                 BigWorld.player().callVSE('onNewYearEvent', {})
+            if HANGAR_VISUAL_EVENT.EVENT_NAME in BWPersonality.g_initPlayerInfo.activeEvents:
+                BigWorld.player().callVSE(HANGAR_VISUAL_EVENT.VSE_NAME, {})
             return
 
     def __linkEvents(self):
@@ -732,6 +734,13 @@ class PlayerAccount(BigWorld.Entity):
             BWPersonality.g_settings.hangarSpaceSettings['spaceID'] = warActionHangar[1]
             return warHangar
         else:
+            uiConfig = _warAction.WarAction.uiConfig
+            for ui in uiConfig.hangar:
+                if currSpaceID == ui.name:
+                    currSpaceID = getDefaultSpaceID(currentAccountType)
+                    curHangarSpace = getHangarSpaceByID(currSpaceID)
+                    return (curHangarSpace['hangarType'], currSpaceID)
+
             from zlib import crc32
             from db.DBLogic import g_instance as dbInstance
 

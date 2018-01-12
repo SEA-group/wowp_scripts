@@ -1,4 +1,4 @@
-# Embedded file name: scripts/client/Avatar.py
+# Embedded file name: res/scripts\client\Avatar.py
 import BigWorld
 import Math
 from BWLogging import getLogger
@@ -40,7 +40,6 @@ from audio.SoundObjects.ExplosionSound import ExplosionSFXFactory
 from turrets.AvatarMoveHistory import AvatarMoveHistory
 from modelManipulator.PartAnimatorControllers.BombHatchAnimator import BombHatchAnimator
 from modelManipulator.PartAnimatorControllers.TurretAnimator.TurretsLogicAnimatorAdapter import TurretsLogicAnimatorAdapter, TURRET_ANIMATOR_ADAPTER_CONTROLLER_NAME
-from AvatarVSEComponent import AvatarVSEComponent
 EFFECT_CHECK_FREQUENCY = 0.5
 
 class AvatarDummyPart(DummyPartBase):
@@ -973,8 +972,6 @@ class Avatar(BigWorld.Entity, ControllerManager, CollidableObject, AvatarMoveHis
             turretsLogic.setOwner(self)
             self._registerController(ControllersNames.TURRETS_LOGIC, turretsLogic)
             self.ePartStateChanged += turretsLogic.onPartStateChanged
-        avatarVSEComponent = AvatarVSEComponent(self)
-        self._registerController('AvatarVSEComponent', avatarVSEComponent)
         self._selectModel()
         return
 

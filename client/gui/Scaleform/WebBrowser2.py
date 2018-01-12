@@ -34,7 +34,6 @@ class WebBrowserImpl(object):
     skipEscape = property(lambda self: self.__skipEscape)
     ignoreKeyEvents = property(lambda self: self.__ignoreKeyEvents)
     useSpecialKeys = property(lambda self: self.__useSpecialKeys)
-    allowRightClick = property(lambda self: self.__allowRightClick)
     allowMouseWheel = property(lambda self: self.__allowMouseWheel)
 
     @skipEscape.setter
@@ -51,11 +50,6 @@ class WebBrowserImpl(object):
     def useSpecialKeys(self, value):
         LOG_BROWSER('useSpecialKeys set %s (was: %s)' % (value, self.__useSpecialKeys))
         self.__useSpecialKeys = value
-
-    @allowRightClick.setter
-    def allowRightClick(self, value):
-        LOG_BROWSER('allowRightClick set %s (was: %s)' % (value, self.__allowRightClick))
-        self.__allowRightClick = value
 
     @allowMouseWheel.setter
     def allowMouseWheel(self, value):
@@ -76,7 +70,6 @@ class WebBrowserImpl(object):
         self.__skipEscape = True
         self.__ignoreKeyEvents = False
         self.__useSpecialKeys = True
-        self.__allowRightClick = False
         self.__allowMouseWheel = True
         self.__disableKeyHandlers = []
         self.__loadStartTime = BigWorld.time()
@@ -320,8 +313,6 @@ class WebBrowserImpl(object):
          e.isAltDown(),
          e.isShiftDown(),
          e.isCtrlDown())
-        if not self.allowRightClick and e.key == Keys.KEY_RIGHTMOUSE:
-            return False
         if not self.skipEscape and e.key == Keys.KEY_ESCAPE and e.isKeyDown():
             self.__getBrowserKeyHandler(*keyState)(self, e)
             return True

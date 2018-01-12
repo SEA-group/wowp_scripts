@@ -10,8 +10,8 @@ class PlaneSchemeSource(DataSource):
         self._playerAvatar = features.require(Feature.PLAYER_AVATAR)
         self._clientArena = features.require(Feature.CLIENT_ARENA)
         self._clientArena.onNewAvatarsInfo += self._setupModel
-        self._playerAvatar.eRespawn += self._onRespawn
-        self._playerAvatar.eTacticalSpectator += self._onTacticalSpectator
+        self._playerAvatar.eRespawn += self._onClean
+        self._playerAvatar.eTacticalSpectator += self._onClean
         self._groupDependency = {}
         if self._clientArena.isAllServerDataReceived():
             self._setupModel(None)
@@ -69,18 +69,15 @@ class PlaneSchemeSource(DataSource):
     def _initDamagePart(self, name, state, schemePartData):
         self._model.damage.append(partName=name, state=state, normal=schemePartData.normalState, damage=schemePartData.damageState, crit=schemePartData.critState)
 
-    def _onRespawn(self, *args, **kwargs):
-        self._setBase()
-
-    def _onTacticalSpectator(self, *args, **kwargs):
+    def _onClean(self, *args, **kwargs):
         self._model.damage.clean()
         self._groupDependency = {}
         self._setBase()
         self._updateAllParts()
 
     def dispose(self):
-        self._playerAvatar.eRespawn -= self._onRespawn
-        self._playerAvatar.eTacticalSpectator -= self._onTacticalSpectator
+        self._playerAvatar.eRespawn -= self._onClean
+        self._playerAvatar.eTacticalSpectator -= self._onClean
         self._playerAvatar.ePartStateChanged -= self._updatePart
         self._clientArena.onNewAvatarsInfo -= self._setupModel
         self._model = None

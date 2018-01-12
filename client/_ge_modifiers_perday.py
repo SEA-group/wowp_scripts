@@ -130,7 +130,7 @@ DB.subscriber[0].event[0].count = []
 DB.subscriber[0].event[0].count.insert(0, None)
 DB.subscriber[0].event[0].count[0] = Dummy()
 DB.subscriber[0].event[0].count[0].valueFrom = '_economics:Economics.dailyBonus.dailyWinBonusRemains'
-DB.subscriber[0].event[0].name = 'before.result.win'
+DB.subscriber[0].event[0].name = 'win'
 DB.subscriber[0].event[0].operation = []
 DB.subscriber[0].event[0].type = 'battle'
 DB.subscriber[0].group = 'day.bonus'
@@ -138,6 +138,7 @@ DB.subscriber[0].modify = []
 DB.subscriber[0].modify.insert(0, None)
 DB.subscriber[0].modify[0] = Dummy()
 DB.subscriber[0].modify[0].by = OperationModifyBy.multiply
+DB.subscriber[0].modify[0].onChange = true
 DB.subscriber[0].modify[0].type = OperationModifyType.exp
 DB.subscriber[0].modify[0].valueFrom = '_economics:Economics.dailyBonus.firstWinBonus.xpCoeff'
 DB.subscriber[0].name = 'first.win'
@@ -190,7 +191,7 @@ DB.subscriber[1].server.scope[0] = 'player'
 DB.subscriber[1].type = 'modifiers'
 DB.subscriber[0].id = -1216274312
 DB.subscriber[1].id = -918543081
-DB.subscriber[0].eventIds = (652423421,)
+DB.subscriber[0].eventIds = (-218451730,)
 DB.subscriber[1].eventIds = (35456563,)
 mapping = {'db': DB,
  'indexes': {'subscriber': {'id': {-1216274312: (DB.subscriber[0],),
@@ -199,7 +200,7 @@ mapping = {'db': DB,
                                      'reset': (DB.subscriber[1],)},
                             'type': {'modifiers': (DB.subscriber[0], DB.subscriber[1])},
                             'group': {'day.bonus': (DB.subscriber[0], DB.subscriber[1])},
-                            'eventIds': {(652423421,): (DB.subscriber[0],),
+                            'eventIds': {(-218451730,): (DB.subscriber[0],),
                                          (35456563,): (DB.subscriber[1],)},
                             'parent': {}}},
  'nested': ('subscriber.nested',),

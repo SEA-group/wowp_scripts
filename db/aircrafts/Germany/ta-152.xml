@@ -411,7 +411,7 @@
           </bBoxes>
           <health>30%</health>
           <componentType>Engine</componentType>
-          <componentXml>db-605a-1</componentXml>
+          <componentXml>server.todo.xml</componentXml>
           <states>
             <state>
               <id>	1	</id>
@@ -419,8 +419,6 @@
               </usage>
               <stateHelthCfc>	1.000000	</stateHelthCfc>
               <model>vehicles/airplanes/german/GR34_TA152/normal/lod0/engine_01.model</model>
-              <animationController>
-              </animationController>
               <subItems>
                 <item>
                   <model>vehicles/airplanes/german/GR34_TA152/normal/lod0/rotor_01.model</model>
@@ -454,22 +452,22 @@
               <effectsTriggered>
                 <effect>
                   <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <name>nzf_ta-152</name>
                   <mountPoint>plane/HP_nozzle_01</mountPoint>
                 </effect>
                 <effect>
                   <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <name>nzf_ta-152</name>
                   <mountPoint>plane/HP_nozzle_02</mountPoint>
                 </effect>
                 <effect>
                   <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <name>nzf_ta-152_forsage</name>
                   <mountPoint>plane/HP_nozzle_01</mountPoint>
                 </effect>
                 <effect>
                   <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <name>nzf_ta-152_forsage</name>
                   <mountPoint>plane/HP_nozzle_02</mountPoint>
                 </effect>
               </effectsTriggered>
@@ -480,11 +478,7 @@
                 </effect>
               </effectState>
               <stateAction>	0	</stateAction>
-              <fallingOutModel>
-              </fallingOutModel>
               <stateFireChance>	0.200000	</stateFireChance>
-              <stateAnimation>
-              </stateAnimation>
             </state>
             <state>
               <id>	2	</id>
@@ -492,8 +486,6 @@
               </usage>
               <stateHelthCfc>	0.400000	</stateHelthCfc>
               <model>vehicles/airplanes/german/GR34_TA152/crash/lod0/engine_01.model</model>
-              <animationController>
-              </animationController>
               <subItems>
                 <item>
                   <model>vehicles/airplanes/german/GR34_TA152/normal/lod0/rotor_01.model</model>
@@ -527,22 +519,22 @@
               <effectsTriggered>
                 <effect>
                   <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <name>nzf_ta-152</name>
                   <mountPoint>plane/HP_nozzle_01</mountPoint>
                 </effect>
                 <effect>
                   <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <name>nzf_ta-152</name>
                   <mountPoint>plane/HP_nozzle_02</mountPoint>
                 </effect>
                 <effect>
                   <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <name>nzf_ta-152_forsage</name>
                   <mountPoint>plane/HP_nozzle_01</mountPoint>
                 </effect>
                 <effect>
                   <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <name>nzf_ta-152_forsage</name>
                   <mountPoint>plane/HP_nozzle_02</mountPoint>
                 </effect>
               </effectsTriggered>
@@ -557,11 +549,7 @@
                 </effect>
               </effectState>
               <stateAction>	0	</stateAction>
-              <fallingOutModel>
-              </fallingOutModel>
               <stateFireChance>	0.200000	</stateFireChance>
-              <stateAnimation>
-              </stateAnimation>
             </state>
             <state>
               <id>	3	</id>
@@ -569,8 +557,6 @@
               </usage>
               <stateHelthCfc>	0.400000	</stateHelthCfc>
               <model>vehicles/airplanes/german/GR34_TA152/crash/lod0/engine_01.model</model>
-              <animationController>
-              </animationController>
               <subItems>
                 <item>
                   <model>vehicles/airplanes/german/GR34_TA152/normal/lod0/rotor_01.model</model>
@@ -604,22 +590,22 @@
               <effectsTriggered>
                 <effect>
                   <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <name>nzf_ta-152</name>
                   <mountPoint>plane/HP_nozzle_01</mountPoint>
                 </effect>
                 <effect>
                   <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <name>nzf_ta-152</name>
                   <mountPoint>plane/HP_nozzle_02</mountPoint>
                 </effect>
                 <effect>
                   <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <name>nzf_ta-152_forsage</name>
                   <mountPoint>plane/HP_nozzle_01</mountPoint>
                 </effect>
                 <effect>
                   <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <name>nzf_ta-152_forsage</name>
                   <mountPoint>plane/HP_nozzle_02</mountPoint>
                 </effect>
               </effectsTriggered>
@@ -644,19 +630,13 @@
                 </effect>
               </effectOnStart>
               <stateAction>	0	</stateAction>
-              <fallingOutModel>
-              </fallingOutModel>
               <stateFireChance>	0.200000	</stateFireChance>
-              <stateAnimation>
-              </stateAnimation>
             </state>
             <state>
               <id>	4	</id>
               <usage>crash</usage>
               <stateHelthCfc>	0.000000	</stateHelthCfc>
               <model>vehicles/airplanes/german/GR34_TA152/crash/lod0/engine_01.model</model>
-              <animationController>
-              </animationController>
               <subItems>
                 <item>
                   <model>vehicles/airplanes/german/GR34_TA152/normal/lod0/rotor_01.model</model>
@@ -694,15 +674,9 @@
                 </effect>
               </effectState>
               <stateAction>	0	</stateAction>
-              <fallingOutModel>
-              </fallingOutModel>
               <stateFireChance>	0.200000	</stateFireChance>
-              <stateAnimation>
-              </stateAnimation>
             </state>
           </states>
-          <fireMountPoint>
-          </fireMountPoint>
           <repairDestructedAfter>	20.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
@@ -721,7 +695,7 @@
           </bBoxes>
           <health>30%</health>
           <componentType>Engine</componentType>
-          <componentXml>db-605a-1</componentXml>
+          <componentXml>server.todo.xml</componentXml>
           <states>
             <state>
               <id>	1	</id>
@@ -729,8 +703,6 @@
               </usage>
               <stateHelthCfc>	1.000000	</stateHelthCfc>
               <model>vehicles/airplanes/german/GR34_TA152/normal/lod0/engine_02.model</model>
-              <animationController>
-              </animationController>
               <subItems>
                 <item>
                   <model>vehicles/airplanes/german/GR34_TA152/normal/lod0/rotor_01.model</model>
@@ -764,22 +736,22 @@
               <effectsTriggered>
                 <effect>
                   <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <name>nzf_ta-152_engine2</name>
                   <mountPoint>plane/HP_nozzle_01</mountPoint>
                 </effect>
                 <effect>
                   <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <name>nzf_ta-152_engine2</name>
                   <mountPoint>plane/HP_nozzle_02</mountPoint>
                 </effect>
                 <effect>
                   <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <name>nzf_ta-152_engine2_forsage</name>
                   <mountPoint>plane/HP_nozzle_01</mountPoint>
                 </effect>
                 <effect>
                   <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <name>nzf_ta-152_engine2_forsage</name>
                   <mountPoint>plane/HP_nozzle_02</mountPoint>
                 </effect>
               </effectsTriggered>
@@ -790,11 +762,7 @@
                 </effect>
               </effectState>
               <stateAction>	0	</stateAction>
-              <fallingOutModel>
-              </fallingOutModel>
               <stateFireChance>	0.200000	</stateFireChance>
-              <stateAnimation>
-              </stateAnimation>
             </state>
             <state>
               <id>	2	</id>
@@ -802,8 +770,6 @@
               </usage>
               <stateHelthCfc>	0.400000	</stateHelthCfc>
               <model>vehicles/airplanes/german/GR34_TA152/crash/lod0/engine_02.model</model>
-              <animationController>
-              </animationController>
               <subItems>
                 <item>
                   <model>vehicles/airplanes/german/GR34_TA152/normal/lod0/rotor_01.model</model>
@@ -837,22 +803,22 @@
               <effectsTriggered>
                 <effect>
                   <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <name>nzf_ta-152_engine2</name>
                   <mountPoint>plane/HP_nozzle_01</mountPoint>
                 </effect>
                 <effect>
                   <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <name>nzf_ta-152_engine2</name>
                   <mountPoint>plane/HP_nozzle_02</mountPoint>
                 </effect>
                 <effect>
                   <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <name>nzf_ta-152_engine2_forsage</name>
                   <mountPoint>plane/HP_nozzle_01</mountPoint>
                 </effect>
                 <effect>
                   <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <name>nzf_ta-152_engine2_forsage</name>
                   <mountPoint>plane/HP_nozzle_02</mountPoint>
                 </effect>
               </effectsTriggered>
@@ -867,11 +833,7 @@
                 </effect>
               </effectState>
               <stateAction>	0	</stateAction>
-              <fallingOutModel>
-              </fallingOutModel>
               <stateFireChance>	0.200000	</stateFireChance>
-              <stateAnimation>
-              </stateAnimation>
             </state>
             <state>
               <id>	3	</id>
@@ -879,8 +841,6 @@
               </usage>
               <stateHelthCfc>	0.400000	</stateHelthCfc>
               <model>vehicles/airplanes/german/GR34_TA152/crash/lod0/engine_02.model</model>
-              <animationController>
-              </animationController>
               <subItems>
                 <item>
                   <model>vehicles/airplanes/german/GR34_TA152/normal/lod0/rotor_01.model</model>
@@ -914,22 +874,22 @@
               <effectsTriggered>
                 <effect>
                   <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <name>nzf_ta-152_engine2</name>
                   <mountPoint>plane/HP_nozzle_01</mountPoint>
                 </effect>
                 <effect>
                   <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <name>nzf_ta-152_engine2</name>
                   <mountPoint>plane/HP_nozzle_02</mountPoint>
                 </effect>
                 <effect>
                   <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <name>nzf_ta-152_engine2_forsage</name>
                   <mountPoint>plane/HP_nozzle_01</mountPoint>
                 </effect>
                 <effect>
                   <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <name>nzf_ta-152_engine2_forsage</name>
                   <mountPoint>plane/HP_nozzle_02</mountPoint>
                 </effect>
               </effectsTriggered>
@@ -954,19 +914,13 @@
                 </effect>
               </effectOnStart>
               <stateAction>	0	</stateAction>
-              <fallingOutModel>
-              </fallingOutModel>
               <stateFireChance>	0.200000	</stateFireChance>
-              <stateAnimation>
-              </stateAnimation>
             </state>
             <state>
               <id>	4	</id>
               <usage>crash</usage>
               <stateHelthCfc>	0.000000	</stateHelthCfc>
               <model>vehicles/airplanes/german/GR34_TA152/crash/lod0/engine_02.model</model>
-              <animationController>
-              </animationController>
               <subItems>
                 <item>
                   <model>vehicles/airplanes/german/GR34_TA152/normal/lod0/rotor_01.model</model>
@@ -1004,15 +958,9 @@
                 </effect>
               </effectState>
               <stateAction>	0	</stateAction>
-              <fallingOutModel>
-              </fallingOutModel>
               <stateFireChance>	0.200000	</stateFireChance>
-              <stateAnimation>
-              </stateAnimation>
             </state>
           </states>
-          <fireMountPoint>
-          </fireMountPoint>
           <repairDestructedAfter>	20.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
@@ -3770,6 +3718,11 @@
                 <id>	199	</id>
                 <texture>vehicles/airplanes/common/decals/decor/flags/44.dds</texture>
                 <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/44.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	200	</id>
+                <texture>vehicles/airplanes/common/decals/decor/128.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/128.dds</icoPath>
               </decal>
             </decals>
           </decalGroup>

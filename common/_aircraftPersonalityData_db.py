@@ -1,4 +1,4 @@
-# Embedded file name: scripts/common/_aircraftPersonalityData_db.py
+# Embedded file name: ./../bigworld/bin/compiled/res/scripts\common\_aircraftPersonalityData_db.py
 
 
 class PersonalityData(object):

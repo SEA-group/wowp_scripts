@@ -103,6 +103,10 @@ class LinkedDatabase(object):
             adapter.modules = self._bundled
             adapter.onLinked()
 
+    @property
+    def linkedDynamicDatabases(self):
+        return self._dynamic
+
     def linkDBs(self, databases):
         if not databases and not self._dynamic:
             return

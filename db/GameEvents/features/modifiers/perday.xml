@@ -25,12 +25,13 @@
     <event>
       <type>battle</type>
       <context>player</context>
-      <name>before.result.win</name>
+      <name>win</name>
       <count>
         <valueFrom>_economics:Economics.dailyBonus.dailyWinBonusRemains</valueFrom>
       </count>
     </event>
     <modify>
+      <onChange>	true	</onChange>
       <type>exp</type>
       <by>	multiply	</by>
       <valueFrom>_economics:Economics.dailyBonus.firstWinBonus.xpCoeff</valueFrom>

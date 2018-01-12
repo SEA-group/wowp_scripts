@@ -233,37 +233,16 @@ DB.subscriber[0].nested.subscriber[0].event[0].condition = []
 DB.subscriber[0].nested.subscriber[0].event[0].condition.insert(0, None)
 DB.subscriber[0].nested.subscriber[0].event[0].condition[0] = Dummy()
 DB.subscriber[0].nested.subscriber[0].event[0].condition[0].and_ = []
-DB.subscriber[0].nested.subscriber[0].event[0].condition[0].and_.insert(0, None)
-DB.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0] = Dummy()
-DB.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].and_ = []
-DB.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].contains = []
-DB.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].equal = []
-DB.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].equal.insert(0, None)
-DB.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].equal[0] = Dummy()
-DB.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].equal[0].context = []
-DB.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].equal[0].context.insert(0, None)
-DB.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].equal[0].context[0] = 'victim.object'
-DB.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].equal[0].value_ = []
-DB.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].equal[0].value_.insert(0, None)
-DB.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].equal[0].value_[0] = 'plane'
-DB.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].equal.insert(1, None)
-DB.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].equal[1] = Dummy()
-DB.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].equal[1].context = []
-DB.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].equal[1].context.insert(0, None)
-DB.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].equal[1].context[0] = 'percent'
-DB.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].equal[1].value_ = []
-DB.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].equal[1].value_.insert(0, None)
-DB.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].equal[1].value_[0] = 'normal'
-DB.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].gt = []
-DB.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].gte = []
-DB.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].id = []
-DB.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].in_ = []
-DB.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].lt = []
-DB.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].lte = []
-DB.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].not_ = []
-DB.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].or_ = []
 DB.subscriber[0].nested.subscriber[0].event[0].condition[0].contains = []
 DB.subscriber[0].nested.subscriber[0].event[0].condition[0].equal = []
+DB.subscriber[0].nested.subscriber[0].event[0].condition[0].equal.insert(0, None)
+DB.subscriber[0].nested.subscriber[0].event[0].condition[0].equal[0] = Dummy()
+DB.subscriber[0].nested.subscriber[0].event[0].condition[0].equal[0].context = []
+DB.subscriber[0].nested.subscriber[0].event[0].condition[0].equal[0].context.insert(0, None)
+DB.subscriber[0].nested.subscriber[0].event[0].condition[0].equal[0].context[0] = 'victim.object'
+DB.subscriber[0].nested.subscriber[0].event[0].condition[0].equal[0].value_ = []
+DB.subscriber[0].nested.subscriber[0].event[0].condition[0].equal[0].value_.insert(0, None)
+DB.subscriber[0].nested.subscriber[0].event[0].condition[0].equal[0].value_[0] = 'plane'
 DB.subscriber[0].nested.subscriber[0].event[0].condition[0].gt = []
 DB.subscriber[0].nested.subscriber[0].event[0].condition[0].gte = []
 DB.subscriber[0].nested.subscriber[0].event[0].condition[0].id = []

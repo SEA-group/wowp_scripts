@@ -319,7 +319,7 @@
           <health>30%</health>
           <componentType>Engine</componentType>
           <componentPosition>	Left	</componentPosition>
-          <componentXml>jumo-210ca</componentXml>
+          <componentXml>server.todo.xml</componentXml>
           <states>
             <state>
               <id>	1	</id>
@@ -327,8 +327,6 @@
               </usage>
               <stateHelthCfc>	1.000000	</stateHelthCfc>
               <model>vehicles/airplanes/german/GR52_HS129/normal/lod0/engineL_02.model</model>
-              <animationController>
-              </animationController>
               <subItems>
                 <item>
                   <model>vehicles/airplanes/german/GR52_HS129/normal/lod0/rotorL_02.model</model>
@@ -362,31 +360,27 @@
               <effectsTriggered>
                 <effect>
                   <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <name>nzf_hs-129</name>
                   <mountPoint>plane/HP_nozzle_05</mountPoint>
                 </effect>
                 <effect>
                   <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <name>nzf_hs-129</name>
                   <mountPoint>plane/HP_nozzle_06</mountPoint>
                 </effect>
                 <effect>
                   <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <name>nzf_hs-129_forsage</name>
                   <mountPoint>plane/HP_nozzle_05</mountPoint>
                 </effect>
                 <effect>
                   <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <name>nzf_hs-129_forsage</name>
                   <mountPoint>plane/HP_nozzle_06</mountPoint>
                 </effect>
               </effectsTriggered>
               <stateAction>	0	</stateAction>
-              <fallingOutModel>
-              </fallingOutModel>
               <stateFireChance>	0.200000	</stateFireChance>
-              <stateAnimation>
-              </stateAnimation>
               <effectState>
                 <effect>
                   <name>aim_trail_on_engine</name>
@@ -400,8 +394,6 @@
               </usage>
               <stateHelthCfc>	0.400000	</stateHelthCfc>
               <model>vehicles/airplanes/german/GR52_HS129/crash/lod0/engineL_02.model</model>
-              <animationController>
-              </animationController>
               <subItems>
                 <item>
                   <model>vehicles/airplanes/german/GR52_HS129/normal/lod0/rotorL_02.model</model>
@@ -432,6 +424,30 @@
                   </name>
                 </item>
               </subItems>
+              <effectsTriggered>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>nzf_hs-129</name>
+                  <mountPoint>plane/HP_nozzle_05</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>nzf_hs-129</name>
+                  <mountPoint>plane/HP_nozzle_06</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>nzf_hs-129_forsage</name>
+                  <mountPoint>plane/HP_nozzle_05</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>nzf_hs-129_forsage</name>
+                  <mountPoint>plane/HP_nozzle_06</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
               <effectState>
                 <effect>
                   <name>crit_engine_damaged_yellow</name>
@@ -446,34 +462,6 @@
                   <mountPoint>HP_engineL</mountPoint>
                 </effect>
               </effectState>
-              <effectsTriggered>
-                <effect>
-                  <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
-                  <mountPoint>plane/HP_nozzle_05</mountPoint>
-                </effect>
-                <effect>
-                  <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
-                  <mountPoint>plane/HP_nozzle_06</mountPoint>
-                </effect>
-                <effect>
-                  <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
-                  <mountPoint>plane/HP_nozzle_05</mountPoint>
-                </effect>
-                <effect>
-                  <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
-                  <mountPoint>plane/HP_nozzle_06</mountPoint>
-                </effect>
-              </effectsTriggered>
-              <stateAction>	0	</stateAction>
-              <fallingOutModel>
-              </fallingOutModel>
-              <stateFireChance>	0.200000	</stateFireChance>
-              <stateAnimation>
-              </stateAnimation>
             </state>
             <state>
               <id>	3	</id>
@@ -481,8 +469,6 @@
               </usage>
               <stateHelthCfc>	0.400000	</stateHelthCfc>
               <model>vehicles/airplanes/german/GR52_HS129/crash/lod0/engineL_02.model</model>
-              <animationController>
-              </animationController>
               <subItems>
                 <item>
                   <model>vehicles/airplanes/german/GR52_HS129/normal/lod0/rotorL_02.model</model>
@@ -513,6 +499,30 @@
                   </name>
                 </item>
               </subItems>
+              <effectsTriggered>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>nzf_hs-129</name>
+                  <mountPoint>plane/HP_nozzle_05</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>nzf_hs-129</name>
+                  <mountPoint>plane/HP_nozzle_06</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>nzf_hs-129_forsage</name>
+                  <mountPoint>plane/HP_nozzle_05</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>nzf_hs-129_forsage</name>
+                  <mountPoint>plane/HP_nozzle_06</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
               <effectState>
                 <effect>
                   <name>crit_engine_damaged</name>
@@ -527,34 +537,6 @@
                   <mountPoint>HP_engineL</mountPoint>
                 </effect>
               </effectState>
-              <effectsTriggered>
-                <effect>
-                  <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
-                  <mountPoint>plane/HP_nozzle_05</mountPoint>
-                </effect>
-                <effect>
-                  <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
-                  <mountPoint>plane/HP_nozzle_06</mountPoint>
-                </effect>
-                <effect>
-                  <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
-                  <mountPoint>plane/HP_nozzle_05</mountPoint>
-                </effect>
-                <effect>
-                  <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
-                  <mountPoint>plane/HP_nozzle_06</mountPoint>
-                </effect>
-              </effectsTriggered>
-              <stateAction>	0	</stateAction>
-              <fallingOutModel>
-              </fallingOutModel>
-              <stateFireChance>	0.200000	</stateFireChance>
-              <stateAnimation>
-              </stateAnimation>
               <effectOnStart>
                 <effect>
                   <name>crit_engine_expl</name>
@@ -567,8 +549,6 @@
               <usage>crash</usage>
               <stateHelthCfc>	0.000000	</stateHelthCfc>
               <model>vehicles/airplanes/german/GR52_HS129/crash/lod0/engineL_02.model</model>
-              <animationController>
-              </animationController>
               <subItems>
                 <item>
                   <model>vehicles/airplanes/german/GR52_HS129/normal/lod0/rotorL_02.model</model>
@@ -599,6 +579,8 @@
                   </name>
                 </item>
               </subItems>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
               <effectState>
                 <effect>
                   <name>EFFECT_FIRE_ENGINE</name>
@@ -609,16 +591,8 @@
                   <mountPoint>plane/HP_nozzle_06</mountPoint>
                 </effect>
               </effectState>
-              <stateAction>	0	</stateAction>
-              <fallingOutModel>
-              </fallingOutModel>
-              <stateFireChance>	0.200000	</stateFireChance>
-              <stateAnimation>
-              </stateAnimation>
             </state>
           </states>
-          <fireMountPoint>
-          </fireMountPoint>
           <repairDestructedAfter>	20.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
         </upgrade>
@@ -643,7 +617,7 @@
           <health>30%</health>
           <componentType>Engine</componentType>
           <componentPosition>Right</componentPosition>
-          <componentXml>jumo-210ca</componentXml>
+          <componentXml>server.todo.xml</componentXml>
           <states>
             <state>
               <id>	1	</id>
@@ -651,8 +625,6 @@
               </usage>
               <stateHelthCfc>	1.000000	</stateHelthCfc>
               <model>vehicles/airplanes/german/GR52_HS129/normal/lod0/engineR_02.model</model>
-              <animationController>
-              </animationController>
               <subItems>
                 <item>
                   <model>vehicles/airplanes/german/GR52_HS129/normal/lod0/rotorR_02.model</model>
@@ -686,31 +658,27 @@
               <effectsTriggered>
                 <effect>
                   <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <name>nzf_hs-129</name>
                   <mountPoint>plane/HP_nozzle_07</mountPoint>
                 </effect>
                 <effect>
                   <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <name>nzf_hs-129</name>
                   <mountPoint>plane/HP_nozzle_08</mountPoint>
                 </effect>
                 <effect>
                   <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <name>nzf_hs-129_forsage</name>
                   <mountPoint>plane/HP_nozzle_07</mountPoint>
                 </effect>
                 <effect>
                   <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <name>nzf_hs-129_forsage</name>
                   <mountPoint>plane/HP_nozzle_08</mountPoint>
                 </effect>
               </effectsTriggered>
               <stateAction>	0	</stateAction>
-              <fallingOutModel>
-              </fallingOutModel>
               <stateFireChance>	0.200000	</stateFireChance>
-              <stateAnimation>
-              </stateAnimation>
               <effectState>
                 <effect>
                   <name>aim_trail_on_engine</name>
@@ -724,8 +692,6 @@
               </usage>
               <stateHelthCfc>	0.400000	</stateHelthCfc>
               <model>vehicles/airplanes/german/GR52_HS129/crash/lod0/engineR_02.model</model>
-              <animationController>
-              </animationController>
               <subItems>
                 <item>
                   <model>vehicles/airplanes/german/GR52_HS129/normal/lod0/rotorR_02.model</model>
@@ -756,6 +722,30 @@
                   </name>
                 </item>
               </subItems>
+              <effectsTriggered>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>nzf_hs-129</name>
+                  <mountPoint>plane/HP_nozzle_07</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>nzf_hs-129</name>
+                  <mountPoint>plane/HP_nozzle_08</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>nzf_hs-129_forsage</name>
+                  <mountPoint>plane/HP_nozzle_07</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>nzf_hs-129_forsage</name>
+                  <mountPoint>plane/HP_nozzle_08</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
               <effectState>
                 <effect>
                   <name>crit_engine_damaged_yellow</name>
@@ -770,34 +760,6 @@
                   <mountPoint>HP_engineR</mountPoint>
                 </effect>
               </effectState>
-              <effectsTriggered>
-                <effect>
-                  <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
-                  <mountPoint>plane/HP_nozzle_07</mountPoint>
-                </effect>
-                <effect>
-                  <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
-                  <mountPoint>plane/HP_nozzle_08</mountPoint>
-                </effect>
-                <effect>
-                  <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
-                  <mountPoint>plane/HP_nozzle_07</mountPoint>
-                </effect>
-                <effect>
-                  <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
-                  <mountPoint>plane/HP_nozzle_08</mountPoint>
-                </effect>
-              </effectsTriggered>
-              <stateAction>	0	</stateAction>
-              <fallingOutModel>
-              </fallingOutModel>
-              <stateFireChance>	0.200000	</stateFireChance>
-              <stateAnimation>
-              </stateAnimation>
             </state>
             <state>
               <id>	3	</id>
@@ -805,8 +767,6 @@
               </usage>
               <stateHelthCfc>	0.400000	</stateHelthCfc>
               <model>vehicles/airplanes/german/GR52_HS129/crash/lod0/engineR_02.model</model>
-              <animationController>
-              </animationController>
               <subItems>
                 <item>
                   <model>vehicles/airplanes/german/GR52_HS129/normal/lod0/rotorR_02.model</model>
@@ -837,6 +797,30 @@
                   </name>
                 </item>
               </subItems>
+              <effectsTriggered>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>nzf_hs-129</name>
+                  <mountPoint>plane/HP_nozzle_07</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>nzf_hs-129</name>
+                  <mountPoint>plane/HP_nozzle_08</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>nzf_hs-129_forsage</name>
+                  <mountPoint>plane/HP_nozzle_07</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>nzf_hs-129_forsage</name>
+                  <mountPoint>plane/HP_nozzle_08</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
               <effectState>
                 <effect>
                   <name>crit_engine_damaged</name>
@@ -851,34 +835,6 @@
                   <mountPoint>HP_engineR</mountPoint>
                 </effect>
               </effectState>
-              <effectsTriggered>
-                <effect>
-                  <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
-                  <mountPoint>plane/HP_nozzle_07</mountPoint>
-                </effect>
-                <effect>
-                  <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
-                  <mountPoint>plane/HP_nozzle_08</mountPoint>
-                </effect>
-                <effect>
-                  <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
-                  <mountPoint>plane/HP_nozzle_07</mountPoint>
-                </effect>
-                <effect>
-                  <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
-                  <mountPoint>plane/HP_nozzle_08</mountPoint>
-                </effect>
-              </effectsTriggered>
-              <stateAction>	0	</stateAction>
-              <fallingOutModel>
-              </fallingOutModel>
-              <stateFireChance>	0.200000	</stateFireChance>
-              <stateAnimation>
-              </stateAnimation>
               <effectOnStart>
                 <effect>
                   <name>crit_engine_expl</name>
@@ -891,8 +847,6 @@
               <usage>crash</usage>
               <stateHelthCfc>	0.000000	</stateHelthCfc>
               <model>vehicles/airplanes/german/GR52_HS129/crash/lod0/engineR_02.model</model>
-              <animationController>
-              </animationController>
               <subItems>
                 <item>
                   <model>vehicles/airplanes/german/GR52_HS129/normal/lod0/rotorR_02.model</model>
@@ -923,6 +877,8 @@
                   </name>
                 </item>
               </subItems>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
               <effectState>
                 <effect>
                   <name>EFFECT_FIRE_ENGINE</name>
@@ -933,16 +889,8 @@
                   <mountPoint>plane/HP_nozzle_07</mountPoint>
                 </effect>
               </effectState>
-              <stateAction>	0	</stateAction>
-              <fallingOutModel>
-              </fallingOutModel>
-              <stateFireChance>	0.200000	</stateFireChance>
-              <stateAnimation>
-              </stateAnimation>
             </state>
           </states>
-          <fireMountPoint>
-          </fireMountPoint>
           <repairDestructedAfter>	20.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
         </upgrade>
@@ -3353,6 +3301,11 @@
                 <texture>vehicles/airplanes/common/decals/decor/flags/44.dds</texture>
                 <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/44.dds</icoPath>
               </decal>
+              <decal>
+                <id>	200	</id>
+                <texture>vehicles/airplanes/common/decals/decor/128.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/128.dds</icoPath>
+              </decal>
             </decals>
           </decalGroup>
           <decalGroup>
@@ -3890,8 +3843,4 @@
       <staticMass>	0.250000	</staticMass>
     </magnetPoint>
   </magnetPoints>
-  <HPmass>
-    <position>	0.000000 0.000000 -1.030000	</position>
-    <direction>	0.000000 0.000000 0.000000	</direction>
-  </HPmass>
 </hs-129.xml>

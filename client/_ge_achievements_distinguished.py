@@ -813,6 +813,27 @@ DB.subscriber[9].event = []
 DB.subscriber[9].event.insert(0, None)
 DB.subscriber[9].event[0] = Dummy()
 DB.subscriber[9].event[0].condition = []
+DB.subscriber[9].event[0].condition.insert(0, None)
+DB.subscriber[9].event[0].condition[0] = Dummy()
+DB.subscriber[9].event[0].condition[0].and_ = []
+DB.subscriber[9].event[0].condition[0].contains = []
+DB.subscriber[9].event[0].condition[0].equal = []
+DB.subscriber[9].event[0].condition[0].equal.insert(0, None)
+DB.subscriber[9].event[0].condition[0].equal[0] = Dummy()
+DB.subscriber[9].event[0].condition[0].equal[0].context = []
+DB.subscriber[9].event[0].condition[0].equal[0].context.insert(0, None)
+DB.subscriber[9].event[0].condition[0].equal[0].context[0] = 'victim.object'
+DB.subscriber[9].event[0].condition[0].equal[0].value_ = []
+DB.subscriber[9].event[0].condition[0].equal[0].value_.insert(0, None)
+DB.subscriber[9].event[0].condition[0].equal[0].value_[0] = 'plane'
+DB.subscriber[9].event[0].condition[0].gt = []
+DB.subscriber[9].event[0].condition[0].gte = []
+DB.subscriber[9].event[0].condition[0].id = []
+DB.subscriber[9].event[0].condition[0].in_ = []
+DB.subscriber[9].event[0].condition[0].lt = []
+DB.subscriber[9].event[0].condition[0].lte = []
+DB.subscriber[9].event[0].condition[0].not_ = []
+DB.subscriber[9].event[0].condition[0].or_ = []
 DB.subscriber[9].event[0].context = 'player'
 DB.subscriber[9].event[0].count = []
 DB.subscriber[9].event[0].count.insert(0, None)
@@ -856,6 +877,27 @@ DB.subscriber[10].event = []
 DB.subscriber[10].event.insert(0, None)
 DB.subscriber[10].event[0] = Dummy()
 DB.subscriber[10].event[0].condition = []
+DB.subscriber[10].event[0].condition.insert(0, None)
+DB.subscriber[10].event[0].condition[0] = Dummy()
+DB.subscriber[10].event[0].condition[0].and_ = []
+DB.subscriber[10].event[0].condition[0].contains = []
+DB.subscriber[10].event[0].condition[0].equal = []
+DB.subscriber[10].event[0].condition[0].equal.insert(0, None)
+DB.subscriber[10].event[0].condition[0].equal[0] = Dummy()
+DB.subscriber[10].event[0].condition[0].equal[0].context = []
+DB.subscriber[10].event[0].condition[0].equal[0].context.insert(0, None)
+DB.subscriber[10].event[0].condition[0].equal[0].context[0] = 'victim.object'
+DB.subscriber[10].event[0].condition[0].equal[0].value_ = []
+DB.subscriber[10].event[0].condition[0].equal[0].value_.insert(0, None)
+DB.subscriber[10].event[0].condition[0].equal[0].value_[0] = 'plane'
+DB.subscriber[10].event[0].condition[0].gt = []
+DB.subscriber[10].event[0].condition[0].gte = []
+DB.subscriber[10].event[0].condition[0].id = []
+DB.subscriber[10].event[0].condition[0].in_ = []
+DB.subscriber[10].event[0].condition[0].lt = []
+DB.subscriber[10].event[0].condition[0].lte = []
+DB.subscriber[10].event[0].condition[0].not_ = []
+DB.subscriber[10].event[0].condition[0].or_ = []
 DB.subscriber[10].event[0].context = 'player'
 DB.subscriber[10].event[0].count = []
 DB.subscriber[10].event[0].count.insert(0, None)

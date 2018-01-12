@@ -1,4 +1,88 @@
 <release.xml>
   <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
   <noNamespaceSchemaLocation>../../../../../../../tools/databundler/subscribers.xsd</noNamespaceSchemaLocation>
+  <subscriber>
+    <name>videos</name>
+    <type>browser</type>
+    <group>video.tutorial</group>
+    <server>
+      <active>	true	</active>
+      <scope>player</scope>
+    </server>
+    <client>
+      <order>	5	</order>
+      <browser>
+        <tag>videos</tag>
+        <video>ingame/videos/</video>
+      </browser>
+    </client>
+  </subscriber>
+  <subscriber>
+    <name>	controls	</name>
+    <type>browser</type>
+    <group>video.tutorial</group>
+    <server>
+      <active>	true	</active>
+      <scope>player</scope>
+    </server>
+    <client>
+      <order>	7	</order>
+      <browser>
+        <tag>	controls	</tag>
+        <video>ingame/videos/controls/</video>
+      </browser>
+    </client>
+    <nested>
+      <subscriber>
+        <name>afterBattle</name>
+        <type>trigger</type>
+        <server>
+          <active>	true	</active>
+          <scope>player</scope>
+        </server>
+        <event>
+          <type>hangar</type>
+          <context>player</context>
+          <name>after.battle.result</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>NY_poster</name>
+    <type>poster</type>
+    <group>poster</group>
+    <server>
+      <active>	true	</active>
+      <scope>player</scope>
+    </server>
+    <client>
+      <order>	1	</order>
+      <browser>
+        <tag>beaver</tag>
+        <video>ingame/posters/beaver/</video>
+      </browser>
+    </client>
+    <nested>
+      <subscriber>
+        <name>unique.login</name>
+        <type>trigger</type>
+        <server>
+          <active>	true	</active>
+          <scope>player</scope>
+        </server>
+        <event>
+          <type>hangar</type>
+          <context>player</context>
+          <name>day.changed</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
 </release.xml>

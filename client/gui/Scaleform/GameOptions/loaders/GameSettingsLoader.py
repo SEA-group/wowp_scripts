@@ -33,6 +33,7 @@ class GameSettingsLoader(BaseLoader):
         src.pathSaveBattleReplays = settings.getReplaysDirectory()
         src.pathSaveScreenshots = settings.getScreenShotDirectory()
         import BWPersonality
+        import _warAction
         warAction = BWPersonality.gameParams.get('warAction', {})
         warActionEnabled = warAction.get('enabled', False)
         warActionState = warAction.get('state', WAR_STATE.UNDEFINED)
@@ -63,8 +64,17 @@ class GameSettingsLoader(BaseLoader):
                 src.lobbySettings.isEnabled = not spaceData.get('isModal', False)
             if src.lobbySettings.isEnabled:
                 currentSpace = settings.getHangarSpaceSettings(BWPersonality.g_initPlayerInfo.databaseID)
-                for i, spaceID in enumerate(ob['spaces']):
+                index = 0
+                for spaceID in ob['spaces']:
                     spaceData = DB.g_instance.userHangarSpaces.get(spaceID, None)
+                    skip = False
+                    for ui in _warAction.WarAction.uiConfig.hangar:
+                        skip = ui.name == spaceData['spaceID']
+                        if skip:
+                            break
+
+                    if skip:
+                        continue
                     if spaceData is not None:
                         kv = KeyValue()
                         kv.key = spaceID
@@ -72,7 +82,8 @@ class GameSettingsLoader(BaseLoader):
                         src.lobbySettings.previewImg.append(spaceData['img'])
                         src.lobbySettings.hangar.data.append(kv)
                         if spaceID == currentSpace['spaceID']:
-                            src.lobbySettings.hangar.index = i
+                            src.lobbySettings.hangar.index = index
+                        index += 1
 
             self._isLoaded = True
             return

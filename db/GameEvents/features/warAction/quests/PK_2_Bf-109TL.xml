@@ -97,16 +97,10 @@
           <context>player</context>
           <name>assist</name>
           <condition>
-            <and>
-              <equal>
-                <context>victim.object</context>
-                <value>plane</value>
-              </equal>
-              <equal>
-                <context>percent</context>
-                <value>normal</value>
-              </equal>
-            </and>
+            <equal>
+              <context>victim.object</context>
+              <value>plane</value>
+            </equal>
           </condition>
           <count>
             <id>	0	</id>

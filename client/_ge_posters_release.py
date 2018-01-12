@@ -73,13 +73,154 @@ class WEAPON_AIM_TYPE:
 
 DB = Dummy()
 DB.subscriber = []
+DB.subscriber.insert(0, None)
+DB.subscriber[0] = Dummy()
+DB.subscriber[0].client = Dummy()
+DB.subscriber[0].client.browser = Dummy()
+DB.subscriber[0].client.browser.tag = 'videos'
+DB.subscriber[0].client.browser.video = 'ingame/videos/'
+DB.subscriber[0].client.order = 5
+DB.subscriber[0].condition = []
+DB.subscriber[0].count = []
+DB.subscriber[0].event = []
+DB.subscriber[0].group = 'video.tutorial'
+DB.subscriber[0].modify = []
+DB.subscriber[0].name = 'videos'
+DB.subscriber[0].operation = []
+DB.subscriber[0].send = []
+DB.subscriber[0].server = Dummy()
+DB.subscriber[0].server.active = true
+DB.subscriber[0].server.scope = []
+DB.subscriber[0].server.scope.insert(0, None)
+DB.subscriber[0].server.scope[0] = 'player'
+DB.subscriber[0].type = 'browser'
+DB.subscriber.insert(1, None)
+DB.subscriber[1] = Dummy()
+DB.subscriber[1].client = Dummy()
+DB.subscriber[1].client.browser = Dummy()
+DB.subscriber[1].client.browser.tag = 'controls'
+DB.subscriber[1].client.browser.video = 'ingame/videos/controls/'
+DB.subscriber[1].client.order = 7
+DB.subscriber[1].condition = []
+DB.subscriber[1].count = []
+DB.subscriber[1].event = []
+DB.subscriber[1].group = 'video.tutorial'
+DB.subscriber[1].modify = []
+DB.subscriber[1].name = 'controls'
+DB.subscriber[1].nested = Dummy()
+DB.subscriber[1].nested.subscriber = []
+DB.subscriber[1].nested.subscriber.insert(0, None)
+DB.subscriber[1].nested.subscriber[0] = Dummy()
+DB.subscriber[1].nested.subscriber[0].condition = []
+DB.subscriber[1].nested.subscriber[0].count = []
+DB.subscriber[1].nested.subscriber[0].event = []
+DB.subscriber[1].nested.subscriber[0].event.insert(0, None)
+DB.subscriber[1].nested.subscriber[0].event[0] = Dummy()
+DB.subscriber[1].nested.subscriber[0].event[0].condition = []
+DB.subscriber[1].nested.subscriber[0].event[0].context = 'player'
+DB.subscriber[1].nested.subscriber[0].event[0].count = []
+DB.subscriber[1].nested.subscriber[0].event[0].count.insert(0, None)
+DB.subscriber[1].nested.subscriber[0].event[0].count[0] = Dummy()
+DB.subscriber[1].nested.subscriber[0].event[0].count[0].value_ = 1
+DB.subscriber[1].nested.subscriber[0].event[0].name = 'after.battle.result'
+DB.subscriber[1].nested.subscriber[0].event[0].operation = []
+DB.subscriber[1].nested.subscriber[0].event[0].type = 'hangar'
+DB.subscriber[1].nested.subscriber[0].modify = []
+DB.subscriber[1].nested.subscriber[0].name = 'afterBattle'
+DB.subscriber[1].nested.subscriber[0].operation = []
+DB.subscriber[1].nested.subscriber[0].send = []
+DB.subscriber[1].nested.subscriber[0].server = Dummy()
+DB.subscriber[1].nested.subscriber[0].server.active = true
+DB.subscriber[1].nested.subscriber[0].server.scope = []
+DB.subscriber[1].nested.subscriber[0].server.scope.insert(0, None)
+DB.subscriber[1].nested.subscriber[0].server.scope[0] = 'player'
+DB.subscriber[1].nested.subscriber[0].type = 'trigger'
+DB.subscriber[1].operation = []
+DB.subscriber[1].send = []
+DB.subscriber[1].server = Dummy()
+DB.subscriber[1].server.active = true
+DB.subscriber[1].server.scope = []
+DB.subscriber[1].server.scope.insert(0, None)
+DB.subscriber[1].server.scope[0] = 'player'
+DB.subscriber[1].type = 'browser'
+DB.subscriber.insert(2, None)
+DB.subscriber[2] = Dummy()
+DB.subscriber[2].client = Dummy()
+DB.subscriber[2].client.browser = Dummy()
+DB.subscriber[2].client.browser.tag = 'beaver'
+DB.subscriber[2].client.browser.video = 'ingame/posters/beaver/'
+DB.subscriber[2].client.order = 1
+DB.subscriber[2].condition = []
+DB.subscriber[2].count = []
+DB.subscriber[2].event = []
+DB.subscriber[2].group = 'poster'
+DB.subscriber[2].modify = []
+DB.subscriber[2].name = 'NY_poster'
+DB.subscriber[2].nested = Dummy()
+DB.subscriber[2].nested.subscriber = []
+DB.subscriber[2].nested.subscriber.insert(0, None)
+DB.subscriber[2].nested.subscriber[0] = Dummy()
+DB.subscriber[2].nested.subscriber[0].condition = []
+DB.subscriber[2].nested.subscriber[0].count = []
+DB.subscriber[2].nested.subscriber[0].event = []
+DB.subscriber[2].nested.subscriber[0].event.insert(0, None)
+DB.subscriber[2].nested.subscriber[0].event[0] = Dummy()
+DB.subscriber[2].nested.subscriber[0].event[0].condition = []
+DB.subscriber[2].nested.subscriber[0].event[0].context = 'player'
+DB.subscriber[2].nested.subscriber[0].event[0].count = []
+DB.subscriber[2].nested.subscriber[0].event[0].count.insert(0, None)
+DB.subscriber[2].nested.subscriber[0].event[0].count[0] = Dummy()
+DB.subscriber[2].nested.subscriber[0].event[0].count[0].value_ = 1
+DB.subscriber[2].nested.subscriber[0].event[0].name = 'day.changed'
+DB.subscriber[2].nested.subscriber[0].event[0].operation = []
+DB.subscriber[2].nested.subscriber[0].event[0].type = 'hangar'
+DB.subscriber[2].nested.subscriber[0].modify = []
+DB.subscriber[2].nested.subscriber[0].name = 'unique.login'
+DB.subscriber[2].nested.subscriber[0].operation = []
+DB.subscriber[2].nested.subscriber[0].send = []
+DB.subscriber[2].nested.subscriber[0].server = Dummy()
+DB.subscriber[2].nested.subscriber[0].server.active = true
+DB.subscriber[2].nested.subscriber[0].server.scope = []
+DB.subscriber[2].nested.subscriber[0].server.scope.insert(0, None)
+DB.subscriber[2].nested.subscriber[0].server.scope[0] = 'player'
+DB.subscriber[2].nested.subscriber[0].type = 'trigger'
+DB.subscriber[2].operation = []
+DB.subscriber[2].send = []
+DB.subscriber[2].server = Dummy()
+DB.subscriber[2].server.active = true
+DB.subscriber[2].server.scope = []
+DB.subscriber[2].server.scope.insert(0, None)
+DB.subscriber[2].server.scope[0] = 'player'
+DB.subscriber[2].type = 'poster'
+DB.subscriber[0].id = 1435613453
+DB.subscriber[1].id = 1380494816
+DB.subscriber[1].nested.subscriber[0].id = 900442570
+DB.subscriber[2].id = -54662387
+DB.subscriber[2].nested.subscriber[0].id = 207102538
+DB.subscriber[1].nested.subscriber[0].eventIds = (465201302,)
+DB.subscriber[2].nested.subscriber[0].eventIds = (35456563,)
+DB.subscriber[1].nested.subscriber[0].parent = 1380494816
+DB.subscriber[2].nested.subscriber[0].parent = -54662387
 mapping = {'db': DB,
- 'indexes': {'subscriber': {'id': {},
-                            'name': {},
-                            'type': {},
-                            'group': {},
-                            'eventIds': {},
-                            'parent': {}}},
+ 'indexes': {'subscriber': {'id': {1435613453: (DB.subscriber[0],),
+                                   1380494816: (DB.subscriber[1],),
+                                   900442570: (DB.subscriber[1].nested.subscriber[0],),
+                                   -54662387: (DB.subscriber[2],),
+                                   207102538: (DB.subscriber[2].nested.subscriber[0],)},
+                            'name': {'videos': (DB.subscriber[0],),
+                                     'controls': (DB.subscriber[1],),
+                                     'afterBattle': (DB.subscriber[1].nested.subscriber[0],),
+                                     'NY_poster': (DB.subscriber[2],),
+                                     'unique.login': (DB.subscriber[2].nested.subscriber[0],)},
+                            'type': {'browser': (DB.subscriber[0], DB.subscriber[1]),
+                                     'trigger': (DB.subscriber[1].nested.subscriber[0], DB.subscriber[2].nested.subscriber[0]),
+                                     'poster': (DB.subscriber[2],)},
+                            'group': {'video.tutorial': (DB.subscriber[0], DB.subscriber[1]),
+                                      'poster': (DB.subscriber[2],)},
+                            'eventIds': {(465201302,): (DB.subscriber[1].nested.subscriber[0],),
+                                         (35456563,): (DB.subscriber[2].nested.subscriber[0],)},
+                            'parent': {1380494816: (DB.subscriber[1].nested.subscriber[0],),
+                                       -54662387: (DB.subscriber[2].nested.subscriber[0],)}}},
  'nested': ('subscriber.nested',),
  'type': {'default': 'subscriber',
           'all': ['subscriber']}}

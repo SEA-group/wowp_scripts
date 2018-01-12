@@ -177,14 +177,12 @@
           </bBoxes>
           <health>50%</health>
           <componentType>Engine</componentType>
-          <componentXml>r-1535-72</componentXml>
+          <componentXml>server.todo.xml</componentXml>
           <states>
             <state>
               <id>	1	</id>
               <stateHelthCfc>	1.000000	</stateHelthCfc>
               <model>vehicles/airplanes/china/CH07_HAWK2/normal/lod0/engine_01.model</model>
-              <animationController>
-              </animationController>
               <subItems>
                 <item>
                   <model>vehicles/airplanes/china/CH07_HAWK2/normal/lod0/rotor_01.model</model>
@@ -210,33 +208,27 @@
               <effectsTriggered>
                 <effect>
                   <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <name>nzf_hawk-2</name>
                   <mountPoint>plane/HP_nozzle_01</mountPoint>
                 </effect>
                 <effect>
                   <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <name>nzf_hawk-2</name>
                   <mountPoint>plane/HP_nozzle_02</mountPoint>
                 </effect>
                 <effect>
                   <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <name>nzf_hawk-2_forsage</name>
                   <mountPoint>plane/HP_nozzle_01</mountPoint>
                 </effect>
                 <effect>
                   <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <name>nzf_hawk-2_forsage</name>
                   <mountPoint>plane/HP_nozzle_02</mountPoint>
                 </effect>
               </effectsTriggered>
               <stateAction>	0	</stateAction>
-              <usage>
-              </usage>
-              <fallingOutModel>
-              </fallingOutModel>
               <stateFireChance>	0.200000	</stateFireChance>
-              <stateAnimation>
-              </stateAnimation>
               <usage>
               </usage>
               <effectState>
@@ -250,8 +242,6 @@
               <id>	2	</id>
               <stateHelthCfc>	0.400000	</stateHelthCfc>
               <model>vehicles/airplanes/china/CH07_HAWK2/crash/lod0/engine_01.model</model>
-              <animationController>
-              </animationController>
               <subItems>
                 <item>
                   <model>vehicles/airplanes/china/CH07_HAWK2/crash/lod0/rotor_01.model</model>
@@ -274,6 +264,32 @@
                   <animatorName>PropellorTextureForsageControllerR</animatorName>
                 </item>
               </subItems>
+              <effectsTriggered>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>nzf_hawk-2</name>
+                  <mountPoint>plane/HP_nozzle_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>nzf_hawk-2</name>
+                  <mountPoint>plane/HP_nozzle_02</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>nzf_hawk-2_forsage</name>
+                  <mountPoint>plane/HP_nozzle_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>nzf_hawk-2_forsage</name>
+                  <mountPoint>plane/HP_nozzle_02</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <usage>
+              </usage>
               <effectState>
                 <effect>
                   <name>crit_engine_damaged_yellow</name>
@@ -292,45 +308,11 @@
                   <mountPoint>HP_engine</mountPoint>
                 </effect>
               </effectState>
-              <effectsTriggered>
-                <effect>
-                  <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
-                  <mountPoint>plane/HP_nozzle_01</mountPoint>
-                </effect>
-                <effect>
-                  <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
-                  <mountPoint>plane/HP_nozzle_02</mountPoint>
-                </effect>
-                <effect>
-                  <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
-                  <mountPoint>plane/HP_nozzle_01</mountPoint>
-                </effect>
-                <effect>
-                  <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
-                  <mountPoint>plane/HP_nozzle_02</mountPoint>
-                </effect>
-              </effectsTriggered>
-              <stateAction>	0	</stateAction>
-              <usage>
-              </usage>
-              <fallingOutModel>
-              </fallingOutModel>
-              <stateFireChance>	0.200000	</stateFireChance>
-              <stateAnimation>
-              </stateAnimation>
-              <usage>
-              </usage>
             </state>
             <state>
               <id>	3	</id>
               <stateHelthCfc>	0.400000	</stateHelthCfc>
               <model>vehicles/airplanes/china/CH07_HAWK2/crash/lod0/engine_01.model</model>
-              <animationController>
-              </animationController>
               <subItems>
                 <item>
                   <model>vehicles/airplanes/china/CH07_HAWK2/crash/lod0/rotor_01.model</model>
@@ -353,6 +335,32 @@
                   <animatorName>PropellorTextureForsageControllerR</animatorName>
                 </item>
               </subItems>
+              <effectsTriggered>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>nzf_hawk-2</name>
+                  <mountPoint>plane/HP_nozzle_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>nzf_hawk-2</name>
+                  <mountPoint>plane/HP_nozzle_02</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>nzf_hawk-2_forsage</name>
+                  <mountPoint>plane/HP_nozzle_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>nzf_hawk-2_forsage</name>
+                  <mountPoint>plane/HP_nozzle_02</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <usage>
+              </usage>
               <effectState>
                 <effect>
                   <name>crit_engine_damaged</name>
@@ -371,38 +379,6 @@
                   <mountPoint>HP_engine</mountPoint>
                 </effect>
               </effectState>
-              <effectsTriggered>
-                <effect>
-                  <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
-                  <mountPoint>plane/HP_nozzle_01</mountPoint>
-                </effect>
-                <effect>
-                  <trigger>ENGINE</trigger>
-                  <name>EFFECT_ENGINE_ACTIVE</name>
-                  <mountPoint>plane/HP_nozzle_02</mountPoint>
-                </effect>
-                <effect>
-                  <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
-                  <mountPoint>plane/HP_nozzle_01</mountPoint>
-                </effect>
-                <effect>
-                  <trigger>FORSAGE</trigger>
-                  <name>EFFECT_ENGINE_FORSAGE</name>
-                  <mountPoint>plane/HP_nozzle_02</mountPoint>
-                </effect>
-              </effectsTriggered>
-              <stateAction>	0	</stateAction>
-              <usage>
-              </usage>
-              <fallingOutModel>
-              </fallingOutModel>
-              <stateFireChance>	0.200000	</stateFireChance>
-              <stateAnimation>
-              </stateAnimation>
-              <usage>
-              </usage>
               <effectOnStart>
                 <effect>
                   <name>crit_engine_expl</name>
@@ -436,6 +412,9 @@
                   <animatorName>PropellorTextureForsageControllerR</animatorName>
                 </item>
               </subItems>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <usage>crash</usage>
               <effectState>
                 <effect>
                   <name>EFFECT_FIRE_ENGINE</name>
@@ -450,21 +429,8 @@
                   </trigger>
                 </effect>
               </effectState>
-              <stateAction>	0	</stateAction>
-              <usage>crash</usage>
-              <fallingOutModel>
-              </fallingOutModel>
-              <stateFireChance>	0.200000	</stateFireChance>
-              <stateAnimation>
-              </stateAnimation>
-              <animationController>
-              </animationController>
-              <usage>
-              </usage>
             </state>
           </states>
-          <fireMountPoint>
-          </fireMountPoint>
           <repairDestructedAfter>	20.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
@@ -2669,6 +2635,11 @@
                 <id>	199	</id>
                 <texture>vehicles/airplanes/common/decals/decor/flags/44.dds</texture>
                 <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/44.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	200	</id>
+                <texture>vehicles/airplanes/common/decals/decor/128.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/128.dds</icoPath>
               </decal>
             </decals>
           </decalGroup>

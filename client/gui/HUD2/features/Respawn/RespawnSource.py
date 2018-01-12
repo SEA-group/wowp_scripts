@@ -10,6 +10,7 @@ from clientConsts import PLANE_TYPE_ICO_PATH
 from consts import PLANE_CLASS, TEAM_ID, COMPONENT_TYPE, UPGRADE_TYPE, UPGRADE_TYPE_TO_COMPONENT_TYPE
 from gui.HUD2.core.DataPrims import DataSource
 from gui.HUD2.hudFeatures import Feature
+from Helpers.iconPathHelper import get48ModuleIconPath
 
 class RespawnSource(DataSource):
 
@@ -165,7 +166,7 @@ class RespawnSource(DataSource):
             belt = self._db.getComponentByID(COMPONENT_TYPE.AMMOBELT, beltId)
             beltStrc = modelPlaneStrc.ammoBelts.first(lambda a: a.id.get() == id_)
             if not beltStrc:
-                modelPlaneStrc.ammoBelts.append(id=beltId, iconPath=belt.lobbyIconPath, caliber=gun.caliber, count=gunCount)
+                modelPlaneStrc.ammoBelts.append(id=beltId, iconPath=get48ModuleIconPath(belt.lobbyIconPath), caliber=gun.caliber, count=gunCount)
 
     def updateEquipment(self, equipmentData, modelPlaneStrc):
         modelPlaneStrc.equipments.clean()
