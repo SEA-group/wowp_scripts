@@ -1,0 +1,909 @@
+<epic.xml>
+  <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
+  <noNamespaceSchemaLocation>../../eps/validators/subscribers.xsd</noNamespaceSchemaLocation>
+  <header>
+    <type>achievement</type>
+    <group>	epic	</group>
+    <server>
+      <active>	true	</active>
+      <scope>player</scope>
+    </server>
+    <markers>
+      <group>	epic	</group>
+    </markers>
+    <client>
+      <place>right</place>
+    </client>
+  </header>
+  <include>
+    <condition>
+      <gte>
+        <context>player.plane.level</context>
+        <value>	4	</value>
+      </gte>
+    </condition>
+    <condition>
+      <or>
+        <and>
+          <equal>
+            <context>arena.type</context>
+            <value>normal</value>
+          </equal>
+          <equal>
+            <context>arena.source</context>
+            <value>player</value>
+          </equal>
+        </and>
+        <and>
+          <equal>
+            <context>self.event.type</context>
+            <value>hangar</value>
+          </equal>
+        </and>
+      </or>
+    </condition>
+    <metadata>
+      <doneCount>	true	</doneCount>
+      <firstDoneTime>	true	</firstDoneTime>
+      <lastDoneTime>	true	</lastDoneTime>
+    </metadata>
+  </include>
+  <subscriber>
+    <name>reset</name>
+    <type>achievement.reset</type>
+    <group>	epic	</group>
+    <server>
+      <repeat>	true	</repeat>
+      <overwrite>	true	</overwrite>
+    </server>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>finish</name>
+      <operation>
+        <id>
+          <name>*</name>
+          <type>achievement</type>
+          <group>	epic	</group>
+        </id>
+        <rollback>	true	</rollback>
+        <set>
+          <completed>	false	</completed>
+        </set>
+      </operation>
+    </event>
+    <event>
+      <type>hangar</type>
+      <context>player</context>
+      <name>day.changed</name>
+      <operation>
+        <id>
+          <name>*</name>
+          <type>achievement</type>
+          <group>	epic	</group>
+        </id>
+        <reset>	true	</reset>
+        <processors>
+          <transaction>	0	</transaction>
+        </processors>
+      </operation>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>marcel</name>
+    <client>
+      <order>	1	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_MARCEL</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_MARCEL</locale>
+      </description>
+      <history>
+        <locale>MEDAL_HISTORY_MARCEL</locale>
+      </history>
+      <level>
+        <locale>MEDAL_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acEpicMarseille.dds</small>
+        <big>icons/awards/achievementsInfo/acEpicMarseille.dds</big>
+        <faded>icons/awards/achievements/acEpicMarseille_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <count>
+        <id>	0	</id>
+        <value>	17	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>win</name>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>death</name>
+      <operation>
+        <self>	true	</self>
+        <rollback>	true	</rollback>
+      </operation>
+    </event>
+    <send>
+      <event>
+        <type>achievement</type>
+        <context>marcel.epic</context>
+        <name>completed</name>
+      </event>
+    </send>
+    <transaction>
+      <id>	0	</id>
+      <times>	1	</times>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+  </subscriber>
+  <subscriber>
+    <name>maccambell</name>
+    <client>
+      <order>	2	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_MACCAMPBELL</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_MACCAMPBELL</locale>
+      </description>
+      <history>
+        <locale>MEDAL_HISTORY_MACCAMPBELL</locale>
+      </history>
+      <level>
+        <locale>MEDAL_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acEpicMcCampbell.dds</small>
+        <big>icons/awards/achievementsInfo/acEpicMcCampbell.dds</big>
+        <faded>icons/awards/achievements/acEpicMcCampbell_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>win</name>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>death</name>
+      <condition>
+        <equal>
+          <context>self.processors.count.0.done</context>
+          <value>no</value>
+        </equal>
+      </condition>
+      <operation>
+        <self>	true	</self>
+        <rollback>	true	</rollback>
+      </operation>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <count>
+        <id>	0	</id>
+        <by>victim.plane.type</by>
+        <contains>
+          <item>fighter</item>
+          <item>heavy.fighter</item>
+          <item>	navy	</item>
+          <item>assault</item>
+          <item>bomber</item>
+        </contains>
+        <total>	true	</total>
+        <value>	10	</value>
+      </count>
+    </event>
+    <transaction>
+      <id>	0	</id>
+      <times>	1	</times>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+  </subscriber>
+  <subscriber>
+    <name>	lang	</name>
+    <client>
+      <order>	3	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_LANG</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_LANG</locale>
+      </description>
+      <history>
+        <locale>MEDAL_HISTORY_LANG</locale>
+      </history>
+      <level>
+        <locale>MEDAL_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acEpicLang.dds</small>
+        <big>icons/awards/achievementsInfo/acEpicLang.dds</big>
+        <faded>icons/awards/achievements/acEpicLang_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>destroy</name>
+      <count>
+        <id>	0	</id>
+        <value>	15	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>win</name>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>death</name>
+      <condition>
+        <equal>
+          <context>self.processors.count.0.done</context>
+          <value>no</value>
+        </equal>
+      </condition>
+      <operation>
+        <self>	true	</self>
+        <rollback>	true	</rollback>
+      </operation>
+    </event>
+    <send>
+      <event>
+        <type>achievement</type>
+        <context>lang.epic</context>
+        <name>completed</name>
+      </event>
+    </send>
+    <transaction>
+      <id>	0	</id>
+      <times>	1	</times>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+  </subscriber>
+  <subscriber>
+    <name>golubev</name>
+    <client>
+      <order>	4	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_GOLUBEV</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_GOLUBEV</locale>
+      </description>
+      <history>
+        <locale>MEDAL_HISTORY_GOLUBEV</locale>
+      </history>
+      <level>
+        <locale>MEDAL_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acEpicGolubev.dds</small>
+        <big>icons/awards/achievementsInfo/acEpicGolubev.dds</big>
+        <faded>icons/awards/achievements/acEpicGolubev_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <condition>
+        <equal>
+          <context>by</context>
+          <value>rocket</value>
+        </equal>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	3	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>win</name>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>death</name>
+      <condition>
+        <equal>
+          <context>self.processors.count.0.done</context>
+          <value>no</value>
+        </equal>
+      </condition>
+      <operation>
+        <self>	true	</self>
+        <rollback>	true	</rollback>
+      </operation>
+    </event>
+    <transaction>
+      <id>	0	</id>
+      <times>	1	</times>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+  </subscriber>
+  <subscriber>
+    <name>	habrezki	</name>
+    <client>
+      <order>	5	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_HABREZKI</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_HABREZKI</locale>
+      </description>
+      <history>
+        <locale>MEDAL_HISTORY_HABREZKI</locale>
+      </history>
+      <level>
+        <locale>MEDAL_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acEpicGabreski.dds</small>
+        <big>icons/awards/achievementsInfo/acEpicGabreski.dds</big>
+        <faded>icons/awards/achievements/acEpicGabreski_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <count>
+        <id>	0	</id>
+        <value>	10	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>destroy</name>
+      <count>
+        <id>	1	</id>
+        <value>	7	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>win</name>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>death</name>
+      <condition>
+        <or>
+          <equal>
+            <context>self.processors.count.0.done</context>
+            <value>no</value>
+          </equal>
+          <equal>
+            <context>self.processors.count.1.done</context>
+            <value>no</value>
+          </equal>
+        </or>
+      </condition>
+      <operation>
+        <self>	true	</self>
+        <rollback>	true	</rollback>
+      </operation>
+    </event>
+    <transaction>
+      <id>	0	</id>
+      <times>	1	</times>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+  </subscriber>
+  <subscriber>
+    <name>	akamatsu	</name>
+    <client>
+      <order>	6	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_AKAMATSU</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_AKAMATSU</locale>
+      </description>
+      <history>
+        <locale>MEDAL_HISTORY_AKAMATSU</locale>
+      </history>
+      <level>
+        <locale>MEDAL_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acEpicAkamatsu.dds</small>
+        <big>icons/awards/achievementsInfo/acEpicAkamatsu.dds</big>
+        <faded>icons/awards/achievements/acEpicAkamatsu_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <condition>
+        <and>
+          <equal>
+            <context>player.plane.type</context>
+            <value>fighter</value>
+          </equal>
+          <equal>
+            <context>victim.object</context>
+            <value>plane</value>
+          </equal>
+        </and>
+      </condition>
+      <count>
+        <context>points.capture</context>
+        <id>	0	</id>
+        <value>	400	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>death</name>
+      <operation>
+        <self>	true	</self>
+        <rollback>	true	</rollback>
+      </operation>
+    </event>
+    <transaction>
+      <id>	0	</id>
+      <times>	1	</times>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+  </subscriber>
+  <subscriber>
+    <name>	lamberta	</name>
+    <client>
+      <order>	7	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_LAMBERTA</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_LAMBERTA</locale>
+      </description>
+      <history>
+        <locale>MEDAL_HISTORY_LAMBERTA</locale>
+      </history>
+      <level>
+        <locale>MEDAL_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acEpicLambert.dds</small>
+        <big>icons/awards/achievementsInfo/acEpicLambert.dds</big>
+        <faded>icons/awards/achievements/acEpicLambert_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <condition>
+        <equal>
+          <context>player.plane.type</context>
+          <value>	navy	</value>
+        </equal>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <context>points.capture</context>
+        <value>	400	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>death</name>
+      <operation>
+        <self>	true	</self>
+        <rollback>	true	</rollback>
+      </operation>
+    </event>
+    <transaction>
+      <id>	0	</id>
+      <times>	1	</times>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+  </subscriber>
+  <subscriber>
+    <name>mcguire</name>
+    <client>
+      <order>	8	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_MCGUIRE</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_MCGUIRE</locale>
+      </description>
+      <history>
+        <locale>MEDAL_HISTORY_MCGUIRE</locale>
+      </history>
+      <level>
+        <locale>MEDAL_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acEpicMcGuire.dds</small>
+        <big>icons/awards/achievementsInfo/acEpicMcGuire.dds</big>
+        <faded>icons/awards/achievements/acEpicMcGuire_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <condition>
+        <equal>
+          <context>player.plane.type</context>
+          <value>heavy.fighter</value>
+        </equal>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <context>points.capture</context>
+        <value>	400	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>death</name>
+      <operation>
+        <self>	true	</self>
+        <rollback>	true	</rollback>
+      </operation>
+    </event>
+    <transaction>
+      <id>	0	</id>
+      <times>	1	</times>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+  </subscriber>
+  <subscriber>
+    <name>yefimov</name>
+    <client>
+      <order>	9	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_YEFIMOV</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_YEFIMOV</locale>
+      </description>
+      <history>
+        <locale>MEDAL_HISTORY_YEFIMOV</locale>
+      </history>
+      <level>
+        <locale>MEDAL_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acEpicYefimov.dds</small>
+        <big>icons/awards/achievementsInfo/acEpicYefimov.dds</big>
+        <faded>icons/awards/achievements/acEpicYefimov_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <condition>
+        <and>
+          <equal>
+            <context>victim.object</context>
+            <value>ground</value>
+          </equal>
+          <equal>
+            <context>player.plane.type</context>
+            <value>assault</value>
+          </equal>
+        </and>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <context>points.capture</context>
+        <value>	400	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>death</name>
+      <operation>
+        <self>	true	</self>
+        <rollback>	true	</rollback>
+      </operation>
+    </event>
+    <transaction>
+      <id>	0	</id>
+      <times>	1	</times>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+  </subscriber>
+  <subscriber>
+    <name>	dulittla	</name>
+    <client>
+      <order>	10	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_DULITTLA</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_DULITTLA</locale>
+      </description>
+      <history>
+        <locale>MEDAL_HISTORY_DULITTLA</locale>
+      </history>
+      <level>
+        <locale>MEDAL_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acEpicDoolittle.dds</small>
+        <big>icons/awards/achievementsInfo/acEpicDoolittle.dds</big>
+        <faded>icons/awards/achievements/acEpicDoolittle_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <condition>
+        <and>
+          <equal>
+            <context>victim.object</context>
+            <value>ground</value>
+          </equal>
+          <equal>
+            <context>player.plane.type</context>
+            <value>bomber</value>
+          </equal>
+        </and>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <context>points.capture</context>
+        <value>	400	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>death</name>
+      <operation>
+        <self>	true	</self>
+        <rollback>	true	</rollback>
+      </operation>
+    </event>
+    <transaction>
+      <id>	0	</id>
+      <times>	1	</times>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+  </subscriber>
+  <subscriber>
+    <name>	kojeduba	</name>
+    <client>
+      <order>	11	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_KOJEDUBA</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_KOJEDUBA</locale>
+      </description>
+      <history>
+        <locale>MEDAL_HISTORY_KOJEDUBA</locale>
+      </history>
+      <level>
+        <locale>MEDAL_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acEpicKozhedub.dds</small>
+        <big>icons/awards/achievementsInfo/acEpicKozhedub.dds</big>
+        <faded>icons/awards/achievements/acEpicKozhedub_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <condition>
+        <equal>
+          <context>victim.type</context>
+          <value>player</value>
+        </equal>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	5	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>result</name>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>stormfront</name>
+      <count>
+        <value>	1	</value>
+      </count>
+      <operation>
+        <self>	true	</self>
+        <rollback>	true	</rollback>
+        <processors>
+          <count>	0	</count>
+        </processors>
+      </operation>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>death</name>
+      <operation>
+        <self>	true	</self>
+        <rollback>	true	</rollback>
+      </operation>
+    </event>
+    <transaction>
+      <id>	0	</id>
+      <times>	1	</times>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+  </subscriber>
+</epic.xml>

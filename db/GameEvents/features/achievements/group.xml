@@ -1,0 +1,412 @@
+<group.xml>
+  <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
+  <noNamespaceSchemaLocation>../../eps/validators/subscribers.xsd</noNamespaceSchemaLocation>
+  <header>
+    <type>achievement</type>
+    <group>group</group>
+    <server>
+      <active>	true	</active>
+      <scope>squad</scope>
+    </server>
+    <markers>
+      <group>group</group>
+    </markers>
+    <client>
+      <place>right</place>
+    </client>
+  </header>
+  <include>
+    <condition>
+      <gte>
+        <context>player.plane.level</context>
+        <value>	4	</value>
+      </gte>
+    </condition>
+    <condition>
+      <or>
+        <and>
+          <equal>
+            <context>arena.type</context>
+            <value>normal</value>
+          </equal>
+          <equal>
+            <context>arena.source</context>
+            <value>player</value>
+          </equal>
+          <equal>
+            <context>player.squad.active</context>
+            <value>yes</value>
+          </equal>
+        </and>
+        <and>
+          <equal>
+            <context>self.event.type</context>
+            <value>hangar</value>
+          </equal>
+        </and>
+      </or>
+    </condition>
+    <metadata>
+      <doneCount>	true	</doneCount>
+      <firstDoneTime>	true	</firstDoneTime>
+      <lastDoneTime>	true	</lastDoneTime>
+    </metadata>
+  </include>
+  <subscriber>
+    <name>reset</name>
+    <type>achievement.reset</type>
+    <group>group</group>
+    <server>
+      <repeat>	true	</repeat>
+      <overwrite>	true	</overwrite>
+    </server>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>finish</name>
+      <operation>
+        <id>
+          <name>*</name>
+          <type>achievement</type>
+          <group>group</group>
+        </id>
+        <rollback>	true	</rollback>
+        <set>
+          <completed>	false	</completed>
+        </set>
+      </operation>
+    </event>
+    <event>
+      <type>hangar</type>
+      <context>player</context>
+      <name>day.changed</name>
+      <operation>
+        <id>
+          <name>*</name>
+          <type>achievement</type>
+          <group>group</group>
+        </id>
+        <reset>	true	</reset>
+        <processors>
+          <transaction>	0	</transaction>
+        </processors>
+      </operation>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>	mastersofsky	</name>
+    <client>
+      <order>	1	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_MASTERS_OF_SKY</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_MASTERS_OF_SKY</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acGroupMastersOfSky.dds</small>
+        <big>icons/awards/achievementsInfo/acGroupMastersOfSky.dds</big>
+        <faded>icons/awards/achievements/acGroupMastersOfSky_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <count>
+        <id>	0	</id>
+        <value>	25	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>death</name>
+      <operation>
+        <self>	true	</self>
+        <rollback>	true	</rollback>
+      </operation>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>predatoryduet</name>
+    <client>
+      <order>	2	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_PREDATORY_DUET</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_PREDATORY_DUET</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acGroupPredatoryDuet.dds</small>
+        <big>icons/awards/achievementsInfo/acGroupPredatoryDuet.dds</big>
+        <faded>icons/awards/achievements/acGroupPredatoryDuet_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <count>
+        <id>	0	</id>
+        <value>	15	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <count>
+        <context>points.capture</context>
+        <id>	1	</id>
+        <value>	500	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>death</name>
+      <operation>
+        <self>	true	</self>
+        <rollback>	true	</rollback>
+      </operation>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>endofspear</name>
+    <client>
+      <order>	3	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_END_OF_SPEAR</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_END_OF_SPEAR</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acGroupEndOfSpear.dds</small>
+        <big>icons/awards/achievementsInfo/acGroupEndOfSpear.dds</big>
+        <faded>icons/awards/achievements/acGroupEndOfSpear_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <count>
+        <context>points.battle</context>
+        <id>	0	</id>
+        <value>	22000	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>death</name>
+      <operation>
+        <self>	true	</self>
+        <rollback>	true	</rollback>
+      </operation>
+    </event>
+    <transaction>
+      <times>	1	</times>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+  </subscriber>
+  <subscriber>
+    <name>independent</name>
+    <client>
+      <order>	4	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_INDEPENDENT</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_INDEPENDENT</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acGroupIndependent.dds</small>
+        <big>icons/awards/achievementsInfo/acGroupIndependent.dds</big>
+        <faded>icons/awards/achievements/acGroupIndependent_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <condition>
+        <and>
+          <equal>
+            <context>victim.type</context>
+            <value>player</value>
+          </equal>
+        </and>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	6	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>stormfront</name>
+      <count>
+        <value>	1	</value>
+      </count>
+      <operation>
+        <self>	true	</self>
+        <rollback>	true	</rollback>
+        <processors>
+          <count>	0	</count>
+        </processors>
+      </operation>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>win</name>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>skywolves</name>
+    <client>
+      <order>	5	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_SKY_WOLVES</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_SKY_WOLVES</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acGroupSkyWolves.dds</small>
+        <big>icons/awards/achievementsInfo/acGroupSkyWolves.dds</big>
+        <faded>icons/awards/achievements/acGroupSkyWolves_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <count>
+        <id>	0	</id>
+        <value>	10	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <condition>
+        <equal>
+          <context>victim.object</context>
+          <value>ground</value>
+        </equal>
+      </condition>
+      <count>
+        <context>points.capture</context>
+        <id>	1	</id>
+        <value>	300	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>win</name>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>hungryflock</name>
+    <client>
+      <order>	6	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_HUNGRY_FLOCK</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_HUNGRY_FLOCK</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acGroupHungryFlock.dds</small>
+        <big>icons/awards/achievementsInfo/acGroupHungryFlock.dds</big>
+        <faded>icons/awards/achievements/acGroupHungryFlock_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <count>
+        <id>	0	</id>
+        <value>	13	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <condition>
+        <equal>
+          <context>victim.object</context>
+          <value>ground</value>
+        </equal>
+      </condition>
+      <count>
+        <context>points.capture</context>
+        <id>	1	</id>
+        <value>	400	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>win</name>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+</group.xml>

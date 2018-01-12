@@ -1,0 +1,1807 @@
+<blockplane.xml>
+  <parent>base.xml</parent>
+  <Components>
+    <Weapons2>
+      <slot>
+        <id>	0	</id>
+        <name>	FUSELAGE	</name>
+        <type>
+          <id>	0	</id>
+          <linkedModels>
+            <visual>
+              <parentUpgrade>	1	</parentUpgrade>
+              <model>vehicles/Shells/Other/pilons/invisible_pilon.model</model>
+              <mountPath>hull/HP_gun</mountPath>
+            </visual>
+          </linkedModels>
+          <weapon>
+            <name>Bot_fake_gun</name>
+            <flamePath>hull/HP_gun/HP_flame_01</flamePath>
+            <ammoBelt>generalPurposeBelt</ammoBelt>
+            <weaponGroup>	1	</weaponGroup>
+          </weapon>
+        </type>
+      </slot>
+    </Weapons2>
+  </Components>
+  <Airplane>
+    <name>Blockplane</name>
+    <shakingProfile>HeavyPlanes</shakingProfile>
+    <iconPath>icons/hangarCarousel/planes/china/mosquitoMk26.dds</iconPath>
+    <treeIconPath>icons/planesTree/china/mosquitoMk26.dds</treeIconPath>
+    <battleLoadingIconPath>icons/planesPreview/china/mosquitoMk26.dds</battleLoadingIconPath>
+    <previewIconPath>icons/planesPreview/china/mosquitoMk26.dds</previewIconPath>
+    <longName>Emhyr var Emreis the White Flame Dancing on the Barrows of his Enemies</longName>
+    <bBoxes>
+      <mainBox>
+        <size>14 4 14</size>
+      </mainBox>
+    </bBoxes>
+    <parts>
+      <part>
+        <name>	hull	</name>
+        <partId>	1	</partId>
+        <mountPoint>
+        </mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <bBoxes>
+            <bbox>
+              <position>	0.000000 0.000000 0.000000	</position>
+              <size>	3.060000 3.060000 3.060000	</size>
+              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 5.000000	</armorBack>
+              <absorption>	0.800000	</absorption>
+              <rotation>	0.010000 0.000000 0.000000 0.000000	</rotation>
+            </bbox>
+          </bBoxes>
+          <health>100%</health>
+          <componentType>Pilot</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/normal/lod0/fuselage_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.550000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/repaired/lod0/fuselage_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/crash/lod0/fuselage_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	1	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/crash/lod0/fuselage_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	1	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>engine_01</name>
+        <partId>	2	</partId>
+        <mountPoint>HP_engine_01</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <bBoxes>
+            <bbox>
+              <position>	0.000000 -5.985000 0.000000	</position>
+              <size>	3.060000 3.060000 3.060000	</size>
+              <armorFront>	30.000000 30.000000 60.000000	</armorFront>
+              <armorBack>	30.000000 30.000000 30.000000	</armorBack>
+              <absorption>	1.000000	</absorption>
+              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+          </bBoxes>
+          <health>30%</health>
+          <componentType>Engine</componentType>
+          <componentPosition>	Left	</componentPosition>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/normal/lod0/engine_01.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.400000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/repaired/lod0/engine_01.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.400000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/crash/lod0/engine_01.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <effectOnStart>
+                <effect>
+                  <name>crit_engine_expl</name>
+                  <mountPoint>hull/HP_engine_01</mountPoint>
+                </effect>
+              </effectOnStart>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/crash/lod0/engine_01.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	20.000000	</repairDestructedAfter>
+        </upgrade>
+        <upgrade>
+          <id>	2	</id>
+          <bBoxes>
+            <bbox>
+              <position>	0.000000 -5.985000 0.000000	</position>
+              <size>	3.060000 3.060000 3.060000	</size>
+              <armorFront>	30.000000 30.000000 60.000000	</armorFront>
+              <armorBack>	30.000000 30.000000 30.000000	</armorBack>
+              <absorption>	1.000000	</absorption>
+              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+          </bBoxes>
+          <health>30%</health>
+          <componentType>Engine</componentType>
+          <componentPosition>	Left	</componentPosition>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/normal/lod0/engine_01.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.400000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/repaired/lod0/engine_01.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.400000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/crash/lod0/engine_01.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <effectOnStart>
+                <effect>
+                  <name>crit_engine_expl</name>
+                  <mountPoint>hull/HP_engine_01</mountPoint>
+                </effect>
+              </effectOnStart>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/crash/lod0/engine_01.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	20.000000	</repairDestructedAfter>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>engine_02</name>
+        <partId>	3	</partId>
+        <mountPoint>HP_engine_02</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <health>30%</health>
+          <componentType>Engine</componentType>
+          <componentPosition>Right</componentPosition>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.400000	</stateHelthCfc>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.400000	</stateHelthCfc>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	20.000000	</repairDestructedAfter>
+        </upgrade>
+        <upgrade>
+          <id>	2	</id>
+          <bBoxes>
+            <bbox>
+              <position>	0.000000 -5.985000 -18.000000	</position>
+              <size>	3.060000 3.060000 3.060000	</size>
+              <armorFront>	30.000000 30.000000 60.000000	</armorFront>
+              <armorBack>	30.000000 30.000000 30.000000	</armorBack>
+              <absorption>	1.000000	</absorption>
+              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+          </bBoxes>
+          <health>30%</health>
+          <componentType>Engine</componentType>
+          <componentPosition>Right</componentPosition>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/normal/lod0/engine_02.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.400000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/repaired/lod0/engine_02.model</model>
+              <animationController>
+              </animationController>
+              <effectState>
+                <effect>
+                  <name>crit_engine_damaged_yellow</name>
+                  <mountPoint>HP_engine_02</mountPoint>
+                  <trigger>
+                  </trigger>
+                </effect>
+                <effect>
+                  <name>crit_engine_damaged_right_yellow</name>
+                  <mountPoint>HP_engine_02</mountPoint>
+                  <trigger>
+                  </trigger>
+                </effect>
+              </effectState>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.400000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/crash/lod0/engine_02.model</model>
+              <animationController>
+              </animationController>
+              <effectState>
+                <effect>
+                  <name>crit_engine_damaged</name>
+                  <mountPoint>HP_engine_02</mountPoint>
+                  <trigger>
+                  </trigger>
+                </effect>
+                <effect>
+                  <name>crit_engine_damaged_right</name>
+                  <mountPoint>HP_engine_02</mountPoint>
+                  <trigger>
+                  </trigger>
+                </effect>
+              </effectState>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <effectOnStart>
+                <effect>
+                  <name>crit_engine_expl</name>
+                  <mountPoint>HP_engine_02</mountPoint>
+                </effect>
+              </effectOnStart>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/crash/lod0/engine_02.model</model>
+              <animationController>
+              </animationController>
+              <effectState>
+                <effect>
+                  <name>EFFECT_SMOKE_ENGINE</name>
+                  <mountPoint>HP_engine_02</mountPoint>
+                  <trigger>
+                  </trigger>
+                </effect>
+                <effect>
+                  <name>EFFECT_SMOKE_ENGINE_small</name>
+                  <mountPoint>HP_engine_02</mountPoint>
+                  <trigger>
+                  </trigger>
+                </effect>
+              </effectState>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	20.000000	</repairDestructedAfter>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>pilot</name>
+        <partId>	4	</partId>
+        <mountPoint>HP_pilot</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <bBoxes>
+            <bbox>
+              <position>	0.000000 0.000000 -5.962500	</position>
+              <size>	3.060000 3.060000 3.060000	</size>
+              <armorFront>	5.000000 5.000000 5.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 40.000000	</armorBack>
+              <absorption>	0.800000	</absorption>
+              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+          </bBoxes>
+          <health>10%</health>
+          <componentType>	Hull	</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/normal/lod0/pilot_01.model</model>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <animationController>
+              </animationController>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/repaired/lod0/pilot_01.model</model>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <animationController>
+              </animationController>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>fall, crash</usage>
+              <stateHelthCfc>	-1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/crash/lod0/pilot_01.model</model>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <animationController>
+              </animationController>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>hangar</usage>
+              <stateHelthCfc>	-1.000000	</stateHelthCfc>
+              <model>
+              </model>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <animationController>
+              </animationController>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>gunner</name>
+        <partId>	5	</partId>
+        <mountPoint>HP_gunner</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <bBoxes>
+            <bbox>
+              <position>	0.000000 0.000000 -12.021300	</position>
+              <size>	3.060000 3.060000 3.060000	</size>
+              <armorFront>	0.000000 0.000000 0.000000	</armorFront>
+              <armorBack>	0.000000 0.000000 0.000000	</armorBack>
+              <absorption>	0.800000	</absorption>
+              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+          </bBoxes>
+          <health>10%</health>
+          <componentType>
+          </componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <states>
+            <state>
+              <id>	1	</id>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/normal/lod0/gunner_01.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	0	</stateAction>
+              <usage>
+              </usage>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/repaired/lod0/gunner_01.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	0	</stateAction>
+              <usage>
+              </usage>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/crash/lod0/gunner_01.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	0	</stateAction>
+              <usage>
+              </usage>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <effectOnStart>
+                <effect>
+                  <name>crit_turret_expl</name>
+                  <mountPoint>hull/HP_gunner</mountPoint>
+                </effect>
+              </effectOnStart>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	4	</id>
+              <stateHelthCfc>	-1.000000	</stateHelthCfc>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <stateAction>	0	</stateAction>
+              <usage>fall, crash</usage>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	5	</id>
+              <stateHelthCfc>	-1.000000	</stateHelthCfc>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <stateAction>	0	</stateAction>
+              <usage>hangar</usage>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>	leftWing	</name>
+        <partId>	7	</partId>
+        <mountPoint>HP_wL</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <bBoxes>
+            <bbox>
+              <position>	0.000000 -5.998500 5.998500	</position>
+              <size>	3.060000 3.060000 3.060000	</size>
+              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 10.000000	</armorBack>
+              <absorption>	0.200000	</absorption>
+              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+          </bBoxes>
+          <health>32%</health>
+          <componentType>	LeftWing	</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/normal/lod0/wL_01.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <fallingOutModel>
+              </fallingOutModel>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.550000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/repaired/lod0/wL_01.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <effectState>
+                <effect>
+                  <name>crit_wing_damaged_yellow</name>
+                  <mountPoint>plane/HP_trailL</mountPoint>
+                </effect>
+              </effectState>
+              <fallingOutModel>
+              </fallingOutModel>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.550000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/crash/lod0/wL_01.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <effectState>
+                <effect>
+                  <name>crit_wing_damaged</name>
+                  <mountPoint>plane/HP_trailL</mountPoint>
+                </effect>
+              </effectState>
+              <effectOnStart>
+                <effect>
+                  <name>crit_wing_expl</name>
+                  <mountPoint>plane/HP_trailL</mountPoint>
+                </effect>
+              </effectOnStart>
+              <fallingOutModel>
+              </fallingOutModel>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/crash/lod0/wL_01.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	1	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <fallingOutModel>
+              </fallingOutModel>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>rightWing</name>
+        <partId>	8	</partId>
+        <mountPoint>HP_wR</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <bBoxes>
+            <bbox>
+              <position>	0.000000 0.000000 6.011100	</position>
+              <size>	3.060000 3.060000 3.060000	</size>
+              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 10.000000	</armorBack>
+              <absorption>	0.200000	</absorption>
+              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+          </bBoxes>
+          <health>32%</health>
+          <componentType>RightWing</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/normal/lod0/wR_01.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <fallingOutModel>
+              </fallingOutModel>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.550000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/repaired/lod0/wR_01.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <effectState>
+                <effect>
+                  <name>crit_wing_damaged_right_yellow</name>
+                  <mountPoint>plane/HP_trailR</mountPoint>
+                </effect>
+              </effectState>
+              <fallingOutModel>
+              </fallingOutModel>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.550000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/crash/lod0/wR_01.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <effectState>
+                <effect>
+                  <name>crit_wing_damaged_right</name>
+                  <mountPoint>plane/HP_trailR</mountPoint>
+                </effect>
+              </effectState>
+              <effectOnStart>
+                <effect>
+                  <name>crit_wing_expl_right</name>
+                  <mountPoint>plane/HP_trailR</mountPoint>
+                </effect>
+              </effectOnStart>
+              <fallingOutModel>
+              </fallingOutModel>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/crash/lod0/wR_01.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	1	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <fallingOutModel>
+              </fallingOutModel>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>tail_01</name>
+        <partId>	9	</partId>
+        <mountPoint>HP_tail_01</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <bBoxes>
+            <bbox>
+              <position>	0.000000 -5.985000 -5.985000	</position>
+              <size>	3.060000 3.060000 3.060000	</size>
+              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 10.000000	</armorBack>
+              <absorption>	0.200000	</absorption>
+              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+          </bBoxes>
+          <health>32%</health>
+          <componentType>	Tail	</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/normal/lod0/tail_01.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <fallingOutModel>
+              </fallingOutModel>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.600000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/repaired/lod0/tail_01.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <effectState>
+                <effect>
+                  <name>crit_tail_damaged_yellow</name>
+                  <mountPoint>hull/HP_tail_01</mountPoint>
+                </effect>
+              </effectState>
+              <fallingOutModel>
+              </fallingOutModel>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.600000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/crash/lod0/tail_01.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <effectState>
+                <effect>
+                  <name>crit_tail_damaged</name>
+                  <mountPoint>hull/HP_tail_01</mountPoint>
+                </effect>
+              </effectState>
+              <effectOnStart>
+                <effect>
+                  <name>crit_tail_expl</name>
+                  <mountPoint>hull/HP_tail_01</mountPoint>
+                </effect>
+              </effectOnStart>
+              <fallingOutModel>
+              </fallingOutModel>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/crash/lod0/tail_01.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	1	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <fallingOutModel>
+              </fallingOutModel>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <upgrade>
+          <id>	2	</id>
+          <bBoxes>
+            <bbox>
+              <position>	0.000000 -5.985000 -5.985000	</position>
+              <size>	3.060000 3.060000 3.060000	</size>
+              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 10.000000	</armorBack>
+              <absorption>	0.200000	</absorption>
+              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+          </bBoxes>
+          <health>32%</health>
+          <componentType>	Tail	</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/normal/lod0/tail_01.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <fallingOutModel>
+              </fallingOutModel>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.600000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/repaired/lod0/tail_01.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <effectState>
+                <effect>
+                  <name>crit_tail_damaged_yellow</name>
+                  <mountPoint>hull/HP_tail_01</mountPoint>
+                </effect>
+              </effectState>
+              <fallingOutModel>
+              </fallingOutModel>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.600000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/crash/lod0/tail_01.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <effectState>
+                <effect>
+                  <name>crit_tail_damaged</name>
+                  <mountPoint>hull/HP_tail_01</mountPoint>
+                </effect>
+              </effectState>
+              <effectOnStart>
+                <effect>
+                  <name>crit_tail_expl</name>
+                  <mountPoint>hull/HP_tail_01</mountPoint>
+                </effect>
+              </effectOnStart>
+              <fallingOutModel>
+              </fallingOutModel>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/crash/lod0/tail_01.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	1	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <fallingOutModel>
+              </fallingOutModel>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>tail_02</name>
+        <partId>	10	</partId>
+        <mountPoint>HP_tail_02</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <health>32%</health>
+          <componentType>	Tail	</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <animationController>
+              </animationController>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <model>
+              </model>
+              <fallingOutModel>
+              </fallingOutModel>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.600000	</stateHelthCfc>
+              <animationController>
+              </animationController>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <effectState>
+                <effect>
+                  <name>crit_tail_damaged_yellow</name>
+                  <mountPoint>hull/HP_tail_02</mountPoint>
+                </effect>
+              </effectState>
+              <model>
+              </model>
+              <fallingOutModel>
+              </fallingOutModel>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.600000	</stateHelthCfc>
+              <animationController>
+              </animationController>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <effectState>
+                <effect>
+                  <name>crit_tail_damaged</name>
+                  <mountPoint>hull/HP_tail_02</mountPoint>
+                </effect>
+              </effectState>
+              <effectOnStart>
+                <effect>
+                  <name>crit_tail_expl</name>
+                  <mountPoint>hull/HP_tail_02</mountPoint>
+                </effect>
+              </effectOnStart>
+              <model>
+              </model>
+              <fallingOutModel>
+              </fallingOutModel>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <animationController>
+              </animationController>
+              <stateAction>	1	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <model>
+              </model>
+              <fallingOutModel>
+              </fallingOutModel>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <upgrade>
+          <id>	2	</id>
+          <bBoxes>
+            <bbox>
+              <position>	0.000000 -5.985000 -12.021300	</position>
+              <size>	3.060000 3.060000 3.060000	</size>
+              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 10.000000	</armorBack>
+              <absorption>	0.200000	</absorption>
+              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+          </bBoxes>
+          <health>32%</health>
+          <componentType>	Tail	</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/normal/lod0/tail_02.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <fallingOutModel>
+              </fallingOutModel>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.600000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/repaired/lod0/tail_02.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <effectState>
+                <effect>
+                  <name>crit_tail_damaged_yellow</name>
+                  <mountPoint>hull/HP_tail_02</mountPoint>
+                </effect>
+              </effectState>
+              <fallingOutModel>
+              </fallingOutModel>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.600000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/crash/lod0/tail_02.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <effectState>
+                <effect>
+                  <name>crit_tail_damaged</name>
+                  <mountPoint>hull/HP_tail_02</mountPoint>
+                </effect>
+              </effectState>
+              <effectOnStart>
+                <effect>
+                  <name>crit_tail_expl</name>
+                  <mountPoint>hull/HP_tail_02</mountPoint>
+                </effect>
+              </effectOnStart>
+              <fallingOutModel>
+              </fallingOutModel>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/crash/lod0/tail_02.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	1	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <fallingOutModel>
+              </fallingOutModel>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>fuelTanks</name>
+        <partId>	14	</partId>
+        <mountPoint>HP_engine_01</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <fireMountPoint>plane/HP_fuelHit_01</fireMountPoint>
+          <health>20%</health>
+          <componentType>	FuelTank	</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	1.500000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.800000	</stateHelthCfc>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <effectState>
+                <effect>
+                  <name>Fuel_Leak</name>
+                  <mountPoint>plane/HP_fuelHit_01</mountPoint>
+                </effect>
+              </effectState>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	2.250000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <effectState>
+                <effect>
+                  <name>Fuel_Leak</name>
+                  <mountPoint>plane/HP_fuelHit_01</mountPoint>
+                </effect>
+              </effectState>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	2.250000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>plane</name>
+        <partId>	15	</partId>
+        <mountPoint>
+        </mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <health>	0	</health>
+          <componentType>
+          </componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH00_Block_plane/normal/lod0/plane.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <effectState>
+                <effect>
+                  <name>flight_idle</name>
+                  <mountPoint>HP_mass</mountPoint>
+                </effect>
+              </effectState>
+              <effectsTriggered>
+                <effect>
+                  <trigger>	FIRE	</trigger>
+                  <name>EFFECT_FIRE_SMALL</name>
+                  <mountPoint>HP_kill</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>SMOKE</trigger>
+                  <name>EFFECT_SMOKE</name>
+                  <mountPoint>HP_kill</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>SPEED_OVERLOAD</trigger>
+                  <name>fly_idle_max_speed</name>
+                  <mountPoint>HP_mass</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+    </parts>
+    <visualSettings>
+      <hangarConfig>large</hangarConfig>
+      <camera>	camera03	</camera>
+      <surfaceSettings>
+        <detailTexture>vehicles/airplanes/china/CH00_Block_plane/block_test_normal.DDS</detailTexture>
+        <decalsSettings>
+          <decalGroup>
+            <name>decor</name>
+            <decals>
+              <decal>
+                <id>	1	</id>
+                <texture>vehicles/airplanes/common/decals/decoration/byPlane/blank_decor.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/remove_decal.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	199	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/44.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/44.dds</icoPath>
+              </decal>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>clan_big</name>
+            <decals>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>platoon_number</name>
+            <decals>
+              <decal>
+                <id>	1	</id>
+                <texture>vehicles/airplanes/common/decals/digits/china/big/CH_01.dds</texture>
+              </decal>
+              <decal>
+                <id>	2	</id>
+                <texture>vehicles/airplanes/common/decals/digits/china/big/CH_02.dds</texture>
+              </decal>
+              <decal>
+                <id>	3	</id>
+                <texture>vehicles/airplanes/common/decals/digits/china/big/CH_03.dds</texture>
+              </decal>
+              <decal>
+                <id>	4	</id>
+                <texture>vehicles/airplanes/common/decals/digits/china/big/CH_04.dds</texture>
+              </decal>
+              <decal>
+                <id>	5	</id>
+                <texture>vehicles/airplanes/common/decals/digits/china/big/CH_05.dds</texture>
+              </decal>
+              <decal>
+                <id>	6	</id>
+                <texture>vehicles/airplanes/common/decals/digits/china/big/CH_06.dds</texture>
+              </decal>
+              <decal>
+                <id>	7	</id>
+                <texture>vehicles/airplanes/common/decals/digits/china/big/CH_07.dds</texture>
+              </decal>
+              <decal>
+                <id>	8	</id>
+                <texture>vehicles/airplanes/common/decals/digits/china/big/CH_08.dds</texture>
+              </decal>
+              <decal>
+                <id>	9	</id>
+                <texture>vehicles/airplanes/common/decals/digits/china/big/CH_09.dds</texture>
+              </decal>
+              <decal>
+                <id>	16	</id>
+                <texture>vehicles/airplanes/common/decals/digits/blank.dds</texture>
+              </decal>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>clan_small</name>
+            <decals>
+              <decal>
+                <id>	1	</id>
+                <texture>vehicles/airplanes/common/decals/nationality/china/Emb_CH_02.dds</texture>
+              </decal>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>	rank	</name>
+            <decals>
+              <decal>
+                <id>	1	</id>
+                <texture>vehicles/airplanes/common/decals/standing/china/lvls/Lvl_01.dds</texture>
+              </decal>
+              <decal>
+                <id>	2	</id>
+                <texture>vehicles/airplanes/common/decals/standing/china/lvls/Lvl_02.dds</texture>
+              </decal>
+              <decal>
+                <id>	3	</id>
+                <texture>vehicles/airplanes/common/decals/standing/china/lvls/Lvl_03.dds</texture>
+              </decal>
+              <decal>
+                <id>	4	</id>
+                <texture>vehicles/airplanes/common/decals/standing/china/lvls/Lvl_04.dds</texture>
+              </decal>
+              <decal>
+                <id>	5	</id>
+                <texture>vehicles/airplanes/common/decals/standing/china/lvls/Lvl_05.dds</texture>
+              </decal>
+              <decal>
+                <id>	6	</id>
+                <texture>vehicles/airplanes/common/decals/standing/china/lvls/Lvl_06.dds</texture>
+              </decal>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>member_number</name>
+            <decals>
+              <decal>
+                <id>	1	</id>
+                <texture>vehicles/airplanes/common/decals/digits/china/small/CH_01_sml.dds</texture>
+              </decal>
+              <decal>
+                <id>	2	</id>
+                <texture>vehicles/airplanes/common/decals/digits/china/small/CH_02_sml.dds</texture>
+              </decal>
+              <decal>
+                <id>	3	</id>
+                <texture>vehicles/airplanes/common/decals/digits/china/small/CH_03_sml.dds</texture>
+              </decal>
+              <decal>
+                <id>	4	</id>
+                <texture>vehicles/airplanes/common/decals/digits/china/small/CH_04_sml.dds</texture>
+              </decal>
+              <decal>
+                <id>	5	</id>
+                <texture>vehicles/airplanes/common/decals/digits/china/small/CH_05_sml.dds</texture>
+              </decal>
+              <decal>
+                <id>	6	</id>
+                <texture>vehicles/airplanes/common/decals/digits/china/small/CH_06_sml.dds</texture>
+              </decal>
+              <decal>
+                <id>	7	</id>
+                <texture>vehicles/airplanes/common/decals/digits/china/small/CH_07_sml.dds</texture>
+              </decal>
+              <decal>
+                <id>	8	</id>
+                <texture>vehicles/airplanes/common/decals/digits/china/small/CH_08_sml.dds</texture>
+              </decal>
+              <decal>
+                <id>	9	</id>
+                <texture>vehicles/airplanes/common/decals/digits/china/small/CH_09_sml.dds</texture>
+              </decal>
+              <decal>
+                <id>	10	</id>
+                <texture>vehicles/airplanes/common/decals/digits/china/small/CH_10_sml.dds</texture>
+              </decal>
+              <decal>
+                <id>	11	</id>
+                <texture>vehicles/airplanes/common/decals/digits/china/small/CH_11_sml.dds</texture>
+              </decal>
+              <decal>
+                <id>	12	</id>
+                <texture>vehicles/airplanes/common/decals/digits/china/small/CH_12_sml.dds</texture>
+              </decal>
+              <decal>
+                <id>	13	</id>
+                <texture>vehicles/airplanes/common/decals/digits/china/small/CH_13_sml.dds</texture>
+              </decal>
+              <decal>
+                <id>	14	</id>
+                <texture>vehicles/airplanes/common/decals/digits/china/small/CH_14_sml.dds</texture>
+              </decal>
+              <decal>
+                <id>	15	</id>
+                <texture>vehicles/airplanes/common/decals/digits/china/small/CH_15_sml.dds</texture>
+              </decal>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>camouflage</name>
+            <decals>
+              <decal>
+                <id>	1	</id>
+                <texture>
+                </texture>
+                <icoPath>vehicles/airplanes/common/decals/remove_decal.dds</icoPath>
+                <bottomColor>	0.839000 0.906000 0.741000 1.000000	</bottomColor>
+                <reflectionColor>	0.000000 0.000000 0.000000 0.000000	</reflectionColor>
+                <glossinessOffset>	-0.300000	</glossinessOffset>
+              </decal>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>ground_frags</name>
+            <decals>
+              <decal>
+                <id>	1	</id>
+                <texture>vehicles/airplanes/common/decals/frags/CH/Frag_CH_land_01.dds</texture>
+              </decal>
+              <decal>
+                <id>	2	</id>
+                <texture>vehicles/airplanes/common/decals/frags/CH/Frag_CH_land_02.dds</texture>
+              </decal>
+              <decal>
+                <id>	3	</id>
+                <texture>vehicles/airplanes/common/decals/frags/CH/Frag_CH_land_03.dds</texture>
+              </decal>
+              <decal>
+                <id>	4	</id>
+                <texture>vehicles/airplanes/common/decals/frags/CH/Frag_CH_land_04.dds</texture>
+              </decal>
+              <decal>
+                <id>	5	</id>
+                <texture>vehicles/airplanes/common/decals/frags/CH/Frag_CH_land_05.dds</texture>
+              </decal>
+              <decal>
+                <id>	6	</id>
+                <texture>vehicles/airplanes/common/decals/frags/CH/Frag_CH_land_06.dds</texture>
+              </decal>
+              <decal>
+                <id>	7	</id>
+                <texture>vehicles/airplanes/common/decals/frags/CH/Frag_CH_land_07.dds</texture>
+              </decal>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>air_frags</name>
+            <decals>
+              <decal>
+                <id>	1	</id>
+                <texture>vehicles/airplanes/common/decals/frags/CH/Frag_CH_air_01.dds</texture>
+              </decal>
+              <decal>
+                <id>	2	</id>
+                <texture>vehicles/airplanes/common/decals/frags/CH/Frag_CH_air_02.dds</texture>
+              </decal>
+              <decal>
+                <id>	3	</id>
+                <texture>vehicles/airplanes/common/decals/frags/CH/Frag_CH_air_03.dds</texture>
+              </decal>
+              <decal>
+                <id>	4	</id>
+                <texture>vehicles/airplanes/common/decals/frags/CH/Frag_CH_air_04.dds</texture>
+              </decal>
+              <decal>
+                <id>	5	</id>
+                <texture>vehicles/airplanes/common/decals/frags/CH/Frag_CH_air_05.dds</texture>
+              </decal>
+              <decal>
+                <id>	6	</id>
+                <texture>vehicles/airplanes/common/decals/frags/CH/Frag_CH_air_06.dds</texture>
+              </decal>
+              <decal>
+                <id>	7	</id>
+                <texture>vehicles/airplanes/common/decals/frags/CH/Frag_CH_air_07.dds</texture>
+              </decal>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>	nose	</name>
+            <decals>
+              <decal>
+                <id>	1	</id>
+                <texture>vehicles/airplanes/common/decals/decoration/byPlane/blank_noseart.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/remove_decal.dds</icoPath>
+              </decal>
+            </decals>
+          </decalGroup>
+        </decalsSettings>
+      </surfaceSettings>
+      <cameraOffset>	0.000000 0.241452 -2.655000	</cameraOffset>
+      <hudPlaneScheme>ar65_turret</hudPlaneScheme>
+    </visualSettings>
+    <description>
+      <textDescription>MARKET_AIRPLANE_DESCRIPTION_MOSQUITO-MK26</textDescription>
+      <engineCapasityUnit>MARKET_AIRPLANE_ENGINE_CAPACITY_LS</engineCapasityUnit>
+      <MARKET_AIRPLANE_ENGINE_CAPACITY>	425	</MARKET_AIRPLANE_ENGINE_CAPACITY>
+      <MARKET_AIRPLANE_WING_AREA>21.13</MARKET_AIRPLANE_WING_AREA>
+      <MARKET_AIRPLANE_GROUND_MAX_SPEED>	260	</MARKET_AIRPLANE_GROUND_MAX_SPEED>
+      <MARKET_AIRPLANE_HEIGHT_MAX_SPEED>	283	</MARKET_AIRPLANE_HEIGHT_MAX_SPEED>
+      <MARKET_AIRPLANE_RATE_OF_CLIMB>7.7</MARKET_AIRPLANE_RATE_OF_CLIMB>
+      <MARKET_AIRPLANE_FULL_TURN_TIME>-</MARKET_AIRPLANE_FULL_TURN_TIME>
+    </description>
+  </Airplane>
+  <magnetPoints>
+    <magnetPoint>
+      <position>	-6.609429 0.433337 -0.139986	</position>
+      <staticMass>	0.250000	</staticMass>
+    </magnetPoint>
+    <magnetPoint>
+      <position>	-2.394922 0.000000 -0.207652	</position>
+      <staticMass>	1.000000	</staticMass>
+    </magnetPoint>
+    <magnetPoint>
+      <position>	0.000000 0.000000 -0.420102	</position>
+      <staticMass>	1.000000	</staticMass>
+    </magnetPoint>
+    <magnetPoint>
+      <position>	2.394922 0.000000 -0.207652	</position>
+      <staticMass>	1.000000	</staticMass>
+    </magnetPoint>
+    <magnetPoint>
+      <position>	6.609429 0.433337 -0.139986	</position>
+      <staticMass>	0.250000	</staticMass>
+    </magnetPoint>
+  </magnetPoints>
+  <Pivots>
+    <pivot>
+      <name>1/1/0/0/hull/HP_gun/HP_flame_01</name>
+      <position>	0.000000 1.500000 0.000000	</position>
+      <direction>	0.000000 0.000000 0.000345	</direction>
+    </pivot>
+  </Pivots>
+  <HPmass>
+    <position>	0.000000 0.000000 0.000000	</position>
+    <direction>	0.000000 0.000000 0.000345	</direction>
+  </HPmass>
+</blockplane.xml>

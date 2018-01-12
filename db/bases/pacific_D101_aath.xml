@@ -1,0 +1,958 @@
+<pacific_d101_aath.xml>
+  <parent>default.xml</parent>
+  <name>LCT</name>
+  <modelPath>content/09_arctic/mechGL_31_J_D101_destructible/mechGL_31_J_D101_destructible.model</modelPath>
+  <modelCrashPath>content/09_arctic/mechGL_31_J_D101_destructible/mechGL_31_J_D101_destructible_crash.model</modelCrashPath>
+  <bBoxes>
+    <mainBox>
+      <size>100 90 100</size>
+    </mainBox>
+  </bBoxes>
+  <damageEffects>
+    <effectFire>EFFECT_fire_med_01</effectFire>
+  </damageEffects>
+  <maxHealth>	450	</maxHealth>
+  <dominationCost>0.08</dominationCost>
+  <superiorityPointsGroup1>	0	</superiorityPointsGroup1>
+  <superiorityPointsGroup2>	1	</superiorityPointsGroup2>
+  <superiorityPointsGroup3>	1	</superiorityPointsGroup3>
+  <superiorityPointsGroup4>	2	</superiorityPointsGroup4>
+  <superiorityPointsGroup5>	0	</superiorityPointsGroup5>
+  <superiorityPointsGroup6>	0	</superiorityPointsGroup6>
+  <superiorityPointsGroup7>	0	</superiorityPointsGroup7>
+  <superiorityPointsGroup8>	0	</superiorityPointsGroup8>
+  <respawnDelay>-1.0</respawnDelay>
+  <superiorityPoints>	1	</superiorityPoints>
+  <initialSpawnDelay>0.0</initialSpawnDelay>
+  <type>turret</type>
+  <parts>
+    <part>
+      <name>	hull	</name>
+      <partId>	1	</partId>
+      <groupId>	1	</groupId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>	Hull	</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/03_ocean/mechPC_029_D101_01_destructible/mechPC_029_D101_01_destructible.model</model>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <effectState>
+              <effect>
+                <name>EFFECT_static_ship_24</name>
+                <mountPoint>HP_stream</mountPoint>
+              </effect>
+              <effect>
+                <name>EFFECT_w_ship_smoke_med_01</name>
+                <mountPoint>HP_smoke</mountPoint>
+              </effect>
+            </effectState>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>0.00000</stateHelthCfc>
+            <model>content/03_ocean/mechPC_029_D101_01_destructible/mechPC_029_D101_01_destructible_crash.model</model>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/09_arctic/mechGL_31_J_D101_destructible/mechGL_31_J_D101_destructible_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_prop_exposion_large</name>
+                <mountPoint>HP_explosion</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_med_02</name>
+                <mountPoint>HP_center</mountPoint>
+              </effect>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_med_02</name>
+                <mountPoint>HP_nose</mountPoint>
+              </effect>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_med_02</name>
+                <mountPoint>HP_stern</mountPoint>
+              </effect>
+              <effect>
+                <name>EFFECT_w_ship_09</name>
+                <mountPoint>HP_stream</mountPoint>
+              </effect>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>	nose	</name>
+      <partId>	2	</partId>
+      <groupId>	2	</groupId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-0.720000 3.240000 16.515000	</position>
+            <size>	9.360000 6.210000 39.600000	</size>
+            <armorFront>	10.000000 10.000000 10.000000	</armorFront>
+            <armorBack>	10.000000 10.000000 10.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	150	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>HP_center</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_med_01</name>
+                <mountPoint>HP_center</mountPoint>
+              </effect>
+            </effectState>
+            <affectedParts>
+              <part>
+                <partID>	5	</partID>
+                <minimalPartState>	2	</minimalPartState>
+              </part>
+              <part>
+                <partID>	9	</partID>
+                <minimalPartState>	2	</minimalPartState>
+              </part>
+              <part>
+                <partID>	10	</partID>
+                <minimalPartState>	2	</minimalPartState>
+              </part>
+            </affectedParts>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <bBoxes>
+              <bbox>
+                <position>	-0.720000 3.240000 16.515000	</position>
+                <size>6.552 4.347 27.7200014</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <usage>crash</usage>
+            <stateHelthCfc>0.00000</stateHelthCfc>
+            <effectState>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>hull/HP_nose</fireMountPoint>
+        <fire>
+          <effectFire>EFFECT_fire_small</effectFire>
+          <fire_chance>0.5</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>stern</name>
+      <partId>	3	</partId>
+      <groupId>	3	</groupId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-0.720000 5.490000 -14.040000	</position>
+            <size>	9.360000 9.360000 34.290000	</size>
+            <armorFront>	10.000000 10.000000 10.000000	</armorFront>
+            <armorBack>	10.000000 10.000000 10.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	150	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <affectedParts>
+              <part>
+                <partID>	6	</partID>
+                <minimalPartState>	2	</minimalPartState>
+              </part>
+              <part>
+                <partID>	7	</partID>
+                <minimalPartState>	2	</minimalPartState>
+              </part>
+              <part>
+                <partID>	8	</partID>
+                <minimalPartState>	2	</minimalPartState>
+              </part>
+            </affectedParts>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+          </state>
+          <state>
+            <id>	3	</id>
+            <bBoxes>
+              <bbox>
+                <position>	-0.720000 5.490000 -14.040000	</position>
+                <size>6.552 6.552 24.0030007</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <stateHelthCfc>0.00000</stateHelthCfc>
+            <usage>crash</usage>
+            <stateAction>	0	</stateAction>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>hull/HP_stern</fireMountPoint>
+        <fire>
+          <effectFire>EFFECT_fire_small</effectFire>
+          <fire_chance>0.5</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>smallgun1</name>
+      <partId>	4	</partId>
+      <groupId>	4	</groupId>
+      <mountPoint>hull/HP_small_gun_01</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-3.015000 8.325000 21.330000	</position>
+            <size>	5.220000 3.420000 4.590000	</size>
+            <armorFront>	10.000000 10.000000 10.000000	</armorFront>
+            <armorBack>	10.000000 10.000000 10.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	150	</health>
+        <componentType>Gunner</componentType>
+        <componentXml>t_h</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <model>content/03_ocean/mechPC_029_D101_01_destructible/PC_029_small_gun_01.model</model>
+            <animationController>	TurretController	</animationController>
+            <stateAction>	0	</stateAction>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <model>content/03_ocean/mechPC_029_D101_01_destructible/PC_029_small_gun_01.model</model>
+            <stateAction>	0	</stateAction>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>hull/HP_small_gun_01</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>hull/HP_small_gun_01</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+            <animationController>
+            </animationController>
+          </state>
+          <state>
+            <id>	3	</id>
+            <bBoxes>
+              <bbox>
+                <position>	-3.015000 8.325000 21.330000	</position>
+                <size>3.654 2.394 3.213</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <stateHelthCfc>0.00000</stateHelthCfc>
+            <usage>crash</usage>
+            <model>content/dest/ship/US/Fletcher_destructible/mechPC_61_Fletcher_destructible_Empty.model</model>
+            <stateAction>	0	</stateAction>
+            <effectState>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+            <animationController>
+            </animationController>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>HP_base</fireMountPoint>
+        <fire>
+          <effectFire>EFFECT_fire_small</effectFire>
+          <fire_chance>0.5</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>smallgun2</name>
+      <partId>	5	</partId>
+      <groupId>	5	</groupId>
+      <mountPoint>hull/HP_small_gun_02</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <model>content/03_ocean/mechPC_029_D101_01_destructible/PC_029_small_gun_02.model</model>
+            <stateAction>	0	</stateAction>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <model>content/03_ocean/mechPC_029_D101_01_destructible/PC_029_small_gun_02.model</model>
+            <stateAction>	0	</stateAction>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>hull/HP_small_gun_02</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>hull/HP_small_gun_02</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>0.00000</stateHelthCfc>
+            <usage>crash</usage>
+            <model>content/dest/ship/US/Fletcher_destructible/mechPC_61_Fletcher_destructible_Empty.model</model>
+            <stateAction>	0	</stateAction>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>smallgun3</name>
+      <partId>	6	</partId>
+      <groupId>	6	</groupId>
+      <mountPoint>hull/HP_small_gun_03</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <model>content/03_ocean/mechPC_029_D101_01_destructible/PC_029_small_gun_03.model</model>
+            <stateAction>	0	</stateAction>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <model>content/03_ocean/mechPC_029_D101_01_destructible/PC_029_small_gun_03.model</model>
+            <stateAction>	0	</stateAction>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>HP_base</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_base</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>0.00000</stateHelthCfc>
+            <usage>crash</usage>
+            <model>content/dest/ship/US/Fletcher_destructible/mechPC_61_Fletcher_destructible_Empty.model</model>
+            <stateAction>	0	</stateAction>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>smallgun4</name>
+      <partId>	7	</partId>
+      <groupId>	7	</groupId>
+      <mountPoint>hull/HP_small_gun_04</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/03_ocean/mechPC_029_D101_01_destructible/PC_029_small_gun_04.model</model>
+            <stateAction>	0	</stateAction>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <usage>
+            </usage>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/03_ocean/mechPC_029_D101_01_destructible/PC_029_small_gun_04.model</model>
+            <stateAction>	0	</stateAction>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>hull/HP_small_gun_04</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>hull/HP_small_gun_04</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <usage>
+            </usage>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>0.00000</stateHelthCfc>
+            <usage>crash</usage>
+            <model>content/dest/ship/US/Fletcher_destructible/mechPC_61_Fletcher_destructible_Empty.model</model>
+            <stateAction>	0	</stateAction>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>biggun1</name>
+      <partId>	8	</partId>
+      <groupId>	8	</groupId>
+      <mountPoint>hull/HP_big_gun_01</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>scenarioturret</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <model>content/03_ocean/mechPC_029_D101_01_destructible/PC_029_big_gun_01.model</model>
+            <stateAction>	0	</stateAction>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <model>content/03_ocean/mechPC_029_D101_01_destructible/PC_029_big_gun_01.model</model>
+            <stateAction>	0	</stateAction>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>HP_base</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_base</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>0.00000</stateHelthCfc>
+            <usage>crash</usage>
+            <model>content/dest/ship/US/Fletcher_destructible/mechPC_61_Fletcher_destructible_Empty.model</model>
+            <stateAction>	0	</stateAction>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>biggun2</name>
+      <partId>	9	</partId>
+      <groupId>	9	</groupId>
+      <mountPoint>hull/HP_big_gun_02</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <model>content/03_ocean/mechPC_029_D101_01_destructible/PC_029_big_gun_02.model</model>
+            <stateAction>	0	</stateAction>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <model>content/03_ocean/mechPC_029_D101_01_destructible/PC_029_big_gun_02.model</model>
+            <stateAction>	0	</stateAction>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>HP_base</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_base</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>0.00000</stateHelthCfc>
+            <usage>crash</usage>
+            <model>content/dest/ship/US/Fletcher_destructible/mechPC_61_Fletcher_destructible_Empty.model</model>
+            <stateAction>	0	</stateAction>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>biggun3</name>
+      <partId>	10	</partId>
+      <groupId>	10	</groupId>
+      <mountPoint>hull/HP_big_gun_03</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>scenarioturret</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <model>content/03_ocean/mechPC_029_D101_01_destructible/PC_029_big_gun_03.model</model>
+            <effectsTriggered>
+              <effect>
+                <trigger>SHOT1</trigger>
+                <name>EFFECT_w_turret_fire_01</name>
+                <mountPoint>HP_antiaircraft_gunFlame_01</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT2</trigger>
+                <name>EFFECT_w_turret_fire_01</name>
+                <mountPoint>HP_antiaircraft_gunFlame_02</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT3</trigger>
+                <name>EFFECT_w_turret_fire_01</name>
+                <mountPoint>HP_antiaircraft_gunFlame_03</mountPoint>
+              </effect>
+            </effectsTriggered>
+            <stateAction>	0	</stateAction>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <model>content/03_ocean/mechPC_029_D101_01_destructible/PC_029_big_gun_03.model</model>
+            <stateAction>	0	</stateAction>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>HP_base</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_base</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>0.00000</stateHelthCfc>
+            <usage>crash</usage>
+            <model>content/dest/ship/US/Fletcher_destructible/mechPC_61_Fletcher_destructible_Empty.model</model>
+            <stateAction>	0	</stateAction>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+  </parts>
+  <turretName>t_h</turretName>
+</pacific_d101_aath.xml>

@@ -1,0 +1,229 @@
+<t-me-265-2.xml>
+  <parent>base_air_turret_bush_legs.xml</parent>
+  <hangarName>G13mm-MG131-T</hangarName>
+  <gunName>turret_machinegun_heavy</gunName>
+  <nation>Germany</nation>
+  <DPS>	16	</DPS>
+  <targetLockShootDistance>	650	</targetLockShootDistance>
+  <targetLostDistance>	650	</targetLostDistance>
+  <burstTime>	6	</burstTime>
+  <burstDelay>	2	</burstDelay>
+  <serverRPS>	15	</serverRPS>
+  <critAbility>0.01</critAbility>
+  <weaponCount>	4	</weaponCount>
+  <name>T3</name>
+  <Pivots>
+    <pivot>
+      <name>hull/HP_Flame</name>
+      <position>0.0 0.0 0.0</position>
+      <direction>0.0 0.0 0.0</direction>
+    </pivot>
+  </Pivots>
+  <bBoxes>
+    <mainBox>
+      <size>20 24 20</size>
+    </mainBox>
+    <box>
+      <size>20 24 20</size>
+    </box>
+  </bBoxes>
+  <flames>
+    <flamePath>turret/HP_gun_04/HP_antiaircraft_gunFlame_01</flamePath>
+    <flamePath>turret/HP_gun_04/HP_antiaircraft_gunFlame_02</flamePath>
+    <flamePath>turret/HP_gun_05/HP_antiaircraft_gunFlame_01</flamePath>
+    <flamePath>turret/HP_gun_05/HP_antiaircraft_gunFlame_02</flamePath>
+  </flames>
+  <shells>
+    <shellPath>turret/HP_gun_04/HP_shell_01</shellPath>
+    <shellPath>turret/HP_gun_05/HP_shell_01</shellPath>
+  </shells>
+  <direction>0.0 0.0 0.0</direction>
+  <position>0.0	0.6 -4.0</position>
+  <model>content/common/empty_box.model</model>
+  <modelCrash>content/common/empty_box.model</modelCrash>
+  <modelScaling>1.0 1.0 1.0</modelScaling>
+  <parts>
+    <part>
+      <name>	hull	</name>
+      <partId>	1	</partId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>0.000000 0.00000 0.000000</position>
+            <size>20.00000 24.00000 20.000000</size>
+            <armorFront>10 10 20</armorFront>
+            <armorBack>10 10 10</armorBack>
+            <absorption>	2	</absorption>
+          </bbox>
+        </bBoxes>
+        <health>100%</health>
+        <componentType>	Hull	</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>vehicles/airplanes/german/GR11_BF109G/normal/lod0/fuselage_01.model</model>
+            <animationController>
+            </animationController>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <model>vehicles/airplanes/german/GR11_BF109G/crash/lod0/fuselage_01.model</model>
+            <animationController>
+            </animationController>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	3	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>vehicles/airplanes/german/GR11_BF109G/crash/lod0/fuselage_01.model</model>
+            <animationController>
+            </animationController>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+        </states>
+        <fireMountPoint>
+        </fireMountPoint>
+      </upgrade>
+    </part>
+  </parts>
+  <ik>
+    <model>vehicles/airplanes/german/GR40_ME265/t-Me-265_control.ik</model>
+  </ik>
+  <visualSettings>
+    <turret>
+      <mountPoint>HP_gun_05</mountPoint>
+      <animatorDirectionDefault>	0.000000 0.000000 0.000000	</animatorDirectionDefault>
+      <fireOffset>0.5 0.0 0.0</fireOffset>
+      <pitchNodeName>jointV</pitchNodeName>
+      <yawNodeName>jointH</yawNodeName>
+      <directionNodeName>jointG_01</directionNodeName>
+      <pitchMin>	-30.000000	</pitchMin>
+      <pitchMax>	60.000000	</pitchMax>
+      <yawMin>	140.000000	</yawMin>
+      <yawMax>	180.000000	</yawMax>
+      <trackPitchMin>	-30.000000	</trackPitchMin>
+      <trackPitchMax>	60.000000	</trackPitchMax>
+      <trackYawMin>	140.000000	</trackYawMin>
+      <trackYawMax>	180.000000	</trackYawMax>
+      <angularVelocity>	80.000000	</angularVelocity>
+      <shootingNodeName>jointH</shootingNodeName>
+      <idleFrequencyScalerX>	0.000000	</idleFrequencyScalerX>
+      <idleAmplitudeScalerX>	0.000000	</idleAmplitudeScalerX>
+      <idleFrequencyScalerY>	0.000000	</idleFrequencyScalerY>
+      <idleAmplitudeScalerY>	0.000000	</idleAmplitudeScalerY>
+      <shootTime>	0.250000	</shootTime>
+      <shootCooldownTime>	0.750000	</shootCooldownTime>
+      <shootingAmplitudeScaler>	0.050000	</shootingAmplitudeScaler>
+      <enableIdleAnimation>	true	</enableIdleAnimation>
+      <useGunProfile>	true	</useGunProfile>
+      <recoilCurve>
+        <p>	0.000000 0.000000	</p>
+        <p>	0.100000 -0.010000	</p>
+        <p>	0.900000 0.030000	</p>
+        <p>	1.000000 0.000000	</p>
+        <pointCount>	10	</pointCount>
+        <multiplier>	1.000000	</multiplier>
+      </recoilCurve>
+      <animatorDirectionOffset>	0.000000 0.000000 0.000000	</animatorDirectionOffset>
+      <animatorDieDirection>	0.000000 0.000000 0.000000	</animatorDieDirection>
+      <axisDirections>	2.000000 1.000000 0.000000	</axisDirections>
+      <angularThreshold>	0.000000	</angularThreshold>
+      <angularHalflife>	0.000000	</angularHalflife>
+    </turret>
+    <turret>
+      <mountPoint>HP_gun_04</mountPoint>
+      <animatorDirectionDefault>	0.000000 0.000000 0.000000	</animatorDirectionDefault>
+      <fireOffset>-0.5 0.0 0.0</fireOffset>
+      <pitchNodeName>jointV</pitchNodeName>
+      <yawNodeName>jointH</yawNodeName>
+      <directionNodeName>jointG_01</directionNodeName>
+      <pitchMin>	-30.000000	</pitchMin>
+      <pitchMax>	60.000000	</pitchMax>
+      <yawMin>	180.000000	</yawMin>
+      <yawMax>	220.000000	</yawMax>
+      <trackPitchMin>	-30.000000	</trackPitchMin>
+      <trackPitchMax>	60.000000	</trackPitchMax>
+      <trackYawMin>	180.000000	</trackYawMin>
+      <trackYawMax>	220.000000	</trackYawMax>
+      <angularVelocity>	80.000000	</angularVelocity>
+      <shootingNodeName>jointH</shootingNodeName>
+      <idleFrequencyScalerX>	0.000000	</idleFrequencyScalerX>
+      <idleAmplitudeScalerX>	0.000000	</idleAmplitudeScalerX>
+      <idleFrequencyScalerY>	0.000000	</idleFrequencyScalerY>
+      <idleAmplitudeScalerY>	0.000000	</idleAmplitudeScalerY>
+      <shootTime>	0.250000	</shootTime>
+      <shootCooldownTime>	0.750000	</shootCooldownTime>
+      <shootingAmplitudeScaler>	0.050000	</shootingAmplitudeScaler>
+      <enableIdleAnimation>	true	</enableIdleAnimation>
+      <useGunProfile>	true	</useGunProfile>
+      <recoilCurve>
+        <p>	0.000000 0.000000	</p>
+        <p>	0.100000 -0.010000	</p>
+        <p>	0.900000 0.030000	</p>
+        <p>	1.000000 0.000000	</p>
+        <pointCount>	10	</pointCount>
+        <multiplier>	1.000000	</multiplier>
+      </recoilCurve>
+      <animatorDirectionOffset>	0.000000 0.000000 0.000000	</animatorDirectionOffset>
+      <animatorDieDirection>	0.000000 0.000000 0.000000	</animatorDieDirection>
+      <axisDirections>	2.000000 1.000000 0.000000	</axisDirections>
+      <angularThreshold>	0.000000	</angularThreshold>
+      <angularHalflife>	0.000000	</angularHalflife>
+    </turret>
+    <turret>
+      <mountPoint>HP_gun_06</mountPoint>
+      <animatorDirectionDefault>	0.000000 -5.000000 0.000000	</animatorDirectionDefault>
+      <pitchNodeName>jointV</pitchNodeName>
+      <yawNodeName>jointH</yawNodeName>
+      <directionNodeName>jointV</directionNodeName>
+      <pitchMin>	-5.000000	</pitchMin>
+      <pitchMax>	15.000000	</pitchMax>
+      <yawMin>	160.000000	</yawMin>
+      <yawMax>	200.000000	</yawMax>
+      <angularVelocity>	80.000000	</angularVelocity>
+      <shootingNodeName>jointD</shootingNodeName>
+      <idleFrequencyScalerX>	0.300000	</idleFrequencyScalerX>
+      <idleAmplitudeScalerX>	0.120000	</idleAmplitudeScalerX>
+      <idleFrequencyScalerY>	0.400000	</idleFrequencyScalerY>
+      <idleAmplitudeScalerY>	0.050000	</idleAmplitudeScalerY>
+      <shootTime>	0.250000	</shootTime>
+      <shootCooldownTime>	0.750000	</shootCooldownTime>
+      <shootingAmplitudeScaler>	0.050000	</shootingAmplitudeScaler>
+      <enableIdleAnimation>	true	</enableIdleAnimation>
+      <useGunProfile>	true	</useGunProfile>
+      <recoilCurve>
+        <p>	0.000000 0.000000	</p>
+        <p>	0.100000 -0.010000	</p>
+        <p>	0.900000 0.030000	</p>
+        <p>	1.000000 0.000000	</p>
+        <pointCount>	10	</pointCount>
+        <multiplier>	1.000000	</multiplier>
+      </recoilCurve>
+      <animatorDirectionOffset>	0.000000 0.000000 0.000000	</animatorDirectionOffset>
+      <animatorDieDirection>	0.000000 20.000000 0.000000	</animatorDieDirection>
+      <axisDirections>	2.000000 1.000000 0.000000	</axisDirections>
+      <angularThreshold>	0.000000	</angularThreshold>
+      <angularHalflife>	0.000000	</angularHalflife>
+    </turret>
+  </visualSettings>
+</t-me-265-2.xml>

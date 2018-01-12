@@ -1,0 +1,69 @@
+<commandcenter.xml>
+  <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
+  <noNamespaceSchemaLocation>SectorPresetModel.xsd</noNamespaceSchemaLocation>
+  <preset>default</preset>
+  <neutralCapturePoints>	280	</neutralCapturePoints>
+  <ownedCapturePoints>	180	</ownedCapturePoints>
+  <gameplayType>radar</gameplayType>
+  <gameplayLevel>	1	</gameplayLevel>
+  <bomberDispatcher>
+    <launchTickPeriod>	18	</launchTickPeriod>
+    <bombersInPool>	20	</bombersInPool>
+  </bomberDispatcher>
+  <hud>
+    <battleHintIcon>event_cc1</battleHintIcon>
+    <localizationID>HUD_NAME_SECTOR_COMMANDCENTER</localizationID>
+    <description>HUD_F1_SECTOR_DESCRIPTION_COMBINED_5</description>
+    <sectorIconPath>icons/hud/sectors/sectorType{size}CC1_{team}</sectorIconPath>
+    <featuresIconPath>icons/hud/sectors/sectorIcon{size}Bombers_{team}</featuresIconPath>
+    <featuresName>HUD_SECTOR_MESSAGES_SUPPORT_SUMMON</featuresName>
+    <miniMapSectorIconPath>sectorType{size}CC1_{team}</miniMapSectorIconPath>
+    <miniMapFeaturesIconPath>sector{size}IconBombers_{team}</miniMapFeaturesIconPath>
+    <isNeedToShowTimer>	true	</isNeedToShowTimer>
+    <sectorObjects>
+      <object>	31	</object>
+      <object>	12	</object>
+      <object>	13	</object>
+      <object>	11	</object>
+      <object>	21	</object>
+    </sectorObjects>
+    <descriptionList>
+      <description>HUD_DESCRIPTION_SECTOR_COMMANDCENTER</description>
+    </descriptionList>
+  </hud>
+  <sound>
+    <onCaptureLast>
+      <allyEvent>vo_c_all_centers_captured</allyEvent>
+    </onCaptureLast>
+    <onCapture>
+      <allyEvent>vo_c_center_captured</allyEvent>
+      <enemyEvent>vo_c_center_lost</enemyEvent>
+    </onCapture>
+    <onAlarm>
+      <enemyEvent>vo_c_center_alarm</enemyEvent>
+      <conditions>	6	</conditions>
+    </onAlarm>
+  </sound>
+  <defenderCounter>
+    <count>	3	<defenderType>LIGHT</defenderType></count>
+  </defenderCounter>
+  <ai>
+    <areaConquest>
+      <baseValue>	1000	</baseValue>
+      <planeTypeMultiplier>
+        <multiplier>	5	<planeType>Assault</planeType></multiplier>
+        <multiplier>	4	<planeType>Heavy fighter</planeType></multiplier>
+        <multiplier>	2	<planeType>	Navy	</planeType></multiplier>
+        <multiplier>	2	<planeType>Fighter</planeType></multiplier>
+        <multiplier>	5	<planeType>Bomber</planeType></multiplier>
+      </planeTypeMultiplier>
+      <antiGroundWeaponBonus>
+        <multiplier>	0	<planeType>Assault</planeType></multiplier>
+        <multiplier>	0	<planeType>Heavy fighter</planeType></multiplier>
+        <multiplier>	0	<planeType>	Navy	</planeType></multiplier>
+        <multiplier>	0	<planeType>Fighter</planeType></multiplier>
+        <multiplier>	0	<planeType>Bomber</planeType></multiplier>
+      </antiGroundWeaponBonus>
+    </areaConquest>
+  </ai>
+</commandcenter.xml>

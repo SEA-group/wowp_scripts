@@ -1,0 +1,46 @@
+<new_year.xml>
+  <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
+  <noNamespaceSchemaLocation>../../eps/validators/subscribers.xsd</noNamespaceSchemaLocation>
+  <header>
+    <type>achievement</type>
+    <group>newyear</group>
+    <server>
+      <active>	true	</active>
+      <scope>player</scope>
+      <hidden>	true	</hidden>
+    </server>
+    <markers>
+      <group>newyear</group>
+    </markers>
+    <client>
+      <place>	left	</place>
+    </client>
+  </header>
+  <include>
+    <metadata>
+      <doneCount>	true	</doneCount>
+      <firstDoneTime>	true	</firstDoneTime>
+      <lastDoneTime>	true	</lastDoneTime>
+    </metadata>
+  </include>
+  <subscriber>
+    <name>secret_santa_2018</name>
+    <message>secret_santa</message>
+    <client>
+      <order>	19	</order>
+      <page>	1	</page>
+      <multiple>	false	</multiple>
+      <name>
+        <locale>MEDAL_NAME_SECRET_SANTA_2018</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_SECRET_SANTA_2018</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/signsSecretSanta2018.dds</small>
+        <big>icons/awards/achievementsInfo/signsSecretSanta2018.dds</big>
+        <faded>icons/awards/achievements/signsSecretSanta2018_Outline.dds</faded>
+      </icon>
+    </client>
+  </subscriber>
+</new_year.xml>

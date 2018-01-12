@@ -1,0 +1,173 @@
+<tutorial_aerostat_prot.xml>
+  <name>	Aerostat	</name>
+  <modelPath>content/01_Novorossiysk/meshNR_001_Aerostat/meshNR_001_Aerostat.model</modelPath>
+  <modelCrashPath>content/01_Novorossiysk/meshNR_001_Aerostat/meshNR_001_Aerostat.model</modelCrashPath>
+  <alignToGround>	false	</alignToGround>
+  <bBoxes>
+    <mainBox>
+      <size>20 24 20</size>
+    </mainBox>
+    <box>
+      <size>20 24 24</size>
+    </box>
+  </bBoxes>
+  <damageEffects>
+    <destroy>EFFECT_zepelin_kaput</destroy>
+  </damageEffects>
+  <maxHealth>	750	</maxHealth>
+  <dominationCost>0.02</dominationCost>
+  <respawnDelay>-1.0</respawnDelay>
+  <superiorityPoints>	0	</superiorityPoints>
+  <type>smallTeamObject</type>
+  <battleLevelsSettings>
+    <section>
+      <battleLevel>	1	</battleLevel>
+      <hpK>	1	</hpK>
+      <armorK>0.01</armorK>
+    </section>
+    <section>
+      <battleLevel>	2	</battleLevel>
+      <hpK>	1	</hpK>
+      <armorK>0.01</armorK>
+    </section>
+    <section>
+      <battleLevel>	3	</battleLevel>
+      <hpK>	1	</hpK>
+      <armorK>0.01</armorK>
+    </section>
+    <section>
+      <battleLevel>	4	</battleLevel>
+      <hpK>	1	</hpK>
+      <armorK>0.01</armorK>
+    </section>
+    <section>
+      <battleLevel>	5	</battleLevel>
+      <hpK>	1	</hpK>
+      <armorK>0.01</armorK>
+    </section>
+    <section>
+      <battleLevel>	6	</battleLevel>
+      <hpK>	1	</hpK>
+      <armorK>0.01</armorK>
+    </section>
+    <section>
+      <battleLevel>	7	</battleLevel>
+      <hpK>	1	</hpK>
+      <armorK>0.01</armorK>
+    </section>
+    <section>
+      <battleLevel>	8	</battleLevel>
+      <hpK>	1	</hpK>
+      <armorK>0.01</armorK>
+    </section>
+    <section>
+      <battleLevel>	9	</battleLevel>
+      <hpK>	1	</hpK>
+      <armorK>0.01</armorK>
+    </section>
+    <section>
+      <battleLevel>	10	</battleLevel>
+      <hpK>	1	</hpK>
+      <armorK>0.01</armorK>
+    </section>
+  </battleLevelsSettings>
+  <parts>
+    <part>
+      <name>	hull	</name>
+      <partId>	1	</partId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	3.503134 -0.365475 0.000000	</position>
+            <size>	27.412080 12.904790 14.255370	</size>
+            <armorFront>	10.000000 10.000000 20.000000	</armorFront>
+            <armorBack>	10.000000 10.000000 10.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>100%</health>
+        <componentType>	Hull	</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/01_Novorossiysk/meshNR_001_Aerostat/meshNR_001_Aerostat.model</model>
+            <animationController>
+            </animationController>
+            <subItems>
+            </subItems>
+            <effectState>
+              <effect>
+                <name>EFFECT_WoW_aerostat_Eolation</name>
+                <mountPoint>HP_helium_1</mountPoint>
+              </effect>
+            </effectState>
+            <stateAnimation>normalIdle</stateAnimation>
+            <stateAction>	0	</stateAction>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateFireChance>	0.200000	</stateFireChance>
+          </state>
+          <state>
+            <id>	2	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <model>content/01_Novorossiysk/meshNR_001_Aerostat/meshNR_001_Aerostat.model</model>
+            <animationController>
+            </animationController>
+            <subItems>
+            </subItems>
+            <stateAnimation>destroy1,destroy1Idle</stateAnimation>
+            <stateAction>	0	</stateAction>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateFireChance>	0.200000	</stateFireChance>
+          </state>
+          <state>
+            <id>	3	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <model>content/01_Novorossiysk/meshNR_001_Aerostat/meshNR_001_Aerostat.model</model>
+            <animationController>
+            </animationController>
+            <subItems>
+            </subItems>
+            <stateAnimation>destroy2,destroy2Idle</stateAnimation>
+            <stateAction>	0	</stateAction>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateFireChance>	0.200000	</stateFireChance>
+          </state>
+          <state>
+            <id>	4	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/01_Novorossiysk/meshNR_001_Aerostat/meshNR_001_Aerostat_explosion.model</model>
+            <animationController>
+            </animationController>
+            <subItems>
+            </subItems>
+            <stateAnimation>
+            </stateAnimation>
+            <stateAction>	0	</stateAction>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateFireChance>	0.200000	</stateFireChance>
+          </state>
+        </states>
+        <fireMountPoint>
+        </fireMountPoint>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+      </upgrade>
+    </part>
+  </parts>
+</tutorial_aerostat_prot.xml>

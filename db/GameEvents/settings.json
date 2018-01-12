@@ -1,0 +1,61 @@
+{
+
+"db": [
+    {
+        "name": "Bomber action",
+        "description": "some description for bomber",
+        "models": ["BomberModel", "BomberPartModel"],
+        "items": [
+            {
+                "backend": "bundled",
+                "path": "bomber.db",
+                "active": true,
+                "from": "2017-05-10-00:00",
+                "to": "2017-06-10-23:50"
+            }
+        ],
+    },
+    {
+        "name": "Daily quests",
+        "models": ["QuestModel"],
+        "items": [
+            {
+                "backend": "bundled",
+                "path": "quests.daily",
+            }
+        ],
+        "active": true,
+    }
+    {
+        "name": "Achievements",
+        "models": ["AchievementModel"],
+        "items": [
+            {
+                "backend": "bundled",
+                "path": "achievements.heroic",
+            },
+            {
+                "backend": "bundled",
+                "path": "achievements.honorable",
+            },
+            {
+                "backend": "bundled",
+                "path": "achievements.series",
+            },
+        ],
+        "active": true,
+    },
+    {
+        "name": "Modifiers after battle",
+        "description": "Exp modifiers, credits, etc.",
+        "models": ["ModifierModel"],
+        "items": [
+            {
+                "backend": "bundled",
+                "path": "features.modifiers.postbattle"
+            }
+        ]
+    }
+]
+
+}

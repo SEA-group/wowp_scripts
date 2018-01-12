@@ -1,0 +1,1624 @@
+<burma_054_l3.xml>
+  <parent>default.xml</parent>
+  <name>Warehouse</name>
+  <bBoxes>
+    <mainBox>
+      <size>100 90 100</size>
+    </mainBox>
+  </bBoxes>
+  <damageEffects>
+    <effectFire>EFFECT_fire_large</effectFire>
+  </damageEffects>
+  <maxHealth>	1200	</maxHealth>
+  <dominationCost>0.08</dominationCost>
+  <respawnDelay>-1.0</respawnDelay>
+  <superiorityPoints>	1	</superiorityPoints>
+  <initialSpawnDelay>0.0</initialSpawnDelay>
+  <type>smallTeamObject</type>
+  <parts>
+    <part>
+      <name>	hull	</name>
+      <partId>	1	</partId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	87.859230 16.650000 0.000000	</position>
+            <size>	0.000000 0.000000 0.000000	</size>
+            <armorFront>	10.000000 10.000000 10.000000	</armorFront>
+            <armorBack>	10.000000 10.000000 10.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+          <bbox>
+            <position>	-112.430000 4.950001 -2.880001	</position>
+            <size>	0.000000 0.000000 0.000000	</size>
+            <armorFront>	10.000000 10.000000 10.000000	</armorFront>
+            <armorBack>	10.000000 10.000000 10.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>100%</health>
+        <componentType>	Hull	</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/08_asian_border/bldBM_C_054_L3_35_destructible/bldBM_C_054_L3_35_destructible.model</model>
+            <effectState>
+            </effectState>
+            <stateAnimation>
+            </stateAnimation>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	2	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <model>content/08_asian_border/bldBM_C_054_L3_35_destructible/bldBM_C_054_L3_35_destructible.model</model>
+            <effectState>
+            </effectState>
+            <stateAnimation>
+            </stateAnimation>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	3	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <model>content/08_asian_border/bldBM_C_054_L3_35_destructible/bldBM_C_054_L3_35_destructible.model</model>
+            <effectState>
+            </effectState>
+            <stateAnimation>
+            </stateAnimation>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	4	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/08_asian_border/bldBM_C_054_L3_35_destructible/bldBM_C_054_L3_35_destructible_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_prop_exposion_large</name>
+                <mountPoint>HP_explosion</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_warehouse</mountPoint>
+              </effect>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_car_01</mountPoint>
+              </effect>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_car_02</mountPoint>
+              </effect>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_car_03</mountPoint>
+              </effect>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_large_02</name>
+                <mountPoint>HP_angar_01</mountPoint>
+              </effect>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_large_02</name>
+                <mountPoint>HP_angar_02</mountPoint>
+              </effect>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_fuel</mountPoint>
+              </effect>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_tank_01</mountPoint>
+              </effect>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_tank_04</mountPoint>
+              </effect>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_tank_08</mountPoint>
+              </effect>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_tank_07</mountPoint>
+              </effect>
+            </effectState>
+            <stateAnimation>
+            </stateAnimation>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+      </upgrade>
+    </part>
+    <part>
+      <name>hangar1</name>
+      <partId>	2	</partId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-0.180000 3.602392 8.738763	</position>
+            <size>	18.270000 7.004129 30.905750	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	1200	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <effectState>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>hull/HP_angar_01</fireMountPoint>
+        <fire>
+          <fire_chance>1.0</fire_chance>
+          <extinguish_time>20.0</extinguish_time>
+          <fire_damage>0.67%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+      </upgrade>
+    </part>
+    <part>
+      <name>hangar2</name>
+      <partId>	3	</partId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-19.755000 3.780000 10.239240	</position>
+            <size>	18.269990 7.380000 27.792650	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	1200	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <effectState>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>hull/HP_angar_02</fireMountPoint>
+        <fire>
+          <fire_chance>1.0</fire_chance>
+          <extinguish_time>20.0</extinguish_time>
+          <fire_damage>0.67%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+      </upgrade>
+    </part>
+    <part>
+      <name>tank1</name>
+      <partId>	4	</partId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-19.044120 2.340000 -21.542070	</position>
+            <size>	3.066807 4.139999 6.366255	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	1400	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <effectState>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+      </upgrade>
+    </part>
+    <part>
+      <name>tank2</name>
+      <partId>	5	</partId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-14.530000 2.654999 -21.542130	</position>
+            <size>	3.098861 4.139999 5.844666	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	1400	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <effectState>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+      </upgrade>
+    </part>
+    <part>
+      <name>tank3</name>
+      <partId>	6	</partId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	7.978706 2.353504 -21.947730	</position>
+            <size>	3.100599 4.139999 6.120485	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	1400	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <effectState>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+      </upgrade>
+    </part>
+    <part>
+      <name>tank4</name>
+      <partId>	7	</partId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	13.021540 2.537254 -22.050980	</position>
+            <size>	2.923611 4.140000 5.959726	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	100	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <effectState>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+      </upgrade>
+    </part>
+    <part>
+      <name>tank5</name>
+      <partId>	8	</partId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	18.623630 2.702911 -21.821900	</position>
+            <size>	3.300973 4.139999 5.728259	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	100	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <effectState>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+      </upgrade>
+    </part>
+    <part>
+      <name>tank6</name>
+      <partId>	9	</partId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	7.707406 2.610000 -13.979440	</position>
+            <size>	3.088865 4.139999 5.666182	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	100	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <effectState>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+      </upgrade>
+    </part>
+    <part>
+      <name>tank7</name>
+      <partId>	10	</partId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	13.324590 2.193662 -14.012460	</position>
+            <size>	3.008907 4.139999 5.346425	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	100	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <effectState>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+      </upgrade>
+    </part>
+    <part>
+      <name>tank8</name>
+      <partId>	11	</partId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	18.666960 2.013761 -13.663340	</position>
+            <size>	3.123755 4.139999 5.887896	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	100	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <effectState>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+      </upgrade>
+    </part>
+    <part>
+      <name>	car1	</name>
+      <partId>	12	</partId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-26.407360 2.196978 -13.731860	</position>
+            <size>	8.702271 4.320000 3.959999	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	100	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <effectState>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+      </upgrade>
+    </part>
+    <part>
+      <name>	car2	</name>
+      <partId>	13	</partId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-26.476930 2.295000 -8.736915	</position>
+            <size>	8.688676 4.320000 3.960000	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	100	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <effectState>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+      </upgrade>
+    </part>
+    <part>
+      <name>	car3	</name>
+      <partId>	14	</partId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-27.628280 1.890000 -5.104095	</position>
+            <size>	5.457374 3.240000 3.213299	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	100	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <effectState>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+      </upgrade>
+    </part>
+    <part>
+      <name>	fuel	</name>
+      <partId>	15	</partId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	19.774880 2.673939 11.903540	</position>
+            <size>	21.077320 4.877150 22.490410	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	100	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <effectState>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>hull/HP_fuel</fireMountPoint>
+        <fire>
+          <fire_chance>1.0</fire_chance>
+          <extinguish_time>20.0</extinguish_time>
+          <fire_damage>0.67%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+      </upgrade>
+    </part>
+  </parts>
+</burma_054_l3.xml>

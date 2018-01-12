@@ -1,0 +1,1074 @@
+<stage.xml>
+  <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
+  <noNamespaceSchemaLocation>../../eps/validators/subscribers.xsd</noNamespaceSchemaLocation>
+  <header>
+    <type>achievement</type>
+    <group>stage</group>
+    <server>
+      <active>	true	</active>
+      <scope>player</scope>
+    </server>
+    <markers>
+      <group>stage</group>
+    </markers>
+    <client>
+      <multiple>	false	</multiple>
+      <place>right</place>
+    </client>
+  </header>
+  <include>
+    <condition>
+      <and>
+        <equal>
+          <context>arena.type</context>
+          <value>normal</value>
+        </equal>
+        <equal>
+          <context>arena.source</context>
+          <value>player</value>
+        </equal>
+      </and>
+    </condition>
+    <metadata>
+      <doneCount>	true	</doneCount>
+      <firstDoneTime>	true	</firstDoneTime>
+      <lastDoneTime>	true	</lastDoneTime>
+    </metadata>
+  </include>
+  <subscriber>
+    <name>dillei4</name>
+    <client>
+      <order>	1	</order>
+      <page>	0	</page>
+      <name>
+        <locale>MEDAL_NAME_JOHNSON4</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_DILLEI4</locale>
+      </description>
+      <history>
+        <locale>MEDAL_HISTORY_JOHNSON</locale>
+      </history>
+      <steps>
+        <locale>MEDAL_STAGE_DILLEI</locale>
+        <value>	20	</value>
+        <value>	400	</value>
+        <value>	8000	</value>
+        <value>	16000	</value>
+      </steps>
+      <icon>
+        <small>icons/awards/achievements/acTieredJohnson4.dds</small>
+        <big>icons/awards/achievementsInfo/acTieredJohnson4.dds</big>
+        <faded>icons/awards/achievements/acTieredJohnson4_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <condition>
+        <equal>
+          <context>victim.type</context>
+          <value>player</value>
+        </equal>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	20	</value>
+      </count>
+    </event>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+  </subscriber>
+  <subscriber>
+    <name>dillei3</name>
+    <client>
+      <order>	2	</order>
+      <page>	0	</page>
+      <name>
+        <locale>MEDAL_NAME_JOHNSON3</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_DILLEI3</locale>
+      </description>
+      <history>
+        <locale>MEDAL_HISTORY_JOHNSON</locale>
+      </history>
+      <steps>
+        <locale>MEDAL_STAGE_DILLEI</locale>
+        <value>	20	</value>
+        <value>	400	</value>
+        <value>	8000	</value>
+        <value>	16000	</value>
+      </steps>
+      <icon>
+        <small>icons/awards/achievements/acTieredJohnson3.dds</small>
+        <big>icons/awards/achievementsInfo/acTieredJohnson3.dds</big>
+        <faded>icons/awards/achievements/acTieredJohnson3_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <condition>
+        <equal>
+          <context>victim.type</context>
+          <value>player</value>
+        </equal>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	400	</value>
+      </count>
+    </event>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+  </subscriber>
+  <subscriber>
+    <name>dillei2</name>
+    <client>
+      <order>	3	</order>
+      <page>	0	</page>
+      <name>
+        <locale>MEDAL_NAME_JOHNSON2</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_DILLEI2</locale>
+      </description>
+      <history>
+        <locale>MEDAL_HISTORY_JOHNSON</locale>
+      </history>
+      <steps>
+        <locale>MEDAL_STAGE_DILLEI</locale>
+        <value>	20	</value>
+        <value>	400	</value>
+        <value>	8000	</value>
+        <value>	16000	</value>
+      </steps>
+      <icon>
+        <small>icons/awards/achievements/acTieredJohnson2.dds</small>
+        <big>icons/awards/achievementsInfo/acTieredJohnson2.dds</big>
+        <faded>icons/awards/achievements/acTieredJohnson2_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <condition>
+        <equal>
+          <context>victim.type</context>
+          <value>player</value>
+        </equal>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	8000	</value>
+      </count>
+    </event>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+  </subscriber>
+  <subscriber>
+    <name>dillei1</name>
+    <client>
+      <order>	4	</order>
+      <page>	0	</page>
+      <name>
+        <locale>MEDAL_NAME_JOHNSON1</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_DILLEI1</locale>
+      </description>
+      <history>
+        <locale>MEDAL_HISTORY_JOHNSON</locale>
+      </history>
+      <steps>
+        <locale>MEDAL_STAGE_DILLEI</locale>
+        <value>	20	</value>
+        <value>	400	</value>
+        <value>	8000	</value>
+        <value>	16000	</value>
+      </steps>
+      <icon>
+        <small>icons/awards/achievements/acTieredJohnson1.dds</small>
+        <big>icons/awards/achievementsInfo/acTieredJohnson1.dds</big>
+        <faded>icons/awards/achievements/acTieredJohnson1_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <condition>
+        <equal>
+          <context>victim.type</context>
+          <value>player</value>
+        </equal>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	16000	</value>
+      </count>
+    </event>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+  </subscriber>
+  <subscriber>
+    <name>	johnson4	</name>
+    <client>
+      <order>	5	</order>
+      <page>	0	</page>
+      <name>
+        <locale>MEDAL_NAME_DILLEI4</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_JOHNSON4</locale>
+      </description>
+      <history>
+        <locale>MEDAL_HISTORY_DILLEI</locale>
+      </history>
+      <steps>
+        <locale>MEDAL_STAGE_JOHNSON</locale>
+        <value>	30	</value>
+        <value>	600	</value>
+        <value>	12000	</value>
+        <value>	24000	</value>
+      </steps>
+      <icon>
+        <small>icons/awards/achievements/acTieredDilley4.dds</small>
+        <big>icons/awards/achievementsInfo/acTieredDilley4.dds</big>
+        <faded>icons/awards/achievements/acTieredDilley4_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>destroy</name>
+      <count>
+        <id>	0	</id>
+        <value>	30	</value>
+      </count>
+    </event>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+  </subscriber>
+  <subscriber>
+    <name>	johnson3	</name>
+    <client>
+      <order>	6	</order>
+      <page>	0	</page>
+      <name>
+        <locale>MEDAL_NAME_DILLEI3</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_JOHNSON3</locale>
+      </description>
+      <history>
+        <locale>MEDAL_HISTORY_DILLEI</locale>
+      </history>
+      <steps>
+        <locale>MEDAL_STAGE_JOHNSON</locale>
+        <value>	30	</value>
+        <value>	600	</value>
+        <value>	12000	</value>
+        <value>	24000	</value>
+      </steps>
+      <icon>
+        <small>icons/awards/achievements/acTieredDilley3.dds</small>
+        <big>icons/awards/achievementsInfo/acTieredDilley3.dds</big>
+        <faded>icons/awards/achievements/acTieredDilley3_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>destroy</name>
+      <count>
+        <id>	0	</id>
+        <value>	600	</value>
+      </count>
+    </event>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+  </subscriber>
+  <subscriber>
+    <name>	johnson2	</name>
+    <client>
+      <order>	7	</order>
+      <page>	0	</page>
+      <name>
+        <locale>MEDAL_NAME_DILLEI2</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_JOHNSON2</locale>
+      </description>
+      <history>
+        <locale>MEDAL_HISTORY_DILLEI</locale>
+      </history>
+      <steps>
+        <locale>MEDAL_STAGE_JOHNSON</locale>
+        <value>	30	</value>
+        <value>	600	</value>
+        <value>	12000	</value>
+        <value>	24000	</value>
+      </steps>
+      <icon>
+        <small>icons/awards/achievements/acTieredDilley2.dds</small>
+        <big>icons/awards/achievementsInfo/acTieredDilley2.dds</big>
+        <faded>icons/awards/achievements/acTieredDilley2_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>destroy</name>
+      <count>
+        <id>	0	</id>
+        <value>	12000	</value>
+      </count>
+    </event>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+  </subscriber>
+  <subscriber>
+    <name>	johnson1	</name>
+    <client>
+      <order>	8	</order>
+      <page>	0	</page>
+      <name>
+        <locale>MEDAL_NAME_DILLEI1</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_JOHNSON1</locale>
+      </description>
+      <history>
+        <locale>MEDAL_HISTORY_DILLEI</locale>
+      </history>
+      <steps>
+        <locale>MEDAL_STAGE_JOHNSON</locale>
+        <value>	30	</value>
+        <value>	600	</value>
+        <value>	12000	</value>
+        <value>	24000	</value>
+      </steps>
+      <icon>
+        <small>icons/awards/achievements/acTieredDilley1.dds</small>
+        <big>icons/awards/achievementsInfo/acTieredDilley1.dds</big>
+        <faded>icons/awards/achievements/acTieredDilley1_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>destroy</name>
+      <count>
+        <id>	0	</id>
+        <value>	24000	</value>
+      </count>
+    </event>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+  </subscriber>
+  <subscriber>
+    <name>pokryshkin4</name>
+    <client>
+      <order>	9	</order>
+      <page>	0	</page>
+      <name>
+        <locale>MEDAL_NAME_POKRYSHKIN4</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_POKRYSHKIN4</locale>
+      </description>
+      <history>
+        <locale>MEDAL_HISTORY_POKRYSHKIN</locale>
+      </history>
+      <steps>
+        <locale>MEDAL_STAGE_POKRYSHKIN</locale>
+        <value>	15	</value>
+        <value>	300	</value>
+        <value>	6000	</value>
+        <value>	12000	</value>
+      </steps>
+      <icon>
+        <small>icons/awards/achievements/acTieredPokryshkin4.dds</small>
+        <big>icons/awards/achievementsInfo/acTieredPokryshkin4.dds</big>
+        <faded>icons/awards/achievements/acTieredPokryshkin4_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <condition>
+        <equal>
+          <context>victim.type</context>
+          <value>	defender	</value>
+        </equal>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	15	</value>
+      </count>
+    </event>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+  </subscriber>
+  <subscriber>
+    <name>pokryshkin3</name>
+    <client>
+      <order>	10	</order>
+      <page>	0	</page>
+      <name>
+        <locale>MEDAL_NAME_POKRYSHKIN3</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_POKRYSHKIN3</locale>
+      </description>
+      <history>
+        <locale>MEDAL_HISTORY_POKRYSHKIN</locale>
+      </history>
+      <steps>
+        <locale>MEDAL_STAGE_POKRYSHKIN</locale>
+        <value>	15	</value>
+        <value>	300	</value>
+        <value>	6000	</value>
+        <value>	12000	</value>
+      </steps>
+      <icon>
+        <small>icons/awards/achievements/acTieredPokryshkin3.dds</small>
+        <big>icons/awards/achievementsInfo/acTieredPokryshkin3.dds</big>
+        <faded>icons/awards/achievements/acTieredPokryshkin3_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <condition>
+        <equal>
+          <context>victim.type</context>
+          <value>	defender	</value>
+        </equal>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	300	</value>
+      </count>
+    </event>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+  </subscriber>
+  <subscriber>
+    <name>pokryshkin2</name>
+    <client>
+      <order>	11	</order>
+      <page>	0	</page>
+      <name>
+        <locale>MEDAL_NAME_POKRYSHKIN2</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_POKRYSHKIN2</locale>
+      </description>
+      <history>
+        <locale>MEDAL_HISTORY_POKRYSHKIN</locale>
+      </history>
+      <steps>
+        <locale>MEDAL_STAGE_POKRYSHKIN</locale>
+        <value>	15	</value>
+        <value>	300	</value>
+        <value>	6000	</value>
+        <value>	12000	</value>
+      </steps>
+      <icon>
+        <small>icons/awards/achievements/acTieredPokryshkin2.dds</small>
+        <big>icons/awards/achievementsInfo/acTieredPokryshkin2.dds</big>
+        <faded>icons/awards/achievements/acTieredPokryshkin2_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <condition>
+        <equal>
+          <context>victim.type</context>
+          <value>	defender	</value>
+        </equal>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	6000	</value>
+      </count>
+    </event>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+  </subscriber>
+  <subscriber>
+    <name>pokryshkin1</name>
+    <client>
+      <order>	12	</order>
+      <page>	0	</page>
+      <name>
+        <locale>MEDAL_NAME_POKRYSHKIN1</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_POKRYSHKIN1</locale>
+      </description>
+      <history>
+        <locale>MEDAL_HISTORY_POKRYSHKIN</locale>
+      </history>
+      <steps>
+        <locale>MEDAL_STAGE_POKRYSHKIN</locale>
+        <value>	15	</value>
+        <value>	300	</value>
+        <value>	6000	</value>
+        <value>	12000	</value>
+      </steps>
+      <icon>
+        <small>icons/awards/achievements/acTieredPokryshkin1.dds</small>
+        <big>icons/awards/achievementsInfo/acTieredPokryshkin1.dds</big>
+        <faded>icons/awards/achievements/acTieredPokryshkin1_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <condition>
+        <equal>
+          <context>victim.type</context>
+          <value>	defender	</value>
+        </equal>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	12000	</value>
+      </count>
+    </event>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+  </subscriber>
+  <subscriber>
+    <name>boyington4</name>
+    <client>
+      <order>	13	</order>
+      <page>	0	</page>
+      <name>
+        <locale>MEDAL_NAME_BOYINGTON4</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_BOYINGTON4</locale>
+      </description>
+      <history>
+        <locale>MEDAL_HISTORY_BOYINGTON</locale>
+      </history>
+      <steps>
+        <locale>MEDAL_STAGE_BOYINGTON</locale>
+        <value>	300	</value>
+        <value>	6000	</value>
+        <value>	120000	</value>
+        <value>	300000	</value>
+      </steps>
+      <icon>
+        <small>icons/awards/achievements/acTieredBoyington4.dds</small>
+        <big>icons/awards/achievementsInfo/acTieredBoyington4.dds</big>
+        <faded>icons/awards/achievements/acTieredBoyington4_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <count>
+        <context>points.capture</context>
+        <id>	0	</id>
+        <value>	300	</value>
+      </count>
+    </event>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+  </subscriber>
+  <subscriber>
+    <name>boyington3</name>
+    <client>
+      <order>	14	</order>
+      <page>	0	</page>
+      <name>
+        <locale>MEDAL_NAME_BOYINGTON3</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_BOYINGTON3</locale>
+      </description>
+      <history>
+        <locale>MEDAL_HISTORY_BOYINGTON</locale>
+      </history>
+      <steps>
+        <locale>MEDAL_STAGE_BOYINGTON</locale>
+        <value>	300	</value>
+        <value>	6000	</value>
+        <value>	120000	</value>
+        <value>	300000	</value>
+      </steps>
+      <icon>
+        <small>icons/awards/achievements/acTieredBoyington3.dds</small>
+        <big>icons/awards/achievementsInfo/acTieredBoyington3.dds</big>
+        <faded>icons/awards/achievements/acTieredBoyington3_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <count>
+        <context>points.capture</context>
+        <id>	0	</id>
+        <value>	6000	</value>
+      </count>
+    </event>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+  </subscriber>
+  <subscriber>
+    <name>boyington2</name>
+    <client>
+      <order>	15	</order>
+      <page>	0	</page>
+      <name>
+        <locale>MEDAL_NAME_BOYINGTON2</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_BOYINGTON2</locale>
+      </description>
+      <history>
+        <locale>MEDAL_HISTORY_BOYINGTON</locale>
+      </history>
+      <steps>
+        <locale>MEDAL_STAGE_BOYINGTON</locale>
+        <value>	300	</value>
+        <value>	6000	</value>
+        <value>	120000	</value>
+        <value>	300000	</value>
+      </steps>
+      <icon>
+        <small>icons/awards/achievements/acTieredBoyington2.dds</small>
+        <big>icons/awards/achievementsInfo/acTieredBoyington2.dds</big>
+        <faded>icons/awards/achievements/acTieredBoyington2_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <count>
+        <context>points.capture</context>
+        <id>	0	</id>
+        <value>	120000	</value>
+      </count>
+    </event>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+  </subscriber>
+  <subscriber>
+    <name>boyington1</name>
+    <client>
+      <order>	16	</order>
+      <page>	0	</page>
+      <name>
+        <locale>MEDAL_NAME_BOYINGTON1</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_BOYINGTON1</locale>
+      </description>
+      <history>
+        <locale>MEDAL_HISTORY_BOYINGTON</locale>
+      </history>
+      <steps>
+        <locale>MEDAL_STAGE_BOYINGTON</locale>
+        <value>	300	</value>
+        <value>	6000	</value>
+        <value>	120000	</value>
+        <value>	300000	</value>
+      </steps>
+      <icon>
+        <small>icons/awards/achievements/acTieredBoyington1.dds</small>
+        <big>icons/awards/achievementsInfo/acTieredBoyington1.dds</big>
+        <faded>icons/awards/achievements/acTieredBoyington1_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <count>
+        <context>points.capture</context>
+        <id>	0	</id>
+        <value>	300000	</value>
+      </count>
+    </event>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+  </subscriber>
+  <subscriber>
+    <name>mihalenkov4</name>
+    <client>
+      <order>	17	</order>
+      <page>	0	</page>
+      <name>
+        <locale>MEDAL_NAME_MIHALENKOV4</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_MIHALENKOV4</locale>
+      </description>
+      <history>
+        <locale>MEDAL_HISTORY_MIHALENKOV</locale>
+      </history>
+      <steps>
+        <locale>MEDAL_STAGE_MIHALENKOV</locale>
+        <value>	10000	</value>
+        <value>	200000	</value>
+        <value>	4000000	</value>
+        <value>	8000000	</value>
+      </steps>
+      <icon>
+        <small>icons/awards/achievements/acTieredMikhalenkov4.dds</small>
+        <big>icons/awards/achievementsInfo/acTieredMikhalenkov4.dds</big>
+        <faded>icons/awards/achievements/acTieredMikhalenkov4_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <count>
+        <context>points.battle</context>
+        <id>	0	</id>
+        <value>	10000	</value>
+      </count>
+    </event>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+  </subscriber>
+  <subscriber>
+    <name>mihalenkov3</name>
+    <client>
+      <order>	18	</order>
+      <page>	0	</page>
+      <name>
+        <locale>MEDAL_NAME_MIHALENKOV3</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_MIHALENKOV_3</locale>
+      </description>
+      <history>
+        <locale>MEDAL_HISTORY_MIHALENKOV</locale>
+      </history>
+      <steps>
+        <locale>MEDAL_STAGE_MIHALENKOV</locale>
+        <value>	10000	</value>
+        <value>	200000	</value>
+        <value>	4000000	</value>
+        <value>	8000000	</value>
+      </steps>
+      <icon>
+        <small>icons/awards/achievements/acTieredMikhalenkov3.dds</small>
+        <big>icons/awards/achievementsInfo/acTieredMikhalenkov3.dds</big>
+        <faded>icons/awards/achievements/acTieredMikhalenkov3_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <count>
+        <context>points.battle</context>
+        <id>	0	</id>
+        <value>	200000	</value>
+      </count>
+    </event>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+  </subscriber>
+  <subscriber>
+    <name>mihalenkov2</name>
+    <client>
+      <order>	19	</order>
+      <page>	0	</page>
+      <name>
+        <locale>MEDAL_NAME_MIHALENKOV2</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_MIHALENKOV2</locale>
+      </description>
+      <history>
+        <locale>MEDAL_HISTORY_MIHALENKOV</locale>
+      </history>
+      <steps>
+        <locale>MEDAL_STAGE_MIHALENKOV</locale>
+        <value>	10000	</value>
+        <value>	200000	</value>
+        <value>	4000000	</value>
+        <value>	8000000	</value>
+      </steps>
+      <icon>
+        <small>icons/awards/achievements/acTieredMikhalenkov2.dds</small>
+        <big>icons/awards/achievementsInfo/acTieredMikhalenkov2.dds</big>
+        <faded>icons/awards/achievements/acTieredMikhalenkov2_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <count>
+        <context>points.battle</context>
+        <id>	0	</id>
+        <value>	4000000	</value>
+      </count>
+    </event>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+  </subscriber>
+  <subscriber>
+    <name>mihalenkov1</name>
+    <client>
+      <order>	20	</order>
+      <page>	0	</page>
+      <name>
+        <locale>MEDAL_NAME_MIHALENKOV1</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_MIHALENKOV1</locale>
+      </description>
+      <history>
+        <locale>MEDAL_HISTORY_MIHALENKOV</locale>
+      </history>
+      <steps>
+        <locale>MEDAL_STAGE_MIHALENKOV</locale>
+        <value>	10000	</value>
+        <value>	200000	</value>
+        <value>	4000000	</value>
+        <value>	8000000	</value>
+      </steps>
+      <icon>
+        <small>icons/awards/achievements/acTieredMikhalenkov1.dds</small>
+        <big>icons/awards/achievementsInfo/acTieredMikhalenkov1.dds</big>
+        <faded>icons/awards/achievements/acTieredMikhalenkov1_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <count>
+        <context>points.battle</context>
+        <id>	0	</id>
+        <value>	8000000	</value>
+      </count>
+    </event>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+  </subscriber>
+</stage.xml>

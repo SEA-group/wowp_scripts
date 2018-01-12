@@ -1,0 +1,920 @@
+<novorossiysk_022_storage_t3.xml>
+  <parent>default.xml</parent>
+  <name>Storehouse</name>
+  <modelPath>content/01_Novorossiysk/mechNR_022_Storage_destructible_01/mechNR_022_Storage_destructible_01.model</modelPath>
+  <modelCrashPath>content/01_Novorossiysk/mechNR_022_Storage_destructible_01/mechNR_022_Storage_destructible_01_crash.model</modelCrashPath>
+  <bBoxes>
+    <mainBox>
+      <size>100 90 100</size>
+    </mainBox>
+  </bBoxes>
+  <maxHealth>	2000	</maxHealth>
+  <dominationCost>0.08</dominationCost>
+  <respawnDelay>-1.0</respawnDelay>
+  <superiorityPoints>	1	</superiorityPoints>
+  <initialSpawnDelay>0.0</initialSpawnDelay>
+  <modelScaling>	0.140000	</modelScaling>
+  <type>smallTeamObject</type>
+  <battleLevelsSettings>
+    <section>
+      <battleLevel>	1	</battleLevel>
+      <hpK>0.15</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	2	</battleLevel>
+      <hpK>0.3</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	3	</battleLevel>
+      <hpK>0.6</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	4	</battleLevel>
+      <hpK>0.8</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	5	</battleLevel>
+      <hpK>1.0</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	6	</battleLevel>
+      <hpK>1.2</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	7	</battleLevel>
+      <hpK>1.5</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	8	</battleLevel>
+      <hpK>2.0</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	9	</battleLevel>
+      <hpK>2.5</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	10	</battleLevel>
+      <hpK>2.5</hpK>
+      <armorK>	0	</armorK>
+    </section>
+  </battleLevelsSettings>
+  <parts>
+    <part>
+      <name>	hull	</name>
+      <partId>	1	</partId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>-13 5 13</position>
+            <size>0 0 0</size>
+            <armorFront>10 10 10</armorFront>
+            <armorBack>10 10 10</armorBack>
+            <absorption>	1	</absorption>
+          </bbox>
+        </bBoxes>
+        <health>10%</health>
+        <componentType>	Hull	</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/01_Novorossiysk/mechNR_022_Storage_destructible_01/mechNR_022_Storage_destructible_01.model</model>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <model>content/01_Novorossiysk/mechNR_022_Storage_destructible_01/mechNR_022_Storage_destructible_01.model</model>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <model>content/01_Novorossiysk/mechNR_022_Storage_destructible_01/mechNR_022_Storage_destructible_01.model</model>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/01_Novorossiysk/mechNR_022_Storage_destructible_01/mechNR_022_Storage_destructible_01_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_prop_exposion_large</name>
+                <mountPoint>HP_explosion</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_large_01</name>
+                <mountPoint>HP_hangar</mountPoint>
+                <trigger>
+                </trigger>
+              </effect>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_med_01</name>
+                <mountPoint>HP_tank</mountPoint>
+                <trigger>
+                </trigger>
+              </effect>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_01</name>
+                <mountPoint>HP_car1</mountPoint>
+                <trigger>
+                </trigger>
+              </effect>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_01</name>
+                <mountPoint>HP_car2</mountPoint>
+                <trigger>
+                </trigger>
+              </effect>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_01</name>
+                <mountPoint>HP_car3</mountPoint>
+                <trigger>
+                </trigger>
+              </effect>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+      </upgrade>
+    </part>
+    <part>
+      <name>hangar</name>
+      <partId>	2	</partId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	5.640390 4.137223 1.424438	</position>
+            <size>	19.368740 8.300796 26.783080	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	2000	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_white_smoke_med_01</name>
+                <mountPoint>HP_hangar</mountPoint>
+                <trigger>
+                </trigger>
+              </effect>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_white_smoke_med_02</name>
+                <mountPoint>HP_hangar</mountPoint>
+                <trigger>
+                </trigger>
+              </effect>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <effectState>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+      </upgrade>
+    </part>
+    <part>
+      <name>	tank	</name>
+      <partId>	3	</partId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-8.034252 11.276860 7.728203	</position>
+            <size>	4.049918 4.228112 4.152083	</size>
+            <armorFront>	10.000000 10.000000 10.000000	</armorFront>
+            <armorBack>	10.000000 10.000000 10.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>10%</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_01</name>
+                <mountPoint>HP_tank</mountPoint>
+                <trigger>
+                </trigger>
+              </effect>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_tank</mountPoint>
+                <trigger>
+                </trigger>
+              </effect>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <effectState>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+      </upgrade>
+    </part>
+    <part>
+      <name>	car1	</name>
+      <partId>	4	</partId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-10.137620 0.982292 -1.750954	</position>
+            <size>	3.935881 1.874949 1.504494	</size>
+            <armorFront>	100.000000 100.000000 100.000000	</armorFront>
+            <armorBack>	100.000000 100.000000 100.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>10%</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_01</name>
+                <mountPoint>HP_car1</mountPoint>
+                <trigger>
+                </trigger>
+              </effect>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_car1</mountPoint>
+                <trigger>
+                </trigger>
+              </effect>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <effectState>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+      </upgrade>
+    </part>
+    <part>
+      <name>	car2	</name>
+      <partId>	5	</partId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-12.175160 0.980474 8.226297	</position>
+            <size>	3.663960 2.020407 1.972946	</size>
+            <armorFront>	100.000000 100.000000 100.000000	</armorFront>
+            <armorBack>	100.000000 100.000000 100.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.708957 0.000000 0.705251	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>10%</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_01</name>
+                <mountPoint>HP_car2</mountPoint>
+                <trigger>
+                </trigger>
+              </effect>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_car2</mountPoint>
+                <trigger>
+                </trigger>
+              </effect>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <effectState>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+      </upgrade>
+    </part>
+    <part>
+      <name>	car3	</name>
+      <partId>	6	</partId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-14.160800 0.938853 8.000051	</position>
+            <size>	3.823906 1.750137 1.957070	</size>
+            <armorFront>	100.000000 100.000000 100.000000	</armorFront>
+            <armorBack>	100.000000 100.000000 100.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.709082 0.000000 0.705126	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>10%</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_01</name>
+                <mountPoint>HP_car3</mountPoint>
+                <trigger>
+                </trigger>
+              </effect>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_car3</mountPoint>
+                <trigger>
+                </trigger>
+              </effect>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <effectState>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+      </upgrade>
+    </part>
+    <part>
+      <name>aagun2</name>
+      <partId>	7	</partId>
+      <mountPoint>hull/HP_gun_02</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-9.045000 0.630000 2.115000	</position>
+            <size>	4.680000 1.080000 5.490000	</size>
+            <armorFront>	100.000000 100.000000 100.000000	</armorFront>
+            <armorBack>	100.000000 100.000000 100.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>10%</health>
+        <componentType>Gunner</componentType>
+        <componentXml>t3</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/Buildings/antiaircraft_gun/normal/lod0/antiaircraft_gun_bone.model</model>
+            <animationController>	TurretController	</animationController>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <model>content/Buildings/antiaircraft_gun/normal/lod0/antiaircraft_gun_bone.model</model>
+            <animationController>	TurretController	</animationController>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_01</name>
+                <mountPoint>HP_base</mountPoint>
+                <trigger>
+                </trigger>
+              </effect>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <model>content/Buildings/antiaircraft_gun/normal/lod0/antiaircraft_gun_bone.model</model>
+            <animationController>	TurretController	</animationController>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_base</mountPoint>
+                <trigger>
+                </trigger>
+              </effect>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <model>content/Buildings/antiaircraft_gun_crash/normal/lod0/antiaircraft_gun_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_prop_exposion_large</name>
+                <mountPoint>HP_explosion</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_smoke</mountPoint>
+                <trigger>
+                </trigger>
+              </effect>
+            </effectState>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <effectState>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+      </upgrade>
+    </part>
+  </parts>
+  <turretName>t3</turretName>
+</novorossiysk_022_storage_t3.xml>

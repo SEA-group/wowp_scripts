@@ -1,0 +1,798 @@
+<memorable.xml>
+  <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
+  <noNamespaceSchemaLocation>../../eps/validators/subscribers.xsd</noNamespaceSchemaLocation>
+  <header>
+    <type>achievement</type>
+    <group>memorable</group>
+    <server>
+      <active>	true	</active>
+      <scope>player</scope>
+    </server>
+    <markers>
+      <group>memorable</group>
+    </markers>
+    <client>
+      <place>	left	</place>
+    </client>
+  </header>
+  <include>
+    <condition>
+      <and>
+        <equal>
+          <context>arena.type</context>
+          <value>normal</value>
+        </equal>
+        <equal>
+          <context>arena.source</context>
+          <value>player</value>
+        </equal>
+      </and>
+    </condition>
+    <metadata>
+      <doneCount>	true	</doneCount>
+      <firstDoneTime>	true	</firstDoneTime>
+      <lastDoneTime>	true	</lastDoneTime>
+    </metadata>
+  </include>
+  <subscriber>
+    <name>	impactfromthesky	</name>
+    <client>
+      <order>	1	</order>
+      <page>	0	</page>
+      <multiple>	false	</multiple>
+      <name>
+        <locale>MEDAL_NAME_IMPACT_FROM_THE_SKY</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_IMPACT_FROM_THE_SKY</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/acComImpactFromTheSky.dds</small>
+        <big>icons/awards/achievementsInfo/acComImpactFromTheSky.dds</big>
+        <faded>icons/awards/achievements/acComImpactFromTheSky_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <condition>
+        <equal>
+          <context>victim.type</context>
+          <value>bomber</value>
+        </equal>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>knight</name>
+    <client>
+      <order>	2	</order>
+      <page>	0	</page>
+      <multiple>	false	</multiple>
+      <name>
+        <locale>MEDAL_NAME_KNIGHT</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_KNIGHT</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LOW_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acComKnight.dds</small>
+        <big>icons/awards/achievementsInfo/acComKnight.dds</big>
+        <faded>icons/awards/achievements/acComKnight_Outline.dds</faded>
+      </icon>
+    </client>
+    <condition>
+      <lte>
+        <context>player.plane.level</context>
+        <value>	3	</value>
+      </lte>
+    </condition>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <condition>
+        <equal>
+          <context>victim.type</context>
+          <value>	defender	</value>
+        </equal>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>patrol</name>
+    <client>
+      <order>	3	</order>
+      <page>	0	</page>
+      <multiple>	false	</multiple>
+      <name>
+        <locale>MEDAL_NAME_PATROL</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_PATROL</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LOW_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acComPatrol.dds</small>
+        <big>icons/awards/achievementsInfo/acComPatrol.dds</big>
+        <faded>icons/awards/achievements/acComPatrol_Outline.dds</faded>
+      </icon>
+    </client>
+    <condition>
+      <lte>
+        <context>player.plane.level</context>
+        <value>	3	</value>
+      </lte>
+    </condition>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>finish</name>
+      <operation>
+        <self>	true	</self>
+        <rollback>	true	</rollback>
+      </operation>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <count>
+        <id>	0	</id>
+        <value>	2	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>destroy</name>
+      <count>
+        <id>	1	</id>
+        <value>	2	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>guard</name>
+    <client>
+      <order>	4	</order>
+      <page>	0	</page>
+      <multiple>	false	</multiple>
+      <name>
+        <locale>MEDAL_NAME_GUARD</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_GUARD</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LOW_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acComGuard.dds</small>
+        <big>icons/awards/achievementsInfo/acComGuard.dds</big>
+        <faded>icons/awards/achievements/acComGuard_Outline.dds</faded>
+      </icon>
+    </client>
+    <condition>
+      <lte>
+        <context>player.plane.level</context>
+        <value>	3	</value>
+      </lte>
+    </condition>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>destroy</name>
+      <count>
+        <id>	0	</id>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>daringswoop</name>
+    <client>
+      <order>	5	</order>
+      <page>	0	</page>
+      <multiple>	false	</multiple>
+      <name>
+        <locale>MEDAL_NAME_DARING_SWOOP</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_DARING_SWOOP</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LOW_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acComDaringSwoop.dds</small>
+        <big>icons/awards/achievementsInfo/acComDaringSwoop.dds</big>
+        <faded>icons/awards/achievements/acComDaringSwoop_Outline.dds</faded>
+      </icon>
+    </client>
+    <condition>
+      <lte>
+        <context>player.plane.level</context>
+        <value>	3	</value>
+      </lte>
+    </condition>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>sector.capture.participated</name>
+      <count>
+        <id>	0	</id>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>gotcha</name>
+    <client>
+      <order>	6	</order>
+      <page>	0	</page>
+      <multiple>	false	</multiple>
+      <name>
+        <locale>MEDAL_NAME_GOTCHA</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_GOTCHA</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LOW_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acComGotcha.dds</small>
+        <big>icons/awards/achievementsInfo/acComGotcha.dds</big>
+        <faded>icons/awards/achievements/acComGotcha_Outline.dds</faded>
+      </icon>
+    </client>
+    <condition>
+      <lte>
+        <context>player.plane.level</context>
+        <value>	3	</value>
+      </lte>
+    </condition>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>damage</name>
+      <condition>
+        <and>
+          <equal>
+            <context>victim.object</context>
+            <value>plane</value>
+          </equal>
+          <equal>
+            <context>by</context>
+            <value>bullet</value>
+          </equal>
+        </and>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>gunner</name>
+    <client>
+      <order>	7	</order>
+      <page>	0	</page>
+      <multiple>	false	</multiple>
+      <name>
+        <locale>MEDAL_NAME_GUNNER</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_GUNNER</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LOW_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acComGunner.dds</small>
+        <big>icons/awards/achievementsInfo/acComGunner.dds</big>
+        <faded>icons/awards/achievements/acComGunner_Outline.dds</faded>
+      </icon>
+    </client>
+    <condition>
+      <lte>
+        <context>player.plane.level</context>
+        <value>	3	</value>
+      </lte>
+    </condition>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>damage</name>
+      <condition>
+        <and>
+          <equal>
+            <context>victim.object</context>
+            <value>plane</value>
+          </equal>
+          <equal>
+            <context>by</context>
+            <value>gunner</value>
+          </equal>
+        </and>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>bombing</name>
+    <client>
+      <order>	8	</order>
+      <page>	0	</page>
+      <multiple>	false	</multiple>
+      <name>
+        <locale>MEDAL_NAME_BOMBING</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_BOMBING</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LOW_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acComBombing.dds</small>
+        <big>icons/awards/achievementsInfo/acComBombing.dds</big>
+        <faded>icons/awards/achievements/acComBombing_Outline.dds</faded>
+      </icon>
+    </client>
+    <condition>
+      <lte>
+        <context>player.plane.level</context>
+        <value>	3	</value>
+      </lte>
+    </condition>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>destroy</name>
+      <condition>
+        <equal>
+          <context>by</context>
+          <value>	bomb	</value>
+        </equal>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	25	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>missilestrike</name>
+    <client>
+      <order>	9	</order>
+      <page>	0	</page>
+      <multiple>	false	</multiple>
+      <name>
+        <locale>MEDAL_NAME_MISSILE_STRIKE</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_MISSILE_STRIKE</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LOW_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acComMissleStrike.dds</small>
+        <big>icons/awards/achievementsInfo/acComMissleStrike.dds</big>
+        <faded>icons/awards/achievements/acComMissleStrike_Outline.dds</faded>
+      </icon>
+    </client>
+    <condition>
+      <lte>
+        <context>player.plane.level</context>
+        <value>	3	</value>
+      </lte>
+    </condition>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>destroy</name>
+      <condition>
+        <equal>
+          <context>by</context>
+          <value>rocket</value>
+        </equal>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	40	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>cautionbomb</name>
+    <client>
+      <order>	10	</order>
+      <page>	0	</page>
+      <multiple>	false	</multiple>
+      <name>
+        <locale>MEDAL_NAME_CAUTION_BOMB</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_CAUTION_BOMB</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LOW_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acComCautionBomb.dds</small>
+        <big>icons/awards/achievementsInfo/acComCautionBomb.dds</big>
+        <faded>icons/awards/achievements/acComCautionBomb_Outline.dds</faded>
+      </icon>
+    </client>
+    <condition>
+      <lte>
+        <context>player.plane.level</context>
+        <value>	3	</value>
+      </lte>
+    </condition>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>damage</name>
+      <condition>
+        <and>
+          <equal>
+            <context>victim.object</context>
+            <value>plane</value>
+          </equal>
+          <equal>
+            <context>by</context>
+            <value>	bomb	</value>
+          </equal>
+        </and>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>firebug</name>
+    <client>
+      <order>	11	</order>
+      <page>	0	</page>
+      <multiple>	false	</multiple>
+      <name>
+        <locale>MEDAL_NAME_FIREBUG</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_FIREBUG</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LOW_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acComFirebug.dds</small>
+        <big>icons/awards/achievementsInfo/acComFirebug.dds</big>
+        <faded>icons/awards/achievements/acComFirebug_Outline.dds</faded>
+      </icon>
+    </client>
+    <condition>
+      <lte>
+        <context>player.plane.level</context>
+        <value>	3	</value>
+      </lte>
+    </condition>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>destroy</name>
+      <condition>
+        <equal>
+          <context>by</context>
+          <value>	fire	</value>
+        </equal>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>crossfire</name>
+    <client>
+      <order>	12	</order>
+      <page>	0	</page>
+      <multiple>	false	</multiple>
+      <name>
+        <locale>MEDAL_NAME_CROSSFIRE</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_CROSSFIRE</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LOW_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acComCrossfire.dds</small>
+        <big>icons/awards/achievementsInfo/acComCrossfire.dds</big>
+        <faded>icons/awards/achievements/acComCrossfire_Outline.dds</faded>
+      </icon>
+    </client>
+    <condition>
+      <lte>
+        <context>player.plane.level</context>
+        <value>	3	</value>
+      </lte>
+    </condition>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>assist</name>
+      <condition>
+        <equal>
+          <context>victim.object</context>
+          <value>plane</value>
+        </equal>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	100	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>lightweight</name>
+    <client>
+      <order>	13	</order>
+      <page>	0	</page>
+      <multiple>	false	</multiple>
+      <name>
+        <locale>MEDAL_NAME_LIGHT_WEIGHT</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_LIGHT_WEIGHT</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LOW_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acComLightWeight.dds</small>
+        <big>icons/awards/achievementsInfo/acComLightWeight.dds</big>
+        <faded>icons/awards/achievements/acComLightWeight_Outline.dds</faded>
+      </icon>
+    </client>
+    <condition>
+      <lte>
+        <context>player.plane.level</context>
+        <value>	3	</value>
+      </lte>
+    </condition>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <condition>
+        <and>
+          <equal>
+            <context>victim.type</context>
+            <value>player</value>
+          </equal>
+          <equal>
+            <context>victim.plane.type</context>
+            <value>fighter</value>
+          </equal>
+        </and>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	200	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>	normalweight	</name>
+    <client>
+      <order>	14	</order>
+      <page>	0	</page>
+      <multiple>	false	</multiple>
+      <name>
+        <locale>MEDAL_NAME_NORMALWEIGHT</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_NORMALWEIGHT</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LOW_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acComNormalWeight.dds</small>
+        <big>icons/awards/achievementsInfo/acComNormalWeight.dds</big>
+        <faded>icons/awards/achievements/acComNormalWeight_Outline.dds</faded>
+      </icon>
+    </client>
+    <condition>
+      <lte>
+        <context>player.plane.level</context>
+        <value>	3	</value>
+      </lte>
+    </condition>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <condition>
+        <and>
+          <equal>
+            <context>victim.type</context>
+            <value>player</value>
+          </equal>
+          <equal>
+            <context>victim.plane.type</context>
+            <value>	navy	</value>
+          </equal>
+        </and>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	150	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>heavyweight</name>
+    <client>
+      <order>	15	</order>
+      <page>	0	</page>
+      <multiple>	false	</multiple>
+      <name>
+        <locale>MEDAL_NAME_HEAVYWEIGHT</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_HEAVYWEIGHT</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LOW_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acComHeavyWeight.dds</small>
+        <big>icons/awards/achievementsInfo/acComHeavyWeight.dds</big>
+        <faded>icons/awards/achievements/acComHeavyWeight_Outline.dds</faded>
+      </icon>
+    </client>
+    <condition>
+      <lte>
+        <context>player.plane.level</context>
+        <value>	3	</value>
+      </lte>
+    </condition>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <condition>
+        <and>
+          <equal>
+            <context>victim.type</context>
+            <value>player</value>
+          </equal>
+          <equal>
+            <context>victim.plane.type</context>
+            <value>heavy.fighter</value>
+          </equal>
+        </and>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	150	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>	superheavyweight	</name>
+    <client>
+      <order>	16	</order>
+      <page>	0	</page>
+      <multiple>	false	</multiple>
+      <name>
+        <locale>MEDAL_NAME_SUPERHEAVYWEIGHT</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_SUPERHEAVYWEIGHT</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LOW_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acComSuperHeavyWeight.dds</small>
+        <big>icons/awards/achievementsInfo/acComSuperHeavyWeight.dds</big>
+        <faded>icons/awards/achievements/acComSuperHeavyWeight_Outline.dds</faded>
+      </icon>
+    </client>
+    <condition>
+      <lte>
+        <context>player.plane.level</context>
+        <value>	3	</value>
+      </lte>
+    </condition>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <condition>
+        <and>
+          <equal>
+            <context>victim.type</context>
+            <value>player</value>
+          </equal>
+          <equal>
+            <context>victim.plane.type</context>
+            <value>assault</value>
+          </equal>
+        </and>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	100	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>unlimitedweight</name>
+    <client>
+      <order>	17	</order>
+      <page>	0	</page>
+      <multiple>	false	</multiple>
+      <name>
+        <locale>MEDAL_NAME_UNLIMITED_WEIGHT</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_UNLIMITED_WEIGHT</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/acComUnlimitedWeight.dds</small>
+        <big>icons/awards/achievementsInfo/acComUnlimitedWeight.dds</big>
+        <faded>icons/awards/achievements/acComUnlimitedWeight_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <condition>
+        <and>
+          <equal>
+            <context>victim.type</context>
+            <value>player</value>
+          </equal>
+          <equal>
+            <context>victim.plane.type</context>
+            <value>bomber</value>
+          </equal>
+        </and>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	50	</value>
+      </count>
+    </event>
+  </subscriber>
+</memorable.xml>

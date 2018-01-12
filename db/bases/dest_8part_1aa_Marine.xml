@@ -1,0 +1,1462 @@
+<dest_8part_1aa_marine.xml>
+  <parent>default.xml</parent>
+  <name>	SHIP	</name>
+  <modelPath>content/03_ocean/mechPC_030_LSM156_01_destructible/mechPC_030_LSM156_01_destructible.model</modelPath>
+  <modelCrashPath>content/03_ocean/mechPC_030_LSM156_01_destructible/mechPC_030_LSM156_01_destructible_crash.model</modelCrashPath>
+  <bBoxes>
+    <mainBox>
+      <size>100 90 100</size>
+    </mainBox>
+  </bBoxes>
+  <damageEffects>
+    <effectFire>EFFECT_fire_small</effectFire>
+  </damageEffects>
+  <maxHealth>	1200	</maxHealth>
+  <dominationCost>0.08</dominationCost>
+  <respawnDelay>-1.0</respawnDelay>
+  <superiorityPoints>	0	</superiorityPoints>
+  <superiorityPointsGroup1>	0	</superiorityPointsGroup1>
+  <superiorityPointsGroup2>	1	</superiorityPointsGroup2>
+  <superiorityPointsGroup3>	2	</superiorityPointsGroup3>
+  <initialSpawnDelay>0.0</initialSpawnDelay>
+  <type>vehicle</type>
+  <modelScaling>0.22</modelScaling>
+  <turretName>t1</turretName>
+  <parts>
+    <part>
+      <name>	hull	</name>
+      <partId>	1	</partId>
+      <groupId>	1	</groupId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>	Hull	</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/dest/Layouts/Big/autumn/layout_v1.model</model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <model>content/dest/Layouts/Big/autumn/layout_v1.model</model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <model>content/dest/Layouts/Big/autumn/layout_v1.model</model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	4	</id>
+            <stateAction>	1	</stateAction>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/dest/Layouts/Big/autumn/layout_v1.model</model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>hull1</name>
+      <partId>	2	</partId>
+      <groupId>	1	</groupId>
+      <mountPoint>hull/HP_bp_1</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>	Hull	</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/dest/veh/gr/Marinefahrprahm/Marinefahrprahm.model</model>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	2	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/dest/veh/gr/Marinefahrprahm/Marinefahrprahm_crash.model</model>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>nose1</name>
+      <partId>	3	</partId>
+      <groupId>	2	</groupId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-25.155000 0.945000 37.305000	</position>
+            <size>	9.720000 4.860000 27.270000	</size>
+            <armorFront>	10.000000 10.000000 10.000000	</armorFront>
+            <armorBack>	10.000000 10.000000 10.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	150	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <effectState>
+              <effect>
+                <name>EFFECT_static_ship_27</name>
+                <mountPoint>hull1/HP_stream</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <stateAnimation>
+            </stateAnimation>
+            <model>
+            </model>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	2	</id>
+            <usage>crash</usage>
+            <bBoxes>
+              <bbox>
+                <position>	-25.155000 0.945000 37.305000	</position>
+                <size>6.804 3.402 19.089</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>hull1/HP_middle</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_static_ship_27</name>
+                <mountPoint>hull1/HP_stream</mountPoint>
+              </effect>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_med_01</name>
+                <mountPoint>hull1/HP_middle</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <stateAnimation>
+            </stateAnimation>
+            <model>
+            </model>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>hull1/HP_middle</fireMountPoint>
+        <fire>
+          <fire_chance>1.0</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>rear1</name>
+      <partId>	4	</partId>
+      <groupId>	2	</groupId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-25.425000 0.675000 12.240000	</position>
+            <size>	10.440000 4.770000 23.040000	</size>
+            <armorFront>	10.000000 10.000000 10.000000	</armorFront>
+            <armorBack>	10.000000 10.000000 10.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	150	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+            <model>
+            </model>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	2	</id>
+            <usage>crash</usage>
+            <bBoxes>
+              <bbox>
+                <position>	-25.425000 0.675000 12.240000	</position>
+                <size>7.308 3.339 16.1279993</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_med_01</name>
+                <mountPoint>hull1/HP_gun_3</mountPoint>
+              </effect>
+            </effectState>
+            <affectedParts>
+              <part>
+                <partID>	5	</partID>
+                <minimalPartState>	2	</minimalPartState>
+              </part>
+            </affectedParts>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>hull1/HP_gun_3</mountPoint>
+              </effect>
+            </effectOnStart>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+            <model>
+            </model>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>hull1/HP_gun_2</fireMountPoint>
+        <fire>
+          <fire_chance>1.0</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>turret1_1</name>
+      <partId>	5	</partId>
+      <groupId>	1	</groupId>
+      <mountPoint>hull1/HP_gun_1</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>scenarioTurret</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/veh/gr/Marinefahrprahm/Marinefahrprahm_gun1.model</model>
+            <effectsTriggered>
+              <effect>
+                <trigger>SHOT1</trigger>
+                <name>EFFECT_w_turret_fire_01</name>
+                <mountPoint>HP_gunFlame_1</mountPoint>
+              </effect>
+            </effectsTriggered>
+            <animationController>	TurretController	</animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>0.00000</stateHelthCfc>
+            <usage>crash</usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/veh/gr/Marinefahrprahm/Marinefahrprahm_gun1_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>HP_base</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_base</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>turret1_2</name>
+      <partId>	6	</partId>
+      <groupId>	1	</groupId>
+      <mountPoint>hull1/HP_gun_2</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>scenarioTurretReverse</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/veh/gr/Marinefahrprahm/Marinefahrprahm_gun2.model</model>
+            <effectsTriggered>
+              <effect>
+                <trigger>SHOT2</trigger>
+                <name>EFFECT_w_turret_fire_01</name>
+                <mountPoint>HP_gunFlame_1</mountPoint>
+              </effect>
+            </effectsTriggered>
+            <animationController>	TurretController	</animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>0.00000</stateHelthCfc>
+            <usage>crash</usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/veh/gr/Marinefahrprahm/Marinefahrprahm_gun2_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>HP_base</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_base</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>turret1_3</name>
+      <partId>	7	</partId>
+      <groupId>	1	</groupId>
+      <mountPoint>hull1/HP_gun_3</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>scenarioTurretReverse</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/veh/gr/Marinefahrprahm/Marinefahrprahm_gun3.model</model>
+            <effectsTriggered>
+              <effect>
+                <trigger>SHOT3</trigger>
+                <name>EFFECT_w_turret_fire_01</name>
+                <mountPoint>HP_gunFlame_1</mountPoint>
+              </effect>
+            </effectsTriggered>
+            <animationController>	TurretController	</animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>0.00000</stateHelthCfc>
+            <usage>crash</usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/veh/gr/Marinefahrprahm/Marinefahrprahm_gun3.model</model>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>HP_base</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_base</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>hull2</name>
+      <partId>	8	</partId>
+      <groupId>	1	</groupId>
+      <mountPoint>hull/HP_sp_6</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>	Hull	</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/dest/veh/gr/Marinefahrprahm/Marinefahrprahm.model</model>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	2	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/dest/veh/gr/Marinefahrprahm/Marinefahrprahm_crash.model</model>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>nose2</name>
+      <partId>	9	</partId>
+      <groupId>	2	</groupId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	39.645000 0.945000 34.650000	</position>
+            <size>	10.980000 4.860000 31.050000	</size>
+            <armorFront>	10.000000 10.000000 10.000000	</armorFront>
+            <armorBack>	10.000000 10.000000 10.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	150	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <effectState>
+              <effect>
+                <name>EFFECT_static_ship_27</name>
+                <mountPoint>hull2/HP_stream</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <stateAnimation>
+            </stateAnimation>
+            <model>
+            </model>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	2	</id>
+            <bBoxes>
+              <bbox>
+                <position>	39.645000 0.945000 34.650000	</position>
+                <size>7.686 3.402 21.7350007</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>hull2/HP_middle</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_static_ship_27</name>
+                <mountPoint>hull2/HP_stream</mountPoint>
+              </effect>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_med_01</name>
+                <mountPoint>hull2/HP_middle</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <stateAnimation>
+            </stateAnimation>
+            <model>
+            </model>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>hull2/HP_middle</fireMountPoint>
+        <fire>
+          <fire_chance>1.0</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>rear2</name>
+      <partId>	10	</partId>
+      <groupId>	2	</groupId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	39.600000 0.675000 8.460000	</position>
+            <size>	10.440000 4.770000 23.040000	</size>
+            <armorFront>	10.000000 10.000000 10.000000	</armorFront>
+            <armorBack>	10.000000 10.000000 10.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	150	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+            <model>
+            </model>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	2	</id>
+            <bBoxes>
+              <bbox>
+                <position>	39.600000 0.675000 8.460000	</position>
+                <size>7.308 3.339 16.1279993</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_med_01</name>
+                <mountPoint>hull2/HP_gun_3</mountPoint>
+              </effect>
+            </effectState>
+            <affectedParts>
+              <part>
+                <partID>	11	</partID>
+                <minimalPartState>	2	</minimalPartState>
+              </part>
+            </affectedParts>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>hull2/HP_gun_3</mountPoint>
+              </effect>
+            </effectOnStart>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+            <model>
+            </model>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>hull2/HP_gun_2</fireMountPoint>
+        <fire>
+          <fire_chance>1.0</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>turret2_1</name>
+      <partId>	11	</partId>
+      <groupId>	1	</groupId>
+      <mountPoint>hull2/HP_gun_1</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>scenarioTurret</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/veh/gr/Marinefahrprahm/Marinefahrprahm_gun1.model</model>
+            <effectsTriggered>
+              <effect>
+                <trigger>SHOT4</trigger>
+                <name>EFFECT_w_turret_fire_01</name>
+                <mountPoint>HP_gunFlame_1</mountPoint>
+              </effect>
+            </effectsTriggered>
+            <animationController>	TurretController	</animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>0.00000</stateHelthCfc>
+            <usage>crash</usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/veh/gr/Marinefahrprahm/Marinefahrprahm_gun1_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>hull2/HP_gun_1</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>hull2/HP_gun_1</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>turret2_2</name>
+      <partId>	12	</partId>
+      <groupId>	1	</groupId>
+      <mountPoint>hull2/HP_gun_2</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>scenarioTurretReverse</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/veh/gr/Marinefahrprahm/Marinefahrprahm_gun2.model</model>
+            <effectsTriggered>
+              <effect>
+                <trigger>SHOT5</trigger>
+                <name>EFFECT_w_turret_fire_01</name>
+                <mountPoint>HP_gunFlame_1</mountPoint>
+              </effect>
+            </effectsTriggered>
+            <animationController>	TurretController	</animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>0.00000</stateHelthCfc>
+            <usage>crash</usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/veh/gr/Marinefahrprahm/Marinefahrprahm_gun2_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>hull2/HP_gun_2</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>hull2/HP_gun_2</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>turret2_3</name>
+      <partId>	13	</partId>
+      <groupId>	1	</groupId>
+      <mountPoint>hull2/HP_gun_3</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>scenarioTurretReverse</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/veh/gr/Marinefahrprahm/Marinefahrprahm_gun3.model</model>
+            <effectsTriggered>
+              <effect>
+                <trigger>SHOT6</trigger>
+                <name>EFFECT_w_turret_fire_01</name>
+                <mountPoint>HP_gunFlame_1</mountPoint>
+              </effect>
+            </effectsTriggered>
+            <animationController>	TurretController	</animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>0.00000</stateHelthCfc>
+            <usage>crash</usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/veh/gr/Marinefahrprahm/Marinefahrprahm_gun3.model</model>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>hull2/HP_gun_3</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>hull2/HP_gun_3</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>hull3</name>
+      <partId>	14	</partId>
+      <groupId>	1	</groupId>
+      <mountPoint>hull/HP_sp_3</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>	Hull	</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/dest/veh/gr/Marinefahrprahm/Marinefahrprahm.model</model>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	2	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/dest/veh/gr/Marinefahrprahm/Marinefahrprahm_crash.model</model>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>nose3</name>
+      <partId>	15	</partId>
+      <groupId>	2	</groupId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-4.455000 0.945000 -25.020000	</position>
+            <size>	10.980000 4.860000 31.050000	</size>
+            <armorFront>	10.000000 10.000000 10.000000	</armorFront>
+            <armorBack>	10.000000 10.000000 10.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	150	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <effectState>
+              <effect>
+                <name>EFFECT_static_ship_27</name>
+                <mountPoint>hull3/HP_stream</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <stateAnimation>
+            </stateAnimation>
+            <model>
+            </model>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	2	</id>
+            <bBoxes>
+              <bbox>
+                <position>	-4.455000 0.945000 -25.020000	</position>
+                <size>7.686 3.402 21.7350007</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>hull3/HP_middle</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_static_ship_27</name>
+                <mountPoint>hull3/HP_stream</mountPoint>
+              </effect>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_med_01</name>
+                <mountPoint>hull3/HP_middle</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <stateAnimation>
+            </stateAnimation>
+            <model>
+            </model>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>hull3/HP_middle</fireMountPoint>
+        <fire>
+          <fire_chance>1.0</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>rear3</name>
+      <partId>	16	</partId>
+      <groupId>	2	</groupId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-4.320000 0.675000 -51.165000	</position>
+            <size>	10.440000 3.690000 23.040000	</size>
+            <armorFront>	10.000000 10.000000 10.000000	</armorFront>
+            <armorBack>	10.000000 10.000000 10.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	150	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+            <model>
+            </model>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	2	</id>
+            <bBoxes>
+              <bbox>
+                <position>	-4.320000 0.675000 -51.165000	</position>
+                <size>7.308 2.583 16.1279993</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_med_01</name>
+                <mountPoint>hull3/HP_gun_3</mountPoint>
+              </effect>
+            </effectState>
+            <affectedParts>
+              <part>
+                <partID>	18	</partID>
+                <minimalPartState>	2	</minimalPartState>
+              </part>
+            </affectedParts>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>hull3/HP_gun_3</mountPoint>
+              </effect>
+            </effectOnStart>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+            <model>
+            </model>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>hull3/HP_gun_2</fireMountPoint>
+        <fire>
+          <fire_chance>1.0</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>turret3_1</name>
+      <partId>	17	</partId>
+      <groupId>	1	</groupId>
+      <mountPoint>hull3/HP_gun_1</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>scenarioTurret</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/veh/gr/Marinefahrprahm/Marinefahrprahm_gun1.model</model>
+            <effectsTriggered>
+              <effect>
+                <trigger>SHOT7</trigger>
+                <name>EFFECT_w_turret_fire_01</name>
+                <mountPoint>HP_gunFlame_1</mountPoint>
+              </effect>
+            </effectsTriggered>
+            <animationController>	TurretController	</animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>0.00000</stateHelthCfc>
+            <usage>crash</usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/veh/gr/Marinefahrprahm/Marinefahrprahm_gun1_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>hull3/HP_gun_1</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>hull3/HP_gun_1</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>turret3_2</name>
+      <partId>	18	</partId>
+      <groupId>	3	</groupId>
+      <mountPoint>hull3/HP_gun_2</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-4.860000 3.960000 -52.605000	</position>
+            <size>	3.870000 3.240000 5.400000	</size>
+            <armorFront>	0.000000 0.000000 0.000000	</armorFront>
+            <armorBack>	0.000000 0.000000 0.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	150	</health>
+        <componentType>Gunner</componentType>
+        <componentXml>t1</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/dest/veh/gr/Marinefahrprahm/Marinefahrprahm_gun2.model</model>
+            <effectState>
+            </effectState>
+            <stateAction>	0	</stateAction>
+            <animationController>	TurretController	</animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <bBoxes>
+              <bbox>
+                <position>	-4.860000 3.960000 -52.605000	</position>
+                <size>2.709 2.268 3.78</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/dest/veh/gr/Marinefahrprahm/Marinefahrprahm_gun2_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>hull3/HP_gun_2</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>hull3/HP_gun_2</mountPoint>
+              </effect>
+            </effectState>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>hull3/HP_gun_2</fireMountPoint>
+        <fire>
+          <effectFire>EFFECT_fire_small</effectFire>
+          <fire_chance>0.5</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>turret3_3</name>
+      <partId>	19	</partId>
+      <groupId>	1	</groupId>
+      <mountPoint>hull3/HP_gun_3</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>scenarioTurretReverse</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/veh/gr/Marinefahrprahm/Marinefahrprahm_gun3.model</model>
+            <effectsTriggered>
+              <effect>
+                <trigger>SHOT8</trigger>
+                <name>EFFECT_w_turret_fire_01</name>
+                <mountPoint>HP_gunFlame_1</mountPoint>
+              </effect>
+            </effectsTriggered>
+            <animationController>	TurretController	</animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>0.00000</stateHelthCfc>
+            <usage>crash</usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/veh/gr/Marinefahrprahm/Marinefahrprahm_gun3.model</model>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>hull3/HP_gun_3</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>hull3/HP_gun_3</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+  </parts>
+</dest_8part_1aa_marine.xml>

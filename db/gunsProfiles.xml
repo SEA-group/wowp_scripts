@@ -1,0 +1,1063 @@
+<gunsprofiles.xml>
+  <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
+  <noNamespaceSchemaLocation>./../../../../tools/databundler/gunsProfiles.xsd</noNamespaceSchemaLocation>
+  <gunProfile>
+    <name>machinegun_small_low</name>
+    <aimType>smg</aimType>
+    <hudIcoPath>icons/weapons/iconWeapGun.tga</hudIcoPath>
+    <ttxIcoPath>icons/characteristics/iconCharMachineGun.png</ttxIcoPath>
+    <bulletLen>0.4</bulletLen>
+    <bulletLenExpand>1.2</bulletLenExpand>
+    <bulletThinkness>0.05</bulletThinkness>
+    <bulletThicknessExpand>0.0</bulletThicknessExpand>
+    <bulletShot>particles/weapons/gun_flash_mg.xml</bulletShot>
+    <bulletShot>particles/weapons/gun_flash_mg_add.xml</bulletShot>
+    <bulletShell>particles/weapons/ammo_cartridge_7-13.xml</bulletShell>
+    <shellOutInterval>	0	</shellOutInterval>
+    <explosionParticles>
+      <aircraft>EFFECT_BULLET_7MM_17MM_HIT</aircraft>
+      <default>EFFECT_BULLET_HIT</default>
+      <tree>EFFECT_BULLET_EXPLOSION_TREE</tree>
+      <water>EFFECT_BULLET_EXPLOSION_WATER</water>
+      <turret>EFFECT_BULLET_HIT_OBJECT</turret>
+      <baseobject>EFFECT_BULLET_HIT_OBJECT</baseobject>
+      <ground>EFFECT_BULLET_EXPLOSION_EARTH</ground>
+    </explosionParticles>
+    <smokeSizeX>	2	</smokeSizeX>
+    <smokeSizeY>0.05</smokeSizeY>
+    <smokeTillingLength>0.35</smokeTillingLength>
+    <smokeRadiusScale>	1	</smokeRadiusScale>
+    <iconEmptyPath>icons/weapons/iconWeapGunRunOut.tga</iconEmptyPath>
+    <clientSkipBulletCount>	0	</clientSkipBulletCount>
+    <bulletGroupDispersionCfc>0.4</bulletGroupDispersionCfc>
+    <textureIndex>	1	</textureIndex>
+    <receive_damage_own_1>machinegun_small_low_hit_own</receive_damage_own_1>
+    <receive_damage_own_2>EFFECT_empty_particle</receive_damage_own_2>
+    <receive_damage_other_1>machinegun_small_low_hit</receive_damage_other_1>
+    <receive_damage_other_2>EFFECT_empty_particle</receive_damage_other_2>
+    <sounds>
+      <weaponSoundID>weapon_machinegun_low</weaponSoundID>
+      <playerAvatarGotHitEvent>Play_hit_LOGIC_Avatar</playerAvatarGotHitEvent>
+    </sounds>
+  </gunProfile>
+  <gunProfile>
+    <name>machinegun_small</name>
+    <aimType>smg</aimType>
+    <hudIcoPath>icons/weapons/iconWeapGun.tga</hudIcoPath>
+    <ttxIcoPath>icons/characteristics/iconCharMachineGun.png</ttxIcoPath>
+    <bulletLen>0.4</bulletLen>
+    <bulletLenExpand>1.2</bulletLenExpand>
+    <bulletThinkness>0.05</bulletThinkness>
+    <bulletThicknessExpand>0.0</bulletThicknessExpand>
+    <bulletShot>particles/weapons/gun_flash_mg.xml</bulletShot>
+    <bulletShot>particles/weapons/gun_flash_mg_add.xml</bulletShot>
+    <bulletShell>particles/weapons/ammo_cartridge_7-13.xml</bulletShell>
+    <shellOutInterval>	0	</shellOutInterval>
+    <explosionParticles>
+      <aircraft>EFFECT_BULLET_7MM_17MM_HIT</aircraft>
+      <default>EFFECT_BULLET_HIT</default>
+      <tree>EFFECT_BULLET_EXPLOSION_TREE</tree>
+      <water>EFFECT_BULLET_EXPLOSION_WATER</water>
+      <turret>EFFECT_BULLET_HIT_OBJECT</turret>
+      <baseobject>EFFECT_BULLET_HIT_OBJECT</baseobject>
+      <ground>EFFECT_BULLET_EXPLOSION_EARTH</ground>
+    </explosionParticles>
+    <smokeSizeX>	2	</smokeSizeX>
+    <smokeSizeY>0.05</smokeSizeY>
+    <smokeTillingLength>0.35</smokeTillingLength>
+    <smokeRadiusScale>	1	</smokeRadiusScale>
+    <iconEmptyPath>icons/weapons/iconWeapGunRunOut.tga</iconEmptyPath>
+    <clientSkipBulletCount>	0	</clientSkipBulletCount>
+    <bulletGroupDispersionCfc>0.4</bulletGroupDispersionCfc>
+    <textureIndex>	1	</textureIndex>
+    <receive_damage_own_1>EFFECT_BULLET_7MM_17MM_DAMAGE_OWN</receive_damage_own_1>
+    <receive_damage_own_2>EFFECT_BULLET_7MM_17MM_DAMAGE_OWN</receive_damage_own_2>
+    <receive_damage_other_1>EFFECT_BULLET_7MM_17MM_DAMAGE</receive_damage_other_1>
+    <receive_damage_other_2>EFFECT_BULLET_7MM_17MM_DAMAGE</receive_damage_other_2>
+    <sounds>
+      <weaponSoundID>weapon_machinegun_small</weaponSoundID>
+      <playerAvatarGotHitEvent>Play_hit_LOGIC_Avatar</playerAvatarGotHitEvent>
+    </sounds>
+  </gunProfile>
+  <gunProfile>
+    <name>machinegun_small_spec</name>
+    <aimType>smg</aimType>
+    <hudIcoPath>icons/weapons/iconWeapGun.tga</hudIcoPath>
+    <ttxIcoPath>icons/characteristics/iconCharMachineGun.png</ttxIcoPath>
+    <bulletLen>0.4</bulletLen>
+    <bulletLenExpand>1.2</bulletLenExpand>
+    <bulletThinkness>0.05</bulletThinkness>
+    <bulletThicknessExpand>0.0</bulletThicknessExpand>
+    <bulletShot>particles/weapons/gun_flash_mg.xml</bulletShot>
+    <bulletShot>particles/weapons/gun_flash_mg_add.xml</bulletShot>
+    <bulletShell>particles/weapons/ammo_cartridge_7-13.xml</bulletShell>
+    <shellOutInterval>	0	</shellOutInterval>
+    <explosionParticles>
+      <aircraft>EFFECT_BULLET_7MM_17MM_HIT</aircraft>
+      <default>EFFECT_BULLET_HIT</default>
+      <tree>EFFECT_BULLET_EXPLOSION_TREE</tree>
+      <water>EFFECT_BULLET_EXPLOSION_WATER</water>
+      <turret>EFFECT_BULLET_HIT_OBJECT</turret>
+      <baseobject>EFFECT_BULLET_HIT_OBJECT</baseobject>
+      <ground>EFFECT_BULLET_EXPLOSION_EARTH</ground>
+    </explosionParticles>
+    <smokeSizeX>	2	</smokeSizeX>
+    <smokeSizeY>0.05</smokeSizeY>
+    <smokeTillingLength>0.35</smokeTillingLength>
+    <smokeRadiusScale>	1	</smokeRadiusScale>
+    <iconEmptyPath>icons/weapons/iconWeapGunRunOut.tga</iconEmptyPath>
+    <clientSkipBulletCount>	1	</clientSkipBulletCount>
+    <bulletGroupDispersionCfc>0.4</bulletGroupDispersionCfc>
+    <textureIndex>	1	</textureIndex>
+    <receive_damage_own_1>EFFECT_BULLET_7MM_17MM_DAMAGE_OWN</receive_damage_own_1>
+    <receive_damage_own_2>EFFECT_BULLET_7MM_17MM_DAMAGE_OWN</receive_damage_own_2>
+    <receive_damage_other_1>EFFECT_BULLET_7MM_17MM_DAMAGE</receive_damage_other_1>
+    <receive_damage_other_2>EFFECT_BULLET_7MM_17MM_DAMAGE</receive_damage_other_2>
+    <sounds>
+      <weaponSoundID>weapon_machinegun_small</weaponSoundID>
+      <playerAvatarGotHitEvent>Play_hit_LOGIC_Avatar</playerAvatarGotHitEvent>
+    </sounds>
+  </gunProfile>
+  <gunProfile>
+    <name>machinegun_heavy</name>
+    <aimType>smg</aimType>
+    <hudIcoPath>icons/weapons/iconWeapCannon.tga</hudIcoPath>
+    <ttxIcoPath>icons/characteristics/iconCharCannon.png</ttxIcoPath>
+    <bulletLen>0.4</bulletLen>
+    <bulletLenExpand>1.2</bulletLenExpand>
+    <bulletThinkness>0.05</bulletThinkness>
+    <bulletThicknessExpand>0.0</bulletThicknessExpand>
+    <bulletShot>particles/weapons/gun_flash_mg_heavy.xml</bulletShot>
+    <bulletShot>particles/weapons/gun_flash_mg_heavy_add.xml</bulletShot>
+    <bulletShell>particles/weapons/ammo_cartridge_7-13.xml</bulletShell>
+    <shellOutInterval>	0	</shellOutInterval>
+    <explosionParticles>
+      <aircraft>EFFECT_BULLET_7MM_17MM_HIT</aircraft>
+      <default>EFFECT_BULLET_HIT</default>
+      <tree>EFFECT_BULLET_EXPLOSION_TREE</tree>
+      <water>EFFECT_BULLET_EXPLOSION_WATER</water>
+      <turret>EFFECT_BULLET_HIT_OBJECT</turret>
+      <baseobject>EFFECT_BULLET_HIT_OBJECT</baseobject>
+      <ground>EFFECT_BULLET_EXPLOSION_EARTH</ground>
+    </explosionParticles>
+    <smokeSizeX>	2	</smokeSizeX>
+    <smokeSizeY>0.035</smokeSizeY>
+    <smokeTillingLength>0.35</smokeTillingLength>
+    <smokeRadiusScale>	1	</smokeRadiusScale>
+    <iconEmptyPath>icons/weapons/iconWeapCannonRunOut.tga</iconEmptyPath>
+    <clientSkipBulletCount>	0	</clientSkipBulletCount>
+    <bulletGroupDispersionCfc>0.4</bulletGroupDispersionCfc>
+    <textureIndex>	1	</textureIndex>
+    <receive_damage_own_1>EFFECT_BULLET_7MM_17MM_DAMAGE_OWN</receive_damage_own_1>
+    <receive_damage_own_2>EFFECT_BULLET_7MM_17MM_DAMAGE_OWN</receive_damage_own_2>
+    <receive_damage_other_1>EFFECT_BULLET_7MM_17MM_DAMAGE</receive_damage_other_1>
+    <receive_damage_other_2>EFFECT_BULLET_7MM_17MM_DAMAGE</receive_damage_other_2>
+    <sounds>
+      <weaponSoundID>weapon_machinegun_heavy</weaponSoundID>
+      <playerAvatarGotHitEvent>Play_hit_LOGIC_Avatar</playerAvatarGotHitEvent>
+    </sounds>
+  </gunProfile>
+  <gunProfile>
+    <name>machinegun_heavy_spec</name>
+    <aimType>smg</aimType>
+    <hudIcoPath>icons/weapons/iconWeapCannon.tga</hudIcoPath>
+    <ttxIcoPath>icons/characteristics/iconCharCannon.png</ttxIcoPath>
+    <bulletLen>0.4</bulletLen>
+    <bulletLenExpand>1.2</bulletLenExpand>
+    <bulletThinkness>0.055</bulletThinkness>
+    <bulletThicknessExpand>0.0</bulletThicknessExpand>
+    <bulletShot>particles/weapons/gun_flash_mg_heavy.xml</bulletShot>
+    <bulletShot>particles/weapons/gun_flash_mg_heavy_add.xml</bulletShot>
+    <bulletShell>particles/weapons/ammo_cartridge_7-13.xml</bulletShell>
+    <shellOutInterval>	0	</shellOutInterval>
+    <explosionParticles>
+      <aircraft>EFFECT_BULLET_7MM_17MM_HIT</aircraft>
+      <default>EFFECT_BULLET_HIT</default>
+      <tree>EFFECT_BULLET_EXPLOSION_TREE</tree>
+      <water>EFFECT_BULLET_EXPLOSION_WATER</water>
+      <turret>EFFECT_BULLET_HIT_OBJECT</turret>
+      <baseobject>EFFECT_BULLET_HIT_OBJECT</baseobject>
+      <ground>EFFECT_BULLET_EXPLOSION_EARTH</ground>
+    </explosionParticles>
+    <smokeSizeX>	2	</smokeSizeX>
+    <smokeSizeY>0.035</smokeSizeY>
+    <smokeTillingLength>0.35</smokeTillingLength>
+    <smokeRadiusScale>	1	</smokeRadiusScale>
+    <iconEmptyPath>icons/weapons/iconWeapCannonRunOut.tga</iconEmptyPath>
+    <clientSkipBulletCount>	1	</clientSkipBulletCount>
+    <bulletGroupDispersionCfc>0.4</bulletGroupDispersionCfc>
+    <textureIndex>	1	</textureIndex>
+    <receive_damage_own_1>EFFECT_BULLET_7MM_17MM_DAMAGE_OWN</receive_damage_own_1>
+    <receive_damage_own_2>EFFECT_BULLET_7MM_17MM_DAMAGE_OWN</receive_damage_own_2>
+    <receive_damage_other_1>EFFECT_BULLET_7MM_17MM_DAMAGE</receive_damage_other_1>
+    <receive_damage_other_2>EFFECT_BULLET_7MM_17MM_DAMAGE</receive_damage_other_2>
+    <sounds>
+      <weaponSoundID>weapon_machinegun_heavy</weaponSoundID>
+      <playerAvatarGotHitEvent>Play_hit_LOGIC_Avatar</playerAvatarGotHitEvent>
+    </sounds>
+  </gunProfile>
+  <gunProfile>
+    <name>cannon_main</name>
+    <aimType>assault</aimType>
+    <hudIcoPath>icons/weapons/iconWeapCannon.tga</hudIcoPath>
+    <ttxIcoPath>icons/characteristics/iconCharCannon.png</ttxIcoPath>
+    <bulletLen>0.7</bulletLen>
+    <bulletLenExpand>1.7</bulletLenExpand>
+    <bulletThinkness>0.055</bulletThinkness>
+    <bulletThicknessExpand>0.0</bulletThicknessExpand>
+    <bulletShot>particles/weapons/gun_flash_cannon.xml</bulletShot>
+    <bulletShot>particles/weapons/gun_flash_cannon_add.xml</bulletShot>
+    <bulletShell>particles/weapons/ammo_cartridge_15-23.xml</bulletShell>
+    <shellOutInterval>	0	</shellOutInterval>
+    <explosionParticles>
+      <aircraft>EFFECT_BULLET_20MM_30MM_HIT</aircraft>
+      <default>EFFECT_SHELL_HIT</default>
+      <tree>EFFECT_SHELL_EXPLOSION_TREE</tree>
+      <water>EFFECT_SHELL_EXPLOSION_WATER</water>
+      <turret>EFFECT_SHELL_HIT_OBJECT</turret>
+      <baseobject>EFFECT_SHELL_HIT_OBJECT</baseobject>
+      <ground>EFFECT_SHELL_EXPLOSION_EARTH</ground>
+    </explosionParticles>
+    <smokeSizeX>	2	</smokeSizeX>
+    <smokeSizeY>0.06</smokeSizeY>
+    <smokeTillingLength>0.6</smokeTillingLength>
+    <smokeRadiusScale>	2	</smokeRadiusScale>
+    <iconEmptyPath>icons/weapons/iconWeapCannonRunOut.tga</iconEmptyPath>
+    <clientSkipBulletCount>	0	</clientSkipBulletCount>
+    <bulletGroupDispersionCfc>0.2</bulletGroupDispersionCfc>
+    <textureIndex>	0	</textureIndex>
+    <receive_damage_own_1>EFFECT_BULLET_20MM_30MM_DAMAGE_OWN</receive_damage_own_1>
+    <receive_damage_own_2>EFFECT_empty_particle</receive_damage_own_2>
+    <receive_damage_other_1>EFFECT_BULLET_20MM_30MM_DAMAGE</receive_damage_other_1>
+    <receive_damage_other_2>EFFECT_empty_particle</receive_damage_other_2>
+    <sounds>
+      <weaponSoundID>weapon_cannon_main</weaponSoundID>
+      <playerAvatarGotHitEvent>Play_hit_LOGIC_Avatar</playerAvatarGotHitEvent>
+    </sounds>
+  </gunProfile>
+  <gunProfile>
+    <name>cannon_main_spec</name>
+    <aimType>assault</aimType>
+    <hudIcoPath>icons/weapons/iconWeapCannon.tga</hudIcoPath>
+    <ttxIcoPath>icons/characteristics/iconCharCannon.png</ttxIcoPath>
+    <bulletLen>0.7</bulletLen>
+    <bulletLenExpand>1.7</bulletLenExpand>
+    <bulletThinkness>0.055</bulletThinkness>
+    <bulletThicknessExpand>0.0</bulletThicknessExpand>
+    <bulletShot>particles/weapons/gun_flash_cannon_spec.xml</bulletShot>
+    <bulletShot>particles/weaponsgun_flash_cannon_spec_add.xml</bulletShot>
+    <bulletShell>particles/weapons/ammo_cartridge_15-23.xml</bulletShell>
+    <shellOutInterval>	0	</shellOutInterval>
+    <explosionParticles>
+      <aircraft>EFFECT_BULLET_20MM_30MM_HIT</aircraft>
+      <default>EFFECT_SHELL_HIT</default>
+      <tree>EFFECT_SHELL_EXPLOSION_TREE</tree>
+      <water>EFFECT_SHELL_EXPLOSION_WATER</water>
+      <turret>EFFECT_SHELL_HIT_OBJECT</turret>
+      <baseobject>EFFECT_SHELL_HIT_OBJECT</baseobject>
+      <ground>EFFECT_SHELL_EXPLOSION_EARTH</ground>
+    </explosionParticles>
+    <smokeSizeX>	2	</smokeSizeX>
+    <smokeSizeY>0.06</smokeSizeY>
+    <smokeTillingLength>0.6</smokeTillingLength>
+    <smokeRadiusScale>	2	</smokeRadiusScale>
+    <iconEmptyPath>icons/weapons/iconWeapCannonRunOut.tga</iconEmptyPath>
+    <clientSkipBulletCount>	0	</clientSkipBulletCount>
+    <bulletGroupDispersionCfc>0.2</bulletGroupDispersionCfc>
+    <textureIndex>	0	</textureIndex>
+    <receive_damage_own_1>EFFECT_BULLET_20MM_30MM_DAMAGE_OWN</receive_damage_own_1>
+    <receive_damage_own_2>EFFECT_empty_particle</receive_damage_own_2>
+    <receive_damage_other_1>EFFECT_BULLET_20MM_30MM_DAMAGE</receive_damage_other_1>
+    <receive_damage_other_2>EFFECT_empty_particle</receive_damage_other_2>
+    <sounds>
+      <weaponSoundID>weapon_cannon_main</weaponSoundID>
+      <playerAvatarGotHitEvent>Play_hit_LOGIC_Avatar</playerAvatarGotHitEvent>
+    </sounds>
+  </gunProfile>
+  <gunProfile>
+    <name>cannon_high</name>
+    <aimType>assault</aimType>
+    <hudIcoPath>icons/weapons/iconWeapCannon.tga</hudIcoPath>
+    <ttxIcoPath>icons/characteristics/iconCharCannon.png</ttxIcoPath>
+    <bulletLen>0.7</bulletLen>
+    <bulletLenExpand>1.7</bulletLenExpand>
+    <bulletThinkness>0.055</bulletThinkness>
+    <bulletThicknessExpand>0.0</bulletThicknessExpand>
+    <bulletShot>particles/weapons/gun_flash_cannon_high.xml</bulletShot>
+    <bulletShot>particles/weapons/gun_flash_cannon_high_add.xml</bulletShot>
+    <bulletShell>particles/weapons/ammo_cartridge_15-23.xml</bulletShell>
+    <shellOutInterval>	0	</shellOutInterval>
+    <explosionParticles>
+      <aircraft>EFFECT_BULLET_20MM_30MM_HIT</aircraft>
+      <default>EFFECT_SHELL_HIT</default>
+      <tree>EFFECT_SHELL_EXPLOSION_TREE</tree>
+      <water>EFFECT_SHELL_EXPLOSION_WATER</water>
+      <turret>EFFECT_SHELL_HIT_OBJECT</turret>
+      <baseobject>EFFECT_SHELL_HIT_OBJECT</baseobject>
+      <ground>EFFECT_SHELL_EXPLOSION_EARTH</ground>
+    </explosionParticles>
+    <smokeSizeX>	2	</smokeSizeX>
+    <smokeSizeY>0.06</smokeSizeY>
+    <smokeTillingLength>0.6</smokeTillingLength>
+    <smokeRadiusScale>	2	</smokeRadiusScale>
+    <iconEmptyPath>icons/weapons/iconWeapCannonRunOut.tga</iconEmptyPath>
+    <clientSkipBulletCount>	0	</clientSkipBulletCount>
+    <bulletGroupDispersionCfc>0.2</bulletGroupDispersionCfc>
+    <textureIndex>	0	</textureIndex>
+    <receive_damage_own_1>EFFECT_BULLET_20MM_30MM_DAMAGE_OWN</receive_damage_own_1>
+    <receive_damage_own_2>EFFECT_empty_particle</receive_damage_own_2>
+    <receive_damage_other_1>EFFECT_BULLET_20MM_30MM_DAMAGE</receive_damage_other_1>
+    <receive_damage_other_2>EFFECT_empty_particle</receive_damage_other_2>
+    <sounds>
+      <weaponSoundID>weapon_cannon_high</weaponSoundID>
+      <playerAvatarGotHitEvent>Play_hit_LOGIC_Avatar</playerAvatarGotHitEvent>
+    </sounds>
+  </gunProfile>
+  <gunProfile>
+    <name>cannon_high_spec</name>
+    <aimType>assault</aimType>
+    <hudIcoPath>icons/weapons/iconWeapCannon.tga</hudIcoPath>
+    <ttxIcoPath>icons/characteristics/iconCharCannon.png</ttxIcoPath>
+    <bulletLen>0.7</bulletLen>
+    <bulletLenExpand>1.7</bulletLenExpand>
+    <bulletThinkness>0.055</bulletThinkness>
+    <bulletThicknessExpand>0.0</bulletThicknessExpand>
+    <bulletShot>particles/weapons/gun_flash_cannon_high_spec.xml</bulletShot>
+    <bulletShot>particles/weapons/gun_flash_cannon_high_spec_add.xml</bulletShot>
+    <bulletShell>particles/weapons/ammo_cartridge_15-23.xml</bulletShell>
+    <shellOutInterval>	0	</shellOutInterval>
+    <explosionParticles>
+      <aircraft>EFFECT_BULLET_20MM_30MM_HIT</aircraft>
+      <default>EFFECT_SHELL_HIT</default>
+      <tree>EFFECT_SHELL_EXPLOSION_TREE</tree>
+      <water>EFFECT_SHELL_EXPLOSION_WATER</water>
+      <turret>EFFECT_SHELL_HIT_OBJECT</turret>
+      <baseobject>EFFECT_SHELL_HIT_OBJECT</baseobject>
+      <ground>EFFECT_SHELL_EXPLOSION_EARTH</ground>
+    </explosionParticles>
+    <smokeSizeX>	2	</smokeSizeX>
+    <smokeSizeY>0.06</smokeSizeY>
+    <smokeTillingLength>0.6</smokeTillingLength>
+    <smokeRadiusScale>	2	</smokeRadiusScale>
+    <iconEmptyPath>icons/weapons/iconWeapCannonRunOut.tga</iconEmptyPath>
+    <clientSkipBulletCount>	0	</clientSkipBulletCount>
+    <bulletGroupDispersionCfc>0.2</bulletGroupDispersionCfc>
+    <textureIndex>	0	</textureIndex>
+    <receive_damage_own_1>EFFECT_BULLET_20MM_30MM_DAMAGE_OWN</receive_damage_own_1>
+    <receive_damage_own_2>EFFECT_empty_particle</receive_damage_own_2>
+    <receive_damage_other_1>EFFECT_BULLET_20MM_30MM_DAMAGE</receive_damage_other_1>
+    <receive_damage_other_2>EFFECT_empty_particle</receive_damage_other_2>
+    <sounds>
+      <weaponSoundID>weapon_cannon_high</weaponSoundID>
+      <playerAvatarGotHitEvent>Play_hit_LOGIC_Avatar</playerAvatarGotHitEvent>
+    </sounds>
+  </gunProfile>
+  <gunProfile>
+    <name>cannon_high_vulcan</name>
+    <aimType>assault</aimType>
+    <hudIcoPath>icons/weapons/iconWeapCannon.tga</hudIcoPath>
+    <ttxIcoPath>icons/characteristics/iconCharCannon.png</ttxIcoPath>
+    <bulletLen>0.7</bulletLen>
+    <bulletLenExpand>1.7</bulletLenExpand>
+    <bulletThinkness>0.055</bulletThinkness>
+    <bulletThicknessExpand>0.0</bulletThicknessExpand>
+    <bulletShot>particles/weapons/gun_flash_cannon_high.xml</bulletShot>
+    <bulletShot>particles/weapons/gun_flash_cannon_high_add.xml</bulletShot>
+    <bulletShell>particles/weapons/ammo_cartridge_15-23.xml</bulletShell>
+    <shellOutInterval>	0	</shellOutInterval>
+    <explosionParticles>
+      <aircraft>EFFECT_BULLET_20MM_30MM_HIT</aircraft>
+      <default>EFFECT_SHELL_HIT</default>
+      <tree>EFFECT_SHELL_EXPLOSION_TREE</tree>
+      <water>EFFECT_SHELL_EXPLOSION_WATER</water>
+      <turret>EFFECT_SHELL_HIT_OBJECT</turret>
+      <baseobject>EFFECT_SHELL_HIT_OBJECT</baseobject>
+      <ground>EFFECT_SHELL_EXPLOSION_EARTH</ground>
+    </explosionParticles>
+    <smokeSizeX>	2	</smokeSizeX>
+    <smokeSizeY>0.06</smokeSizeY>
+    <smokeTillingLength>0.6</smokeTillingLength>
+    <smokeRadiusScale>0.9</smokeRadiusScale>
+    <iconEmptyPath>icons/weapons/iconWeapCannonRunOut.tga</iconEmptyPath>
+    <clientSkipBulletCount>	1	</clientSkipBulletCount>
+    <bulletGroupDispersionCfc>0.2</bulletGroupDispersionCfc>
+    <textureIndex>	0	</textureIndex>
+    <receive_damage_own_1>EFFECT_BULLET_20MM_30MM_DAMAGE_OWN</receive_damage_own_1>
+    <receive_damage_own_2>EFFECT_empty_particle</receive_damage_own_2>
+    <receive_damage_other_1>EFFECT_BULLET_20MM_30MM_DAMAGE</receive_damage_other_1>
+    <receive_damage_other_2>EFFECT_empty_particle</receive_damage_other_2>
+    <sounds>
+      <weaponSoundID>weapon_vulcan</weaponSoundID>
+      <playerAvatarGotHitEvent>Play_hit_LOGIC_Avatar</playerAvatarGotHitEvent>
+    </sounds>
+  </gunProfile>
+  <gunProfile>
+    <name>heavycannon_alpha</name>
+    <aimType>sniper</aimType>
+    <hudIcoPath>icons/weapons/iconWeapCannon.tga</hudIcoPath>
+    <ttxIcoPath>icons/characteristics/iconCharCannon.png</ttxIcoPath>
+    <bulletLen>0.9</bulletLen>
+    <bulletLenExpand>	3	</bulletLenExpand>
+    <bulletThinkness>0.08</bulletThinkness>
+    <bulletThicknessExpand>0.0</bulletThicknessExpand>
+    <bulletShot>particles/weapons/gun_flash_heavycannon.xml</bulletShot>
+    <bulletShell>particles/spaces_fx/empty_particle.xml</bulletShell>
+    <shellOutInterval>	0	</shellOutInterval>
+    <explosionParticles>
+      <aircraft>EFFECT_empty_particle</aircraft>
+      <default>EFFECT_SHELL_HIT</default>
+      <tree>EFFECT_SHELL_EXPLOSION_TREE</tree>
+      <water>EFFECT_SHELL_EXPLOSION_WATER_27-37</water>
+      <turret>EFFECT_SHELL_HIT_OBJECT_27-37</turret>
+      <baseobject>EFFECT_SHELL_HIT_OBJECT_27-37</baseobject>
+      <ground>EFFECT_SHELL_EXPLOSION_EARTH_27-37</ground>
+    </explosionParticles>
+    <smokeSizeX>	3	</smokeSizeX>
+    <smokeSizeY>0.11</smokeSizeY>
+    <smokeTillingLength>0.8</smokeTillingLength>
+    <smokeRadiusScale>	3	</smokeRadiusScale>
+    <iconEmptyPath>icons/weapons/iconWeapCannonRunOut.tga</iconEmptyPath>
+    <clientSkipBulletCount>	0	</clientSkipBulletCount>
+    <bulletGroupDispersionCfc>	0	</bulletGroupDispersionCfc>
+    <textureIndex>	0	</textureIndex>
+    <receive_damage_own_1>EFFECT_BULLET_37MM_50MM_HIT</receive_damage_own_1>
+    <receive_damage_own_2>EFFECT_BULLET_37MM_50MM_HIT</receive_damage_own_2>
+    <receive_damage_other_1>EFFECT_BULLET_37MM_50MM_HIT</receive_damage_other_1>
+    <receive_damage_other_2>EFFECT_BULLET_37MM_50MM_HIT</receive_damage_other_2>
+    <sounds>
+      <weaponSoundID>weapon_heavycanon_alpha</weaponSoundID>
+      <playerAvatarGotHitEvent>Play_hit_LOGIC_Avatar_Big_Caliber</playerAvatarGotHitEvent>
+    </sounds>
+  </gunProfile>
+  <gunProfile>
+    <name>heavycannon_granade</name>
+    <aimType>shotgun</aimType>
+    <hudIcoPath>icons/weapons/iconWeapCannon.tga</hudIcoPath>
+    <ttxIcoPath>icons/characteristics/iconCharCannon.png</ttxIcoPath>
+    <bulletLen>0.9</bulletLen>
+    <bulletLenExpand>	3	</bulletLenExpand>
+    <bulletThinkness>0.08</bulletThinkness>
+    <bulletThicknessExpand>0.0</bulletThicknessExpand>
+    <bulletShot>particles/weapons/gun_flash_granade.xml</bulletShot>
+    <bulletShell>particles/spaces_fx/empty_particle.xml</bulletShell>
+    <shellOutInterval>	0	</shellOutInterval>
+    <explosionParticles>
+      <aircraft>EFFECT_empty_particle</aircraft>
+      <default>EFFECT_SHELL_HIT</default>
+      <tree>EFFECT_SHELL_EXPLOSION_TREE</tree>
+      <water>EFFECT_SHELL_EXPLOSION_WATER_27-37</water>
+      <turret>EFFECT_SHELL_HIT_OBJECT_27-37</turret>
+      <baseobject>EFFECT_SHELL_HIT_OBJECT_27-37</baseobject>
+      <ground>EFFECT_SHELL_EXPLOSION_EARTH_27-37</ground>
+    </explosionParticles>
+    <smokeSizeX>	2	</smokeSizeX>
+    <smokeSizeY>0.07</smokeSizeY>
+    <smokeTillingLength>0.6</smokeTillingLength>
+    <smokeRadiusScale>1.8</smokeRadiusScale>
+    <iconEmptyPath>icons/weapons/iconWeapCannonRunOut.tga</iconEmptyPath>
+    <clientSkipBulletCount>	0	</clientSkipBulletCount>
+    <bulletGroupDispersionCfc>	0	</bulletGroupDispersionCfc>
+    <textureIndex>	0	</textureIndex>
+    <receive_damage_own_1>EFFECT_BULLET_37MM_50MM_HIT</receive_damage_own_1>
+    <receive_damage_own_2>EFFECT_BULLET_37MM_50MM_HIT</receive_damage_own_2>
+    <receive_damage_other_1>EFFECT_BULLET_37MM_50MM_HIT</receive_damage_other_1>
+    <receive_damage_other_2>EFFECT_BULLET_37MM_50MM_HIT</receive_damage_other_2>
+    <sounds>
+      <weaponSoundID>weapon_heavycanon_granade</weaponSoundID>
+      <playerAvatarGotHitEvent>Play_hit_LOGIC_Avatar_Big_Caliber</playerAvatarGotHitEvent>
+    </sounds>
+  </gunProfile>
+  <gunProfile>
+    <name>heavycannon_granade_spec</name>
+    <aimType>shotgun</aimType>
+    <hudIcoPath>icons/weapons/iconWeapCannon.tga</hudIcoPath>
+    <ttxIcoPath>icons/characteristics/iconCharCannon.png</ttxIcoPath>
+    <bulletLen>0.9</bulletLen>
+    <bulletLenExpand>	3	</bulletLenExpand>
+    <bulletThinkness>0.08</bulletThinkness>
+    <bulletThicknessExpand>0.0</bulletThicknessExpand>
+    <bulletShot>particles/weapons/gun_flash_granade_spec.xml</bulletShot>
+    <bulletShot>particles/weapons/gun_flash_granade_spec_add.xml</bulletShot>
+    <bulletShell>particles/spaces_fx/empty_particle.xml</bulletShell>
+    <shellOutInterval>	0	</shellOutInterval>
+    <explosionParticles>
+      <aircraft>EFFECT_empty_particle</aircraft>
+      <default>EFFECT_SHELL_HIT</default>
+      <tree>EFFECT_SHELL_EXPLOSION_TREE</tree>
+      <water>EFFECT_SHELL_EXPLOSION_WATER_27-37</water>
+      <turret>EFFECT_SHELL_HIT_OBJECT_27-37</turret>
+      <baseobject>EFFECT_SHELL_HIT_OBJECT_27-37</baseobject>
+      <ground>EFFECT_SHELL_EXPLOSION_EARTH_27-37</ground>
+    </explosionParticles>
+    <smokeSizeX>	2	</smokeSizeX>
+    <smokeSizeY>0.07</smokeSizeY>
+    <smokeTillingLength>0.6</smokeTillingLength>
+    <smokeRadiusScale>1.8</smokeRadiusScale>
+    <iconEmptyPath>icons/weapons/iconWeapCannonRunOut.tga</iconEmptyPath>
+    <clientSkipBulletCount>	0	</clientSkipBulletCount>
+    <bulletGroupDispersionCfc>	0	</bulletGroupDispersionCfc>
+    <textureIndex>	0	</textureIndex>
+    <receive_damage_own_1>EFFECT_BULLET_37MM_50MM_HIT</receive_damage_own_1>
+    <receive_damage_own_2>EFFECT_BULLET_37MM_50MM_HIT</receive_damage_own_2>
+    <receive_damage_other_1>EFFECT_BULLET_37MM_50MM_HIT</receive_damage_other_1>
+    <receive_damage_other_2>EFFECT_BULLET_37MM_50MM_HIT</receive_damage_other_2>
+    <sounds>
+      <weaponSoundID>weapon_heavycanon_granade</weaponSoundID>
+      <playerAvatarGotHitEvent>Play_hit_LOGIC_Avatar_Big_Caliber</playerAvatarGotHitEvent>
+    </sounds>
+  </gunProfile>
+  <gunProfile>
+    <name>heavycannon_granade_high</name>
+    <aimType>shotgun</aimType>
+    <hudIcoPath>icons/weapons/iconWeapCannon.tga</hudIcoPath>
+    <ttxIcoPath>icons/characteristics/iconCharCannon.png</ttxIcoPath>
+    <bulletLen>0.9</bulletLen>
+    <bulletLenExpand>	3	</bulletLenExpand>
+    <bulletThinkness>0.08</bulletThinkness>
+    <bulletThicknessExpand>0.0</bulletThicknessExpand>
+    <bulletShot>particles/weapons/gun_flash_granade_high.xml</bulletShot>
+    <bulletShell>particles/spaces_fx/empty_particle.xml</bulletShell>
+    <shellOutInterval>	0	</shellOutInterval>
+    <explosionParticles>
+      <aircraft>EFFECT_empty_particle</aircraft>
+      <default>EFFECT_SHELL_HIT</default>
+      <tree>EFFECT_SHELL_EXPLOSION_TREE</tree>
+      <water>EFFECT_SHELL_EXPLOSION_WATER_27-37</water>
+      <turret>EFFECT_SHELL_HIT_OBJECT_27-37</turret>
+      <baseobject>EFFECT_SHELL_HIT_OBJECT_27-37</baseobject>
+      <ground>EFFECT_SHELL_EXPLOSION_EARTH_27-37</ground>
+    </explosionParticles>
+    <smokeSizeX>	2	</smokeSizeX>
+    <smokeSizeY>0.07</smokeSizeY>
+    <smokeTillingLength>0.6</smokeTillingLength>
+    <smokeRadiusScale>1.8</smokeRadiusScale>
+    <iconEmptyPath>icons/weapons/iconWeapCannonRunOut.tga</iconEmptyPath>
+    <clientSkipBulletCount>	0	</clientSkipBulletCount>
+    <bulletGroupDispersionCfc>	0	</bulletGroupDispersionCfc>
+    <textureIndex>	0	</textureIndex>
+    <receive_damage_own_1>EFFECT_BULLET_37MM_50MM_HIT</receive_damage_own_1>
+    <receive_damage_own_2>EFFECT_BULLET_37MM_50MM_HIT</receive_damage_own_2>
+    <receive_damage_other_1>EFFECT_BULLET_37MM_50MM_HIT</receive_damage_other_1>
+    <receive_damage_other_2>EFFECT_BULLET_37MM_50MM_HIT</receive_damage_other_2>
+    <sounds>
+      <weaponSoundID>weapon_heavycanon_granade_high</weaponSoundID>
+      <playerAvatarGotHitEvent>Play_hit_LOGIC_Avatar_Big_Caliber</playerAvatarGotHitEvent>
+    </sounds>
+  </gunProfile>
+  <gunProfile>
+    <name>heavycannon_granade_high_spec</name>
+    <aimType>shotgun</aimType>
+    <hudIcoPath>icons/weapons/iconWeapCannon.tga</hudIcoPath>
+    <ttxIcoPath>icons/characteristics/iconCharCannon.png</ttxIcoPath>
+    <bulletLen>0.9</bulletLen>
+    <bulletLenExpand>	3	</bulletLenExpand>
+    <bulletThinkness>0.08</bulletThinkness>
+    <bulletThicknessExpand>0.0</bulletThicknessExpand>
+    <bulletShot>particles/weapons/gun_flash_granade_high_spec.xml</bulletShot>
+    <bulletShot>particles/weapons/gun_flash_granade_high_spec_add.xml</bulletShot>
+    <bulletShell>particles/spaces_fx/empty_particle.xml</bulletShell>
+    <shellOutInterval>	0	</shellOutInterval>
+    <explosionParticles>
+      <aircraft>EFFECT_empty_particle</aircraft>
+      <default>EFFECT_SHELL_HIT</default>
+      <tree>EFFECT_SHELL_EXPLOSION_TREE</tree>
+      <water>EFFECT_SHELL_EXPLOSION_WATER_27-37</water>
+      <turret>EFFECT_SHELL_HIT_OBJECT_27-37</turret>
+      <baseobject>EFFECT_SHELL_HIT_OBJECT_27-37</baseobject>
+      <ground>EFFECT_SHELL_EXPLOSION_EARTH_27-37</ground>
+    </explosionParticles>
+    <smokeSizeX>	2	</smokeSizeX>
+    <smokeSizeY>0.07</smokeSizeY>
+    <smokeTillingLength>0.6</smokeTillingLength>
+    <smokeRadiusScale>1.8</smokeRadiusScale>
+    <iconEmptyPath>icons/weapons/iconWeapCannonRunOut.tga</iconEmptyPath>
+    <clientSkipBulletCount>	0	</clientSkipBulletCount>
+    <bulletGroupDispersionCfc>	0	</bulletGroupDispersionCfc>
+    <textureIndex>	0	</textureIndex>
+    <receive_damage_own_1>EFFECT_BULLET_37MM_50MM_HIT</receive_damage_own_1>
+    <receive_damage_own_2>EFFECT_BULLET_37MM_50MM_HIT</receive_damage_own_2>
+    <receive_damage_other_1>EFFECT_BULLET_37MM_50MM_HIT</receive_damage_other_1>
+    <receive_damage_other_2>EFFECT_BULLET_37MM_50MM_HIT</receive_damage_other_2>
+    <sounds>
+      <weaponSoundID>weapon_heavycanon_granade_high</weaponSoundID>
+      <playerAvatarGotHitEvent>Play_hit_LOGIC_Avatar_Big_Caliber</playerAvatarGotHitEvent>
+    </sounds>
+  </gunProfile>
+  <gunProfile>
+    <name>gun_AA</name>
+    <aimType>empty</aimType>
+    <hudIcoPath>icons/weapons/iconWeapGun.tga</hudIcoPath>
+    <ttxIcoPath>icons/characteristics/iconCharMachineGun.png</ttxIcoPath>
+    <bulletLen>0.6</bulletLen>
+    <bulletLenExpand>	0	</bulletLenExpand>
+    <bulletThinkness>0.06</bulletThinkness>
+    <bulletThicknessExpand>0.0</bulletThicknessExpand>
+    <bulletShot>particles/weapons/gun_flash_aa.xml</bulletShot>
+    <bulletShell>particles/weapons/ammo_cartridge_7-13.xml</bulletShell>
+    <shellOutInterval>	0	</shellOutInterval>
+    <explosionParticles>
+      <air>EFFECT_SHELL_HIT</air>
+      <default>EFFECT_SHELL_HIT</default>
+      <tree>EFFECT_SHELL_HIT</tree>
+      <water>EFFECT_SHELL_HIT</water>
+      <turret>EFFECT_SHELL_HIT</turret>
+      <baseobject>EFFECT_SHELL_HIT</baseobject>
+      <ground>EFFECT_SHELL_HIT</ground>
+    </explosionParticles>
+    <smokeSizeX>	2	</smokeSizeX>
+    <smokeSizeY>0.09</smokeSizeY>
+    <smokeTillingLength>0.7</smokeTillingLength>
+    <smokeRadiusScale>	3	</smokeRadiusScale>
+    <iconEmptyPath>icons/weapons/iconWeapGunRunOut.tga</iconEmptyPath>
+    <clientSkipBulletCount>	2	</clientSkipBulletCount>
+    <bulletGroupDispersionCfc>	0	</bulletGroupDispersionCfc>
+    <textureIndex>	1	</textureIndex>
+    <receive_damage_own_1>EFFECT_empty_particle</receive_damage_own_1>
+    <receive_damage_own_2>EFFECT_empty_particle</receive_damage_own_2>
+    <receive_damage_other_1>EFFECT_empty_particle</receive_damage_other_1>
+    <receive_damage_other_2>EFFECT_empty_particle</receive_damage_other_2>
+    <sounds>
+      <weaponSoundID>weapon_7_AA</weaponSoundID>
+      <playerAvatarGotHitEvent>Play_hit_LOGIC_Avatar</playerAvatarGotHitEvent>
+    </sounds>
+  </gunProfile>
+  <gunProfile>
+    <name>cannon_AA</name>
+    <aimType>empty</aimType>
+    <hudIcoPath>icons/weapons/iconWeapGun.tga</hudIcoPath>
+    <ttxIcoPath>icons/characteristics/iconCharMachineGun.png</ttxIcoPath>
+    <bulletLen>1.5</bulletLen>
+    <bulletLenExpand>	0	</bulletLenExpand>
+    <bulletThinkness>0.12</bulletThinkness>
+    <bulletThicknessExpand>0.0</bulletThicknessExpand>
+    <bulletShot>particles/weapons/gun_flash_aa.xml</bulletShot>
+    <bulletShell>particles/weapons/ammo_cartridge_7-13.xml</bulletShell>
+    <shellOutInterval>	0	</shellOutInterval>
+    <explosionParticles>
+      <air>EFFECT_AA_EXPLOSION</air>
+      <default>EFFECT_SHELL_HIT</default>
+      <tree>EFFECT_SHELL_HIT</tree>
+      <water>EFFECT_SHELL_HIT</water>
+      <turret>EFFECT_SHELL_HIT</turret>
+      <baseobject>EFFECT_SHELL_HIT</baseobject>
+      <ground>EFFECT_SHELL_HIT</ground>
+    </explosionParticles>
+    <smokeSizeX>	2	</smokeSizeX>
+    <smokeSizeY>0.1</smokeSizeY>
+    <smokeTillingLength>0.6</smokeTillingLength>
+    <smokeRadiusScale>1.2</smokeRadiusScale>
+    <iconEmptyPath>icons/weapons/iconWeapGunRunOut.tga</iconEmptyPath>
+    <clientSkipBulletCount>	1	</clientSkipBulletCount>
+    <bulletGroupDispersionCfc>	0	</bulletGroupDispersionCfc>
+    <textureIndex>	0	</textureIndex>
+    <receive_damage_own_1>EFFECT_empty_particle</receive_damage_own_1>
+    <receive_damage_own_2>EFFECT_empty_particle</receive_damage_own_2>
+    <receive_damage_other_1>EFFECT_empty_particle</receive_damage_other_1>
+    <receive_damage_other_2>EFFECT_empty_particle</receive_damage_other_2>
+    <sounds>
+      <weaponSoundID>weapon_12_AA</weaponSoundID>
+      <playerAvatarGotHitEvent>Play_hit_LOGIC_Avatar_Big_Caliber</playerAvatarGotHitEvent>
+    </sounds>
+  </gunProfile>
+  <gunProfile>
+    <name>turret_machinegun_small</name>
+    <aimType>smg</aimType>
+    <hudIcoPath>icons/weapons/iconWeapGun.tga</hudIcoPath>
+    <ttxIcoPath>icons/characteristics/iconCharMachineGun.png</ttxIcoPath>
+    <bulletLen>0.4</bulletLen>
+    <bulletLenExpand>1.2</bulletLenExpand>
+    <bulletThinkness>0.05</bulletThinkness>
+    <bulletThicknessExpand>0.0</bulletThicknessExpand>
+    <bulletShot>particles/weapons/gun_flash_mg.xml</bulletShot>
+    <bulletShot>particles/weapons/gun_flash_mg_add.xml</bulletShot>
+    <bulletShell>particles/weapons/ammo_cartridge_7-13.xml</bulletShell>
+    <shellOutInterval>	0	</shellOutInterval>
+    <explosionParticles>
+      <aircraft>EFFECT_BULLET_7MM_17MM_HIT_TURRET</aircraft>
+      <default>EFFECT_BULLET_HIT</default>
+      <tree>EFFECT_BULLET_EXPLOSION_TREE</tree>
+      <water>EFFECT_BULLET_EXPLOSION_WATER</water>
+      <turret>EFFECT_BULLET_HIT_OBJECT</turret>
+      <baseobject>EFFECT_BULLET_HIT_OBJECT</baseobject>
+      <ground>EFFECT_BULLET_EXPLOSION_EARTH</ground>
+    </explosionParticles>
+    <smokeSizeX>	2	</smokeSizeX>
+    <smokeSizeY>0.05</smokeSizeY>
+    <smokeTillingLength>0.35</smokeTillingLength>
+    <smokeRadiusScale>1.5</smokeRadiusScale>
+    <iconEmptyPath>icons/weapons/iconWeapGunRunOut.tga</iconEmptyPath>
+    <clientSkipBulletCount>	0	</clientSkipBulletCount>
+    <bulletGroupDispersionCfc>0.4</bulletGroupDispersionCfc>
+    <textureIndex>	1	</textureIndex>
+    <receive_damage_own_1>EFFECT_BULLET_7MM_17MM_DAMAGE</receive_damage_own_1>
+    <receive_damage_own_2>EFFECT_BULLET_7MM_17MM_DAMAGE</receive_damage_own_2>
+    <receive_damage_other_1>EFFECT_BULLET_7MM_17MM_DAMAGE</receive_damage_other_1>
+    <receive_damage_other_2>EFFECT_BULLET_7MM_17MM_DAMAGE</receive_damage_other_2>
+    <sounds>
+      <weaponSoundID>weapon_machinegun_small_TL</weaponSoundID>
+      <playerAvatarGotHitEvent>Play_hit_LOGIC_Avatar</playerAvatarGotHitEvent>
+    </sounds>
+  </gunProfile>
+  <gunProfile>
+    <name>turret_machinegun_heavy</name>
+    <aimType>smg</aimType>
+    <hudIcoPath>icons/weapons/iconWeapCannon.tga</hudIcoPath>
+    <ttxIcoPath>icons/characteristics/iconCharCannon.png</ttxIcoPath>
+    <bulletLen>0.4</bulletLen>
+    <bulletLenExpand>1.2</bulletLenExpand>
+    <bulletThinkness>0.05</bulletThinkness>
+    <bulletThicknessExpand>0.0</bulletThicknessExpand>
+    <bulletShot>particles/weapons/gun_flash_mg_heavy.xml</bulletShot>
+    <bulletShot>particles/weapons/gun_flash_mg_heavy_add.xml</bulletShot>
+    <bulletShell>particles/weapons/ammo_cartridge_7-13.xml</bulletShell>
+    <shellOutInterval>	0	</shellOutInterval>
+    <explosionParticles>
+      <aircraft>EFFECT_BULLET_7MM_17MM_HIT_TURRET</aircraft>
+      <default>EFFECT_BULLET_HIT</default>
+      <tree>EFFECT_BULLET_EXPLOSION_TREE</tree>
+      <water>EFFECT_BULLET_EXPLOSION_WATER</water>
+      <turret>EFFECT_BULLET_HIT_OBJECT</turret>
+      <baseobject>EFFECT_BULLET_HIT_OBJECT</baseobject>
+      <ground>EFFECT_BULLET_EXPLOSION_EARTH</ground>
+    </explosionParticles>
+    <smokeSizeX>	2	</smokeSizeX>
+    <smokeSizeY>0.05</smokeSizeY>
+    <smokeTillingLength>0.35</smokeTillingLength>
+    <smokeRadiusScale>1.5</smokeRadiusScale>
+    <iconEmptyPath>icons/weapons/iconWeapCannonRunOut.tga</iconEmptyPath>
+    <clientSkipBulletCount>	0	</clientSkipBulletCount>
+    <bulletGroupDispersionCfc>0.4</bulletGroupDispersionCfc>
+    <textureIndex>	1	</textureIndex>
+    <receive_damage_own_1>EFFECT_BULLET_7MM_17MM_DAMAGE</receive_damage_own_1>
+    <receive_damage_own_2>EFFECT_BULLET_7MM_17MM_DAMAGE</receive_damage_own_2>
+    <receive_damage_other_1>EFFECT_BULLET_7MM_17MM_DAMAGE</receive_damage_other_1>
+    <receive_damage_other_2>EFFECT_BULLET_7MM_17MM_DAMAGE</receive_damage_other_2>
+    <sounds>
+      <weaponSoundID>weapon_machinegun_heavy_TL</weaponSoundID>
+      <playerAvatarGotHitEvent>Play_hit_LOGIC_Avatar</playerAvatarGotHitEvent>
+    </sounds>
+  </gunProfile>
+  <gunProfile>
+    <name>turret_cannon_main</name>
+    <aimType>assault</aimType>
+    <hudIcoPath>icons/weapons/iconWeapCannon.tga</hudIcoPath>
+    <ttxIcoPath>icons/characteristics/iconCharCannon.png</ttxIcoPath>
+    <bulletLen>0.7</bulletLen>
+    <bulletLenExpand>1.7</bulletLenExpand>
+    <bulletThinkness>0.055</bulletThinkness>
+    <bulletThicknessExpand>0.0</bulletThicknessExpand>
+    <bulletShot>particles/weapons/gun_flash_cannon.xml</bulletShot>
+    <bulletShot>particles/weapons/gun_flash_cannon_add.xml</bulletShot>
+    <bulletShell>particles/weapons/ammo_cartridge_15-23.xml</bulletShell>
+    <shellOutInterval>	0	</shellOutInterval>
+    <explosionParticles>
+      <aircraft>EFFECT_BULLET_20MM_30MM_HIT_TURRET</aircraft>
+      <default>EFFECT_SHELL_HIT</default>
+      <tree>EFFECT_SHELL_EXPLOSION_TREE</tree>
+      <water>EFFECT_SHELL_EXPLOSION_WATER</water>
+      <turret>EFFECT_SHELL_HIT_OBJECT</turret>
+      <baseobject>EFFECT_SHELL_HIT_OBJECT</baseobject>
+      <ground>EFFECT_SHELL_EXPLOSION_EARTH</ground>
+    </explosionParticles>
+    <smokeSizeX>	2	</smokeSizeX>
+    <smokeSizeY>0.06</smokeSizeY>
+    <smokeTillingLength>0.6</smokeTillingLength>
+    <smokeRadiusScale>	2	</smokeRadiusScale>
+    <iconEmptyPath>icons/weapons/iconWeapCannonRunOut.tga</iconEmptyPath>
+    <clientSkipBulletCount>	0	</clientSkipBulletCount>
+    <bulletGroupDispersionCfc>0.2</bulletGroupDispersionCfc>
+    <textureIndex>	0	</textureIndex>
+    <receive_damage_own_1>EFFECT_BULLET_20MM_30MM_DAMAGE_OWN</receive_damage_own_1>
+    <receive_damage_own_2>EFFECT_BULLET_20MM_30MM_DAMAGE_OWN</receive_damage_own_2>
+    <receive_damage_other_1>EFFECT_BULLET_20MM_30MM_DAMAGE</receive_damage_other_1>
+    <receive_damage_other_2>EFFECT_BULLET_20MM_30MM_DAMAGE</receive_damage_other_2>
+    <sounds>
+      <weaponSoundID>weapon_cannon_main_TL</weaponSoundID>
+      <playerAvatarGotHitEvent>Play_hit_LOGIC_Avatar_Big_Caliber</playerAvatarGotHitEvent>
+    </sounds>
+  </gunProfile>
+  <gunProfile>
+    <name>turret_cannon_high</name>
+    <aimType>assault</aimType>
+    <hudIcoPath>icons/weapons/iconWeapCannon.tga</hudIcoPath>
+    <ttxIcoPath>icons/characteristics/iconCharCannon.png</ttxIcoPath>
+    <bulletLen>0.7</bulletLen>
+    <bulletLenExpand>1.7</bulletLenExpand>
+    <bulletThinkness>0.055</bulletThinkness>
+    <bulletThicknessExpand>0.0</bulletThicknessExpand>
+    <bulletShot>particles/weapons/gun_flash_cannon_high.xml</bulletShot>
+    <bulletShot>particles/weapons/gun_flash_cannon_high_add.xml</bulletShot>
+    <bulletShell>particles/weapons/ammo_cartridge_15-23.xml</bulletShell>
+    <shellOutInterval>	0	</shellOutInterval>
+    <explosionParticles>
+      <aircraft>EFFECT_BULLET_20MM_30MM_HIT_TURRET</aircraft>
+      <default>EFFECT_SHELL_HIT</default>
+      <tree>EFFECT_SHELL_EXPLOSION_TREE</tree>
+      <water>EFFECT_SHELL_EXPLOSION_WATER</water>
+      <turret>EFFECT_SHELL_HIT_OBJECT</turret>
+      <baseobject>EFFECT_SHELL_HIT_OBJECT</baseobject>
+      <ground>EFFECT_SHELL_EXPLOSION_EARTH</ground>
+    </explosionParticles>
+    <smokeSizeX>	2	</smokeSizeX>
+    <smokeSizeY>0.06</smokeSizeY>
+    <smokeTillingLength>0.7</smokeTillingLength>
+    <smokeRadiusScale>	2	</smokeRadiusScale>
+    <iconEmptyPath>icons/weapons/iconWeapCannonRunOut.tga</iconEmptyPath>
+    <clientSkipBulletCount>	0	</clientSkipBulletCount>
+    <bulletGroupDispersionCfc>0.2</bulletGroupDispersionCfc>
+    <textureIndex>	0	</textureIndex>
+    <receive_damage_own_1>EFFECT_BULLET_20MM_30MM_DAMAGE_OWN</receive_damage_own_1>
+    <receive_damage_own_2>EFFECT_BULLET_20MM_30MM_DAMAGE_OWN</receive_damage_own_2>
+    <receive_damage_other_1>EFFECT_BULLET_20MM_30MM_DAMAGE</receive_damage_other_1>
+    <receive_damage_other_2>EFFECT_BULLET_20MM_30MM_DAMAGE</receive_damage_other_2>
+    <sounds>
+      <weaponSoundID>weapon_cannon_high_TL</weaponSoundID>
+      <playerAvatarGotHitEvent>Play_hit_LOGIC_Avatar_Big_Caliber</playerAvatarGotHitEvent>
+    </sounds>
+  </gunProfile>
+  <ammo>
+    <name>Amachinegun_small_low_base</name>
+    <bulletColour>255 100 5 255</bulletColour>
+    <smokeColour>30 30 30 70</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Amachinegun_small_low_silver</name>
+    <bulletColour>255 100 5 255</bulletColour>
+    <smokeColour>30 30 30 70</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Amachinegun_small_low_crit</name>
+    <bulletColour>255 100 5 255</bulletColour>
+    <smokeColour>30 30 30 70</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Amachinegun_small_low_fire</name>
+    <bulletColour>255 100 5 255</bulletColour>
+    <smokeColour>30 30 30 70</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Amachinegun_small_low_ground</name>
+    <bulletColour>255 100 5 255</bulletColour>
+    <smokeColour>30 30 30 70</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Amachinegun_small_default_base</name>
+    <bulletColour>255 100 5 255</bulletColour>
+    <smokeColour>30 30 30 70</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Amachinegun_small_default_silver</name>
+    <bulletColour>255 100 5 255</bulletColour>
+    <smokeColour>30 30 30 70</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Amachinegun_small_default_crit</name>
+    <bulletColour>255 100 5 255</bulletColour>
+    <smokeColour>30 30 30 70</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Amachinegun_small_default_fire</name>
+    <bulletColour>255 100 5 255</bulletColour>
+    <smokeColour>30 30 30 70</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Amachinegun_small_default_ground</name>
+    <bulletColour>255 100 5 255</bulletColour>
+    <smokeColour>30 30 30 70</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Amachinegun_heavy_default_base</name>
+    <bulletColour>255 20 5 255</bulletColour>
+    <smokeColour>30 30 30 70</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Amachinegun_heavy_default_silver</name>
+    <bulletColour>255 20 5 255</bulletColour>
+    <smokeColour>30 30 30 70</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Amachinegun_heavy_default_crit</name>
+    <bulletColour>255 20 5 255</bulletColour>
+    <smokeColour>30 30 30 70</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Amachinegun_heavy_default_fire</name>
+    <bulletColour>255 20 5 255</bulletColour>
+    <smokeColour>30 30 30 70</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Amachinegun_heavy_default_ground</name>
+    <bulletColour>255 20 5 255</bulletColour>
+    <smokeColour>30 30 30 70</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Acannon_main_default_base</name>
+    <bulletColour>255 100 10 255</bulletColour>
+    <smokeColour>30 30 30 90</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Acannon_main_default_silver</name>
+    <bulletColour>255 100 10 255</bulletColour>
+    <smokeColour>30 30 30 90</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Acannon_main_default_crit</name>
+    <bulletColour>255 100 10 255</bulletColour>
+    <smokeColour>30 30 30 90</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Acannon_main_default_fire</name>
+    <bulletColour>255 100 10 255</bulletColour>
+    <smokeColour>30 30 30 90</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Acannon_main_default_ground</name>
+    <bulletColour>255 100 10 255</bulletColour>
+    <smokeColour>30 30 30 90</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Acannon_high_default_base</name>
+    <bulletColour>255 20 5 255</bulletColour>
+    <smokeColour>30 30 30 90</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Acannon_high_default_silver</name>
+    <bulletColour>255 20 5 255</bulletColour>
+    <smokeColour>30 30 30 90</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Acannon_high_default_crit</name>
+    <bulletColour>255 20 5 255</bulletColour>
+    <smokeColour>30 30 30 90</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Acannon_high_default_fire</name>
+    <bulletColour>255 20 5 255</bulletColour>
+    <smokeColour>30 30 30 90</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Acannon_high_default_ground</name>
+    <bulletColour>255 20 5 255</bulletColour>
+    <smokeColour>30 30 30 90</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Aheavycannon_alpha_default_base</name>
+    <bulletColour>10 255 10 255</bulletColour>
+    <smokeColour>30 30 30 200</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Aheavycannon_alpha_default_silver</name>
+    <bulletColour>10 255 10 255</bulletColour>
+    <smokeColour>30 30 30 200</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Aheavycannon_alpha_default_crit</name>
+    <bulletColour>10 255 10 255</bulletColour>
+    <smokeColour>30 30 30 200</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Aheavycannon_alpha_default_fire</name>
+    <bulletColour>10 255 10 255</bulletColour>
+    <smokeColour>30 30 30 200</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Aheavycannon_alpha_default_ground</name>
+    <bulletColour>10 255 10 255</bulletColour>
+    <smokeColour>30 30 30 200</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Aheavycannon_granade_default_base</name>
+    <bulletColour>150 150 120 255</bulletColour>
+    <smokeColour>30 30 30 200</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Aheavycannon_granade_default_silver</name>
+    <bulletColour>150 150 120 255</bulletColour>
+    <smokeColour>30 30 30 200</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Aheavycannon_granade_default_crit</name>
+    <bulletColour>150 150 120 255</bulletColour>
+    <smokeColour>30 30 30 200</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Aheavycannon_granade_default_fire</name>
+    <bulletColour>150 150 120 255</bulletColour>
+    <smokeColour>30 30 30 200</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Aheavycannon_granade_default_ground</name>
+    <bulletColour>150 150 120 255</bulletColour>
+    <smokeColour>30 30 30 200</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Aheavycannon_granade_high_default_base</name>
+    <bulletColour>255 10 5 255</bulletColour>
+    <smokeColour>30 30 30 200</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Aheavycannon_granade_high_default_silver</name>
+    <bulletColour>255 10 5 255</bulletColour>
+    <smokeColour>30 30 30 200</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Aheavycannon_granade_high_default_crit</name>
+    <bulletColour>255 10 5 255</bulletColour>
+    <smokeColour>30 30 30 200</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Aheavycannon_granade_high_default_fire</name>
+    <bulletColour>255 10 5 255</bulletColour>
+    <smokeColour>30 30 30 200</smokeColour>
+  </ammo>
+  <ammo>
+    <name>Aheavycannon_granade_high_default_ground</name>
+    <bulletColour>255 10 5 255</bulletColour>
+    <smokeColour>30 30 30 200</smokeColour>
+  </ammo>
+  <ammo>
+    <name>G0mm_ap</name>
+    <bulletColour>30 30 30 255</bulletColour>
+    <smokeColour>30 30 30 0</smokeColour>
+  </ammo>
+  <ammo>
+    <name>turret_7mm</name>
+    <bulletColour>255 30 5 100</bulletColour>
+    <smokeColour>170 170 170 70</smokeColour>
+  </ammo>
+  <ammo>
+    <name>turret_AA1</name>
+    <bulletColour>255 30 5 100</bulletColour>
+    <smokeColour>170 170 170 70</smokeColour>
+  </ammo>
+  <ammo>
+    <name>turret_air_7mm</name>
+    <bulletColour>255 30 2 255</bulletColour>
+    <smokeColour>30 30 30 70</smokeColour>
+  </ammo>
+  <ammo>
+    <name>turret_air_12mm</name>
+    <bulletColour>255 30 2 255</bulletColour>
+    <smokeColour>30 30 30 70</smokeColour>
+  </ammo>
+  <ammo>
+    <name>turret_air_13mm</name>
+    <bulletColour>255 30 2 255</bulletColour>
+    <smokeColour>30 30 30 70</smokeColour>
+  </ammo>
+  <ammo>
+    <name>turret_air_20mm</name>
+    <bulletColour>255 30 2 255</bulletColour>
+    <smokeColour>30 30 30 70</smokeColour>
+  </ammo>
+  <ammo>
+    <name>turret_air_23mm</name>
+    <bulletColour>255 30 2 255</bulletColour>
+    <smokeColour>30 30 30 70</smokeColour>
+  </ammo>
+  <ammo>
+    <name>turret_holiday</name>
+    <bulletColour>255 30 2 255</bulletColour>
+    <smokeColour>30 30 30 70</smokeColour>
+  </ammo>
+</gunsprofiles.xml>

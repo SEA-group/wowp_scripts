@@ -1,0 +1,1214 @@
+<dest_akicusima_summer_anim.xml>
+  <parent>default.xml</parent>
+  <name>BATTLESHIP</name>
+  <modelPath>content/03_ocean/mechPC_61_Fletcher_destructible_01/mechPC_61_Fletcher_destructible_01.model</modelPath>
+  <modelCrashPath>content/03_ocean/mechPC_61_Fletcher_destructible_01/mechPC_61_Fletcher_destructible_01_crash.model</modelCrashPath>
+  <bBoxes>
+    <mainBox>
+      <size>100 90 100</size>
+    </mainBox>
+  </bBoxes>
+  <damageEffects>
+    <effectFire>EFFECT_fire_med_01</effectFire>
+    <destroy>EFFECT_w_part_exposion_small</destroy>
+  </damageEffects>
+  <maxHealth>	1350	</maxHealth>
+  <dominationCost>0.08</dominationCost>
+  <respawnDelay>-1.0</respawnDelay>
+  <superiorityPoints>	0	</superiorityPoints>
+  <superiorityPointsGroup1>	6	</superiorityPointsGroup1>
+  <superiorityPointsGroup2>	6	</superiorityPointsGroup2>
+  <superiorityPointsGroup3>	1	</superiorityPointsGroup3>
+  <superiorityPointsGroup4>	1	</superiorityPointsGroup4>
+  <superiorityPointsGroup5>	0	</superiorityPointsGroup5>
+  <superiorityPointsGroup6>	2	</superiorityPointsGroup6>
+  <superiorityPointsGroup7>	0	</superiorityPointsGroup7>
+  <superiorityPointsGroup8>	0	</superiorityPointsGroup8>
+  <initialSpawnDelay>0.0</initialSpawnDelay>
+  <type>vehicle</type>
+  <turretName>t1</turretName>
+  <parts>
+    <part>
+      <name>	hull	</name>
+      <partId>	1	</partId>
+      <groupId>	1	</groupId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-0.540000 2.115000 -0.450000	</position>
+            <size>	16.650000 10.350000 113.580000	</size>
+            <armorFront>	0.000000 0.000000 0.000000	</armorFront>
+            <armorBack>	0.000000 0.000000 0.000000	</armorBack>
+            <absorption>	0.200000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+          <bbox>
+            <position>	-0.450000 6.705000 27.720000	</position>
+            <size>	16.020000 7.830000 59.580000	</size>
+            <armorFront>	0.000000 0.000000 0.000000	</armorFront>
+            <armorBack>	0.000000 0.000000 0.000000	</armorBack>
+            <absorption>	0.200000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	450	</health>
+        <componentType>	Hull	</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/dest/ship/JP/Akicusima_destructible/Summer/Akicusima.model</model>
+            <effectState>
+              <effect>
+                <name>EFFECT_static_ship_45</name>
+                <mountPoint>HP_steam</mountPoint>
+              </effect>
+            </effectState>
+            <stateAnimation>
+            </stateAnimation>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	2	</id>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <model>content/dest/ship/JP/Akicusima_destructible/Summer/Akicusima.model</model>
+            <effectState>
+              <effect>
+                <name>EFFECT_static_ship_45</name>
+                <mountPoint>HP_steam</mountPoint>
+              </effect>
+            </effectState>
+            <stateAnimation>
+            </stateAnimation>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	3	</id>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <model>content/dest/ship/JP/Akicusima_destructible/Summer/Akicusima.model</model>
+            <effectState>
+              <effect>
+                <name>EFFECT_static_ship_45</name>
+                <mountPoint>HP_steam</mountPoint>
+              </effect>
+            </effectState>
+            <stateAnimation>
+            </stateAnimation>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	4	</id>
+            <bBoxes>
+              <bbox>
+                <position>	-0.540000 2.115000 -0.450000	</position>
+                <size>11.655 7.2449993 79.5060014</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <usage>crash</usage>
+            <stateAction>	1	</stateAction>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/dest/ship/JP/Akicusima_destructible/Summer/Akicusima_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_Explosion_Ship_Fletcher</name>
+                <mountPoint>HP_explosion</mountPoint>
+              </effect>
+            </effectOnStart>
+            <stateAnimation>death,idle</stateAnimation>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <fire>
+          <effectFire>EFFECT_fire_large</effectFire>
+          <fire_chance>	0	</fire_chance>
+          <extinguish_time>	0	</extinguish_time>
+          <fire_damage>	0	</fire_damage>
+          <tickLength>	0	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>part1</name>
+      <partId>	2	</partId>
+      <groupId>	2	</groupId>
+      <mountPoint>hull/HP_part_1</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-0.360000 12.915000 23.670000	</position>
+            <size>	7.020000 7.470000 8.010000	</size>
+            <armorFront>	0.000000 0.000000 0.000000	</armorFront>
+            <armorBack>	0.000000 0.000000 0.000000	</armorBack>
+            <absorption>	0.200000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+          <bbox>
+            <position>	-0.405000 11.745000 19.215000	</position>
+            <size>	13.140000 5.490000 21.240000	</size>
+            <armorFront>	0.000000 0.000000 0.000000	</armorFront>
+            <armorBack>	0.000000 0.000000 0.000000	</armorBack>
+            <absorption>	0.200000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	450	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/dest/ship/JP/Akicusima_destructible/Summer/Akicusima_part_1.model</model>
+            <stateAnimation>
+            </stateAnimation>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	2	</id>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <model>content/dest/ship/JP/Akicusima_destructible/Summer/Akicusima_part_1.model</model>
+            <stateAnimation>
+            </stateAnimation>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	3	</id>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <model>content/dest/ship/JP/Akicusima_destructible/Summer/Akicusima_part_1.model</model>
+            <stateAnimation>
+            </stateAnimation>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	4	</id>
+            <bBoxes>
+              <bbox>
+                <position>	0.174165 65.245610 -0.097847	</position>
+                <size>0 0 0</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/dest/ship/JP/Akicusima_destructible/Summer/Akicusima_part_1_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>HP_part_1</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_Module_Smoke_Small</name>
+                <mountPoint>HP_small_gun</mountPoint>
+              </effect>
+              <effect>
+                <name>EFFECT_Module_Smoke_Small</name>
+                <mountPoint>HP_part_1</mountPoint>
+              </effect>
+            </effectState>
+            <affectedParts>
+              <part>
+                <partID>	7	</partID>
+                <minimalPartState>	2	</minimalPartState>
+              </part>
+            </affectedParts>
+            <stateAnimation>death,idle</stateAnimation>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	5	</id>
+            <bBoxes>
+              <bbox>
+                <position>	-0.360000 12.915000 23.670000	</position>
+                <size>4.914 5.229 5.607</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <usage>crash</usage>
+            <stateAction>	0	</stateAction>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/dest/ship/US/Fletcher_destructible/mechPC_61_Fletcher_destructible_Empty.model</model>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>part2</name>
+      <partId>	3	</partId>
+      <groupId>	3	</groupId>
+      <mountPoint>hull/HP_part_2</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-0.135000 8.370000 -3.465000	</position>
+            <size>	9.450000 4.590001 9.810000	</size>
+            <armorFront>	0.000000 0.000000 0.000000	</armorFront>
+            <armorBack>	0.000000 0.000000 0.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+          <bbox>
+            <position>	-0.450000 11.610000 -3.015000	</position>
+            <size>	5.760000 9.270000 5.940000	</size>
+            <armorFront>	0.000000 0.000000 0.000000	</armorFront>
+            <armorBack>	0.000000 0.000000 0.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	150	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/dest/ship/JP/Akicusima_destructible/Summer/Akicusima_part_2.model</model>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_ship_smoke_med_01</name>
+                <mountPoint>HP_smoke</mountPoint>
+              </effect>
+            </effectState>
+            <stateAnimation>
+            </stateAnimation>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	2	</id>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <model>content/dest/ship/JP/Akicusima_destructible/Summer/Akicusima_part_2.model</model>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_ship_smoke_med_01</name>
+                <mountPoint>HP_smoke</mountPoint>
+              </effect>
+            </effectState>
+            <stateAnimation>
+            </stateAnimation>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	3	</id>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <model>content/dest/ship/JP/Akicusima_destructible/Summer/Akicusima_part_2.model</model>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_ship_smoke_med_01</name>
+                <mountPoint>HP_smoke</mountPoint>
+              </effect>
+            </effectState>
+            <stateAnimation>
+            </stateAnimation>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	4	</id>
+            <bBoxes>
+              <bbox>
+                <position>	0.174165 65.245610 -0.097847	</position>
+                <size>0 0 0</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/dest/ship/JP/Akicusima_destructible/Summer/Akicusima_part_2_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>HP_smoke</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_Module_Smoke_Small</name>
+                <mountPoint>HP_part_4</mountPoint>
+              </effect>
+            </effectState>
+            <stateAnimation>death,idle</stateAnimation>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	5	</id>
+            <bBoxes>
+              <bbox>
+                <position>	-0.135000 8.370000 -3.465000	</position>
+                <size>6.615 3.2130007 6.867</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <usage>crash</usage>
+            <stateAction>	0	</stateAction>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/dest/ship/US/Fletcher_destructible/mechPC_61_Fletcher_destructible_Empty.model</model>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>HP_part_4</fireMountPoint>
+        <fire>
+          <effectFire>EFFECT_fire_small</effectFire>
+          <fire_chance>1.0</fire_chance>
+          <extinguish_time>20.0</extinguish_time>
+          <fire_damage>0.4%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>part3</name>
+      <partId>	4	</partId>
+      <groupId>	4	</groupId>
+      <mountPoint>hull/HP_part_3</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	0.180000 8.639999 -51.480000	</position>
+            <size>	11.880000 6.120000 12.780000	</size>
+            <armorFront>	0.000000 0.000000 0.000000	</armorFront>
+            <armorBack>	0.000000 0.000000 0.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+          <bbox>
+            <position>	-0.180000 11.610000 -22.725000	</position>
+            <size>	12.060000 8.280000 27.090000	</size>
+            <armorFront>	0.000000 0.000000 0.000000	</armorFront>
+            <armorBack>	0.000000 0.000000 0.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+          <bbox>
+            <position>	-0.315000 11.115000 -26.055000	</position>
+            <size>	37.530000 3.600000 7.650000	</size>
+            <armorFront>	0.000000 0.000000 0.000000	</armorFront>
+            <armorBack>	0.000000 0.000000 0.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	150	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/dest/ship/JP/Akicusima_destructible/Summer/Akicusima_part_3.model</model>
+            <stateAnimation>
+            </stateAnimation>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <model>content/dest/ship/JP/Akicusima_destructible/Summer/Akicusima_part_3.model</model>
+            <stateAnimation>
+            </stateAnimation>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <model>content/dest/ship/JP/Akicusima_destructible/Summer/Akicusima_part_3.model</model>
+            <stateAnimation>
+            </stateAnimation>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <bBoxes>
+              <bbox>
+                <position>	0.174165 65.245610 -0.097847	</position>
+                <size>0 0 0</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/dest/ship/JP/Akicusima_destructible/Summer/Akicusima_part_3_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>HP_part_3</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_Module_Smoke_Small</name>
+                <mountPoint>HP_part_3</mountPoint>
+              </effect>
+            </effectState>
+            <affectedParts>
+              <part>
+                <partID>	8	</partID>
+                <minimalPartState>	4	</minimalPartState>
+              </part>
+            </affectedParts>
+            <stateAnimation>death,idle</stateAnimation>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	5	</id>
+            <bBoxes>
+              <bbox>
+                <position>	0.180000 8.639999 -51.480000	</position>
+                <size>8.316 4.284 8.946</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <usage>crash</usage>
+            <stateAction>	0	</stateAction>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/dest/ship/US/Fletcher_destructible/mechPC_61_Fletcher_destructible_Empty.model</model>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>HP_part_3</fireMountPoint>
+        <fire>
+          <effectFire>EFFECT_fire_small</effectFire>
+          <fire_chance>1.0</fire_chance>
+          <extinguish_time>10.0</extinguish_time>
+          <fire_damage>0.4%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>nose_gun</name>
+      <partId>	5	</partId>
+      <groupId>	5	</groupId>
+      <mountPoint>hull/HP_nose_gun</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>scenarioturret</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/JP/Akicusima_destructible/Summer/Akicusima_nose_gun.model</model>
+            <animationController>
+            </animationController>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/JP/Akicusima_destructible/Summer/Akicusima_nose_gun_crash.model</model>
+            <subItems>
+            </subItems>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_smoke</mountPoint>
+              </effect>
+            </effectState>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+            <model>
+            </model>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>crash</usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/US/Fletcher_destructible/mechPC_61_Fletcher_destructible_Empty.model</model>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+            <model>
+            </model>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>big_gun</name>
+      <partId>	6	</partId>
+      <groupId>	6	</groupId>
+      <mountPoint>hull/HP_big_gun</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	0.135000 11.160000 3.510000	</position>
+            <size>	6.575870 3.194250 10.264150	</size>
+            <armorFront>	0.000000 0.000000 0.000000	</armorFront>
+            <armorBack>	0.000000 0.000000 0.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	150	</health>
+        <componentType>Gunner</componentType>
+        <componentXml>t1</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/JP/Akicusima_destructible/Summer/Akicusima_big_gun.model</model>
+            <animationController>	TurretController	</animationController>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/JP/Akicusima_destructible/Summer/Akicusima_big_gun.model</model>
+            <animationController>	TurretController	</animationController>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/JP/Akicusima_destructible/Summer/Akicusima_big_gun.model</model>
+            <animationController>	TurretController	</animationController>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <bBoxes>
+              <bbox>
+                <position>	0.174165 65.245610 -0.097847	</position>
+                <size>0 0 0</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/JP/Akicusima_destructible/Summer/Akicusima_big_gun_crash.model</model>
+            <subItems>
+            </subItems>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>HP_smoke</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_smoke</mountPoint>
+              </effect>
+            </effectState>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	5	</id>
+            <bBoxes>
+              <bbox>
+                <position>	0.135000 11.160000 3.510000	</position>
+                <size>4.603109 2.235975 7.1849071</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>crash</usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/US/Fletcher_destructible/mechPC_61_Fletcher_destructible_Empty.model</model>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+            <model>
+            </model>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>hull/HP_big_gun</fireMountPoint>
+        <fire>
+          <effectFire>EFFECT_fire_small</effectFire>
+          <fire_chance>1.0</fire_chance>
+          <extinguish_time>20.0</extinguish_time>
+          <fire_damage>0.4%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>small_gun</name>
+      <partId>	7	</partId>
+      <groupId>	7	</groupId>
+      <mountPoint>part1/HP_small_gun</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/JP/Akicusima_destructible/Summer/Akicusima_small_gun.model</model>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <bBoxes>
+              <bbox>
+                <position>	0.174165 65.245610 -0.097847	</position>
+                <size>0 0 0</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/JP/Akicusima_destructible/Summer/Akicusima_small_gun_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>HP_smoke</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_smoke</mountPoint>
+              </effect>
+            </effectState>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <bBoxes>
+              <bbox>
+                <position>	0.174165 65.245610 -0.097847	</position>
+                <size>0 0 0</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>crash</usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/US/Fletcher_destructible/mechPC_61_Fletcher_destructible_Empty.model</model>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+            <model>
+            </model>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>kawanishi</name>
+      <partId>	8	</partId>
+      <groupId>	8	</groupId>
+      <mountPoint>hull/HP_Kawanishi_H8K</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/JP/Akicusima_destructible/Summer/Kawanishi_H8K.model</model>
+            <stateAnimation>
+            </stateAnimation>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/JP/Akicusima_destructible/Summer/Kawanishi_H8K.model</model>
+            <stateAnimation>
+            </stateAnimation>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/JP/Akicusima_destructible/Summer/Kawanishi_H8K.model</model>
+            <stateAnimation>
+            </stateAnimation>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <bBoxes>
+              <bbox>
+                <position>	0.174165 65.245610 -0.097847	</position>
+                <size>0 0 0</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/JP/Akicusima_destructible/Summer/Kawanishi_H8K_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>HP_Kawanishi_H8K</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_Kawanishi_H8K</mountPoint>
+              </effect>
+            </effectState>
+            <stateAnimation>death,idle</stateAnimation>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	5	</id>
+            <bBoxes>
+              <bbox>
+                <position>	0.174165 65.245610 -0.097847	</position>
+                <size>0 0 0</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>crash</usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/US/Fletcher_destructible/mechPC_61_Fletcher_destructible_Empty.model</model>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+            <model>
+            </model>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+  </parts>
+  <modelScaling>0.28</modelScaling>
+</dest_akicusima_summer_anim.xml>

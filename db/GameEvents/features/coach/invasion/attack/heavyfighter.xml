@@ -1,0 +1,793 @@
+<heavyfighter.xml>
+  <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
+  <noNamespaceSchemaLocation>../../../../../../../tools/databundler/subscribers.xsd</noNamespaceSchemaLocation>
+  <subscriber>
+    <name>attackSectors</name>
+    <type>objective</type>
+    <group>heavy.fighter</group>
+    <server>
+      <active>	true	</active>
+      <scope>plane.type</scope>
+    </server>
+    <client>
+      <order>	3	</order>
+      <name>
+        <locale>TOOLTIPS_HUD_LOBBY_CLASS_QUEST_NAME_ATTACK_SECTORS_FOR_H-FIGHTERS-NAVY</locale>
+      </name>
+      <description>
+        <locale>TOOLTIPS_HUD_LOBBY_CLASS_QUEST_DESCRIPTION_ATTACK_SECTORS_FOR_H-FIGHTERS-NAVY</locale>
+      </description>
+      <countDescription>
+        <locale>BATTLE_RESULT_CAP_POINT_RECEIVED</locale>
+      </countDescription>
+      <icon>
+        <template>icons/battleResults/task/{state}/taskAttackTerritory_28x28.dds</template>
+      </icon>
+    </client>
+    <nested>
+      <complete>any</complete>
+      <count>	5	</count>
+      <subscriber>
+        <name>	1	</name>
+        <group>	star	</group>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	gain	</name>
+        </event>
+        <condition>
+          <equal>
+            <context>player.plane.type</context>
+            <value>heavy.fighter</value>
+          </equal>
+        </condition>
+        <condition>
+          <equal>
+            <context>sector.status</context>
+            <value>attack</value>
+          </equal>
+        </condition>
+        <count>
+          <context>points.capture</context>
+          <value>	50	</value>
+        </count>
+        <send>
+          <event>
+            <type>coach</type>
+            <context>	rank	</context>
+            <name>heavy.fighter</name>
+          </event>
+        </send>
+      </subscriber>
+      <subscriber>
+        <name>	2	</name>
+        <group>	star	</group>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	gain	</name>
+        </event>
+        <condition>
+          <equal>
+            <context>player.plane.type</context>
+            <value>heavy.fighter</value>
+          </equal>
+        </condition>
+        <condition>
+          <equal>
+            <context>sector.status</context>
+            <value>attack</value>
+          </equal>
+        </condition>
+        <count>
+          <context>points.capture</context>
+          <value>	125	</value>
+        </count>
+        <send>
+          <event>
+            <type>coach</type>
+            <context>	rank	</context>
+            <name>heavy.fighter</name>
+          </event>
+        </send>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	500	</count>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	3	</name>
+        <group>	star	</group>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	gain	</name>
+        </event>
+        <condition>
+          <equal>
+            <context>player.plane.type</context>
+            <value>heavy.fighter</value>
+          </equal>
+        </condition>
+        <condition>
+          <equal>
+            <context>sector.status</context>
+            <value>attack</value>
+          </equal>
+        </condition>
+        <count>
+          <context>points.capture</context>
+          <value>	200	</value>
+        </count>
+        <send>
+          <event>
+            <type>coach</type>
+            <context>	rank	</context>
+            <name>heavy.fighter</name>
+          </event>
+        </send>
+        <transaction>
+          <item>
+            <type>add_xp</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>plane</itemType>
+              </idType>
+            </idTypeList>
+            <count>	500	</count>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	4	</name>
+        <group>	star	</group>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	gain	</name>
+        </event>
+        <condition>
+          <equal>
+            <context>player.plane.type</context>
+            <value>heavy.fighter</value>
+          </equal>
+        </condition>
+        <condition>
+          <equal>
+            <context>sector.status</context>
+            <value>attack</value>
+          </equal>
+        </condition>
+        <count>
+          <context>points.capture</context>
+          <value>	275	</value>
+        </count>
+        <send>
+          <event>
+            <type>coach</type>
+            <context>	rank	</context>
+            <name>heavy.fighter</name>
+          </event>
+        </send>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	2000	</count>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	5	</name>
+        <group>	star	</group>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	gain	</name>
+        </event>
+        <condition>
+          <equal>
+            <context>player.plane.type</context>
+            <value>heavy.fighter</value>
+          </equal>
+        </condition>
+        <condition>
+          <equal>
+            <context>sector.status</context>
+            <value>attack</value>
+          </equal>
+        </condition>
+        <count>
+          <context>points.capture</context>
+          <value>	350	</value>
+        </count>
+        <send>
+          <event>
+            <type>coach</type>
+            <context>	rank	</context>
+            <name>heavy.fighter</name>
+          </event>
+        </send>
+        <transaction>
+          <item>
+            <type>add_xp</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>plane</itemType>
+              </idType>
+            </idTypeList>
+            <count>	1000	</count>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	6	</name>
+        <group>	star	</group>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	gain	</name>
+        </event>
+        <condition>
+          <equal>
+            <context>player.plane.type</context>
+            <value>heavy.fighter</value>
+          </equal>
+        </condition>
+        <condition>
+          <equal>
+            <context>sector.status</context>
+            <value>attack</value>
+          </equal>
+        </condition>
+        <count>
+          <context>points.capture</context>
+        </count>
+      </subscriber>
+    </nested>
+    <send>
+      <event>
+        <type>coach</type>
+        <context>objective</context>
+        <name>attackSectors.for.heavy.fighter.completed</name>
+      </event>
+    </send>
+  </subscriber>
+  <subscriber>
+    <name>captureSectors</name>
+    <type>objective</type>
+    <group>heavy.fighter</group>
+    <server>
+      <active>	true	</active>
+      <scope>plane.type</scope>
+    </server>
+    <client>
+      <order>	2	</order>
+      <name>
+        <locale>TOOLTIPS_HUD_LOBBY_CLASS_QUEST_NAME_CAPTURE_SECTORS_FOR_H-FIGHTERS-NAVY-ASSAULT-BOMBERS</locale>
+      </name>
+      <description>
+        <locale>TOOLTIPS_HUD_LOBBY_CLASS_QUEST_DESCRIPTION_CAPTURE_SECTORS_FOR_H-FIGHTERS-NAVY-ASSAULT-BOMBERS</locale>
+      </description>
+      <countDescription>
+        <locale>BATTLE_RESULT_SECTORS_CAPTURED</locale>
+      </countDescription>
+      <icon>
+        <template>icons/battleResults/task/{state}/taskCaptureTerritory_28x28.dds</template>
+      </icon>
+    </client>
+    <nested>
+      <complete>any</complete>
+      <count>	5	</count>
+      <subscriber>
+        <name>	1	</name>
+        <group>	star	</group>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>sector.capture.participated</name>
+        </event>
+        <condition>
+          <equal>
+            <context>player.plane.type</context>
+            <value>heavy.fighter</value>
+          </equal>
+        </condition>
+        <count>
+          <value>	1	</value>
+        </count>
+        <send>
+          <event>
+            <type>coach</type>
+            <context>	rank	</context>
+            <name>heavy.fighter</name>
+          </event>
+        </send>
+      </subscriber>
+      <subscriber>
+        <name>	2	</name>
+        <group>	star	</group>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>sector.capture.participated</name>
+        </event>
+        <condition>
+          <equal>
+            <context>player.plane.type</context>
+            <value>heavy.fighter</value>
+          </equal>
+        </condition>
+        <count>
+          <value>	2	</value>
+        </count>
+        <send>
+          <event>
+            <type>coach</type>
+            <context>	rank	</context>
+            <name>heavy.fighter</name>
+          </event>
+        </send>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	500	</count>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	3	</name>
+        <group>	star	</group>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>sector.capture.participated</name>
+        </event>
+        <condition>
+          <equal>
+            <context>player.plane.type</context>
+            <value>heavy.fighter</value>
+          </equal>
+        </condition>
+        <count>
+          <value>	3	</value>
+        </count>
+        <send>
+          <event>
+            <type>coach</type>
+            <context>	rank	</context>
+            <name>heavy.fighter</name>
+          </event>
+        </send>
+        <transaction>
+          <item>
+            <type>add_xp</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>plane</itemType>
+              </idType>
+            </idTypeList>
+            <count>	500	</count>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	4	</name>
+        <group>	star	</group>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>sector.capture.participated</name>
+        </event>
+        <condition>
+          <equal>
+            <context>player.plane.type</context>
+            <value>heavy.fighter</value>
+          </equal>
+        </condition>
+        <count>
+          <value>	4	</value>
+        </count>
+        <send>
+          <event>
+            <type>coach</type>
+            <context>	rank	</context>
+            <name>heavy.fighter</name>
+          </event>
+        </send>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	2000	</count>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	5	</name>
+        <group>	star	</group>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>sector.capture.participated</name>
+        </event>
+        <condition>
+          <equal>
+            <context>player.plane.type</context>
+            <value>heavy.fighter</value>
+          </equal>
+        </condition>
+        <count>
+          <value>	5	</value>
+        </count>
+        <send>
+          <event>
+            <type>coach</type>
+            <context>	rank	</context>
+            <name>heavy.fighter</name>
+          </event>
+        </send>
+        <transaction>
+          <item>
+            <type>add_xp</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>plane</itemType>
+              </idType>
+            </idTypeList>
+            <count>	1000	</count>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	6	</name>
+        <group>	star	</group>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>sector.capture.participated</name>
+        </event>
+        <condition>
+          <equal>
+            <context>player.plane.type</context>
+            <value>heavy.fighter</value>
+          </equal>
+        </condition>
+        <count>
+        </count>
+      </subscriber>
+    </nested>
+    <send>
+      <event>
+        <type>coach</type>
+        <context>objective</context>
+        <name>captureSectors.for.heavy.fighter.completed</name>
+      </event>
+    </send>
+  </subscriber>
+  <subscriber>
+    <name>destroyPlanes</name>
+    <type>objective</type>
+    <group>heavy.fighter</group>
+    <server>
+      <active>	true	</active>
+      <scope>plane.type</scope>
+    </server>
+    <client>
+      <order>	1	</order>
+      <name>
+        <locale>TOOLTIPS_HUD_LOBBY_CLASS_QUEST_NAME_ENEMY_PLANES_FOR_FIGHTERS</locale>
+      </name>
+      <description>
+        <locale>TOOLTIPS_HUD_LOBBY_CLASS_QUEST_DESCRIPTION_ENEMY_PLANES_FOR_FIGHTERS</locale>
+      </description>
+      <countDescription>
+        <locale>BATTLE_RESULT_PLANES_DESTROYED_1</locale>
+      </countDescription>
+      <icon>
+        <template>icons/battleResults/task/{state}/taskDestroyAircraft_28x28.dds</template>
+      </icon>
+    </client>
+    <nested>
+      <complete>any</complete>
+      <count>	5	</count>
+      <subscriber>
+        <name>	1	</name>
+        <group>	star	</group>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+        </event>
+        <condition>
+          <equal>
+            <context>player.plane.type</context>
+            <value>heavy.fighter</value>
+          </equal>
+        </condition>
+        <count>
+          <value>	2	</value>
+        </count>
+        <send>
+          <event>
+            <type>coach</type>
+            <context>	rank	</context>
+            <name>heavy.fighter</name>
+          </event>
+        </send>
+      </subscriber>
+      <subscriber>
+        <name>	2	</name>
+        <group>	star	</group>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+        </event>
+        <condition>
+          <equal>
+            <context>player.plane.type</context>
+            <value>heavy.fighter</value>
+          </equal>
+        </condition>
+        <count>
+          <value>	5	</value>
+        </count>
+        <send>
+          <event>
+            <type>coach</type>
+            <context>	rank	</context>
+            <name>heavy.fighter</name>
+          </event>
+        </send>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	500	</count>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	3	</name>
+        <group>	star	</group>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+        </event>
+        <condition>
+          <equal>
+            <context>player.plane.type</context>
+            <value>heavy.fighter</value>
+          </equal>
+        </condition>
+        <count>
+          <value>	7	</value>
+        </count>
+        <send>
+          <event>
+            <type>coach</type>
+            <context>	rank	</context>
+            <name>heavy.fighter</name>
+          </event>
+        </send>
+        <transaction>
+          <item>
+            <type>add_xp</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>plane</itemType>
+              </idType>
+            </idTypeList>
+            <count>	500	</count>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	4	</name>
+        <group>	star	</group>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+        </event>
+        <condition>
+          <equal>
+            <context>player.plane.type</context>
+            <value>heavy.fighter</value>
+          </equal>
+        </condition>
+        <count>
+          <value>	10	</value>
+        </count>
+        <send>
+          <event>
+            <type>coach</type>
+            <context>	rank	</context>
+            <name>heavy.fighter</name>
+          </event>
+        </send>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	2000	</count>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	5	</name>
+        <group>	star	</group>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+        </event>
+        <condition>
+          <equal>
+            <context>player.plane.type</context>
+            <value>heavy.fighter</value>
+          </equal>
+        </condition>
+        <count>
+          <value>	15	</value>
+        </count>
+        <send>
+          <event>
+            <type>coach</type>
+            <context>	rank	</context>
+            <name>heavy.fighter</name>
+          </event>
+        </send>
+        <transaction>
+          <item>
+            <type>add_xp</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>plane</itemType>
+              </idType>
+            </idTypeList>
+            <count>	1000	</count>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	6	</name>
+        <group>	star	</group>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+        </event>
+        <condition>
+          <equal>
+            <context>player.plane.type</context>
+            <value>heavy.fighter</value>
+          </equal>
+        </condition>
+        <count>
+        </count>
+      </subscriber>
+    </nested>
+    <send>
+      <event>
+        <type>coach</type>
+        <context>objective</context>
+        <name>destroyPlanes.for.heavy.fighter.completed</name>
+      </event>
+    </send>
+  </subscriber>
+</heavyfighter.xml>

@@ -1,0 +1,1151 @@
+{
+
+"schemas": {
+
+"battle.arena": {
+	"description": "Контекст арены",
+
+	"type": {
+		"description": "Тип арены",
+		"type": "string",
+		"allowed": ["normal", "training", "warAction"]
+	},
+
+	"source": {
+		"type": "string",
+		"allowed": ["bot", "player"]
+	}
+},
+
+"battle.player": {
+	"description": "Контекст игрока в бою",
+
+	"id": {
+		"type": "integer"
+	},
+	"killed": {
+		"description": "Был ли убит игрок",
+		"type": "string",
+		"allowed": ["no", "yes"]
+	},
+	"lastBattleTime": {
+		"description": "Количество дней с момента последнего входа в бой",
+		"type": "integer"
+	},
+	"plane": {
+		"type": "dict",
+		"schema": {
+			"id": {
+				"type": "integer"
+			},
+			"tir": {
+				"description": "Тир самолета 1 = [1-4] 2 = [5-7] 3 = [8-10]",
+				"type": "string",
+				"allowed": ["1", "2", "3"]
+			},
+			"global": {
+				"description": "GlobalID конфигурации самолёта (топ/сток)",
+				"type": "integer"
+			},
+			"type": {
+				"description": "Класс самолета",
+				"type": "string",
+				"allowed": [
+					"fighter", "assault", "heavy.fighter", "navy", "bomber"
+				]
+			},
+			"nation": {
+				"description": "Нация самолета",
+				"type": "string",
+				"allowed": [
+					"ussr", "usa", "gb", "china", "japan", "germany", "france"
+				]
+			},
+			"level": {
+				"description": "Уровень самолета",
+				"type": "integer",
+				"min": 1,
+				"max": 10
+			}
+		}
+	},
+	"type": {
+		"description": "Тип воздушной цели в бою (игрок, дефендер, бомбер)",
+		"type": "string",
+		"allowed": [
+			"player", "defender", "bomber"
+		]
+	},
+	"squad": {
+		"type": "dict",
+		"schema": {
+			"id": {
+				"description": "ID звена игроков",
+				"type": "integer"
+			},
+			"active": {
+				"description": "Активно звено или нет",
+				"type": "string",
+				"allowed": ["no", "yes"]
+			}
+		}
+	}
+},
+
+"battle.victim": {
+	"description": "Контекст жертвы, того кого убили или выполнили действие",
+
+	"id": {
+		"type": "integer"
+	},
+	"object": {
+		"type": "string",
+		"allowed": ["plane", "ground"]
+	},
+	"type": {
+		"type": "string",
+		"allowed": [
+			"player", "bomber", "defender", "antiair", "any"
+		]
+	}
+},
+
+"battle.sector": {
+	"description": "Контекст сектора",
+
+	"id": {
+		"type": "integer"
+	},
+	"status": {
+		"type": "string",
+		"allowed": ["locked", "defence", "attack"]
+	},
+	"type": {
+		"type" : "string",
+		"allowed" : ["airport", "plant", "base", "center", "fieldcamp"]
+	},
+	"owner": {
+		"type": "string",
+		"allowed": ["neutral", "enemy", "ally"]
+	}
+}
+
+},
+
+"events": [
+
+{
+	"header": "События в бою"
+},
+
+{
+	"description": "Окончания арены и агрегированых данных о игроках",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "finish",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		}
+	}
+},
+
+{
+	"description": "Старт игры в арене",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "start",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		}
+	}
+},
+
+{
+	"description": "Получение информация о арене до старта (когда получен клиент)",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "info",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		}
+	}
+},
+
+{
+	"description": "Конец игры (старт - стоп = время игры в арене)",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "stop",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"loseTeam": {
+			"description": "Индекс проигравшей команды 2 = ничья",
+			"type": "integer",
+			"allowed": [0, 1, 2]
+		}
+	}
+},
+
+{
+	"description": "Старт игры в арене для игрока",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "start",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		}
+	}
+},
+
+{
+	"description": "Конец игры в арене для игрока",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "stop",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		}
+	}
+},
+
+{
+	"description": "Респаун игрока после смерти с сектора с возможностью смены самолета",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "tactical.respawn",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"player": {
+			"schema": "battle.player"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"old.plane": {
+			"type": "dict",
+			"schema": {
+				"id": {
+					"type": "integer"
+				},
+				"global": {
+					"type": "integer"
+				}
+			}
+		}
+	}
+},
+
+{
+	"description": "Нанесение урона по объекту или по игроку (исключает союзников)",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "damage",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		},
+		"victim": {
+			"schema": "battle.victim"
+		},
+		"damage": {
+			"type": "float"
+		},
+		"by": {
+			"type": "string",
+			"allowed": [
+				"bullet", "rocket", "bomb", "ramming", "gunner", "fire",
+				"other"
+			]
+		}
+	}
+},
+
+{
+	"description": "Ассист игрока по зданию или противнику",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "assist",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		},
+		"percent": {
+			"description": "Обычный асист = normal, больше 60% heavy",
+			"type": "string",
+			"allowed": ["normal", "heavy"]
+		},
+		"victim": {
+			"schema": "battle.victim"
+		}
+	}
+},
+
+{
+	"description": "Игрок сбил воздушную цель",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "kill",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		},
+		"victim": {
+			"schema": "battle.player"
+		},
+		"sector": {
+			"schema": "battle.sector"
+		},
+		"by": {
+			"type": "string",
+			"allowed": [
+				"bullet", "rocket", "bomb", "ramming", "gunner", "fire",
+				"other"
+			]
+		}
+	}
+},
+
+{
+	"description": "Смерть игрока",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "death",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		},
+		"killer": {
+			"schema": "battle.player"
+		},
+		"sector": {
+			"schema": "battle.sector"
+		},
+		"by": {
+			"type": "string",
+			"allowed": ["rocket", "bomb", "ramming", "gunner", "fire"]
+		}
+	}
+},
+
+{
+	"description": "Игрок разрушил часть наземного обьекта",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "part.destroy",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"sector": {
+			"schema": "battle.sector"
+		},
+		"player": {
+			"schema": "battle.player"
+		},
+		"victim": {
+			"schema": "battle.victim"
+		}
+	}
+},
+
+{
+	"description": "Игрок разрушил обьект",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "destroy",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"sector": {
+			"schema": "battle.sector"
+		},
+		"player": {
+			"schema": "battle.player"
+		},
+		"victim": {
+			"schema": "battle.victim"
+		},
+		"by": {
+			"type": "string",
+			"allowed": [
+				"bullet", "rocket", "bomb", "ramming", "gunner", "fire",
+				"other"
+			]
+		}
+	}
+},
+
+{
+	"description": "Игрок учавствовал в захвате сектора",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "sector.capture.participated",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"sector": {
+			"schema": "battle.sector"
+		},
+		"player": {
+			"schema": "battle.player"
+		}
+	}
+},
+
+{
+	"description": "Игрок заработал очки",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "gain",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		},
+		"sector": {
+			"schema": "battle.sector"
+		},
+		"victim": {
+			"schema": "battle.victim"
+		},
+		"for": {
+			"type": "string",
+			"enum": ["kill", "assist", "undefined"]
+		},
+		"points": {
+			"type": "dict",
+			"schema": {
+				"battle": {
+					"description": "Боевые очки",
+					"type": "integer"
+				},
+				"mastery": {
+					"description": "Очки мастерства",
+					"type": "integer"
+				},
+				"capture": {
+					"description": "Очки захвата",
+					"type": "integer"
+				}
+			}
+		}
+	}
+},
+
+{
+	"description": "Команда игрока победила",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "win",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		}
+	}
+},
+
+{
+	"description": "Команда игрока проиграла",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "lose",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		}
+	}
+},
+
+{
+	"description": "Команда сыграла в ничью",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "draw",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		}
+	}
+},
+
+{
+	"description": "Игрок закончил бой в топ 1 по урону воздушным целям",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "top.1.by.damage.plane",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		}
+	}
+},
+
+{
+	"description": "Игрок закончил бой в топ 1 по очкам мастерства",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "top.1.by.points.mastery",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		}
+	}
+},
+
+{
+	"description": "Игрок закончил бой в топ 1 по убийству защитников",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "top.1.by.kill.plane.defender",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		}
+	}
+},
+
+{
+	"description": "Игрок закончил бой в топ 1 по убийству воздушных целей",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "top.1.by.kill.plane",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		}
+	}
+},
+
+{
+	"description": "Игрок закончил бой в топ 1 по уничтожению наземных целей",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "top.1.by.kill.ground",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		}
+	}
+},
+
+
+{
+	"description": "Игрок закончил бой в топ 1 по захвату секторов",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "top.1.by.sector.capture",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		}
+	}
+},
+
+{
+	"description": "Игрок закончил бой в топ 1 по боевым очкам",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "top.1.by.points.battle",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		}
+	}
+},
+
+{
+	"description": "Игрок закончил бой в топ 3 по урону воздушным целям",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "top.3.by.damage.plane",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		}
+	}
+},
+
+{
+	"description": "Игрок закончил бой в топ 3 по очкам мастерства",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "top.3.by.points.mastery",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		}
+	}
+},
+
+{
+	"description": "Игрок закончил бой в топ 3 по убийству защитников",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "top.3.by.kill.plane.defender",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		}
+	}
+},
+
+{
+	"description": "Игрок закончил бой в топ 3 по убийству воздушных целей",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "top.3.by.kill.plane",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		}
+	}
+},
+
+{
+	"description": "Игрок закончил бой в топ 3 по уничтожению наземных целей",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "top.3.by.kill.ground",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		}
+	}
+},
+
+
+{
+	"description": "Игрок закончил бой в топ 3 по захвату секторов",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "top.3.by.sector.capture",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		}
+	}
+},
+
+{
+	"description": "Игрок закончил бой в топ 3 по боевым очкам",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "top.3.by.points.battle",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		}
+	}
+},
+
+{
+	"description": "Игрок закончил бой в топ 5 по урону воздушным целям",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "top.5.by.damage.plane",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		}
+	}
+},
+
+{
+	"description": "Игрок закончил бой в топ 5 по очкам мастерства",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "top.5.by.points.mastery",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		}
+	}
+},
+
+{
+	"description": "Игрок закончил бой в топ 5 по убийству защитников",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "top.5.by.kill.plane.defender",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		}
+	}
+},
+
+{
+	"description": "Игрок закончил бой в топ 5 по убийству воздушных целей",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "top.5.by.kill.plane",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		}
+	}
+},
+
+{
+	"description": "Игрок закончил бой в топ 5 по уничтожению наземных целей",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "top.5.by.kill.ground",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		}
+	}
+},
+
+
+{
+	"description": "Игрок закончил бой в топ 5 по захвату секторов",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "top.5.by.sector.capture",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		}
+	}
+},
+
+{
+	"description": "Игрок закончил бой в топ 5 по боевым очкам",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "top.5.by.points.battle",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		}
+	}
+},
+
+{
+	"description": "Начался грозовой фронт",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "stormfront",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		}
+	}
+},
+
+{
+	"description": "Экономические реузльтаты игрока после боя",
+	"active": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "result",
+
+	"schema": {
+		"arena": {
+			"schema": "battle.arena"
+		},
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "battle.player"
+		},
+		"experience": {
+			"type": "integer",
+			"description": "Количество полученого опыта [базовый baseXP] сумарно по всем самолетам"
+		}
+	}
+},
+
+{
+	"header": "События используются для статистики и legacy системами, рекомендуется не использовать в подписке"
+},
+
+{
+	"description": "Экономическое событие",
+	"active": true,
+	"legacy": true,
+
+	"type": "battle",
+	"context": "economics",
+	"name": "event"
+},
+
+{
+	"description": "Cтрик, так же желательно не использовать вообще, а накапливать внутренними механизмами системы",
+	"active": true,
+	"legacy": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "streak"
+},
+
+{
+	"description": "специальный ивент (killPlayerRamming, killPlayerFiring, killTOFiring, killPlayerRocket, killPlayerBomb, killPlayerGunner, avatarRevenge = в будущем будут полностью переделаны на систему EPS, желательно не использовать по возможности, все события кроме avatarRevenge можно найти в событиях убийства)",
+	"active": true,
+	"legacy": true,
+
+	"type": "battle",
+	"context": "player",
+	"name": "special"
+}
+
+]
+
+}

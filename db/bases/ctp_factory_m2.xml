@@ -1,0 +1,671 @@
+<ctp_factory_m2.xml>
+  <parent>default.xml</parent>
+  <name>HUD_MEDIUM_ARMORED_OBJECT</name>
+  <modelPath>content/03_ocean/mechPC_61_Fletcher_destructible_01/mechPC_61_Fletcher_destructible_01.model</modelPath>
+  <modelCrashPath>content/03_ocean/mechPC_61_Fletcher_destructible_01/mechPC_61_Fletcher_destructible_01_crash.model</modelCrashPath>
+  <bBoxes>
+    <mainBox>
+      <size>100 90 100</size>
+    </mainBox>
+  </bBoxes>
+  <damageEffects>
+    <effectFire>EFFECT_fire_med_01</effectFire>
+    <destroy>EFFECT_w_part_exposion_small</destroy>
+  </damageEffects>
+  <maxHealth>	2475	</maxHealth>
+  <dominationCost>0.08</dominationCost>
+  <respawnDelay>-1.0</respawnDelay>
+  <superiorityPoints>	0	</superiorityPoints>
+  <superiorityPointsGroup1>	0	</superiorityPointsGroup1>
+  <superiorityPointsGroup2>	1	</superiorityPointsGroup2>
+  <superiorityPointsGroup3>	1	</superiorityPointsGroup3>
+  <superiorityPointsGroup4>	1	</superiorityPointsGroup4>
+  <superiorityPointsGroup5>	1	</superiorityPointsGroup5>
+  <superiorityPointsGroup6>	1	</superiorityPointsGroup6>
+  <superiorityPointsGroup7>	1	</superiorityPointsGroup7>
+  <superiorityPointsGroup8>	1	</superiorityPointsGroup8>
+  <initialSpawnDelay>0.0</initialSpawnDelay>
+  <type>vehicle</type>
+  <parts>
+    <part>
+      <name>	hull	</name>
+      <partId>	1	</partId>
+      <groupId>	1	</groupId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>	Hull	</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/dest/Layouts/55_el_hallouf_5/Factory/level_1/Middle/Middle_2.model</model>
+            <effectOnStart>
+            </effectOnStart>
+            <effectState>
+            </effectState>
+            <stateAnimation>
+            </stateAnimation>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.000000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>storage</name>
+      <partId>	2	</partId>
+      <groupId>	2	</groupId>
+      <mountPoint>hull/HP_1</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-28.845000 15.120000 -23.760000	</position>
+            <size>	22.950000 30.690000 41.130000	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	0.200000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	550	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/env/Factory_Storage/Factory_Storage.model</model>
+            <effectOnStart>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>smoke_white_ventilation</name>
+                <mountPoint>HP_small_steam_01</mountPoint>
+              </effect>
+              <effect>
+                <name>smoke_white_ventilation</name>
+                <mountPoint>HP_small_steam_02</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <bBoxes>
+              <bbox>
+                <position>	-0.135000 13.995000 21.645000	</position>
+                <size>5 6 4</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/env/Factory_Storage/Factory_Storage_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>expl_object_M</name>
+                <mountPoint>HP_main</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>object_onfire_M</name>
+                <mountPoint>HP_explosion</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>HP_Factory_Storage_Flame1_S</fireMountPoint>
+        <fire>
+          <effectFire>object_burning_L</effectFire>
+          <fire_chance>0.5</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>storage_1</name>
+      <partId>	3	</partId>
+      <groupId>	3	</groupId>
+      <mountPoint>hull/HP_2</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-28.980000 15.120000 21.780000	</position>
+            <size>	23.490000 30.690000 39.690000	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	0.200000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	550	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/env/Factory_Storage/Factory_Storage.model</model>
+            <effectOnStart>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>smoke_white_ventilation</name>
+                <mountPoint>HP_small_steam_01</mountPoint>
+              </effect>
+              <effect>
+                <name>smoke_white_ventilation</name>
+                <mountPoint>HP_small_steam_02</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <bBoxes>
+              <bbox>
+                <position>	-0.135000 13.995000 21.645000	</position>
+                <size>5 6 4</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/env/Factory_Storage/Factory_Storage_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>expl_object_M</name>
+                <mountPoint>HP_main</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>object_onfire_M</name>
+                <mountPoint>HP_explosion</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>HP_Factory_Storage_Flame1_B</fireMountPoint>
+        <fire>
+          <effectFire>object_burning_L</effectFire>
+          <fire_chance>0.5</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>	building	</name>
+      <partId>	4	</partId>
+      <groupId>	4	</groupId>
+      <mountPoint>hull/HP_4</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-3.645000 16.515000 1.215000	</position>
+            <size>	20.610000 37.530000 20.160000	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	0.200000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	550	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/env/Factory_building/Factory_building_big.model</model>
+            <effectOnStart>
+            </effectOnStart>
+            <effectState>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <bBoxes>
+              <bbox>
+                <position>	-0.135000 13.995000 21.645000	</position>
+                <size>5 6 4</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/env/Factory_building/Factory_building_big_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>expl_object_M</name>
+                <mountPoint>HP_main</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>object_onfire_S</name>
+                <mountPoint>HP_explosion</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>HP_factory_building_big_Flame1_S</fireMountPoint>
+        <fire>
+          <effectFire>object_burning_L</effectFire>
+          <fire_chance>0.5</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>	open	</name>
+      <partId>	5	</partId>
+      <groupId>	5	</groupId>
+      <mountPoint>hull/HP_3</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	12.825000 3.285000 35.190000	</position>
+            <size>	32.220000 7.470000 18.450000	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	275	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/env/Factory_Open_Storage/Factory_Open_Storage.model</model>
+            <effectOnStart>
+            </effectOnStart>
+            <effectState>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <bBoxes>
+              <bbox>
+                <position>	-0.135000 13.995000 21.645000	</position>
+                <size>5 6 4</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/env/Factory_Open_Storage/Factory_Open_Storage_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>expl_object_S</name>
+                <mountPoint>HP_main1</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>object_onfire_S</name>
+                <mountPoint>HP_explosion</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>HP_Factory_Open_Storage_Flame1_S</fireMountPoint>
+        <fire>
+          <effectFire>object_burning_M</effectFire>
+          <fire_chance>0.5</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>open_1</name>
+      <partId>	6	</partId>
+      <groupId>	6	</groupId>
+      <mountPoint>hull/HP_6</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	36.090000 4.185000 -28.125000	</position>
+            <size>	18.720000 8.370000 32.490000	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	275	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/env/Factory_Open_Storage/Factory_Open_Storage.model</model>
+            <effectOnStart>
+            </effectOnStart>
+            <effectState>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <bBoxes>
+              <bbox>
+                <position>	-0.135000 13.995000 21.645000	</position>
+                <size>5 6 4</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/env/Factory_Open_Storage/Factory_Open_Storage_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>expl_object_S</name>
+                <mountPoint>HP_main1</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>object_onfire_S</name>
+                <mountPoint>HP_explosion</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>HP_Factory_Open_Storage_Flame1_B</fireMountPoint>
+        <fire>
+          <effectFire>object_burning_M</effectFire>
+          <fire_chance>0.5</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>open_2</name>
+      <partId>	7	</partId>
+      <groupId>	7	</groupId>
+      <mountPoint>hull/HP_5</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	16.785000 4.095000 -29.025000	</position>
+            <size>	18.360000 7.290000 31.860000	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	275	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/env/Factory_Open_Storage/Factory_Open_Storage.model</model>
+            <effectOnStart>
+            </effectOnStart>
+            <effectState>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <bBoxes>
+              <bbox>
+                <position>	-0.135000 13.995000 21.645000	</position>
+                <size>5 6 4</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/env/Factory_Open_Storage/Factory_Open_Storage_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>expl_object_S</name>
+                <mountPoint>HP_main1</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>object_onfire_S</name>
+                <mountPoint>HP_explosion</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>HP_Factory_Open_Storage_Flame1_B</fireMountPoint>
+        <fire>
+          <effectFire>object_burning_M</effectFire>
+          <fire_chance>0.5</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+  </parts>
+  <modelScaling>0.22</modelScaling>
+</ctp_factory_m2.xml>

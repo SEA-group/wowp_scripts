@@ -1,0 +1,844 @@
+<old.xml>
+  <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
+  <noNamespaceSchemaLocation>../../../../../../../tools/databundler/subscribers.xsd</noNamespaceSchemaLocation>
+  <header>
+    <type>quest</type>
+    <group>	tutorial	</group>
+    <server>
+      <active>	false	</active>
+      <scope>player</scope>
+    </server>
+    <nested>
+      <subscriber>
+        <type>quest</type>
+        <group>lesson</group>
+      </subscriber>
+    </nested>
+  </header>
+  <include>
+    <nested>
+      <subscriber>
+        <metadata>
+          <doneCount>	true	</doneCount>
+          <firstDoneTime>	true	</firstDoneTime>
+          <lastDoneTime>	true	</lastDoneTime>
+        </metadata>
+      </subscriber>
+    </nested>
+    <metadata>
+      <doneCount>	true	</doneCount>
+      <firstDoneTime>	true	</firstDoneTime>
+      <lastDoneTime>	true	</lastDoneTime>
+    </metadata>
+  </include>
+  <subscriber>
+    <name>old</name>
+    <nested>
+      <complete>chain</complete>
+      <subscriber>
+        <name>	1	</name>
+        <client>
+          <name>
+            <locale>LOBBY_TUTORIAL_QUEST_1_NAME</locale>
+          </name>
+          <description>
+            <locale>LOBBY_TUTORIAL_QUEST_1_TEXT_2</locale>
+          </description>
+          <tooltip>
+            <locale>TOOLTIPS_TUTORIAL_QUEST_1_HELP_DESCRIPTION</locale>
+          </tooltip>
+        </client>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <id>
+              <self>	true	</self>
+              <child>
+                <id>
+                  <name>	1	</name>
+                </id>
+              </child>
+            </id>
+            <rollback>	true	</rollback>
+            <set>
+              <completed>	false	</completed>
+            </set>
+          </operation>
+        </event>
+        <nested>
+          <complete>repeat</complete>
+          <times>	3	</times>
+          <subscriber>
+            <name>	1	</name>
+            <event>
+              <type>battle</type>
+              <context>player</context>
+              <name>	kill	</name>
+              <condition>
+                <and>
+                  <equal>
+                    <context>arena.type</context>
+                    <value>normal</value>
+                  </equal>
+                  <equal>
+                    <context>arena.source</context>
+                    <value>player</value>
+                  </equal>
+                </and>
+              </condition>
+              <condition>
+                <equal>
+                  <context>victim.type</context>
+                  <value>	defender	</value>
+                </equal>
+              </condition>
+              <count>
+                <value>	3	</value>
+              </count>
+            </event>
+            <event>
+              <type>battle</type>
+              <context>player</context>
+              <name>result</name>
+              <count>
+                <value>	1	</value>
+              </count>
+            </event>
+          </subscriber>
+        </nested>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>	gold	</itemType>
+              </idType>
+            </idTypeList>
+            <count>	50	</count>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	2	</name>
+        <client>
+          <name>
+            <locale>LOBBY_TUTORIAL_QUEST_2_NAME</locale>
+          </name>
+          <description>
+            <locale>LOBBY_TUTORIAL_QUEST_2_TEXT_2</locale>
+          </description>
+          <tooltip>
+            <locale>TOOLTIPS_TUTORIAL_QUEST_2_HELP_DESCRIPTION</locale>
+          </tooltip>
+        </client>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <id>
+              <self>	true	</self>
+              <child>
+                <id>
+                  <name>	1	</name>
+                </id>
+              </child>
+            </id>
+            <rollback>	true	</rollback>
+            <set>
+              <completed>	false	</completed>
+            </set>
+          </operation>
+        </event>
+        <nested>
+          <complete>repeat</complete>
+          <times>	3	</times>
+          <subscriber>
+            <name>	1	</name>
+            <event>
+              <type>battle</type>
+              <context>player</context>
+              <name>destroy</name>
+              <condition>
+                <and>
+                  <equal>
+                    <context>arena.type</context>
+                    <value>normal</value>
+                  </equal>
+                  <equal>
+                    <context>arena.source</context>
+                    <value>player</value>
+                  </equal>
+                </and>
+              </condition>
+              <count>
+                <value>	5	</value>
+              </count>
+            </event>
+            <event>
+              <type>battle</type>
+              <context>player</context>
+              <name>result</name>
+              <count>
+                <value>	1	</value>
+              </count>
+            </event>
+          </subscriber>
+        </nested>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>	gold	</itemType>
+              </idType>
+            </idTypeList>
+            <count>	55	</count>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	3	</name>
+        <client>
+          <name>
+            <locale>LOBBY_TUTORIAL_QUEST_3_NAME</locale>
+          </name>
+          <description>
+            <locale>LOBBY_TUTORIAL_QUEST_3_TEXT_2</locale>
+          </description>
+          <tooltip>
+            <locale>TOOLTIPS_TUTORIAL_QUEST_3_HELP_DESCRIPTION</locale>
+          </tooltip>
+        </client>
+        <nested>
+          <complete>repeat</complete>
+          <times>	1	</times>
+          <subscriber>
+            <name>	1	</name>
+            <event>
+              <type>battle</type>
+              <context>player</context>
+              <name>	kill	</name>
+              <condition>
+                <and>
+                  <equal>
+                    <context>arena.type</context>
+                    <value>normal</value>
+                  </equal>
+                  <equal>
+                    <context>arena.source</context>
+                    <value>player</value>
+                  </equal>
+                </and>
+              </condition>
+              <condition>
+                <equal>
+                  <context>sector.status</context>
+                  <value>defence</value>
+                </equal>
+              </condition>
+              <count>
+                <value>	5	</value>
+              </count>
+            </event>
+            <event>
+              <type>battle</type>
+              <context>player</context>
+              <name>start</name>
+              <operation>
+                <self>	true	</self>
+                <rollback>	true	</rollback>
+                <processors>
+                  <event>
+                    <type>battle</type>
+                    <context>player</context>
+                    <name>result</name>
+                    <count>
+                    </count>
+                  </event>
+                </processors>
+              </operation>
+            </event>
+            <event>
+              <type>battle</type>
+              <context>player</context>
+              <name>result</name>
+              <count>
+                <value>	1	</value>
+              </count>
+            </event>
+          </subscriber>
+        </nested>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>	gold	</itemType>
+              </idType>
+            </idTypeList>
+            <count>	60	</count>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	4	</name>
+        <client>
+          <name>
+            <locale>LOBBY_TUTORIAL_QUEST_4_NAME</locale>
+          </name>
+          <description>
+            <locale>LOBBY_TUTORIAL_QUEST_4_TEXT_2</locale>
+          </description>
+          <tooltip>
+            <locale>TOOLTIPS_TUTORIAL_QUEST_4_HELP_DESCRIPTION</locale>
+          </tooltip>
+        </client>
+        <nested>
+          <complete>repeat</complete>
+          <times>	1	</times>
+          <subscriber>
+            <name>	1	</name>
+            <event>
+              <type>battle</type>
+              <context>player</context>
+              <name>	gain	</name>
+              <condition>
+                <and>
+                  <equal>
+                    <context>arena.type</context>
+                    <value>normal</value>
+                  </equal>
+                  <equal>
+                    <context>arena.source</context>
+                    <value>player</value>
+                  </equal>
+                </and>
+              </condition>
+              <condition>
+                <equal>
+                  <context>sector.status</context>
+                  <value>attack</value>
+                </equal>
+              </condition>
+              <count>
+                <context>points.capture</context>
+                <value>	1500	</value>
+              </count>
+            </event>
+            <event>
+              <type>battle</type>
+              <context>player</context>
+              <name>start</name>
+              <operation>
+                <self>	true	</self>
+                <rollback>	true	</rollback>
+                <processors>
+                  <event>
+                    <type>battle</type>
+                    <context>player</context>
+                    <name>result</name>
+                    <count>
+                    </count>
+                  </event>
+                </processors>
+              </operation>
+            </event>
+            <event>
+              <type>battle</type>
+              <context>player</context>
+              <name>result</name>
+              <count>
+                <value>	1	</value>
+              </count>
+            </event>
+          </subscriber>
+        </nested>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>	gold	</itemType>
+              </idType>
+            </idTypeList>
+            <count>	75	</count>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	5	</name>
+        <client>
+          <name>
+            <locale>LOBBY_TUTORIAL_QUEST_5_NAME</locale>
+          </name>
+          <description>
+            <locale>LOBBY_TUTORIAL_QUEST_5_TEXT</locale>
+          </description>
+          <tooltip>
+            <locale>TOOLTIPS_TUTORIAL_QUEST_5_HELP_DESCRIPTION</locale>
+          </tooltip>
+        </client>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>part.destroy</name>
+          <condition>
+            <and>
+              <equal>
+                <context>arena.type</context>
+                <value>normal</value>
+              </equal>
+              <equal>
+                <context>arena.source</context>
+                <value>player</value>
+              </equal>
+            </and>
+          </condition>
+          <condition>
+            <equal>
+              <context>victim.type</context>
+              <value>antiair</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	4	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>start</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+            <processors>
+              <event>
+                <type>battle</type>
+                <context>player</context>
+                <name>result</name>
+                <count>
+                </count>
+              </event>
+            </processors>
+          </operation>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>result</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>	gold	</itemType>
+              </idType>
+            </idTypeList>
+            <count>	50	</count>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	6	</name>
+        <client>
+          <name>
+            <locale>LOBBY_TUTORIAL_QUEST_6_NAME</locale>
+          </name>
+          <description>
+            <locale>LOBBY_TUTORIAL_QUEST_6_TEXT_2</locale>
+          </description>
+          <tooltip>
+            <locale>TOOLTIPS_TUTORIAL_QUEST_6_HELP_DESCRIPTION</locale>
+          </tooltip>
+        </client>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <id>
+              <self>	true	</self>
+              <child>
+                <id>
+                  <name>	1	</name>
+                </id>
+              </child>
+            </id>
+            <rollback>	true	</rollback>
+            <set>
+              <completed>	false	</completed>
+            </set>
+          </operation>
+        </event>
+        <nested>
+          <complete>repeat</complete>
+          <times>	3	</times>
+          <subscriber>
+            <name>	1	</name>
+            <event>
+              <type>battle</type>
+              <context>player</context>
+              <name>sector.capture.participated</name>
+              <condition>
+                <and>
+                  <equal>
+                    <context>arena.type</context>
+                    <value>normal</value>
+                  </equal>
+                  <equal>
+                    <context>arena.source</context>
+                    <value>player</value>
+                  </equal>
+                </and>
+              </condition>
+              <condition>
+                <equal>
+                  <context>sector.type</context>
+                  <value>airport</value>
+                </equal>
+              </condition>
+              <count>
+                <value>	1	</value>
+              </count>
+            </event>
+            <event>
+              <type>battle</type>
+              <context>player</context>
+              <name>result</name>
+              <count>
+                <value>	1	</value>
+              </count>
+            </event>
+          </subscriber>
+        </nested>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>	gold	</itemType>
+              </idType>
+            </idTypeList>
+            <count>	120	</count>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	7	</name>
+        <client>
+          <name>
+            <locale>LOBBY_TUTORIAL_QUEST_7_NAME</locale>
+          </name>
+          <description>
+            <locale>LOBBY_TUTORIAL_QUEST_7_TEXT_1</locale>
+          </description>
+          <tooltip>
+            <locale>TOOLTIPS_TUTORIAL_QUEST_7_HELP_DESCRIPTION</locale>
+          </tooltip>
+        </client>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <id>
+              <self>	true	</self>
+              <child>
+                <id>
+                  <name>	1	</name>
+                </id>
+              </child>
+            </id>
+            <rollback>	true	</rollback>
+            <set>
+              <completed>	false	</completed>
+            </set>
+          </operation>
+        </event>
+        <nested>
+          <complete>repeat</complete>
+          <times>	1	</times>
+          <subscriber>
+            <name>	1	</name>
+            <event>
+              <type>battle</type>
+              <context>player</context>
+              <name>sector.capture.participated</name>
+              <condition>
+                <and>
+                  <equal>
+                    <context>arena.type</context>
+                    <value>normal</value>
+                  </equal>
+                  <equal>
+                    <context>arena.source</context>
+                    <value>player</value>
+                  </equal>
+                </and>
+              </condition>
+              <condition>
+                <equal>
+                  <context>sector.type</context>
+                  <value>plant</value>
+                </equal>
+              </condition>
+              <count>
+                <value>	1	</value>
+              </count>
+            </event>
+            <event>
+              <type>battle</type>
+              <context>player</context>
+              <name>result</name>
+              <count>
+                <value>	1	</value>
+              </count>
+            </event>
+          </subscriber>
+        </nested>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>	gold	</itemType>
+              </idType>
+            </idTypeList>
+            <count>	120	</count>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	8	</name>
+        <client>
+          <name>
+            <locale>LOBBY_TUTORIAL_QUEST_8_NAME</locale>
+          </name>
+          <description>
+            <locale>LOBBY_TUTORIAL_QUEST_8_TEXT_1</locale>
+          </description>
+          <tooltip>
+            <locale>TOOLTIPS_TUTORIAL_QUEST_8_HELP_DESCRIPTION</locale>
+          </tooltip>
+        </client>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <id>
+              <self>	true	</self>
+              <child>
+                <id>
+                  <name>	1	</name>
+                </id>
+              </child>
+            </id>
+            <rollback>	true	</rollback>
+            <set>
+              <completed>	false	</completed>
+            </set>
+          </operation>
+        </event>
+        <nested>
+          <complete>repeat</complete>
+          <times>	1	</times>
+          <subscriber>
+            <name>	1	</name>
+            <event>
+              <type>battle</type>
+              <context>player</context>
+              <name>sector.capture.participated</name>
+              <condition>
+                <and>
+                  <equal>
+                    <context>arena.type</context>
+                    <value>normal</value>
+                  </equal>
+                  <equal>
+                    <context>arena.source</context>
+                    <value>player</value>
+                  </equal>
+                </and>
+              </condition>
+              <condition>
+                <equal>
+                  <context>sector.type</context>
+                  <value>	base	</value>
+                </equal>
+              </condition>
+              <count>
+                <value>	1	</value>
+              </count>
+            </event>
+            <event>
+              <type>battle</type>
+              <context>player</context>
+              <name>result</name>
+              <count>
+                <value>	1	</value>
+              </count>
+            </event>
+          </subscriber>
+        </nested>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>	gold	</itemType>
+              </idType>
+            </idTypeList>
+            <count>	120	</count>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	9	</name>
+        <client>
+          <name>
+            <locale>LOBBY_TUTORIAL_QUEST_9_NAME</locale>
+          </name>
+          <description>
+            <locale>LOBBY_TUTORIAL_QUEST_9_TEXT_1</locale>
+          </description>
+          <tooltip>
+            <locale>TOOLTIPS_TUTORIAL_QUEST_9_HELP_DESCRIPTION</locale>
+          </tooltip>
+        </client>
+        <nested>
+          <complete>repeat</complete>
+          <times>	1	</times>
+          <subscriber>
+            <name>	1	</name>
+            <event>
+              <type>battle</type>
+              <context>player</context>
+              <name>	kill	</name>
+              <condition>
+                <and>
+                  <equal>
+                    <context>arena.type</context>
+                    <value>normal</value>
+                  </equal>
+                  <equal>
+                    <context>arena.source</context>
+                    <value>player</value>
+                  </equal>
+                </and>
+              </condition>
+              <condition>
+                <equal>
+                  <context>victim.type</context>
+                  <value>bomber</value>
+                </equal>
+              </condition>
+              <count>
+                <value>	3	</value>
+              </count>
+            </event>
+            <event>
+              <type>battle</type>
+              <context>player</context>
+              <name>start</name>
+              <operation>
+                <self>	true	</self>
+                <rollback>	true	</rollback>
+                <processors>
+                  <event>
+                    <type>battle</type>
+                    <context>player</context>
+                    <name>result</name>
+                    <count>
+                    </count>
+                  </event>
+                </processors>
+              </operation>
+            </event>
+            <event>
+              <type>battle</type>
+              <context>player</context>
+              <name>result</name>
+              <count>
+                <value>	1	</value>
+              </count>
+            </event>
+          </subscriber>
+        </nested>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>	gold	</itemType>
+              </idType>
+            </idTypeList>
+            <count>	100	</count>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	10	</name>
+        <client>
+          <name>
+            <locale>LOBBY_TUTORIAL_QUEST_10_NAME</locale>
+          </name>
+          <description>
+            <locale>LOBBY_TUTORIAL_QUEST_10_TEXT_2</locale>
+          </description>
+          <tooltip>
+            <locale>TOOLTIPS_TUTORIAL_QUEST_10_HELP_DESCRIPTION</locale>
+          </tooltip>
+        </client>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>top.3.by.points.battle</name>
+          <condition>
+            <and>
+              <equal>
+                <context>arena.type</context>
+                <value>normal</value>
+              </equal>
+              <equal>
+                <context>arena.source</context>
+                <value>player</value>
+              </equal>
+            </and>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>	gold	</itemType>
+              </idType>
+            </idTypeList>
+            <count>	250	</count>
+          </item>
+        </transaction>
+      </subscriber>
+    </nested>
+  </subscriber>
+</old.xml>

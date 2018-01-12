@@ -1,0 +1,1387 @@
+<nm_4parts_4aa_water.xml>
+  <parent>default.xml</parent>
+  <name>	SHIP	</name>
+  <modelPath>content/03_ocean/mechPC_61_Fletcher_destructible_01/mechPC_61_Fletcher_destructible_01.model</modelPath>
+  <modelCrashPath>content/03_ocean/mechPC_61_Fletcher_destructible_01/mechPC_61_Fletcher_destructible_01_crash.model</modelCrashPath>
+  <bBoxes>
+    <mainBox>
+      <size>100 90 100</size>
+    </mainBox>
+  </bBoxes>
+  <damageEffects>
+    <effectFire>EFFECT_fire_med_02</effectFire>
+    <destroy>EFFECT_w_part_exposion_small</destroy>
+  </damageEffects>
+  <maxHealth>	1200	</maxHealth>
+  <dominationCost>0.08</dominationCost>
+  <respawnDelay>-1.0</respawnDelay>
+  <superiorityPoints>	0	</superiorityPoints>
+  <superiorityPointsGroup1>	0	</superiorityPointsGroup1>
+  <superiorityPointsGroup2>	1	</superiorityPointsGroup2>
+  <superiorityPointsGroup3>	0	</superiorityPointsGroup3>
+  <superiorityPointsGroup4>	2	</superiorityPointsGroup4>
+  <superiorityPointsGroup5>	0	</superiorityPointsGroup5>
+  <superiorityPointsGroup6>	1	</superiorityPointsGroup6>
+  <superiorityPointsGroup7>	0	</superiorityPointsGroup7>
+  <superiorityPointsGroup8>	2	</superiorityPointsGroup8>
+  <superiorityPointsGroup9>	0	</superiorityPointsGroup9>
+  <superiorityPointsGroup10>	1	</superiorityPointsGroup10>
+  <superiorityPointsGroup11>	0	</superiorityPointsGroup11>
+  <superiorityPointsGroup12>	2	</superiorityPointsGroup12>
+  <superiorityPointsGroup13>	0	</superiorityPointsGroup13>
+  <superiorityPointsGroup14>	1	</superiorityPointsGroup14>
+  <superiorityPointsGroup15>	0	</superiorityPointsGroup15>
+  <superiorityPointsGroup16>	2	</superiorityPointsGroup16>
+  <superiorityPointsGroup17>	0	</superiorityPointsGroup17>
+  <type>vehicle</type>
+  <parts>
+    <part>
+      <name>	hull	</name>
+      <groupId>	1	</groupId>
+      <partId>	1	</partId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>	Hull	</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/dest/Layouts/Big/Layout_16_100.model</model>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>boat_1</name>
+      <groupId>	2	</groupId>
+      <partId>	2	</partId>
+      <mountPoint>hull/HP_4</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	49.680000 3.375000 -40.005000	</position>
+            <size>	4.500000 1.980000 13.050000	</size>
+            <armorFront>	0.000000 0.000000 0.000000	</armorFront>
+            <armorBack>	0.000000 0.000000 0.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+          <bbox>
+            <position>	49.680000 1.440000 -49.905000	</position>
+            <size>	4.770000 2.250000 33.750000	</size>
+            <armorFront>	0.000000 0.000000 0.000000	</armorFront>
+            <armorBack>	0.000000 0.000000 0.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <health>	150	</health>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/dest/ship/GR/Shnellboot_destructible/Summer/Shnellboot.model</model>
+            <effectState>
+              <effect>
+                <name>EFFECT_static_ship_38</name>
+                <mountPoint>HP_stream</mountPoint>
+              </effect>
+            </effectState>
+            <stateAnimation>
+            </stateAnimation>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	2	</id>
+            <bBoxes>
+              <bbox>
+                <position>	0.090000 2.160000 9.045000	</position>
+                <size>3.15 1.071 9.135</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <usage>crash</usage>
+            <stateAction>	0	</stateAction>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/dest/ship/GR/Shnellboot_destructible/Summer/Shnellboot_crash.model</model>
+            <effectState>
+            </effectState>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>HP_explosion</mountPoint>
+              </effect>
+            </effectOnStart>
+            <stateAnimation>death,idle</stateAnimation>
+            <affectedParts>
+              <part>
+                <partID>	3	</partID>
+                <minimalPartState>	2	</minimalPartState>
+              </part>
+              <part>
+                <partID>	4	</partID>
+                <minimalPartState>	2	</minimalPartState>
+              </part>
+              <part>
+                <partID>	5	</partID>
+                <minimalPartState>	2	</minimalPartState>
+              </part>
+            </affectedParts>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>HP_effect_2</fireMountPoint>
+        <fire>
+          <effectFire>EFFECT_fire_small</effectFire>
+          <fire_chance>0.25</fire_chance>
+          <extinguish_time>10.0</extinguish_time>
+          <fire_damage>10%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+        <health>20.0</health>
+      </upgrade>
+    </part>
+    <part>
+      <name>aa_turret1_1</name>
+      <groupId>	3	</groupId>
+      <partId>	3	</partId>
+      <mountPoint>boat_1/HP_gun_01</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>scenarioturret</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/GR/Shnellboot_destructible/Summer/Shnellboot_gun_1.model</model>
+            <subItems>
+            </subItems>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>crash</usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/US/Fletcher_destructible/mechPC_61_Fletcher_destructible_Empty.model</model>
+            <subItems>
+            </subItems>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+        <fireMountPoint>
+        </fireMountPoint>
+      </upgrade>
+    </part>
+    <part>
+      <name>aa_turret1_2</name>
+      <groupId>	4	</groupId>
+      <partId>	4	</partId>
+      <mountPoint>boat_1/HP_gun_02</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	49.635000 3.105000 -51.930000	</position>
+            <size>	2.610000 2.520000 3.060000	</size>
+            <armorFront>	0.000000 0.000000 0.000000	</armorFront>
+            <armorBack>	0.000000 0.000000 0.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	150	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>scenarioturret</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/GR/Shnellboot_destructible/Summer/Shnellboot_gun_2.model</model>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/GR/Shnellboot_destructible/Summer/Shnellboot_gun_2_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>HP_base_2_explosion</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_base_2_explosion</mountPoint>
+              </effect>
+            </effectState>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <bBoxes>
+              <bbox>
+                <position>	0.000000 2.340000 -1.395000	</position>
+                <size>1.827 1.197 2.016</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>crash</usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/US/Fletcher_destructible/mechPC_61_Fletcher_destructible_Empty.model</model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>hull/HP_gun_02</fireMountPoint>
+        <fire>
+          <effectFire>EFFECT_fire_small</effectFire>
+          <fire_chance>0.25</fire_chance>
+          <extinguish_time>10.0</extinguish_time>
+          <fire_damage>10%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>aa_turret1_3</name>
+      <groupId>	5	</groupId>
+      <partId>	5	</partId>
+      <mountPoint>boat_1/HP_gun_03</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>scenarioturretreverse</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/GR/Shnellboot_destructible/Summer/Shnellboot_gun_3.model</model>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>crash</usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/US/Fletcher_destructible/mechPC_61_Fletcher_destructible_Empty.model</model>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>boat_2</name>
+      <groupId>	6	</groupId>
+      <partId>	6	</partId>
+      <mountPoint>hull/HP_6</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	16.200000 3.510000 26.370000	</position>
+            <size>	6.660000 1.800000 13.680000	</size>
+            <armorFront>	0.000000 0.000000 0.000000	</armorFront>
+            <armorBack>	0.000000 0.000000 0.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+          <bbox>
+            <position>	16.515000 1.620000 16.920000	</position>
+            <size>	6.570000 2.430000 32.580000	</size>
+            <armorFront>	0.000000 0.000000 0.000000	</armorFront>
+            <armorBack>	0.000000 0.000000 0.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <health>	150	</health>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/dest/ship/GR/Shnellboot_destructible/Summer/Shnellboot.model</model>
+            <effectState>
+              <effect>
+                <name>EFFECT_static_ship_38</name>
+                <mountPoint>HP_stream</mountPoint>
+              </effect>
+            </effectState>
+            <stateAnimation>
+            </stateAnimation>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	2	</id>
+            <bBoxes>
+              <bbox>
+                <position>	0.090000 2.160000 9.045000	</position>
+                <size>3.15 1.071 9.135</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <usage>crash</usage>
+            <stateAction>	0	</stateAction>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/dest/ship/GR/Shnellboot_destructible/Summer/Shnellboot_crash.model</model>
+            <effectState>
+            </effectState>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>HP_explosion</mountPoint>
+              </effect>
+            </effectOnStart>
+            <stateAnimation>death,idle</stateAnimation>
+            <affectedParts>
+              <part>
+                <partID>	7	</partID>
+                <minimalPartState>	2	</minimalPartState>
+              </part>
+              <part>
+                <partID>	8	</partID>
+                <minimalPartState>	2	</minimalPartState>
+              </part>
+              <part>
+                <partID>	9	</partID>
+                <minimalPartState>	2	</minimalPartState>
+              </part>
+            </affectedParts>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>HP_effect_2</fireMountPoint>
+        <fire>
+          <effectFire>EFFECT_fire_small</effectFire>
+          <fire_chance>0.25</fire_chance>
+          <extinguish_time>10.0</extinguish_time>
+          <fire_damage>10%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+        <health>20.0</health>
+      </upgrade>
+    </part>
+    <part>
+      <name>aa_turret2_1</name>
+      <groupId>	7	</groupId>
+      <partId>	7	</partId>
+      <mountPoint>boat_2/HP_gun_01</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>scenarioturret</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/GR/Shnellboot_destructible/Summer/Shnellboot_gun_1.model</model>
+            <subItems>
+            </subItems>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>crash</usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/US/Fletcher_destructible/mechPC_61_Fletcher_destructible_Empty.model</model>
+            <subItems>
+            </subItems>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+        <fireMountPoint>
+        </fireMountPoint>
+      </upgrade>
+    </part>
+    <part>
+      <name>aa_turret2_2</name>
+      <groupId>	8	</groupId>
+      <partId>	8	</partId>
+      <mountPoint>boat_2/HP_gun_02</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	16.200000 3.420000 15.030000	</position>
+            <size>	3.510000 2.520000 3.690000	</size>
+            <armorFront>	0.000000 0.000000 0.000000	</armorFront>
+            <armorBack>	0.000000 0.000000 0.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	150	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>scenarioturret</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/GR/Shnellboot_destructible/Summer/Shnellboot_gun_2.model</model>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/GR/Shnellboot_destructible/Summer/Shnellboot_gun_2_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>HP_base_2_explosion</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_base_2_explosion</mountPoint>
+              </effect>
+            </effectState>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <bBoxes>
+              <bbox>
+                <position>	0.000000 2.340000 -1.395000	</position>
+                <size>1.827 1.197 2.016</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>crash</usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/US/Fletcher_destructible/mechPC_61_Fletcher_destructible_Empty.model</model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>hull/HP_gun_02</fireMountPoint>
+        <fire>
+          <effectFire>EFFECT_fire_small</effectFire>
+          <fire_chance>0.25</fire_chance>
+          <extinguish_time>10.0</extinguish_time>
+          <fire_damage>10%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>aa_turret2_3</name>
+      <groupId>	9	</groupId>
+      <partId>	9	</partId>
+      <mountPoint>boat_2/HP_gun_03</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>scenarioturretreverse</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/GR/Shnellboot_destructible/Summer/Shnellboot_gun_3.model</model>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>crash</usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/US/Fletcher_destructible/mechPC_61_Fletcher_destructible_Empty.model</model>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>boat_3</name>
+      <groupId>	10	</groupId>
+      <partId>	10	</partId>
+      <mountPoint>hull/HP_11</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-16.785000 3.555000 -6.885000	</position>
+            <size>	4.500000 1.980000 13.050000	</size>
+            <armorFront>	0.000000 0.000000 0.000000	</armorFront>
+            <armorBack>	0.000000 0.000000 0.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+          <bbox>
+            <position>	-16.785000 1.440000 -17.235000	</position>
+            <size>	4.770000 2.250000 33.750000	</size>
+            <armorFront>	0.000000 0.000000 0.000000	</armorFront>
+            <armorBack>	0.000000 0.000000 0.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <health>	150	</health>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/dest/ship/GR/Shnellboot_destructible/Summer/Shnellboot.model</model>
+            <effectState>
+              <effect>
+                <name>EFFECT_static_ship_38</name>
+                <mountPoint>HP_stream</mountPoint>
+              </effect>
+            </effectState>
+            <stateAnimation>
+            </stateAnimation>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	2	</id>
+            <bBoxes>
+              <bbox>
+                <position>	0.090000 2.160000 9.045000	</position>
+                <size>3.15 1.071 9.135</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <usage>crash</usage>
+            <stateAction>	0	</stateAction>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/dest/ship/GR/Shnellboot_destructible/Summer/Shnellboot_crash.model</model>
+            <effectState>
+            </effectState>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>HP_explosion</mountPoint>
+              </effect>
+            </effectOnStart>
+            <stateAnimation>death,idle</stateAnimation>
+            <affectedParts>
+              <part>
+                <partID>	11	</partID>
+                <minimalPartState>	2	</minimalPartState>
+              </part>
+              <part>
+                <partID>	12	</partID>
+                <minimalPartState>	2	</minimalPartState>
+              </part>
+              <part>
+                <partID>	13	</partID>
+                <minimalPartState>	2	</minimalPartState>
+              </part>
+            </affectedParts>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>HP_effect_2</fireMountPoint>
+        <fire>
+          <effectFire>EFFECT_fire_small</effectFire>
+          <fire_chance>0.25</fire_chance>
+          <extinguish_time>10.0</extinguish_time>
+          <fire_damage>10%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+        <health>20.0</health>
+      </upgrade>
+    </part>
+    <part>
+      <name>aa_turret3_1</name>
+      <groupId>	11	</groupId>
+      <partId>	11	</partId>
+      <mountPoint>boat_3/HP_gun_01</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>scenarioturret</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/GR/Shnellboot_destructible/Summer/Shnellboot_gun_1.model</model>
+            <subItems>
+            </subItems>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>crash</usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/US/Fletcher_destructible/mechPC_61_Fletcher_destructible_Empty.model</model>
+            <subItems>
+            </subItems>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+        <fireMountPoint>
+        </fireMountPoint>
+      </upgrade>
+    </part>
+    <part>
+      <name>aa_turret3_2</name>
+      <groupId>	12	</groupId>
+      <partId>	12	</partId>
+      <mountPoint>boat_3/HP_gun_02</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-16.200000 3.105000 -18.270000	</position>
+            <size>	2.610000 2.520000 3.060000	</size>
+            <armorFront>	0.000000 0.000000 0.000000	</armorFront>
+            <armorBack>	0.000000 0.000000 0.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	150	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>scenarioturret</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/GR/Shnellboot_destructible/Summer/Shnellboot_gun_2.model</model>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/GR/Shnellboot_destructible/Summer/Shnellboot_gun_2_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>HP_base_2_explosion</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_base_2_explosion</mountPoint>
+              </effect>
+            </effectState>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <bBoxes>
+              <bbox>
+                <position>	0.000000 2.340000 -1.395000	</position>
+                <size>1.827 1.197 2.016</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>crash</usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/US/Fletcher_destructible/mechPC_61_Fletcher_destructible_Empty.model</model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>hull/HP_gun_02</fireMountPoint>
+        <fire>
+          <effectFire>EFFECT_fire_small</effectFire>
+          <fire_chance>0.25</fire_chance>
+          <extinguish_time>10.0</extinguish_time>
+          <fire_damage>10%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>aa_turret3_3</name>
+      <groupId>	13	</groupId>
+      <partId>	13	</partId>
+      <mountPoint>boat_3/HP_gun_03</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>scenarioturretreverse</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/GR/Shnellboot_destructible/Summer/Shnellboot_gun_3.model</model>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>crash</usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/US/Fletcher_destructible/mechPC_61_Fletcher_destructible_Empty.model</model>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>boat_4</name>
+      <groupId>	14	</groupId>
+      <partId>	14	</partId>
+      <mountPoint>hull/HP_16</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-49.635000 3.060000 -39.690000	</position>
+            <size>	6.660000 1.800000 13.680000	</size>
+            <armorFront>	0.000000 0.000000 0.000000	</armorFront>
+            <armorBack>	0.000000 0.000000 0.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+          <bbox>
+            <position>	-49.140000 1.170000 -49.365000	</position>
+            <size>	6.570000 2.430000 32.580000	</size>
+            <armorFront>	0.000000 0.000000 0.000000	</armorFront>
+            <armorBack>	0.000000 0.000000 0.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <health>	150	</health>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/dest/ship/GR/Shnellboot_destructible/Summer/Shnellboot.model</model>
+            <effectState>
+              <effect>
+                <name>EFFECT_static_ship_38</name>
+                <mountPoint>HP_stream</mountPoint>
+              </effect>
+            </effectState>
+            <stateAnimation>
+            </stateAnimation>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	2	</id>
+            <bBoxes>
+              <bbox>
+                <position>	0.090000 2.160000 9.045000	</position>
+                <size>3.15 1.071 9.135</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <usage>crash</usage>
+            <stateAction>	0	</stateAction>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/dest/ship/GR/Shnellboot_destructible/Summer/Shnellboot_crash.model</model>
+            <effectState>
+            </effectState>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>HP_explosion</mountPoint>
+              </effect>
+            </effectOnStart>
+            <stateAnimation>death,idle</stateAnimation>
+            <affectedParts>
+              <part>
+                <partID>	15	</partID>
+                <minimalPartState>	2	</minimalPartState>
+              </part>
+              <part>
+                <partID>	16	</partID>
+                <minimalPartState>	2	</minimalPartState>
+              </part>
+              <part>
+                <partID>	17	</partID>
+                <minimalPartState>	2	</minimalPartState>
+              </part>
+            </affectedParts>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>HP_effect_2</fireMountPoint>
+        <fire>
+          <effectFire>EFFECT_fire_small</effectFire>
+          <fire_chance>0.25</fire_chance>
+          <extinguish_time>10.0</extinguish_time>
+          <fire_damage>10%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+        <health>20.0</health>
+      </upgrade>
+    </part>
+    <part>
+      <name>aa_turret4_1</name>
+      <groupId>	15	</groupId>
+      <partId>	15	</partId>
+      <mountPoint>boat_4/HP_gun_01</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>scenarioturret</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/GR/Shnellboot_destructible/Summer/Shnellboot_gun_1.model</model>
+            <subItems>
+            </subItems>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>crash</usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/US/Fletcher_destructible/mechPC_61_Fletcher_destructible_Empty.model</model>
+            <subItems>
+            </subItems>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+        <fireMountPoint>
+        </fireMountPoint>
+      </upgrade>
+    </part>
+    <part>
+      <name>aa_turret4_2</name>
+      <groupId>	16	</groupId>
+      <partId>	16	</partId>
+      <mountPoint>boat_4/HP_gun_02</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-49.005000 3.465000 -50.715000	</position>
+            <size>	2.610000 2.070000 3.150000	</size>
+            <armorFront>	0.000000 0.000000 0.000000	</armorFront>
+            <armorBack>	0.000000 0.000000 0.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	150	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>scenarioturret</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/GR/Shnellboot_destructible/Summer/Shnellboot_gun_2.model</model>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/GR/Shnellboot_destructible/Summer/Shnellboot_gun_2_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>HP_base_2_explosion</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_base_2_explosion</mountPoint>
+              </effect>
+            </effectState>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <bBoxes>
+              <bbox>
+                <position>	0.000000 2.340000 -1.395000	</position>
+                <size>1.827 1.197 2.016</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>crash</usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/US/Fletcher_destructible/mechPC_61_Fletcher_destructible_Empty.model</model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>hull/HP_gun_02</fireMountPoint>
+        <fire>
+          <effectFire>EFFECT_fire_small</effectFire>
+          <fire_chance>0.25</fire_chance>
+          <extinguish_time>10.0</extinguish_time>
+          <fire_damage>10%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>aa_turret4_3</name>
+      <groupId>	17	</groupId>
+      <partId>	17	</partId>
+      <mountPoint>boat_4/HP_gun_03</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>scenarioturretreverse</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/GR/Shnellboot_destructible/Summer/Shnellboot_gun_3.model</model>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>crash</usage>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/ship/US/Fletcher_destructible/mechPC_61_Fletcher_destructible_Empty.model</model>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+  </parts>
+  <modelScaling>0.22</modelScaling>
+</nm_4parts_4aa_water.xml>

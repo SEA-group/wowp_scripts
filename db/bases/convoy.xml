@@ -1,0 +1,361 @@
+<convoy.xml>
+  <name>	Ship	</name>
+  <bBoxes>
+    <mainBox>
+      <size>50 50 50</size>
+    </mainBox>
+  </bBoxes>
+  <maxHealth>	750	</maxHealth>
+  <dominationCost>0.08</dominationCost>
+  <respawnDelay>-1.0</respawnDelay>
+  <superiorityPoints>	1	</superiorityPoints>
+  <initialSpawnDelay>0.0</initialSpawnDelay>
+  <type>smallTeamObject</type>
+  <modelScaling>	1	</modelScaling>
+  <battleLevelsSettings>
+    <section>
+      <battleLevel>	1	</battleLevel>
+      <hpK>0.2</hpK>
+      <armorK>0.1</armorK>
+    </section>
+    <section>
+      <battleLevel>	2	</battleLevel>
+      <hpK>0.4</hpK>
+      <armorK>0.2</armorK>
+    </section>
+    <section>
+      <battleLevel>	3	</battleLevel>
+      <hpK>0.6</hpK>
+      <armorK>0.3</armorK>
+    </section>
+    <section>
+      <battleLevel>	4	</battleLevel>
+      <hpK>0.8</hpK>
+      <armorK>0.5</armorK>
+    </section>
+    <section>
+      <battleLevel>	5	</battleLevel>
+      <hpK>1.0</hpK>
+      <armorK>1.0</armorK>
+    </section>
+    <section>
+      <battleLevel>	6	</battleLevel>
+      <hpK>1.2</hpK>
+      <armorK>1.0</armorK>
+    </section>
+    <section>
+      <battleLevel>	7	</battleLevel>
+      <hpK>1.4</hpK>
+      <armorK>1.0</armorK>
+    </section>
+    <section>
+      <battleLevel>	8	</battleLevel>
+      <hpK>1.6</hpK>
+      <armorK>1.2</armorK>
+    </section>
+    <section>
+      <battleLevel>	9	</battleLevel>
+      <hpK>1.8</hpK>
+      <armorK>1.2</armorK>
+    </section>
+    <section>
+      <battleLevel>	10	</battleLevel>
+      <hpK>2.0</hpK>
+      <armorK>1.5</armorK>
+    </section>
+  </battleLevelsSettings>
+  <parts>
+    <part>
+      <name>	hull	</name>
+      <partId>	1	</partId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>0 5 0</position>
+            <size>0 0 0</size>
+            <armorFront>10 10 10</armorFront>
+            <armorBack>10 10 10</armorBack>
+            <absorption>	1	</absorption>
+          </bbox>
+        </bBoxes>
+        <health>0%</health>
+        <componentType>	Hull	</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/test_HP.model</model>
+            <animationController>
+            </animationController>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <fallingOutModel>
+            </fallingOutModel>
+            <usage>
+            </usage>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <fireMountPoint>
+        </fireMountPoint>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+      </upgrade>
+    </part>
+    <part>
+      <name>biggun</name>
+      <partId>	2	</partId>
+      <mountPoint>hull/HP_1</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	0.000000 0.000000 -39.854580	</position>
+            <size>	2.260026 1.099112 1.914264	</size>
+            <armorFront>	10.000000 10.000000 10.000000	</armorFront>
+            <armorBack>	10.000000 10.000000 10.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>40%</health>
+        <componentType>Gunner</componentType>
+        <componentXml>t1</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <model>content/Buildings/antiaircraft_gun/normal/lod0/antiaircraft_gun_bone.model</model>
+            <animationController>	TurretController	</animationController>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>crash</usage>
+            <model>content/Buildings/antiaircraft_gun_crash/normal/lod0/antiaircraft_gun_crash.model</model>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <effectState>
+            </effectState>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+      </upgrade>
+    </part>
+    <part>
+      <name>biggun2</name>
+      <partId>	3	</partId>
+      <mountPoint>hull/HP_2</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-39.907650 0.253293 0.000000	</position>
+            <size>	2.059443 0.805687 1.801288	</size>
+            <armorFront>	10.000000 10.000000 10.000000	</armorFront>
+            <armorBack>	10.000000 10.000000 10.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>40%</health>
+        <componentType>Gunner</componentType>
+        <componentXml>t1</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <model>content/Buildings/antiaircraft_gun/normal/lod0/antiaircraft_gun_bone.model</model>
+            <animationController>	TurretController	</animationController>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>crash</usage>
+            <model>content/Buildings/antiaircraft_gun_crash/normal/lod0/antiaircraft_gun_crash.model</model>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <effectState>
+            </effectState>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+      </upgrade>
+    </part>
+    <part>
+      <name>biggun3</name>
+      <partId>	4	</partId>
+      <mountPoint>hull/HP_3</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	0.000000 0.236817 39.965860	</position>
+            <size>	2.083857 0.905642 2.594968	</size>
+            <armorFront>	10.000000 10.000000 10.000000	</armorFront>
+            <armorBack>	10.000000 10.000000 10.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>40%</health>
+        <componentType>Gunner</componentType>
+        <componentXml>t1</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <model>content/Buildings/antiaircraft_gun/normal/lod0/antiaircraft_gun_bone.model</model>
+            <animationController>	TurretController	</animationController>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>crash</usage>
+            <model>content/Buildings/antiaircraft_gun_crash/normal/lod0/antiaircraft_gun_crash.model</model>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <effectState>
+            </effectState>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+      </upgrade>
+    </part>
+    <part>
+      <name>biggun4</name>
+      <partId>	5	</partId>
+      <mountPoint>hull/HP_4</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	40.163050 -0.030158 0.045901	</position>
+            <size>	2.310099 1.255160 2.155310	</size>
+            <armorFront>	10.000000 10.000000 10.000000	</armorFront>
+            <armorBack>	10.000000 10.000000 10.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>40%</health>
+        <componentType>Gunner</componentType>
+        <componentXml>t1</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <usage>
+            </usage>
+            <model>content/Buildings/antiaircraft_gun/normal/lod0/antiaircraft_gun_bone.model</model>
+            <animationController>	TurretController	</animationController>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <usage>crash</usage>
+            <model>content/Buildings/antiaircraft_gun_crash/normal/lod0/antiaircraft_gun_crash.model</model>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <effectState>
+            </effectState>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+      </upgrade>
+    </part>
+  </parts>
+  <turretName>t1</turretName>
+</convoy.xml>

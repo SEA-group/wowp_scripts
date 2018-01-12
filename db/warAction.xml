@@ -1,0 +1,208 @@
+<waraction.xml>
+  <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
+  <noNamespaceSchemaLocation>./../../../../tools/databundler/warAction.xsd</noNamespaceSchemaLocation>
+  <actionID>	3	</actionID>
+  <warAction>
+    <enable>	true	</enable>
+    <war_freeze>	false	</war_freeze>
+    <startAction>161220-0010</startAction>
+    <endAction>180110-0010</endAction>
+    <endActionProlong>	86400	</endActionProlong>
+    <startWars>161220-1700</startWars>
+    <endWars>180109-2000</endWars>
+    <startBattleTime>19:00</startBattleTime>
+    <prepareDuration>	7200	</prepareDuration>
+    <battleDuration>	10800	</battleDuration>
+    <battleResultDuration>	7200	</battleResultDuration>
+    <initForcePoint>
+      <eu>	500000	</eu>
+      <na>	500000	</na>
+      <ru>	1000000	</ru>
+    </initForcePoint>
+    <boostForFractionInPercent>
+      <eu>	0	</eu>
+      <na>	0	</na>
+      <ru>	0	</ru>
+    </boostForFractionInPercent>
+    <forceAxis>
+      <enabled>	false	</enabled>
+      <id>	-1	</id>
+      <value>	0	</value>
+      <operation>set</operation>
+    </forceAxis>
+    <forceAlly>
+      <enabled>	false	</enabled>
+      <id>	-1	</id>
+      <value>	0	</value>
+      <operation>set</operation>
+    </forceAlly>
+    <winTrophiesBonusMultiplier>	2	</winTrophiesBonusMultiplier>
+    <botKillPlayerBonus>2.0</botKillPlayerBonus>
+    <halfGridBonus>3.0</halfGridBonus>
+    <minDynamicScorePoint>	2	</minDynamicScorePoint>
+    <maxDynamicScorePoint>	5	</maxDynamicScorePoint>
+    <minDynamicTimer>	8	</minDynamicTimer>
+    <maxDynamicTimer>	12	</maxDynamicTimer>
+    <battlesFoStartDynamicTimer>	2	</battlesFoStartDynamicTimer>
+    <durationFoStartDynamicTimer>	360	</durationFoStartDynamicTimer>
+    <skipLastHalfGridsBonus>	2	</skipLastHalfGridsBonus>
+    <gridWinPlayerBattle>	50	</gridWinPlayerBattle>
+    <gridScorePoints>0.75</gridScorePoints>
+    <gridScorePoints>0.8</gridScorePoints>
+    <gridScorePoints>0.85</gridScorePoints>
+    <gridScorePoints>0.9</gridScorePoints>
+    <gridScorePoints>0.95</gridScorePoints>
+    <gridScorePoints>1.05</gridScorePoints>
+    <gridScorePoints>1.1</gridScorePoints>
+    <gridScorePoints>1.15</gridScorePoints>
+    <gridScorePoints>1.2</gridScorePoints>
+    <gridScorePoints>1.25</gridScorePoints>
+  </warAction>
+  <battleBonus>
+    <killedPlayers>	3	</killedPlayers>
+    <assistsOnPlayers>	1	</assistsOnPlayers>
+    <killedNPCs>	1	</killedNPCs>
+    <groundDestroyed>	1	</groundDestroyed>
+    <progress>	20	</progress>
+    <progress>	100	</progress>
+    <progress>	300	</progress>
+  </battleBonus>
+  <filters>
+    <global>
+      <include>
+        <level>	4	</level>
+        <level>	5	</level>
+        <level>	6	</level>
+        <level>	7	</level>
+        <level>	8	</level>
+        <level>	9	</level>
+        <level>	10	</level>
+      </include>
+      <exclude>
+      </exclude>
+    </global>
+    <allyCommand>
+      <include>
+        <nation>	USSR	</nation>
+        <nation>USA</nation>
+        <nation>GB</nation>
+        <nation>China</nation>
+        <nation>France</nation>
+        <level>	4	</level>
+        <level>	5	</level>
+        <level>	6	</level>
+        <level>	7	</level>
+        <level>	8	</level>
+        <level>	9	</level>
+        <level>	10	</level>
+      </include>
+      <exclude>
+      </exclude>
+    </allyCommand>
+    <axisCommand>
+      <include>
+        <nation>Germany</nation>
+        <nation>Japan</nation>
+        <level>	4	</level>
+        <level>	5	</level>
+        <level>	6	</level>
+        <level>	7	</level>
+        <level>	8	</level>
+        <level>	9	</level>
+        <level>	10	</level>
+      </include>
+      <exclude>
+      </exclude>
+    </axisCommand>
+    <maps>
+      <spaceID>	13	</spaceID>
+      <spaceID>	14	</spaceID>
+      <spaceID>	15	</spaceID>
+    </maps>
+  </filters>
+  <arenaTypeID>JAPANESE_THREAT</arenaTypeID>
+  <uiConfig>
+    <slidePrizes>
+      <prizes>201,304,409,410,411,412</prizes>
+    </slidePrizes>
+    <pathArt>gui\\flash\\imageJapaneseThreat</pathArt>
+    <hangar>
+      <state>PEACE</state>
+      <state>PREPARE</state>
+      <state>WAR</state>
+      <state>WAR_RESULT</state>
+      <fraction>UNDEFINED</fraction>
+      <name>00_22_Hangar_British_Castle_2017_peace</name>
+    </hangar>
+    <hangar>
+      <state>WAR_RESULT</state>
+      <state>PREPARE</state>
+      <state>PEACE</state>
+      <fraction>	ALLY	</fraction>
+      <name>00_22_Hangar_British_Castle_2017_peace</name>
+    </hangar>
+    <hangar>
+      <state>WAR</state>
+      <fraction>	ALLY	</fraction>
+      <name>00_22_Hangar_British_Castle_2017_war</name>
+    </hangar>
+    <hangar>
+      <state>WAR_RESULT</state>
+      <state>PREPARE</state>
+      <state>PEACE</state>
+      <fraction>	AXIS	</fraction>
+      <name>00_22_Hangar_British_Castle_2017_peace</name>
+    </hangar>
+    <hangar>
+      <state>WAR</state>
+      <fraction>	AXIS	</fraction>
+      <name>00_22_Hangar_British_Castle_2017_war</name>
+    </hangar>
+    <achievements>
+      <startID>	206	</startID>
+      <endID>	219	</endID>
+    </achievements>
+    <actionPlaneID>	5403	</actionPlaneID>
+    <actionPlaneID>	5505	</actionPlaneID>
+    <actionPlaneID>	5603	</actionPlaneID>
+    <actionPlaneID>	1406	</actionPlaneID>
+    <actionPlaneID>	1506	</actionPlaneID>
+    <actionPlaneID>	1606	</actionPlaneID>
+    <actionPlaneID>	2895	</actionPlaneID>
+    <actionPlaneID>	1891	</actionPlaneID>
+    <actionPlaneID>	4891	</actionPlaneID>
+  </uiConfig>
+  <economics>
+    <questsFileName>quests_warAcrions.xml</questsFileName>
+    <warCache>
+      <configID>	1	</configID>
+      <firstWar>
+        <stateID>WAR_RESULT</stateID>
+        <stateID>END</stateID>
+      </firstWar>
+      <anyWar>
+        <stateID>PEACE</stateID>
+        <stateID>PREPARE</stateID>
+        <stateID>WAR_RESULT</stateID>
+        <stateID>END</stateID>
+      </anyWar>
+      <useFilterPlane>	true	</useFilterPlane>
+      <waitCompleteWarBattles>	true	</waitCompleteWarBattles>
+      <compensation>
+        <enable>	true	</enable>
+        <hoursAfterEnd>	36	</hoursAfterEnd>
+        <caseCompensation>VIRTUAL_CASH</caseCompensation>
+      </compensation>
+    </warCache>
+    <fractionSelect>
+      <statesNeedFraction>PREPARE</statesNeedFraction>
+      <statesNeedFraction>WAR</statesNeedFraction>
+      <priceChange>
+        <state>PREPARE</state>
+        <gold>	0	</gold>
+        <credits>	0	</credits>
+        <tickets>	5	</tickets>
+      </priceChange>
+    </fractionSelect>
+  </economics>
+</waraction.xml>

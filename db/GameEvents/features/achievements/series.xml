@@ -1,0 +1,395 @@
+<series.xml>
+  <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
+  <noNamespaceSchemaLocation>../../eps/validators/subscribers.xsd</noNamespaceSchemaLocation>
+  <header>
+    <type>achievement</type>
+    <group>series</group>
+    <server>
+      <active>	true	</active>
+      <scope>plane</scope>
+    </server>
+    <markers>
+      <group>series</group>
+    </markers>
+    <client>
+      <place>	left	</place>
+      <show>
+        <onlyMaxUpdated>	true	</onlyMaxUpdated>
+      </show>
+    </client>
+  </header>
+  <include>
+    <condition>
+      <and>
+        <equal>
+          <context>arena.type</context>
+          <value>normal</value>
+        </equal>
+        <equal>
+          <context>arena.source</context>
+          <value>player</value>
+        </equal>
+      </and>
+    </condition>
+    <metadata>
+      <doneCount>	true	</doneCount>
+      <maxDoneCount>	true	</maxDoneCount>
+      <firstDoneTime>	true	</firstDoneTime>
+      <lastDoneTime>	true	</lastDoneTime>
+    </metadata>
+  </include>
+  <subscriber>
+    <name>reset</name>
+    <type>achievement.reset</type>
+    <group>series</group>
+    <server>
+      <scope>player</scope>
+      <repeat>	true	</repeat>
+      <overwrite>	true	</overwrite>
+    </server>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>finish</name>
+      <operation>
+        <id>
+          <name>*</name>
+          <type>achievement</type>
+          <group>series</group>
+        </id>
+        <scope>plane</scope>
+        <rollback>	true	</rollback>
+        <set>
+          <completed>	false	</completed>
+        </set>
+      </operation>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>effective</name>
+    <client>
+      <order>	1	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_EFFECTIVE</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_EFFECTIVE</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/acSeriesEffective.dds</small>
+        <big>icons/awards/achievementsInfo/acSeriesEffective.dds</big>
+        <faded>icons/awards/achievements/acSeriesEffective_Outline.dds</faded>
+      </icon>
+      <show>
+        <whenDone>	2	</whenDone>
+      </show>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <count>
+        <context>points.battle</context>
+        <id>	0	</id>
+        <value>	5000	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>result</name>
+      <operation>
+        <self>	true	</self>
+        <reset>	true	</reset>
+      </operation>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>groundandinthesky</name>
+    <client>
+      <order>	2	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_GROUND_AND_IN_THE_SKY</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_GROUND_AND_IN_THE_SKY</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/acSeriesGroundSky.dds</small>
+        <big>icons/awards/achievementsInfo/acSeriesGroundSky.dds</big>
+        <faded>icons/awards/achievements/acSeriesGroundSky_Outline.dds</faded>
+      </icon>
+      <show>
+        <whenDone>	2	</whenDone>
+      </show>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <count>
+        <id>	0	</id>
+        <value>	4	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>destroy</name>
+      <count>
+        <id>	1	</id>
+        <value>	4	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>result</name>
+      <operation>
+        <self>	true	</self>
+        <reset>	true	</reset>
+      </operation>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>dangeroustarget</name>
+    <client>
+      <order>	3	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_DANGEROUS_TARGET</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_DANGEROUS_TARGET</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/acSeriesDangerTarget.dds</small>
+        <big>icons/awards/achievementsInfo/acSeriesDangerTarget.dds</big>
+        <faded>icons/awards/achievements/acSeriesDangerTarget_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <condition>
+        <equal>
+          <context>player.killed</context>
+          <value>no</value>
+        </equal>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	3	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>death</name>
+      <operation>
+        <self>	true	</self>
+        <reset>	true	</reset>
+      </operation>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>result</name>
+      <operation>
+        <self>	true	</self>
+        <reset>	true	</reset>
+      </operation>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>avalanche</name>
+    <client>
+      <order>	4	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_AVALANCHE</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_AVALANCHE</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/acSeriesAvalanche.dds</small>
+        <big>icons/awards/achievementsInfo/acSeriesAvalanche.dds</big>
+        <faded>icons/awards/achievements/acSeriesAvalanche_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>destroy</name>
+      <condition>
+        <equal>
+          <context>player.killed</context>
+          <value>no</value>
+        </equal>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	5	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>death</name>
+      <operation>
+        <self>	true	</self>
+        <reset>	true	</reset>
+      </operation>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>result</name>
+      <operation>
+        <self>	true	</self>
+        <reset>	true	</reset>
+      </operation>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>hunter</name>
+    <client>
+      <order>	5	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_HUNTER</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_HUNTER</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/acSeriesHunter.dds</small>
+        <big>icons/awards/achievementsInfo/acSeriesHunter.dds</big>
+        <faded>icons/awards/achievements/acSeriesHunter_Outline.dds</faded>
+      </icon>
+      <show>
+        <whenDone>	2	</whenDone>
+      </show>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <condition>
+        <equal>
+          <context>victim.type</context>
+          <value>	defender	</value>
+        </equal>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	6	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>result</name>
+      <operation>
+        <self>	true	</self>
+        <reset>	true	</reset>
+      </operation>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>invader</name>
+    <client>
+      <order>	6	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_INVADER</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_INVADER</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/acSeriesInvader.dds</small>
+        <big>icons/awards/achievementsInfo/acSeriesInvader.dds</big>
+        <faded>icons/awards/achievements/acSeriesInvader_Outline.dds</faded>
+      </icon>
+      <show>
+        <whenDone>	2	</whenDone>
+      </show>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <count>
+        <context>points.capture</context>
+        <id>	0	</id>
+        <value>	75	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>result</name>
+      <operation>
+        <self>	true	</self>
+        <reset>	true	</reset>
+      </operation>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>dangertail</name>
+    <server>
+      <repeat>	true	</repeat>
+    </server>
+    <client>
+      <order>	7	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_DANGER_TAIL</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_DANGER_TAIL</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/acSeriesDangerTail.dds</small>
+        <big>icons/awards/achievementsInfo/acSeriesDangerTail.dds</big>
+        <faded>icons/awards/achievements/acSeriesDangerTail_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <condition>
+        <equal>
+          <context>by</context>
+          <value>gunner</value>
+        </equal>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	1	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>death</name>
+      <operation>
+        <self>	true	</self>
+        <reset>	true	</reset>
+      </operation>
+    </event>
+  </subscriber>
+</series.xml>

@@ -1,0 +1,142 @@
+<t-ju-88p-1.xml>
+  <parent>base_air_turret_turtle.xml</parent>
+  <hangarName>G7mm-MG81J-T</hangarName>
+  <gunName>turret_machinegun_small</gunName>
+  <nation>germany</nation>
+  <DPS>	5	</DPS>
+  <targetLockShootDistance>	550	</targetLockShootDistance>
+  <targetLostDistance>	550	</targetLostDistance>
+  <burstTime>	6	</burstTime>
+  <burstDelay>	2	</burstDelay>
+  <serverRPS>	15	</serverRPS>
+  <critAbility>0.01</critAbility>
+  <name>T4</name>
+  <Pivots>
+    <pivot>
+      <name>hull/HP_Flame</name>
+      <position>0.0 0.0 0.0</position>
+      <direction>0.0 0.0 0.0</direction>
+    </pivot>
+  </Pivots>
+  <bBoxes>
+    <mainBox>
+      <size>20 24 20</size>
+    </mainBox>
+    <box>
+      <size>20 24 20</size>
+    </box>
+  </bBoxes>
+  <flames>
+    <flamePath>turret/HP_gun_02/HP_antiaircraft_gunFlame_01</flamePath>
+  </flames>
+  <direction>0.0 0.0 0.0</direction>
+  <position>0.0	0.6 -4.0</position>
+  <model>content/common/empty_box.model</model>
+  <modelCrash>content/common/empty_box.model</modelCrash>
+  <modelScaling>1.0 1.0 1.0</modelScaling>
+  <parts>
+    <part>
+      <name>	hull	</name>
+      <partId>	1	</partId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>0.000000 0.00000 0.000000</position>
+            <size>20.00000 24.00000 20.000000</size>
+            <armorFront>10 10 20</armorFront>
+            <armorBack>10 10 10</armorBack>
+            <absorption>	2	</absorption>
+          </bbox>
+        </bBoxes>
+        <health>100%</health>
+        <componentType>	Hull	</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>vehicles/airplanes/german/GR11_BF109G/normal/lod0/fuselage_01.model</model>
+            <animationController>
+            </animationController>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <model>vehicles/airplanes/german/GR11_BF109G/crash/lod0/fuselage_01.model</model>
+            <animationController>
+            </animationController>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	3	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>vehicles/airplanes/german/GR11_BF109G/crash/lod0/fuselage_01.model</model>
+            <animationController>
+            </animationController>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+        </states>
+        <fireMountPoint>
+        </fireMountPoint>
+      </upgrade>
+    </part>
+  </parts>
+  <ik>
+    <model>vehicles/airplanes/german/GR53_JU88P/t-Ju-88P.ik</model>
+  </ik>
+  <visualSettings>
+    <turret>
+      <mountPoint>HP_gun_02</mountPoint>
+      <animatorDirectionDefault>	0.000000 -26.000000 0.000000	</animatorDirectionDefault>
+      <fireOffset>0.5 0.0 0.0</fireOffset>
+      <pitchNodeName>jointV</pitchNodeName>
+      <yawNodeName>jointH</yawNodeName>
+      <directionNodeName>jointG</directionNodeName>
+      <pitchMin>	0.000000	</pitchMin>
+      <pitchMax>	40.000000	</pitchMax>
+      <yawMin>	160.000000	</yawMin>
+      <yawMax>	200.000000	</yawMax>
+      <angularVelocity>	80.000000	</angularVelocity>
+      <shootingNodeName>jointG</shootingNodeName>
+      <idleFrequencyScalerX>0.3</idleFrequencyScalerX>
+      <idleAmplitudeScalerX>0.08</idleAmplitudeScalerX>
+      <idleFrequencyScalerY>0.4</idleFrequencyScalerY>
+      <idleAmplitudeScalerY>0.03</idleAmplitudeScalerY>
+      <shootTime>	0.250000	</shootTime>
+      <shootCooldownTime>	0.750000	</shootCooldownTime>
+      <shootingAmplitudeScaler>	0.050000	</shootingAmplitudeScaler>
+      <enableIdleAnimation>	true	</enableIdleAnimation>
+      <useGunProfile>	true	</useGunProfile>
+      <recoilCurve>
+        <p>	0.000000 0.000000	</p>
+        <p>	0.100000 -0.010000	</p>
+        <p>	0.900000 0.030000	</p>
+        <p>	1.000000 0.000000	</p>
+        <pointCount>	10	</pointCount>
+        <multiplier>	1.000000	</multiplier>
+      </recoilCurve>
+      <animatorDirectionOffset>	0.000000 0.000000 0.000000	</animatorDirectionOffset>
+      <animatorDieDirection>	0.000000 -15.000000 0.000000	</animatorDieDirection>
+      <axisDirections>	2.000000 1.000000 0.000000	</axisDirections>
+      <angularThreshold>	0.000000	</angularThreshold>
+      <angularHalflife>	0.000000	</angularHalflife>
+    </turret>
+  </visualSettings>
+</t-ju-88p-1.xml>

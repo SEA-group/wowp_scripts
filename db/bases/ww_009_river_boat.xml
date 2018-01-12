@@ -1,0 +1,859 @@
+<ww_009_river_boat.xml>
+  <parent>default.xml</parent>
+  <name>	SHIP	</name>
+  <modelPath>content/03_ocean/mechPC_61_Fletcher_destructible_01/mechPC_61_Fletcher_destructible_01.model</modelPath>
+  <modelCrashPath>content/03_ocean/mechPC_61_Fletcher_destructible_01/mechPC_61_Fletcher_destructible_01_crash.model</modelCrashPath>
+  <bBoxes>
+    <mainBox>
+      <size>100 90 100</size>
+    </mainBox>
+  </bBoxes>
+  <damageEffects>
+    <effectFire>EFFECT_fire_med_02</effectFire>
+    <destroy>EFFECT_w_part_exposion_small</destroy>
+  </damageEffects>
+  <maxHealth>	600	</maxHealth>
+  <dominationCost>0.08</dominationCost>
+  <respawnDelay>-1.0</respawnDelay>
+  <superiorityPoints>	0	</superiorityPoints>
+  <superiorityPointsGroup1>	0	</superiorityPointsGroup1>
+  <superiorityPointsGroup2>	1	</superiorityPointsGroup2>
+  <superiorityPointsGroup3>	1	</superiorityPointsGroup3>
+  <superiorityPointsGroup4>	1	</superiorityPointsGroup4>
+  <superiorityPointsGroup5>	1	</superiorityPointsGroup5>
+  <initialSpawnDelay>0.0</initialSpawnDelay>
+  <type>vehicle</type>
+  <parts>
+    <part>
+      <name>	hull	</name>
+      <partId>	1	</partId>
+      <groupId>	1	</groupId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>	Hull	</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/dest/Layouts/Armored/winter/layout_v2.model</model>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <model>content/dest/Layouts/Armored/winter/layout_v2.model</model>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <model>content/dest/Layouts/Armored/winter/layout_v2.model</model>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <stateAction>	0	</stateAction>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/dest/Layouts/Armored/winter/layout_v2.model</model>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>river_boat_1</name>
+      <partId>	2	</partId>
+      <groupId>	2	</groupId>
+      <mountPoint>hull/HP_sp_3</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-25.020000 1.080000 -9.945000	</position>
+            <size>	7.110000 3.690000 26.820000	</size>
+            <armorFront>	10.000000 10.000000 10.000000	</armorFront>
+            <armorBack>	10.000000 10.000000 10.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	150	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/10_eastern_front/mechSG_050_River_Ship_destructible/mechSG_050_River_Ship_hp.model</model>
+            <effectsTriggered>
+              <effect>
+                <trigger>SHOT1</trigger>
+                <name>EFFECT_turret_ship_fire_alpha_01</name>
+                <mountPoint>HP_rocket_01</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT2</trigger>
+                <name>EFFECT_turret_ship_fire_alpha_02</name>
+                <mountPoint>HP_rocket_02</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT3</trigger>
+                <name>EFFECT_turret_ship_fire_alpha_03</name>
+                <mountPoint>HP_rocket_03</mountPoint>
+              </effect>
+            </effectsTriggered>
+            <effectState>
+              <effect>
+                <name>EFFECT_ship_14_night</name>
+                <mountPoint>HP_stream</mountPoint>
+              </effect>
+            </effectState>
+            <subItems>
+            </subItems>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/10_eastern_front/mechSG_050_River_Ship_destructible/mechSG_050_River_Ship_hp.model</model>
+            <effectsTriggered>
+              <effect>
+                <trigger>SHOT1</trigger>
+                <name>EFFECT_turret_ship_fire_alpha_01</name>
+                <mountPoint>HP_rocket_01</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT2</trigger>
+                <name>EFFECT_turret_ship_fire_alpha_02</name>
+                <mountPoint>HP_rocket_02</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT3</trigger>
+                <name>EFFECT_turret_ship_fire_alpha_03</name>
+                <mountPoint>HP_rocket_03</mountPoint>
+              </effect>
+            </effectsTriggered>
+            <effectState>
+              <effect>
+                <name>EFFECT_ship_14_night</name>
+                <mountPoint>HP_stream</mountPoint>
+              </effect>
+            </effectState>
+            <subItems>
+            </subItems>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/10_eastern_front/mechSG_050_River_Ship_destructible/mechSG_050_River_Ship_hp.model</model>
+            <effectsTriggered>
+              <effect>
+                <trigger>SHOT1</trigger>
+                <name>EFFECT_turret_ship_fire_alpha_01</name>
+                <mountPoint>HP_rocket_01</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT2</trigger>
+                <name>EFFECT_turret_ship_fire_alpha_02</name>
+                <mountPoint>HP_rocket_02</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT3</trigger>
+                <name>EFFECT_turret_ship_fire_alpha_03</name>
+                <mountPoint>HP_rocket_03</mountPoint>
+              </effect>
+            </effectsTriggered>
+            <effectState>
+              <effect>
+                <name>EFFECT_ship_14_night</name>
+                <mountPoint>HP_stream</mountPoint>
+              </effect>
+            </effectState>
+            <subItems>
+            </subItems>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/10_eastern_front/mechSG_050_River_Ship_destructible/mechSG_050_River_Ship_hp_crash.model</model>
+            <effectState>
+              <effect>
+                <name>EFFECT_ship_14_night</name>
+                <mountPoint>HP_stream</mountPoint>
+              </effect>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_damage_fire</mountPoint>
+              </effect>
+            </effectState>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>HP_explosion</mountPoint>
+              </effect>
+            </effectOnStart>
+            <subItems>
+            </subItems>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>hull/HP_sp_3</fireMountPoint>
+        <fire>
+          <effectFire>EFFECT_fire_small</effectFire>
+          <fire_chance>0.5</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>river_boat_2</name>
+      <partId>	3	</partId>
+      <groupId>	3	</groupId>
+      <mountPoint>hull/HP_mp_1</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-19.800000 0.810000 29.745000	</position>
+            <size>	7.110000 3.690000 26.820000	</size>
+            <armorFront>	10.000000 10.000000 10.000000	</armorFront>
+            <armorBack>	10.000000 10.000000 10.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	150	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/10_eastern_front/mechSG_050_River_Ship_destructible/mechSG_050_River_Ship_hp.model</model>
+            <effectsTriggered>
+              <effect>
+                <trigger>SHOT4</trigger>
+                <name>EFFECT_turret_ship_fire_alpha_04</name>
+                <mountPoint>HP_rocket_01</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT5</trigger>
+                <name>EFFECT_turret_ship_fire_alpha_05</name>
+                <mountPoint>HP_rocket_02</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT6</trigger>
+                <name>EFFECT_turret_ship_fire_alpha_06</name>
+                <mountPoint>HP_rocket_03</mountPoint>
+              </effect>
+            </effectsTriggered>
+            <effectState>
+              <effect>
+                <name>EFFECT_ship_14_night</name>
+                <mountPoint>HP_stream</mountPoint>
+              </effect>
+            </effectState>
+            <subItems>
+            </subItems>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/10_eastern_front/mechSG_050_River_Ship_destructible/mechSG_050_River_Ship_hp.model</model>
+            <effectsTriggered>
+              <effect>
+                <trigger>SHOT4</trigger>
+                <name>EFFECT_turret_ship_fire_alpha_04</name>
+                <mountPoint>HP_rocket_01</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT5</trigger>
+                <name>EFFECT_turret_ship_fire_alpha_05</name>
+                <mountPoint>HP_rocket_02</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT6</trigger>
+                <name>EFFECT_turret_ship_fire_alpha_06</name>
+                <mountPoint>HP_rocket_03</mountPoint>
+              </effect>
+            </effectsTriggered>
+            <effectState>
+              <effect>
+                <name>EFFECT_ship_14_night</name>
+                <mountPoint>HP_stream</mountPoint>
+              </effect>
+            </effectState>
+            <subItems>
+            </subItems>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/10_eastern_front/mechSG_050_River_Ship_destructible/mechSG_050_River_Ship_hp.model</model>
+            <effectsTriggered>
+              <effect>
+                <trigger>SHOT4</trigger>
+                <name>EFFECT_turret_ship_fire_alpha_04</name>
+                <mountPoint>HP_rocket_01</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT5</trigger>
+                <name>EFFECT_turret_ship_fire_alpha_05</name>
+                <mountPoint>HP_rocket_02</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT6</trigger>
+                <name>EFFECT_turret_ship_fire_alpha_06</name>
+                <mountPoint>HP_rocket_03</mountPoint>
+              </effect>
+            </effectsTriggered>
+            <effectState>
+              <effect>
+                <name>EFFECT_ship_14_night</name>
+                <mountPoint>HP_stream</mountPoint>
+              </effect>
+            </effectState>
+            <subItems>
+            </subItems>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/10_eastern_front/mechSG_050_River_Ship_destructible/mechSG_050_River_Ship_hp_crash.model</model>
+            <effectState>
+              <effect>
+                <name>EFFECT_ship_14_night</name>
+                <mountPoint>HP_stream</mountPoint>
+              </effect>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_damage_fire</mountPoint>
+              </effect>
+            </effectState>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>HP_explosion</mountPoint>
+              </effect>
+            </effectOnStart>
+            <subItems>
+            </subItems>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>hull/HP_mp_1</fireMountPoint>
+        <fire>
+          <effectFire>EFFECT_fire_small</effectFire>
+          <fire_chance>0.5</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>river_boat_3</name>
+      <partId>	4	</partId>
+      <groupId>	4	</groupId>
+      <mountPoint>hull/HP_sp_2</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	0.135000 0.405000 5.175000	</position>
+            <size>	7.110000 3.690000 26.820000	</size>
+            <armorFront>	10.000000 10.000000 10.000000	</armorFront>
+            <armorBack>	10.000000 10.000000 10.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	150	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/10_eastern_front/mechSG_050_River_Ship_destructible/mechSG_050_River_Ship_hp.model</model>
+            <effectsTriggered>
+              <effect>
+                <trigger>SHOT7</trigger>
+                <name>EFFECT_turret_ship_fire_alpha_07</name>
+                <mountPoint>HP_rocket_01</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT8</trigger>
+                <name>EFFECT_turret_ship_fire_alpha_08</name>
+                <mountPoint>HP_rocket_02</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT9</trigger>
+                <name>EFFECT_turret_ship_fire_alpha_09</name>
+                <mountPoint>HP_rocket_03</mountPoint>
+              </effect>
+            </effectsTriggered>
+            <effectState>
+              <effect>
+                <name>EFFECT_ship_14_night</name>
+                <mountPoint>HP_stream</mountPoint>
+              </effect>
+            </effectState>
+            <subItems>
+            </subItems>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/10_eastern_front/mechSG_050_River_Ship_destructible/mechSG_050_River_Ship_hp.model</model>
+            <effectsTriggered>
+              <effect>
+                <trigger>SHOT7</trigger>
+                <name>EFFECT_turret_ship_fire_alpha_07</name>
+                <mountPoint>HP_rocket_01</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT8</trigger>
+                <name>EFFECT_turret_ship_fire_alpha_08</name>
+                <mountPoint>HP_rocket_02</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT9</trigger>
+                <name>EFFECT_turret_ship_fire_alpha_09</name>
+                <mountPoint>HP_rocket_03</mountPoint>
+              </effect>
+            </effectsTriggered>
+            <effectState>
+              <effect>
+                <name>EFFECT_ship_14_night</name>
+                <mountPoint>HP_stream</mountPoint>
+              </effect>
+            </effectState>
+            <subItems>
+            </subItems>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/10_eastern_front/mechSG_050_River_Ship_destructible/mechSG_050_River_Ship_hp.model</model>
+            <effectsTriggered>
+              <effect>
+                <trigger>SHOT7</trigger>
+                <name>EFFECT_turret_ship_fire_alpha_07</name>
+                <mountPoint>HP_rocket_01</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT8</trigger>
+                <name>EFFECT_turret_ship_fire_alpha_08</name>
+                <mountPoint>HP_rocket_02</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT9</trigger>
+                <name>EFFECT_turret_ship_fire_alpha_09</name>
+                <mountPoint>HP_rocket_03</mountPoint>
+              </effect>
+            </effectsTriggered>
+            <effectState>
+              <effect>
+                <name>EFFECT_ship_14_night</name>
+                <mountPoint>HP_stream</mountPoint>
+              </effect>
+            </effectState>
+            <subItems>
+            </subItems>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/10_eastern_front/mechSG_050_River_Ship_destructible/mechSG_050_River_Ship_hp_crash.model</model>
+            <effectState>
+              <effect>
+                <name>EFFECT_ship_14_night</name>
+                <mountPoint>HP_stream</mountPoint>
+              </effect>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_damage_fire</mountPoint>
+              </effect>
+            </effectState>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>HP_explosion</mountPoint>
+              </effect>
+            </effectOnStart>
+            <subItems>
+            </subItems>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>hull/HP_sp_2</fireMountPoint>
+        <fire>
+          <effectFire>EFFECT_fire_small</effectFire>
+          <fire_chance>0.5</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>river_boat_4</name>
+      <partId>	5	</partId>
+      <groupId>	5	</groupId>
+      <mountPoint>hull/HP_mp_2</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	19.620000 0.405000 29.880000	</position>
+            <size>	7.110000 3.690000 26.820000	</size>
+            <armorFront>	10.000000 10.000000 10.000000	</armorFront>
+            <armorBack>	10.000000 10.000000 10.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	150	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/10_eastern_front/mechSG_050_River_Ship_destructible/mechSG_050_River_Ship_hp.model</model>
+            <effectState>
+              <effect>
+                <name>EFFECT_ship_14_night</name>
+                <mountPoint>HP_stream</mountPoint>
+              </effect>
+            </effectState>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/10_eastern_front/mechSG_050_River_Ship_destructible/mechSG_050_River_Ship_hp.model</model>
+            <effectState>
+              <effect>
+                <name>EFFECT_ship_14_night</name>
+                <mountPoint>HP_stream</mountPoint>
+              </effect>
+            </effectState>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/10_eastern_front/mechSG_050_River_Ship_destructible/mechSG_050_River_Ship_hp.model</model>
+            <effectState>
+              <effect>
+                <name>EFFECT_ship_14_night</name>
+                <mountPoint>HP_stream</mountPoint>
+              </effect>
+            </effectState>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/10_eastern_front/mechSG_050_River_Ship_destructible/mechSG_050_River_Ship_hp_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>HP_explosion</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_ship_14_night</name>
+                <mountPoint>HP_stream</mountPoint>
+              </effect>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_damage_fire</mountPoint>
+              </effect>
+            </effectState>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>hull/HP_mp_2</fireMountPoint>
+        <fire>
+          <effectFire>EFFECT_fire_small</effectFire>
+          <fire_chance>0.5</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+  </parts>
+  <modelScaling>0.22</modelScaling>
+</ww_009_river_boat.xml>

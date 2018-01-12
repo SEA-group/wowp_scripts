@@ -1,0 +1,202 @@
+<novorossiysk_028_railway_station.xml>
+  <parent>default.xml</parent>
+  <name>Storehouse</name>
+  <bBoxes>
+    <mainBox>
+      <size>100 90 100</size>
+    </mainBox>
+  </bBoxes>
+  <damageEffects>
+    <effectFire>EFFECT_fire_med_01</effectFire>
+  </damageEffects>
+  <maxHealth>	1000	</maxHealth>
+  <dominationCost>0.08</dominationCost>
+  <respawnDelay>-1.0</respawnDelay>
+  <superiorityPoints>	1	</superiorityPoints>
+  <initialSpawnDelay>0.0</initialSpawnDelay>
+  <modelScaling>	0.300000	</modelScaling>
+  <type>smallTeamObject</type>
+  <battleLevelsSettings>
+    <section>
+      <battleLevel>	1	</battleLevel>
+      <hpK>0.15</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	2	</battleLevel>
+      <hpK>0.3</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	3	</battleLevel>
+      <hpK>0.6</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	4	</battleLevel>
+      <hpK>0.8</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	5	</battleLevel>
+      <hpK>1.0</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	6	</battleLevel>
+      <hpK>1.2</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	7	</battleLevel>
+      <hpK>1.5</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	8	</battleLevel>
+      <hpK>2.0</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	9	</battleLevel>
+      <hpK>2.5</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	10	</battleLevel>
+      <hpK>2.5</hpK>
+      <armorK>	0	</armorK>
+    </section>
+  </battleLevelsSettings>
+  <parts>
+    <part>
+      <name>	hull	</name>
+      <partId>	1	</partId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-29.538400 8.152574 1.296582	</position>
+            <size>	56.486870 16.614890 31.600400	</size>
+            <armorFront>	10.000000 10.000000 10.000000	</armorFront>
+            <armorBack>	10.000000 10.000000 10.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	1000	</health>
+        <componentType>	Hull	</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/01_Novorossiysk/bldNR_028_railway_station_01_anim/bldNR_028_railway_station_01_anim_p1_crash.model</model>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <stateAnimation>
+            </stateAnimation>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <model>content/01_Novorossiysk/bldNR_028_railway_station_01_anim/bldNR_028_railway_station_01_anim_p1_crash.model</model>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <stateAnimation>
+            </stateAnimation>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <model>content/01_Novorossiysk/bldNR_028_railway_station_01_anim/bldNR_028_railway_station_01_anim_p1_crash.model</model>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <stateAnimation>
+            </stateAnimation>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/01_Novorossiysk/bldNR_028_railway_station_01_anim/bldNR_028_railway_station_01_anim_p1_crash.model</model>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_prop_exposion_large</name>
+                <mountPoint>HP_1_Explosion</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_med_02</name>
+                <mountPoint>HP_1_Smoke</mountPoint>
+              </effect>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_med_02</name>
+                <mountPoint>HP_2_Smoke</mountPoint>
+              </effect>
+            </effectState>
+            <stateAnimation>crash,crash_idle</stateAnimation>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>hull/HP_1_Smoke</fireMountPoint>
+        <fire>
+          <fire_chance>1.0</fire_chance>
+          <extinguish_time>20.0</extinguish_time>
+          <fire_damage>2%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+      </upgrade>
+    </part>
+  </parts>
+</novorossiysk_028_railway_station.xml>

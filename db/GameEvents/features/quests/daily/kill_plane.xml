@@ -1,0 +1,3643 @@
+<kill_plane.xml>
+  <header>
+    <type>quest</type>
+    <group>daily</group>
+    <markers>
+      <group>kill_plane</group>
+    </markers>
+    <server>
+      <active>	false	</active>
+      <scope>player</scope>
+    </server>
+    <nested>
+      <subscriber>
+        <type>quest</type>
+        <group>daily.tier</group>
+      </subscriber>
+    </nested>
+  </header>
+  <include>
+    <nested>
+      <subscriber>
+        <condition>
+          <and>
+            <equal>
+              <context>arena.type</context>
+              <value>normal</value>
+            </equal>
+            <equal>
+              <context>arena.source</context>
+              <value>player</value>
+            </equal>
+          </and>
+        </condition>
+        <metadata>
+          <doneCount>	true	</doneCount>
+          <firstDoneTime>	true	</firstDoneTime>
+          <lastDoneTime>	true	</lastDoneTime>
+        </metadata>
+      </subscriber>
+    </nested>
+    <metadata>
+      <doneCount>	true	</doneCount>
+      <firstDoneTime>	true	</firstDoneTime>
+      <lastDoneTime>	true	</lastDoneTime>
+    </metadata>
+  </include>
+  <subscriber>
+    <name>	9	</name>
+    <client>
+      <name>
+        <locale>LOBBY_QUESTS_2016_DAILY_015_NAME</locale>
+      </name>
+      <description>
+        <locale>LOBBY_QUESTS_2016_DAILY_015</locale>
+      </description>
+    </client>
+    <markers>
+      <difficulty>medium</difficulty>
+    </markers>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	4	</count>
+      </item>
+    </transaction>
+    <nested>
+      <complete>all</complete>
+      <subscriber>
+        <name>	1	</name>
+        <markers>
+          <tir>	1	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	1	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>victim.type</context>
+              <value>bomber</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	30	</value>
+          </count>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	25000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	2	</name>
+        <markers>
+          <tir>	2	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	2	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>victim.type</context>
+              <value>bomber</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	30	</value>
+          </count>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	50000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>freeexp</itemType>
+              </idType>
+            </idTypeList>
+            <count>	250	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	3	</name>
+        <markers>
+          <tir>	3	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	3	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>victim.type</context>
+              <value>bomber</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	30	</value>
+          </count>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	100000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>freeexp</itemType>
+              </idType>
+            </idTypeList>
+            <count>	500	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>	10	</name>
+    <client>
+      <name>
+        <locale>LOBBY_QUESTS_2016_DAILY_016_NAME</locale>
+      </name>
+      <description>
+        <locale>LOBBY_QUESTS_2016_DAILY_016</locale>
+      </description>
+    </client>
+    <markers>
+      <difficulty>	easy	</difficulty>
+    </markers>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+    <nested>
+      <complete>all</complete>
+      <subscriber>
+        <name>	1	</name>
+        <markers>
+          <tir>	1	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	1	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>victim.type</context>
+              <value>bomber</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	6	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>win</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	10000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	2	</name>
+        <markers>
+          <tir>	2	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	2	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>victim.type</context>
+              <value>bomber</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	6	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>win</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	25000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	3	</name>
+        <markers>
+          <tir>	3	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	3	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>victim.type</context>
+              <value>bomber</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	6	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>win</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	50000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>	11	</name>
+    <client>
+      <name>
+        <locale>LOBBY_QUESTS_2016_DAILY_017_NAME</locale>
+      </name>
+      <description>
+        <locale>LOBBY_QUESTS_2016_DAILY_017</locale>
+      </description>
+    </client>
+    <markers>
+      <difficulty>	hard	</difficulty>
+    </markers>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	10	</count>
+      </item>
+    </transaction>
+    <nested>
+      <complete>all</complete>
+      <subscriber>
+        <name>	1	</name>
+        <markers>
+          <tir>	1	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	1	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <count>
+            <value>	125	</value>
+          </count>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	50000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	2	</name>
+        <markers>
+          <tir>	2	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	2	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <count>
+            <value>	125	</value>
+          </count>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	100000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>freeexp</itemType>
+              </idType>
+            </idTypeList>
+            <count>	750	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	3	</name>
+        <markers>
+          <tir>	3	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	3	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <count>
+            <value>	125	</value>
+          </count>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	150000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>freeexp</itemType>
+              </idType>
+            </idTypeList>
+            <count>	1000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>	12	</name>
+    <client>
+      <name>
+        <locale>LOBBY_QUESTS_2016_DAILY_018_NAME</locale>
+      </name>
+      <description>
+        <locale>LOBBY_QUESTS_2016_DAILY_018</locale>
+      </description>
+    </client>
+    <markers>
+      <difficulty>	easy	</difficulty>
+    </markers>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+    <nested>
+      <complete>all</complete>
+      <subscriber>
+        <name>	1	</name>
+        <markers>
+          <tir>	1	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	1	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <count>
+            <value>	9	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	10000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	2	</name>
+        <markers>
+          <tir>	2	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	2	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <count>
+            <value>	9	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	25000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	3	</name>
+        <markers>
+          <tir>	3	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	3	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <count>
+            <value>	9	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	50000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>	13	</name>
+    <client>
+      <name>
+        <locale>LOBBY_QUESTS_2016_DAILY_019_NAME</locale>
+      </name>
+      <description>
+        <locale>LOBBY_QUESTS_2016_DAILY_019</locale>
+      </description>
+    </client>
+    <markers>
+      <difficulty>medium</difficulty>
+    </markers>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	4	</count>
+      </item>
+    </transaction>
+    <nested>
+      <complete>all</complete>
+      <subscriber>
+        <name>	1	</name>
+        <markers>
+          <tir>	1	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	1	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <count>
+            <value>	14	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	25000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	2	</name>
+        <markers>
+          <tir>	2	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	2	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <count>
+            <value>	14	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	50000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>freeexp</itemType>
+              </idType>
+            </idTypeList>
+            <count>	250	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	3	</name>
+        <markers>
+          <tir>	3	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	3	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <count>
+            <value>	14	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	100000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>freeexp</itemType>
+              </idType>
+            </idTypeList>
+            <count>	500	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>	14	</name>
+    <client>
+      <name>
+        <locale>LOBBY_QUESTS_2016_DAILY_020_NAME</locale>
+      </name>
+      <description>
+        <locale>LOBBY_QUESTS_2016_DAILY_020</locale>
+      </description>
+    </client>
+    <markers>
+      <difficulty>medium</difficulty>
+    </markers>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	4	</count>
+      </item>
+    </transaction>
+    <nested>
+      <complete>all</complete>
+      <subscriber>
+        <name>	1	</name>
+        <markers>
+          <tir>	1	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	1	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <in>
+              <context>by</context>
+              <value>	bomb	</value>
+              <value>rocket</value>
+            </in>
+          </condition>
+          <count>
+            <value>	10	</value>
+          </count>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	25000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	2	</name>
+        <markers>
+          <tir>	2	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	2	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <in>
+              <context>by</context>
+              <value>	bomb	</value>
+              <value>rocket</value>
+            </in>
+          </condition>
+          <count>
+            <value>	10	</value>
+          </count>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	50000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>freeexp</itemType>
+              </idType>
+            </idTypeList>
+            <count>	250	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	3	</name>
+        <markers>
+          <tir>	3	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	3	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <in>
+              <context>by</context>
+              <value>	bomb	</value>
+              <value>rocket</value>
+            </in>
+          </condition>
+          <count>
+            <value>	10	</value>
+          </count>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	100000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>freeexp</itemType>
+              </idType>
+            </idTypeList>
+            <count>	500	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>	15	</name>
+    <client>
+      <name>
+        <locale>LOBBY_QUESTS_2016_DAILY_021_NAME</locale>
+      </name>
+      <description>
+        <locale>LOBBY_QUESTS_2016_DAILY_021</locale>
+      </description>
+    </client>
+    <markers>
+      <difficulty>	easy	</difficulty>
+    </markers>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+    <nested>
+      <complete>all</complete>
+      <subscriber>
+        <name>	1	</name>
+        <markers>
+          <tir>	1	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	1	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <in>
+              <context>by</context>
+              <value>	bomb	</value>
+              <value>rocket</value>
+            </in>
+          </condition>
+          <count>
+            <value>	2	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	10000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	2	</name>
+        <markers>
+          <tir>	2	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	2	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <in>
+              <context>by</context>
+              <value>	bomb	</value>
+              <value>rocket</value>
+            </in>
+          </condition>
+          <count>
+            <value>	2	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	25000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	3	</name>
+        <markers>
+          <tir>	3	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	3	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <in>
+              <context>by</context>
+              <value>	bomb	</value>
+              <value>rocket</value>
+            </in>
+          </condition>
+          <count>
+            <value>	2	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	50000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>	16	</name>
+    <client>
+      <name>
+        <locale>LOBBY_QUESTS_2016_DAILY_022_NAME</locale>
+      </name>
+      <description>
+        <locale>LOBBY_QUESTS_2016_DAILY_022</locale>
+      </description>
+    </client>
+    <markers>
+      <difficulty>medium</difficulty>
+    </markers>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	4	</count>
+      </item>
+    </transaction>
+    <nested>
+      <complete>all</complete>
+      <subscriber>
+        <name>	1	</name>
+        <markers>
+          <tir>	1	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	1	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>sector.status</context>
+              <value>defence</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	6	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>win</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	25000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	2	</name>
+        <markers>
+          <tir>	2	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	2	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>sector.status</context>
+              <value>defence</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	6	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>win</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	50000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>freeexp</itemType>
+              </idType>
+            </idTypeList>
+            <count>	250	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	3	</name>
+        <markers>
+          <tir>	3	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	3	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>sector.status</context>
+              <value>defence</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	6	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>win</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	100000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>freeexp</itemType>
+              </idType>
+            </idTypeList>
+            <count>	500	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>	42	</name>
+    <client>
+      <name>
+        <locale>LOBBY_QUESTS_2016_DAILY_048_NAME</locale>
+      </name>
+      <description>
+        <locale>LOBBY_QUESTS_2016_DAILY_048</locale>
+      </description>
+    </client>
+    <markers>
+      <difficulty>	easy	</difficulty>
+    </markers>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+    <nested>
+      <complete>all</complete>
+      <subscriber>
+        <name>	1	</name>
+        <markers>
+          <tir>	1	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	1	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>victim.type</context>
+              <value>	defender	</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	6	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>death</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	10000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	2	</name>
+        <markers>
+          <tir>	2	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	2	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>victim.type</context>
+              <value>	defender	</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	6	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>death</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	25000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	3	</name>
+        <markers>
+          <tir>	3	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	3	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>victim.type</context>
+              <value>	defender	</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	6	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>death</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	50000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>	43	</name>
+    <client>
+      <name>
+        <locale>LOBBY_QUESTS_2016_DAILY_049_NAME</locale>
+      </name>
+      <description>
+        <locale>LOBBY_QUESTS_2016_DAILY_049</locale>
+      </description>
+    </client>
+    <markers>
+      <difficulty>	easy	</difficulty>
+    </markers>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+    <nested>
+      <complete>all</complete>
+      <subscriber>
+        <name>	1	</name>
+        <markers>
+          <tir>	1	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	1	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>victim.type</context>
+              <value>	defender	</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	6	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>death</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	10000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	2	</name>
+        <markers>
+          <tir>	2	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	2	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>victim.type</context>
+              <value>	defender	</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	6	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>death</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	25000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	3	</name>
+        <markers>
+          <tir>	3	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	3	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>victim.type</context>
+              <value>	defender	</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	6	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>death</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	50000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>	58	</name>
+    <client>
+      <name>
+        <locale>LOBBY_QUESTS_2016_DAILY_064_NAME</locale>
+      </name>
+      <description>
+        <locale>LOBBY_QUESTS_2016_DAILY_064</locale>
+      </description>
+    </client>
+    <markers>
+      <difficulty>	easy	</difficulty>
+    </markers>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+    <nested>
+      <complete>all</complete>
+      <subscriber>
+        <name>	1	</name>
+        <markers>
+          <tir>	1	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	1	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>sector.status</context>
+              <value>defence</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	5	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	10000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	2	</name>
+        <markers>
+          <tir>	2	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	2	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>sector.status</context>
+              <value>defence</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	5	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	25000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	3	</name>
+        <markers>
+          <tir>	3	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	3	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>sector.status</context>
+              <value>defence</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	5	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	50000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>	59	</name>
+    <client>
+      <name>
+        <locale>LOBBY_QUESTS_2016_DAILY_065_NAME</locale>
+      </name>
+      <description>
+        <locale>LOBBY_QUESTS_2016_DAILY_065</locale>
+      </description>
+    </client>
+    <markers>
+      <difficulty>	easy	</difficulty>
+    </markers>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+    <nested>
+      <complete>all</complete>
+      <subscriber>
+        <name>	1	</name>
+        <markers>
+          <tir>	1	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	1	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>sector.status</context>
+              <value>defence</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	5	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	10000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	2	</name>
+        <markers>
+          <tir>	2	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	2	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>sector.status</context>
+              <value>defence</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	5	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	25000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	3	</name>
+        <markers>
+          <tir>	3	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	3	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>sector.status</context>
+              <value>defence</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	5	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	50000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>	60	</name>
+    <client>
+      <name>
+        <locale>LOBBY_QUESTS_2016_DAILY_066_NAME</locale>
+      </name>
+      <description>
+        <locale>LOBBY_QUESTS_2016_DAILY_066</locale>
+      </description>
+    </client>
+    <markers>
+      <difficulty>	easy	</difficulty>
+    </markers>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+    <nested>
+      <complete>all</complete>
+      <subscriber>
+        <name>	1	</name>
+        <markers>
+          <tir>	1	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	1	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>sector.status</context>
+              <value>defence</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	5	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	10000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	2	</name>
+        <markers>
+          <tir>	2	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	2	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>sector.status</context>
+              <value>defence</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	5	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	25000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	3	</name>
+        <markers>
+          <tir>	3	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	3	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>sector.status</context>
+              <value>defence</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	5	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	50000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>	61	</name>
+    <client>
+      <name>
+        <locale>LOBBY_QUESTS_2016_DAILY_067_NAME</locale>
+      </name>
+      <description>
+        <locale>LOBBY_QUESTS_2016_DAILY_067</locale>
+      </description>
+    </client>
+    <markers>
+      <difficulty>	hard	</difficulty>
+    </markers>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	10	</count>
+      </item>
+    </transaction>
+    <nested>
+      <complete>all</complete>
+      <subscriber>
+        <name>	1	</name>
+        <markers>
+          <tir>	1	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	1	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>victim.type</context>
+              <value>	defender	</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	50	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>win</name>
+          <count>
+            <id>	0	</id>
+            <value>	1	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>start</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+            <processors>
+              <count>	0	</count>
+            </processors>
+          </operation>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	lose	</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	draw	</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	25000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	2	</name>
+        <markers>
+          <tir>	2	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	2	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>victim.type</context>
+              <value>	defender	</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	50	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>win</name>
+          <count>
+            <id>	0	</id>
+            <value>	1	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>start</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+            <processors>
+              <count>	0	</count>
+            </processors>
+          </operation>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	lose	</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	draw	</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	50000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>freeexp</itemType>
+              </idType>
+            </idTypeList>
+            <count>	250	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	3	</name>
+        <markers>
+          <tir>	3	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	3	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>victim.type</context>
+              <value>	defender	</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	50	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>win</name>
+          <count>
+            <id>	0	</id>
+            <value>	1	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>start</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+            <processors>
+              <count>	0	</count>
+            </processors>
+          </operation>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	lose	</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	draw	</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	100000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>freeexp</itemType>
+              </idType>
+            </idTypeList>
+            <count>	500	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>	86	</name>
+    <client>
+      <name>
+        <locale>LOBBY_QUESTS_2016_DAILY_092_NAME</locale>
+      </name>
+      <description>
+        <locale>LOBBY_QUESTS_2016_DAILY_092</locale>
+      </description>
+    </client>
+    <markers>
+      <difficulty>	easy	</difficulty>
+    </markers>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+    <nested>
+      <complete>all</complete>
+      <subscriber>
+        <name>	1	</name>
+        <markers>
+          <tir>	1	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	1	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>by</context>
+              <value>gunner</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	10000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	2	</name>
+        <markers>
+          <tir>	2	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	2	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>by</context>
+              <value>gunner</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	25000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	3	</name>
+        <markers>
+          <tir>	3	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	3	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>by</context>
+              <value>gunner</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	50000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>	87	</name>
+    <client>
+      <name>
+        <locale>LOBBY_QUESTS_2016_DAILY_093_NAME</locale>
+      </name>
+      <description>
+        <locale>LOBBY_QUESTS_2016_DAILY_093</locale>
+      </description>
+    </client>
+    <markers>
+      <difficulty>medium</difficulty>
+    </markers>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	4	</count>
+      </item>
+    </transaction>
+    <nested>
+      <complete>all</complete>
+      <subscriber>
+        <name>	1	</name>
+        <markers>
+          <tir>	1	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	1	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>by</context>
+              <value>gunner</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	2	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	25000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	2	</name>
+        <markers>
+          <tir>	2	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	2	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>by</context>
+              <value>gunner</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	2	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	50000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	3	</name>
+        <markers>
+          <tir>	3	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	3	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>by</context>
+              <value>gunner</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	2	</value>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	100000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>	90	</name>
+    <client>
+      <name>
+        <locale>LOBBY_QUESTS_2017_DAILY_001_NAME</locale>
+      </name>
+      <description>
+        <locale>LOBBY_QUESTS_2017_DAILY_001</locale>
+      </description>
+    </client>
+    <markers>
+      <difficulty>medium</difficulty>
+    </markers>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	4	</count>
+      </item>
+    </transaction>
+    <nested>
+      <complete>all</complete>
+      <subscriber>
+        <name>	1	</name>
+        <markers>
+          <tir>	1	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	1	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <and>
+              <equal>
+                <context>sector.type</context>
+                <value>airport</value>
+              </equal>
+              <equal>
+                <context>player.plane.type</context>
+                <value>fighter</value>
+              </equal>
+            </and>
+          </condition>
+          <count>
+            <value>	40	</value>
+          </count>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	25000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	2	</name>
+        <markers>
+          <tir>	2	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	2	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <and>
+              <equal>
+                <context>sector.type</context>
+                <value>airport</value>
+              </equal>
+              <equal>
+                <context>player.plane.type</context>
+                <value>fighter</value>
+              </equal>
+            </and>
+          </condition>
+          <count>
+            <value>	40	</value>
+          </count>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	50000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>freeexp</itemType>
+              </idType>
+            </idTypeList>
+            <count>	250	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	3	</name>
+        <markers>
+          <tir>	3	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	3	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <and>
+              <equal>
+                <context>sector.type</context>
+                <value>airport</value>
+              </equal>
+              <equal>
+                <context>player.plane.type</context>
+                <value>fighter</value>
+              </equal>
+            </and>
+          </condition>
+          <count>
+            <value>	40	</value>
+          </count>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	100000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>freeexp</itemType>
+              </idType>
+            </idTypeList>
+            <count>	500	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>	91	</name>
+    <client>
+      <name>
+        <locale>LOBBY_QUESTS_2017_DAILY_002_NAME</locale>
+      </name>
+      <description>
+        <locale>LOBBY_QUESTS_2017_DAILY_002</locale>
+      </description>
+    </client>
+    <markers>
+      <difficulty>medium</difficulty>
+    </markers>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	4	</count>
+      </item>
+    </transaction>
+    <nested>
+      <complete>all</complete>
+      <subscriber>
+        <name>	1	</name>
+        <markers>
+          <tir>	1	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	1	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <and>
+              <equal>
+                <context>sector.type</context>
+                <value>center</value>
+              </equal>
+              <equal>
+                <context>player.plane.type</context>
+                <value>	navy	</value>
+              </equal>
+            </and>
+          </condition>
+          <count>
+            <value>	40	</value>
+          </count>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	25000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	2	</name>
+        <markers>
+          <tir>	2	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	2	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <and>
+              <equal>
+                <context>sector.type</context>
+                <value>center</value>
+              </equal>
+              <equal>
+                <context>player.plane.type</context>
+                <value>	navy	</value>
+              </equal>
+            </and>
+          </condition>
+          <count>
+            <value>	40	</value>
+          </count>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	50000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>freeexp</itemType>
+              </idType>
+            </idTypeList>
+            <count>	250	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	3	</name>
+        <markers>
+          <tir>	3	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	3	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <and>
+              <equal>
+                <context>sector.type</context>
+                <value>center</value>
+              </equal>
+              <equal>
+                <context>player.plane.type</context>
+                <value>	navy	</value>
+              </equal>
+            </and>
+          </condition>
+          <count>
+            <value>	40	</value>
+          </count>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	100000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>freeexp</itemType>
+              </idType>
+            </idTypeList>
+            <count>	500	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>	92	</name>
+    <client>
+      <name>
+        <locale>LOBBY_QUESTS_2017_DAILY_003_NAME</locale>
+      </name>
+      <description>
+        <locale>LOBBY_QUESTS_2017_DAILY_003</locale>
+      </description>
+    </client>
+    <markers>
+      <difficulty>medium</difficulty>
+    </markers>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	4	</count>
+      </item>
+    </transaction>
+    <nested>
+      <complete>all</complete>
+      <subscriber>
+        <name>	1	</name>
+        <markers>
+          <tir>	1	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	1	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <and>
+              <equal>
+                <context>sector.type</context>
+                <value>center</value>
+              </equal>
+              <equal>
+                <context>player.plane.type</context>
+                <value>heavy.fighter</value>
+              </equal>
+            </and>
+          </condition>
+          <count>
+            <value>	40	</value>
+          </count>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	25000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	2	</name>
+        <markers>
+          <tir>	2	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	2	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <and>
+              <equal>
+                <context>sector.type</context>
+                <value>center</value>
+              </equal>
+              <equal>
+                <context>player.plane.type</context>
+                <value>heavy.fighter</value>
+              </equal>
+            </and>
+          </condition>
+          <count>
+            <value>	40	</value>
+          </count>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	50000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>freeexp</itemType>
+              </idType>
+            </idTypeList>
+            <count>	250	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	3	</name>
+        <markers>
+          <tir>	3	</tir>
+        </markers>
+        <condition>
+          <equal>
+            <context>player.plane.tir</context>
+            <value>	3	</value>
+          </equal>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <and>
+              <equal>
+                <context>sector.type</context>
+                <value>center</value>
+              </equal>
+              <equal>
+                <context>player.plane.type</context>
+                <value>heavy.fighter</value>
+              </equal>
+            </and>
+          </condition>
+          <count>
+            <value>	40	</value>
+          </count>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	100000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>freeexp</itemType>
+              </idType>
+            </idTypeList>
+            <count>	500	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+    </nested>
+  </subscriber>
+</kill_plane.xml>

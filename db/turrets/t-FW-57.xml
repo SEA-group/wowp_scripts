@@ -1,0 +1,142 @@
+<t-fw-57.xml>
+  <parent>base_air_turret_tower.xml</parent>
+  <yawSpeed>	60	</yawSpeed>
+  <pitchSpeed>	60	</pitchSpeed>
+  <hangarName>G7mm-MG15-T</hangarName>
+  <gunName>turret_machinegun_small</gunName>
+  <nation>germany</nation>
+  <DPS>	3	</DPS>
+  <targetLockShootDistance>	500	</targetLockShootDistance>
+  <targetLostDistance>	500	</targetLostDistance>
+  <burstTime>	6	</burstTime>
+  <burstDelay>	2	</burstDelay>
+  <serverRPS>	15	</serverRPS>
+  <critAbility>0.01</critAbility>
+  <name>T4</name>
+  <Pivots>
+    <pivot>
+      <name>hull/HP_Flame</name>
+      <position>0.0 0.0 0.0</position>
+      <direction>0.0 0.0 0.0</direction>
+    </pivot>
+  </Pivots>
+  <bBoxes>
+    <mainBox>
+      <size>20 24 20</size>
+    </mainBox>
+    <box>
+      <size>20 24 20</size>
+    </box>
+  </bBoxes>
+  <flames>
+    <flamePath>turret/HP_antiaircraft_gunFlame_01</flamePath>
+  </flames>
+  <shells>
+    <shellPath>turret/HP_shell_01</shellPath>
+  </shells>
+  <animatorDirectionDefault>0.0 -16.0 0.0</animatorDirectionDefault>
+  <animatorDirectionOffset>0.0 0.0 0.0</animatorDirectionOffset>
+  <direction>0.0 0.0 0.0</direction>
+  <position>0.0	0.6 -4.0</position>
+  <model>content/common/empty_box.model</model>
+  <modelCrash>content/common/empty_box.model</modelCrash>
+  <modelScaling>1.0 1.0 1.0</modelScaling>
+  <parts>
+    <part>
+      <name>	hull	</name>
+      <partId>	1	</partId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>0.000000 0.00000 0.000000</position>
+            <size>20.00000 24.00000 20.000000</size>
+            <armorFront>10 10 20</armorFront>
+            <armorBack>10 10 10</armorBack>
+            <absorption>	2	</absorption>
+          </bbox>
+        </bBoxes>
+        <health>100%</health>
+        <componentType>	Hull	</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>vehicles/airplanes/german/GR11_BF109G/normal/lod0/fuselage_01.model</model>
+            <animationController>
+            </animationController>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <model>vehicles/airplanes/german/GR11_BF109G/crash/lod0/fuselage_01.model</model>
+            <animationController>
+            </animationController>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	3	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>vehicles/airplanes/german/GR11_BF109G/crash/lod0/fuselage_01.model</model>
+            <animationController>
+            </animationController>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+        </states>
+        <fireMountPoint>
+        </fireMountPoint>
+      </upgrade>
+    </part>
+  </parts>
+  <ik>
+    <model>vehicles/airplanes/german/GR04_FW57/t-FW-57.ik</model>
+  </ik>
+  <visualSettings>
+    <turret>
+      <pitchNodeName>jointV</pitchNodeName>
+      <yawNodeName>jointH</yawNodeName>
+      <directionNodeName>jointG</directionNodeName>
+      <animatorDirectionDefault>0.0 -16.0 0.0</animatorDirectionDefault>
+      <animatorDirectionOffset>0.0 0.0 0.0</animatorDirectionOffset>
+      <animatorDieDirection>	10.000000 -15.000000 0.000000	</animatorDieDirection>
+      <pitchMin>	-5	</pitchMin>
+      <pitchMax>	50	</pitchMax>
+      <yawMin>	120	</yawMin>
+      <yawMax>	240	</yawMax>
+      <angularVelocity>	60	</angularVelocity>
+      <shootingNodeName>jointG</shootingNodeName>
+      <idleFrequencyScalerX>0.3</idleFrequencyScalerX>
+      <idleAmplitudeScalerX>0.08</idleAmplitudeScalerX>
+      <idleFrequencyScalerY>0.4</idleFrequencyScalerY>
+      <idleAmplitudeScalerY>0.05</idleAmplitudeScalerY>
+      <shootTime>0.25</shootTime>
+      <shootCooldownTime>0.75</shootCooldownTime>
+      <shootingAmplitudeScaler>0.05</shootingAmplitudeScaler>
+      <enableIdleAnimation>	True	</enableIdleAnimation>
+      <useGunProfile>	True	</useGunProfile>
+      <recoilCurve>
+        <p>0.0 0.0</p>
+        <p>0.1 -0.01</p>
+        <p>0.9 0.03</p>
+        <p>1.0 0.0</p>
+      </recoilCurve>
+    </turret>
+  </visualSettings>
+</t-fw-57.xml>

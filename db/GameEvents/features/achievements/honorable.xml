@@ -1,0 +1,130 @@
+<honorable.xml>
+  <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
+  <noNamespaceSchemaLocation>../../eps/validators/subscribers.xsd</noNamespaceSchemaLocation>
+  <header>
+    <type>achievement</type>
+    <group>honorable</group>
+    <server>
+      <active>	true	</active>
+      <scope>player</scope>
+    </server>
+    <markers>
+      <group>honorable</group>
+    </markers>
+    <client>
+      <place>	left	</place>
+    </client>
+  </header>
+  <include>
+    <condition>
+      <and>
+        <equal>
+          <context>arena.type</context>
+          <value>normal</value>
+        </equal>
+        <equal>
+          <context>arena.source</context>
+          <value>player</value>
+        </equal>
+      </and>
+    </condition>
+    <metadata>
+      <doneCount>	true	</doneCount>
+      <firstDoneTime>	true	</firstDoneTime>
+      <lastDoneTime>	true	</lastDoneTime>
+    </metadata>
+  </include>
+  <subscriber>
+    <name>reset</name>
+    <type>achievement.reset</type>
+    <group>honorable</group>
+    <server>
+      <repeat>	true	</repeat>
+      <overwrite>	true	</overwrite>
+    </server>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>finish</name>
+      <operation>
+        <id>
+          <name>*</name>
+          <type>achievement</type>
+          <group>honorable</group>
+        </id>
+        <rollback>	true	</rollback>
+        <set>
+          <completed>	false	</completed>
+        </set>
+      </operation>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>rocketeer</name>
+    <client>
+      <order>	0	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_ROCKETEER</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_ROCKETEER</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/acHonoraryRocketeer.dds</small>
+        <big>icons/awards/achievementsInfo/acHonoraryRocketeer.dds</big>
+        <faded>icons/awards/achievements/acHonoraryRocketeer_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <condition>
+        <equal>
+          <context>by</context>
+          <value>rocket</value>
+        </equal>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>	reliablerear	</name>
+    <client>
+      <order>	1	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_RELIABLE_REAR</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_RELIABLE_REAR</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/acHonoraryReliableRear.dds</small>
+        <big>icons/awards/achievementsInfo/acHonoraryReliableRear.dds</big>
+        <faded>icons/awards/achievements/acHonoraryReliableRear_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <condition>
+        <equal>
+          <context>by</context>
+          <value>gunner</value>
+        </equal>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+</honorable.xml>

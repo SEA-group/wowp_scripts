@@ -1,0 +1,3207 @@
+<sectors.xml>
+  <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
+  <noNamespaceSchemaLocation>../../../../../../../tools/databundler/subscribers.xsd</noNamespaceSchemaLocation>
+  <header>
+    <type>	hint	</type>
+    <group>complexes</group>
+    <server>
+      <active>	true	</active>
+      <scope>player</scope>
+    </server>
+    <nested>
+      <subscriber>
+        <type>hint.trigger</type>
+        <server>
+          <active>	true	</active>
+          <scope>player</scope>
+        </server>
+      </subscriber>
+    </nested>
+  </header>
+  <subscriber>
+    <name>fieldcamp</name>
+    <group>complexes.start</group>
+    <client>
+      <hints>
+        <id>	101	</id>
+        <order>
+          <name>fighter</name>
+          <value>	72	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	72	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	70	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	72	</value>
+        </order>
+        <order>
+          <name>bomber</name>
+          <value>	72	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattle</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <contains>
+            <context>arena.sectors</context>
+            <value>fieldcamp</value>
+          </contains>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <contains>
+              <context>arena.sectors</context>
+              <value>fieldcamp</value>
+            </contains>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>runway</name>
+    <group>complexes.start</group>
+    <client>
+      <hints>
+        <id>	102	</id>
+        <order>
+          <name>fighter</name>
+          <value>	78	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	76	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	74	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	70	</value>
+        </order>
+        <order>
+          <name>bomber</name>
+          <value>	70	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattle</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <contains>
+            <context>arena.sectors</context>
+            <value>runway</value>
+          </contains>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <contains>
+              <context>arena.sectors</context>
+              <value>runway</value>
+            </contains>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>airbase</name>
+    <group>complexes.start</group>
+    <client>
+      <hints>
+        <id>	103	</id>
+        <order>
+          <name>fighter</name>
+          <value>	76	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	78	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	78	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	74	</value>
+        </order>
+        <order>
+          <name>bomber</name>
+          <value>	74	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattle</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <contains>
+            <context>arena.sectors</context>
+            <value>airbase</value>
+          </contains>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <contains>
+              <context>arena.sectors</context>
+              <value>airbase</value>
+            </contains>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>foundry</name>
+    <group>complexes.start</group>
+    <client>
+      <hints>
+        <id>	104	</id>
+        <order>
+          <name>fighter</name>
+          <value>	70	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	70	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	72	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	78	</value>
+        </order>
+        <order>
+          <name>bomber</name>
+          <value>	76	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattle</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <contains>
+            <context>arena.sectors</context>
+            <value>foundry</value>
+          </contains>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <contains>
+              <context>arena.sectors</context>
+              <value>foundry</value>
+            </contains>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>commandcenter</name>
+    <group>complexes.start</group>
+    <client>
+      <hints>
+        <id>	105	</id>
+        <order>
+          <name>fighter</name>
+          <value>	75	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	75	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	75	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	75	</value>
+        </order>
+        <order>
+          <name>bomber</name>
+          <value>	78	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattle</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <contains>
+            <context>arena.sectors</context>
+            <value>commandcenter</value>
+          </contains>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <contains>
+              <context>arena.sectors</context>
+              <value>commandcenter</value>
+            </contains>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>citadel</name>
+    <group>complexes.start</group>
+    <client>
+      <hints>
+        <id>	106	</id>
+        <order>
+          <name>fighter</name>
+          <value>	74	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	74	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	76	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	76	</value>
+        </order>
+        <order>
+          <name>bomber</name>
+          <value>	75	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattle</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <contains>
+            <context>arena.sectors</context>
+            <value>citadel</value>
+          </contains>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <contains>
+              <context>arena.sectors</context>
+              <value>citadel</value>
+            </contains>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>	areaConquest	</name>
+    <group>complexes.start</group>
+    <client>
+      <hints>
+        <id>	107	</id>
+        <order>
+          <name>fighter</name>
+          <value>	95	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	95	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	95	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	95	</value>
+        </order>
+        <order>
+          <name>bomber</name>
+          <value>	95	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleAreaConquest</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <equal>
+            <context>arena.type</context>
+            <value>normal</value>
+          </equal>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <equal>
+              <context>arena.type</context>
+              <value>normal</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>areaCapture</name>
+    <group>complexes.start</group>
+    <client>
+      <hints>
+        <id>	110	</id>
+        <order>
+          <name>fighter</name>
+          <value>	90	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	90	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	90	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	90	</value>
+        </order>
+        <order>
+          <name>bomber</name>
+          <value>	90	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleAreaConquest</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <equal>
+            <context>arena.type</context>
+            <value>normal</value>
+          </equal>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <equal>
+              <context>arena.type</context>
+              <value>normal</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>classObjectives</name>
+    <group>complexes.start</group>
+    <client>
+      <hints>
+        <id>	111	</id>
+        <order>
+          <name>fighter</name>
+          <value>	50	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	50	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	50	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	50	</value>
+        </order>
+        <order>
+          <name>bomber</name>
+          <value>	50	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleAreaConquest</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <equal>
+            <context>arena.type</context>
+            <value>normal</value>
+          </equal>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <equal>
+              <context>arena.type</context>
+              <value>normal</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>	fastCommands	</name>
+    <group>complexes.start</group>
+    <client>
+      <hints>
+        <id>	112	</id>
+        <order>
+          <name>fighter</name>
+          <value>	30	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	30	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	30	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	30	</value>
+        </order>
+        <order>
+          <name>bomber</name>
+          <value>	30	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattle</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>fighter</name>
+    <group>complexes.start</group>
+    <client>
+      <hints>
+        <id>	113	</id>
+        <order>
+          <name>fighter</name>
+          <value>	55	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsFighter</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <equal>
+            <context>player.plane.type</context>
+            <value>fighter</value>
+          </equal>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <equal>
+              <context>player.plane.type</context>
+              <value>fighter</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>	navy	</name>
+    <group>complexes.start</group>
+    <client>
+      <hints>
+        <id>	114	</id>
+        <order>
+          <name>	navy	</name>
+          <value>	55	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsNavy</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <equal>
+            <context>player.plane.type</context>
+            <value>	navy	</value>
+          </equal>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <equal>
+              <context>player.plane.type</context>
+              <value>	navy	</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>	heavyFighter	</name>
+    <group>complexes.start</group>
+    <client>
+      <hints>
+        <id>	115	</id>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	55	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsHeavyFighter</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <equal>
+            <context>player.plane.type</context>
+            <value>heavy.fighter</value>
+          </equal>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <equal>
+              <context>player.plane.type</context>
+              <value>heavy.fighter</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>assault</name>
+    <group>complexes.start</group>
+    <client>
+      <hints>
+        <id>	116	</id>
+        <order>
+          <name>assault</name>
+          <value>	55	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsAssault</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <equal>
+            <context>player.plane.type</context>
+            <value>assault</value>
+          </equal>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <equal>
+              <context>player.plane.type</context>
+              <value>assault</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>bomber</name>
+    <group>complexes.start</group>
+    <client>
+      <hints>
+        <id>	117	</id>
+        <order>
+          <name>bomber</name>
+          <value>	55	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsBomber</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <equal>
+            <context>player.plane.type</context>
+            <value>bomber</value>
+          </equal>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <equal>
+              <context>player.plane.type</context>
+              <value>bomber</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>interface</name>
+    <group>complexes.start</group>
+    <client>
+      <hints>
+        <id>	118	</id>
+        <order>
+          <name>fighter</name>
+          <value>	40	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	40	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	40	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	40	</value>
+        </order>
+        <order>
+          <name>bomber</name>
+          <value>	40	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattle</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>gunnerMode1</name>
+    <group>complexes.shooting</group>
+    <client>
+      <hints>
+        <id>	119	</id>
+        <order>
+          <name>fighter</name>
+          <value>	15	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	15	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	15	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	15	</value>
+        </order>
+        <order>
+          <name>bomber</name>
+          <value>	15	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsGunner</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <equal>
+            <context>player.plane.hasGunner</context>
+            <value>yes</value>
+          </equal>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <equal>
+              <context>player.plane.hasGunner</context>
+              <value>yes</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>sniperMode1</name>
+    <group>complexes.shooting</group>
+    <client>
+      <hints>
+        <id>	120	</id>
+        <order>
+          <name>fighter</name>
+          <value>	13	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	13	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	13	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	13	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsSniper</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <not>
+            <equal>
+              <context>player.plane.type</context>
+              <value>bomber</value>
+            </equal>
+          </not>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <not>
+              <equal>
+                <context>player.plane.type</context>
+                <value>bomber</value>
+              </equal>
+            </not>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>bomberMode1</name>
+    <group>complexes.shooting</group>
+    <client>
+      <hints>
+        <id>	121	</id>
+        <order>
+          <name>bomber</name>
+          <value>	18	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsBomber</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <equal>
+            <context>player.plane.type</context>
+            <value>bomber</value>
+          </equal>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <equal>
+              <context>player.plane.type</context>
+              <value>bomber</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>gunnerMode2</name>
+    <group>complexes.shooting</group>
+    <client>
+      <hints>
+        <id>	122	</id>
+        <order>
+          <name>fighter</name>
+          <value>	25	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	25	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	25	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	25	</value>
+        </order>
+        <order>
+          <name>bomber</name>
+          <value>	25	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsGunner</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <equal>
+            <context>player.plane.hasGunner</context>
+            <value>yes</value>
+          </equal>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <equal>
+              <context>player.plane.hasGunner</context>
+              <value>yes</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>sniperMode2</name>
+    <group>complexes.shooting</group>
+    <client>
+      <hints>
+        <id>	123	</id>
+        <order>
+          <name>fighter</name>
+          <value>	23	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	23	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	23	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	23	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsSniper</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <not>
+            <equal>
+              <context>player.plane.type</context>
+              <value>bomber</value>
+            </equal>
+          </not>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <not>
+              <equal>
+                <context>player.plane.type</context>
+                <value>bomber</value>
+              </equal>
+            </not>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>bomberMode2</name>
+    <group>complexes.shooting</group>
+    <client>
+      <hints>
+        <id>	124	</id>
+        <order>
+          <name>bomber</name>
+          <value>	28	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsBomber</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <equal>
+            <context>player.plane.type</context>
+            <value>bomber</value>
+          </equal>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <equal>
+              <context>player.plane.type</context>
+              <value>bomber</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>gunnerMode3</name>
+    <group>complexes.shooting</group>
+    <client>
+      <hints>
+        <id>	125	</id>
+        <order>
+          <name>fighter</name>
+          <value>	35	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	35	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	35	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	35	</value>
+        </order>
+        <order>
+          <name>bomber</name>
+          <value>	35	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsGunner</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <equal>
+            <context>player.plane.hasGunner</context>
+            <value>yes</value>
+          </equal>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <equal>
+              <context>player.plane.hasGunner</context>
+              <value>yes</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>sniperMode3</name>
+    <group>complexes.shooting</group>
+    <client>
+      <hints>
+        <id>	126	</id>
+        <order>
+          <name>fighter</name>
+          <value>	33	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	33	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	33	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	33	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsSniper</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <not>
+            <equal>
+              <context>player.plane.type</context>
+              <value>bomber</value>
+            </equal>
+          </not>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <not>
+              <equal>
+                <context>player.plane.type</context>
+                <value>bomber</value>
+              </equal>
+            </not>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>bomberMode3</name>
+    <group>complexes.shooting</group>
+    <client>
+      <hints>
+        <id>	127	</id>
+        <order>
+          <name>bomber</name>
+          <value>	38	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsBomber</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <equal>
+            <context>player.plane.type</context>
+            <value>bomber</value>
+          </equal>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <equal>
+              <context>player.plane.type</context>
+              <value>bomber</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>gunnerMode4</name>
+    <group>complexes.shooting</group>
+    <client>
+      <hints>
+        <id>	128	</id>
+        <order>
+          <name>fighter</name>
+          <value>	45	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	45	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	45	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	45	</value>
+        </order>
+        <order>
+          <name>bomber</name>
+          <value>	45	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsGunner</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <equal>
+            <context>player.plane.hasGunner</context>
+            <value>yes</value>
+          </equal>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <equal>
+              <context>player.plane.hasGunner</context>
+              <value>yes</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>sniperMode4</name>
+    <group>complexes.shooting</group>
+    <client>
+      <hints>
+        <id>	129	</id>
+        <order>
+          <name>fighter</name>
+          <value>	43	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	43	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	43	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	43	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsSniper</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <not>
+            <equal>
+              <context>player.plane.type</context>
+              <value>bomber</value>
+            </equal>
+          </not>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <not>
+              <equal>
+                <context>player.plane.type</context>
+                <value>bomber</value>
+              </equal>
+            </not>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>bomberMode4</name>
+    <group>complexes.shooting</group>
+    <client>
+      <hints>
+        <id>	130	</id>
+        <order>
+          <name>bomber</name>
+          <value>	48	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsBomber</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <equal>
+            <context>player.plane.type</context>
+            <value>bomber</value>
+          </equal>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <equal>
+              <context>player.plane.type</context>
+              <value>bomber</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>gunnerMode5</name>
+    <group>complexes.shooting</group>
+    <client>
+      <hints>
+        <id>	131	</id>
+        <order>
+          <name>fighter</name>
+          <value>	55	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	55	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	55	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	55	</value>
+        </order>
+        <order>
+          <name>bomber</name>
+          <value>	55	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsGunner</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <equal>
+            <context>player.plane.hasGunner</context>
+            <value>yes</value>
+          </equal>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <equal>
+              <context>player.plane.hasGunner</context>
+              <value>yes</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>sniperMode5</name>
+    <group>complexes.shooting</group>
+    <client>
+      <hints>
+        <id>	132	</id>
+        <order>
+          <name>fighter</name>
+          <value>	53	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	53	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	53	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	53	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsSniper</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <not>
+            <equal>
+              <context>player.plane.type</context>
+              <value>bomber</value>
+            </equal>
+          </not>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <not>
+              <equal>
+                <context>player.plane.type</context>
+                <value>bomber</value>
+              </equal>
+            </not>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>bomberMode5</name>
+    <group>complexes.shooting</group>
+    <client>
+      <hints>
+        <id>	133	</id>
+        <order>
+          <name>bomber</name>
+          <value>	58	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsBomber</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <equal>
+            <context>player.plane.type</context>
+            <value>bomber</value>
+          </equal>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <equal>
+              <context>player.plane.type</context>
+              <value>bomber</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>gunnerMode6</name>
+    <group>complexes.shooting</group>
+    <client>
+      <hints>
+        <id>	134	</id>
+        <order>
+          <name>fighter</name>
+          <value>	65	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	65	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	65	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	65	</value>
+        </order>
+        <order>
+          <name>bomber</name>
+          <value>	65	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsGunner</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <equal>
+            <context>player.plane.hasGunner</context>
+            <value>yes</value>
+          </equal>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <equal>
+              <context>player.plane.hasGunner</context>
+              <value>yes</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>sniperMode6</name>
+    <group>complexes.shooting</group>
+    <client>
+      <hints>
+        <id>	135	</id>
+        <order>
+          <name>fighter</name>
+          <value>	63	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	63	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	63	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	63	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsSniper</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <not>
+            <equal>
+              <context>player.plane.type</context>
+              <value>bomber</value>
+            </equal>
+          </not>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <not>
+              <equal>
+                <context>player.plane.type</context>
+                <value>bomber</value>
+              </equal>
+            </not>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>bomberMode6</name>
+    <group>complexes.shooting</group>
+    <client>
+      <hints>
+        <id>	136	</id>
+        <order>
+          <name>bomber</name>
+          <value>	68	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsBomber</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <equal>
+            <context>player.plane.type</context>
+            <value>bomber</value>
+          </equal>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <equal>
+              <context>player.plane.type</context>
+              <value>bomber</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>gunnerMode7</name>
+    <group>complexes.shooting</group>
+    <client>
+      <hints>
+        <id>	137	</id>
+        <order>
+          <name>fighter</name>
+          <value>	75	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	75	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	75	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	75	</value>
+        </order>
+        <order>
+          <name>bomber</name>
+          <value>	75	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsGunner</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <equal>
+            <context>player.plane.hasGunner</context>
+            <value>yes</value>
+          </equal>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <equal>
+              <context>player.plane.hasGunner</context>
+              <value>yes</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>sniperMode7</name>
+    <group>complexes.shooting</group>
+    <client>
+      <hints>
+        <id>	138	</id>
+        <order>
+          <name>fighter</name>
+          <value>	73	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	73	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	73	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	73	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsSniper</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <not>
+            <equal>
+              <context>player.plane.type</context>
+              <value>bomber</value>
+            </equal>
+          </not>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <not>
+              <equal>
+                <context>player.plane.type</context>
+                <value>bomber</value>
+              </equal>
+            </not>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>bomberMode7</name>
+    <group>complexes.shooting</group>
+    <client>
+      <hints>
+        <id>	139	</id>
+        <order>
+          <name>bomber</name>
+          <value>	78	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsBomber</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <equal>
+            <context>player.plane.type</context>
+            <value>bomber</value>
+          </equal>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <equal>
+              <context>player.plane.type</context>
+              <value>bomber</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>gunnerMode8</name>
+    <group>complexes.shooting</group>
+    <client>
+      <hints>
+        <id>	140	</id>
+        <order>
+          <name>fighter</name>
+          <value>	85	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	85	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	85	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	85	</value>
+        </order>
+        <order>
+          <name>bomber</name>
+          <value>	85	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsGunner</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <equal>
+            <context>player.plane.hasGunner</context>
+            <value>yes</value>
+          </equal>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <equal>
+              <context>player.plane.hasGunner</context>
+              <value>yes</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>sniperMode8</name>
+    <group>complexes.shooting</group>
+    <client>
+      <hints>
+        <id>	141	</id>
+        <order>
+          <name>fighter</name>
+          <value>	83	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	83	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	83	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	83	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsSniper</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <not>
+            <equal>
+              <context>player.plane.type</context>
+              <value>bomber</value>
+            </equal>
+          </not>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <not>
+              <equal>
+                <context>player.plane.type</context>
+                <value>bomber</value>
+              </equal>
+            </not>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>bomberMode8</name>
+    <group>complexes.shooting</group>
+    <client>
+      <hints>
+        <id>	142	</id>
+        <order>
+          <name>bomber</name>
+          <value>	88	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsBomber</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <equal>
+            <context>player.plane.type</context>
+            <value>bomber</value>
+          </equal>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <equal>
+              <context>player.plane.type</context>
+              <value>bomber</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>gunnerMode9</name>
+    <group>complexes.shooting</group>
+    <client>
+      <hints>
+        <id>	143	</id>
+        <order>
+          <name>fighter</name>
+          <value>	95	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	95	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	95	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	95	</value>
+        </order>
+        <order>
+          <name>bomber</name>
+          <value>	95	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsGunner</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <equal>
+            <context>player.plane.hasGunner</context>
+            <value>yes</value>
+          </equal>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <equal>
+              <context>player.plane.hasGunner</context>
+              <value>yes</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>sniperMode9</name>
+    <group>complexes.shooting</group>
+    <client>
+      <hints>
+        <id>	144	</id>
+        <order>
+          <name>fighter</name>
+          <value>	93	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	93	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	93	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	93	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsSniper</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <not>
+            <equal>
+              <context>player.plane.type</context>
+              <value>bomber</value>
+            </equal>
+          </not>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <not>
+              <equal>
+                <context>player.plane.type</context>
+                <value>bomber</value>
+              </equal>
+            </not>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>bomberMode9</name>
+    <group>complexes.shooting</group>
+    <client>
+      <hints>
+        <id>	145	</id>
+        <order>
+          <name>bomber</name>
+          <value>	98	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsBomber</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <equal>
+            <context>player.plane.type</context>
+            <value>bomber</value>
+          </equal>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <equal>
+              <context>player.plane.type</context>
+              <value>bomber</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>	gunnerMode10	</name>
+    <group>complexes.shooting</group>
+    <client>
+      <hints>
+        <id>	146	</id>
+        <order>
+          <name>fighter</name>
+          <value>	105	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	105	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	105	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	105	</value>
+        </order>
+        <order>
+          <name>bomber</name>
+          <value>	105	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsGunner</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <equal>
+            <context>player.plane.hasGunner</context>
+            <value>yes</value>
+          </equal>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <equal>
+              <context>player.plane.hasGunner</context>
+              <value>yes</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>	sniperMode10	</name>
+    <group>complexes.shooting</group>
+    <client>
+      <hints>
+        <id>	147	</id>
+        <order>
+          <name>fighter</name>
+          <value>	103	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	103	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	103	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	103	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsSniper</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <not>
+            <equal>
+              <context>player.plane.type</context>
+              <value>bomber</value>
+            </equal>
+          </not>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <not>
+              <equal>
+                <context>player.plane.type</context>
+                <value>bomber</value>
+              </equal>
+            </not>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>	bomberMode10	</name>
+    <group>complexes.shooting</group>
+    <client>
+      <hints>
+        <id>	148	</id>
+        <order>
+          <name>bomber</name>
+          <value>	108	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleIsBomber</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <equal>
+            <context>player.plane.type</context>
+            <value>bomber</value>
+          </equal>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <equal>
+              <context>player.plane.type</context>
+              <value>bomber</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+</sectors.xml>

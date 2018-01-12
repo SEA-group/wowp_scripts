@@ -1,0 +1,49 @@
+<bomber.def>
+  <Parent>AvatarBot</Parent>
+  <TempProperties>
+    <_bombShellIndex>
+    </_bombShellIndex>
+    <gameAt>
+    </gameAt>
+    <logger>
+    </logger>
+  </TempProperties>
+  <Properties>
+    <spline>
+      <Type>STRING</Type>
+      <Flags>ALL_CLIENTS</Flags>
+    </spline>
+    <launchTime>
+      <Type>FLOAT</Type>
+      <Flags>ALL_CLIENTS</Flags>
+    </launchTime>
+    <dropBombTime>
+      <Type>FLOAT</Type>
+      <Flags>ALL_CLIENTS</Flags>
+    </dropBombTime>
+    <isEmpty>
+      <Type>	BOOL	</Type>
+      <Flags>ALL_CLIENTS</Flags>
+    </isEmpty>
+    <outroState>
+      <Type>	BOOL	</Type>
+      <Flags>ALL_CLIENTS</Flags>
+    </outroState>
+    <actionPointIndex>
+      <Type>	INT8	</Type>
+      <Flags>CELL_PRIVATE</Flags>
+    </actionPointIndex>
+  </Properties>
+  <CellMethods>
+    <reuseEntity>
+      <Arg>VECTOR3</Arg>
+      <Arg>FLOAT</Arg>
+      <Arg>STRING</Arg>
+      <Arg>VECTOR3</Arg>
+      <Arg>	INT8	</Arg>
+      <Arg>	INT8	</Arg>
+    </reuseEntity>
+    <deactivateBomber>
+    </deactivateBomber>
+  </CellMethods>
+</bomber.def>

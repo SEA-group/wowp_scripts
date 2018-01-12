@@ -1,0 +1,110 @@
+<base.xml>
+  <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
+  <noNamespaceSchemaLocation>./../../../../../tools/databundler/baseaircraftComponents.xsd</noNamespaceSchemaLocation>
+  <Components>
+    <Weapons2>
+      <reductionPoint>	350	</reductionPoint>
+      <autoguiderMaxDist>500.0</autoguiderMaxDist>
+    </Weapons2>
+  </Components>
+  <Airplane>
+    <creditRate>	1	</creditRate>
+    <collisionDamageCfc>0.0003</collisionDamageCfc>
+    <autoPilotStartAlt>	0	</autoPilotStartAlt>
+    <autoPilotEndAlt>	100	</autoPilotEndAlt>
+    <collisionPoints>-5 0 0</collisionPoints>
+    <collisionPoints>5 0 0</collisionPoints>
+    <collisionPoints>0 0 3</collisionPoints>
+    <collisionPoints>0 0 -7</collisionPoints>
+    <collisionPoints>0 -0.5 0</collisionPoints>
+    <collisionPoints>0 2.5 0</collisionPoints>
+    <visualSettings>
+      <elevatorMaxAngle>	30	</elevatorMaxAngle>
+      <aileronMaxAngle>	20	</aileronMaxAngle>
+      <rudderMaxAngle>	20	</rudderMaxAngle>
+      <flapperMaxAngle>	20	</flapperMaxAngle>
+      <brakeMaxAngle>	20	</brakeMaxAngle>
+      <aileronSpeed>	200	</aileronSpeed>
+      <elevatorSpeed>	400	</elevatorSpeed>
+      <rudderSpeed>	400	</rudderSpeed>
+      <flapperSpeed>	100	</flapperSpeed>
+      <brakeSpeed>	100	</brakeSpeed>
+      <rotorSpeedBroken>	5	</rotorSpeedBroken>
+      <rotorSpeedFalling>	5	</rotorSpeedFalling>
+      <rotorSpeedLow>	100	</rotorSpeedLow>
+      <rotorSpeedNormal>	200	</rotorSpeedNormal>
+      <rotorSpeedFosage>	300	</rotorSpeedFosage>
+      <hangarConfig>large</hangarConfig>
+      <damageEffects>
+        <destroy_air>EFFECT_AIRCRAFT_DESTROY</destroy_air>
+        <destroy_water>EFFECT_AIRCRAFT_DESTROYED_WATER</destroy_water>
+        <destroy_terrain>EFFECT_AIRCRAFT_DESTROYED_TERRAIN</destroy_terrain>
+        <crashed_fire>EFFECT_AIRCRAFT_SMOKE_SMALL</crashed_fire>
+        <receive_damage_own_1>EFFECT_empty_particle</receive_damage_own_1>
+        <receive_damage_own_2>EFFECT_empty_particle</receive_damage_own_2>
+        <receive_damage_other_1>EFFECT_empty_particle</receive_damage_other_1>
+        <receive_damage_other_2>EFFECT_empty_particle</receive_damage_other_2>
+        <receive_damage_terrain>EFFECT_AIRCRAFT_COLLISION_TERRAIN</receive_damage_terrain>
+        <receive_damage_water>EFFECT_AIRCRAFT_COLLISION_WATER</receive_damage_water>
+        <receive_damage_tree>EFFECT_AIRCRAFT_COLLISION_TREE</receive_damage_tree>
+        <effectFire>FIRING</effectFire>
+      </damageEffects>
+      <cameraEffects>
+        <shooting>	SHOOTING	</shooting>
+      </cameraEffects>
+      <camera>	camera01	</camera>
+      <cameraOffset>0 0.5 -0.75</cameraOffset>
+      <hudPlaneScheme>	ar65	</hudPlaneScheme>
+      <hangarScenario>
+        <scenario>
+        </scenario>
+        <excludeEvents>
+          <event>sampleEvent</event>
+        </excludeEvents>
+      </hangarScenario>
+    </visualSettings>
+    <soundSettings>
+      <rotor>engines/engine_ussr_m-25/engine</rotor>
+      <rotorEnemy>engines/engine_ussr_m-25/flyby</rotorEnemy>
+      <rotorDamaged>engines/mechanics/damaged/demaged_piston</rotorDamaged>
+      <rotorCockpitMono>engines/engine_ussr_m-25/cockpit</rotorCockpitMono>
+      <rotorCockpitL>
+      </rotorCockpitL>
+      <rotorCockpitR>
+      </rotorCockpitR>
+      <rotorOverheat>engines/mechanics/overheated/overheat_loop_piston</rotorOverheat>
+      <rotorOverheatMax>engines/mechanics/overheated/overheat_piston</rotorOverheatMax>
+      <rotorOverheatRelativeTempStart>0.5</rotorOverheatRelativeTempStart>
+      <rotorSpectator>engines/engine_ussr_m-25/engine_spectated</rotorSpectator>
+      <flaps>engines/mechanics/misc/flaps_release_basic</flaps>
+      <downed>engines/mechanics/nosedive/nosedive_prop</downed>
+      <downedEnv>engines/mechanics/nosedive/nosedive_prop</downedEnv>
+      <downedTriggerAltitude>	0	</downedTriggerAltitude>
+      <windOutside>engines/engine_ussr_m-25/air_outside</windOutside>
+      <windCockpit>engines/engine_ussr_m-25/air_cockpit</windCockpit>
+      <airplaneDamage>engines/mechanics/states/crit</airplaneDamage>
+      <airplaneVibe>engines/mechanics/states/vibration</airplaneVibe>
+      <passbyBulletCollisionSphereRadius>	30	</passbyBulletCollisionSphereRadius>
+      <passbyBulletSoundInstanceNumMax>	2	</passbyBulletSoundInstanceNumMax>
+      <rotorForceApplyTerm>3.0</rotorForceApplyTerm>
+      <hitMaterialID>	1	</hitMaterialID>
+    </soundSettings>
+    <bBoxes>
+      <mainBox>
+        <size>14 4 14</size>
+      </mainBox>
+    </bBoxes>
+    <description>
+      <textDescription>MARKET_AIRPLANE_DESCRIPTION_BASE</textDescription>
+      <engineCapasityUnit>MARKET_AIRPLANE_ENGINE_CAPACITY_LS</engineCapasityUnit>
+      <MARKET_AIRPLANE_ENGINE_CAPACITY>	0	</MARKET_AIRPLANE_ENGINE_CAPACITY>
+      <MARKET_AIRPLANE_WING_AREA>	0	</MARKET_AIRPLANE_WING_AREA>
+      <MARKET_AIRPLANE_GROUND_MAX_SPEED>	0	</MARKET_AIRPLANE_GROUND_MAX_SPEED>
+      <MARKET_AIRPLANE_HEIGHT_MAX_SPEED>	0	</MARKET_AIRPLANE_HEIGHT_MAX_SPEED>
+      <MARKET_AIRPLANE_RATE_OF_CLIMB>	0	</MARKET_AIRPLANE_RATE_OF_CLIMB>
+      <MARKET_AIRPLANE_FULL_TURN_TIME>	0	</MARKET_AIRPLANE_FULL_TURN_TIME>
+      <MARKET_AIRPLANE_TURN_RADIUS>	0	</MARKET_AIRPLANE_TURN_RADIUS>
+      <MARKET_AIRPLANE_WEIGHT_SECOND_VOLLEY>	0	</MARKET_AIRPLANE_WEIGHT_SECOND_VOLLEY>
+    </description>
+  </Airplane>
+</base.xml>

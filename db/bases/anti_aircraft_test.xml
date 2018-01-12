@@ -1,0 +1,169 @@
+<anti_aircraft_test.xml>
+  <parent>default.xml</parent>
+  <name>B4</name>
+  <bBoxes>
+    <mainBox>
+      <size>100 90 100</size>
+    </mainBox>
+  </bBoxes>
+  <maxHealth>	1200	</maxHealth>
+  <dominationCost>0.08</dominationCost>
+  <respawnDelay>-1.0</respawnDelay>
+  <superiorityPoints>	1	</superiorityPoints>
+  <initialSpawnDelay>0.0</initialSpawnDelay>
+  <type>smallTeamObject</type>
+  <parts>
+    <part>
+      <name>	hull	</name>
+      <partId>	1	</partId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-0.050957 2.528242 0.000000	</position>
+            <size>	5.000000 5.000000 5.000000	</size>
+            <armorFront>	10.000000 10.000000 10.000000	</armorFront>
+            <armorBack>	10.000000 10.000000 10.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+          <bbox>
+            <position>	-112.430000 4.950001 -2.880001	</position>
+            <size>	0.000000 0.000000 0.000000	</size>
+            <armorFront>	10.000000 10.000000 10.000000	</armorFront>
+            <armorBack>	10.000000 10.000000 10.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>100%</health>
+        <componentType>	Hull	</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/common/antiaircraft_searchlight_01.model</model>
+            <effectsTriggered>
+              <effect>
+                <trigger>	SHOT	</trigger>
+                <name>EFFECT_AA_tracers</name>
+                <mountPoint>HP_aa_fire</mountPoint>
+              </effect>
+            </effectsTriggered>
+            <effectState>
+              <effect>
+                <name>EFFECT_AA_tracers</name>
+                <mountPoint>HP_aa_fire</mountPoint>
+              </effect>
+            </effectState>
+            <stateAnimation>	list	</stateAnimation>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	2	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <model>content/common/antiaircraft_searchlight_01.model</model>
+            <effectsTriggered>
+              <effect>
+                <trigger>	SHOT	</trigger>
+                <name>EFFECT_AA_tracers</name>
+                <mountPoint>HP_aa_fire</mountPoint>
+              </effect>
+            </effectsTriggered>
+            <effectState>
+              <effect>
+                <name>EFFECT_AA_tracers</name>
+                <mountPoint>HP_aa_fire</mountPoint>
+              </effect>
+            </effectState>
+            <stateAnimation>	list	</stateAnimation>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	3	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <model>content/common/antiaircraft_searchlight_01.model</model>
+            <effectsTriggered>
+              <effect>
+                <trigger>	SHOT	</trigger>
+                <name>EFFECT_AA_tracers</name>
+                <mountPoint>HP_aa_fire</mountPoint>
+              </effect>
+            </effectsTriggered>
+            <effectState>
+              <effect>
+                <name>EFFECT_AA_tracers</name>
+                <mountPoint>HP_aa_fire</mountPoint>
+              </effect>
+            </effectState>
+            <stateAnimation>	list	</stateAnimation>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	4	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/common/antiaircraft_searchlight_01.model</model>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_prop_exposion_large</name>
+                <mountPoint>HP_aa_body</mountPoint>
+              </effect>
+              <effect>
+                <name>EFFECT_shell_ground</name>
+                <mountPoint>HP_aa_body</mountPoint>
+              </effect>
+              <effect>
+                <name>EFFECT_shell_ground</name>
+                <mountPoint>HP_aa_body</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_aa_body</mountPoint>
+              </effect>
+            </effectState>
+            <stateAnimation>
+            </stateAnimation>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+  </parts>
+</anti_aircraft_test.xml>

@@ -1,0 +1,341 @@
+<heroic.xml>
+  <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
+  <noNamespaceSchemaLocation>../../eps/validators/subscribers.xsd</noNamespaceSchemaLocation>
+  <header>
+    <type>achievement</type>
+    <group>heroic</group>
+    <server>
+      <active>	true	</active>
+      <scope>player</scope>
+    </server>
+    <markers>
+      <group>heroic</group>
+    </markers>
+    <client>
+      <place>right</place>
+    </client>
+  </header>
+  <include>
+    <condition>
+      <gte>
+        <context>player.plane.level</context>
+        <value>	4	</value>
+      </gte>
+    </condition>
+    <condition>
+      <or>
+        <and>
+          <equal>
+            <context>arena.type</context>
+            <value>normal</value>
+          </equal>
+          <equal>
+            <context>arena.source</context>
+            <value>player</value>
+          </equal>
+        </and>
+        <and>
+          <equal>
+            <context>self.event.type</context>
+            <value>hangar</value>
+          </equal>
+        </and>
+      </or>
+    </condition>
+    <metadata>
+      <doneCount>	true	</doneCount>
+      <firstDoneTime>	true	</firstDoneTime>
+      <lastDoneTime>	true	</lastDoneTime>
+    </metadata>
+  </include>
+  <subscriber>
+    <name>reset</name>
+    <type>achievement.reset</type>
+    <group>heroic</group>
+    <server>
+      <repeat>	true	</repeat>
+      <overwrite>	true	</overwrite>
+    </server>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>finish</name>
+      <operation>
+        <id>
+          <name>*</name>
+          <type>achievement</type>
+          <group>heroic</group>
+        </id>
+        <rollback>	true	</rollback>
+        <set>
+          <completed>	false	</completed>
+        </set>
+      </operation>
+    </event>
+    <event>
+      <type>hangar</type>
+      <context>player</context>
+      <name>day.changed</name>
+      <operation>
+        <id>
+          <name>*</name>
+          <type>achievement</type>
+          <group>heroic</group>
+        </id>
+        <reset>	true	</reset>
+        <processors>
+          <transaction>	0	</transaction>
+        </processors>
+      </operation>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>ace</name>
+    <client>
+      <order>	9	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_ACE</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_ACE</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acServiceAce.dds</small>
+        <big>icons/awards/achievementsInfo/acServiceAce.dds</big>
+        <faded>icons/awards/achievements/acServiceAce_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <count>
+        <id>	0	</id>
+        <value>	20	</value>
+      </count>
+    </event>
+    <send>
+      <event>
+        <type>achievement</type>
+        <context>ace.heroic</context>
+        <name>completed</name>
+      </event>
+    </send>
+  </subscriber>
+  <subscriber>
+    <name>wingslegend</name>
+    <client>
+      <order>	10	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_WING_LEGEND</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_WING_LEGEND</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acServiceWingedLegend.dds</small>
+        <big>icons/awards/achievementsInfo/acServiceWingedLegend.dds</big>
+        <faded>icons/awards/achievements/acServiceWingedLegend_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <count>
+        <context>points.battle</context>
+        <id>	0	</id>
+        <value>	14000	</value>
+      </count>
+    </event>
+    <transaction>
+      <id>	0	</id>
+      <times>	1	</times>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+    <send>
+      <event>
+        <type>achievement</type>
+        <context>wingslegend.heroic</context>
+        <name>completed</name>
+      </event>
+    </send>
+  </subscriber>
+  <subscriber>
+    <name>thunder</name>
+    <client>
+      <order>	11	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_THUNDER</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_THUNDER</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acServiceThunder.dds</small>
+        <big>icons/awards/achievementsInfo/acServiceThunder.dds</big>
+        <faded>icons/awards/achievements/acServiceThunder_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <condition>
+        <equal>
+          <context>victim.object</context>
+          <value>ground</value>
+        </equal>
+      </condition>
+      <count>
+        <context>points.capture</context>
+        <id>	0	</id>
+        <value>	400	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>conqueror</name>
+    <client>
+      <order>	12	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_CONQUEROR</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_CONQUEROR</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acServiceConqueror.dds</small>
+        <big>icons/awards/achievementsInfo/acServiceConqueror.dds</big>
+        <faded>icons/awards/achievements/acServiceConqueror_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <count>
+        <context>points.capture</context>
+        <id>	0	</id>
+        <value>	450	</value>
+      </count>
+    </event>
+    <send>
+      <event>
+        <type>achievement</type>
+        <context>conqueror.heroic</context>
+        <name>completed</name>
+      </event>
+    </send>
+  </subscriber>
+  <subscriber>
+    <name>catcher</name>
+    <client>
+      <order>	13	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_CATCHER</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_CATCHER</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acServiceCatcher.dds</small>
+        <big>icons/awards/achievementsInfo/acServiceCatcher.dds</big>
+        <faded>icons/awards/achievements/acServiceCatcher_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <condition>
+        <equal>
+          <context>sector.status</context>
+          <value>defence</value>
+        </equal>
+      </condition>
+      <count>
+        <context>points.capture</context>
+        <id>	0	</id>
+        <value>	250	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>	predator	</name>
+    <client>
+      <order>	14	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_PREDATOR</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_PREDATOR</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acServicePredator.dds</small>
+        <big>icons/awards/achievementsInfo/acServicePredator.dds</big>
+        <faded>icons/awards/achievements/acServicePredator_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>assist</name>
+      <condition>
+        <and>
+          <equal>
+            <context>victim.object</context>
+            <value>plane</value>
+          </equal>
+          <equal>
+            <context>percent</context>
+            <value>normal</value>
+          </equal>
+        </and>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	10	</value>
+      </count>
+    </event>
+  </subscriber>
+</heroic.xml>

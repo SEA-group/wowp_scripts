@@ -1,0 +1,49 @@
+<acsector.def>
+  <AppealRadius>	2000	</AppealRadius>
+  <TempProperties>
+    <hasCell>
+    </hasCell>
+    <logger>
+    </logger>
+    <state>
+    </state>
+    <teamIndex>
+    </teamIndex>
+  </TempProperties>
+  <Properties>
+    <arena>
+      <Type>MAILBOX</Type>
+      <Flags>	BASE	</Flags>
+    </arena>
+    <arenaBase>
+      <Type>MAILBOX</Type>
+      <Flags>CELL_PRIVATE</Flags>
+    </arenaBase>
+    <ident>
+      <Type>STRING</Type>
+      <Flags>ALL_CLIENTS</Flags>
+    </ident>
+    <stateContainer>
+      <Type>AC_SECTOR_STATE</Type>
+      <Flags>ALL_CLIENTS</Flags>
+      <SendLatestOnly>	true	</SendLatestOnly>
+    </stateContainer>
+    <nextBonusTick>
+      <Type>INT16</Type>
+      <Flags>ALL_CLIENTS</Flags>
+      <SendLatestOnly>	true	</SendLatestOnly>
+    </nextBonusTick>
+    <rocketV2TargetSectorID>
+      <Type>STRING</Type>
+      <Flags>ALL_CLIENTS</Flags>
+    </rocketV2TargetSectorID>
+  </Properties>
+  <CellMethods>
+    <setAttribute>
+      <Args>
+        <name>STRING</name>
+        <value>PYTHON</value>
+      </Args>
+    </setAttribute>
+  </CellMethods>
+</acsector.def>

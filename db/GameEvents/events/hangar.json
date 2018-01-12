@@ -1,0 +1,103 @@
+{
+
+"schemas": {
+
+"hangar.player": {
+	"description": "Контекст игрока в ангаре",
+
+	"id": {
+		"type": "integer"
+	}
+}
+
+},
+
+"events": [
+
+{
+	"header": "События в ангаре"
+},
+
+{
+	"description": "Вход в игру (или вход после результатов боя onEntitiesEnabled)",
+	"active": true,
+
+	"type": "hangar",
+	"context": "player",
+	"name": "login",
+
+	"schema": {
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "hangar.player"
+		}
+	}
+},
+
+{
+	"description": "Ангар загружен",
+	"active": true,
+
+	"type": "hangar",
+	"context": "player",
+	"name": "in.lobby",
+
+	"schema": {
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "hangar.player"
+		}
+	}
+},
+
+{
+	"description": "Смена суток на сервере (с информацией о последнем логине)",
+	"active": true,
+
+	"type": "hangar",
+	"context": "player",
+	"name": "day.changed",
+
+	"schema": {
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "hangar.player"
+		},
+        "days": {
+            "type": "integer",
+            "description": "Количество дней с момента последнего логина"
+        }
+	}
+},
+
+{
+	"description": "Обработка событий после смены суток на сервере (с информацией о последнем логине, для того что бы отработали сбросы на других подписках)",
+	"active": true,
+
+	"type": "hangar",
+	"context": "player",
+	"name": "after.day.changed",
+
+	"schema": {
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "hangar.player"
+		},
+        "days": {
+            "type": "integer",
+            "description": "Количество дней с момента последнего логина"
+        }
+	}
+}
+
+]
+
+}

@@ -1,0 +1,3268 @@
+<p-51k.xml>
+  <parent>base_metal_small.xml</parent>
+  <Components>
+    <Weapons2>
+      <slot>
+        <id>	0	</id>
+        <name>	WING	</name>
+        <type>
+          <id>	0	</id>
+          <linkedModels>
+            <visual>
+              <parentUpgrade>	1	</parentUpgrade>
+              <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/gun_01_01.model</model>
+              <mountPath>leftWing/HP_gun_01</mountPath>
+            </visual>
+            <visual>
+              <parentUpgrade>	1	</parentUpgrade>
+              <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/gun_01_02.model</model>
+              <mountPath>rightWing/HP_gun_02</mountPath>
+            </visual>
+          </linkedModels>
+          <weapon>
+            <name>G12mm-MG-53-2-Ch-PR-K</name>
+            <flamePath>rightWing/HP_gun_02/HP_flame_04</flamePath>
+            <ammoBelt>generalPurposeBelt</ammoBelt>
+            <weaponGroup>	1	</weaponGroup>
+          </weapon>
+          <weapon>
+            <name>G12mm-MG-53-2-Ch-PR-K</name>
+            <flamePath>leftWing/HP_gun_01/HP_flame_01</flamePath>
+            <ammoBelt>generalPurposeBelt</ammoBelt>
+            <weaponGroup>	1	</weaponGroup>
+          </weapon>
+          <weapon>
+            <name>G12mm-MG-53-2-Ch-PR-K</name>
+            <flamePath>rightWing/HP_gun_02/HP_flame_05</flamePath>
+            <ammoBelt>generalPurposeBelt</ammoBelt>
+            <weaponGroup>	1	</weaponGroup>
+          </weapon>
+          <weapon>
+            <name>G12mm-MG-53-2-Ch-PR-K</name>
+            <flamePath>rightWing/HP_gun_02/HP_flame_06</flamePath>
+            <ammoBelt>generalPurposeBelt</ammoBelt>
+            <weaponGroup>	1	</weaponGroup>
+          </weapon>
+          <weapon>
+            <name>G12mm-MG-53-2-Ch-PR-K</name>
+            <flamePath>leftWing/HP_gun_01/HP_flame_02</flamePath>
+            <ammoBelt>generalPurposeBelt</ammoBelt>
+            <weaponGroup>	1	</weaponGroup>
+          </weapon>
+          <weapon>
+            <name>G12mm-MG-53-2-Ch-PR-K</name>
+            <flamePath>leftWing/HP_gun_01/HP_flame_03</flamePath>
+            <ammoBelt>generalPurposeBelt</ammoBelt>
+            <weaponGroup>	1	</weaponGroup>
+          </weapon>
+        </type>
+      </slot>
+    </Weapons2>
+  </Components>
+  <Airplane>
+    <name>P-51K</name>
+    <shakingProfile>LightPlanes</shakingProfile>
+    <hudIcoPath>icons/planes/China/p51k.dds</hudIcoPath>
+    <iconPath>icons/hangarCarousel/planes/China/p51k.dds</iconPath>
+    <treeIconPath>icons/planesTree/China/p51k.dds</treeIconPath>
+    <battleLoadingIconPath>icons/planesPreview/China/p51k.dds</battleLoadingIconPath>
+    <previewIconPath>icons/planesPreview/China/p51k.dds</previewIconPath>
+    <longName>P-51K Mustang China</longName>
+    <bBoxes>
+      <mainBox>
+        <size>14 4 14</size>
+      </mainBox>
+    </bBoxes>
+    <parts>
+      <part>
+        <name>	hull	</name>
+        <partId>	1	</partId>
+        <mountPoint>
+        </mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <bBoxes>
+            <bbox>
+              <position>	0.000000 0.000000 -2.205000	</position>
+              <size>	0.900000 1.260000 5.310000	</size>
+              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 5.000000	</armorBack>
+              <absorption>	0.800000	</absorption>
+              <rotation>	0.020000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+          </bBoxes>
+          <health>100%</health>
+          <componentType>Pilot</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <stateHelthCfc>1.0</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/fuselage_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <usage>
+              </usage>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <stateHelthCfc>0.55</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/crash/lod0/fuselage_01.model</model>
+              <affectedParts>
+                <part>
+                  <partID>	4	</partID>
+                  <minimalPartState>	2	</minimalPartState>
+                </part>
+              </affectedParts>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <usage>
+              </usage>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <affectedParts>
+                <part>
+                  <partID>	4	</partID>
+                  <minimalPartState>	2	</minimalPartState>
+                </part>
+              </affectedParts>
+              <usage>
+              </usage>
+              <stateHelthCfc>0.0</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/crash/lod0/fuselage_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <effectsTriggered>
+              </effectsTriggered>
+              <stateAction>	1	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>0.0</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/crash/lod0/fuselage_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <effectsTriggered>
+              </effectsTriggered>
+              <stateAction>	1	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>engine</name>
+        <partId>	2	</partId>
+        <mountPoint>HP_engine</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <bBoxes>
+            <bbox>
+              <position>	0.000000 -0.090000 1.440000	</position>
+              <size>	0.990000 1.170000 1.980000	</size>
+              <armorFront>	30.000000 30.000000 60.000000	</armorFront>
+              <armorBack>	30.000000 30.000000 30.000000	</armorBack>
+              <absorption>	1.000000	</absorption>
+              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+          </bBoxes>
+          <health>30%</health>
+          <componentType>Engine</componentType>
+          <componentXml>v-1710-39</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/engine_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/rotor_01.model</model>
+                  <mountPoint>HP_rotor</mountPoint>
+                  <animatorName>PropellorController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/propeller_01.model</model>
+                  <mountPoint>HP_rotor</mountPoint>
+                  <animatorName>PropellorMeshController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/rotorTexture_01.model</model>
+                  <mountPoint>HP_rotor</mountPoint>
+                  <animatorName>PropellorTextureController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/rotorTextureForsage_01.model</model>
+                  <mountPoint>HP_rotor</mountPoint>
+                  <animatorName>PropellorTextureForsageController</animatorName>
+                </item>
+              </subItems>
+              <effectsTriggered>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <mountPoint>plane/HP_nozzle_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <mountPoint>plane/HP_nozzle_02</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <mountPoint>plane/HP_nozzle_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <mountPoint>plane/HP_nozzle_02</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <usage>
+              </usage>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <effectState>
+                <effect>
+                  <name>aim_trail_on_engine</name>
+                  <mountPoint>HP_engine</mountPoint>
+                </effect>
+              </effectState>
+            </state>
+            <state>
+              <id>	2	</id>
+              <stateHelthCfc>	0.400000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/crash/lod0/engine_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/rotor_01.model</model>
+                  <mountPoint>HP_rotor</mountPoint>
+                  <animatorName>PropellorController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/propeller_01.model</model>
+                  <mountPoint>HP_rotor</mountPoint>
+                  <animatorName>PropellorMeshController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/rotorTexture_01.model</model>
+                  <mountPoint>HP_rotor</mountPoint>
+                  <animatorName>PropellorTextureController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/rotorTextureForsage_01.model</model>
+                  <mountPoint>HP_rotor</mountPoint>
+                  <animatorName>PropellorTextureForsageController</animatorName>
+                </item>
+              </subItems>
+              <effectState>
+                <effect>
+                  <name>crit_engine_damaged_yellow</name>
+                  <mountPoint>plane/HP_nozzle_01</mountPoint>
+                </effect>
+                <effect>
+                  <name>crit_engine_damaged_right_yellow</name>
+                  <mountPoint>plane/HP_nozzle_02</mountPoint>
+                </effect>
+                <effect>
+                  <name>aim_trail_on_engine</name>
+                  <mountPoint>HP_engine</mountPoint>
+                </effect>
+              </effectState>
+              <effectsTriggered>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <mountPoint>plane/HP_nozzle_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <mountPoint>plane/HP_nozzle_02</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <mountPoint>plane/HP_nozzle_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <mountPoint>plane/HP_nozzle_02</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <usage>
+              </usage>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <stateHelthCfc>	0.400000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/crash/lod0/engine_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/rotor_01.model</model>
+                  <mountPoint>HP_rotor</mountPoint>
+                  <animatorName>PropellorController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/propeller_01.model</model>
+                  <mountPoint>HP_rotor</mountPoint>
+                  <animatorName>PropellorMeshController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/rotorTexture_01.model</model>
+                  <mountPoint>HP_rotor</mountPoint>
+                  <animatorName>PropellorTextureController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/rotorTextureForsage_01.model</model>
+                  <mountPoint>HP_rotor</mountPoint>
+                  <animatorName>PropellorTextureForsageController</animatorName>
+                </item>
+              </subItems>
+              <effectState>
+                <effect>
+                  <name>crit_engine_damaged</name>
+                  <mountPoint>plane/HP_nozzle_01</mountPoint>
+                </effect>
+                <effect>
+                  <name>crit_engine_damaged_right</name>
+                  <mountPoint>plane/HP_nozzle_02</mountPoint>
+                </effect>
+                <effect>
+                  <name>aim_trail_on_engine</name>
+                  <mountPoint>HP_engine</mountPoint>
+                </effect>
+              </effectState>
+              <effectsTriggered>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <mountPoint>plane/HP_nozzle_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <mountPoint>plane/HP_nozzle_02</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <mountPoint>plane/HP_nozzle_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <mountPoint>plane/HP_nozzle_02</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <usage>
+              </usage>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <effectOnStart>
+                <effect>
+                  <name>crit_engine_expl</name>
+                  <mountPoint>plane/HP_nozzle_01</mountPoint>
+                </effect>
+              </effectOnStart>
+            </state>
+            <state>
+              <id>	4	</id>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/crash/lod0/engine_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/rotor_01.model</model>
+                  <mountPoint>HP_rotor</mountPoint>
+                  <animatorName>PropellorController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/propeller_01.model</model>
+                  <mountPoint>HP_rotor</mountPoint>
+                  <animatorName>PropellorMeshController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/rotorTexture_01.model</model>
+                  <mountPoint>HP_rotor</mountPoint>
+                  <animatorName>PropellorTextureController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/rotorTextureForsage_01.model</model>
+                  <mountPoint>HP_rotor</mountPoint>
+                  <animatorName>PropellorTextureForsageController</animatorName>
+                </item>
+              </subItems>
+              <effectState>
+                <effect>
+                  <name>EFFECT_FIRE_ENGINE</name>
+                  <mountPoint>plane/HP_nozzle_01</mountPoint>
+                </effect>
+                <effect>
+                  <name>EFFECT_FIRE_ENGINE_small</name>
+                  <mountPoint>plane/HP_nozzle_02</mountPoint>
+                </effect>
+              </effectState>
+              <stateAction>	0	</stateAction>
+              <usage>crash</usage>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <repairDestructedAfter>	20.000000	</repairDestructedAfter>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>pilot</name>
+        <partId>	3	</partId>
+        <mountPoint>HP_pilot</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <bBoxes>
+            <bbox>
+              <position>	0.000000 0.630000 -1.215000	</position>
+              <size>	1.000000 0.700000 2.000000	</size>
+              <armorFront>	5.000000 5.000000 20.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 5.000000	</armorBack>
+              <absorption>0.8</absorption>
+              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+            <bbox>
+              <position>	0.000000 0.405000 -0.990000	</position>
+              <size>	0.700000 1.000000 0.700000	</size>
+              <armorFront>	5.000000 5.000000 5.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 5.000000	</armorBack>
+              <absorption>0.8</absorption>
+              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+          </bBoxes>
+          <health>10%</health>
+          <componentType>	Hull	</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/pilot_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/head_01.model</model>
+                  <mountPoint>HP_head</mountPoint>
+                  <animatorName>PilotHeadController</animatorName>
+                </item>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/pilot_01.model</model>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/head_01.model</model>
+                  <mountPoint>HP_head</mountPoint>
+                  <animatorName>PilotHeadController</animatorName>
+                </item>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>fall, crash</usage>
+              <stateHelthCfc>	-1.000000	</stateHelthCfc>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>hangar</usage>
+              <stateHelthCfc>	-1.000000	</stateHelthCfc>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <upgrade>
+          <id>	2	</id>
+          <bBoxes>
+            <bbox>
+              <position>	0.000000 0.630000 -1.215000	</position>
+              <size>	1.000000 0.700000 2.000000	</size>
+              <armorFront>	5.000000 5.000000 20.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 5.000000	</armorBack>
+              <absorption>0.8</absorption>
+              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+            <bbox>
+              <position>	0.000000 0.405000 -0.990000	</position>
+              <size>	0.700000 1.000000 0.700000	</size>
+              <armorFront>	5.000000 5.000000 5.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 5.000000	</armorBack>
+              <absorption>0.8</absorption>
+              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+          </bBoxes>
+          <health>10%</health>
+          <componentType>	Hull	</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/pilotF_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/headF_01.model</model>
+                  <mountPoint>HP_head</mountPoint>
+                  <animatorName>PilotHeadController</animatorName>
+                </item>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/pilotF_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/headF_01.model</model>
+                  <mountPoint>HP_head</mountPoint>
+                  <animatorName>PilotHeadController</animatorName>
+                </item>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>fall, crash</usage>
+              <stateHelthCfc>	-1.000000	</stateHelthCfc>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>hangar</usage>
+              <stateHelthCfc>	-1.000000	</stateHelthCfc>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>cockpit</name>
+        <partId>	4	</partId>
+        <mountPoint>HP_cockpit</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <health>20%</health>
+          <componentType>Cockpit</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/cockpit_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <usage>
+              </usage>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <stateHelthCfc>	0.800000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/crash/lod0/cockpit_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <usage>
+              </usage>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/crash/lod0/cockpit_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>	leftWing	</name>
+        <partId>	5	</partId>
+        <mountPoint>HP_wL</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <bBoxes>
+            <box>
+              <position>	-3.015000 -0.315000 -0.540000	</position>
+              <size>	5.000000 0.400000 2.000000	</size>
+              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 10.000000	</armorBack>
+              <absorption>0.2</absorption>
+              <rotation>	0.000000 0.040000 -0.050000 1.000000	</rotation>
+            </box>
+          </bBoxes>
+          <health>32%</health>
+          <componentType>	LeftWing	</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <stateHelthCfc>1.0</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/wL_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/aileronL_01.model</model>
+                  <mountPoint>HP_aileronL</mountPoint>
+                  <animatorName>LeftAileronController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/flapL_01.model</model>
+                  <mountPoint>HP_flapL</mountPoint>
+                  <animatorName>	FlapsControllerL	</animatorName>
+                </item>
+              </subItems>
+              <effectsTriggered>
+                <effect>
+                  <name>EFFECT_LOFT</name>
+                  <mountPoint>plane/HP_trailL</mountPoint>
+                  <trigger>	LOFT	</trigger>
+                </effect>
+                <effect>
+                  <trigger>SPEED_OVERLOAD</trigger>
+                  <name>EFFECT_WINGS_CLOUD_P-51K</name>
+                  <mountPoint>plane/HP_trailL</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>BRAKE</trigger>
+                  <name>EFFECT_FLAPS_CLOUD_P-51K</name>
+                  <mountPoint>plane/HP_trailL</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>LOFT_LARGE</trigger>
+                  <name>EFFECT_LOFT_LARGE</name>
+                  <mountPoint>plane/HP_trailL</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <usage>
+              </usage>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <stateHelthCfc>0.55</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/crash/lod0/wL_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/crash/lod0/aileronL_01.model</model>
+                  <mountPoint>HP_aileronL</mountPoint>
+                  <animatorName>LeftAileronController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/crash/lod0/flapL_01.model</model>
+                  <mountPoint>HP_flapL</mountPoint>
+                  <animatorName>	FlapsControllerL	</animatorName>
+                </item>
+              </subItems>
+              <effectsTriggered>
+                <effect>
+                  <name>EFFECT_LOFT</name>
+                  <mountPoint>plane/HP_trailL</mountPoint>
+                  <trigger>	LOFT	</trigger>
+                </effect>
+                <effect>
+                  <trigger>SPEED_OVERLOAD</trigger>
+                  <name>EFFECT_WINGS_CLOUD_P-51K</name>
+                  <mountPoint>plane/HP_trailL</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>BRAKE</trigger>
+                  <name>EFFECT_FLAPS_CLOUD_P-51K</name>
+                  <mountPoint>plane/HP_trailL</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>LOFT_LARGE</trigger>
+                  <name>EFFECT_LOFT_LARGE</name>
+                  <mountPoint>plane/HP_trailL</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <usage>
+              </usage>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <effectState>
+                <effect>
+                  <name>crit_wing_damaged_yellow</name>
+                  <mountPoint>plane/HP_trailL</mountPoint>
+                </effect>
+              </effectState>
+            </state>
+            <state>
+              <id>	3	</id>
+              <stateHelthCfc>0.55</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/crash/lod0/wL_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/crash/lod0/aileronL_01.model</model>
+                  <mountPoint>HP_aileronL</mountPoint>
+                  <animatorName>LeftAileronController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/crash/lod0/flapL_01.model</model>
+                  <mountPoint>HP_flapL</mountPoint>
+                  <animatorName>	FlapsControllerL	</animatorName>
+                </item>
+              </subItems>
+              <effectsTriggered>
+                <effect>
+                  <name>EFFECT_LOFT</name>
+                  <mountPoint>plane/HP_trailL</mountPoint>
+                  <trigger>	LOFT	</trigger>
+                </effect>
+                <effect>
+                  <trigger>SPEED_OVERLOAD</trigger>
+                  <name>EFFECT_WINGS_CLOUD_P-51K</name>
+                  <mountPoint>plane/HP_trailL</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>BRAKE</trigger>
+                  <name>EFFECT_FLAPS_CLOUD_P-51K</name>
+                  <mountPoint>plane/HP_trailL</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>LOFT_LARGE</trigger>
+                  <name>EFFECT_LOFT_LARGE</name>
+                  <mountPoint>plane/HP_trailL</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <usage>
+              </usage>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <effectState>
+                <effect>
+                  <name>crit_wing_damaged</name>
+                  <mountPoint>plane/HP_trailL</mountPoint>
+                </effect>
+              </effectState>
+              <effectOnStart>
+                <effect>
+                  <name>crit_wing_expl</name>
+                  <mountPoint>plane/HP_trailL</mountPoint>
+                </effect>
+              </effectOnStart>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>0.0</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/crash/lod0/wLcap_01.model</model>
+              <animationController>
+              </animationController>
+              <effectState>
+                <effect>
+                  <name>
+                  </name>
+                  <mountPoint>plane/HP_wLhit</mountPoint>
+                </effect>
+              </effectState>
+              <stateAction>	1	</stateAction>
+              <fallingOutModel>vehicles/airplanes/china/CH05_P51K/crash/lod0/wLend_01.model</fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>rightWing</name>
+        <partId>	6	</partId>
+        <mountPoint>HP_wR</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <bBoxes>
+            <bbox>
+              <position>	3.015000 -0.315000 -0.540000	</position>
+              <size>	5.000000 0.400000 2.000000	</size>
+              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 10.000000	</armorBack>
+              <absorption>0.2</absorption>
+              <rotation>	0.000000 -0.040000 0.050000 1.000000	</rotation>
+            </bbox>
+          </bBoxes>
+          <health>32%</health>
+          <componentType>RightWing</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <stateHelthCfc>1.0</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/wR_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/aileronR_01.model</model>
+                  <mountPoint>HP_aileronR</mountPoint>
+                  <animatorName>RightAileronController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/flapR_01.model</model>
+                  <mountPoint>HP_flapR</mountPoint>
+                  <animatorName>	FlapsControllerR	</animatorName>
+                </item>
+              </subItems>
+              <effectsTriggered>
+                <effect>
+                  <name>EFFECT_LOFT</name>
+                  <mountPoint>plane/HP_trailR</mountPoint>
+                  <trigger>	LOFT	</trigger>
+                </effect>
+                <effect>
+                  <trigger>SPEED_OVERLOAD</trigger>
+                  <name>EFFECT_WINGS_CLOUD_P-51K</name>
+                  <mountPoint>plane/HP_trailR</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>BRAKE</trigger>
+                  <name>EFFECT_FLAPS_CLOUD_P-51K</name>
+                  <mountPoint>plane/HP_trailR</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>LOFT_LARGE</trigger>
+                  <name>EFFECT_LOFT_LARGE</name>
+                  <mountPoint>plane/HP_trailR</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <usage>
+              </usage>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <stateHelthCfc>0.55</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/crash/lod0/wR_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/crash/lod0/aileronR_01.model</model>
+                  <mountPoint>HP_aileronR</mountPoint>
+                  <animatorName>RightAileronController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/crash/lod0/flapR_01.model</model>
+                  <mountPoint>HP_flapR</mountPoint>
+                  <animatorName>	FlapsControllerR	</animatorName>
+                </item>
+              </subItems>
+              <effectsTriggered>
+                <effect>
+                  <name>EFFECT_LOFT</name>
+                  <mountPoint>plane/HP_trailR</mountPoint>
+                  <trigger>	LOFT	</trigger>
+                </effect>
+                <effect>
+                  <trigger>SPEED_OVERLOAD</trigger>
+                  <name>EFFECT_WINGS_CLOUD_P-51K</name>
+                  <mountPoint>plane/HP_trailR</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>BRAKE</trigger>
+                  <name>EFFECT_FLAPS_CLOUD_P-51K</name>
+                  <mountPoint>plane/HP_trailR</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>LOFT_LARGE</trigger>
+                  <name>EFFECT_LOFT_LARGE</name>
+                  <mountPoint>plane/HP_trailR</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <usage>
+              </usage>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <effectState>
+                <effect>
+                  <name>crit_wing_damaged_right_yellow</name>
+                  <mountPoint>plane/HP_trailR</mountPoint>
+                </effect>
+              </effectState>
+            </state>
+            <state>
+              <id>	3	</id>
+              <stateHelthCfc>0.55</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/crash/lod0/wR_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/crash/lod0/aileronR_01.model</model>
+                  <mountPoint>HP_aileronR</mountPoint>
+                  <animatorName>RightAileronController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/crash/lod0/flapR_01.model</model>
+                  <mountPoint>HP_flapR</mountPoint>
+                  <animatorName>	FlapsControllerR	</animatorName>
+                </item>
+              </subItems>
+              <effectsTriggered>
+                <effect>
+                  <name>EFFECT_LOFT</name>
+                  <mountPoint>plane/HP_trailR</mountPoint>
+                  <trigger>	LOFT	</trigger>
+                </effect>
+                <effect>
+                  <trigger>SPEED_OVERLOAD</trigger>
+                  <name>EFFECT_WINGS_CLOUD_P-51K</name>
+                  <mountPoint>plane/HP_trailR</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>BRAKE</trigger>
+                  <name>EFFECT_FLAPS_CLOUD_P-51K</name>
+                  <mountPoint>plane/HP_trailR</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>LOFT_LARGE</trigger>
+                  <name>EFFECT_LOFT_LARGE</name>
+                  <mountPoint>plane/HP_trailR</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <usage>
+              </usage>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <effectState>
+                <effect>
+                  <name>crit_wing_damaged_right</name>
+                  <mountPoint>plane/HP_trailR</mountPoint>
+                </effect>
+              </effectState>
+              <effectOnStart>
+                <effect>
+                  <name>crit_wing_expl_right</name>
+                  <mountPoint>plane/HP_trailR</mountPoint>
+                </effect>
+              </effectOnStart>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>0.0</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/crash/lod0/wRcap_01.model</model>
+              <animationController>
+              </animationController>
+              <effectState>
+                <effect>
+                  <name>
+                  </name>
+                  <mountPoint>plane/HP_wRhit</mountPoint>
+                </effect>
+              </effectState>
+              <stateAction>	1	</stateAction>
+              <fallingOutModel>vehicles/airplanes/china/CH05_P51K/crash/lod0/wRend_01.model</fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>	tail	</name>
+        <partId>	7	</partId>
+        <mountPoint>HP_tail</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <bBoxes>
+            <bbox>
+              <position>	0.000000 0.400000 -5.300001	</position>
+              <size>	4.000000 0.200000 1.000000	</size>
+              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 10.000000	</armorBack>
+              <absorption>0.2</absorption>
+              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+            <bbox>
+              <position>	0.000000 0.720000 -5.805000	</position>
+              <size>	0.180000 1.980000 1.440000	</size>
+              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 10.000000	</armorBack>
+              <absorption>0.2</absorption>
+              <rotation>	-0.080000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+          </bBoxes>
+          <health>32%</health>
+          <componentType>	Tail	</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <stateHelthCfc>1.0</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/tail_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/elevator_01.model</model>
+                  <mountPoint>HP_elevator</mountPoint>
+                  <animatorName>ElevatorController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/rudder_01.model</model>
+                  <mountPoint>HP_rudder</mountPoint>
+                  <animatorName>	RudderController	</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/radio_01.model</model>
+                  <mountPoint>HP_radio</mountPoint>
+                  <animatorName>
+                  </animatorName>
+                </item>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <usage>
+              </usage>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <stateHelthCfc>0.6</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/crash/lod0/tail_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/crash/lod0/elevator_01.model</model>
+                  <mountPoint>HP_elevator</mountPoint>
+                  <animatorName>ElevatorController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/crash/lod0/rudder_01.model</model>
+                  <mountPoint>HP_rudder</mountPoint>
+                  <animatorName>	RudderController	</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/crash/lod0/radio_01.model</model>
+                  <mountPoint>HP_radio</mountPoint>
+                  <animatorName>
+                  </animatorName>
+                </item>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <usage>
+              </usage>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <effectState>
+                <effect>
+                  <name>crit_tail_damaged_yellow</name>
+                  <mountPoint>HP_elevator</mountPoint>
+                </effect>
+              </effectState>
+            </state>
+            <state>
+              <id>	3	</id>
+              <stateHelthCfc>0.6</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/crash/lod0/tail_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/crash/lod0/elevator_01.model</model>
+                  <mountPoint>HP_elevator</mountPoint>
+                  <animatorName>ElevatorController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/crash/lod0/rudder_01.model</model>
+                  <mountPoint>HP_rudder</mountPoint>
+                  <animatorName>	RudderController	</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/china/CH05_P51K/crash/lod0/radio_01.model</model>
+                  <mountPoint>HP_radio</mountPoint>
+                  <animatorName>
+                  </animatorName>
+                </item>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <usage>
+              </usage>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <effectState>
+                <effect>
+                  <name>crit_tail_damaged</name>
+                  <mountPoint>HP_elevator</mountPoint>
+                </effect>
+              </effectState>
+              <effectOnStart>
+                <effect>
+                  <name>crit_tail_expl</name>
+                  <mountPoint>HP_elevator</mountPoint>
+                </effect>
+              </effectOnStart>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>0.0</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/crash/lod0/tailCap_01.model</model>
+              <animationController>
+              </animationController>
+              <effectState>
+                <effect>
+                  <name>
+                  </name>
+                  <mountPoint>plane/HP_tailHit</mountPoint>
+                </effect>
+              </effectState>
+              <stateAction>	1	</stateAction>
+              <fallingOutModel>vehicles/airplanes/china/CH05_P51K/crash/lod0/tailEnd_01.model</fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>fuelTanks1</name>
+        <partId>	8	</partId>
+        <mountPoint>HP_engine</mountPoint>
+        <upgrade>
+          <fireMountPoint>plane/HP_fuelHit_01</fireMountPoint>
+          <id>	1	</id>
+          <health>20%</health>
+          <componentType>	FuelTank	</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <usage>
+              </usage>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	1.500000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <stateHelthCfc>	0.800000	</stateHelthCfc>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <effectState>
+                <effect>
+                  <name>Fuel_Leak</name>
+                  <mountPoint>plane/HP_fuelHit_01</mountPoint>
+                </effect>
+              </effectState>
+              <stateAction>	0	</stateAction>
+              <usage>
+              </usage>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	2.250000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <effectState>
+                <effect>
+                  <name>Fuel_Leak</name>
+                  <mountPoint>plane/HP_fuelHit_01</mountPoint>
+                </effect>
+              </effectState>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	2.250000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>fuelTanks2</name>
+        <partId>	9	</partId>
+        <mountPoint>HP_engine</mountPoint>
+        <upgrade>
+          <fireMountPoint>plane/HP_fuelHit_02</fireMountPoint>
+          <id>	1	</id>
+          <health>20%</health>
+          <componentType>	FuelTank	</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <usage>
+              </usage>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	1.500000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <stateHelthCfc>	0.800000	</stateHelthCfc>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <effectState>
+                <effect>
+                  <name>Fuel_Leak</name>
+                  <mountPoint>plane/HP_fuelHit_02</mountPoint>
+                </effect>
+              </effectState>
+              <stateAction>	0	</stateAction>
+              <usage>
+              </usage>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	2.250000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <effectState>
+                <effect>
+                  <name>Fuel_Leak</name>
+                  <mountPoint>plane/HP_fuelHit_02</mountPoint>
+                </effect>
+              </effectState>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	2.250000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>	rightLandingGear	</name>
+        <partId>	10	</partId>
+        <mountPoint>rightWing/HP_landingGearR</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <health>	20.000000	</health>
+          <componentType>
+          </componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/landingGearR_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <usage>
+              </usage>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/crash/lod0/landingGearR_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>hangar</usage>
+              <stateHelthCfc>	-1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/landingGearRopen_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>leftLandingGear</name>
+        <partId>	11	</partId>
+        <mountPoint>leftWing/HP_landingGearL</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <health>	20.000000	</health>
+          <componentType>
+          </componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/landingGearL_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <usage>
+              </usage>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/crash/lod0/landingGearL_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>hangar</usage>
+              <stateHelthCfc>	-1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/landingGearLopen_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>rearLandingGear</name>
+        <partId>	12	</partId>
+        <mountPoint>tail/HP_landingGearRear</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <health>	20.000000	</health>
+          <componentType>
+          </componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/landingGearRear_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <usage>
+              </usage>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <model>
+              </model>
+            </state>
+            <state>
+              <id>	3	</id>
+              <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/landingGearRearOpen_01.model</model>
+              <usage>hangar</usage>
+              <stateHelthCfc>	-1.000000	</stateHelthCfc>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>plane</name>
+        <partId>	13	</partId>
+        <mountPoint>
+        </mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <componentType>
+          </componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/china/CH05_P51K/normal/lod0/plane.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <effectState>
+                <effect>
+                  <name>flight_idle</name>
+                  <mountPoint>HP_mass</mountPoint>
+                </effect>
+              </effectState>
+              <effectsTriggered>
+                <effect>
+                  <trigger>	FIRE	</trigger>
+                  <name>airplane_on_fire_metal_small</name>
+                  <mountPoint>HP_kill</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>SMOKE</trigger>
+                  <name>EFFECT_SMOKE</name>
+                  <mountPoint>HP_kill</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>SPEED_OVERLOAD</trigger>
+                  <name>fly_idle_max_speed</name>
+                  <mountPoint>HP_mass</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <usage>
+              </usage>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <health>	20.000000	</health>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+    </parts>
+    <visualSettings>
+      <hangarConfig>medium</hangarConfig>
+      <camera>	camera02	</camera>
+      <surfaceSettings>
+        <detailTexture>vehicles/airplanes/american/US12_P51/US12_P51_detail.dds</detailTexture>
+        <decalsSettings>
+          <decalGroup>
+            <name>decor</name>
+            <decals>
+              <decal>
+                <id>	1	</id>
+                <texture>vehicles/airplanes/common/decals/decoration/byPlane/blank_decor.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/remove_decal.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	11	</id>
+                <texture>vehicles/airplanes/common/decals/decor/11.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/11.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	12	</id>
+                <texture>vehicles/airplanes/common/decals/decor/12.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/12.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	13	</id>
+                <texture>vehicles/airplanes/common/decals/decor/13.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/13.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	14	</id>
+                <texture>vehicles/airplanes/common/decals/decor/14.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/14.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	15	</id>
+                <texture>vehicles/airplanes/common/decals/decor/15.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/15.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	16	</id>
+                <texture>vehicles/airplanes/common/decals/decor/16.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/16.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	17	</id>
+                <texture>vehicles/airplanes/common/decals/decor/17.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/17.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	18	</id>
+                <texture>vehicles/airplanes/common/decals/decor/18.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/18.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	19	</id>
+                <texture>vehicles/airplanes/common/decals/decor/19.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/19.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	20	</id>
+                <texture>vehicles/airplanes/common/decals/decor/20.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/20.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	21	</id>
+                <texture>vehicles/airplanes/common/decals/decor/China/01.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/China/preview/01.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	22	</id>
+                <texture>vehicles/airplanes/common/decals/decor/China/02.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/China/preview/02.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	23	</id>
+                <texture>vehicles/airplanes/common/decals/decor/China/03.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/China/preview/03.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	24	</id>
+                <texture>vehicles/airplanes/common/decals/decor/China/04.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/China/preview/04.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	25	</id>
+                <texture>vehicles/airplanes/common/decals/decor/China/05.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/China/preview/05.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	26	</id>
+                <texture>vehicles/airplanes/common/decals/decor/China/06.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/China/preview/06.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	27	</id>
+                <texture>vehicles/airplanes/common/decals/decor/China/07.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/China/preview/07.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	28	</id>
+                <texture>vehicles/airplanes/common/decals/decor/China/08.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/China/preview/08.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	29	</id>
+                <texture>vehicles/airplanes/common/decals/decor/China/09.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/China/preview/09.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	30	</id>
+                <texture>vehicles/airplanes/common/decals/decor/China/10.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/China/preview/10.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	31	</id>
+                <texture>vehicles/airplanes/common/decals/decor/China/11.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/China/preview/11.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	32	</id>
+                <texture>vehicles/airplanes/common/decals/decor/China/12.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/China/preview/12.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	33	</id>
+                <texture>vehicles/airplanes/common/decals/decor/China/13.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/China/preview/13.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	34	</id>
+                <texture>vehicles/airplanes/common/decals/decor/China/14.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/China/preview/14.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	35	</id>
+                <texture>vehicles/airplanes/common/decals/decor/China/15.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/China/preview/15.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	36	</id>
+                <texture>vehicles/airplanes/common/decals/decor/China/16.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/China/preview/16.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	37	</id>
+                <texture>vehicles/airplanes/common/decals/decor/China/17.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/China/preview/17.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	38	</id>
+                <texture>vehicles/airplanes/common/decals/decor/China/18.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/China/preview/18.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	39	</id>
+                <texture>vehicles/airplanes/common/decals/decor/China/19.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/China/preview/19.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	40	</id>
+                <texture>vehicles/airplanes/common/decals/decor/China/20.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/China/preview/20.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	41	</id>
+                <texture>vehicles/airplanes/common/decals/decor/21.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/21.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	42	</id>
+                <texture>vehicles/airplanes/common/decals/decor/22.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/22.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	43	</id>
+                <texture>vehicles/airplanes/common/decals/decor/23.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/23.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	44	</id>
+                <texture>vehicles/airplanes/common/decals/decor/24.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/24.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	45	</id>
+                <texture>vehicles/airplanes/common/decals/decor/25.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/25.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	46	</id>
+                <texture>vehicles/airplanes/common/decals/decor/26.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/26.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	47	</id>
+                <texture>vehicles/airplanes/common/decals/decor/27.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/27.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	48	</id>
+                <texture>vehicles/airplanes/common/decals/decor/28.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/28.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	49	</id>
+                <texture>vehicles/airplanes/common/decals/decor/29.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/29.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	50	</id>
+                <texture>vehicles/airplanes/common/decals/decor/30.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/30.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	51	</id>
+                <texture>vehicles/airplanes/common/decals/decor/31.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/31.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	52	</id>
+                <texture>vehicles/airplanes/common/decals/decor/32.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/32.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	53	</id>
+                <texture>vehicles/airplanes/common/decals/decor/33.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/33.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	54	</id>
+                <texture>vehicles/airplanes/common/decals/decor/34.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/34.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	55	</id>
+                <texture>vehicles/airplanes/common/decals/decor/35.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/35.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	56	</id>
+                <texture>vehicles/airplanes/common/decals/decor/36.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/36.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	57	</id>
+                <texture>vehicles/airplanes/common/decals/decor/37.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/37.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	58	</id>
+                <texture>vehicles/airplanes/common/decals/decor/38.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/38.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	59	</id>
+                <texture>vehicles/airplanes/common/decals/decor/39.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/39.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	60	</id>
+                <texture>vehicles/airplanes/common/decals/decor/40.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/40.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	61	</id>
+                <texture>vehicles/airplanes/common/decals/decor/41.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/41.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	62	</id>
+                <texture>vehicles/airplanes/common/decals/decor/42.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/42.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	63	</id>
+                <texture>vehicles/airplanes/common/decals/decor/43.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/43.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	64	</id>
+                <texture>vehicles/airplanes/common/decals/decor/44.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/44.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	65	</id>
+                <texture>vehicles/airplanes/common/decals/decor/45.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/45.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	66	</id>
+                <texture>vehicles/airplanes/common/decals/decor/46.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/46.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	67	</id>
+                <texture>vehicles/airplanes/common/decals/decor/47.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/47.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	68	</id>
+                <texture>vehicles/airplanes/common/decals/decor/48.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/48.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	69	</id>
+                <texture>vehicles/airplanes/common/decals/decor/49.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/49.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	70	</id>
+                <texture>vehicles/airplanes/common/decals/decor/50.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/50.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	71	</id>
+                <texture>vehicles/airplanes/common/decals/decor/51.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/51.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	72	</id>
+                <texture>vehicles/airplanes/common/decals/decor/52.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/52.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	73	</id>
+                <texture>vehicles/airplanes/common/decals/decor/53.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/53.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	74	</id>
+                <texture>vehicles/airplanes/common/decals/decor/54.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/54.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	75	</id>
+                <texture>vehicles/airplanes/common/decals/decor/55.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/55.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	76	</id>
+                <texture>vehicles/airplanes/common/decals/decor/56.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/56.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	77	</id>
+                <texture>vehicles/airplanes/common/decals/decor/57.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/57.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	78	</id>
+                <texture>vehicles/airplanes/common/decals/decor/china/21.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/china/preview/21.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	79	</id>
+                <texture>vehicles/airplanes/common/decals/decor/china/22.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/china/preview/22.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	80	</id>
+                <texture>vehicles/airplanes/common/decals/decor/china/23.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/china/preview/23.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	81	</id>
+                <texture>vehicles/airplanes/common/decals/decor/58.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/58.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	82	</id>
+                <texture>vehicles/airplanes/common/decals/decor/59.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/59.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	83	</id>
+                <texture>vehicles/airplanes/common/decals/decor/60.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/60.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	84	</id>
+                <texture>vehicles/airplanes/common/decals/decor/61.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/61.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	85	</id>
+                <texture>vehicles/airplanes/common/decals/decor/62.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/62.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	86	</id>
+                <texture>vehicles/airplanes/common/decals/decor/63.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/63.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	87	</id>
+                <texture>vehicles/airplanes/common/decals/decor/64.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/64.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	88	</id>
+                <texture>vehicles/airplanes/common/decals/decor/65.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/65.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	89	</id>
+                <texture>vehicles/airplanes/common/decals/decor/66.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/66.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	90	</id>
+                <texture>vehicles/airplanes/common/decals/decor/67.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/67.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	91	</id>
+                <texture>vehicles/airplanes/common/decals/decor/68.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/68.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	92	</id>
+                <texture>vehicles/airplanes/common/decals/decor/69.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/69.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	93	</id>
+                <texture>vehicles/airplanes/common/decals/decor/70.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/70.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	94	</id>
+                <texture>vehicles/airplanes/common/decals/decor/71.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/71.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	95	</id>
+                <texture>vehicles/airplanes/common/decals/decor/72.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/72.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	96	</id>
+                <texture>vehicles/airplanes/common/decals/decor/73.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/73.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	97	</id>
+                <texture>vehicles/airplanes/common/decals/decor/74.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/74.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	98	</id>
+                <texture>vehicles/airplanes/common/decals/decor/75.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/75.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	99	</id>
+                <texture>vehicles/airplanes/common/decals/decor/76.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/76.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	100	</id>
+                <texture>vehicles/airplanes/common/decals/decor/77.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/77.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	101	</id>
+                <texture>vehicles/airplanes/common/decals/decor/78.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/78.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	102	</id>
+                <texture>vehicles/airplanes/common/decals/decor/79.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/79.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	103	</id>
+                <texture>vehicles/airplanes/common/decals/decor/80.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/80.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	104	</id>
+                <texture>vehicles/airplanes/common/decals/decor/81.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/81.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	105	</id>
+                <texture>vehicles/airplanes/common/decals/decor/82.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/82.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	106	</id>
+                <texture>vehicles/airplanes/common/decals/decor/83.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/83.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	107	</id>
+                <texture>vehicles/airplanes/common/decals/decor/84.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/84.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	108	</id>
+                <texture>vehicles/airplanes/common/decals/decor/85.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/85.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	109	</id>
+                <texture>vehicles/airplanes/common/decals/decor/86.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/86.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	110	</id>
+                <texture>vehicles/airplanes/common/decals/decor/87.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/87.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	111	</id>
+                <texture>vehicles/airplanes/common/decals/decor/88.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/88.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	112	</id>
+                <texture>vehicles/airplanes/common/decals/decor/89.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/89.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	113	</id>
+                <texture>vehicles/airplanes/common/decals/decor/90.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/90.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	114	</id>
+                <texture>vehicles/airplanes/common/decals/decor/91.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/91.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	115	</id>
+                <texture>vehicles/airplanes/common/decals/decor/92.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/92.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	116	</id>
+                <texture>vehicles/airplanes/common/decals/decor/93.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/93.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	117	</id>
+                <texture>vehicles/airplanes/common/decals/decor/94.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/94.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	118	</id>
+                <texture>vehicles/airplanes/common/decals/decor/95.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/95.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	120	</id>
+                <texture>vehicles/airplanes/common/decals/decor/96.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/96.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	121	</id>
+                <texture>vehicles/airplanes/common/decals/decor/97.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/97.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	122	</id>
+                <texture>vehicles/airplanes/common/decals/decor/98.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/98.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	123	</id>
+                <texture>vehicles/airplanes/common/decals/decor/99.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/99.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	124	</id>
+                <texture>vehicles/airplanes/common/decals/decor/100.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/100.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	125	</id>
+                <texture>vehicles/airplanes/common/decals/decor/101.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/101.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	126	</id>
+                <texture>vehicles/airplanes/common/decals/decor/china/25.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/china/preview/25.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	127	</id>
+                <texture>vehicles/airplanes/common/decals/decor/102.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/102.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	128	</id>
+                <texture>vehicles/airplanes/common/decals/decor/103.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/103.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	129	</id>
+                <texture>vehicles/airplanes/common/decals/decor/104.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/104.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	130	</id>
+                <texture>vehicles/airplanes/common/decals/decor/105.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/105.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	131	</id>
+                <texture>vehicles/airplanes/common/decals/decor/106.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/106.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	132	</id>
+                <texture>vehicles/airplanes/common/decals/decor/107.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/107.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	133	</id>
+                <texture>vehicles/airplanes/common/decals/decor/108.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/108.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	134	</id>
+                <texture>vehicles/airplanes/common/decals/decor/109.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/109.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	135	</id>
+                <texture>vehicles/airplanes/common/decals/decor/110.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/110.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	136	</id>
+                <texture>vehicles/airplanes/common/decals/decor/111.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/111.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	137	</id>
+                <texture>vehicles/airplanes/common/decals/decor/112.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/112.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	138	</id>
+                <texture>vehicles/airplanes/common/decals/decor/113.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/113.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	139	</id>
+                <texture>vehicles/airplanes/common/decals/decor/114.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/114.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	140	</id>
+                <texture>vehicles/airplanes/common/decals/decor/115.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/115.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	141	</id>
+                <texture>vehicles/airplanes/common/decals/decor/116.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/116.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	142	</id>
+                <texture>vehicles/airplanes/common/decals/decor/117.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/117.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	143	</id>
+                <texture>vehicles/airplanes/common/decals/decor/118.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/118.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	145	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/01.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/01.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	146	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/02.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/02.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	147	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/03.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/03.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	148	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/04.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/04.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	149	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/05.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/05.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	150	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/06.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/06.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	151	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/07.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/07.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	152	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/08.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/08.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	153	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/09.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/09.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	154	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/10.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/10.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	155	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/11.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/11.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	156	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/12.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/12.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	157	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/13.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/13.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	158	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/14.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/14.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	159	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/15.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/15.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	160	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/16.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/16.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	161	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/17.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/17.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	162	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/18.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/18.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	163	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/19.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/19.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	164	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/20.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/20.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	165	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/21.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/21.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	166	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/22.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/22.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	167	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/23.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/23.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	168	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/24.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/24.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	169	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/25.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/25.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	170	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/26.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/26.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	171	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/27.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/27.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	172	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/28.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/28.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	173	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/29.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/29.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	174	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/30.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/30.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	175	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/31.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/31.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	176	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/32.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/32.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	177	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/33.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/33.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	178	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/34.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/34.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	179	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/35.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/35.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	180	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/36.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/36.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	181	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/37.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/37.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	182	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/38.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/38.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	183	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/39.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/39.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	184	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/40.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/40.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	185	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/41.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/41.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	186	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/42.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/42.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	187	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/43.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/43.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	188	</id>
+                <texture>vehicles/airplanes/common/decals/decor/119.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/119.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	189	</id>
+                <texture>vehicles/airplanes/common/decals/decor/120.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/120.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	190	</id>
+                <texture>vehicles/airplanes/common/decals/decor/121.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/121.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	191	</id>
+                <texture>vehicles/airplanes/common/decals/decor/ussr/31.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/ussr/preview/31.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	192	</id>
+                <texture>vehicles/airplanes/common/decals/decor/ussr/32.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/ussr/preview/32.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	193	</id>
+                <texture>vehicles/airplanes/common/decals/decor/122.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/122.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	194	</id>
+                <texture>vehicles/airplanes/common/decals/decor/123.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/123.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	195	</id>
+                <texture>vehicles/airplanes/common/decals/decor/124.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/124.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	196	</id>
+                <texture>vehicles/airplanes/common/decals/decor/125.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/125.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	197	</id>
+                <texture>vehicles/airplanes/common/decals/decor/126.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/126.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	198	</id>
+                <texture>vehicles/airplanes/common/decals/decor/127.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/127.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	199	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/44.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/44.dds</icoPath>
+              </decal>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>clan_big</name>
+            <decals>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>platoon_number</name>
+            <decals>
+              <decal>
+                <id>	1	</id>
+                <texture>vehicles/airplanes/common/decals/digits/China/big/CH_01.dds</texture>
+              </decal>
+              <decal>
+                <id>	2	</id>
+                <texture>vehicles/airplanes/common/decals/digits/China/big/CH_02.dds</texture>
+              </decal>
+              <decal>
+                <id>	3	</id>
+                <texture>vehicles/airplanes/common/decals/digits/China/big/CH_03.dds</texture>
+              </decal>
+              <decal>
+                <id>	4	</id>
+                <texture>vehicles/airplanes/common/decals/digits/China/big/CH_04.dds</texture>
+              </decal>
+              <decal>
+                <id>	5	</id>
+                <texture>vehicles/airplanes/common/decals/digits/China/big/CH_05.dds</texture>
+              </decal>
+              <decal>
+                <id>	6	</id>
+                <texture>vehicles/airplanes/common/decals/digits/China/big/CH_06.dds</texture>
+              </decal>
+              <decal>
+                <id>	7	</id>
+                <texture>vehicles/airplanes/common/decals/digits/China/big/CH_07.dds</texture>
+              </decal>
+              <decal>
+                <id>	8	</id>
+                <texture>vehicles/airplanes/common/decals/digits/China/big/CH_08.dds</texture>
+              </decal>
+              <decal>
+                <id>	9	</id>
+                <texture>vehicles/airplanes/common/decals/digits/China/big/CH_09.dds</texture>
+              </decal>
+              <decal>
+                <id>	16	</id>
+                <texture>vehicles/airplanes/common/decals/digits/blank.dds</texture>
+              </decal>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>clan_small</name>
+            <decals>
+              <decal>
+                <id>	1	</id>
+                <texture>vehicles/airplanes/common/decals/nationality/China/Emb_CH_02.dds</texture>
+              </decal>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>	rank	</name>
+            <decals>
+              <decal>
+                <id>	1	</id>
+                <texture>vehicles/airplanes/common/decals/standing/China/lvls/Lvl_01.dds</texture>
+              </decal>
+              <decal>
+                <id>	2	</id>
+                <texture>vehicles/airplanes/common/decals/standing/China/lvls/Lvl_02.dds</texture>
+              </decal>
+              <decal>
+                <id>	3	</id>
+                <texture>vehicles/airplanes/common/decals/standing/China/lvls/Lvl_03.dds</texture>
+              </decal>
+              <decal>
+                <id>	4	</id>
+                <texture>vehicles/airplanes/common/decals/standing/China/lvls/Lvl_04.dds</texture>
+              </decal>
+              <decal>
+                <id>	5	</id>
+                <texture>vehicles/airplanes/common/decals/standing/China/lvls/Lvl_05.dds</texture>
+              </decal>
+              <decal>
+                <id>	6	</id>
+                <texture>vehicles/airplanes/common/decals/standing/China/lvls/Lvl_06.dds</texture>
+              </decal>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>member_number</name>
+            <decals>
+              <decal>
+                <id>	1	</id>
+                <texture>vehicles/airplanes/common/decals/digits/China/small/CH_01_sml.dds</texture>
+              </decal>
+              <decal>
+                <id>	2	</id>
+                <texture>vehicles/airplanes/common/decals/digits/China/small/CH_02_sml.dds</texture>
+              </decal>
+              <decal>
+                <id>	3	</id>
+                <texture>vehicles/airplanes/common/decals/digits/China/small/CH_03_sml.dds</texture>
+              </decal>
+              <decal>
+                <id>	4	</id>
+                <texture>vehicles/airplanes/common/decals/digits/China/small/CH_04_sml.dds</texture>
+              </decal>
+              <decal>
+                <id>	5	</id>
+                <texture>vehicles/airplanes/common/decals/digits/China/small/CH_05_sml.dds</texture>
+              </decal>
+              <decal>
+                <id>	6	</id>
+                <texture>vehicles/airplanes/common/decals/digits/China/small/CH_06_sml.dds</texture>
+              </decal>
+              <decal>
+                <id>	7	</id>
+                <texture>vehicles/airplanes/common/decals/digits/China/small/CH_07_sml.dds</texture>
+              </decal>
+              <decal>
+                <id>	8	</id>
+                <texture>vehicles/airplanes/common/decals/digits/China/small/CH_08_sml.dds</texture>
+              </decal>
+              <decal>
+                <id>	9	</id>
+                <texture>vehicles/airplanes/common/decals/digits/China/small/CH_09_sml.dds</texture>
+              </decal>
+              <decal>
+                <id>	10	</id>
+                <texture>vehicles/airplanes/common/decals/digits/China/small/CH_10_sml.dds</texture>
+              </decal>
+              <decal>
+                <id>	11	</id>
+                <texture>vehicles/airplanes/common/decals/digits/China/small/CH_11_sml.dds</texture>
+              </decal>
+              <decal>
+                <id>	12	</id>
+                <texture>vehicles/airplanes/common/decals/digits/China/small/CH_12_sml.dds</texture>
+              </decal>
+              <decal>
+                <id>	13	</id>
+                <texture>vehicles/airplanes/common/decals/digits/China/small/CH_13_sml.dds</texture>
+              </decal>
+              <decal>
+                <id>	14	</id>
+                <texture>vehicles/airplanes/common/decals/digits/China/small/CH_14_sml.dds</texture>
+              </decal>
+              <decal>
+                <id>	15	</id>
+                <texture>vehicles/airplanes/common/decals/digits/China/small/CH_15_sml.dds</texture>
+              </decal>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>camouflage</name>
+            <decals>
+              <decal>
+                <id>	1	</id>
+                <texture>vehicles/airplanes/china/CH05_P51K/CH05_P51K_hangar.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/remove_decal.dds</icoPath>
+                <bottomColor>	0.647000 0.651000 0.647000 1.000000	</bottomColor>
+                <glossinessOffset>	0.100000	</glossinessOffset>
+              </decal>
+              <decal>
+                <id>	2	</id>
+                <texture>vehicles/airplanes/china/CH05_P51K/CH05_P51K_base.dds</texture>
+                <icoPath>vehicles/airplanes/china/CH05_P51K/preview/CH05_P51K_base.dds</icoPath>
+                <bottomColor>	0.592000 0.584000 0.580000 1.000000	</bottomColor>
+                <glossinessOffset>	0.000000	</glossinessOffset>
+              </decal>
+              <decal>
+                <id>	3	</id>
+                <texture>vehicles/airplanes/china/CH05_P51K/CH05_P51K_desert.dds</texture>
+                <icoPath>vehicles/airplanes/china/CH05_P51K/preview/CH05_P51K_desert.dds</icoPath>
+                <bottomColor>	0.592000 0.584000 0.580000 1.000000	</bottomColor>
+                <glossinessOffset>	-0.370000	</glossinessOffset>
+              </decal>
+              <decal>
+                <id>	4	</id>
+                <texture>vehicles/airplanes/china/CH05_P51K/CH05_P51K_marine.dds</texture>
+                <icoPath>vehicles/airplanes/china/CH05_P51K/preview/CH05_P51K_marine.dds</icoPath>
+                <bottomColor>	0.035000 0.110000 0.216000 1.000000	</bottomColor>
+                <glossinessOffset>	0.200000	</glossinessOffset>
+              </decal>
+              <decal>
+                <id>	5	</id>
+                <texture>vehicles/airplanes/china/CH05_P51K/CH05_P51K_snow.dds</texture>
+                <icoPath>vehicles/airplanes/china/CH05_P51K/preview/CH05_P51K_snow.dds</icoPath>
+                <bottomColor>	0.518000 0.475000 0.482000 1.000000	</bottomColor>
+                <glossinessOffset>	0.000000	</glossinessOffset>
+              </decal>
+              <decal>
+                <id>	6	</id>
+                <texture>vehicles/airplanes/china/CH05_P51K/CH05_P51K_woodland.dds</texture>
+                <icoPath>vehicles/airplanes/china/CH05_P51K/preview/CH05_P51K_woodland.dds</icoPath>
+                <bottomColor>	0.624000 0.631000 0.647000 1.000000	</bottomColor>
+                <glossinessOffset>	-0.700000	</glossinessOffset>
+              </decal>
+              <decal>
+                <id>	7	</id>
+                <texture>vehicles/airplanes/china/CH05_P51K/CH05_P51K_premium.dds</texture>
+                <icoPath>vehicles/airplanes/china/CH05_P51K/preview/CH05_P51K_premium.dds</icoPath>
+                <bottomColor>	0.847000 0.847000 0.847000 1.000000	</bottomColor>
+                <glossinessOffset>	0.200000	</glossinessOffset>
+              </decal>
+              <decal>
+                <id>	12	</id>
+                <texture>vehicles/airplanes/china/CH05_P51K/CH05_P51K_chrome.dds</texture>
+                <icoPath>vehicles/airplanes/china/CH05_P51K/preview/CH05_P51K_chrome.dds</icoPath>
+                <bottomColor>	0.847000 0.847000 0.847000 1.000000	</bottomColor>
+                <glossinessOffset>	0.200000	</glossinessOffset>
+              </decal>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>ground_frags</name>
+            <decals>
+              <decal>
+                <id>	1	</id>
+                <texture>vehicles/airplanes/common/decals/frags/CH/Frag_CH_land_01.dds</texture>
+              </decal>
+              <decal>
+                <id>	2	</id>
+                <texture>vehicles/airplanes/common/decals/frags/CH/Frag_CH_land_02.dds</texture>
+              </decal>
+              <decal>
+                <id>	3	</id>
+                <texture>vehicles/airplanes/common/decals/frags/CH/Frag_CH_land_03.dds</texture>
+              </decal>
+              <decal>
+                <id>	4	</id>
+                <texture>vehicles/airplanes/common/decals/frags/CH/Frag_CH_land_04.dds</texture>
+              </decal>
+              <decal>
+                <id>	5	</id>
+                <texture>vehicles/airplanes/common/decals/frags/CH/Frag_CH_land_05.dds</texture>
+              </decal>
+              <decal>
+                <id>	6	</id>
+                <texture>vehicles/airplanes/common/decals/frags/CH/Frag_CH_land_06.dds</texture>
+              </decal>
+              <decal>
+                <id>	7	</id>
+                <texture>vehicles/airplanes/common/decals/frags/CH/Frag_CH_land_07.dds</texture>
+              </decal>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>air_frags</name>
+            <decals>
+              <decal>
+                <id>	1	</id>
+                <texture>vehicles/airplanes/common/decals/frags/CH/Frag_CH_air_01.dds</texture>
+              </decal>
+              <decal>
+                <id>	2	</id>
+                <texture>vehicles/airplanes/common/decals/frags/CH/Frag_CH_air_02.dds</texture>
+              </decal>
+              <decal>
+                <id>	3	</id>
+                <texture>vehicles/airplanes/common/decals/frags/CH/Frag_CH_air_03.dds</texture>
+              </decal>
+              <decal>
+                <id>	4	</id>
+                <texture>vehicles/airplanes/common/decals/frags/CH/Frag_CH_air_04.dds</texture>
+              </decal>
+              <decal>
+                <id>	5	</id>
+                <texture>vehicles/airplanes/common/decals/frags/CH/Frag_CH_air_05.dds</texture>
+              </decal>
+              <decal>
+                <id>	6	</id>
+                <texture>vehicles/airplanes/common/decals/frags/CH/Frag_CH_air_06.dds</texture>
+              </decal>
+              <decal>
+                <id>	7	</id>
+                <texture>vehicles/airplanes/common/decals/frags/CH/Frag_CH_air_07.dds</texture>
+              </decal>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>	nose	</name>
+            <decals>
+              <decal>
+                <id>	1	</id>
+                <texture>vehicles/airplanes/common/decals/decoration/byPlane/blank_noseart.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/remove_decal.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	2	</id>
+                <texture>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/lvl_01/02.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/lvl_01/preview/02.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	3	</id>
+                <texture>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/lvl_01/03.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/lvl_01/preview/03.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	4	</id>
+                <texture>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/lvl_01/04.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/lvl_01/preview/04.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	5	</id>
+                <texture>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/lvl_01/05.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/lvl_01/preview/05.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	6	</id>
+                <texture>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/lvl_02/01.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/lvl_02/preview/01.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	7	</id>
+                <texture>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/lvl_02/02.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/lvl_02/preview/02.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	8	</id>
+                <texture>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/lvl_02/03.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/lvl_02/preview/03.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	9	</id>
+                <texture>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/lvl_02/04.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/lvl_02/preview/04.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	10	</id>
+                <texture>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/lvl_02/05.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/lvl_02/preview/05.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	11	</id>
+                <texture>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/lvl_01/01.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/lvl_01/preview/01.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	12	</id>
+                <texture>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/lvl_03/01.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/lvl_03/preview/01.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	13	</id>
+                <texture>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/lvl_03/02.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/lvl_03/preview/02.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	14	</id>
+                <texture>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/lvl_03/03.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/lvl_03/preview/03.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	15	</id>
+                <texture>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/lvl_03/04.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/lvl_03/preview/04.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	16	</id>
+                <texture>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/lvl_03/05.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/lvl_03/preview/05.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	17	</id>
+                <texture>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/girls/01.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/girls/preview/01.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	18	</id>
+                <texture>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/girls/02.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/girls/preview/02.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	19	</id>
+                <texture>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/girls/03.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/girls/preview/03.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	20	</id>
+                <texture>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/girls/04.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/girls/preview/04.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	21	</id>
+                <texture>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/girls/05.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decoration/byPlane/china/CH05_P51K/girls/preview/05.dds</icoPath>
+              </decal>
+            </decals>
+          </decalGroup>
+        </decalsSettings>
+      </surfaceSettings>
+      <cameraOffset>	0.000000 -0.119368 -1.618331	</cameraOffset>
+      <hudPlaneScheme>	ar65	</hudPlaneScheme>
+    </visualSettings>
+    <description>
+      <textDescription>MARKET_AIRPLANE_DESCRIPTION_P-51K</textDescription>
+      <engineCapasityUnit>MARKET_AIRPLANE_ENGINE_CAPACITY_LS</engineCapasityUnit>
+      <MARKET_AIRPLANE_ENGINE_CAPACITY>	1490	</MARKET_AIRPLANE_ENGINE_CAPACITY>
+      <MARKET_AIRPLANE_WING_AREA>21.69</MARKET_AIRPLANE_WING_AREA>
+      <MARKET_AIRPLANE_GROUND_MAX_SPEED>	582	</MARKET_AIRPLANE_GROUND_MAX_SPEED>
+      <MARKET_AIRPLANE_HEIGHT_MAX_SPEED>	695	</MARKET_AIRPLANE_HEIGHT_MAX_SPEED>
+      <MARKET_AIRPLANE_RATE_OF_CLIMB>	15	</MARKET_AIRPLANE_RATE_OF_CLIMB>
+      <MARKET_AIRPLANE_FULL_TURN_TIME>-</MARKET_AIRPLANE_FULL_TURN_TIME>
+    </description>
+  </Airplane>
+  <Pivots>
+    <pivot>
+      <name>5/1/0/0/leftWing/HP_gun_01/HP_flame_01</name>
+      <position>	-2.360000 -0.450000 0.340000	</position>
+      <direction>	0.000000 0.000000 0.000000	</direction>
+    </pivot>
+    <pivot>
+      <name>5/1/0/0/leftWing/HP_gun_01/HP_flame_02</name>
+      <position>	-2.185000 -0.470013 0.344000	</position>
+      <direction>	0.000000 0.000000 0.000000	</direction>
+    </pivot>
+    <pivot>
+      <name>5/1/0/0/leftWing/HP_gun_01/HP_flame_03</name>
+      <position>	-2.014000 -0.485000 0.340000	</position>
+      <direction>	0.000000 0.000000 0.000000	</direction>
+    </pivot>
+    <pivot>
+      <name>6/1/0/0/rightWing/HP_gun_02/HP_flame_04</name>
+      <position>	2.014000 -0.485000 0.340000	</position>
+      <direction>	0.000000 0.000000 0.000000	</direction>
+    </pivot>
+    <pivot>
+      <name>6/1/0/0/rightWing/HP_gun_02/HP_flame_05</name>
+      <position>	2.185000 -0.470013 0.344000	</position>
+      <direction>	0.000000 0.000000 0.000000	</direction>
+    </pivot>
+    <pivot>
+      <name>6/1/0/0/rightWing/HP_gun_02/HP_flame_06</name>
+      <position>	2.360000 -0.450000 0.340000	</position>
+      <direction>	0.000000 0.000000 0.000000	</direction>
+    </pivot>
+    <pivot>
+      <name>5/1/1/1/leftWing/HP_missile_02/HP_flame</name>
+      <position>	-2.063463 -0.636883 -0.304119	</position>
+      <direction>	0.000000 0.000000 0.000000	</direction>
+    </pivot>
+    <pivot>
+      <name>6/1/1/1/rightWing/HP_missile_11/HP_flame</name>
+      <position>	3.189781 -0.521719 -0.304119	</position>
+      <direction>	0.000000 0.000000 0.000000	</direction>
+    </pivot>
+    <pivot>
+      <name>5/1/1/1/leftWing/HP_missile_03/HP_flame</name>
+      <position>	-2.345042 -0.608092 -0.304119	</position>
+      <direction>	0.000000 0.000000 0.000000	</direction>
+    </pivot>
+    <pivot>
+      <name>6/1/1/1/rightWing/HP_missile_10/HP_flame</name>
+      <position>	2.908202 -0.550510 -0.304119	</position>
+      <direction>	0.000000 0.000000 0.000000	</direction>
+    </pivot>
+    <pivot>
+      <name>5/1/1/1/leftWing/HP_missile_04/HP_flame</name>
+      <position>	-2.626622 -0.579301 -0.304119	</position>
+      <direction>	0.000000 0.000000 0.000000	</direction>
+    </pivot>
+    <pivot>
+      <name>6/1/1/1/rightWing/HP_missile_09/HP_flame</name>
+      <position>	2.626622 -0.579301 -0.304119	</position>
+      <direction>	0.000000 0.000000 0.000000	</direction>
+    </pivot>
+    <pivot>
+      <name>5/1/1/1/leftWing/HP_missile_05/HP_flame</name>
+      <position>	-2.908202 -0.550510 -0.304119	</position>
+      <direction>	0.000000 0.000000 0.000000	</direction>
+    </pivot>
+    <pivot>
+      <name>6/1/1/1/rightWing/HP_missile_08/HP_flame</name>
+      <position>	2.345042 -0.608092 -0.304119	</position>
+      <direction>	0.000000 0.000000 0.000000	</direction>
+    </pivot>
+    <pivot>
+      <name>5/1/1/1/leftWing/HP_missile_06/HP_flame</name>
+      <position>	-3.189781 -0.521719 -0.304119	</position>
+      <direction>	0.000000 0.000000 0.000000	</direction>
+    </pivot>
+    <pivot>
+      <name>6/1/1/1/rightWing/HP_missile_07/HP_flame</name>
+      <position>	2.063463 -0.636883 -0.304119	</position>
+      <direction>	0.000000 0.000000 0.000000	</direction>
+    </pivot>
+  </Pivots>
+  <magnetPoints>
+    <magnetPoint>
+      <position>	-4.071613 -0.245344 -0.615393	</position>
+      <staticMass>	0.250000	</staticMass>
+    </magnetPoint>
+    <magnetPoint>
+      <position>	0.000000 -0.711225 -0.953487	</position>
+      <staticMass>	1.000000	</staticMass>
+    </magnetPoint>
+    <magnetPoint>
+      <position>	4.071613 -0.245344 -0.615393	</position>
+      <staticMass>	0.250000	</staticMass>
+    </magnetPoint>
+  </magnetPoints>
+  <HPmass>
+    <position>	0.000000 0.000000 -0.600000	</position>
+    <direction>	0.000000 0.000000 0.000000	</direction>
+  </HPmass>
+</p-51k.xml>

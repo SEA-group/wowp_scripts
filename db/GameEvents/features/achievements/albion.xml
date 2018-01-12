@@ -1,0 +1,272 @@
+<albion.xml>
+  <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
+  <noNamespaceSchemaLocation>../../eps/validators/subscribers.xsd</noNamespaceSchemaLocation>
+  <header>
+    <type>achievement</type>
+    <group>albion</group>
+    <server>
+      <active>	true	</active>
+      <scope>player</scope>
+      <hidden>	true	</hidden>
+    </server>
+    <markers>
+      <group>albion</group>
+    </markers>
+    <client>
+      <place>	left	</place>
+    </client>
+  </header>
+  <include>
+    <metadata>
+      <doneCount>	true	</doneCount>
+      <firstDoneTime>	true	</firstDoneTime>
+      <lastDoneTime>	true	</lastDoneTime>
+    </metadata>
+  </include>
+  <subscriber>
+    <name>albion_axis_3_2017</name>
+    <client>
+      <order>	20	</order>
+      <page>	1	</page>
+      <multiple>	false	</multiple>
+      <name>
+        <locale>MEDAL_NAME_HAWK_LA_MANCHE-III</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_HAWK_LA_MANCHE-III</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/signsAlbionEagle3.dds</small>
+        <big>icons/awards/achievementsInfo/signsAlbionEagle3.dds</big>
+        <faded>icons/awards/achievements/signsAlbionEagle3_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>warAction</type>
+      <context>player</context>
+      <name>was.in.war</name>
+      <condition>
+        <equal>
+          <context>	fraction	</context>
+          <value>	axis	</value>
+        </equal>
+      </condition>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+    <event>
+      <type>warAction</type>
+      <context>player</context>
+      <name>end</name>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>albion_axis_2_2017</name>
+    <client>
+      <order>	21	</order>
+      <page>	1	</page>
+      <multiple>	false	</multiple>
+      <name>
+        <locale>MEDAL_NAME_HAWK_LA_MANCHE-II</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_HAWK_LA_MANCHE-II</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/signsAlbionEagle2.dds</small>
+        <big>icons/awards/achievementsInfo/signsAlbionEagle2.dds</big>
+        <faded>icons/awards/achievements/signsAlbionEagle2_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>warAction</type>
+      <context>player</context>
+      <name>was.in.war</name>
+      <condition>
+        <equal>
+          <context>	fraction	</context>
+          <value>	axis	</value>
+        </equal>
+      </condition>
+      <count>
+        <value>	10	</value>
+      </count>
+    </event>
+    <event>
+      <type>warAction</type>
+      <context>player</context>
+      <name>end</name>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>albion_axis_1_2017</name>
+    <client>
+      <order>	22	</order>
+      <page>	1	</page>
+      <multiple>	false	</multiple>
+      <name>
+        <locale>MEDAL_NAME_HAWK_LA_MANCHE-I</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_HAWK_LA_MANCHE-I</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/signsAlbionEagle1.dds</small>
+        <big>icons/awards/achievementsInfo/signsAlbionEagle1.dds</big>
+        <faded>icons/awards/achievements/signsAlbionEagle1_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>warAction</type>
+      <context>player</context>
+      <name>was.in.war</name>
+      <condition>
+        <equal>
+          <context>	fraction	</context>
+          <value>	axis	</value>
+        </equal>
+      </condition>
+      <count>
+        <value>	21	</value>
+      </count>
+    </event>
+    <event>
+      <type>warAction</type>
+      <context>player</context>
+      <name>end</name>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>albion_ally_3_2017</name>
+    <client>
+      <order>	23	</order>
+      <page>	1	</page>
+      <multiple>	false	</multiple>
+      <name>
+        <locale>MEDAL_NAME_ALBION_LION-III</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_ALBION_LION-III</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/signsAlbionLion3.dds</small>
+        <big>icons/awards/achievementsInfo/signsAlbionLion3.dds</big>
+        <faded>icons/awards/achievements/signsAlbionLion3_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>warAction</type>
+      <context>player</context>
+      <name>was.in.war</name>
+      <condition>
+        <equal>
+          <context>	fraction	</context>
+          <value>	ally	</value>
+        </equal>
+      </condition>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+    <event>
+      <type>warAction</type>
+      <context>player</context>
+      <name>end</name>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>albion_ally_2_2017</name>
+    <client>
+      <order>	24	</order>
+      <page>	1	</page>
+      <multiple>	false	</multiple>
+      <name>
+        <locale>MEDAL_NAME_ALBION_LION-II</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_ALBION_LION-II</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/signsAlbionLion2.dds</small>
+        <big>icons/awards/achievementsInfo/signsAlbionLion2.dds</big>
+        <faded>icons/awards/achievements/signsAlbionLion2_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>warAction</type>
+      <context>player</context>
+      <name>was.in.war</name>
+      <condition>
+        <equal>
+          <context>	fraction	</context>
+          <value>	ally	</value>
+        </equal>
+      </condition>
+      <count>
+        <value>	10	</value>
+      </count>
+    </event>
+    <event>
+      <type>warAction</type>
+      <context>player</context>
+      <name>end</name>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>albion_ally_1_2017</name>
+    <client>
+      <order>	25	</order>
+      <page>	1	</page>
+      <multiple>	false	</multiple>
+      <name>
+        <locale>MEDAL_NAME_ALBION_LION-I</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_ALBION_LION-I</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/signsAlbionLion1.dds</small>
+        <big>icons/awards/achievementsInfo/signsAlbionLion1.dds</big>
+        <faded>icons/awards/achievements/signsAlbionLion1_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>warAction</type>
+      <context>player</context>
+      <name>was.in.war</name>
+      <condition>
+        <equal>
+          <context>	fraction	</context>
+          <value>	ally	</value>
+        </equal>
+      </condition>
+      <count>
+        <value>	21	</value>
+      </count>
+    </event>
+    <event>
+      <type>warAction</type>
+      <context>player</context>
+      <name>end</name>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+</albion.xml>

@@ -1,0 +1,71 @@
+<airbase.xml>
+  <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
+  <noNamespaceSchemaLocation>SectorPresetModel.xsd</noNamespaceSchemaLocation>
+  <preset>default</preset>
+  <neutralCapturePoints>	280	</neutralCapturePoints>
+  <ownedCapturePoints>	180	</ownedCapturePoints>
+  <gameplayType>	airfield	</gameplayType>
+  <gameplayLevel>	2	</gameplayLevel>
+  <playerSpawnEnabled>	true	</playerSpawnEnabled>
+  <tacticalRespawnEnabled>	true	</tacticalRespawnEnabled>
+  <respawnCooldownReduceEnabled>	true	</respawnCooldownReduceEnabled>
+  <hud>
+    <battleHintIcon>event_airfield2</battleHintIcon>
+    <localizationID>HUD_NAME_SECTOR_AIRBASE</localizationID>
+    <description>HUD_F1_SECTOR_DESCRIPTION_COMBINED_3</description>
+    <sectorIconPath>icons/hud/sectors/sectorType{size}Airfield2_{team}</sectorIconPath>
+    <featuresIconPath>icons/hud/sectors/sectorIcon{size}RespawnChoice_{team}</featuresIconPath>
+    <featuresName>HUD_SECTOR_MESSAGES_CAN_SWAP_YOUR_PLANES</featuresName>
+    <miniMapSectorIconPath>sectorType{size}Airfield2_{team}</miniMapSectorIconPath>
+    <miniMapFeaturesIconPath>sector{size}IconRespawnChoice_{team}</miniMapFeaturesIconPath>
+    <isNeedToShowTimer>	false	</isNeedToShowTimer>
+    <sectorObjects>
+      <object>	31	</object>
+      <object>	32	</object>
+      <object>	12	</object>
+      <object>	11	</object>
+    </sectorObjects>
+    <descriptionList>
+      <description>HUD_DESCRIPTION_SECTOR_RUNWAY</description>
+      <description>HUD_DESCRIPTION_SECTOR_AIRBASE_1</description>
+      <description>HUD_DESCRIPTION_SECTOR_AIRBASE_2</description>
+      <description>HUD_DESCRIPTION_SECTOR_AIRBASE_3</description>
+    </descriptionList>
+  </hud>
+  <sound>
+    <onCaptureLast>
+      <allyEvent>vo_c_all_airfields_captured</allyEvent>
+    </onCaptureLast>
+    <onCapture>
+      <allyEvent>vo_c_airfield_captured</allyEvent>
+      <enemyEvent>vo_c_airfield_lost</enemyEvent>
+    </onCapture>
+    <onAlarm>
+      <enemyEvent>vo_c_airfield_alarm</enemyEvent>
+      <conditions>	6	</conditions>
+    </onAlarm>
+  </sound>
+  <defenderCounter>
+    <count>	4	<defenderType>LIGHT</defenderType></count>
+    <count>	2	<defenderType>HEAVY</defenderType></count>
+  </defenderCounter>
+  <ai>
+    <areaConquest>
+      <baseValue>	1000	</baseValue>
+      <planeTypeMultiplier>
+        <multiplier>	1	<planeType>Assault</planeType></multiplier>
+        <multiplier>	3	<planeType>Heavy fighter</planeType></multiplier>
+        <multiplier>	4	<planeType>	Navy	</planeType></multiplier>
+        <multiplier>	5	<planeType>Fighter</planeType></multiplier>
+        <multiplier>	1	<planeType>Bomber</planeType></multiplier>
+      </planeTypeMultiplier>
+      <antiGroundWeaponBonus>
+        <multiplier>	0	<planeType>Assault</planeType></multiplier>
+        <multiplier>	0	<planeType>Heavy fighter</planeType></multiplier>
+        <multiplier>	0	<planeType>	Navy	</planeType></multiplier>
+        <multiplier>	0	<planeType>Fighter</planeType></multiplier>
+        <multiplier>	0	<planeType>Bomber</planeType></multiplier>
+      </antiGroundWeaponBonus>
+    </areaConquest>
+  </ai>
+</airbase.xml>

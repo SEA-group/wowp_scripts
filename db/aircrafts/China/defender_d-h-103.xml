@@ -1,0 +1,2313 @@
+<defender_d-h-103.xml>
+  <parent>base_metal_med.xml</parent>
+  <Components>
+    <Weapons2>
+      <slot>
+        <id>	0	</id>
+        <name>	FUSELAGE	</name>
+        <type>
+          <id>	0	</id>
+          <linkedModels>
+            <visual>
+              <parentUpgrade>	1	</parentUpgrade>
+              <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/gun_01_01.model</model>
+              <mountPath>hull/HP_gun_01</mountPath>
+            </visual>
+            <visual>
+              <parentUpgrade>	1	</parentUpgrade>
+              <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/gun_01_02.model</model>
+              <mountPath>hull/HP_gun_02</mountPath>
+            </visual>
+            <visual>
+              <parentUpgrade>	1	</parentUpgrade>
+              <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/gun_01_03.model</model>
+              <mountPath>hull/HP_gun_03</mountPath>
+            </visual>
+            <visual>
+              <parentUpgrade>	1	</parentUpgrade>
+              <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/gun_01_04.model</model>
+              <mountPath>hull/HP_gun_04</mountPath>
+            </visual>
+          </linkedModels>
+          <weapon>
+            <name>G20mm-Defender_d-h-103-Hispano-Mk-2-F</name>
+            <flamePath>hull/HP_gun_01/HP_flame</flamePath>
+            <ammoBelt>	testBelt	</ammoBelt>
+            <weaponGroup>	1	</weaponGroup>
+          </weapon>
+          <weapon>
+            <name>G20mm-Defender_d-h-103-Hispano-Mk-2-F</name>
+            <flamePath>hull/HP_gun_02/HP_flame</flamePath>
+            <ammoBelt>	testBelt	</ammoBelt>
+            <weaponGroup>	1	</weaponGroup>
+          </weapon>
+          <weapon>
+            <name>G20mm-Defender_d-h-103-Hispano-Mk-2-F</name>
+            <flamePath>hull/HP_gun_03/HP_flame</flamePath>
+            <ammoBelt>	testBelt	</ammoBelt>
+            <weaponGroup>	1	</weaponGroup>
+          </weapon>
+          <weapon>
+            <name>G20mm-Defender_d-h-103-Hispano-Mk-2-F</name>
+            <flamePath>hull/HP_gun_04/HP_flame</flamePath>
+            <ammoBelt>	testBelt	</ammoBelt>
+            <weaponGroup>	1	</weaponGroup>
+          </weapon>
+        </type>
+      </slot>
+    </Weapons2>
+  </Components>
+  <Airplane>
+    <name>Defender_d-h-103</name>
+    <bBoxes>
+      <mainBox>
+        <size>14 4 14</size>
+      </mainBox>
+    </bBoxes>
+    <hudIcoPath>icons/planes/gb/dh103hornet.dds</hudIcoPath>
+    <iconPath>icons/hangarCarousel/planes/gb/dh103hornet.dds</iconPath>
+    <treeIconPath>icons/planesTree/gb/dh103hornet.dds</treeIconPath>
+    <battleLoadingIconPath>icons/planesPreview/gb/dh103hornet.dds</battleLoadingIconPath>
+    <previewIconPath>icons/planesPreview/gb/dh103hornet.dds</previewIconPath>
+    <longName>de Havilland DH.103 Hornet</longName>
+    <parts>
+      <part>
+        <name>	hull	</name>
+        <partId>	1	</partId>
+        <mountPoint>
+        </mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <bBoxes>
+            <bbox>
+              <position>	0.000000 0.225000 -1.322550	</position>
+              <size>	0.833400 0.929700 5.115600	</size>
+              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 5.000000	</armorBack>
+              <absorption>	0.800000	</absorption>
+              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+            <bbox>
+              <position>	0.000000 0.225000 -5.548950	</position>
+              <size>	0.674100 0.774000 3.388500	</size>
+              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 5.000000	</armorBack>
+              <absorption>	0.800000	</absorption>
+              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+          </bBoxes>
+          <health>100%</health>
+          <componentType>	Hull	</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/fuselage_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.550000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/crash/lod0/fuselage_01.model</model>
+              <affectedParts>
+                <part>
+                  <partID>	5	</partID>
+                  <minimalPartState>	2	</minimalPartState>
+                </part>
+              </affectedParts>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/crash/lod0/fuselage_01.model</model>
+              <affectedParts>
+                <part>
+                  <partID>	5	</partID>
+                  <minimalPartState>	2	</minimalPartState>
+                </part>
+              </affectedParts>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	1	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/crash/lod0/fuselage_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	1	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>engineL</name>
+        <partId>	2	</partId>
+        <mountPoint>HP_engineL</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <bBoxes>
+            <bbox>
+              <position>	-2.205000 -0.009450 0.470700	</position>
+              <size>	0.900000 0.968400 2.787300	</size>
+              <armorFront>	30.000000 30.000000 60.000000	</armorFront>
+              <armorBack>	30.000000 30.000000 30.000000	</armorBack>
+              <absorption>	1.000000	</absorption>
+              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+          </bBoxes>
+          <health>30%</health>
+          <componentType>Engine</componentType>
+          <componentPosition>	Left	</componentPosition>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/engineL_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/rotorL_01.model</model>
+                  <mountPoint>HP_rotorL</mountPoint>
+                  <animatorName>	PropellorControllerR	</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/propellerL_01.model</model>
+                  <mountPoint>HP_rotorL</mountPoint>
+                  <animatorName>	PropellorMeshControllerR	</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/rotorTextureL_01.model</model>
+                  <mountPoint>HP_rotorL</mountPoint>
+                  <animatorName>PropellorTextureControllerR</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/rotorTextureForsageL_01.model</model>
+                  <mountPoint>HP_rotorL</mountPoint>
+                  <animatorName>PropellorTextureForsageControllerR</animatorName>
+                </item>
+              </subItems>
+              <effectsTriggered>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <mountPoint>plane/HP_nozzle_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <mountPoint>plane/HP_nozzle_02</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <mountPoint>plane/HP_nozzle_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <mountPoint>plane/HP_nozzle_02</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <effectState>
+                <effect>
+                  <name>aim_trail_on_engine</name>
+                  <mountPoint>HP_engineL</mountPoint>
+                </effect>
+              </effectState>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.400000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/crash/lod0/engineL_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/rotorL_01.model</model>
+                  <mountPoint>HP_rotorL</mountPoint>
+                  <animatorName>	PropellorControllerR	</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/propellerL_01.model</model>
+                  <mountPoint>HP_rotorL</mountPoint>
+                  <animatorName>	PropellorMeshControllerR	</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/rotorTextureL_01.model</model>
+                  <mountPoint>HP_rotorL</mountPoint>
+                  <animatorName>PropellorTextureControllerR</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/rotorTextureForsageL_01.model</model>
+                  <mountPoint>HP_rotorL</mountPoint>
+                  <animatorName>PropellorTextureForsageControllerR</animatorName>
+                </item>
+              </subItems>
+              <effectState>
+                <effect>
+                  <name>crit_engine_damaged_yellow</name>
+                  <mountPoint>plane/HP_nozzle_01</mountPoint>
+                </effect>
+                <effect>
+                  <name>crit_engine_damaged_right_yellow</name>
+                  <mountPoint>plane/HP_nozzle_02</mountPoint>
+                </effect>
+                <effect>
+                  <name>aim_trail_on_engine</name>
+                  <mountPoint>HP_engineL</mountPoint>
+                </effect>
+              </effectState>
+              <effectsTriggered>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <mountPoint>plane/HP_nozzle_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <mountPoint>plane/HP_nozzle_02</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <mountPoint>plane/HP_nozzle_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <mountPoint>plane/HP_nozzle_02</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.400000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/crash/lod0/engineL_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/rotorL_01.model</model>
+                  <mountPoint>HP_rotorL</mountPoint>
+                  <animatorName>	PropellorControllerR	</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/propellerL_01.model</model>
+                  <mountPoint>HP_rotorL</mountPoint>
+                  <animatorName>	PropellorMeshControllerR	</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/rotorTextureL_01.model</model>
+                  <mountPoint>HP_rotorL</mountPoint>
+                  <animatorName>PropellorTextureControllerR</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/rotorTextureForsageL_01.model</model>
+                  <mountPoint>HP_rotorL</mountPoint>
+                  <animatorName>PropellorTextureForsageControllerR</animatorName>
+                </item>
+              </subItems>
+              <effectState>
+                <effect>
+                  <name>crit_engine_damaged</name>
+                  <mountPoint>plane/HP_nozzle_01</mountPoint>
+                </effect>
+                <effect>
+                  <name>crit_engine_damaged_right</name>
+                  <mountPoint>plane/HP_nozzle_02</mountPoint>
+                </effect>
+                <effect>
+                  <name>aim_trail_on_engine</name>
+                  <mountPoint>HP_engineL</mountPoint>
+                </effect>
+              </effectState>
+              <effectsTriggered>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <mountPoint>plane/HP_nozzle_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <mountPoint>plane/HP_nozzle_02</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <mountPoint>plane/HP_nozzle_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <mountPoint>plane/HP_nozzle_02</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <effectOnStart>
+                <effect>
+                  <name>crit_engine_expl</name>
+                  <mountPoint>plane/HP_nozzle_01</mountPoint>
+                </effect>
+              </effectOnStart>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/crash/lod0/engineL_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/rotorL_01.model</model>
+                  <mountPoint>HP_rotorL</mountPoint>
+                  <animatorName>	PropellorControllerR	</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/propellerL_01.model</model>
+                  <mountPoint>HP_rotorL</mountPoint>
+                  <animatorName>	PropellorMeshControllerR	</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/rotorTextureL_01.model</model>
+                  <mountPoint>HP_rotorL</mountPoint>
+                  <animatorName>PropellorTextureControllerR</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/rotorTextureForsageL_01.model</model>
+                  <mountPoint>HP_rotorL</mountPoint>
+                  <animatorName>PropellorTextureForsageControllerR</animatorName>
+                </item>
+              </subItems>
+              <effectState>
+                <effect>
+                  <name>EFFECT_FIRE_ENGINE</name>
+                  <mountPoint>plane/HP_nozzle_01</mountPoint>
+                </effect>
+                <effect>
+                  <name>EFFECT_FIRE_ENGINE_small</name>
+                  <mountPoint>plane/HP_nozzle_02</mountPoint>
+                </effect>
+              </effectState>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	20.000000	</repairDestructedAfter>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>engineR</name>
+        <partId>	3	</partId>
+        <mountPoint>HP_engineR</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <bBoxes>
+            <bbox>
+              <position>	2.205000 -0.009450 0.470700	</position>
+              <size>	0.900000 0.968400 2.787300	</size>
+              <armorFront>	30.000000 30.000000 60.000000	</armorFront>
+              <armorBack>	30.000000 30.000000 30.000000	</armorBack>
+              <absorption>	1.000000	</absorption>
+              <rotation>	0.000000 0.000000 0.000000 -1.000000	</rotation>
+            </bbox>
+          </bBoxes>
+          <health>30%</health>
+          <componentType>Engine</componentType>
+          <componentPosition>Right</componentPosition>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/engineR_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/rotorR_01.model</model>
+                  <mountPoint>HP_rotorR</mountPoint>
+                  <animatorName>PropellorController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/propellerR_01.model</model>
+                  <mountPoint>HP_rotorR</mountPoint>
+                  <animatorName>PropellorMeshController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/rotorTextureR_01.model</model>
+                  <mountPoint>HP_rotorR</mountPoint>
+                  <animatorName>PropellorTextureController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/rotorTextureForsageR_01.model</model>
+                  <mountPoint>HP_rotorR</mountPoint>
+                  <animatorName>PropellorTextureForsageController</animatorName>
+                </item>
+              </subItems>
+              <effectsTriggered>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <mountPoint>plane/HP_nozzle_03</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <mountPoint>plane/HP_nozzle_04</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <mountPoint>plane/HP_nozzle_03</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <mountPoint>plane/HP_nozzle_04</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <effectState>
+                <effect>
+                  <name>aim_trail_on_engine</name>
+                  <mountPoint>HP_engineR</mountPoint>
+                </effect>
+              </effectState>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.400000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/crash/lod0/engineR_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/rotorR_01.model</model>
+                  <mountPoint>HP_rotorR</mountPoint>
+                  <animatorName>PropellorController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/propellerR_01.model</model>
+                  <mountPoint>HP_rotorR</mountPoint>
+                  <animatorName>PropellorMeshController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/rotorTextureR_01.model</model>
+                  <mountPoint>HP_rotorR</mountPoint>
+                  <animatorName>PropellorTextureController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/rotorTextureForsageR_01.model</model>
+                  <mountPoint>HP_rotorR</mountPoint>
+                  <animatorName>PropellorTextureForsageController</animatorName>
+                </item>
+              </subItems>
+              <effectState>
+                <effect>
+                  <name>crit_engine_damaged_yellow</name>
+                  <mountPoint>plane/HP_nozzle_04</mountPoint>
+                </effect>
+                <effect>
+                  <name>crit_engine_damaged_right_yellow</name>
+                  <mountPoint>plane/HP_nozzle_03</mountPoint>
+                </effect>
+                <effect>
+                  <name>aim_trail_on_engine</name>
+                  <mountPoint>HP_engineR</mountPoint>
+                </effect>
+              </effectState>
+              <effectsTriggered>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <mountPoint>plane/HP_nozzle_03</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <mountPoint>plane/HP_nozzle_04</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <mountPoint>plane/HP_nozzle_03</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <mountPoint>plane/HP_nozzle_04</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.400000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/crash/lod0/engineR_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/rotorR_01.model</model>
+                  <mountPoint>HP_rotorR</mountPoint>
+                  <animatorName>PropellorController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/propellerR_01.model</model>
+                  <mountPoint>HP_rotorR</mountPoint>
+                  <animatorName>PropellorMeshController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/rotorTextureR_01.model</model>
+                  <mountPoint>HP_rotorR</mountPoint>
+                  <animatorName>PropellorTextureController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/rotorTextureForsageR_01.model</model>
+                  <mountPoint>HP_rotorR</mountPoint>
+                  <animatorName>PropellorTextureForsageController</animatorName>
+                </item>
+              </subItems>
+              <effectState>
+                <effect>
+                  <name>crit_engine_damaged</name>
+                  <mountPoint>plane/HP_nozzle_04</mountPoint>
+                </effect>
+                <effect>
+                  <name>crit_engine_damaged_right</name>
+                  <mountPoint>plane/HP_nozzle_03</mountPoint>
+                </effect>
+                <effect>
+                  <name>aim_trail_on_engine</name>
+                  <mountPoint>HP_engineR</mountPoint>
+                </effect>
+              </effectState>
+              <effectsTriggered>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <mountPoint>plane/HP_nozzle_03</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>ENGINE</trigger>
+                  <name>EFFECT_ENGINE_ACTIVE</name>
+                  <mountPoint>plane/HP_nozzle_04</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <mountPoint>plane/HP_nozzle_03</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>FORSAGE</trigger>
+                  <name>EFFECT_ENGINE_FORSAGE</name>
+                  <mountPoint>plane/HP_nozzle_04</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <effectOnStart>
+                <effect>
+                  <name>crit_engine_expl</name>
+                  <mountPoint>plane/HP_nozzle_04</mountPoint>
+                </effect>
+              </effectOnStart>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/crash/lod0/engineR_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/rotorR_01.model</model>
+                  <mountPoint>HP_rotorR</mountPoint>
+                  <animatorName>PropellorController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/propellerR_01.model</model>
+                  <mountPoint>HP_rotorR</mountPoint>
+                  <animatorName>PropellorMeshController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/rotorTextureR_01.model</model>
+                  <mountPoint>HP_rotorR</mountPoint>
+                  <animatorName>PropellorTextureController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/rotorTextureForsageR_01.model</model>
+                  <mountPoint>HP_rotorR</mountPoint>
+                  <animatorName>PropellorTextureForsageController</animatorName>
+                </item>
+              </subItems>
+              <effectState>
+                <effect>
+                  <name>EFFECT_FIRE_ENGINE</name>
+                  <mountPoint>plane/HP_nozzle_04</mountPoint>
+                </effect>
+                <effect>
+                  <name>EFFECT_FIRE_ENGINE_small</name>
+                  <mountPoint>plane/HP_nozzle_03</mountPoint>
+                </effect>
+              </effectState>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	20.000000	</repairDestructedAfter>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>pilot</name>
+        <partId>	4	</partId>
+        <mountPoint>HP_pilot</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <bBoxes>
+            <bbox>
+              <position>	0.000000 0.524250 0.135000	</position>
+              <size>	1.000000 1.000000 1.000000	</size>
+              <armorFront>	5.000000 5.000000 5.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 40.000000	</armorBack>
+              <absorption>	1.000000	</absorption>
+              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+          </bBoxes>
+          <health>10%</health>
+          <componentType>Pilot</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/pilot_01.model</model>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/head_01.model</model>
+                  <mountPoint>HP_head</mountPoint>
+                </item>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/pilot_01.model</model>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/head_01.model</model>
+                  <mountPoint>HP_head</mountPoint>
+                </item>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>fall, crash</usage>
+              <stateHelthCfc>	-1.000000	</stateHelthCfc>
+              <model>
+              </model>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>hangar</usage>
+              <stateHelthCfc>	-1.000000	</stateHelthCfc>
+              <model>
+              </model>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>cockpit</name>
+        <partId>	5	</partId>
+        <mountPoint>HP_cockpit</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <health>20%</health>
+          <componentType>Cockpit</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/cockpit_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.800000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/crash/lod0/cockpit_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/crash/lod0/cockpit_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>	leftWing	</name>
+        <partId>	6	</partId>
+        <mountPoint>HP_wL</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <bBoxes>
+            <bbox>
+              <position>	-5.370750 0.315000 -0.720450	</position>
+              <size>	3.136500 0.259200 1.624500	</size>
+              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 10.000000	</armorBack>
+              <absorption>	0.200000	</absorption>
+              <rotation>	0.000000 0.000000 -0.020000 1.000000	</rotation>
+            </bbox>
+            <bbox>
+              <position>	-2.080800 0.184500 -1.023300	</position>
+              <size>	3.461400 0.323100 2.793600	</size>
+              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 10.000000	</armorBack>
+              <absorption>	0.200000	</absorption>
+              <rotation>	0.000000 0.000000 -0.020000 1.000000	</rotation>
+            </bbox>
+          </bBoxes>
+          <health>32%</health>
+          <componentType>	LeftWing	</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/wL_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/aileronL_01.model</model>
+                  <mountPoint>HP_aileronL</mountPoint>
+                  <animatorName>LeftAileronController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/FlapL_01.model</model>
+                  <mountPoint>HP_flapL</mountPoint>
+                  <animatorName>FlapsController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/cFlapL_01.model</model>
+                  <mountPoint>HP_cFlapL</mountPoint>
+                  <animatorName>FlapsController</animatorName>
+                </item>
+              </subItems>
+              <effectsTriggered>
+                <effect>
+                  <trigger>	LOFT	</trigger>
+                  <name>EFFECT_LOFT</name>
+                  <mountPoint>plane/HP_trailL_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>SPEED_OVERLOAD</trigger>
+                  <name>EFFECT_WINGS_CLOUD_D-H-103</name>
+                  <mountPoint>plane/HP_trailL_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>BRAKE</trigger>
+                  <name>EFFECT_FLAPS_CLOUD_D-H-103</name>
+                  <mountPoint>plane/HP_trailL_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>LOFT_LARGE</trigger>
+                  <name>EFFECT_LOFT_LARGE</name>
+                  <mountPoint>plane/HP_trailL_01</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.550000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/crash/lod0/wL_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/aileronL_01.model</model>
+                  <mountPoint>HP_aileronL</mountPoint>
+                  <animatorName>LeftAileronController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/FlapL_01.model</model>
+                  <mountPoint>HP_flapL</mountPoint>
+                  <animatorName>FlapsController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/cFlapL_01.model</model>
+                  <mountPoint>HP_cFlapL</mountPoint>
+                  <animatorName>FlapsController</animatorName>
+                </item>
+              </subItems>
+              <effectsTriggered>
+                <effect>
+                  <trigger>	LOFT	</trigger>
+                  <name>EFFECT_LOFT</name>
+                  <mountPoint>plane/HP_trailL_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>SPEED_OVERLOAD</trigger>
+                  <name>EFFECT_WINGS_CLOUD_D-H-103</name>
+                  <mountPoint>plane/HP_trailL_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>BRAKE</trigger>
+                  <name>EFFECT_FLAPS_CLOUD_D-H-103</name>
+                  <mountPoint>plane/HP_trailL_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>LOFT_LARGE</trigger>
+                  <name>EFFECT_LOFT_LARGE</name>
+                  <mountPoint>plane/HP_trailL_01</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <effectState>
+                <effect>
+                  <name>crit_wing_damaged_yellow</name>
+                  <mountPoint>plane/HP_trailL_02</mountPoint>
+                </effect>
+              </effectState>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.550000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/crash/lod0/wL_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/aileronL_01.model</model>
+                  <mountPoint>HP_aileronL</mountPoint>
+                  <animatorName>LeftAileronController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/FlapL_01.model</model>
+                  <mountPoint>HP_flapL</mountPoint>
+                  <animatorName>FlapsController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/cFlapL_01.model</model>
+                  <mountPoint>HP_cFlapL</mountPoint>
+                  <animatorName>FlapsController</animatorName>
+                </item>
+              </subItems>
+              <effectsTriggered>
+                <effect>
+                  <trigger>	LOFT	</trigger>
+                  <name>EFFECT_LOFT</name>
+                  <mountPoint>plane/HP_trailL_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>SPEED_OVERLOAD</trigger>
+                  <name>EFFECT_WINGS_CLOUD_D-H-103</name>
+                  <mountPoint>plane/HP_trailL_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>BRAKE</trigger>
+                  <name>EFFECT_FLAPS_CLOUD_D-H-103</name>
+                  <mountPoint>plane/HP_trailL_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>LOFT_LARGE</trigger>
+                  <name>EFFECT_LOFT_LARGE</name>
+                  <mountPoint>plane/HP_trailL_01</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <effectState>
+                <effect>
+                  <name>crit_wing_damaged</name>
+                  <mountPoint>plane/HP_trailL_01</mountPoint>
+                </effect>
+              </effectState>
+              <effectOnStart>
+                <effect>
+                  <name>crit_wing_expl</name>
+                  <mountPoint>plane/HP_trailL_01</mountPoint>
+                </effect>
+              </effectOnStart>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/crash/lod0/wLcap_01.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	1	</stateAction>
+              <fallingOutModel>vehicles/airplanes/england/GB13_HORNET/crash/lod0/wLend_01.model</fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>rightWing</name>
+        <partId>	7	</partId>
+        <mountPoint>HP_wR</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <bBoxes>
+            <bbox>
+              <position>	5.370750 0.315000 -0.720450	</position>
+              <size>	3.136500 0.259200 1.624500	</size>
+              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 10.000000	</armorBack>
+              <absorption>	0.200000	</absorption>
+              <rotation>	0.000000 0.000000 -0.020000 -1.000000	</rotation>
+            </bbox>
+            <bbox>
+              <position>	2.080800 0.184500 -1.023300	</position>
+              <size>	3.461400 0.323100 2.793600	</size>
+              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 10.000000	</armorBack>
+              <absorption>	0.200000	</absorption>
+              <rotation>	0.000000 0.000000 -0.020000 -1.000000	</rotation>
+            </bbox>
+          </bBoxes>
+          <health>32%</health>
+          <componentType>RightWing</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/wR_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/aileronR_01.model</model>
+                  <mountPoint>HP_aileronR</mountPoint>
+                  <animatorName>RightAileronController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/FlapR_01.model</model>
+                  <mountPoint>HP_flapR</mountPoint>
+                  <animatorName>FlapsController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/cFlapR_01.model</model>
+                  <mountPoint>HP_cFlapR</mountPoint>
+                  <animatorName>FlapsController</animatorName>
+                </item>
+              </subItems>
+              <effectsTriggered>
+                <effect>
+                  <trigger>	LOFT	</trigger>
+                  <name>EFFECT_LOFT</name>
+                  <mountPoint>plane/HP_trailR_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>SPEED_OVERLOAD</trigger>
+                  <name>EFFECT_WINGS_CLOUD_D-H-103</name>
+                  <mountPoint>plane/HP_trailR_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>BRAKE</trigger>
+                  <name>EFFECT_FLAPS_CLOUD_D-H-103</name>
+                  <mountPoint>plane/HP_trailR_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>LOFT_LARGE</trigger>
+                  <name>EFFECT_LOFT_LARGE</name>
+                  <mountPoint>plane/HP_trailR_01</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.550000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/crash/lod0/wR_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/aileronR_01.model</model>
+                  <mountPoint>HP_aileronR</mountPoint>
+                  <animatorName>RightAileronController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/FlapR_01.model</model>
+                  <mountPoint>HP_flapR</mountPoint>
+                  <animatorName>FlapsController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/cFlapR_01.model</model>
+                  <mountPoint>HP_cFlapR</mountPoint>
+                  <animatorName>FlapsController</animatorName>
+                </item>
+              </subItems>
+              <effectsTriggered>
+                <effect>
+                  <trigger>	LOFT	</trigger>
+                  <name>EFFECT_LOFT</name>
+                  <mountPoint>plane/HP_trailR_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>SPEED_OVERLOAD</trigger>
+                  <name>EFFECT_WINGS_CLOUD_D-H-103</name>
+                  <mountPoint>plane/HP_trailR_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>BRAKE</trigger>
+                  <name>EFFECT_FLAPS_CLOUD_D-H-103</name>
+                  <mountPoint>plane/HP_trailR_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>LOFT_LARGE</trigger>
+                  <name>EFFECT_LOFT_LARGE</name>
+                  <mountPoint>plane/HP_trailR_01</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <effectState>
+                <effect>
+                  <name>crit_wing_damaged_right_yellow</name>
+                  <mountPoint>plane/HP_trailR_02</mountPoint>
+                </effect>
+              </effectState>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.550000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/crash/lod0/wR_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/aileronR_01.model</model>
+                  <mountPoint>HP_aileronR</mountPoint>
+                  <animatorName>RightAileronController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/FlapR_01.model</model>
+                  <mountPoint>HP_flapR</mountPoint>
+                  <animatorName>FlapsController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/cFlapR_01.model</model>
+                  <mountPoint>HP_cFlapR</mountPoint>
+                  <animatorName>FlapsController</animatorName>
+                </item>
+              </subItems>
+              <effectsTriggered>
+                <effect>
+                  <trigger>	LOFT	</trigger>
+                  <name>EFFECT_LOFT</name>
+                  <mountPoint>plane/HP_trailR_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>SPEED_OVERLOAD</trigger>
+                  <name>EFFECT_WINGS_CLOUD_D-H-103</name>
+                  <mountPoint>plane/HP_trailR_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>BRAKE</trigger>
+                  <name>EFFECT_FLAPS_CLOUD_D-H-103</name>
+                  <mountPoint>plane/HP_trailR_01</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>LOFT_LARGE</trigger>
+                  <name>EFFECT_LOFT_LARGE</name>
+                  <mountPoint>plane/HP_trailR_01</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <effectState>
+                <effect>
+                  <name>crit_wing_damaged_right</name>
+                  <mountPoint>plane/HP_trailR_01</mountPoint>
+                </effect>
+              </effectState>
+              <effectOnStart>
+                <effect>
+                  <name>crit_wing_expl_right</name>
+                  <mountPoint>plane/HP_trailR_01</mountPoint>
+                </effect>
+              </effectOnStart>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/crash/lod0/wRcap_01.model</model>
+              <animationController>
+              </animationController>
+              <stateAction>	1	</stateAction>
+              <fallingOutModel>vehicles/airplanes/england/GB13_HORNET/crash/lod0/wRend_01.model</fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>	tail	</name>
+        <partId>	8	</partId>
+        <mountPoint>HP_tail</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <bBoxes>
+            <bbox>
+              <position>	0.045000 0.405000 -7.875000	</position>
+              <size>	5.409368 0.200000 1.254528	</size>
+              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 10.000000	</armorBack>
+              <absorption>	0.200000	</absorption>
+              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+            <bbox>
+              <position>	0.000000 1.215000 -7.290000	</position>
+              <size>	0.180000 2.160000 1.260000	</size>
+              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 10.000000	</armorBack>
+              <absorption>	0.200000	</absorption>
+              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+          </bBoxes>
+          <health>32%</health>
+          <componentType>	Tail	</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/tail_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/elevator_01.model</model>
+                  <mountPoint>HP_elevator</mountPoint>
+                  <animatorName>ElevatorController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/rudder_01.model</model>
+                  <mountPoint>HP_rudder</mountPoint>
+                  <animatorName>	RudderController	</animatorName>
+                </item>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.600000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/crash/lod0/tail_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/crash/lod0/elevator_01.model</model>
+                  <mountPoint>HP_elevator</mountPoint>
+                  <animatorName>ElevatorController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/crash/lod0/rudder_01.model</model>
+                  <mountPoint>HP_rudder</mountPoint>
+                  <animatorName>	RudderController	</animatorName>
+                </item>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <effectState>
+                <effect>
+                  <name>crit_tail_damaged_yellow</name>
+                  <mountPoint>HP_elevator</mountPoint>
+                </effect>
+              </effectState>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.600000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/crash/lod0/tail_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/crash/lod0/elevator_01.model</model>
+                  <mountPoint>HP_elevator</mountPoint>
+                  <animatorName>ElevatorController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/england/GB13_HORNET/crash/lod0/rudder_01.model</model>
+                  <mountPoint>HP_rudder</mountPoint>
+                  <animatorName>	RudderController	</animatorName>
+                </item>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <effectState>
+                <effect>
+                  <name>crit_tail_damaged</name>
+                  <mountPoint>HP_elevator</mountPoint>
+                </effect>
+              </effectState>
+              <effectOnStart>
+                <effect>
+                  <name>crit_tail_expl</name>
+                  <mountPoint>HP_elevator</mountPoint>
+                </effect>
+              </effectOnStart>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/crash/lod0/tailCap_01.model</model>
+              <animationController>
+              </animationController>
+              <effectState>
+                <effect>
+                  <mountPoint>plane/HP_tailHit</mountPoint>
+                </effect>
+              </effectState>
+              <stateAction>	1	</stateAction>
+              <fallingOutModel>vehicles/airplanes/england/GB13_HORNET/crash/lod0/tailEnd_01.model</fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>leftLandingGear</name>
+        <partId>	9	</partId>
+        <mountPoint>leftWing/HP_landingGearL</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <health>	20	</health>
+          <componentType>LandingGear</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/landingGearL_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.800000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/crash/lod0/landingGearL_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/crash/lod0/landingGearL_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>hangar</usage>
+              <stateHelthCfc>	-1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/landingGearLopen_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>	rightLandingGear	</name>
+        <partId>	10	</partId>
+        <mountPoint>rightWing/HP_landingGearR</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <health>	20	</health>
+          <componentType>LandingGear</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/landingGearR_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.800000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/crash/lod0/landingGearR_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/crash/lod0/landingGearR_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>hangar</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/landingGearRopen_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>rearLandingGear</name>
+        <partId>	11	</partId>
+        <mountPoint>tail/HP_landingGearRear</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <health>	20	</health>
+          <componentType>LandingGear</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/landingGearRear_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>fall, crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <model>
+              </model>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>hangar</usage>
+              <stateHelthCfc>	-1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/landingGearRearOpen_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>fuelTanks</name>
+        <partId>	12	</partId>
+        <mountPoint>HP_engine</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <fireMountPoint>plane/HP_fuelHit_01</fireMountPoint>
+          <health>20%</health>
+          <componentType>	FuelTank	</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	1.500000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.800000	</stateHelthCfc>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <effectState>
+                <effect>
+                  <name>Fuel_Leak</name>
+                  <mountPoint>plane/HP_fuelHit_01</mountPoint>
+                </effect>
+              </effectState>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	2.250000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <effectState>
+                <effect>
+                  <name>Fuel_Leak</name>
+                  <mountPoint>plane/HP_fuelHit_01</mountPoint>
+                </effect>
+              </effectState>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	2.250000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>plane</name>
+        <partId>	13	</partId>
+        <mountPoint>
+        </mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <health>	0	</health>
+          <componentType>
+          </componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/england/GB13_HORNET/normal/lod0/plane.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <effectState>
+                <effect>
+                  <name>flight_idle</name>
+                  <mountPoint>HP_mass</mountPoint>
+                </effect>
+              </effectState>
+              <effectsTriggered>
+                <effect>
+                  <trigger>	FIRE	</trigger>
+                  <name>airplane_on_fire_metal_med</name>
+                  <mountPoint>HP_kill</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>SMOKE</trigger>
+                  <name>EFFECT_SMOKE</name>
+                  <mountPoint>HP_kill</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>SPEED_OVERLOAD</trigger>
+                  <name>fly_idle_max_speed</name>
+                  <mountPoint>HP_mass</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>RightwingFuelTank</name>
+        <partId>	14	</partId>
+        <mountPoint>HP_engine</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <fireMountPoint>plane/HP_fuelHit_02</fireMountPoint>
+          <health>20%</health>
+          <componentType>	FuelTank	</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	1.500000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.800000	</stateHelthCfc>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <effectState>
+                <effect>
+                  <name>Fuel_Leak</name>
+                  <mountPoint>plane/HP_fuelHit_02</mountPoint>
+                </effect>
+              </effectState>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	2.250000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.800000	</stateHelthCfc>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <effectState>
+                <effect>
+                  <name>Fuel_Leak</name>
+                  <mountPoint>plane/HP_fuelHit_02</mountPoint>
+                </effect>
+              </effectState>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	2.250000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <effectState>
+                <effect>
+                  <name>Fuel_Leak</name>
+                  <mountPoint>plane/HP_fuelHit_02</mountPoint>
+                </effect>
+              </effectState>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	2.250000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+    </parts>
+    <visualSettings>
+      <hangarConfig>large</hangarConfig>
+      <hangarLandingPart>	hull	</hangarLandingPart>
+      <camera>camera03_Big_Tail</camera>
+      <surfaceSettings>
+        <detailTexture>vehicles/airplanes/england/GB13_HORNET/GB13_HORNET_detail.dds</detailTexture>
+        <decalsSettings>
+          <decalGroup>
+            <name>decor</name>
+            <decals>
+              <decal>
+                <id>	1	</id>
+                <texture>vehicles/airplanes/common/decals/decoration/byPlane/blank_decor.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/remove_decal.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	199	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/44.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/44.dds</icoPath>
+              </decal>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>clan_big</name>
+            <decals>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>platoon_number</name>
+            <decals>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>clan_small</name>
+            <decals>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>	rank	</name>
+            <decals>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>member_number</name>
+            <decals>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>camouflage</name>
+            <decals>
+              <decal>
+                <id>	1	</id>
+                <texture>vehicles/airplanes/england/GB13_HORNET/GB13_HORNET_snow.dds</texture>
+                <icoPath>vehicles/airplanes/england/GB13_HORNET/preview/GB13_HORNET_snow.dds</icoPath>
+                <bottomColor>	0.835000 0.906000 0.737000 1.000000	</bottomColor>
+                <glossinessOffset>	0.000000	</glossinessOffset>
+              </decal>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>ground_frags</name>
+            <decals>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>air_frags</name>
+            <decals>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>	nose	</name>
+            <decals>
+              <decal>
+                <id>	1	</id>
+                <texture>vehicles/airplanes/common/decals/decoration/byPlane/british/GB13_HORNET/lvl_01/05.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decoration/byPlane/british/GB13_HORNET/lvl_01/preview/05.dds</icoPath>
+              </decal>
+            </decals>
+          </decalGroup>
+        </decalsSettings>
+      </surfaceSettings>
+      <cameraOffset>	0.003213 0.305688 -2.925000	</cameraOffset>
+      <hudPlaneScheme>	ar65	</hudPlaneScheme>
+    </visualSettings>
+    <description>
+      <textDescription>MARKET_AIRPLANE_DESCRIPTION_D-H-103</textDescription>
+      <engineCapasityUnit>MARKET_AIRPLANE_ENGINE_CAPACITY_LS</engineCapasityUnit>
+      <MARKET_AIRPLANE_ENGINE_CAPACITY>	425	</MARKET_AIRPLANE_ENGINE_CAPACITY>
+      <MARKET_AIRPLANE_WING_AREA>21.13</MARKET_AIRPLANE_WING_AREA>
+      <MARKET_AIRPLANE_GROUND_MAX_SPEED>	260	</MARKET_AIRPLANE_GROUND_MAX_SPEED>
+      <MARKET_AIRPLANE_HEIGHT_MAX_SPEED>	283	</MARKET_AIRPLANE_HEIGHT_MAX_SPEED>
+      <MARKET_AIRPLANE_RATE_OF_CLIMB>7.7</MARKET_AIRPLANE_RATE_OF_CLIMB>
+      <MARKET_AIRPLANE_FULL_TURN_TIME>-</MARKET_AIRPLANE_FULL_TURN_TIME>
+    </description>
+  </Airplane>
+  <Pivots>
+    <pivot>
+      <name>1/1/0/0/hull/HP_gun_01/HP_flame</name>
+      <position>	-0.265000 -0.226209 0.662466	</position>
+      <direction>	0.000000 0.000000 0.000345	</direction>
+    </pivot>
+    <pivot>
+      <name>1/1/0/0/hull/HP_gun_03/HP_flame</name>
+      <position>	0.086000 -0.226209 0.980000	</position>
+      <direction>	0.000000 0.000000 0.000345	</direction>
+    </pivot>
+    <pivot>
+      <name>1/1/0/1/hull/HP_gun_01/HP_flame</name>
+      <position>	-0.265000 -0.226209 0.662466	</position>
+      <direction>	0.000000 0.000000 0.000345	</direction>
+    </pivot>
+    <pivot>
+      <name>7/1/2/1/rightWing/HP_missile_05/HP_flame_01</name>
+      <position>	4.719470 -0.073047 -0.191657	</position>
+      <direction>	0.000000 0.000000 0.078905	</direction>
+    </pivot>
+    <pivot>
+      <name>6/2/2/1/leftWing/HP_missile_03/HP_flame_01</name>
+      <position>	-5.057782 -0.046296 -0.961147	</position>
+      <direction>	3.141593 0.000000 0.078905	</direction>
+    </pivot>
+    <pivot>
+      <name>1/1/0/1/hull/HP_gun_03/HP_flame</name>
+      <position>	0.086000 -0.226209 0.980000	</position>
+      <direction>	0.000000 0.000000 0.000345	</direction>
+    </pivot>
+    <pivot>
+      <name>6/1/1/1/leftWing/HP_bomb_01/HP_flame_01</name>
+      <position>	-3.926000 -0.101623 -0.559110	</position>
+      <direction>	0.000000 0.000000 0.000345	</direction>
+    </pivot>
+    <pivot>
+      <name>7/2/1/2/rightWing/HP_bomb_02/HP_flame_01</name>
+      <position>	3.925597 -0.101623 -0.559110	</position>
+      <direction>	0.000000 0.000000 0.000345	</direction>
+    </pivot>
+    <pivot>
+      <name>6/1/2/1/leftWing/HP_missile_02/HP_flame_01</name>
+      <position>	-5.366595 -0.021878 -0.961147	</position>
+      <direction>	3.141593 0.000000 0.078905	</direction>
+    </pivot>
+    <pivot>
+      <name>7/1/2/1/rightWing/HP_missile_08/HP_flame_01</name>
+      <position>	5.722987 0.006302 -0.191657	</position>
+      <direction>	0.000000 0.000000 0.078905	</direction>
+    </pivot>
+    <pivot>
+      <name>6/2/2/1/leftWing/HP_missile_02/HP_flame_01</name>
+      <position>	-5.366595 -0.021878 -0.961147	</position>
+      <direction>	3.141593 0.000000 0.078905	</direction>
+    </pivot>
+    <pivot>
+      <name>7/1/1/2/rightWing/HP_bomb_02/HP_flame_01</name>
+      <position>	3.925597 -0.101623 -0.559110	</position>
+      <direction>	0.000000 0.000000 0.000345	</direction>
+    </pivot>
+    <pivot>
+      <name>6/1/2/1/leftWing/HP_missile_03/HP_flame_01</name>
+      <position>	-5.057782 -0.046296 -0.961147	</position>
+      <direction>	3.141593 0.000000 0.078905	</direction>
+    </pivot>
+    <pivot>
+      <name>6/1/2/1/leftWing/HP_missile_04/HP_flame_01</name>
+      <position>	-4.719470 -0.073047 -0.961147	</position>
+      <direction>	3.141593 0.000000 0.078905	</direction>
+    </pivot>
+    <pivot>
+      <name>6/2/2/1/leftWing/HP_missile_01/HP_flame_01</name>
+      <position>	-5.722987 0.006302 -0.961147	</position>
+      <direction>	3.141593 0.000000 0.078905	</direction>
+    </pivot>
+    <pivot>
+      <name>1/1/0/1/hull/HP_gun_04/HP_flame</name>
+      <position>	0.265000 -0.226209 0.662466	</position>
+      <direction>	0.000000 0.000000 0.000345	</direction>
+    </pivot>
+    <pivot>
+      <name>1/1/0/1/hull/HP_gun_02/HP_flame</name>
+      <position>	-0.086000 -0.226209 0.980000	</position>
+      <direction>	0.000000 0.000000 0.000345	</direction>
+    </pivot>
+    <pivot>
+      <name>7/1/2/1/rightWing/HP_missile_06/HP_flame_01</name>
+      <position>	5.057782 -0.046296 -0.191657	</position>
+      <direction>	0.000000 0.000000 0.078905	</direction>
+    </pivot>
+    <pivot>
+      <name>6/2/1/1/leftWing/HP_bomb_01/HP_flame_01</name>
+      <position>	-3.926000 -0.101623 -0.559110	</position>
+      <direction>	0.000000 0.000000 0.000345	</direction>
+    </pivot>
+    <pivot>
+      <name>6/2/2/1/leftWing/HP_missile_04/HP_flame_01</name>
+      <position>	-4.719470 -0.073047 -0.961147	</position>
+      <direction>	3.141593 0.000000 0.078905	</direction>
+    </pivot>
+    <pivot>
+      <name>1/1/0/0/hull/HP_gun_04/HP_flame</name>
+      <position>	0.265000 -0.226209 0.662466	</position>
+      <direction>	0.000000 0.000000 0.000345	</direction>
+    </pivot>
+    <pivot>
+      <name>6/1/2/1/leftWing/HP_missile_01/HP_flame_01</name>
+      <position>	-5.722987 0.006302 -0.961147	</position>
+      <direction>	3.141593 0.000000 0.078905	</direction>
+    </pivot>
+    <pivot>
+      <name>7/2/2/1/rightWing/HP_missile_08/HP_flame_01</name>
+      <position>	5.722987 0.006302 -0.191657	</position>
+      <direction>	0.000000 0.000000 0.078905	</direction>
+    </pivot>
+    <pivot>
+      <name>7/1/1/1/rightWing/HP_bomb_02/HP_flame_01</name>
+      <position>	3.925597 -0.101623 -0.559110	</position>
+      <direction>	0.000000 0.000000 0.000345	</direction>
+    </pivot>
+    <pivot>
+      <name>7/2/2/1/rightWing/HP_missile_06/HP_flame_01</name>
+      <position>	5.057782 -0.046296 -0.191657	</position>
+      <direction>	0.000000 0.000000 0.078905	</direction>
+    </pivot>
+    <pivot>
+      <name>1/1/0/0/hull/HP_gun_02/HP_flame</name>
+      <position>	-0.086000 -0.226209 0.980000	</position>
+      <direction>	0.000000 0.000000 0.000345	</direction>
+    </pivot>
+    <pivot>
+      <name>7/2/1/1/rightWing/HP_bomb_02/HP_flame_01</name>
+      <position>	3.925597 -0.101623 -0.559110	</position>
+      <direction>	0.000000 0.000000 0.000345	</direction>
+    </pivot>
+    <pivot>
+      <name>7/2/2/1/rightWing/HP_missile_07/HP_flame_01</name>
+      <position>	5.366595 -0.021878 -0.191657	</position>
+      <direction>	0.000000 0.000000 0.078905	</direction>
+    </pivot>
+    <pivot>
+      <name>6/1/1/2/leftWing/HP_bomb_01/HP_flame_01</name>
+      <position>	-3.926000 -0.101623 -0.559110	</position>
+      <direction>	0.000000 0.000000 0.000345	</direction>
+    </pivot>
+    <pivot>
+      <name>6/2/1/2/leftWing/HP_bomb_01/HP_flame_01</name>
+      <position>	-3.926000 -0.101623 -0.559110	</position>
+      <direction>	0.000000 0.000000 0.000345	</direction>
+    </pivot>
+    <pivot>
+      <name>7/1/2/1/rightWing/HP_missile_07/HP_flame_01</name>
+      <position>	5.366595 -0.021878 -0.191657	</position>
+      <direction>	0.000000 0.000000 0.078905	</direction>
+    </pivot>
+    <pivot>
+      <name>7/2/2/1/rightWing/HP_missile_05/HP_flame_01</name>
+      <position>	4.719470 -0.073047 -0.191657	</position>
+      <direction>	0.000000 0.000000 0.078905	</direction>
+    </pivot>
+  </Pivots>
+  <magnetPoints>
+    <magnetPoint>
+      <position>	-5.483309 0.317867 -0.700614	</position>
+      <staticMass>	0.250000	</staticMass>
+    </magnetPoint>
+    <magnetPoint>
+      <position>	-2.175889 -0.122481 -0.880952	</position>
+      <staticMass>	1.000000	</staticMass>
+    </magnetPoint>
+    <magnetPoint>
+      <position>	0.000000 0.170496 -1.083852	</position>
+      <staticMass>	1.000000	</staticMass>
+    </magnetPoint>
+    <magnetPoint>
+      <position>	2.175889 -0.122481 -0.880952	</position>
+      <staticMass>	1.000000	</staticMass>
+    </magnetPoint>
+    <magnetPoint>
+      <position>	5.483309 0.317867 -0.700614	</position>
+      <staticMass>	0.250000	</staticMass>
+    </magnetPoint>
+  </magnetPoints>
+  <HPmass>
+    <position>	0.000000 0.000000 0.000000	</position>
+    <direction>	0.000000 0.000000 0.000000	</direction>
+  </HPmass>
+</defender_d-h-103.xml>

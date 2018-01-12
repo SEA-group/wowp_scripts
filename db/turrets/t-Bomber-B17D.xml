@@ -1,0 +1,110 @@
+<t-bomber-b17d.xml>
+  <parent>base_air_turret_tail.xml</parent>
+  <pitchMin>	-60	</pitchMin>
+  <pitchMax>	60	</pitchMax>
+  <yawMin>	100	</yawMin>
+  <yawMax>	260	</yawMax>
+  <pitchSpeed>	90	</pitchSpeed>
+  <yawSpeed>	90	</yawSpeed>
+  <fullReductionTime>2.0</fullReductionTime>
+  <hangarName>G12mm-ANM2-T-PR</hangarName>
+  <weaponCount>	2	</weaponCount>
+  <gunName>turret_machinegun_heavy</gunName>
+  <nation>USA</nation>
+  <DPS>2.5</DPS>
+  <targetLockShootDistance>	525	</targetLockShootDistance>
+  <targetLostDistance>	525	</targetLostDistance>
+  <burstTime>	8	</burstTime>
+  <burstDelay>	2	</burstDelay>
+  <name>T2</name>
+  <Pivots>
+    <pivot>
+      <name>hull/HP_Flame</name>
+      <position>0.0 0.0 0.0</position>
+      <direction>0.0 0.0 0.0</direction>
+    </pivot>
+  </Pivots>
+  <bBoxes>
+    <mainBox>
+      <size>20 24 20</size>
+    </mainBox>
+    <box>
+      <size>20 24 20</size>
+    </box>
+  </bBoxes>
+  <flames>
+    <flamePath>HP_flame_01</flamePath>
+    <flamePath>HP_flame_02</flamePath>
+  </flames>
+  <animatorDirectionDefault>0.0 -16.0 0.0</animatorDirectionDefault>
+  <animatorDirectionOffset>0.0 0.0 0.0</animatorDirectionOffset>
+  <direction>0.0 0.0 0.0</direction>
+  <position>0.0	0.6 -4.0</position>
+  <model>vehicles/airplanes/russian/SU11_IL2_2/normal/lod0/gun_03_01.model</model>
+  <modelCrash>vehicles/airplanes/russian/SU11_IL2_2/crash/lod0/gun_03_01.model</modelCrash>
+  <modelScaling>1.0 1.0 1.0</modelScaling>
+  <parts>
+    <part>
+      <name>	hull	</name>
+      <partId>	1	</partId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>0.000000 0.00000 0.000000</position>
+            <size>20.00000 24.00000 20.000000</size>
+            <armorFront>10 10 20</armorFront>
+            <armorBack>10 10 10</armorBack>
+            <absorption>	2	</absorption>
+          </bbox>
+        </bBoxes>
+        <health>100%</health>
+        <componentType>	Hull	</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>vehicles/airplanes/german/GR11_BF109G/normal/lod0/fuselage_01.model</model>
+            <animationController>
+            </animationController>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <model>vehicles/airplanes/german/GR11_BF109G/crash/lod0/fuselage_01.model</model>
+            <animationController>
+            </animationController>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	3	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>vehicles/airplanes/german/GR11_BF109G/crash/lod0/fuselage_01.model</model>
+            <animationController>
+            </animationController>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+        </states>
+        <fireMountPoint>
+        </fireMountPoint>
+      </upgrade>
+    </part>
+  </parts>
+</t-bomber-b17d.xml>

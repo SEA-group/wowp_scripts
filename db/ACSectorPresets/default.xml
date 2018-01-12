@@ -1,0 +1,45 @@
+<default.xml>
+  <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
+  <noNamespaceSchemaLocation>SectorPresetModel.xsd</noNamespaceSchemaLocation>
+  <gameplayType>military_base</gameplayType>
+  <neutralCapturePoints>	180	</neutralCapturePoints>
+  <ownedCapturePoints>	120	</ownedCapturePoints>
+  <gameplayLevel>	0	</gameplayLevel>
+  <teamIndex>	3	</teamIndex>
+  <state>C</state>
+  <lockTime>	30	</lockTime>
+  <playerSpawnEnabled>	false	</playerSpawnEnabled>
+  <respawnCooldownReduceEnabled>	false	</respawnCooldownReduceEnabled>
+  <tacticalRespawnEnabled>	false	</tacticalRespawnEnabled>
+  <defenderCounter>
+    <count>	0	<defenderType>LIGHT</defenderType></count>
+  </defenderCounter>
+  <pointsProduction>
+    <producers>
+      <producer>
+        <label>default</label>
+        <period>	1	</period>
+        <points>	3	</points>
+      </producer>
+    </producers>
+  </pointsProduction>
+  <ai>
+    <areaConquest>
+      <baseValue>	1000	</baseValue>
+      <planeTypeMultiplier>
+        <multiplier>1.0<planeType>Assault</planeType></multiplier>
+        <multiplier>1.0<planeType>Heavy fighter</planeType></multiplier>
+        <multiplier>1.0<planeType>	Navy	</planeType></multiplier>
+        <multiplier>1.0<planeType>Fighter</planeType></multiplier>
+        <multiplier>1.0<planeType>Bomber</planeType></multiplier>
+      </planeTypeMultiplier>
+      <antiGroundWeaponBonus>
+        <multiplier>0.0<planeType>Assault</planeType></multiplier>
+        <multiplier>0.0<planeType>Heavy fighter</planeType></multiplier>
+        <multiplier>0.0<planeType>	Navy	</planeType></multiplier>
+        <multiplier>0.0<planeType>Fighter</planeType></multiplier>
+        <multiplier>0.0<planeType>Bomber</planeType></multiplier>
+      </antiGroundWeaponBonus>
+    </areaConquest>
+  </ai>
+</default.xml>

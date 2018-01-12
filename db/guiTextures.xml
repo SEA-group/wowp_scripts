@@ -1,0 +1,915 @@
+
+<root>
+	<texture>
+		<id> TX_TARGET_BACKGROUND </id>
+		<textureFile> gui/maps/hudTargetBgShade.dds </textureFile>
+	</texture>
+	<texture>
+		<!--ingame cursor-->
+		<id> TX_INGAME_CURSOR </id>
+		<textureFile>  gui/circleHUD/HUD_plane_direction_marker.dds </textureFile>
+	</texture>
+	<texture>
+		<!--ingame cursor arrow state-->
+		<id> TX_INGAME_CURSOR_ARROW </id>
+		<textureFile>  gui/circleHUD/HUD_plane_arrow_direction_marker.dds </textureFile>
+	</texture>
+	<!-- START FORESTALLING POINT SETTINGS -->
+	<texture>
+		<!--forestalling point-->
+		<id> FORESTALLING_POINT0 </id>
+		<textureFile> gui/circleHUD/HUD_enemy_direction_marker_04.dds </textureFile>
+	</texture>
+	<texture>
+		<!--forestalling point-->
+		<id> FORESTALLING_POINT1 </id>
+		<textureFile> gui/circleHUD/HUD_enemy_direction_marker_03.dds </textureFile>
+	</texture>
+	<texture>
+		<!--forestalling point-->
+		<id> FORESTALLING_POINT2 </id>
+		<textureFile> gui/circleHUD/HUD_enemy_direction_marker_02.dds </textureFile>
+	</texture>
+	<texture>
+		<!--forestalling point-->
+		<id> FORESTALLING_POINT3 </id>
+		<textureFile> gui/circleHUD/HUD_enemy_direction_marker_01.dds </textureFile>
+	</texture>
+	<texture>
+		<!--forestalling point-->
+		<id> FORESTALLING_POINT </id>
+		<textureFile> gui/circleHUD/HUD_enemy_direction_marker.dds </textureFile>
+	</texture>
+	<texture>
+		<!--forestalling point blind-->
+		<id> FORESTALLING_POINT_BLIND0 </id>
+		<textureFile> gui/circleHUD/HUD_enemy_direction_marker_04_blind.dds </textureFile>
+	</texture>
+	<texture>
+		<!--forestalling point blind-->
+		<id> FORESTALLING_POINT_BLIND1 </id>
+		<textureFile> gui/circleHUD/HUD_enemy_direction_marker_03_blind.dds </textureFile>
+	</texture>
+	<texture>
+		<!--forestalling point blind-->
+		<id> FORESTALLING_POINT_BLIND2 </id>
+		<textureFile> gui/circleHUD/HUD_enemy_direction_marker_02_blind.dds </textureFile>
+	</texture>
+	<texture>
+		<!--forestalling point blind-->
+		<id> FORESTALLING_POINT_BLIND3 </id>
+		<textureFile> gui/circleHUD/HUD_enemy_direction_marker_01.dds </textureFile>
+	</texture>
+	<texture>
+		<!--forestalling point blind-->
+		<id> FORESTALLING_POINT_BLIND </id>
+		<textureFile> gui/circleHUD/HUD_enemy_direction_marker_blind.dds </textureFile>
+	</texture>
+	<texture>
+		<!--forestalling point locked-->
+		<id> FORESTALLING_POINT_LOCKED </id>
+		<textureFile> gui/circleHUD/HUD_enemy_direction_marker_focused.dds </textureFile>
+	</texture>
+	<texture>
+		<!--forestalling point locked blind-->
+		<id> FORESTALLING_POINT_LOCKED_BLIND </id>
+		<textureFile> gui/circleHUD/HUD_enemy_direction_marker_focused_blind.dds </textureFile>
+	</texture>
+	<!-- END FORESTALLING POINT SETTINGS -->
+	<texture>
+		<!--central cross-->
+		<id> TX_CENTRAL_CROSS </id>
+		<textureFile> gui/circleHUD/HUD_SightDangerDirection.dds </textureFile>
+	</texture>
+	<texture>
+		<!--square-round highlight-->
+		<id> TX_HIGHLIGHT_SQUARE_ROUND </id>
+		<textureFile> gui/maps/highlight16_5sq_6r.dds </textureFile>
+	</texture>
+	<texture>
+		<!--arrow marker-->
+		<id> TX_ARROW_MARKER </id>
+		<textureFile> gui/circleHUD/HUD_arrow_marker_alt.dds </textureFile>
+	</texture>
+	<texture>
+		<!--entity commands icons-->
+		<id> TX_ENTITY_COMMANDS </id>
+		<textureFile> gui/circleHUD/HUD_icon_commands.dds </textureFile>
+	</texture>
+	<texture>
+		<!--own base texture-->
+		<id> TX_DOMINATION_TEXTURE_OWN </id>
+		<textureFile> gui/maps/blue_base.dds </textureFile>
+	</texture>
+	<texture>
+		<!--enemy base texture-->
+		<id> TX_DOMINATION_TEXTURE_ENEMY </id>
+		<textureFile> gui/maps/red_base.dds </textureFile>
+	</texture>
+	<texture>
+		<!--border texture-->
+		<id> TX_BOUND_TEXTURE_V </id>
+		<textureFile> gui/maps/border_line.dds </textureFile>
+	</texture>
+	<texture>
+		<!--map target-->
+		<id> TX_MAP_TARGET </id>
+		<textureFile> gui/target.dds </textureFile>
+	</texture>
+	<texture>
+		<!--map target team object under attack-->
+		<id> TX_MAP_TARGET_ATTACK </id>
+		<textureFile>gui/circleHUD/iconsCommand/hudIconCommandGroundAttack.dds</textureFile>
+	</texture>
+	<texture>
+		<!--map default texture-->
+		<id> TX_MAP_DEFAULT </id>
+		<textureFile> system/maps/aid_null.dds </textureFile>
+	</texture>
+	<texture>
+		<!--map mask-->
+		<id> TX_MAP_MASK </id>
+		<textureFile> system/maps/col_white.dds </textureFile>
+	</texture>
+	<texture>
+		<!--map texture-->
+		<id> TX_MAP_TEXTURE </id>
+		<textureFile> /space.thumbnail.dds </textureFile>
+	</texture>
+	<texture>
+		<!--mini map entity down-->
+		<id> TX_MAXIMAP_BG </id>
+		<textureFile> gui/maps/hudMaxMapFullscreenBg.dds </textureFile>
+	</texture>
+	<texture>
+		<!--mini map entity down-->
+		<id> TX_MAXIMAP_CLOSE_OVER </id>
+		<textureFile> gui/iconMaxiMapClose_Over.dds </textureFile>
+	</texture>
+	<texture>
+		<!--mini map entity down-->
+		<id> TX_MAXIMAP_CLOSE_UP </id>
+		<textureFile> gui/iconMaxiMapClose_Up.dds </textureFile>
+	</texture>
+	<texture>
+		<!--mini map entity up-->
+		<id> TX_MINIMAP_ENTITY_UP </id>
+		<textureFile> gui/maps/mini_map_entityUp.dds </textureFile>
+	</texture>
+	<texture>
+		<!--mini map entity down-->
+		<id> TX_MINIMAP_ENTITY_DOWN </id>
+		<textureFile> gui/maps/mini_map_entityDown.dds </textureFile>
+	</texture>
+	<texture>
+		<!--mini map base-->
+		<id> TX_MINIMAP_BASE </id>
+		<textureFile> gui/maps/mini_map_base.dds </textureFile>
+	</texture>
+	<texture>
+		<!--mini map turret-->
+		<id> TX_MINIMAP_TURRET </id>
+		<textureFile> gui/maps/mini_map_turret.dds </textureFile>
+	</texture>
+	<texture>
+		<!--mini map overlay-->
+		<id> TX_MINIMAP_OVERLAY_TEXTURE_75 </id>
+		<textureFile> gui/maps/hudMapBg_75.dds </textureFile>
+	</texture>
+	<texture>
+		<!--mini map overlay-->
+		<id> TX_MINIMAP_OVERLAY_TEXTURE_100 </id>
+		<textureFile> gui/maps/hudMapBg_100.dds </textureFile>
+	</texture>
+	<texture>
+		<!--mini map overlay-->
+		<id> TX_MINIMAP_OVERLAY_TEXTURE_125 </id>
+		<textureFile> gui/maps/hudMapBg_125.dds </textureFile>
+	</texture>
+	<texture>
+		<!--mini map overlay-->
+		<id> TX_MINIMAP_OVERLAY_TEXTURE_150 </id>
+		<textureFile> gui/maps/hudMapBg_150.dds </textureFile>
+	</texture>
+	<texture>
+		<!--mini map overlay-->
+		<id> TX_MINIMAP_OVERLAY_TEXTURE_175 </id>
+		<textureFile> gui/maps/hudMapBg_175.dds </textureFile>
+	</texture>
+	<texture>
+		<!--mini map overlay-->
+		<id> TX_MINIMAP_OVERLAY_TEXTURE_200 </id>
+		<textureFile> gui/maps/hudMapBg_200.dds </textureFile>
+	</texture>
+	<texture>
+		<!--mini map grid-->
+		<id> TX_MINIMAP_GRID_TEXTURE_75 </id>
+		<textureFile> gui/maps/hudMapGrid_75.dds </textureFile>
+	</texture>
+	<texture>
+		<!--mini map grid-->
+		<id> TX_MINIMAP_GRID_TEXTURE_100 </id>
+		<textureFile> gui/maps/hudMapGrid_100.dds </textureFile>
+	</texture>
+	<texture>
+		<!--mini map grid-->
+		<id> TX_MINIMAP_GRID_TEXTURE_125 </id>
+		<textureFile> gui/maps/hudMapGrid_125.dds </textureFile>
+	</texture>
+	<texture>
+		<!--mini map grid-->
+		<id> TX_MINIMAP_GRID_TEXTURE_150 </id>
+		<textureFile> gui/maps/hudMapGrid_150.dds </textureFile>
+	</texture>
+	<texture>
+		<!--mini map grid-->
+		<id> TX_MINIMAP_GRID_TEXTURE_175 </id>
+		<textureFile> gui/maps/hudMapGrid_175.dds </textureFile>
+	</texture>
+	<texture>
+		<!--mini map grid-->
+		<id> TX_MINIMAP_GRID_TEXTURE_200 </id>
+		<textureFile> gui/maps/hudMapGrid_200.dds </textureFile>
+	</texture>
+	<!-- Entity command START-->
+	<texture>
+		<id> TX_MINIMAP_JOIN_ME_ENEMY </id>
+		<textureFile> gui/circleHUD/iconsCommand/hudIconCommandJoinMe_Enemy.dds </textureFile>
+	</texture>
+	<texture>
+		<id> TX_MINIMAP_ENEMY_MY_AIM_ENEMY </id>
+		<textureFile> gui/circleHUD/iconsCommand/hudIconCommandEnemyMyAim_Enemy.dds </textureFile>
+	</texture>
+	<texture>
+		<id> TX_MINIMAP_SOS </id>
+		<textureFile> gui/circleHUD/iconsCommand/hudIconCommandSos.dds </textureFile>
+	</texture>
+	<texture>
+		<id> TX_MINIMAP_NEED_SHELTER </id>
+		<textureFile> gui/circleHUD/iconsCommand/hudIconCommandNeedShelter.dds </textureFile>
+	</texture>
+	<texture>
+		<id> TX_MINIMAP_NO </id>
+		<textureFile> gui/circleHUD/iconsCommand/hudIconCommandNo.dds </textureFile>
+	</texture>
+	<texture>
+		<id> TX_MINIMAP_GOT_IT </id>
+		<textureFile> gui/circleHUD/iconsCommand/hudIconCommandGotIt.dds </textureFile>
+	</texture>
+	<texture>
+		<id> TX_MINIMAP_JOIN_ME </id>
+		<textureFile> gui/circleHUD/iconsCommand/hudIconCommandJoinMe.dds </textureFile>
+	</texture>
+	<texture>
+		<id> TX_MINIMAP_MY_LOCATION </id>
+		<textureFile> gui/circleHUD/iconsCommand/hudIconCommandMyLocation.dds </textureFile>
+	</texture>
+	<texture>
+		<id> TX_MINIMAP_ENEMY_MY_AIM </id>
+		<textureFile> gui/circleHUD/iconsCommand/hudIconCommandEnemyMyAim.dds </textureFile>
+	</texture>
+	<texture>
+		<id> TX_MINIMAP_ENEMY_HERE </id>
+		<textureFile> gui/circleHUD/iconsCommand/hudIconCommandEnemyHere.dds </textureFile>
+	</texture>
+	<!-- Entity command END-->
+	<!-- BIG MAP START-->
+	<texture>
+		<!--big map overlay-->
+		<id> TX_MAP_OVERLAY_TEXTURE </id>
+		<textureFile> gui/maps/hudMaxMapBg.dds </textureFile>
+	</texture>
+	<texture>
+		<!--big map turret ally-->
+		<id> TX_MAP_TURRET_FRIEND </id>
+		<textureFile> gui/maps/hudMapObjectAllyTurret.dds </textureFile>
+	</texture>
+	<texture>
+		<!--big map turret enemy-->
+		<id> TX_MAP_TURRET_ENEMY </id>
+		<textureFile> gui/maps/hudMapObjectEnemyTurret.dds </textureFile>
+	</texture>
+	<texture>
+		<!--big map base ally-->
+		<id> TX_MAP_BASE_FRIEND </id>
+		<textureFile> gui/maps/hudMapBaseAlly.dds </textureFile>
+	</texture>
+	<texture>
+		<!--big map base enemy-->
+		<id> TX_MAP_BASE_ENEMY </id>
+		<textureFile> gui/maps/hudMapBaseEnemy.dds </textureFile>
+	</texture>
+	<texture>
+		<!--big map base enemy blind-->
+		<id> TX_MAP_BASE_ENEMY_BLIND </id>
+		<textureFile> gui/maps/hudMapBaseEnemy_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<!--big map player squad-->
+		<id> TX_MAP_PLAYER_SQUAD </id>
+		<textureFile> gui/maps/hudMapPlaneSquad.dds </textureFile>
+	</texture>
+	<texture>
+		<!--big map player squad Blind-->
+		<id> TX_MAP_PLAYER_SQUAD_BLIND </id>
+		<textureFile> gui/maps/hudMapPlaneSquad_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<!--big map player enemy-->
+		<id> TX_MAP_PLAYER_ENEMY </id>
+		<textureFile> gui/maps/hudMapPlaneEnemy.dds </textureFile>
+	</texture>
+	<texture>
+		<!--big map player enemy Blind-->
+		<id> TX_MAP_PLAYER_ENEMY_BLIND </id>
+		<textureFile> gui/maps/hudMapPlaneEnemy_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<!--big map player friend-->
+		<id> TX_MAP_PLAYER_FRIEND </id>
+		<textureFile> gui/maps/hudMapPlaneAlly.dds </textureFile>
+	</texture>
+	<texture>
+		<!--big map player-->
+		<id> TX_MAP_PLAYER </id>
+		<textureFile> gui/maps/hudMaxMapPlane.dds </textureFile>
+	</texture>
+	<texture>
+		<!--big map lock target plane-->
+		<id> TX_MAP_LOCK_TARGET_PLANE </id>
+		<textureFile> gui/maps/hudMapLockFramePlane.dds </textureFile>
+	</texture>
+	<texture>
+		<!--big map lock target plane blind-->
+		<id> TX_MAP_LOCK_TARGET_PLANE_BLIND </id>
+		<textureFile> gui/maps/hudMapLockFramePlane_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<!--big map lock target TO-->
+		<id> TX_MAP_LOCK_TARGET_OBJECT </id>
+		<textureFile> gui/maps/hudMapLockFrameBase.dds </textureFile>
+	</texture>
+	<texture>
+		<!--big map lock target TO blind-->
+		<id> TX_MAP_LOCK_TARGET_OBJECT_BLIND </id>
+		<textureFile> gui/maps/hudMapLockFrameBase_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<!--big map object ally-->
+		<id> TX_MAP_OBJECT_FRIEND </id>
+		<textureFile> gui/maps/hudMapObjectAlly.dds </textureFile>
+	</texture>
+	<texture>
+		<!--big map object enemy-->
+		<id> TX_MAP_OBJECT_ENEMY </id>
+		<textureFile> gui/maps/hudMapObjectEnemy.dds </textureFile>
+	</texture>
+	<texture>
+		<!--big map object enemy blind-->
+		<id> TX_MAP_OBJECT_FRIEND_BLIND </id>
+		<textureFile> gui/maps/hudMapObjectEnemy_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<!--big map object enemy blind-->
+		<id> TX_MAP_TURRET_ENEMY_BLIND </id>
+		<textureFile> gui/maps/hudMapObjectEnemyTurret_Blind.dds </textureFile>
+	</texture>
+	<!-- BIG MAP END-->
+	<texture>
+		<!--hud map ally plane-->
+		<id> TX_HUDMAP_PLANE_ALLY </id>
+		<textureFile> gui/maps/hudMapPlaneAlly.dds </textureFile>
+	</texture>
+	<texture>
+		<!--hud map enemy plane locked-->
+		<id> TX_HUDMAP_PLANE_LOCKED </id>
+		<textureFile> gui/maps/hudMapLockFramePlane.dds </textureFile>
+	</texture>
+	<texture>
+		<!--hud map enemy plane locked Blind-->
+		<id> TX_HUDMAP_PLANE_LOCKED_BLIND </id>
+		<textureFile> gui/maps/hudMapLockFramePlane_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<!--hud map enemy plane-->
+		<id> TX_HUDMAP_PLANE_ENEMY </id>
+		<textureFile> gui/maps/hudMapPlaneEnemy.dds </textureFile>
+	</texture>
+	<texture>
+		<!--hud map enemy plane Blind-->
+		<id> TX_HUDMAP_PLANE_ENEMY_BLIND </id>
+		<textureFile> gui/maps/hudMapPlaneEnemy_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<!--hud map team killer-->
+		<id> TX_HUDMAP_PLANE_TEAM_KILLER </id>
+		<textureFile> gui/maps/hudMapPlaneTarget.dds </textureFile>
+	</texture>
+	<texture>
+		<!--mini map player-->
+		<id> TX_MINIMAP_PLAYER </id>
+		<textureFile> gui/maps/hudRadarPlaneTarget.dds </textureFile>
+	</texture>
+	<texture>
+		<!--mini map player from squad-->
+		<id> TX_MINIMAP_PLAYER_SQUAD </id>
+		<textureFile> gui/maps/hudRadarPlaneSquad.dds </textureFile>
+	</texture>
+	<texture>
+		<!--hud map enemy turret-->
+		<id> TX_HUDMAP_TURRET_ENEMY </id>
+		<textureFile> gui/maps/hudMapObjectEnemyTurret.dds </textureFile>
+	</texture>
+	<texture>
+		<!--hud map enemy turret Blind-->
+		<id> TX_HUDMAP_TURRET_ENEMY_BLIND </id>
+		<textureFile> gui/maps/hudMapObjectEnemyTurret_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<!--hud map turret ally-->
+		<id> TX_HUDMAP_TURRET_ALLY </id>
+		<textureFile> gui/maps/hudMapObjectAllyTurret.dds </textureFile>
+	</texture>
+	<texture>
+		<!--hud map object ally-->
+		<id> TX_HUDMAP_OBJECT_ALLY </id>
+		<textureFile> gui/maps/hudMapObjectAlly.dds </textureFile>
+	</texture>
+	<texture>
+		<!--hud map object enemy-->
+		<id> TX_HUDMAP_OBJECT_ENEMY </id>
+		<textureFile> gui/maps/hudMapObjectEnemy.dds </textureFile>
+	</texture>
+	<texture>
+		<!--hud map object enemy Blind-->
+		<id> TX_HUDMAP_OBJECT_ENEMY_BLIND </id>
+		<textureFile> gui/maps/hudMapObjectEnemy_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<!--hud radar object target-->
+		<id> TX_HUDMAP_OBJECT_TARGET </id>
+		<textureFile> gui/maps/hudMapObjectTarget.dds </textureFile>
+	</texture>
+	<texture>
+		<!--hud map object target-->
+		<id> TX_MAP_OBJECT_TARGET </id>
+		<textureFile> gui/maps/hudMapLockFrameBase.dds </textureFile>
+	</texture>
+	<texture>
+		<!--hud map object target Blind-->
+		<id> TX_MAP_OBJECT_TARGET_BLIND </id>
+		<textureFile> gui/maps/hudMapLockFrameBase_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<!--minimap texture-->
+		<id> TX_MAP_PLANE </id>
+		<textureFile> gui/maps/hudMapRadarPlane.dds </textureFile>
+	</texture>
+	<texture>
+		<!--minimap texture plane from squad-->
+		<id> TX_MAP_PLANE_SQUAD </id>
+		<textureFile> gui/maps/hudMapPlaneSquad.dds </textureFile>
+	</texture>
+	<texture>
+		<!--minimap texture plane from squad Blind-->
+		<id> TX_MAP_PLANE_SQUAD_BLIND </id>
+		<textureFile> gui/maps/hudMapPlaneSquad_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<!--hud map ally base-->
+		<id> TX_HUDMAP_BASE_ALLY </id>
+		<textureFile> gui/maps/hudMapBaseAlly.dds </textureFile>
+	</texture>
+	<texture>
+		<!--hud map enemy base-->
+		<id> TX_HUDMAP_BASE_ENEMY </id>
+		<textureFile> gui/maps/hudMapBaseEnemy.dds </textureFile>
+	</texture>
+	<texture>
+		<!--hud map enemy base Blind-->
+		<id> TX_HUDMAP_BASE_ENEMY_BLIND </id>
+		<textureFile> gui/maps/hudMapBaseEnemy_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<!--hud radar ally plane-->
+		<id> TX_HUDRADAR_PLANE_ALLY </id>
+		<textureFile> gui/maps/hudRadarPlaneAlly.dds </textureFile>
+	</texture>
+	<texture>
+		<!--hud radar ally plane outline-->
+		<id> TX_HUDRADAR_PLANE_ALLY_OUTLINE </id>
+		<textureFile> gui/maps/hudRadarPlaneAllyOutline.dds </textureFile>
+	</texture>
+	<texture>
+		<!--hud radar squad plane-->
+		<id> TX_HUDRADAR_PLANE_SQUAD </id>
+		<textureFile> gui/maps/hudRadarPlaneSquad.dds </textureFile>
+	</texture>
+	<texture>
+		<!--hud radar squad plane outline-->
+		<id> TX_HUDRADAR_PLANE_SQUAD_OUTLINE </id>
+		<textureFile> gui/maps/hudRadarPlaneSquadOutline.dds </textureFile>
+	</texture>
+	<texture>
+		<!--hud radar squad plane Blind-->
+		<id> TX_HUDRADAR_PLANE_SQUAD_BLIND </id>
+		<textureFile> gui/maps/hudRadarPlaneSquad_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<!--hud radar squad plane outline Blind-->
+		<id> TX_HUDRADAR_PLANE_SQUAD_OUTLINE_BLIND </id>
+		<textureFile> gui/maps/hudRadarPlaneSquadOutline_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<!--hud radar enemy plane-->
+		<id> TX_HUDRADAR_PLANE_ENEMY </id>
+		<textureFile> gui/maps/hudRadarPlaneEnemy.dds </textureFile>
+	</texture>
+	<texture>
+		<!--hud radar enemy plane outline-->
+		<id> TX_HUDRADAR_PLANE_ENEMY_OUTLINE </id>
+		<textureFile> gui/maps/hudRadarPlaneEnemyOutline.dds </textureFile>
+	</texture>
+	<texture>
+		<!--hud radar enemy plane Blind-->
+		<id> TX_HUDRADAR_PLANE_ENEMY_BLIND </id>
+		<textureFile> gui/maps/hudRadarPlaneEnemy_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<!--hud radar enemy plane outline Blind-->
+		<id> TX_HUDRADAR_PLANE_ENEMY_OUTLINE_BLIND </id>
+		<textureFile> gui/maps/hudRadarPlaneEnemyOutline_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<!--hud radar target plane-->
+		<id> TX_HUDRADAR_PLANE_TARGET </id>
+		<textureFile> gui/maps/hudRadarPlaneTarget.dds </textureFile>
+	</texture>
+	<texture>
+		<!--hud radar target plane outline-->
+		<id> TX_HUDRADAR_PLANE_TARGET_OUTLINE </id>
+		<textureFile> gui/maps/hudRadarPlaneTargetOutline.dds </textureFile>
+	</texture>
+	<texture>
+		<!--hud radar lock target-->
+		<id> TX_HUDRADAR_LOCK_TARGET </id>
+		<textureFile> gui/maps/hudRadarLockFramePlane.dds </textureFile>
+	</texture>
+	<texture>
+		<!--hud radar lock target Blind-->
+		<id> TX_HUDRADAR_LOCK_TARGET_BLIND </id>
+		<textureFile> gui/maps/hudRadarLockFramePlane_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<!--player avatar overlay-->
+		<id> TX_PLAYER_AVATAR_OVERLAY_TEXTURE </id>
+		<textureFile> gui/maps/hudRadarPlane.dds </textureFile>
+	</texture>
+	<texture>
+		<!--radar overlay-->
+		<id> TX_RADAR_OVERLAY_TEXTURE </id>
+		<textureFile> gui/maps/hudRadarCircleBg.dds </textureFile>
+	</texture>
+	<texture>
+		<!--radar ally object-->
+		<id> TX_RADAR_ALLY_OBJECT_TEXTURE </id>
+		<textureFile> gui/maps/hudRadarObjectAlly.dds </textureFile>
+	</texture>
+	<texture>
+		<!--radar enemy object-->
+		<id> TX_RADAR_ENEMY_OBJECT_TEXTURE </id>
+		<textureFile> gui/maps/hudRadarObjectEnemy.dds </textureFile>
+	</texture>
+	<texture>
+		<!--radar enemy object blind-->
+		<id> TX_RADAR_ENEMY_OBJECT_TEXTURE_BLIND </id>
+		<textureFile> gui/maps/hudRadarObjectEnemy_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<!--black gui-->
+		<id> TX_INGAME_BLACK </id>
+		<textureFile> gui/maps/ingame/black.dds </textureFile>
+	</texture>
+	<texture>
+		<!--damage arc-->
+		<id> TX_DAMAGE_ARC </id>
+		<textureFile> gui/circleHUD/HUD_damage-arc2.dds </textureFile>
+	</texture>
+	<texture>
+		<!--loft texture-->
+		<id> TX_LOFT_TEXTURE </id>
+		<textureFile> particles/maps/loft.dds </textureFile>
+	</texture>
+	<texture>
+		<!--icon rocket-->
+		<id> TX_ICON_ROCKET </id>
+		<textureFile> icons/weapons/iconWeapRocket.tga </textureFile>
+	</texture>
+	<texture>
+		<!--bomb disabled texture-->
+		<id> BOMB_SIGN_DISABLED </id>
+		<textureFile> gui/hudSightLandDisabled.dds </textureFile>
+	</texture>
+	<texture>
+		<!--bomb disabled texture-->
+		<id> DEFLECTION_POINT </id>
+		<textureFile> gui/red.dds </textureFile>
+	</texture>
+	<texture>
+		<!--bomb disabled texture-->
+		<id> DEFLECTION_POINT </id>
+		<textureFile> gui/red.dds </textureFile>
+	</texture>
+	<texture>
+		<!--tutorial Marker Pointer Minimap-->
+		<id> MINIMAP_ENTITY_GATE_MARKER_TUTORIAL </id>
+		<textureFile> gui/circleHUD/tutorialArrowHeightMap.dds </textureFile>
+	</texture>
+	<texture>
+		<!--tutorial TeamObject Minimap Icon-->
+		<id> MINIMAP_ENTITY_TUTORIAL </id>
+		<textureFile> gui/circleHUD/tutorialTarget.dds </textureFile>
+	</texture>
+	<!-- *************** MINIMAP ALT *************** -->
+	<!-- ATTACK -->
+	<texture>
+		<id> HUD_MAP_TYPE_ATTACK_ALLY </id>
+		<textureFile> gui/maps/hudMapTypeAttackAlly.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MAP_TYPE_ATTACK_ENEMY </id>
+		<textureFile> gui/maps/hudMapTypeAttackEnemy.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MAP_TYPE_ATTACK_ENEMY_BLIND </id>
+		<textureFile> gui/maps/hudMapTypeAttackEnemy_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MAP_TYPE_ATTACK_SQUAD </id>
+		<textureFile> gui/maps/hudMapTypeAttackSquad.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MAP_TYPE_ATTACK_SQUAD_BLIND </id>
+		<textureFile> gui/maps/hudMapTypeAttackSquad_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MAP_TYPE_ATTACK_TEAM_KILLER </id>
+		<textureFile> gui/maps/hudMapTypeAttackTarget.dds </textureFile>
+	</texture>
+	<!-- Carrier Based TODO: USED FOR MFighter !!! -->
+	<texture>
+		<id> HUD_MAP_TYPE_CARRIER_BASED_ALLY </id>
+		<textureFile> gui/maps/hudMapTypeMFighterAlly.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MAP_TYPE_CARRIER_BASED_ENEMY </id>
+		<textureFile> gui/maps/hudMapTypeMFighterEnemy.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MAP_TYPE_CARRIER_BASED_ENEMY_BLIND </id>
+		<textureFile> gui/maps/hudMapTypeMFighterEnemy_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MAP_TYPE_CARRIER_BASED_SQUAD </id>
+		<textureFile> gui/maps/hudMapTypeMFighterSquad.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MAP_TYPE_CARRIER_BASED_SQUAD_BLIND </id>
+		<textureFile> gui/maps/hudMapTypeMFighterSquad_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MAP_TYPE_CARRIER_BASED_TEAM_KILLER </id>
+		<textureFile> gui/maps/hudMapTypeFighterAlly.dds </textureFile>
+	</texture>
+	<!-- Fighter -->
+	<texture>
+		<id> HUD_MAP_TYPE_FIGHTER_ALLY </id>
+		<textureFile> gui/maps/hudMapTypeFighterAlly.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MAP_TYPE_FIGHTER_ENEMY </id>
+		<textureFile> gui/maps/hudMapTypeFighterEnemy.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MAP_TYPE_FIGHTER_ENEMY_BLIND </id>
+		<textureFile> gui/maps/hudMapTypeFighterEnemy_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MAP_TYPE_FIGHTER_SQUAD </id>
+		<textureFile> gui/maps/hudMapTypeFighterSquad.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MAP_TYPE_FIGHTER_SQUAD_BLIND </id>
+		<textureFile> gui/maps/hudMapTypeFighterSquad_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MAP_TYPE_FIGHTER_TEAM_KILLER </id>
+		<textureFile> gui/maps/hudMapTypeFighterTarget.dds </textureFile>
+	</texture>
+	<!-- Heavy Fighter -->
+	<texture>
+		<id> HUD_MAP_TYPE_HEAVY_FIGHTER_ALLY </id>
+		<textureFile> gui/maps/hudMapTypeHeavyFighterAlly.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MAP_TYPE_HEAVY_FIGHTER_ENEMY </id>
+		<textureFile> gui/maps/hudMapTypeHeavyFighterEnemy.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MAP_TYPE_HEAVY_FIGHTER_ENEMY_BLIND </id>
+		<textureFile> gui/maps/hudMapTypeHeavyFighterEnemy_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MAP_TYPE_HEAVY_FIGHTER_SQUAD </id>
+		<textureFile> gui/maps/hudMapTypeHeavyFighterSquad.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MAP_TYPE_HEAVY_FIGHTER_SQUAD_BLIND </id>
+		<textureFile> gui/maps/hudMapTypeHeavyFighterSquad_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MAP_TYPE_HEAVY_FIGHTER_TEAM_KILLER </id>
+		<textureFile> gui/maps/hudMapTypeHeavyFighterTarget.dds </textureFile>
+	</texture>
+	<!-- *************** RADAR ALT *************** -->
+	<!-- ATTACK -->
+	<texture>
+		<id> HUD_RADAR_TYPE_ATTACK_ALLY </id>
+		<textureFile> gui/maps/hudRadarTypeAttackAlly.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_RADAR_TYPE_ATTACK_ENEMY </id>
+		<textureFile> gui/maps/hudRadarTypeAttackEnemy.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_RADAR_TYPE_ATTACK_ENEMY_BLIND </id>
+		<textureFile> gui/maps/hudRadarTypeAttackEnemy_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_RADAR_TYPE_ATTACK_SQUAD </id>
+		<textureFile> gui/maps/hudRadarTypeAttackSquad.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_RADAR_TYPE_ATTACK_SQUAD_BLIND </id>
+		<textureFile> gui/maps/hudRadarTypeAttackSquad_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_RADAR_TYPE_ATTACK_TEAM_KILLER </id>
+		<textureFile> gui/maps/hudRadarTypeAttackTarget.dds </textureFile>
+	</texture>
+	<!-- Carrier Based TODO: USED FOR MFighter !!! -->
+	<texture>
+		<id> HUD_RADAR_TYPE_CARRIER_BASED_ALLY </id>
+		<textureFile> gui/maps/hudRadarTypeMFighterAlly.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_RADAR_TYPE_CARRIER_BASED_ENEMY </id>
+		<textureFile> gui/maps/hudRadarTypeMFighterEnemy.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_RADAR_TYPE_CARRIER_BASED_ENEMY_BLIND </id>
+		<textureFile> gui/maps/hudRadarTypeMFighterEnemy_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_RADAR_TYPE_CARRIER_BASED_SQUAD </id>
+		<textureFile> gui/maps/hudRadarTypeMFighterSquad.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_RADAR_TYPE_CARRIER_BASED_SQUAD_BLIND </id>
+		<textureFile> gui/maps/hudRadarTypeMFighterSquad_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_RADAR_TYPE_CARRIER_BASED_TEAM_KILLER </id>
+		<textureFile> gui/maps/hudRadarTypeAttackAlly.dds </textureFile>
+	</texture>
+	<!-- Fighter -->
+	<texture>
+		<id> HUD_RADAR_TYPE_FIGHTER_ALLY </id>
+		<textureFile> gui/maps/hudRadarTypeFighterAlly.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_RADAR_TYPE_FIGHTER_ENEMY </id>
+		<textureFile> gui/maps/hudRadarTypeFighterEnemy.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_RADAR_TYPE_FIGHTER_ENEMY_BLIND </id>
+		<textureFile> gui/maps/hudRadarTypeFighterEnemy_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_RADAR_TYPE_FIGHTER_SQUAD </id>
+		<textureFile> gui/maps/hudRadarTypeFighterSquad.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_RADAR_TYPE_FIGHTER_SQUAD_BLIND </id>
+		<textureFile> gui/maps/hudRadarTypeFighterSquad_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_RADAR_TYPE_FIGHTER_TEAM_KILLER </id>
+		<textureFile> gui/maps/hudRadarTypeFighterTarget.dds </textureFile>
+	</texture>
+	<!-- Heavy Fighter -->
+	<texture>
+		<id> HUD_RADAR_TYPE_HEAVY_FIGHTER_ALLY </id>
+		<textureFile> gui/maps/hudRadarTypeHeavyFighterAlly.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_RADAR_TYPE_HEAVY_FIGHTER_ENEMY </id>
+		<textureFile> gui/maps/hudRadarTypeHeavyFighterEnemy.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_RADAR_TYPE_HEAVY_FIGHTER_ENEMY_BLIND </id>
+		<textureFile> gui/maps/hudRadarTypeHeavyFighterEnemy_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_RADAR_TYPE_HEAVY_FIGHTER_SQUAD </id>
+		<textureFile> gui/maps/hudRadarTypeHeavyFighterSquad.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_RADAR_TYPE_HEAVY_FIGHTER_SQUAD_BLIND </id>
+		<textureFile> gui/maps/hudRadarTypeHeavyFighterSquad_Blind.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_RADAR_TYPE_HEAVY_FIGHTER_TEAM_KILLER </id>
+		<textureFile> gui/maps/hudRadarTypeHeavyFighterTarget.dds </textureFile>
+	</texture>
+	<!-- RADAR BG -->
+	<texture>
+		<id> HUD_RADAR_BG </id>
+		<textureFile> gui/maps/hudRadarBg.dds </textureFile>
+	</texture>
+	<!-- plane with beam -->
+	<texture>
+		<id> HUD_RADAR_PLANE_LINE </id>
+		<textureFile> gui/maps/hudRadarPlane_Alt.dds </textureFile>
+	</texture>
+	<!-- TACTICS MARKERS -->
+	<texture>
+		<id> HUD_MAP_TACTICS_MARKER_GROUP1 </id>
+		<textureFile> gui/maps/hudMapTargetMoveAlly.dds</textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MAP_TACTICS_MARKER_GROUP2 </id>
+		<textureFile>gui/maps/hudMapTargetMoveEnemy.dds </textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MAP_TACTICS_MARKER_GROUP3 </id>
+		<textureFile> gui/maps/hudMapTargetAttackEnemy.dds</textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MAP_TACTICS_MARKER_GROUP4 </id>
+		<textureFile>gui/maps/hudMapBaseEnemy.dds</textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MAP_TACTICS_MARKER_GROUP5 </id>
+		<textureFile> gui/maps/hudMapBaseAlly.dds</textureFile>
+	</texture>
+	<!-- armored icon for minimap teamObject -->
+	<texture>
+		<id> HUD_MINIMAP_plHudMapTypeArmDestroyedAlly</id>
+		<textureFile> gui/maps/plHudMapTypeArmDestroyedAlly.dds</textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MINIMAP_plHudMapTypeArmDestroyedEnemy</id>
+		<textureFile> gui/maps/plHudMapTypeArmDestroyedEnemy.dds</textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MINIMAP_plHudMapTypeArmTurretDestroyedAlly</id>
+		<textureFile> gui/maps/plHudMapTypeArmTurretDestroyedAlly.dds</textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MINIMAP_plHudMapTypeArmTurretDestroyedEnemy</id>
+		<textureFile> gui/maps/plHudMapTypeArmTurretDestroyedEnemy.dds</textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MINIMAP_plHudMapTypeHAAlly</id>
+		<textureFile> gui/maps/plHudMapTypeHAAlly.dds</textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MINIMAP_plHudMapTypeHAEnemy</id>
+		<textureFile> gui/maps/plHudMapTypeHAEnemy.dds</textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MINIMAP_plHudMapTypeHATurretAlly</id>
+		<textureFile> gui/maps/plHudMapTypeHATurretAlly.dds</textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MINIMAP_plHudMapTypeHATurretEnemy</id>
+		<textureFile> gui/maps/plHudMapTypeHATurretEnemy.dds</textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MINIMAP_plHudMapTypeLAAlly</id>
+		<textureFile> gui/maps/plHudMapTypeLAAlly.dds</textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MINIMAP_plHudMapTypeLAEnemy</id>
+		<textureFile> gui/maps/plHudMapTypeLAEnemy.dds</textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MINIMAP_plHudMapTypeLATurretAlly</id>
+		<textureFile> gui/maps/plHudMapTypeLATurretAlly.dds</textureFile>
+	</texture>
+	<texture>
+		<id> HUD_MINIMAP_plHudMapTypeLATurretEnemy</id>
+		<textureFile> gui/maps/plHudMapTypeLATurretEnemy.dds</textureFile>
+	</texture>
+</root>

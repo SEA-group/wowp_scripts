@@ -1,0 +1,193 @@
+<basetypes.xsd>
+  <xs>http://www.w3.org/2001/XMLSchema</xs>
+  <elementFormDefault>qualified</elementFormDefault>
+  <simpleType>
+    <name>PLANE_TYPE</name>
+    <restriction>
+      <base>xs:string</base>
+      <whiteSpace>
+        <value>	collapse	</value>
+      </whiteSpace>
+      <enumeration>
+        <value>FIGHTER</value>
+      </enumeration>
+      <enumeration>
+        <value>	HFIGHTER	</value>
+      </enumeration>
+      <enumeration>
+        <value>ASSAULT</value>
+      </enumeration>
+      <enumeration>
+        <value>	NAVY	</value>
+      </enumeration>
+      <enumeration>
+        <value>BOMBER</value>
+      </enumeration>
+    </restriction>
+  </simpleType>
+  <simpleType>
+    <name>PLANE_TYPE_NAMES</name>
+    <restriction>
+      <base>xs:string</base>
+      <whiteSpace>
+        <value>	collapse	</value>
+      </whiteSpace>
+      <enumeration>
+        <value>Fighter</value>
+      </enumeration>
+      <enumeration>
+        <value>Heavy fighter</value>
+      </enumeration>
+      <enumeration>
+        <value>Assault</value>
+      </enumeration>
+      <enumeration>
+        <value>	Navy	</value>
+      </enumeration>
+      <enumeration>
+        <value>Bomber</value>
+      </enumeration>
+    </restriction>
+  </simpleType>
+  <simpleType>
+    <name>TEAM_ID_RAW</name>
+    <annotation>
+      <documentation>Team A = 0, Team B = 1, Neutral = 3<lang>en</lang></documentation>
+    </annotation>
+    <restriction>
+      <base>xs:int</base>
+      <enumeration>
+        <value>	0	</value>
+      </enumeration>
+      <enumeration>
+        <value>	1	</value>
+      </enumeration>
+      <enumeration>
+        <value>	3	</value>
+      </enumeration>
+    </restriction>
+  </simpleType>
+  <simpleType>
+    <name>TEAM_ID</name>
+    <annotation>
+      <documentation>Team A = TEAM_0, Team B = TEAM_1, Neutral = TEAM_2<lang>en</lang></documentation>
+    </annotation>
+    <restriction>
+      <base>xs:string</base>
+      <whiteSpace>
+        <value>	collapse	</value>
+      </whiteSpace>
+      <enumeration>
+        <value>TEAM_0</value>
+      </enumeration>
+      <enumeration>
+        <value>TEAM_1</value>
+      </enumeration>
+      <enumeration>
+        <value>TEAM_2</value>
+      </enumeration>
+    </restriction>
+  </simpleType>
+  <simpleType>
+    <name>SECTOR_STATE_RAW</name>
+    <annotation>
+      <documentation>LOCKED = L, CAPTURED = C<lang>en</lang></documentation>
+    </annotation>
+    <restriction>
+      <base>xs:string</base>
+      <whiteSpace>
+        <value>	collapse	</value>
+      </whiteSpace>
+      <enumeration>
+        <value>L</value>
+      </enumeration>
+      <enumeration>
+        <value>C</value>
+      </enumeration>
+    </restriction>
+  </simpleType>
+  <simpleType>
+    <name>SECTOR_STATE</name>
+    <restriction>
+      <base>xs:string</base>
+      <whiteSpace>
+        <value>	collapse	</value>
+      </whiteSpace>
+      <enumeration>
+        <value>LOCKED</value>
+      </enumeration>
+      <enumeration>
+        <value>	CAPTURED	</value>
+      </enumeration>
+    </restriction>
+  </simpleType>
+  <simpleType>
+    <name>DEFENDER_TYPE</name>
+    <restriction>
+      <base>xs:string</base>
+      <whiteSpace>
+        <value>	collapse	</value>
+      </whiteSpace>
+      <enumeration>
+        <value>LIGHT</value>
+      </enumeration>
+      <enumeration>
+        <value>HEAVY</value>
+      </enumeration>
+    </restriction>
+  </simpleType>
+  <simpleType>
+    <name>SECTOR_GAMEPLAY_TYPE</name>
+    <restriction>
+      <base>xs:string</base>
+      <whiteSpace>
+        <value>	collapse	</value>
+      </whiteSpace>
+      <enumeration>
+        <value>default</value>
+      </enumeration>
+      <enumeration>
+        <value>	airfield	</value>
+      </enumeration>
+      <enumeration>
+        <value>factory</value>
+      </enumeration>
+      <enumeration>
+        <value>military_base</value>
+      </enumeration>
+      <enumeration>
+        <value>radar</value>
+      </enumeration>
+      <enumeration>
+        <value>neutral</value>
+      </enumeration>
+      <enumeration>
+        <value>spawnpoint</value>
+      </enumeration>
+    </restriction>
+  </simpleType>
+  <simpleType>
+    <name>SECTOR_GAMEPLAY_LEVEL</name>
+    <restriction>
+      <base>xs:int</base>
+      <minInclusive>
+        <value>	0	</value>
+      </minInclusive>
+      <maxInclusive>
+        <value>	2	</value>
+      </maxInclusive>
+    </restriction>
+  </simpleType>
+  <simpleType>
+    <name>BATTLE_LEVEL</name>
+    <restriction>
+      <base>xs:int</base>
+      <minInclusive>
+        <value>	1	</value>
+      </minInclusive>
+      <maxInclusive>
+        <value>	10	</value>
+      </maxInclusive>
+    </restriction>
+  </simpleType>
+</basetypes.xsd>

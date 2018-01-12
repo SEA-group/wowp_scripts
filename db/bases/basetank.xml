@@ -1,0 +1,166 @@
+<basetank.xml>
+  <name>Target</name>
+  <modelPath>content/Buildings/Tanks/normal/lod0/Tank_2.model</modelPath>
+  <modelCrashPath>content/Buildings/Tanks/normal/lod0/Tank_2.model</modelCrashPath>
+  <alignToGround>	True	</alignToGround>
+  <bBoxes>
+    <mainBox>
+      <size>20 24 20</size>
+    </mainBox>
+    <box>
+      <size>20 24 20</size>
+    </box>
+  </bBoxes>
+  <maxHealth>30.0</maxHealth>
+  <dominationCost>0.02</dominationCost>
+  <respawnDelay>-1.0</respawnDelay>
+  <superiorityPoints>	2	</superiorityPoints>
+  <type>bigTeamObject</type>
+  <battleLevelsSettings>
+    <section>
+      <battleLevel>	1	</battleLevel>
+      <hpK>0.15</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	2	</battleLevel>
+      <hpK>0.3</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	3	</battleLevel>
+      <hpK>0.6</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	4	</battleLevel>
+      <hpK>0.8</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	5	</battleLevel>
+      <hpK>1.0</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	6	</battleLevel>
+      <hpK>1.2</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	7	</battleLevel>
+      <hpK>1.5</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	8	</battleLevel>
+      <hpK>2.0</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	9	</battleLevel>
+      <hpK>2.5</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	10	</battleLevel>
+      <hpK>2.5</hpK>
+      <armorK>	0	</armorK>
+    </section>
+  </battleLevelsSettings>
+  <parts>
+    <part>
+      <name>	hull	</name>
+      <partId>	1	</partId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	0.000000 1.800000 -2.700000	</position>
+            <size>	7.200000 7.200000 10.800000	</size>
+            <armorFront>	10.000000 10.000000 20.000000	</armorFront>
+            <armorBack>	10.000000 10.000000 10.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+          </bbox>
+        </bBoxes>
+        <health>100%</health>
+        <componentType>	Hull	</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/Buildings/Tanks/normal/lod0/Tank_2.model</model>
+            <animationController>
+            </animationController>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <fallingOutModel>
+            </fallingOutModel>
+            <usage>
+            </usage>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <model>content/Buildings/Tanks/normal/lod0/Tank_2.model</model>
+            <animationController>
+            </animationController>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <fallingOutModel>
+            </fallingOutModel>
+            <usage>
+            </usage>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <model>content/Buildings/Tanks/normal/lod0/Tank_2.model</model>
+            <animationController>
+            </animationController>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <fallingOutModel>
+            </fallingOutModel>
+            <usage>
+            </usage>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/Buildings/Tanks/normal/lod0/Tank_2.model</model>
+            <animationController>
+            </animationController>
+            <subItems>
+            </subItems>
+            <stateAction>	1	</stateAction>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <fireMountPoint>
+        </fireMountPoint>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+      </upgrade>
+    </part>
+  </parts>
+</basetank.xml>

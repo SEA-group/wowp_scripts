@@ -1,0 +1,48 @@
+<fieldcamp.xml>
+  <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
+  <noNamespaceSchemaLocation>SectorPresetModel.xsd</noNamespaceSchemaLocation>
+  <preset>default</preset>
+  <neutralCapturePoints>	180	</neutralCapturePoints>
+  <ownedCapturePoints>	120	</ownedCapturePoints>
+  <gameplayType>military_base</gameplayType>
+  <gameplayLevel>	0	</gameplayLevel>
+  <hud>
+    <battleHintIcon>event_citadel0</battleHintIcon>
+    <localizationID>HUD_NAME_SECTOR_FIELDCAMP</localizationID>
+    <description>HUD_SECTOR_DESCRIPTION_INFLUENCE_1</description>
+    <sectorIconPath>icons/hud/sectors/sectorType{size}Citadel0_{team}</sectorIconPath>
+    <miniMapSectorIconPath>sectorType{size}Citadel0_{team}</miniMapSectorIconPath>
+    <isNeedToShowTimer>	false	</isNeedToShowTimer>
+    <sectorObjects>
+      <object>	32	</object>
+      <object>	31	</object>
+      <object>	21	</object>
+      <object>	11	</object>
+      <object>	12	</object>
+      <object>	13	</object>
+    </sectorObjects>
+  </hud>
+  <defenderCounter>
+    <count>	2	<defenderType>LIGHT</defenderType></count>
+    <count>	2	<defenderType>HEAVY</defenderType></count>
+  </defenderCounter>
+  <ai>
+    <areaConquest>
+      <baseValue>	1000	</baseValue>
+      <planeTypeMultiplier>
+        <multiplier>	3	<planeType>Assault</planeType></multiplier>
+        <multiplier>	3	<planeType>Heavy fighter</planeType></multiplier>
+        <multiplier>	3	<planeType>	Navy	</planeType></multiplier>
+        <multiplier>	3	<planeType>Fighter</planeType></multiplier>
+        <multiplier>	3	<planeType>Bomber</planeType></multiplier>
+      </planeTypeMultiplier>
+      <antiGroundWeaponBonus>
+        <multiplier>	0	<planeType>Assault</planeType></multiplier>
+        <multiplier>	0	<planeType>Heavy fighter</planeType></multiplier>
+        <multiplier>	0	<planeType>	Navy	</planeType></multiplier>
+        <multiplier>	0	<planeType>Fighter</planeType></multiplier>
+        <multiplier>	0	<planeType>Bomber</planeType></multiplier>
+      </antiGroundWeaponBonus>
+    </areaConquest>
+  </ai>
+</fieldcamp.xml>

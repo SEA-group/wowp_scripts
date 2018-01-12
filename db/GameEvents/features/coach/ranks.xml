@@ -1,0 +1,824 @@
+<ranks.xml>
+  <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
+  <noNamespaceSchemaLocation>../../../../../../../tools/databundler/subscribers.xsd</noNamespaceSchemaLocation>
+  <subscriber>
+    <name>fighter</name>
+    <type>	rank	</type>
+    <group>fighter</group>
+    <server>
+      <active>	true	</active>
+      <scope>plane.type</scope>
+    </server>
+    <nested>
+      <complete>all</complete>
+      <subscriber>
+        <name>	5	</name>
+        <group>rank.level</group>
+        <client>
+          <order>	1	</order>
+          <name>
+            <locale>TOOLTIP_CLASS_NAME_RANK_5</locale>
+          </name>
+          <description>
+            <locale>
+            </locale>
+          </description>
+          <icon>
+            <template>icons/battleResults/rank/{type}/{class}/{state}/rank5_{size}.dds</template>
+          </icon>
+        </client>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>coach</type>
+          <context>	rank	</context>
+          <name>fighter</name>
+        </event>
+        <count>
+          <value>	4	</value>
+        </count>
+      </subscriber>
+      <subscriber>
+        <name>	4	</name>
+        <group>rank.level</group>
+        <client>
+          <order>	2	</order>
+          <name>
+            <locale>TOOLTIP_CLASS_NAME_RANK_4</locale>
+          </name>
+          <description>
+            <locale>
+            </locale>
+          </description>
+          <icon>
+            <template>icons/battleResults/rank/{type}/{class}/{state}/rank4_{size}.dds</template>
+          </icon>
+        </client>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>coach</type>
+          <context>	rank	</context>
+          <name>fighter</name>
+        </event>
+        <count>
+          <value>	7	</value>
+        </count>
+      </subscriber>
+      <subscriber>
+        <name>	3	</name>
+        <group>rank.level</group>
+        <client>
+          <order>	3	</order>
+          <name>
+            <locale>TOOLTIP_CLASS_NAME_RANK_3</locale>
+          </name>
+          <description>
+            <locale>
+            </locale>
+          </description>
+          <icon>
+            <template>icons/battleResults/rank/{type}/{class}/{state}/rank3_{size}.dds</template>
+          </icon>
+        </client>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>coach</type>
+          <context>	rank	</context>
+          <name>fighter</name>
+        </event>
+        <count>
+          <value>	9	</value>
+        </count>
+      </subscriber>
+      <subscriber>
+        <name>	2	</name>
+        <group>rank.level</group>
+        <client>
+          <order>	4	</order>
+          <name>
+            <locale>TOOLTIP_CLASS_NAME_RANK_2</locale>
+          </name>
+          <description>
+            <locale>
+            </locale>
+          </description>
+          <icon>
+            <template>icons/battleResults/rank/{type}/{class}/{state}/rank2_{size}.dds</template>
+          </icon>
+        </client>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>coach</type>
+          <context>	rank	</context>
+          <name>fighter</name>
+        </event>
+        <count>
+          <value>	11	</value>
+        </count>
+      </subscriber>
+      <subscriber>
+        <name>	1	</name>
+        <group>rank.level</group>
+        <client>
+          <order>	5	</order>
+          <name>
+            <locale>TOOLTIP_CLASS_NAME_RANK_1</locale>
+          </name>
+          <description>
+            <locale>
+            </locale>
+          </description>
+          <icon>
+            <template>icons/battleResults/rank/{type}/{class}/{state}/rank1_{size}.dds</template>
+          </icon>
+        </client>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>coach</type>
+          <context>	rank	</context>
+          <name>fighter</name>
+        </event>
+        <count>
+          <value>	13	</value>
+        </count>
+        <send>
+          <event>
+            <type>coach</type>
+            <context>	rank	</context>
+            <name>rank.1.for.fighter.completed</name>
+          </event>
+        </send>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>	navy	</name>
+    <type>	rank	</type>
+    <group>	navy	</group>
+    <server>
+      <active>	true	</active>
+      <scope>plane.type</scope>
+    </server>
+    <nested>
+      <complete>all</complete>
+      <subscriber>
+        <name>	5	</name>
+        <group>rank.level</group>
+        <client>
+          <order>	1	</order>
+          <name>
+            <locale>TOOLTIP_CLASS_NAME_RANK_5</locale>
+          </name>
+          <description>
+            <locale>
+            </locale>
+          </description>
+          <icon>
+            <template>icons/battleResults/rank/{type}/{class}/{state}/rank5_{size}.dds</template>
+          </icon>
+        </client>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>coach</type>
+          <context>	rank	</context>
+          <name>	navy	</name>
+        </event>
+        <count>
+          <value>	4	</value>
+        </count>
+      </subscriber>
+      <subscriber>
+        <name>	4	</name>
+        <group>rank.level</group>
+        <client>
+          <order>	2	</order>
+          <name>
+            <locale>TOOLTIP_CLASS_NAME_RANK_4</locale>
+          </name>
+          <description>
+            <locale>
+            </locale>
+          </description>
+          <icon>
+            <template>icons/battleResults/rank/{type}/{class}/{state}/rank4_{size}.dds</template>
+          </icon>
+        </client>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>coach</type>
+          <context>	rank	</context>
+          <name>	navy	</name>
+        </event>
+        <count>
+          <value>	7	</value>
+        </count>
+      </subscriber>
+      <subscriber>
+        <name>	3	</name>
+        <group>rank.level</group>
+        <client>
+          <order>	3	</order>
+          <name>
+            <locale>TOOLTIP_CLASS_NAME_RANK_3</locale>
+          </name>
+          <description>
+            <locale>
+            </locale>
+          </description>
+          <icon>
+            <template>icons/battleResults/rank/{type}/{class}/{state}/rank3_{size}.dds</template>
+          </icon>
+        </client>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>coach</type>
+          <context>	rank	</context>
+          <name>	navy	</name>
+        </event>
+        <count>
+          <value>	9	</value>
+        </count>
+      </subscriber>
+      <subscriber>
+        <name>	2	</name>
+        <group>rank.level</group>
+        <client>
+          <order>	4	</order>
+          <name>
+            <locale>TOOLTIP_CLASS_NAME_RANK_2</locale>
+          </name>
+          <description>
+            <locale>
+            </locale>
+          </description>
+          <icon>
+            <template>icons/battleResults/rank/{type}/{class}/{state}/rank2_{size}.dds</template>
+          </icon>
+        </client>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>coach</type>
+          <context>	rank	</context>
+          <name>	navy	</name>
+        </event>
+        <count>
+          <value>	11	</value>
+        </count>
+      </subscriber>
+      <subscriber>
+        <name>	1	</name>
+        <group>rank.level</group>
+        <client>
+          <order>	5	</order>
+          <name>
+            <locale>TOOLTIP_CLASS_NAME_RANK_1</locale>
+          </name>
+          <description>
+            <locale>
+            </locale>
+          </description>
+          <icon>
+            <template>icons/battleResults/rank/{type}/{class}/{state}/rank1_{size}.dds</template>
+          </icon>
+        </client>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>coach</type>
+          <context>	rank	</context>
+          <name>	navy	</name>
+        </event>
+        <count>
+          <value>	13	</value>
+        </count>
+        <send>
+          <event>
+            <type>coach</type>
+            <context>	rank	</context>
+            <name>rank.1.for.navy.completed</name>
+          </event>
+        </send>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>heavy.fighter</name>
+    <type>	rank	</type>
+    <group>heavy.fighter</group>
+    <server>
+      <active>	true	</active>
+      <scope>plane.type</scope>
+    </server>
+    <nested>
+      <complete>all</complete>
+      <subscriber>
+        <name>	5	</name>
+        <group>rank.level</group>
+        <client>
+          <order>	1	</order>
+          <name>
+            <locale>TOOLTIP_CLASS_NAME_RANK_5</locale>
+          </name>
+          <description>
+            <locale>
+            </locale>
+          </description>
+          <icon>
+            <template>icons/battleResults/rank/{type}/{class}/{state}/rank5_{size}.dds</template>
+          </icon>
+        </client>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>coach</type>
+          <context>	rank	</context>
+          <name>heavy.fighter</name>
+        </event>
+        <count>
+          <value>	4	</value>
+        </count>
+      </subscriber>
+      <subscriber>
+        <name>	4	</name>
+        <group>rank.level</group>
+        <client>
+          <order>	2	</order>
+          <name>
+            <locale>TOOLTIP_CLASS_NAME_RANK_4</locale>
+          </name>
+          <description>
+            <locale>
+            </locale>
+          </description>
+          <icon>
+            <template>icons/battleResults/rank/{type}/{class}/{state}/rank4_{size}.dds</template>
+          </icon>
+        </client>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>coach</type>
+          <context>	rank	</context>
+          <name>heavy.fighter</name>
+        </event>
+        <count>
+          <value>	7	</value>
+        </count>
+      </subscriber>
+      <subscriber>
+        <name>	3	</name>
+        <group>rank.level</group>
+        <client>
+          <order>	3	</order>
+          <name>
+            <locale>TOOLTIP_CLASS_NAME_RANK_3</locale>
+          </name>
+          <description>
+            <locale>
+            </locale>
+          </description>
+          <icon>
+            <template>icons/battleResults/rank/{type}/{class}/{state}/rank3_{size}.dds</template>
+          </icon>
+        </client>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>coach</type>
+          <context>	rank	</context>
+          <name>heavy.fighter</name>
+        </event>
+        <count>
+          <value>	9	</value>
+        </count>
+      </subscriber>
+      <subscriber>
+        <name>	2	</name>
+        <group>rank.level</group>
+        <client>
+          <order>	4	</order>
+          <name>
+            <locale>TOOLTIP_CLASS_NAME_RANK_2</locale>
+          </name>
+          <description>
+            <locale>
+            </locale>
+          </description>
+          <icon>
+            <template>icons/battleResults/rank/{type}/{class}/{state}/rank2_{size}.dds</template>
+          </icon>
+        </client>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>coach</type>
+          <context>	rank	</context>
+          <name>heavy.fighter</name>
+        </event>
+        <count>
+          <value>	11	</value>
+        </count>
+      </subscriber>
+      <subscriber>
+        <name>	1	</name>
+        <group>rank.level</group>
+        <client>
+          <order>	5	</order>
+          <name>
+            <locale>TOOLTIP_CLASS_NAME_RANK_1</locale>
+          </name>
+          <description>
+            <locale>
+            </locale>
+          </description>
+          <icon>
+            <template>icons/battleResults/rank/{type}/{class}/{state}/rank1_{size}.dds</template>
+          </icon>
+        </client>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>coach</type>
+          <context>	rank	</context>
+          <name>heavy.fighter</name>
+        </event>
+        <count>
+          <value>	13	</value>
+        </count>
+        <send>
+          <event>
+            <type>coach</type>
+            <context>	rank	</context>
+            <name>rank.1.for.heavy.completed</name>
+          </event>
+        </send>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>bomber</name>
+    <type>	rank	</type>
+    <group>bomber</group>
+    <server>
+      <active>	true	</active>
+      <scope>plane.type</scope>
+    </server>
+    <nested>
+      <complete>all</complete>
+      <subscriber>
+        <name>	5	</name>
+        <group>rank.level</group>
+        <client>
+          <order>	1	</order>
+          <name>
+            <locale>TOOLTIP_CLASS_NAME_RANK_5</locale>
+          </name>
+          <description>
+            <locale>
+            </locale>
+          </description>
+          <icon>
+            <template>icons/battleResults/rank/{type}/{class}/{state}/rank5_{size}.dds</template>
+          </icon>
+        </client>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>coach</type>
+          <context>	rank	</context>
+          <name>bomber</name>
+        </event>
+        <count>
+          <value>	4	</value>
+        </count>
+      </subscriber>
+      <subscriber>
+        <name>	4	</name>
+        <group>rank.level</group>
+        <client>
+          <order>	2	</order>
+          <name>
+            <locale>TOOLTIP_CLASS_NAME_RANK_4</locale>
+          </name>
+          <description>
+            <locale>
+            </locale>
+          </description>
+          <icon>
+            <template>icons/battleResults/rank/{type}/{class}/{state}/rank4_{size}.dds</template>
+          </icon>
+        </client>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>coach</type>
+          <context>	rank	</context>
+          <name>bomber</name>
+        </event>
+        <count>
+          <value>	7	</value>
+        </count>
+      </subscriber>
+      <subscriber>
+        <name>	3	</name>
+        <group>rank.level</group>
+        <client>
+          <order>	3	</order>
+          <name>
+            <locale>TOOLTIP_CLASS_NAME_RANK_3</locale>
+          </name>
+          <description>
+            <locale>
+            </locale>
+          </description>
+          <icon>
+            <template>icons/battleResults/rank/{type}/{class}/{state}/rank3_{size}.dds</template>
+          </icon>
+        </client>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>coach</type>
+          <context>	rank	</context>
+          <name>bomber</name>
+        </event>
+        <count>
+          <value>	9	</value>
+        </count>
+      </subscriber>
+      <subscriber>
+        <name>	2	</name>
+        <group>rank.level</group>
+        <client>
+          <order>	4	</order>
+          <name>
+            <locale>TOOLTIP_CLASS_NAME_RANK_2</locale>
+          </name>
+          <description>
+            <locale>
+            </locale>
+          </description>
+          <icon>
+            <template>icons/battleResults/rank/{type}/{class}/{state}/rank2_{size}.dds</template>
+          </icon>
+        </client>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>coach</type>
+          <context>	rank	</context>
+          <name>bomber</name>
+        </event>
+        <count>
+          <value>	11	</value>
+        </count>
+      </subscriber>
+      <subscriber>
+        <name>	1	</name>
+        <group>rank.level</group>
+        <client>
+          <order>	5	</order>
+          <name>
+            <locale>TOOLTIP_CLASS_NAME_RANK_1</locale>
+          </name>
+          <description>
+            <locale>
+            </locale>
+          </description>
+          <icon>
+            <template>icons/battleResults/rank/{type}/{class}/{state}/rank1_{size}.dds</template>
+          </icon>
+        </client>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>coach</type>
+          <context>	rank	</context>
+          <name>bomber</name>
+        </event>
+        <count>
+          <value>	13	</value>
+        </count>
+        <send>
+          <event>
+            <type>coach</type>
+            <context>	rank	</context>
+            <name>rank.1.for.bomber.completed</name>
+          </event>
+        </send>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>assault</name>
+    <type>	rank	</type>
+    <group>assault</group>
+    <server>
+      <active>	true	</active>
+      <scope>plane.type</scope>
+    </server>
+    <nested>
+      <complete>all</complete>
+      <subscriber>
+        <name>	5	</name>
+        <group>rank.level</group>
+        <client>
+          <order>	1	</order>
+          <name>
+            <locale>TOOLTIP_CLASS_NAME_RANK_5</locale>
+          </name>
+          <description>
+            <locale>
+            </locale>
+          </description>
+          <icon>
+            <template>icons/battleResults/rank/{type}/{class}/{state}/rank5_{size}.dds</template>
+          </icon>
+        </client>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>coach</type>
+          <context>	rank	</context>
+          <name>assault</name>
+        </event>
+        <count>
+          <value>	4	</value>
+        </count>
+      </subscriber>
+      <subscriber>
+        <name>	4	</name>
+        <group>rank.level</group>
+        <client>
+          <order>	2	</order>
+          <name>
+            <locale>TOOLTIP_CLASS_NAME_RANK_4</locale>
+          </name>
+          <description>
+            <locale>
+            </locale>
+          </description>
+          <icon>
+            <template>icons/battleResults/rank/{type}/{class}/{state}/rank4_{size}.dds</template>
+          </icon>
+        </client>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>coach</type>
+          <context>	rank	</context>
+          <name>assault</name>
+        </event>
+        <count>
+          <value>	7	</value>
+        </count>
+      </subscriber>
+      <subscriber>
+        <name>	3	</name>
+        <group>rank.level</group>
+        <client>
+          <order>	3	</order>
+          <name>
+            <locale>TOOLTIP_CLASS_NAME_RANK_3</locale>
+          </name>
+          <description>
+            <locale>
+            </locale>
+          </description>
+          <icon>
+            <template>icons/battleResults/rank/{type}/{class}/{state}/rank3_{size}.dds</template>
+          </icon>
+        </client>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>coach</type>
+          <context>	rank	</context>
+          <name>assault</name>
+        </event>
+        <count>
+          <value>	9	</value>
+        </count>
+      </subscriber>
+      <subscriber>
+        <name>	2	</name>
+        <group>rank.level</group>
+        <client>
+          <order>	4	</order>
+          <name>
+            <locale>TOOLTIP_CLASS_NAME_RANK_2</locale>
+          </name>
+          <description>
+            <locale>
+            </locale>
+          </description>
+          <icon>
+            <template>icons/battleResults/rank/{type}/{class}/{state}/rank2_{size}.dds</template>
+          </icon>
+        </client>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>coach</type>
+          <context>	rank	</context>
+          <name>assault</name>
+        </event>
+        <count>
+          <value>	11	</value>
+        </count>
+      </subscriber>
+      <subscriber>
+        <name>	1	</name>
+        <group>rank.level</group>
+        <client>
+          <order>	5	</order>
+          <name>
+            <locale>TOOLTIP_CLASS_NAME_RANK_1</locale>
+          </name>
+          <description>
+            <locale>
+            </locale>
+          </description>
+          <icon>
+            <template>icons/battleResults/rank/{type}/{class}/{state}/rank1_{size}.dds</template>
+          </icon>
+        </client>
+        <server>
+          <active>	true	</active>
+          <scope>plane.type</scope>
+        </server>
+        <event>
+          <type>coach</type>
+          <context>	rank	</context>
+          <name>assault</name>
+        </event>
+        <count>
+          <value>	13	</value>
+        </count>
+        <send>
+          <event>
+            <type>coach</type>
+            <context>	rank	</context>
+            <name>rank.1.for.assault.completed</name>
+          </event>
+        </send>
+      </subscriber>
+    </nested>
+  </subscriber>
+</ranks.xml>

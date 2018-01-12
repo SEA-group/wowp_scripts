@@ -1,0 +1,424 @@
+<sectorpresetmodel.xsd>
+  <elementFormDefault>qualified</elementFormDefault>
+  <xs>http://www.w3.org/2001/XMLSchema</xs>
+  <include>
+    <schemaLocation>basetypes.xsd</schemaLocation>
+  </include>
+  <element>
+    <type>SectorPresetModel</type>
+    <name>	root	</name>
+  </element>
+  <complexType>
+    <name>SectorPresetModel</name>
+    <all>
+      <element>
+        <type>xs:string</type>
+        <name>preset</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>SECTOR_GAMEPLAY_TYPE</type>
+        <name>	gameplayType	</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>SECTOR_GAMEPLAY_LEVEL</type>
+        <name>gameplayLevel</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>TEAM_ID_RAW</type>
+        <name>teamIndex</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>SECTOR_STATE_RAW</type>
+        <name>state</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>xs:float</type>
+        <name>	lockTime	</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>xs:boolean</type>
+        <name>playerSpawnEnabled</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>xs:boolean</type>
+        <name>	respawnCooldownReduceEnabled	</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>xs:boolean</type>
+        <name>tacticalRespawnEnabled</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>xs:int</type>
+        <name>	neutralCapturePoints	</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>xs:int</type>
+        <name>ownedCapturePoints</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>SectorDefendersProperty</type>
+        <name>defenderCounter</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>BomberDispatcherPresetModel</type>
+        <name>	bomberDispatcher	</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>RocketV2PresetModel</type>
+        <name>	rocketV2	</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>SectorHudBaseModel</type>
+        <name>hud</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>	SectorSoundBaseModel	</type>
+        <name>sound</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>SectorAIModel</type>
+        <name>ai</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>PointsProductionModel</type>
+        <name>	pointsProduction	</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+    </all>
+  </complexType>
+  <complexType>
+    <name>SectorDefendersProperty</name>
+    <sequence>
+      <element>
+        <name>count</name>
+        <maxOccurs>unbounded</maxOccurs>
+        <complexType>
+          <simpleContent>
+            <extension>
+              <base>xs:unsignedInt</base>
+              <attribute>
+                <type>DEFENDER_TYPE</type>
+                <name>	defenderType	</name>
+                <use>	required	</use>
+              </attribute>
+              <attribute>
+                <type>BATTLE_LEVEL</type>
+                <name>battleLevel</name>
+              </attribute>
+            </extension>
+          </simpleContent>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType>
+    <name>BomberDispatcherPresetModel</name>
+    <simpleContent>
+      <extension>
+        <base>xs:string</base>
+        <attribute>
+          <type>xs:unsignedInt</type>
+          <name>	launchTickPeriod	</name>
+        </attribute>
+        <attribute>
+          <type>xs:unsignedInt</type>
+          <name>bombersInPool</name>
+        </attribute>
+      </extension>
+    </simpleContent>
+  </complexType>
+  <complexType>
+    <name>RocketV2PresetModel</name>
+    <all>
+      <element>
+        <type>xs:unsignedInt</type>
+        <name>	launchTickPeriod	</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>xs:unsignedInt</type>
+        <name>explosionDamage</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>xs:float</type>
+        <name>explosionRadius</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>xs:float</type>
+        <name>	explosionRadiusEffective	</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>xs:float</type>
+        <name>radius</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>xs:float</type>
+        <name>shotHeight</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>xs:string</type>
+        <name>	ballisticProfileName	</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+    </all>
+  </complexType>
+  <complexType>
+    <name>SectorHudBaseModel</name>
+    <all>
+      <element>
+        <type>xs:string</type>
+        <name>localizationID</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>xs:boolean</type>
+        <name>showBorder</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>xs:boolean</type>
+        <name>showMarker</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>xs:string</type>
+        <name>	featuresName	</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>xs:string</type>
+        <name>	featuresIconPath	</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>xs:string</type>
+        <name>sectorIconPath</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>xs:string</type>
+        <name>battleHintIcon</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>xs:string</type>
+        <name>miniMapSectorIconPath</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>xs:string</type>
+        <name>miniMapFeaturesIconPath</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>xs:boolean</type>
+        <name>isNeedToShowTimer</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>xs:string</type>
+        <name>description</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <name>sectorObjects</name>
+        <minOccurs>	0	</minOccurs>
+        <complexType>
+          <sequence>
+            <element>
+              <type>xs:int</type>
+              <name>object</name>
+              <maxOccurs>unbounded</maxOccurs>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+      <element>
+        <name>descriptionList</name>
+        <minOccurs>	0	</minOccurs>
+        <complexType>
+          <sequence>
+            <element>
+              <type>xs:string</type>
+              <name>description</name>
+              <maxOccurs>unbounded</maxOccurs>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+      <element>
+        <type>	SectorPlaneEffectiveness	</type>
+        <name>planesEffectiveness</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+    </all>
+  </complexType>
+  <complexType>
+    <name>	SectorPlaneEffectiveness	</name>
+    <sequence>
+      <element>
+        <name>	effectivness	</name>
+        <maxOccurs>unbounded</maxOccurs>
+        <complexType>
+          <simpleContent>
+            <extension>
+              <base>xs:int</base>
+              <attribute>
+                <type>PLANE_TYPE</type>
+                <name>planeType</name>
+                <use>	required	</use>
+              </attribute>
+            </extension>
+          </simpleContent>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType>
+    <name>	SectorSoundBaseModel	</name>
+    <all>
+      <element>
+        <type>	SectorSoundModel	</type>
+        <name>onCapture</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>	SectorSoundModel	</type>
+        <name>onCaptureLast</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>	SectorSoundModel	</type>
+        <name>onAlarm</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+    </all>
+  </complexType>
+  <complexType>
+    <name>	SectorSoundModel	</name>
+    <all>
+      <element>
+        <type>xs:string</type>
+        <name>allyEvent</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>xs:string</type>
+        <name>enemyEvent</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>xs:int</type>
+        <name>conditions</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+    </all>
+  </complexType>
+  <complexType>
+    <name>SectorAIModel</name>
+    <all>
+      <element>
+        <type>SectorAIACModel</type>
+        <name>	areaConquest	</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+    </all>
+  </complexType>
+  <complexType>
+    <name>SectorAIACModel</name>
+    <all>
+      <element>
+        <type>xs:float</type>
+        <name>baseValue</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>MultiplierByPlaneTypeProperty</type>
+        <name>planeTypeMultiplier</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+      <element>
+        <type>MultiplierByPlaneTypeProperty</type>
+        <name>antiGroundWeaponBonus</name>
+        <minOccurs>	0	</minOccurs>
+      </element>
+    </all>
+  </complexType>
+  <complexType>
+    <name>MultiplierByPlaneTypeProperty</name>
+    <sequence>
+      <element>
+        <name>multiplier</name>
+        <maxOccurs>unbounded</maxOccurs>
+        <complexType>
+          <simpleContent>
+            <extension>
+              <base>xs:float</base>
+              <attribute>
+                <type>PLANE_TYPE_NAMES</type>
+                <name>planeType</name>
+              </attribute>
+            </extension>
+          </simpleContent>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType>
+    <name>PointsProductionModel</name>
+    <sequence>
+      <element>
+        <name>producers</name>
+        <complexType>
+          <sequence>
+            <element>
+              <type>PointsProducerModel</type>
+              <name>	producer	</name>
+              <maxOccurs>unbounded</maxOccurs>
+              <minOccurs>	0	</minOccurs>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType>
+    <name>PointsProducerModel</name>
+    <sequence>
+      <element>
+        <type>xs:int</type>
+        <name>period</name>
+      </element>
+      <element>
+        <type>xs:int</type>
+        <name>points</name>
+      </element>
+    </sequence>
+    <attribute>
+      <type>xs:string</type>
+      <name>label</name>
+    </attribute>
+  </complexType>
+</sectorpresetmodel.xsd>

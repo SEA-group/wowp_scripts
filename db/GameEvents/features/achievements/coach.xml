@@ -1,0 +1,406 @@
+<coach.xml>
+  <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
+  <noNamespaceSchemaLocation>../../eps/validators/subscribers.xsd</noNamespaceSchemaLocation>
+  <header>
+    <type>achievement</type>
+    <group>heroic.coach</group>
+    <server>
+      <active>	true	</active>
+      <scope>player</scope>
+    </server>
+    <markers>
+      <group>heroic</group>
+    </markers>
+    <client>
+      <place>right</place>
+    </client>
+  </header>
+  <include>
+    <condition>
+      <gte>
+        <context>player.plane.level</context>
+        <value>	4	</value>
+      </gte>
+    </condition>
+    <condition>
+      <or>
+        <and>
+          <equal>
+            <context>arena.type</context>
+            <value>normal</value>
+          </equal>
+          <equal>
+            <context>arena.source</context>
+            <value>player</value>
+          </equal>
+        </and>
+        <and>
+          <equal>
+            <context>self.event.type</context>
+            <value>hangar</value>
+          </equal>
+        </and>
+      </or>
+    </condition>
+    <metadata>
+      <doneCount>	true	</doneCount>
+      <firstDoneTime>	true	</firstDoneTime>
+      <lastDoneTime>	true	</lastDoneTime>
+    </metadata>
+  </include>
+  <subscriber>
+    <name>reset</name>
+    <type>achievement.reset</type>
+    <group>heroic.coach</group>
+    <server>
+      <repeat>	true	</repeat>
+      <overwrite>	true	</overwrite>
+    </server>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>finish</name>
+      <operation>
+        <id>
+          <name>*</name>
+          <type>achievement</type>
+          <group>heroic.coach</group>
+        </id>
+        <rollback>	true	</rollback>
+        <set>
+          <completed>	false	</completed>
+        </set>
+      </operation>
+    </event>
+    <event>
+      <type>hangar</type>
+      <context>player</context>
+      <name>day.changed</name>
+      <operation>
+        <id>
+          <name>*</name>
+          <type>achievement</type>
+          <group>heroic.coach</group>
+        </id>
+        <reset>	true	</reset>
+        <processors>
+          <transaction>	0	</transaction>
+        </processors>
+      </operation>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>	teamworkguru	</name>
+    <client>
+      <order>	1	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_TEAMWORK_GURU</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_TEAMWORK_GURU</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acServiceTeamworkGuru.dds</small>
+        <big>icons/awards/achievementsInfo/acServiceTeamworkGuru.dds</big>
+        <faded>icons/awards/achievements/acServiceTeamworkGuru_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>coach</type>
+      <context>	rank	</context>
+      <name>rank.1.for.fighter.completed</name>
+    </event>
+    <event>
+      <type>coach</type>
+      <context>	rank	</context>
+      <name>rank.1.for.navy.completed</name>
+    </event>
+    <event>
+      <type>coach</type>
+      <context>	rank	</context>
+      <name>rank.1.for.heavy.completed</name>
+    </event>
+    <event>
+      <type>coach</type>
+      <context>	rank	</context>
+      <name>rank.1.for.bomber.completed</name>
+    </event>
+    <event>
+      <type>coach</type>
+      <context>	rank	</context>
+      <name>rank.1.for.assault.completed</name>
+    </event>
+    <count>
+      <value>	1	</value>
+    </count>
+    <transaction>
+      <id>	0	</id>
+      <times>	1	</times>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+  </subscriber>
+  <subscriber>
+    <name>fighterinterceptor</name>
+    <client>
+      <order>	2	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_FIGHTER_INTERCEPTOR</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_FIGHTER_INTERCEPTOR</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acServiceFighterInterceptor.dds</small>
+        <big>icons/awards/achievementsInfo/acServiceFighterInterceptor.dds</big>
+        <faded>icons/awards/achievements/acServiceFighterInterceptor_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>coach</type>
+      <context>objective</context>
+      <name>destroyPlanes.for.fighter.completed</name>
+    </event>
+    <event>
+      <type>coach</type>
+      <context>objective</context>
+      <name>destroyPlanes.for.heavy.fighter.completed</name>
+    </event>
+    <count>
+      <value>	1	</value>
+    </count>
+  </subscriber>
+  <subscriber>
+    <name>fighterdefender</name>
+    <client>
+      <order>	3	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_FIGHTER_DEFENDER</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_FIGHTER_DEFENDER</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acServiceFighterDefender.dds</small>
+        <big>icons/awards/achievementsInfo/acServiceFighterDefender.dds</big>
+        <faded>icons/awards/achievements/acServiceFighterDefender_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>coach</type>
+      <context>objective</context>
+      <name>defenceSectors.for.fighter.completed</name>
+    </event>
+    <event>
+      <type>coach</type>
+      <context>objective</context>
+      <name>defenceSectors.for.navy.completed</name>
+    </event>
+    <count>
+      <value>	1	</value>
+    </count>
+  </subscriber>
+  <subscriber>
+    <name>	fighterdominator	</name>
+    <client>
+      <order>	4	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_FIGHTER_DOMINATOR</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_FIGHTER_DOMINATOR</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acServiceFighterDominator.dds</small>
+        <big>icons/awards/achievementsInfo/acServiceFighterDominator.dds</big>
+        <faded>icons/awards/achievements/acServiceFighterDominator_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>coach</type>
+      <context>objective</context>
+      <name>dogfightForSectors.for.fighter.completed</name>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>	fighterofalllife	</name>
+    <client>
+      <order>	5	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_FIGHTER_OF_ALL_LIFE</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_FIGHTER_OF_ALL_LIFE</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acServiceFighterOfAllLife.dds</small>
+        <big>icons/awards/achievementsInfo/acServiceFighterOfAllLife.dds</big>
+        <faded>icons/awards/achievements/acServiceFighterOfAllLife_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>coach</type>
+      <context>objective</context>
+      <name>attackSectors.for.heavy.fighter.completed</name>
+    </event>
+    <event>
+      <type>coach</type>
+      <context>objective</context>
+      <name>attackSectors.for.navy.completed</name>
+    </event>
+    <count>
+      <value>	1	</value>
+    </count>
+  </subscriber>
+  <subscriber>
+    <name>controller</name>
+    <client>
+      <order>	6	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_CONTROLLER</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_CONTROLLER</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acServiceController.dds</small>
+        <big>icons/awards/achievementsInfo/acServiceController.dds</big>
+        <faded>icons/awards/achievements/acServiceController_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>coach</type>
+      <context>objective</context>
+      <name>captureSectors.for.heavy.fighter.completed</name>
+    </event>
+    <event>
+      <type>coach</type>
+      <context>objective</context>
+      <name>captureSectors.for.navy.completed</name>
+    </event>
+    <event>
+      <type>coach</type>
+      <context>objective</context>
+      <name>captureSectors.for.assault.completed</name>
+    </event>
+    <event>
+      <type>coach</type>
+      <context>objective</context>
+      <name>captureSectors.for.bomber.completed</name>
+    </event>
+    <count>
+      <value>	1	</value>
+    </count>
+  </subscriber>
+  <subscriber>
+    <name>	exterminator	</name>
+    <client>
+      <order>	7	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_EXTERMINATOR</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_EXTERMINATOR</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acServiceExterminator.dds</small>
+        <big>icons/awards/achievementsInfo/acServiceExterminator.dds</big>
+        <faded>icons/awards/achievements/acServiceExterminator_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>coach</type>
+      <context>objective</context>
+      <name>attackGroundObjects.for.assault.completed</name>
+    </event>
+    <event>
+      <type>coach</type>
+      <context>objective</context>
+      <name>attackGroundObjects.for.bomber.completed</name>
+    </event>
+    <count>
+      <value>	1	</value>
+    </count>
+  </subscriber>
+  <subscriber>
+    <name>destroyer</name>
+    <client>
+      <order>	8	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_DESTROYER</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_DESTROYER</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acServiceDestroyer.dds</small>
+        <big>icons/awards/achievementsInfo/acServiceDestroyer.dds</big>
+        <faded>icons/awards/achievements/acServiceDestroyer_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>coach</type>
+      <context>objective</context>
+      <name>destroyObjectParts.for.assault.completed</name>
+    </event>
+    <event>
+      <type>coach</type>
+      <context>objective</context>
+      <name>destroyObjectParts.for.bomber.completed</name>
+    </event>
+    <count>
+      <value>	1	</value>
+    </count>
+  </subscriber>
+</coach.xml>

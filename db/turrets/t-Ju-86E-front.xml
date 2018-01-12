@@ -1,0 +1,71 @@
+<t-ju-86e-front.xml>
+  <parent>base_air_turret.xml</parent>
+  <hangarSimilarGun>turret_generic_gun_bush_legs</hangarSimilarGun>
+  <hangarName>G7mm-MG15-T</hangarName>
+  <gunName>turret_machinegun_small</gunName>
+  <nation>germany</nation>
+  <pitchMin>	-30	</pitchMin>
+  <pitchMax>	30	</pitchMax>
+  <yawMin>	330	</yawMin>
+  <yawMax>	390	</yawMax>
+  <DPS>3.5</DPS>
+  <targetLockShootDistance>	600	</targetLockShootDistance>
+  <targetLostDistance>	600	</targetLostDistance>
+  <burstTime>	8	</burstTime>
+  <burstDelay>	2	</burstDelay>
+  <serverRPS>	15	</serverRPS>
+  <critAbility>0.01</critAbility>
+  <name>T4</name>
+  <bBoxes>
+    <mainBox>
+      <size>20 24 20</size>
+    </mainBox>
+    <box>
+      <size>20 24 20</size>
+    </box>
+  </bBoxes>
+  <flames>
+    <flamePath>turret_01/HP_antiaircraft_gunFlame_01</flamePath>
+  </flames>
+  <animatorDirectionDefault>0.0 -16.0 0.0</animatorDirectionDefault>
+  <animatorDirectionOffset>0.0 0.0 0.0</animatorDirectionOffset>
+  <direction>0.0 0.0 0.0</direction>
+  <position>0.0	0.6 -4.0</position>
+  <model>content/common/empty_box.model</model>
+  <modelCrash>content/common/empty_box.model</modelCrash>
+  <modelScaling>1.0 1.0 1.0</modelScaling>
+  <ik>
+    <model>vehicles/airplanes/german/GR59_JU86E/GR59_JU86E-1.ik</model>
+  </ik>
+  <visualSettings>
+    <turret>
+      <pitchNodeName>jointV1</pitchNodeName>
+      <yawNodeName>jointH1</yawNodeName>
+      <directionNodeName>jointG1</directionNodeName>
+      <animatorDirectionDefault>0.0 0.0 0.0</animatorDirectionDefault>
+      <animatorDirectionOffset>0.0 0.0 0.0</animatorDirectionOffset>
+      <animatorDieDirection>	0.000000 -15.000000 0.000000	</animatorDieDirection>
+      <pitchMin>	-25	</pitchMin>
+      <pitchMax>	25	</pitchMax>
+      <yawMin>	165	</yawMin>
+      <yawMax>	195	</yawMax>
+      <angularVelocity>	80	</angularVelocity>
+      <shootingNodeName>jointG1</shootingNodeName>
+      <idleFrequencyScalerX>0.3</idleFrequencyScalerX>
+      <idleAmplitudeScalerX>0.08</idleAmplitudeScalerX>
+      <idleFrequencyScalerY>0.4</idleFrequencyScalerY>
+      <idleAmplitudeScalerY>0.05</idleAmplitudeScalerY>
+      <shootTime>0.25</shootTime>
+      <shootCooldownTime>0.75</shootCooldownTime>
+      <shootingAmplitudeScaler>0.05</shootingAmplitudeScaler>
+      <enableIdleAnimation>	True	</enableIdleAnimation>
+      <useGunProfile>	True	</useGunProfile>
+      <recoilCurve>
+        <p>0.0 0.0</p>
+        <p>0.1 -0.01</p>
+        <p>0.9 0.03</p>
+        <p>1.0 0.0</p>
+      </recoilCurve>
+    </turret>
+  </visualSettings>
+</t-ju-86e-front.xml>

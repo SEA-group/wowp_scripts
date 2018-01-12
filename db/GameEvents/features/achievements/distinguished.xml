@@ -1,0 +1,572 @@
+<distinguished.xml>
+  <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
+  <noNamespaceSchemaLocation>../../eps/validators/subscribers.xsd</noNamespaceSchemaLocation>
+  <header>
+    <type>achievement</type>
+    <group>distinguished</group>
+    <markers>
+      <group>distinguished</group>
+    </markers>
+    <server>
+      <active>	true	</active>
+      <scope>plane</scope>
+    </server>
+    <client>
+      <multiple>	false	</multiple>
+      <place>	left	</place>
+    </client>
+  </header>
+  <include>
+    <condition>
+      <and>
+        <equal>
+          <context>arena.type</context>
+          <value>normal</value>
+        </equal>
+        <equal>
+          <context>arena.source</context>
+          <value>player</value>
+        </equal>
+      </and>
+    </condition>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>finish</name>
+      <operation>
+        <self>	true	</self>
+        <rollback>	true	</rollback>
+      </operation>
+    </event>
+    <metadata>
+      <doneCount>	true	</doneCount>
+      <firstDoneTime>	true	</firstDoneTime>
+      <lastDoneTime>	true	</lastDoneTime>
+    </metadata>
+  </include>
+  <subscriber>
+    <name>flameofheaven</name>
+    <client>
+      <order>	1	</order>
+      <page>	0	</page>
+      <name>
+        <locale>MEDAL_NAME_FLAME_OF_HEAVEN</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_FLAME_OF_HEAVEN</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/acDistinctFlameOfHeaven.dds</small>
+        <big>icons/awards/achievementsInfo/acDistinctFlameOfHeaven.dds</big>
+        <faded>icons/awards/achievements/acDistinctFlameOfHeaven_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <condition>
+        <equal>
+          <context>by</context>
+          <value>	fire	</value>
+        </equal>
+      </condition>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>	firespitting	</name>
+    <client>
+      <order>	2	</order>
+      <page>	0	</page>
+      <name>
+        <locale>MEDAL_NAME_FIRESPITTING</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_FIRESPITTING</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/acDistinctFireSpitting.dds</small>
+        <big>icons/awards/achievementsInfo/acDistinctFireSpitting.dds</big>
+        <faded>icons/awards/achievements/acDistinctFireSpitting_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>destroy</name>
+      <condition>
+        <equal>
+          <context>by</context>
+          <value>	fire	</value>
+        </equal>
+      </condition>
+      <count>
+        <value>	2	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>bombardier</name>
+    <client>
+      <order>	3	</order>
+      <page>	0	</page>
+      <name>
+        <locale>MEDAL_NAME_BOMBARDIER</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_BOMBARDIER</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/acDistinctBombardier.dds</small>
+        <big>icons/awards/achievementsInfo/acDistinctBombardier.dds</big>
+        <faded>icons/awards/achievements/acDistinctBombardier_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <condition>
+        <equal>
+          <context>by</context>
+          <value>	bomb	</value>
+        </equal>
+      </condition>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>falconhunting</name>
+    <client>
+      <order>	4	</order>
+      <page>	0	</page>
+      <name>
+        <locale>MEDAL_NAME_FALCON_HUNTING</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_FALCON_HUNTING</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/acDistinctFalconHunting.dds</small>
+        <big>icons/awards/achievementsInfo/acDistinctFalconHunting.dds</big>
+        <faded>icons/awards/achievements/acDistinctFalconHunting_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <condition>
+        <and>
+          <equal>
+            <context>victim.type</context>
+            <value>player</value>
+          </equal>
+          <equal>
+            <context>victim.plane.type</context>
+            <value>fighter</value>
+          </equal>
+        </and>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	6	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>win</name>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>battlevulture</name>
+    <client>
+      <order>	5	</order>
+      <page>	0	</page>
+      <name>
+        <locale>MEDAL_NAME_BATTLE_VULTURE</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_BATTLE_VULTURE</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/acDistinctBattleVulture.dds</small>
+        <big>icons/awards/achievementsInfo/acDistinctBattleVulture.dds</big>
+        <faded>icons/awards/achievements/acDistinctBattleVulture_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <condition>
+        <and>
+          <equal>
+            <context>victim.type</context>
+            <value>player</value>
+          </equal>
+          <equal>
+            <context>victim.plane.type</context>
+            <value>	navy	</value>
+          </equal>
+        </and>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	6	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>win</name>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>predatorybird</name>
+    <client>
+      <order>	6	</order>
+      <page>	0	</page>
+      <name>
+        <locale>MEDAL_NAME_PREDATORY_BIRD</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_PREDATORY_BIRD</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/acDistinctPredatoryBird.dds</small>
+        <big>icons/awards/achievementsInfo/acDistinctPredatoryBird.dds</big>
+        <faded>icons/awards/achievements/acDistinctPredatoryBird_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <condition>
+        <and>
+          <equal>
+            <context>victim.type</context>
+            <value>player</value>
+          </equal>
+          <equal>
+            <context>victim.plane.type</context>
+            <value>heavy.fighter</value>
+          </equal>
+        </and>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	6	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>win</name>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>heavyweightfighter</name>
+    <client>
+      <order>	7	</order>
+      <page>	0	</page>
+      <name>
+        <locale>MEDAL_NAME_HEAVYWEIGHT_FIGHTER</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_INTERCEPTORHEAVYWEIGHT_FIGHTER</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/acDistinctHeavyWeightFighter.dds</small>
+        <big>icons/awards/achievementsInfo/acDistinctHeavyWeightFighter.dds</big>
+        <faded>icons/awards/achievements/acDistinctHeavyWeightFighter_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <condition>
+        <and>
+          <equal>
+            <context>victim.type</context>
+            <value>player</value>
+          </equal>
+          <equal>
+            <context>victim.plane.type</context>
+            <value>assault</value>
+          </equal>
+        </and>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	4	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>win</name>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>altitudehunter</name>
+    <client>
+      <order>	8	</order>
+      <page>	0	</page>
+      <name>
+        <locale>MEDAL_NAME_ALTITUDE_HUNTER</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_ALTITUDE_HUNTER</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/acDistinctAltitudeHunter.dds</small>
+        <big>icons/awards/achievementsInfo/acDistinctAltitudeHunter.dds</big>
+        <faded>icons/awards/achievements/acDistinctAltitudeHunter_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <condition>
+        <and>
+          <equal>
+            <context>victim.type</context>
+            <value>player</value>
+          </equal>
+          <equal>
+            <context>victim.plane.type</context>
+            <value>bomber</value>
+          </equal>
+        </and>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	4	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>win</name>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>dominator</name>
+    <client>
+      <order>	9	</order>
+      <page>	0	</page>
+      <name>
+        <locale>MEDAL_NAME_DOMINATOR</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_DOMINATOR</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/acDistinctDominator.dds</small>
+        <big>icons/awards/achievementsInfo/acDistinctDominator.dds</big>
+        <faded>icons/awards/achievements/acDistinctDominator_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	kill	</name>
+      <count>
+        <id>	0	</id>
+        <by>victim.plane.type</by>
+        <contains>
+          <item>fighter</item>
+          <item>heavy.fighter</item>
+          <item>assault</item>
+        </contains>
+        <total>	true	</total>
+        <value>	3	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>win</name>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>flown</name>
+    <client>
+      <order>	10	</order>
+      <page>	0	</page>
+      <name>
+        <locale>MEDAL_NAME_FLOWN</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_FLOWN</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/acDistinctFlown.dds</small>
+        <big>icons/awards/achievementsInfo/acDistinctFlown.dds</big>
+        <faded>icons/awards/achievements/acDistinctFlown_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>assist</name>
+      <count>
+        <id>	0	</id>
+        <value>	4	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>win</name>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>reliableprotection</name>
+    <client>
+      <order>	11	</order>
+      <page>	0	</page>
+      <name>
+        <locale>MEDAL_NAME_RELIABLE_PROTECTION</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_RELIABLE_PROTECTION</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/acDistinctReliableProtection.dds</small>
+        <big>icons/awards/achievementsInfo/acDistinctReliableProtection.dds</big>
+        <faded>icons/awards/achievements/acDistinctReliableProtection_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>assist</name>
+      <count>
+        <id>	0	</id>
+        <value>	8	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>win</name>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>riddle</name>
+    <client>
+      <order>	12	</order>
+      <page>	0	</page>
+      <name>
+        <locale>MEDAL_NAME_RIDDLE</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_RIDDLE</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/acDistinctRiddle.dds</small>
+        <big>icons/awards/achievementsInfo/acDistinctRiddle.dds</big>
+        <faded>icons/awards/achievements/acDistinctRiddle_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>assist</name>
+      <condition>
+        <equal>
+          <context>victim.object</context>
+          <value>ground</value>
+        </equal>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	4	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>win</name>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>steelflurry</name>
+    <client>
+      <order>	13	</order>
+      <page>	0	</page>
+      <name>
+        <locale>MEDAL_NAME_STEEL_FLURRY</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_STEEL_FLURRY</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/acDistinctSteelflury.dds</small>
+        <big>icons/awards/achievementsInfo/acDistinctSteelflury.dds</big>
+        <faded>icons/awards/achievements/acDistinctSteelflury_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>assist</name>
+      <condition>
+        <equal>
+          <context>victim.object</context>
+          <value>ground</value>
+        </equal>
+      </condition>
+      <count>
+        <id>	0	</id>
+        <value>	8	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>win</name>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+</distinguished.xml>

@@ -1,0 +1,47 @@
+<gain_medals.xml>
+  <header>
+    <type>quest</type>
+    <group>daily</group>
+    <markers>
+      <group>gain_medals</group>
+    </markers>
+    <server>
+      <active>	false	</active>
+      <scope>player</scope>
+    </server>
+    <nested>
+      <subscriber>
+        <type>quest</type>
+        <group>daily.tier</group>
+      </subscriber>
+    </nested>
+  </header>
+  <include>
+    <nested>
+      <subscriber>
+        <condition>
+          <and>
+            <equal>
+              <context>arena.type</context>
+              <value>normal</value>
+            </equal>
+            <equal>
+              <context>arena.source</context>
+              <value>player</value>
+            </equal>
+          </and>
+        </condition>
+        <metadata>
+          <doneCount>	true	</doneCount>
+          <firstDoneTime>	true	</firstDoneTime>
+          <lastDoneTime>	true	</lastDoneTime>
+        </metadata>
+      </subscriber>
+    </nested>
+    <metadata>
+      <doneCount>	true	</doneCount>
+      <firstDoneTime>	true	</firstDoneTime>
+      <lastDoneTime>	true	</lastDoneTime>
+    </metadata>
+  </include>
+</gain_medals.xml>

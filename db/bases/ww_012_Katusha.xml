@@ -1,0 +1,1684 @@
+<ww_012_katusha.xml>
+  <parent>default.xml</parent>
+  <name>B4</name>
+  <bBoxes>
+    <mainBox>
+      <size>100 90 100</size>
+    </mainBox>
+  </bBoxes>
+  <damageEffects>
+    <destroy>EFFECT_w_part_exposion_small</destroy>
+  </damageEffects>
+  <maxHealth>	1200	</maxHealth>
+  <dominationCost>0.08</dominationCost>
+  <respawnDelay>-1.0</respawnDelay>
+  <superiorityPoints>	0	</superiorityPoints>
+  <superiorityPointsGroup1>	0	</superiorityPointsGroup1>
+  <superiorityPointsGroup2>	1	</superiorityPointsGroup2>
+  <superiorityPointsGroup3>	1	</superiorityPointsGroup3>
+  <superiorityPointsGroup4>	1	</superiorityPointsGroup4>
+  <superiorityPointsGroup5>	1	</superiorityPointsGroup5>
+  <superiorityPointsGroup6>	1	</superiorityPointsGroup6>
+  <superiorityPointsGroup7>	1	</superiorityPointsGroup7>
+  <superiorityPointsGroup8>	1	</superiorityPointsGroup8>
+  <superiorityPointsGroup9>	1	</superiorityPointsGroup9>
+  <initialSpawnDelay>0.0</initialSpawnDelay>
+  <type>vehicle</type>
+  <parts>
+    <part>
+      <name>	hull	</name>
+      <partId>	1	</partId>
+      <groupId>	1	</groupId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>	Hull	</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/14_adriatic/AA_US_Layout/US_Layout_12.model</model>
+            <effectState>
+            </effectState>
+            <stateAnimation>
+            </stateAnimation>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	2	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <model>content/14_adriatic/AA_US_Layout/US_Layout_12.model</model>
+            <effectState>
+            </effectState>
+            <stateAnimation>
+            </stateAnimation>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	3	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <model>content/14_adriatic/AA_US_Layout/US_Layout_12.model</model>
+            <effectState>
+            </effectState>
+            <stateAnimation>
+            </stateAnimation>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	4	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/14_adriatic/AA_US_Layout/US_Layout_12.model</model>
+            <effectOnStart>
+            </effectOnStart>
+            <effectState>
+            </effectState>
+            <stateAnimation>
+            </stateAnimation>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>tank1</name>
+      <partId>	2	</partId>
+      <groupId>	2	</groupId>
+      <mountPoint>hull/HP_9_1</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-21.285000 1.975080 15.705000	</position>
+            <size>	6.210000 3.420000 9.180001	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	150	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/dest/veh/ru/RU_Katyusha/RU_Katyusha.model</model>
+            <effectsTriggered>
+              <effect>
+                <trigger>SHOT1</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_1</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT2</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_2</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT3</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_3</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT4</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_4</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT5</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_5</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT6</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_6</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT7</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_7</mountPoint>
+              </effect>
+            </effectsTriggered>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <model>content/dest/veh/ru/RU_Katyusha/RU_Katyusha.model</model>
+            <effectsTriggered>
+              <effect>
+                <trigger>SHOT1</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_1</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT2</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_2</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT3</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_3</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT4</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_4</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT5</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_5</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT6</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_6</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT7</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_7</mountPoint>
+              </effect>
+            </effectsTriggered>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <model>content/dest/veh/ru/RU_Katyusha/RU_Katyusha.model</model>
+            <effectsTriggered>
+              <effect>
+                <trigger>SHOT1</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_1</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT2</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_2</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT3</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_3</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT4</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_4</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT5</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_5</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT6</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_6</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT7</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_7</mountPoint>
+              </effect>
+            </effectsTriggered>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <bBoxes>
+              <bbox>
+                <position>	-21.285000 1.975080 15.705000	</position>
+                <size>1 1 1</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/dest/veh/ru/RU_Katyusha/RU_Katyusha_crash.model</model>
+            <stateAction>	0	</stateAction>
+            <usage>crash</usage>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>HP_main_crash</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_main_crash</mountPoint>
+              </effect>
+            </effectState>
+            <subItems>
+            </subItems>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>hull/HP_9_1</fireMountPoint>
+        <fire>
+          <effectFire>EFFECT_fire_small</effectFire>
+          <fire_chance>0.5</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>tank2</name>
+      <partId>	3	</partId>
+      <groupId>	3	</groupId>
+      <mountPoint>hull/HP_9_2</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-6.795000 1.305000 16.560000	</position>
+            <size>	6.210000 3.420000 9.180001	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.004245 0.000000 0.999991	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	150	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/dest/veh/ru/RU_Katyusha/RU_Katyusha.model</model>
+            <effectsTriggered>
+              <effect>
+                <trigger>SHOT8</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_1</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT9</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_2</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT10</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_3</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT11</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_4</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT12</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_5</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT13</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_6</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT14</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_7</mountPoint>
+              </effect>
+            </effectsTriggered>
+            <subItems>
+            </subItems>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <model>content/dest/veh/ru/RU_Katyusha/RU_Katyusha.model</model>
+            <effectsTriggered>
+              <effect>
+                <trigger>SHOT8</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_1</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT9</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_2</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT10</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_3</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT11</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_4</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT12</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_5</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT13</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_6</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT14</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_7</mountPoint>
+              </effect>
+            </effectsTriggered>
+            <subItems>
+            </subItems>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <model>content/dest/veh/ru/RU_Katyusha/RU_Katyusha.model</model>
+            <effectsTriggered>
+              <effect>
+                <trigger>SHOT8</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_1</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT9</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_2</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT10</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_3</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT11</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_4</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT12</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_5</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT13</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_6</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT14</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_7</mountPoint>
+              </effect>
+            </effectsTriggered>
+            <subItems>
+            </subItems>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <bBoxes>
+              <bbox>
+                <position>	-6.795000 1.305000 16.560000	</position>
+                <size>1 1 1</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <stateAction>	0	</stateAction>
+            <usage>crash</usage>
+            <model>content/dest/veh/ru/RU_Katyusha/RU_Katyusha_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>HP_main_crash</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_main_crash</mountPoint>
+              </effect>
+            </effectState>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <effectState>
+            </effectState>
+            <subItems>
+            </subItems>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>hull/HP_9_2</fireMountPoint>
+        <fire>
+          <effectFire>EFFECT_fire_small</effectFire>
+          <fire_chance>0.5</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>tank3</name>
+      <partId>	4	</partId>
+      <groupId>	4	</groupId>
+      <mountPoint>hull/HP_9_3</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	6.750000 1.620000 16.830000	</position>
+            <size>	6.210000 3.420000 9.180001	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.010000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	150	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/dest/veh/ru/RU_Katyusha/RU_Katyusha.model</model>
+            <effectsTriggered>
+              <effect>
+                <trigger>SHOT15</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_1</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT16</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_2</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT17</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_3</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT18</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_4</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT19</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_5</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT20</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_6</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT21</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_7</mountPoint>
+              </effect>
+            </effectsTriggered>
+            <subItems>
+            </subItems>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <model>content/dest/veh/ru/RU_Katyusha/RU_Katyusha.model</model>
+            <effectsTriggered>
+              <effect>
+                <trigger>SHOT15</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_1</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT16</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_2</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT17</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_3</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT18</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_4</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT19</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_5</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT20</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_6</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT21</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_7</mountPoint>
+              </effect>
+            </effectsTriggered>
+            <subItems>
+            </subItems>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <model>content/dest/veh/ru/RU_Katyusha/RU_Katyusha.model</model>
+            <effectsTriggered>
+              <effect>
+                <trigger>SHOT15</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_1</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT16</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_2</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT17</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_3</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT18</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_4</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT19</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_5</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT20</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_6</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT21</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_7</mountPoint>
+              </effect>
+            </effectsTriggered>
+            <subItems>
+            </subItems>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <bBoxes>
+              <bbox>
+                <position>	6.750000 1.620000 16.830000	</position>
+                <size>1 1 1</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <stateAction>	0	</stateAction>
+            <usage>crash</usage>
+            <model>content/dest/veh/ru/RU_Katyusha/RU_Katyusha_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>HP_main_crash</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_main_crash</mountPoint>
+              </effect>
+            </effectState>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <effectState>
+            </effectState>
+            <subItems>
+            </subItems>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>hull/HP_9_3</fireMountPoint>
+        <fire>
+          <effectFire>EFFECT_fire_small</effectFire>
+          <fire_chance>0.5</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>tank4</name>
+      <partId>	5	</partId>
+      <groupId>	5	</groupId>
+      <mountPoint>hull/HP_9_4</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	20.655000 1.350000 16.470000	</position>
+            <size>	6.210000 3.420000 9.180001	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	150	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/dest/veh/ru/RU_Katyusha/RU_Katyusha.model</model>
+            <effectsTriggered>
+              <effect>
+                <trigger>SHOT22</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_1</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT23</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_2</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT24</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_3</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT25</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_4</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT26</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_5</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT27</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_6</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT28</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_7</mountPoint>
+              </effect>
+            </effectsTriggered>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <model>content/dest/veh/ru/RU_Katyusha/RU_Katyusha.model</model>
+            <effectsTriggered>
+              <effect>
+                <trigger>SHOT22</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_1</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT23</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_2</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT24</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_3</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT25</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_4</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT26</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_5</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT27</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_6</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT28</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_7</mountPoint>
+              </effect>
+            </effectsTriggered>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <model>content/dest/veh/ru/RU_Katyusha/RU_Katyusha.model</model>
+            <effectsTriggered>
+              <effect>
+                <trigger>SHOT22</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_1</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT23</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_2</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT24</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_3</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT25</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_4</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT26</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_5</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT27</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_6</mountPoint>
+              </effect>
+              <effect>
+                <trigger>SHOT28</trigger>
+                <name>EFFECT_Katusha_Muzzle_Flash</name>
+                <mountPoint>HP_fire_7</mountPoint>
+              </effect>
+            </effectsTriggered>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <bBoxes>
+              <bbox>
+                <position>	20.655000 1.350000 16.470000	</position>
+                <size>1 1 1</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <model>content/dest/veh/ru/RU_Katyusha/RU_Katyusha_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>HP_main_crash</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>HP_main_crash</mountPoint>
+              </effect>
+            </effectState>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <effectState>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>hull/HP_9_4</fireMountPoint>
+        <fire>
+          <effectFire>EFFECT_fire_small</effectFire>
+          <fire_chance>0.5</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>	car1	</name>
+      <partId>	12	</partId>
+      <groupId>	6	</groupId>
+      <mountPoint>hull/HP_8_1</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	13.815000 1.350000 -13.680000	</position>
+            <size>	4.950000 3.420000 8.730000	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	150	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/10_eastern_front/mechSG_051_Katusha_destructible/mechSG_051_Katusha_car2.model</model>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <model>content/10_eastern_front/mechSG_051_Katusha_destructible/mechSG_051_Katusha_car2.model</model>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <model>content/10_eastern_front/mechSG_051_Katusha_destructible/mechSG_051_Katusha_car2.model</model>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <bBoxes>
+              <bbox>
+                <position>	13.815000 1.350000 -13.680000	</position>
+                <size>1 1 1</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/10_eastern_front/mechSG_051_Katusha_destructible/mechSG_051_Katusha_car2.model</model>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>hull/HP_8_1</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>hull/HP_8_1</mountPoint>
+              </effect>
+            </effectState>
+            <usage>crash</usage>
+            <effectState>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>hull/HP_8_1</fireMountPoint>
+        <fire>
+          <effectFire>EFFECT_fire_small</effectFire>
+          <fire_chance>0.5</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>	car2	</name>
+      <partId>	13	</partId>
+      <groupId>	7	</groupId>
+      <mountPoint>hull/HP_8_2</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	22.635000 1.755000 -14.670000	</position>
+            <size>	4.950000 3.420000 8.730000	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	150	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/10_eastern_front/mechSG_051_Katusha_destructible/mechSG_051_Katusha_car2.model</model>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <model>content/10_eastern_front/mechSG_051_Katusha_destructible/mechSG_051_Katusha_car2.model</model>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <model>content/10_eastern_front/mechSG_051_Katusha_destructible/mechSG_051_Katusha_car2.model</model>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <bBoxes>
+              <bbox>
+                <position>	22.635000 1.755000 -14.670000	</position>
+                <size>1 1 1</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <stateAction>	0	</stateAction>
+            <usage>crash</usage>
+            <model>content/10_eastern_front/mechSG_051_Katusha_destructible/mechSG_051_Katusha_car2.model</model>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>hull/HP_8_2</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>hull/HP_8_2</mountPoint>
+              </effect>
+            </effectState>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <effectState>
+            </effectState>
+            <subItems>
+            </subItems>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>hull/HP_8_2</fireMountPoint>
+        <fire>
+          <effectFire>EFFECT_fire_small</effectFire>
+          <fire_chance>0.5</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>	car3	</name>
+      <partId>	14	</partId>
+      <groupId>	8	</groupId>
+      <mountPoint>hull/HP_20_1</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-19.440000 1.350000 -14.940000	</position>
+            <size>	4.950000 3.420000 8.730000	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	150	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/10_eastern_front/mechSG_051_Katusha_destructible/mechSG_051_Katusha_car2.model</model>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <model>content/10_eastern_front/mechSG_051_Katusha_destructible/mechSG_051_Katusha_car2.model</model>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <model>content/10_eastern_front/mechSG_051_Katusha_destructible/mechSG_051_Katusha_car2.model</model>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <bBoxes>
+              <bbox>
+                <position>	-19.440000 1.350000 -14.940000	</position>
+                <size>1 1 1</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <model>content/10_eastern_front/mechSG_051_Katusha_destructible/mechSG_051_Katusha_car2.model</model>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>hull/HP_20_1</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>hull/HP_20_1</mountPoint>
+              </effect>
+            </effectState>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <effectState>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>hull/HP_20_1</fireMountPoint>
+        <fire>
+          <effectFire>EFFECT_fire_small</effectFire>
+          <fire_chance>0.5</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>	car4	</name>
+      <partId>	15	</partId>
+      <groupId>	9	</groupId>
+      <mountPoint>hull/HP_20_2</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-12.330000 1.755000 -14.985000	</position>
+            <size>	4.950000 3.420000 8.730000	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	150	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/10_eastern_front/mechSG_051_Katusha_destructible/mechSG_051_Katusha_car2.model</model>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <model>content/10_eastern_front/mechSG_051_Katusha_destructible/mechSG_051_Katusha_car2.model</model>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <model>content/10_eastern_front/mechSG_051_Katusha_destructible/mechSG_051_Katusha_car2.model</model>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <usage>
+            </usage>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	4	</id>
+            <bBoxes>
+              <bbox>
+                <position>	-12.330000 1.755000 -14.985000	</position>
+                <size>1 1 1</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <model>content/10_eastern_front/mechSG_051_Katusha_destructible/mechSG_051_Katusha_car2.model</model>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_part_exposion_small</name>
+                <mountPoint>hull/HP_20_2</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_prop_black_smoke_small_02</name>
+                <mountPoint>hull/HP_20_2</mountPoint>
+              </effect>
+            </effectState>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <effectState>
+            </effectState>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <model>
+            </model>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>hull/HP_20_2</fireMountPoint>
+        <fire>
+          <effectFire>EFFECT_fire_small</effectFire>
+          <fire_chance>0.5</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+  </parts>
+  <modelScaling>0.22</modelScaling>
+</ww_012_katusha.xml>

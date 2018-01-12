@@ -1,0 +1,45 @@
+<special_events.xml>
+  <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
+  <noNamespaceSchemaLocation>../../eps/validators/subscribers.xsd</noNamespaceSchemaLocation>
+  <header>
+    <type>achievement</type>
+    <group>memorable</group>
+    <server>
+      <active>	true	</active>
+      <scope>player</scope>
+      <hidden>	true	</hidden>
+    </server>
+    <markers>
+      <group>memorable</group>
+    </markers>
+    <client>
+      <place>	left	</place>
+    </client>
+  </header>
+  <include>
+    <metadata>
+      <doneCount>	true	</doneCount>
+      <firstDoneTime>	true	</firstDoneTime>
+      <lastDoneTime>	true	</lastDoneTime>
+    </metadata>
+  </include>
+  <subscriber>
+    <name>wg_fest_2017</name>
+    <client>
+      <order>	18	</order>
+      <page>	0	</page>
+      <multiple>	false	</multiple>
+      <name>
+        <locale>MEDAL_NAME_WG_FEST_2017</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_WG_FEST_2017</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/signsWGFest2017.dds</small>
+        <big>icons/awards/achievementsInfo/signsWGFest2017.dds</big>
+        <faded>icons/awards/achievements/signsWGFest2017_Outline.dds</faded>
+      </icon>
+    </client>
+  </subscriber>
+</special_events.xml>

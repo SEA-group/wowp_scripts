@@ -1,0 +1,1973 @@
+<spectatorscenario.xml>
+  <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
+  <killCamDescriptor>
+    <duration>	10	</duration>
+    <killerTransitionCurve>
+      <p>0.0 0.0</p>
+      <p>0.25 0.0</p>
+      <p>0.32 1.0</p>
+      <p>1.0 1.0</p>
+    </killerTransitionCurve>
+    <yawRotationCurve>
+      <p>0.0 10</p>
+      <p>0.32 10.0</p>
+      <p>1.0 10.0</p>
+    </yawRotationCurve>
+    <pithRotationCurve>
+      <p>0.0 -7.0</p>
+      <p>1.0 -7.0</p>
+    </pithRotationCurve>
+    <distanceCurve>
+      <p>0.0 -8.0</p>
+      <p>0.32 -8.0</p>
+      <p>1.0 1.0</p>
+    </distanceCurve>
+    <horizontalOffsetCurve>
+      <p>0.0 -0.9</p>
+      <p>1.0 0.5</p>
+    </horizontalOffsetCurve>
+    <verticalOffsetCurve>
+      <p>0.0 0.4</p>
+      <p>1.0 -1.5</p>
+    </verticalOffsetCurve>
+  </killCamDescriptor>
+  <autoTacticalSpectator>
+    <smoothedPitchAlignmentSpeed>2.5</smoothedPitchAlignmentSpeed>
+    <smoothedYawAlignmentSpeed>2.5</smoothedYawAlignmentSpeed>
+    <cameraOffset>HP_camera_03CB</cameraOffset>
+    <maxRotationAngle>	70	</maxRotationAngle>
+    <cameraTarget>0 0 500</cameraTarget>
+    <inertialPitchAlignmentSpeed>0.4</inertialPitchAlignmentSpeed>
+    <inertialYawAlignmentSpeed>0.8</inertialYawAlignmentSpeed>
+    <duration>1.0</duration>
+    <verticalOffset>0.7</verticalOffset>
+    <horizontalOffset>2.0</horizontalOffset>
+  </autoTacticalSpectator>
+  <controlTacticalSpectator>
+    <smoothedPitchAlignmentSpeed>2.5</smoothedPitchAlignmentSpeed>
+    <smoothedYawAlignmentSpeed>2.5</smoothedYawAlignmentSpeed>
+    <cameraOffset>HP_camera_03CB</cameraOffset>
+    <maxRotationAngle>	70	</maxRotationAngle>
+    <cameraTarget>0 0 500</cameraTarget>
+    <inertialPitchAlignmentSpeed>0.4</inertialPitchAlignmentSpeed>
+    <inertialYawAlignmentSpeed>0.8</inertialYawAlignmentSpeed>
+    <duration>1.0</duration>
+    <verticalOffset>0.0</verticalOffset>
+    <horizontalOffset>0.0</horizontalOffset>
+  </controlTacticalSpectator>
+  <presets>
+    <preset>
+      <id>tmp_base_close_up_target</id>
+      <duration>	15	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>False</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>target</entityType>
+          <team>friend</team>
+          <minDistance>	15	</minDistance>
+          <maxDistance>	400	</maxDistance>
+          <minHeightDiff>	10	</minHeightDiff>
+          <maxHeightDiff>	400	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+          <offsets>
+            <offset>HP_camera_54CB</offset>
+          </offsets>
+        </entityLocator>
+      </position>
+      <targetDescriptor>
+        <entityType>	node	</entityType>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+        <pitchAlignmentSpeed>0.1</pitchAlignmentSpeed>
+        <yawAlignmentSpeed>0.1</yawAlignmentSpeed>
+        <targetZoneCurve>
+          <point>0.0 0.25</point>
+          <point>1.0 0.25</point>
+        </targetZoneCurve>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	20	</minFov>
+          <maxFov>	20	</maxFov>
+          <fovCurve>
+            <point>0.0 1.0</point>
+            <point>1.0 1.0</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 1.0</point>
+            <point>1.0 1.0</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <effects>
+        </effects>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>tmp____close_up_target3</id>
+      <duration>	15	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>False</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>target</entityType>
+          <team>friend</team>
+          <minDistance>	15	</minDistance>
+          <maxDistance>	400	</maxDistance>
+          <minHeightDiff>	10	</minHeightDiff>
+          <maxHeightDiff>	400	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+          <offsets>
+            <offset>HP_target_18R_halfFOV</offset>
+          </offsets>
+        </entityLocator>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+        <pitchAlignmentSpeed>1.0</pitchAlignmentSpeed>
+        <yawAlignmentSpeed>1.0</yawAlignmentSpeed>
+        <targetZoneCurve>
+          <point>0.0 0.25</point>
+          <point>1.0 0.25</point>
+        </targetZoneCurve>
+        <offsets>
+          <offset>HP_target_09C</offset>
+        </offsets>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	20	</minFov>
+          <maxFov>	20	</maxFov>
+          <fovCurve>
+            <point>0.0 1.0</point>
+            <point>1.0 1.0</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 1.0</point>
+            <point>1.0 1.0</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <effects>
+        </effects>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>tmp____close_up_target</id>
+      <duration>	15	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>False</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>target</entityType>
+          <team>friend</team>
+          <minDistance>	15	</minDistance>
+          <maxDistance>	400	</maxDistance>
+          <minHeightDiff>	10	</minHeightDiff>
+          <maxHeightDiff>	400	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+          <offsets>
+            <offset>HP_camera_52RB</offset>
+          </offsets>
+        </entityLocator>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+        <pitchAlignmentSpeed>0.8</pitchAlignmentSpeed>
+        <yawAlignmentSpeed>0.8</yawAlignmentSpeed>
+        <targetZoneCurve>
+          <point>0.0 10.0</point>
+          <point>0.8 0.25</point>
+          <point>1.0 0.25</point>
+        </targetZoneCurve>
+        <offsets>
+          <offset>HP_target_01R</offset>
+        </offsets>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	10	</minFov>
+          <maxFov>	60	</maxFov>
+          <fovCurve>
+            <point>0.0 1.0</point>
+            <point>1.0 1.0</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 0.25</point>
+            <point>1.0 0.25</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <effects>
+        </effects>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>tmp_-spectator_zoom</id>
+      <duration>	7	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>False</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>static</entityType>
+          <team>friend</team>
+          <minDistance>	15	</minDistance>
+          <maxDistance>	400	</maxDistance>
+          <minHeightDiff>	10	</minHeightDiff>
+          <maxHeightDiff>	400	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+          <offsets>
+            <offset>HP_camera_05CF_halfFOV</offset>
+          </offsets>
+        </entityLocator>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+        <targetZoneCurve>
+          <point>0.0 1.0</point>
+          <point>1.0 1.0</point>
+        </targetZoneCurve>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	5	</minFov>
+          <maxFov>	60	</maxFov>
+          <fovCurve>
+            <point>0.0 1.0</point>
+            <point>1.0 1.0</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 1.0</point>
+            <point>1.0 1.0</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <effects>
+        </effects>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>tmp_-spectator_middle_close_rot30_rot_vert50</id>
+      <duration>	12	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>False</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>static</entityType>
+          <team>friend</team>
+          <minDistance>	200	</minDistance>
+          <maxDistance>	350	</maxDistance>
+          <minHeightDiff>	250	</minHeightDiff>
+          <maxHeightDiff>	500	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+        </entityLocator>
+        <positionModifiers>
+        </positionModifiers>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	20	</minFov>
+          <maxFov>	30	</maxFov>
+          <fovCurve>
+            <point>0 1</point>
+            <point>1 1</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 0.95</point>
+            <point>1.0 1.0</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <effects>
+          <effect>spectator_fast_shake</effect>
+        </effects>
+        <lineOfSightRotation>
+          <horizontalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>0.95 30</point>
+            <point>1.0 30</point>
+          </horizontalRotationCurve>
+          <verticalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>1.0 50</point>
+          </verticalRotationCurve>
+        </lineOfSightRotation>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>tmp_-spectator_middle_close_rot110</id>
+      <duration>	12	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>False</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>static</entityType>
+          <team>friend</team>
+          <minDistance>	100	</minDistance>
+          <maxDistance>	350	</maxDistance>
+          <minHeightDiff>	50	</minHeightDiff>
+          <maxHeightDiff>	500	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+        </entityLocator>
+        <positionModifiers>
+        </positionModifiers>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	20	</minFov>
+          <maxFov>	30	</maxFov>
+          <fovCurve>
+            <point>0 1</point>
+            <point>1 1</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 0.95</point>
+            <point>1.0 1.0</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <effects>
+          <effect>spectator_fast_shake</effect>
+        </effects>
+        <lineOfSightRotation>
+          <horizontalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>0.95 110</point>
+            <point>1.0 110</point>
+          </horizontalRotationCurve>
+          <verticalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>1 0.0</point>
+          </verticalRotationCurve>
+        </lineOfSightRotation>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>tmp_---spectator_midle_close_slow</id>
+      <duration>	10	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>False</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>static</entityType>
+          <team>friend</team>
+          <minDistance>	15	</minDistance>
+          <maxDistance>	2000	</maxDistance>
+          <minHeightDiff>	500	</minHeightDiff>
+          <maxHeightDiff>	1500	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+        </entityLocator>
+        <positionModifiers>
+        </positionModifiers>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	20	</minFov>
+          <maxFov>	30	</maxFov>
+          <fovCurve>
+            <point>0 1</point>
+            <point>1 1</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 0.95</point>
+            <point>0.2 0.95</point>
+            <point>0.8 1.0</point>
+            <point>1.0 1.0</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <effects>
+          <effect>spectator_fast_shake</effect>
+        </effects>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>tmp_spectator_close_middle_rot90</id>
+      <duration>	12	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>False</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>static</entityType>
+          <team>friend</team>
+          <minDistance>	450	</minDistance>
+          <maxDistance>	650	</maxDistance>
+          <minHeightDiff>	200	</minHeightDiff>
+          <maxHeightDiff>	1000	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+        </entityLocator>
+        <positionModifiers>
+        </positionModifiers>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	20	</minFov>
+          <maxFov>	30	</maxFov>
+          <fovCurve>
+            <point>0 1</point>
+            <point>1 1</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 1</point>
+            <point>1.0 0.94</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <effects>
+          <effect>spectator_fast_shake</effect>
+        </effects>
+        <lineOfSightRotation>
+          <horizontalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>0.95 -80</point>
+            <point>1.0 -80</point>
+          </horizontalRotationCurve>
+          <verticalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>1 0.0</point>
+          </verticalRotationCurve>
+        </lineOfSightRotation>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>tmp_spectator_midle_rot100_vert_rot50</id>
+      <duration>	12	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>False</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>static</entityType>
+          <team>friend</team>
+          <minDistance>	450	</minDistance>
+          <maxDistance>	650	</maxDistance>
+          <minHeightDiff>	200	</minHeightDiff>
+          <maxHeightDiff>	1000	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+        </entityLocator>
+        <positionModifiers>
+        </positionModifiers>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	20	</minFov>
+          <maxFov>	30	</maxFov>
+          <fovCurve>
+            <point>0 1</point>
+            <point>1 1</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 0.9</point>
+            <point>1.0 0.9</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <effects>
+          <effect>spectator_slow_shake</effect>
+        </effects>
+        <lineOfSightRotation>
+          <horizontalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>0.95 -100</point>
+            <point>1.0 -100</point>
+          </horizontalRotationCurve>
+          <verticalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>0.2 0.0</point>
+            <point>0.8 30</point>
+          </verticalRotationCurve>
+        </lineOfSightRotation>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>tmp_spectator_midle_rot180</id>
+      <duration>	17	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>False</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>static</entityType>
+          <team>friend</team>
+          <minDistance>	450	</minDistance>
+          <maxDistance>	650	</maxDistance>
+          <minHeightDiff>	200	</minHeightDiff>
+          <maxHeightDiff>	600	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+        </entityLocator>
+        <positionModifiers>
+        </positionModifiers>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	20	</minFov>
+          <maxFov>	30	</maxFov>
+          <fovCurve>
+            <point>0 1</point>
+            <point>1 1</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 0.9</point>
+            <point>1.0 0.9</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <effects>
+          <effect>spectator_slow_shake</effect>
+        </effects>
+        <lineOfSightRotation>
+          <horizontalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>0.95 180</point>
+            <point>1.0 180</point>
+          </horizontalRotationCurve>
+          <verticalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>0.5 0</point>
+          </verticalRotationCurve>
+        </lineOfSightRotation>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>tmp_spectator_midle_shift_x_slow</id>
+      <duration>	10	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>False</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>static</entityType>
+          <team>friend</team>
+          <minDistance>	450	</minDistance>
+          <maxDistance>	650	</maxDistance>
+          <minHeightDiff>	200	</minHeightDiff>
+          <maxHeightDiff>	1000	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+        </entityLocator>
+        <positionModifiers>
+        </positionModifiers>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	20	</minFov>
+          <maxFov>	30	</maxFov>
+          <fovCurve>
+            <point>0 1</point>
+            <point>1 1</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 0.96</point>
+            <point>1.0 0.92</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <effects>
+          <effect>spectator_shift_x</effect>
+        </effects>
+        <lineOfSightRotation>
+          <horizontalRotationCurve>
+            <point>0.0 0</point>
+            <point>1.0 0</point>
+          </horizontalRotationCurve>
+          <verticalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>1 0.0</point>
+          </verticalRotationCurve>
+        </lineOfSightRotation>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>tmp_spectator_midle_shift_y_slow</id>
+      <duration>	10	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>False</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>static</entityType>
+          <team>friend</team>
+          <minDistance>	450	</minDistance>
+          <maxDistance>	650	</maxDistance>
+          <minHeightDiff>	200	</minHeightDiff>
+          <maxHeightDiff>	1000	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+        </entityLocator>
+        <positionModifiers>
+        </positionModifiers>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	20	</minFov>
+          <maxFov>	30	</maxFov>
+          <fovCurve>
+            <point>0 1</point>
+            <point>1 1</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 0.96</point>
+            <point>1.0 0.92</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <effects>
+          <effect>spectator_shift_y</effect>
+        </effects>
+        <lineOfSightRotation>
+          <horizontalRotationCurve>
+            <point>0.0 0</point>
+            <point>1.0 0</point>
+          </horizontalRotationCurve>
+          <verticalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>1 0.0</point>
+          </verticalRotationCurve>
+        </lineOfSightRotation>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>tmp_spectator_midle_shift_x_fast</id>
+      <duration>	10	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>False</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>static</entityType>
+          <team>friend</team>
+          <minDistance>	450	</minDistance>
+          <maxDistance>	650	</maxDistance>
+          <minHeightDiff>	200	</minHeightDiff>
+          <maxHeightDiff>	1000	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+        </entityLocator>
+        <positionModifiers>
+        </positionModifiers>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	20	</minFov>
+          <maxFov>	30	</maxFov>
+          <fovCurve>
+            <point>0 1</point>
+            <point>1 1</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 0.92</point>
+            <point>1.0 0.95</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <effects>
+          <effect>spectator_shift_x_fast</effect>
+        </effects>
+        <lineOfSightRotation>
+          <horizontalRotationCurve>
+            <point>0.0 0</point>
+            <point>1.0 30</point>
+          </horizontalRotationCurve>
+          <verticalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>1 0.0</point>
+          </verticalRotationCurve>
+        </lineOfSightRotation>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>tmp_spectator_close!</id>
+      <duration>	10	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>False</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>static</entityType>
+          <team>friend</team>
+          <minDistance>	15	</minDistance>
+          <maxDistance>	2000	</maxDistance>
+          <minHeightDiff>	500	</minHeightDiff>
+          <maxHeightDiff>	10000	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+        </entityLocator>
+        <positionModifiers>
+        </positionModifiers>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	5	</minFov>
+          <maxFov>	50	</maxFov>
+          <fovCurve>
+            <point>0 0</point>
+            <point>1 0</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 0.999</point>
+            <point>1.0 0.999</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <effects>
+          <effect>spectator_fast_shake3_close</effect>
+        </effects>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>tmp_upd_spectator_close_midle_slow!</id>
+      <duration>	5	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>False</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>static</entityType>
+          <team>friend</team>
+          <minDistance>	15	</minDistance>
+          <maxDistance>	2000	</maxDistance>
+          <minHeightDiff>	500	</minHeightDiff>
+          <maxHeightDiff>	1500	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+        </entityLocator>
+        <positionModifiers>
+        </positionModifiers>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	20	</minFov>
+          <maxFov>	30	</maxFov>
+          <fovCurve>
+            <point>0 1</point>
+            <point>1 1</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 0.995</point>
+            <point>0.2 0.995</point>
+            <point>0.8 0.95</point>
+            <point>1.0 0.96</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <effects>
+          <effect>spectator_fast_shake3_close</effect>
+        </effects>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>tmp_spectator_closeup-close_rot100_vert_rot50?</id>
+      <duration>	15	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>False</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>static</entityType>
+          <team>friend</team>
+          <minDistance>	450	</minDistance>
+          <maxDistance>	650	</maxDistance>
+          <minHeightDiff>	200	</minHeightDiff>
+          <maxHeightDiff>	1000	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+        </entityLocator>
+        <positionModifiers>
+        </positionModifiers>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+        <targetZoneCurve>
+          <point>0.0 0.25</point>
+          <point>1.0 0.25</point>
+        </targetZoneCurve>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	20	</minFov>
+          <maxFov>	30	</maxFov>
+          <fovCurve>
+            <point>0 1</point>
+            <point>1 1</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 0.99</point>
+            <point>0.2 0.99</point>
+            <point>0.95 0.94</point>
+            <point>1.0 0.94</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <effects>
+          <effect>spectator_fast_shake3_close2</effect>
+        </effects>
+        <lineOfSightRotation>
+          <horizontalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>0.95 -100</point>
+            <point>1.0 -100</point>
+          </horizontalRotationCurve>
+          <verticalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>0.2 0.0</point>
+            <point>0.95 30</point>
+            <point>1.0 30</point>
+          </verticalRotationCurve>
+        </lineOfSightRotation>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>tmp_combat_front_longshot_halfstable?</id>
+      <duration>	20	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>False</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>target</entityType>
+          <team>friend</team>
+          <minDistance>	450	</minDistance>
+          <maxDistance>	650	</maxDistance>
+          <minHeightDiff>	200	</minHeightDiff>
+          <maxHeightDiff>	1000	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+          <offsets>
+            <offset>HP_camera_54CB</offset>
+          </offsets>
+        </entityLocator>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+        <pitchAlignmentSpeed>0.1</pitchAlignmentSpeed>
+        <yawAlignmentSpeed>0.1</yawAlignmentSpeed>
+        <targetZoneCurve>
+          <point>0.0 1.5</point>
+          <point>1.0 1.5</point>
+        </targetZoneCurve>
+        <offsets>
+          <offset>HP_target_02CF</offset>
+        </offsets>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	20	</minFov>
+          <maxFov>	20	</maxFov>
+          <fovCurve>
+            <point>0 1</point>
+            <point>1 1</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 -5</point>
+            <point>1.0 -5</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <effects>
+          <effect>spectator_veryslow_shake</effect>
+        </effects>
+        <lineOfSightRotation>
+          <horizontalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>1.0 0</point>
+          </horizontalRotationCurve>
+          <verticalRotationCurve>
+            <point>0.0 5</point>
+            <point>1.0 5</point>
+          </verticalRotationCurve>
+        </lineOfSightRotation>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>tmp_combat_front_longshot_halfstable_rotation180?</id>
+      <duration>	20	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>False</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>target</entityType>
+          <team>friend</team>
+          <minDistance>	450	</minDistance>
+          <maxDistance>	650	</maxDistance>
+          <minHeightDiff>	200	</minHeightDiff>
+          <maxHeightDiff>	1000	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+          <offsets>
+            <offset>HP_camera_54CB</offset>
+          </offsets>
+        </entityLocator>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+        <pitchAlignmentSpeed>0.1</pitchAlignmentSpeed>
+        <yawAlignmentSpeed>0.1</yawAlignmentSpeed>
+        <targetZoneCurve>
+          <point>0.0 1.5</point>
+          <point>1.0 1.5</point>
+        </targetZoneCurve>
+        <offsets>
+          <offset>HP_target_02CF</offset>
+        </offsets>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	20	</minFov>
+          <maxFov>	20	</maxFov>
+          <fovCurve>
+            <point>0 1</point>
+            <point>1 1</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 -5</point>
+            <point>1.0 -5</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <effects>
+          <effect>spectator_slow_shake</effect>
+        </effects>
+        <lineOfSightRotation>
+          <horizontalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>1.0 180</point>
+          </horizontalRotationCurve>
+          <verticalRotationCurve>
+            <point>0.0 5</point>
+            <point>1.0 -40</point>
+          </verticalRotationCurve>
+        </lineOfSightRotation>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>tmp_spectator_midle-close_rot_zoom?</id>
+      <duration>	15	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>False</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>static</entityType>
+          <team>friend</team>
+          <minDistance>	450	</minDistance>
+          <maxDistance>	650	</maxDistance>
+          <minHeightDiff>	200	</minHeightDiff>
+          <maxHeightDiff>	1000	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+        </entityLocator>
+        <positionModifiers>
+        </positionModifiers>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	20	</minFov>
+          <maxFov>	30	</maxFov>
+          <fovCurve>
+            <point>0 1</point>
+            <point>1 1</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 0.8</point>
+            <point>0.9 0.98</point>
+            <point>1.0 0.98</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <effects>
+          <effect>spectator_fast_shake3_close</effect>
+        </effects>
+        <lineOfSightRotation>
+          <horizontalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>1.0 -100</point>
+          </horizontalRotationCurve>
+          <verticalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>1.0 30</point>
+          </verticalRotationCurve>
+        </lineOfSightRotation>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>tmp_close_up_target_TopDown_stable</id>
+      <duration>	5	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>False</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>target</entityType>
+          <team>friend</team>
+          <minDistance>	15	</minDistance>
+          <maxDistance>	400	</maxDistance>
+          <minHeightDiff>	10	</minHeightDiff>
+          <maxHeightDiff>	400	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+          <offsets>
+            <offset>HP_camera_59T</offset>
+          </offsets>
+        </entityLocator>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+        <pitchAlignmentSpeed>	10	</pitchAlignmentSpeed>
+        <yawAlignmentSpeed>	10	</yawAlignmentSpeed>
+        <targetZoneCurve>
+          <point>0.0 0.25</point>
+          <point>1.0 0.25</point>
+        </targetZoneCurve>
+        <offsets>
+          <offset>HP_target_38CC</offset>
+        </offsets>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	20	</minFov>
+          <maxFov>	20	</maxFov>
+          <fovCurve>
+            <point>0.0 1.0</point>
+            <point>1.0 1.0</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 0.95</point>
+            <point>1.0 0.95</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <effects>spectator_slow_shake</effects>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>spectator_fast_rotation_close-dist</id>
+      <duration>	20	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>	True	</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>	node	</entityType>
+          <team>any</team>
+          <minDistance>	450	</minDistance>
+          <maxDistance>	650	</maxDistance>
+          <minHeightDiff>	200	</minHeightDiff>
+          <maxHeightDiff>	1000	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+        </entityLocator>
+        <positionModifiers>
+        </positionModifiers>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	20	</minFov>
+          <maxFov>	30	</maxFov>
+          <fovCurve>
+            <point>0 1</point>
+            <point>1 1</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 0.92</point>
+            <point>0.65 0.995</point>
+            <point>0.75 0.995</point>
+            <point>1.0 0.97</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <effects>
+          <effect>spectator_idle</effect>
+        </effects>
+        <lineOfSightRotation>
+          <horizontalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>1.0 -200</point>
+          </horizontalRotationCurve>
+          <verticalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>0.2 0.0</point>
+            <point>0.8 30</point>
+          </verticalRotationCurve>
+        </lineOfSightRotation>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>spectator_midle_shift_x_fast_low_fov</id>
+      <duration>	10	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>	True	</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>	node	</entityType>
+          <team>any</team>
+          <minDistance>	450	</minDistance>
+          <maxDistance>	650	</maxDistance>
+          <minHeightDiff>	200	</minHeightDiff>
+          <maxHeightDiff>	1000	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+        </entityLocator>
+        <positionModifiers>
+        </positionModifiers>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	10	</minFov>
+          <maxFov>	30	</maxFov>
+          <fovCurve>
+            <point>0 1</point>
+            <point>1 1</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 0.92</point>
+            <point>1.0 0.95</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <effects>
+          <effect>spectator_shift_x_fast2</effect>
+        </effects>
+        <lineOfSightRotation>
+          <horizontalRotationCurve>
+            <point>0.0 0</point>
+            <point>1.0 30</point>
+          </horizontalRotationCurve>
+          <verticalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>1 0.0</point>
+          </verticalRotationCurve>
+        </lineOfSightRotation>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>spectator_close_shift_x_fast</id>
+      <duration>	10	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>	True	</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>	node	</entityType>
+          <team>any</team>
+          <minDistance>	450	</minDistance>
+          <maxDistance>	650	</maxDistance>
+          <minHeightDiff>	200	</minHeightDiff>
+          <maxHeightDiff>	1000	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+        </entityLocator>
+        <positionModifiers>
+        </positionModifiers>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	20	</minFov>
+          <maxFov>	30	</maxFov>
+          <fovCurve>
+            <point>0 1</point>
+            <point>1 1</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 0.95</point>
+            <point>1.0 0.98</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <effects>
+          <effect>spectator_shift_x_fast2</effect>
+        </effects>
+        <lineOfSightRotation>
+          <horizontalRotationCurve>
+            <point>0.0 0</point>
+            <point>1.0 30</point>
+          </horizontalRotationCurve>
+          <verticalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>1 0.0</point>
+          </verticalRotationCurve>
+        </lineOfSightRotation>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>spectator_close_shift_y_slow</id>
+      <duration>	10	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>	True	</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>	node	</entityType>
+          <team>any</team>
+          <minDistance>	450	</minDistance>
+          <maxDistance>	650	</maxDistance>
+          <minHeightDiff>	200	</minHeightDiff>
+          <maxHeightDiff>	1000	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+        </entityLocator>
+        <positionModifiers>
+        </positionModifiers>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	20	</minFov>
+          <maxFov>	30	</maxFov>
+          <fovCurve>
+            <point>0 1</point>
+            <point>1 1</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 0.99</point>
+            <point>1.0 0.99</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <effects>
+          <effect>spectator_shift_y2</effect>
+        </effects>
+        <lineOfSightRotation>
+          <horizontalRotationCurve>
+            <point>0.0 0</point>
+            <point>1.0 0</point>
+          </horizontalRotationCurve>
+          <verticalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>1 0.0</point>
+          </verticalRotationCurve>
+        </lineOfSightRotation>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>spectator_close_rot180</id>
+      <duration>	20	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>	True	</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>	node	</entityType>
+          <team>any</team>
+          <minDistance>	450	</minDistance>
+          <maxDistance>	650	</maxDistance>
+          <minHeightDiff>	200	</minHeightDiff>
+          <maxHeightDiff>	600	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+        </entityLocator>
+        <positionModifiers>
+        </positionModifiers>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	20	</minFov>
+          <maxFov>	30	</maxFov>
+          <fovCurve>
+            <point>0 1</point>
+            <point>1 1</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 0.97</point>
+            <point>1.0 0.97</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <effects>
+          <effect>spectator_idle</effect>
+        </effects>
+        <lineOfSightRotation>
+          <horizontalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>0.95 180</point>
+            <point>1.0 180</point>
+          </horizontalRotationCurve>
+          <verticalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>0.5 0</point>
+          </verticalRotationCurve>
+        </lineOfSightRotation>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>spectator_close-midle_rot100_vert_rot50</id>
+      <duration>	15	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>	True	</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>	node	</entityType>
+          <team>any</team>
+          <minDistance>	450	</minDistance>
+          <maxDistance>	650	</maxDistance>
+          <minHeightDiff>	200	</minHeightDiff>
+          <maxHeightDiff>	1000	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+        </entityLocator>
+        <positionModifiers>
+        </positionModifiers>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	20	</minFov>
+          <maxFov>	30	</maxFov>
+          <fovCurve>
+            <point>0 1</point>
+            <point>1 1</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 0.99</point>
+            <point>0.2 0.99</point>
+            <point>0.95 0.94</point>
+            <point>1.0 0.94</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <effects>
+          <effect>spectator_veryslow_shake</effect>
+        </effects>
+        <lineOfSightRotation>
+          <horizontalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>0.95 -100</point>
+            <point>1.0 -100</point>
+          </horizontalRotationCurve>
+          <verticalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>0.2 0.0</point>
+            <point>0.95 30</point>
+            <point>1.0 30</point>
+          </verticalRotationCurve>
+        </lineOfSightRotation>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>close_up_target_ForwardR_stable</id>
+      <duration>	5	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>	True	</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>target</entityType>
+          <team>friend</team>
+          <minDistance>	15	</minDistance>
+          <maxDistance>	400	</maxDistance>
+          <minHeightDiff>	10	</minHeightDiff>
+          <maxHeightDiff>	400	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+          <offsets>
+            <offset>HP_camera_54CB</offset>
+          </offsets>
+        </entityLocator>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+        <pitchAlignmentSpeed>	10	</pitchAlignmentSpeed>
+        <yawAlignmentSpeed>	10	</yawAlignmentSpeed>
+        <targetZoneCurve>
+          <point>0.0 0.25</point>
+          <point>1.0 0.25</point>
+        </targetZoneCurve>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	20	</minFov>
+          <maxFov>	20	</maxFov>
+          <fovCurve>
+            <point>0.0 1.0</point>
+            <point>1.0 1.0</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 0.9</point>
+            <point>1.0 0.9</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <effects>spectator_idle</effects>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>close_up_target_SideView_stable</id>
+      <duration>	5	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>	True	</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>target</entityType>
+          <team>friend</team>
+          <minDistance>	15	</minDistance>
+          <maxDistance>	400	</maxDistance>
+          <minHeightDiff>	10	</minHeightDiff>
+          <maxHeightDiff>	400	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+          <offsets>
+            <offset>HP_camera_65_R</offset>
+          </offsets>
+        </entityLocator>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+        <pitchAlignmentSpeed>	10	</pitchAlignmentSpeed>
+        <yawAlignmentSpeed>	10	</yawAlignmentSpeed>
+        <targetZoneCurve>
+          <point>0.0 0.25</point>
+          <point>1.0 0.25</point>
+        </targetZoneCurve>
+        <offsets>
+          <offset>HP_target_38CC</offset>
+        </offsets>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	20	</minFov>
+          <maxFov>	20	</maxFov>
+          <fovCurve>
+            <point>0.0 1.0</point>
+            <point>1.0 1.0</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 0.9</point>
+            <point>1.0 0.9</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <effects>spectator_idle</effects>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>close_up_target_RearView_stable</id>
+      <duration>	5	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>	True	</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>target</entityType>
+          <team>friend</team>
+          <minDistance>	15	</minDistance>
+          <maxDistance>	400	</maxDistance>
+          <minHeightDiff>	10	</minHeightDiff>
+          <maxHeightDiff>	400	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+          <offsets>
+            <offset>HP_camera_trondheim_1</offset>
+          </offsets>
+        </entityLocator>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+        <pitchAlignmentSpeed>	10	</pitchAlignmentSpeed>
+        <yawAlignmentSpeed>	10	</yawAlignmentSpeed>
+        <targetZoneCurve>
+          <point>0.0 0.25</point>
+          <point>1.0 0.25</point>
+        </targetZoneCurve>
+        <offsets>
+          <offset>HP_target_38CC</offset>
+        </offsets>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	20	</minFov>
+          <maxFov>	20	</maxFov>
+          <fovCurve>
+            <point>0.0 1.0</point>
+            <point>1.0 1.0</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 1.0</point>
+            <point>1.0 1.0</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <effects>spectator_idle</effects>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>close_up_target_HorizontalRotation_unstable</id>
+      <duration>	10	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>	True	</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>target</entityType>
+          <team>friend</team>
+          <minDistance>	15	</minDistance>
+          <maxDistance>	400	</maxDistance>
+          <minHeightDiff>	10	</minHeightDiff>
+          <maxHeightDiff>	400	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+          <offsets>
+            <offset>HP_camera_15RB</offset>
+          </offsets>
+        </entityLocator>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+        <pitchAlignmentSpeed>	0	</pitchAlignmentSpeed>
+        <yawAlignmentSpeed>	0	</yawAlignmentSpeed>
+        <targetZoneCurve>
+          <point>0.0 0.25</point>
+          <point>1.0 0.25</point>
+        </targetZoneCurve>
+        <offsets>
+          <offset>HP_target_38CC</offset>
+        </offsets>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	20	</minFov>
+          <maxFov>	20	</maxFov>
+          <fovCurve>
+            <point>0.0 1.0</point>
+            <point>1.0 1.0</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 0.95</point>
+            <point>1.0 0.95</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <lineOfSightRotation>
+          <horizontalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>0.95 90</point>
+            <point>1.0 90</point>
+          </horizontalRotationCurve>
+          <verticalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>1.0 0</point>
+          </verticalRotationCurve>
+        </lineOfSightRotation>
+        <effects>spectator_idle</effects>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>close_up_target_SideView_stable2</id>
+      <duration>	10	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>	True	</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>target</entityType>
+          <team>friend</team>
+          <minDistance>	15	</minDistance>
+          <maxDistance>	400	</maxDistance>
+          <minHeightDiff>	10	</minHeightDiff>
+          <maxHeightDiff>	400	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+          <offsets>
+            <offset>HP_camera_65_R</offset>
+          </offsets>
+        </entityLocator>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+        <pitchAlignmentSpeed>	0	</pitchAlignmentSpeed>
+        <yawAlignmentSpeed>	0	</yawAlignmentSpeed>
+        <targetZoneCurve>
+          <point>0.0 0.25</point>
+          <point>1.0 0.25</point>
+        </targetZoneCurve>
+        <offsets>
+          <offset>HP_target_38CC</offset>
+        </offsets>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	20	</minFov>
+          <maxFov>	20	</maxFov>
+          <fovCurve>
+            <point>0.0 1.0</point>
+            <point>1.0 1.0</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 0.9</point>
+            <point>1.0 0.9</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <lineOfSightRotation>
+          <horizontalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>0.9 -180</point>
+            <point>1.0 -180</point>
+          </horizontalRotationCurve>
+          <verticalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>0.45 -45</point>
+            <point>0.9 0</point>
+            <point>1.0 0</point>
+          </verticalRotationCurve>
+        </lineOfSightRotation>
+        <effects>spectator_idle</effects>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>close_up_target_RearView_stable2</id>
+      <duration>	10	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>	True	</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>target</entityType>
+          <team>friend</team>
+          <minDistance>	15	</minDistance>
+          <maxDistance>	400	</maxDistance>
+          <minHeightDiff>	10	</minHeightDiff>
+          <maxHeightDiff>	400	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+          <offsets>
+            <offset>HP_camera_trondheim_1</offset>
+          </offsets>
+        </entityLocator>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+        <pitchAlignmentSpeed>	10	</pitchAlignmentSpeed>
+        <yawAlignmentSpeed>	10	</yawAlignmentSpeed>
+        <targetZoneCurve>
+          <point>0.0 0.25</point>
+          <point>1.0 0.25</point>
+        </targetZoneCurve>
+        <offsets>
+          <offset>HP_target_38CC</offset>
+        </offsets>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	20	</minFov>
+          <maxFov>	20	</maxFov>
+          <fovCurve>
+            <point>0.0 1.0</point>
+            <point>1.0 1.0</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 1.0</point>
+            <point>1.0 1.0</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <lineOfSightRotation>
+          <horizontalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>0.9 -180</point>
+            <point>1.0 -180</point>
+          </horizontalRotationCurve>
+          <verticalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>0.45 -45</point>
+            <point>0.9 0</point>
+            <point>1.0 0</point>
+          </verticalRotationCurve>
+        </lineOfSightRotation>
+        <effects>spectator_idle</effects>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>spectator_fast_rotation_close-up</id>
+      <duration>	20	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>	True	</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>	node	</entityType>
+          <team>any</team>
+          <minDistance>	450	</minDistance>
+          <maxDistance>	650	</maxDistance>
+          <minHeightDiff>	200	</minHeightDiff>
+          <maxHeightDiff>	1000	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+        </entityLocator>
+        <positionModifiers>
+        </positionModifiers>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+        <targetZoneCurve>
+          <point>0.0 0.25</point>
+          <point>1.0 0.25</point>
+        </targetZoneCurve>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	20	</minFov>
+          <maxFov>	30	</maxFov>
+          <fovCurve>
+            <point>0 1</point>
+            <point>1 1</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 0.92</point>
+            <point>0.65 0.995</point>
+            <point>0.75 0.995</point>
+            <point>1.0 0.97</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <effects>
+          <effect>spectator_idle</effect>
+        </effects>
+        <lineOfSightRotation>
+          <horizontalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>1.0 -200</point>
+          </horizontalRotationCurve>
+          <verticalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>0.2 0.0</point>
+            <point>0.8 30</point>
+          </verticalRotationCurve>
+        </lineOfSightRotation>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>spectator_close-up_rot180</id>
+      <duration>	20	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>	True	</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>	node	</entityType>
+          <team>any</team>
+          <minDistance>	450	</minDistance>
+          <maxDistance>	650	</maxDistance>
+          <minHeightDiff>	200	</minHeightDiff>
+          <maxHeightDiff>	600	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+        </entityLocator>
+        <positionModifiers>
+        </positionModifiers>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+        <targetZoneCurve>
+          <point>0.0 0.25</point>
+          <point>1.0 0.25</point>
+        </targetZoneCurve>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	20	</minFov>
+          <maxFov>	30	</maxFov>
+          <fovCurve>
+            <point>0 1</point>
+            <point>1 1</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 0.97</point>
+            <point>1.0 0.97</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <effects>
+          <effect>spectator_idle</effect>
+        </effects>
+        <lineOfSightRotation>
+          <horizontalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>0.95 180</point>
+            <point>1.0 180</point>
+          </horizontalRotationCurve>
+          <verticalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>0.5 0</point>
+          </verticalRotationCurve>
+        </lineOfSightRotation>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>combat_front_closeup_stable</id>
+      <duration>	15	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>	True	</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>target</entityType>
+          <team>friend</team>
+          <minDistance>	450	</minDistance>
+          <maxDistance>	650	</maxDistance>
+          <minHeightDiff>	200	</minHeightDiff>
+          <maxHeightDiff>	1000	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+          <offsets>
+            <offset>HP_camera_54CB</offset>
+          </offsets>
+        </entityLocator>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+        <pitchAlignmentSpeed>	2	</pitchAlignmentSpeed>
+        <yawAlignmentSpeed>	2	</yawAlignmentSpeed>
+        <targetZoneCurve>
+          <point>0.0 0.25</point>
+          <point>1.0 0.25</point>
+        </targetZoneCurve>
+        <offsets>
+          <offset>HP_target_02CF</offset>
+        </offsets>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	20	</minFov>
+          <maxFov>	20	</maxFov>
+          <fovCurve>
+            <point>0 1</point>
+            <point>1 1</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 0.5</point>
+            <point>1.0 0.5</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <effects>
+          <effect>spectator_fast_shake3_close2</effect>
+        </effects>
+        <lineOfSightRotation>
+          <horizontalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>1.0 0</point>
+          </horizontalRotationCurve>
+          <verticalRotationCurve>
+            <point>0.0 5</point>
+            <point>1.0 5</point>
+          </verticalRotationCurve>
+        </lineOfSightRotation>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>spectator_midle-close_zoom_fast</id>
+      <duration>	15	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	1	</priority>
+      <isEnabled>	True	</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>	node	</entityType>
+          <team>any</team>
+          <minDistance>	450	</minDistance>
+          <maxDistance>	650	</maxDistance>
+          <minHeightDiff>	200	</minHeightDiff>
+          <maxHeightDiff>	1000	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+        </entityLocator>
+        <positionModifiers>
+        </positionModifiers>
+      </position>
+      <targetDescriptor>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	10	</minFov>
+          <maxFov>	30	</maxFov>
+          <fovCurve>
+            <point>0.0 0.6</point>
+            <point>0.36 0.6</point>
+            <point>0.4 0.99</point>
+            <point>1.0 0.99</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 0.9</point>
+            <point>0.36 0.9</point>
+            <point>0.4 0.99</point>
+            <point>1.0 1.0</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <effects>
+          <effect>spectator_veryslow_shake</effect>
+        </effects>
+        <lineOfSightRotation>
+          <horizontalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>1.0 0.0</point>
+          </horizontalRotationCurve>
+          <verticalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>1.0 0.0</point>
+          </verticalRotationCurve>
+        </lineOfSightRotation>
+      </cameraDescriptor>
+    </preset>
+    <preset>
+      <id>panoramic_01</id>
+      <duration>	30	</duration>
+      <dynamic>	high	</dynamic>
+      <priority>	2	</priority>
+      <isEnabled>	True	</isEnabled>
+      <position>
+        <entityLocator>
+          <entityType>target</entityType>
+          <team>friend</team>
+          <minDistance>	15	</minDistance>
+          <maxDistance>	100	</maxDistance>
+          <minHeightDiff>	10	</minHeightDiff>
+          <maxHeightDiff>	100	</maxHeightDiff>
+          <lookDirection>	down	</lookDirection>
+          <offsets>
+            <offset>HP_camera_54CB</offset>
+          </offsets>
+        </entityLocator>
+      </position>
+      <targetDescriptor>
+        <entityType>	node	</entityType>
+        <entitiesDetectionRange>	0	</entitiesDetectionRange>
+        <pitchAlignmentSpeed>	1	</pitchAlignmentSpeed>
+        <yawAlignmentSpeed>	1	</yawAlignmentSpeed>
+        <targetZoneCurve>
+          <point>0.0 0.0</point>
+          <point>1.0 0.0</point>
+        </targetZoneCurve>
+      </targetDescriptor>
+      <cameraDescriptor>
+        <zoomDescriptor>
+          <minFov>	20	</minFov>
+          <maxFov>	20	</maxFov>
+          <fovCurve>
+            <point>0.0 1.0</point>
+            <point>1.0 1.0</point>
+          </fovCurve>
+          <distanceCurve>
+            <point>0.0 0.85</point>
+            <point>1.0 0.85</point>
+          </distanceCurve>
+        </zoomDescriptor>
+        <lineOfSightRotation>
+          <horizontalRotationCurve>
+            <point>0.0 90</point>
+            <point>1.0 70</point>
+          </horizontalRotationCurve>
+          <verticalRotationCurve>
+            <point>0.0 0.0</point>
+            <point>0.6 6.0</point>
+            <point>1 4.0</point>
+          </verticalRotationCurve>
+        </lineOfSightRotation>
+        <effects>
+        </effects>
+      </cameraDescriptor>
+    </preset>
+  </presets>
+</spectatorscenario.xml>

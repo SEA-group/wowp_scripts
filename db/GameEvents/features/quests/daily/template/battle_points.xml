@@ -1,0 +1,1221 @@
+<battle_points.xml>
+  <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
+  <noNamespaceSchemaLocation>../../../../../../../tools/databundler/subscribers.xsd</noNamespaceSchemaLocation>
+  <header>
+    <type>quest</type>
+    <group>daily</group>
+    <markers>
+      <group>battle_points</group>
+    </markers>
+    <server>
+      <active>	false	</active>
+      <scope>player</scope>
+    </server>
+    <nested>
+      <subscriber>
+        <type>quest</type>
+        <group>daily.tier</group>
+      </subscriber>
+    </nested>
+  </header>
+  <include>
+    <nested>
+      <subscriber>
+        <condition>
+          <and>
+            <equal>
+              <context>arena.type</context>
+              <value>normal</value>
+            </equal>
+            <equal>
+              <context>arena.source</context>
+              <value>player</value>
+            </equal>
+          </and>
+        </condition>
+        <metadata>
+          <doneCount>	true	</doneCount>
+          <firstDoneTime>	true	</firstDoneTime>
+          <lastDoneTime>	true	</lastDoneTime>
+        </metadata>
+      </subscriber>
+    </nested>
+    <transaction>
+      <item>
+        <type>add</type>
+        <idTypeList>
+          <idType>
+            <itemId>	0	</itemId>
+            <itemType>tickets</itemType>
+          </idType>
+        </idTypeList>
+        <count>	1	</count>
+      </item>
+    </transaction>
+    <metadata>
+      <doneCount>	true	</doneCount>
+      <firstDoneTime>	true	</firstDoneTime>
+      <lastDoneTime>	true	</lastDoneTime>
+    </metadata>
+  </include>
+  <subscriber>
+    <name>	2	</name>
+    <client>
+      <name>
+        <locale>LOBBY_QUESTS_2016_DAILY_008_NAME</locale>
+      </name>
+      <description>
+        <locale>LOBBY_QUESTS_2016_DAILY_008</locale>
+      </description>
+    </client>
+    <markers>
+      <difficulty>	easy	</difficulty>
+    </markers>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <condition>
+        <equal>
+          <context>sector.status</context>
+          <value>attack</value>
+        </equal>
+      </condition>
+      <count>
+        <context>points.battle</context>
+        <value>	6000	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>finish</name>
+      <operation>
+        <self>	true	</self>
+        <rollback>	true	</rollback>
+      </operation>
+    </event>
+    <tier>
+      <name>	1	</name>
+      <transaction>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>credits</itemType>
+            </idType>
+          </idTypeList>
+          <count>	10000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+      </transaction>
+    </tier>
+    <tier>
+      <name>	2	</name>
+      <transaction>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>credits</itemType>
+            </idType>
+          </idTypeList>
+          <count>	25000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+      </transaction>
+    </tier>
+    <tier>
+      <name>	3	</name>
+      <transaction>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>credits</itemType>
+            </idType>
+          </idTypeList>
+          <count>	50000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+      </transaction>
+    </tier>
+  </subscriber>
+  <subscriber>
+    <name>	3	</name>
+    <client>
+      <name>
+        <locale>LOBBY_QUESTS_2016_DAILY_009_NAME</locale>
+      </name>
+      <description>
+        <locale>LOBBY_QUESTS_2016_DAILY_009</locale>
+      </description>
+    </client>
+    <markers>
+      <difficulty>medium</difficulty>
+    </markers>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <condition>
+        <equal>
+          <context>sector.status</context>
+          <value>attack</value>
+        </equal>
+      </condition>
+      <count>
+        <context>points.battle</context>
+        <value>	10000	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>win</name>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>finish</name>
+      <operation>
+        <self>	true	</self>
+        <rollback>	true	</rollback>
+      </operation>
+    </event>
+    <tier>
+      <name>	1	</name>
+      <transaction>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>credits</itemType>
+            </idType>
+          </idTypeList>
+          <count>	25000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+      </transaction>
+    </tier>
+    <tier>
+      <name>	2	</name>
+      <transaction>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>credits</itemType>
+            </idType>
+          </idTypeList>
+          <count>	50000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>freeexp</itemType>
+            </idType>
+          </idTypeList>
+          <count>	250	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+      </transaction>
+    </tier>
+    <tier>
+      <name>	3	</name>
+      <transaction>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>credits</itemType>
+            </idType>
+          </idTypeList>
+          <count>	100000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>freeexp</itemType>
+            </idType>
+          </idTypeList>
+          <count>	500	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+      </transaction>
+    </tier>
+  </subscriber>
+  <subscriber>
+    <name>	5	</name>
+    <client>
+      <name>
+        <locale>LOBBY_QUESTS_2016_DAILY_011_NAME</locale>
+      </name>
+      <description>
+        <locale>LOBBY_QUESTS_2016_DAILY_011</locale>
+      </description>
+    </client>
+    <markers>
+      <difficulty>medium</difficulty>
+    </markers>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <condition>
+        <equal>
+          <context>sector.status</context>
+          <value>attack</value>
+        </equal>
+      </condition>
+      <count>
+        <context>points.battle</context>
+        <value>	14000	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>death</name>
+      <operation>
+        <self>	true	</self>
+        <rollback>	true	</rollback>
+      </operation>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>finish</name>
+      <operation>
+        <self>	true	</self>
+        <rollback>	true	</rollback>
+      </operation>
+    </event>
+    <tier>
+      <name>	1	</name>
+      <transaction>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>credits</itemType>
+            </idType>
+          </idTypeList>
+          <count>	50000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+      </transaction>
+    </tier>
+    <tier>
+      <name>	2	</name>
+      <transaction>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>credits</itemType>
+            </idType>
+          </idTypeList>
+          <count>	100000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>freeexp</itemType>
+            </idType>
+          </idTypeList>
+          <count>	750	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+      </transaction>
+    </tier>
+    <tier>
+      <name>	3	</name>
+      <transaction>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>credits</itemType>
+            </idType>
+          </idTypeList>
+          <count>	150000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>freeexp</itemType>
+            </idType>
+          </idTypeList>
+          <count>	1000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+      </transaction>
+    </tier>
+  </subscriber>
+  <subscriber>
+    <name>	44	</name>
+    <client>
+      <name>
+        <locale>LOBBY_QUESTS_2016_DAILY_050_NAME</locale>
+      </name>
+      <description>
+        <locale>LOBBY_QUESTS_2016_DAILY_050</locale>
+      </description>
+    </client>
+    <markers>
+      <difficulty>	hard	</difficulty>
+    </markers>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <condition>
+        <equal>
+          <context>victim.object</context>
+          <value>ground</value>
+        </equal>
+      </condition>
+      <count>
+        <context>points.battle</context>
+        <value>	72000	</value>
+      </count>
+    </event>
+    <tier>
+      <name>	1	</name>
+      <transaction>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>credits</itemType>
+            </idType>
+          </idTypeList>
+          <count>	25000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+      </transaction>
+    </tier>
+    <tier>
+      <name>	2	</name>
+      <transaction>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>credits</itemType>
+            </idType>
+          </idTypeList>
+          <count>	50000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>freeexp</itemType>
+            </idType>
+          </idTypeList>
+          <count>	250	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+      </transaction>
+    </tier>
+    <tier>
+      <name>	3	</name>
+      <transaction>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>credits</itemType>
+            </idType>
+          </idTypeList>
+          <count>	100000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>freeexp</itemType>
+            </idType>
+          </idTypeList>
+          <count>	500	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+      </transaction>
+    </tier>
+  </subscriber>
+  <subscriber>
+    <name>	45	</name>
+    <client>
+      <name>
+        <locale>LOBBY_QUESTS_2016_DAILY_051_NAME</locale>
+      </name>
+      <description>
+        <locale>LOBBY_QUESTS_2016_DAILY_051</locale>
+      </description>
+    </client>
+    <markers>
+      <difficulty>	hard	</difficulty>
+    </markers>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <condition>
+        <and>
+          <equal>
+            <context>sector.type</context>
+            <value>airport</value>
+          </equal>
+          <equal>
+            <context>sector.status</context>
+            <value>attack</value>
+          </equal>
+        </and>
+      </condition>
+      <count>
+        <context>points.battle</context>
+        <value>	40000	</value>
+      </count>
+    </event>
+    <tier>
+      <name>	1	</name>
+      <transaction>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>credits</itemType>
+            </idType>
+          </idTypeList>
+          <count>	50000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+      </transaction>
+    </tier>
+    <tier>
+      <name>	2	</name>
+      <transaction>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>credits</itemType>
+            </idType>
+          </idTypeList>
+          <count>	100000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>freeexp</itemType>
+            </idType>
+          </idTypeList>
+          <count>	750	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+      </transaction>
+    </tier>
+    <tier>
+      <name>	3	</name>
+      <transaction>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>credits</itemType>
+            </idType>
+          </idTypeList>
+          <count>	150000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>freeexp</itemType>
+            </idType>
+          </idTypeList>
+          <count>	1000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+      </transaction>
+    </tier>
+  </subscriber>
+  <subscriber>
+    <name>	46	</name>
+    <client>
+      <name>
+        <locale>LOBBY_QUESTS_2016_DAILY_052_NAME</locale>
+      </name>
+      <description>
+        <locale>LOBBY_QUESTS_2016_DAILY_052</locale>
+      </description>
+    </client>
+    <markers>
+      <difficulty>	hard	</difficulty>
+    </markers>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <condition>
+        <and>
+          <equal>
+            <context>sector.type</context>
+            <value>plant</value>
+          </equal>
+          <equal>
+            <context>sector.status</context>
+            <value>attack</value>
+          </equal>
+        </and>
+      </condition>
+      <count>
+        <context>points.battle</context>
+        <value>	40000	</value>
+      </count>
+    </event>
+    <tier>
+      <name>	1	</name>
+      <transaction>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>credits</itemType>
+            </idType>
+          </idTypeList>
+          <count>	50000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+      </transaction>
+    </tier>
+    <tier>
+      <name>	2	</name>
+      <transaction>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>credits</itemType>
+            </idType>
+          </idTypeList>
+          <count>	100000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>freeexp</itemType>
+            </idType>
+          </idTypeList>
+          <count>	750	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+      </transaction>
+    </tier>
+    <tier>
+      <name>	3	</name>
+      <transaction>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>credits</itemType>
+            </idType>
+          </idTypeList>
+          <count>	150000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>freeexp</itemType>
+            </idType>
+          </idTypeList>
+          <count>	1000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+      </transaction>
+    </tier>
+  </subscriber>
+  <subscriber>
+    <name>	47	</name>
+    <client>
+      <name>
+        <locale>LOBBY_QUESTS_2016_DAILY_053_NAME</locale>
+      </name>
+      <description>
+        <locale>LOBBY_QUESTS_2016_DAILY_053</locale>
+      </description>
+    </client>
+    <markers>
+      <difficulty>	hard	</difficulty>
+    </markers>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <condition>
+        <and>
+          <equal>
+            <context>sector.type</context>
+            <value>	base	</value>
+          </equal>
+          <equal>
+            <context>sector.status</context>
+            <value>attack</value>
+          </equal>
+        </and>
+      </condition>
+      <count>
+        <context>points.battle</context>
+        <value>	40000	</value>
+      </count>
+    </event>
+    <tier>
+      <name>	1	</name>
+      <transaction>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>credits</itemType>
+            </idType>
+          </idTypeList>
+          <count>	50000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+      </transaction>
+    </tier>
+    <tier>
+      <name>	2	</name>
+      <transaction>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>credits</itemType>
+            </idType>
+          </idTypeList>
+          <count>	100000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>freeexp</itemType>
+            </idType>
+          </idTypeList>
+          <count>	750	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+      </transaction>
+    </tier>
+    <tier>
+      <name>	3	</name>
+      <transaction>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>credits</itemType>
+            </idType>
+          </idTypeList>
+          <count>	150000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>freeexp</itemType>
+            </idType>
+          </idTypeList>
+          <count>	1000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+      </transaction>
+    </tier>
+  </subscriber>
+  <subscriber>
+    <name>	48	</name>
+    <client>
+      <name>
+        <locale>LOBBY_QUESTS_2016_DAILY_054_NAME</locale>
+      </name>
+      <description>
+        <locale>LOBBY_QUESTS_2016_DAILY_054</locale>
+      </description>
+    </client>
+    <markers>
+      <difficulty>	hard	</difficulty>
+    </markers>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <condition>
+        <and>
+          <equal>
+            <context>sector.type</context>
+            <value>center</value>
+          </equal>
+          <equal>
+            <context>sector.status</context>
+            <value>attack</value>
+          </equal>
+        </and>
+      </condition>
+      <count>
+        <context>points.battle</context>
+        <value>	40000	</value>
+      </count>
+    </event>
+    <tier>
+      <name>	1	</name>
+      <transaction>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>credits</itemType>
+            </idType>
+          </idTypeList>
+          <count>	50000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+      </transaction>
+    </tier>
+    <tier>
+      <name>	2	</name>
+      <transaction>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>credits</itemType>
+            </idType>
+          </idTypeList>
+          <count>	100000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>freeexp</itemType>
+            </idType>
+          </idTypeList>
+          <count>	750	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+      </transaction>
+    </tier>
+    <tier>
+      <name>	3	</name>
+      <transaction>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>credits</itemType>
+            </idType>
+          </idTypeList>
+          <count>	150000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>freeexp</itemType>
+            </idType>
+          </idTypeList>
+          <count>	1000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+      </transaction>
+    </tier>
+  </subscriber>
+  <subscriber>
+    <name>	54	</name>
+    <client>
+      <name>
+        <locale>LOBBY_QUESTS_2016_DAILY_060_NAME</locale>
+      </name>
+      <description>
+        <locale>LOBBY_QUESTS_2016_DAILY_060</locale>
+      </description>
+    </client>
+    <markers>
+      <difficulty>	easy	</difficulty>
+    </markers>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <condition>
+        <equal>
+          <context>victim.object</context>
+          <value>ground</value>
+        </equal>
+      </condition>
+      <count>
+        <context>points.battle</context>
+        <value>	9000	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>finish</name>
+      <operation>
+        <self>	true	</self>
+        <rollback>	true	</rollback>
+      </operation>
+    </event>
+    <tier>
+      <name>	1	</name>
+      <transaction>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>credits</itemType>
+            </idType>
+          </idTypeList>
+          <count>	25000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+      </transaction>
+    </tier>
+    <tier>
+      <name>	2	</name>
+      <transaction>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>credits</itemType>
+            </idType>
+          </idTypeList>
+          <count>	50000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+      </transaction>
+    </tier>
+    <tier>
+      <name>	3	</name>
+      <transaction>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>credits</itemType>
+            </idType>
+          </idTypeList>
+          <count>	100000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+      </transaction>
+    </tier>
+  </subscriber>
+  <subscriber>
+    <name>	93	</name>
+    <client>
+      <name>
+        <locale>LOBBY_QUESTS_2017_DAILY_004_NAME</locale>
+      </name>
+      <description>
+        <locale>LOBBY_QUESTS_2017_DAILY_004</locale>
+      </description>
+    </client>
+    <markers>
+      <difficulty>	easy	</difficulty>
+    </markers>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <condition>
+        <and>
+          <in>
+            <context>sector.type</context>
+            <value>plant</value>
+            <value>center</value>
+          </in>
+          <in>
+            <context>player.plane.type</context>
+            <value>assault</value>
+            <value>bomber</value>
+          </in>
+        </and>
+      </condition>
+      <count>
+        <context>points.battle</context>
+        <value>	6000	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>finish</name>
+      <operation>
+        <self>	true	</self>
+        <rollback>	true	</rollback>
+      </operation>
+    </event>
+    <tier>
+      <name>	1	</name>
+      <transaction>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>credits</itemType>
+            </idType>
+          </idTypeList>
+          <count>	25000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+      </transaction>
+    </tier>
+    <tier>
+      <name>	2	</name>
+      <transaction>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>credits</itemType>
+            </idType>
+          </idTypeList>
+          <count>	50000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+      </transaction>
+    </tier>
+    <tier>
+      <name>	3	</name>
+      <transaction>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>credits</itemType>
+            </idType>
+          </idTypeList>
+          <count>	100000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+      </transaction>
+    </tier>
+  </subscriber>
+  <subscriber>
+    <name>	94	</name>
+    <client>
+      <name>
+        <locale>LOBBY_QUESTS_2017_DAILY_005_NAME</locale>
+      </name>
+      <description>
+        <locale>LOBBY_QUESTS_2017_DAILY_005</locale>
+      </description>
+    </client>
+    <markers>
+      <difficulty>	easy	</difficulty>
+    </markers>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>	gain	</name>
+      <condition>
+        <and>
+          <in>
+            <context>sector.type</context>
+            <value>airport</value>
+            <value>center</value>
+          </in>
+          <in>
+            <context>player.plane.type</context>
+            <value>fighter</value>
+            <value>heavy.fighter</value>
+            <value>	navy	</value>
+          </in>
+        </and>
+      </condition>
+      <count>
+        <context>points.battle</context>
+        <value>	6000	</value>
+      </count>
+    </event>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>finish</name>
+      <operation>
+        <self>	true	</self>
+        <rollback>	true	</rollback>
+      </operation>
+    </event>
+    <tier>
+      <name>	1	</name>
+      <transaction>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>credits</itemType>
+            </idType>
+          </idTypeList>
+          <count>	25000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+      </transaction>
+    </tier>
+    <tier>
+      <name>	2	</name>
+      <transaction>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>credits</itemType>
+            </idType>
+          </idTypeList>
+          <count>	50000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+      </transaction>
+    </tier>
+    <tier>
+      <name>	3	</name>
+      <transaction>
+        <item>
+          <type>add</type>
+          <idTypeList>
+            <idType>
+              <itemId>	0	</itemId>
+              <itemType>credits</itemType>
+            </idType>
+          </idTypeList>
+          <count>	100000	</count>
+          <kwargs>
+          </kwargs>
+        </item>
+      </transaction>
+    </tier>
+  </subscriber>
+</battle_points.xml>

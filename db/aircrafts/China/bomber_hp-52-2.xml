@@ -1,0 +1,2258 @@
+<bomber_hp-52-2.xml>
+  <parent>base_metal_big.xml</parent>
+  <Components>
+    <Weapons2>
+      <slot>
+        <id>	0	</id>
+        <name>	FUSELAGE	</name>
+        <type>
+          <id>	0	</id>
+          <linkedModels>
+            <visual>
+              <parentUpgrade>	1	</parentUpgrade>
+              <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/gun_01.model</model>
+              <mountPath>hull/HP_gun_01</mountPath>
+            </visual>
+          </linkedModels>
+          <weapon>
+            <name>Bot_fake_gun</name>
+            <flamePath>hull/HP_gun_01/HP_flame</flamePath>
+            <ammoBelt>generalPurposeBelt</ammoBelt>
+            <weaponGroup>	1	</weaponGroup>
+          </weapon>
+        </type>
+      </slot>
+      <slot>
+        <id>	1	</id>
+        <name>PODVES</name>
+        <type>
+          <id>	0	</id>
+        </type>
+        <type>
+          <id>	1	</id>
+          <hidden>	1	</hidden>
+          <linkedModels>
+            <visual>
+              <parentUpgrade>	1	</parentUpgrade>
+              <model>vehicles/Shells/Other/pilons/invisible_pilon2_2.model</model>
+              <mountPath>hull/HP_bomb_01</mountPath>
+            </visual>
+          </linkedModels>
+          <weapon>
+            <name>250FN_Bomber_HP-52</name>
+            <flamePath>hull/HP_bomb_01/HP_flame_01</flamePath>
+            <weaponGroup>	4	</weaponGroup>
+          </weapon>
+          <weapon>
+            <name>250FN_Bomber_HP-52</name>
+            <flamePath>hull/HP_bomb_01/HP_flame_02</flamePath>
+            <weaponGroup>	4	</weaponGroup>
+          </weapon>
+          <weapon>
+            <name>250FN_Bomber_HP-52</name>
+            <flamePath>hull/HP_bomb_01/HP_flame_03</flamePath>
+            <weaponGroup>	4	</weaponGroup>
+          </weapon>
+          <weapon>
+            <name>250FN_Bomber_HP-52</name>
+            <flamePath>hull/HP_bomb_01/HP_flame_04</flamePath>
+            <weaponGroup>	4	</weaponGroup>
+          </weapon>
+          <weapon>
+            <name>250FN_Bomber_HP-52</name>
+            <flamePath>hull/HP_bomb_01/HP_flame_05</flamePath>
+            <weaponGroup>	4	</weaponGroup>
+          </weapon>
+          <weapon>
+            <name>250FN_Bomber_HP-52</name>
+            <flamePath>hull/HP_bomb_01/HP_flame_06</flamePath>
+            <weaponGroup>	4	</weaponGroup>
+          </weapon>
+          <weapon>
+            <name>250FN_Bomber_HP-52</name>
+            <flamePath>hull/HP_bomb_01/HP_flame_07</flamePath>
+            <weaponGroup>	4	</weaponGroup>
+          </weapon>
+          <weapon>
+            <name>250FN_Bomber_HP-52</name>
+            <flamePath>hull/HP_bomb_01/HP_flame_08</flamePath>
+            <weaponGroup>	4	</weaponGroup>
+          </weapon>
+          <weapon>
+            <name>250FN_Bomber_HP-52</name>
+            <flamePath>hull/HP_bomb_01/HP_flame_09</flamePath>
+            <weaponGroup>	4	</weaponGroup>
+          </weapon>
+          <weapon>
+            <name>250FN_Bomber_HP-52</name>
+            <flamePath>hull/HP_bomb_01/HP_flame_10</flamePath>
+            <weaponGroup>	4	</weaponGroup>
+          </weapon>
+        </type>
+      </slot>
+    </Weapons2>
+  </Components>
+  <Airplane>
+    <name>Bomber_HP-52-2</name>
+    <bBoxes>
+      <mainBox>
+        <size>14 4 14</size>
+      </mainBox>
+    </bBoxes>
+    <hudIcoPath>icons/planes/gb/blenheim.dds</hudIcoPath>
+    <iconPath>icons/hangarCarousel/planes/gb/blenheim.dds</iconPath>
+    <treeIconPath>icons/planesTree/gb/blenheim.dds</treeIconPath>
+    <battleLoadingIconPath>icons/planesPreview/gb/blenheim.dds</battleLoadingIconPath>
+    <previewIconPath>icons/planesPreview/gb/blenheim.dds</previewIconPath>
+    <longName>Handley Page HP.52 Hampden</longName>
+    <parts>
+      <part>
+        <name>	hull	</name>
+        <partId>	1	</partId>
+        <mountPoint>
+        </mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <bBoxes>
+            <bbox>
+              <position>	0.000000 -0.121950 0.098100	</position>
+              <size>	0.841500 1.476900 6.717600	</size>
+              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 5.000000	</armorBack>
+              <absorption>	0.800000	</absorption>
+              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+            <bbox>
+              <position>	0.000000 0.396000 -5.924700	</position>
+              <size>	0.777600 0.752400 9.810000	</size>
+              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 5.000000	</armorBack>
+              <absorption>	0.800000	</absorption>
+              <rotation>	0.010000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+            <bbox>
+              <position>	0.000000 0.860850 -0.561600	</position>
+              <size>	0.789300 0.940500 3.147300	</size>
+              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 5.000000	</armorBack>
+              <absorption>	0.800000	</absorption>
+              <rotation>	0.010000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+          </bBoxes>
+          <health>100%</health>
+          <componentType>	Hull	</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/fuselage_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/gun_03.model</model>
+                  <mountPoint>HP_gun_03</mountPoint>
+                  <animatorName>
+                  </animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/cockpit_A_01.model</model>
+                  <mountPoint>HP_cockpit_A</mountPoint>
+                  <animatorName>
+                  </animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/hatchL_01.model</model>
+                  <mountPoint>HP_hatchL</mountPoint>
+                  <animatorName>	BombHatchControllerL	</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/hatchR_01.model</model>
+                  <mountPoint>HP_hatchR</mountPoint>
+                  <animatorName>	BombHatchControllerR	</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/cockpit_B_01.model</model>
+                  <mountPoint>HP_cockpit_B</mountPoint>
+                  <animatorName>
+                  </animatorName>
+                </item>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.550000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/fuselage_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/gun_03.model</model>
+                  <mountPoint>HP_gun_03</mountPoint>
+                  <animatorName>
+                  </animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/cockpit_A_01.model</model>
+                  <mountPoint>HP_cockpit_A</mountPoint>
+                  <animatorName>
+                  </animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/hatchL_01.model</model>
+                  <mountPoint>HP_hatchL</mountPoint>
+                  <animatorName>	BombHatchControllerL	</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/hatchR_01.model</model>
+                  <mountPoint>HP_hatchR</mountPoint>
+                  <animatorName>	BombHatchControllerR	</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/cockpit_B_01.model</model>
+                  <mountPoint>HP_cockpit_B</mountPoint>
+                  <animatorName>
+                  </animatorName>
+                </item>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/fuselage_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/gun_03.model</model>
+                  <mountPoint>HP_gun_03</mountPoint>
+                  <animatorName>
+                  </animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/cockpit_A_01.model</model>
+                  <mountPoint>HP_cockpit_A</mountPoint>
+                  <animatorName>
+                  </animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/hatchL_01.model</model>
+                  <mountPoint>HP_hatchL</mountPoint>
+                  <animatorName>	BombHatchControllerL	</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/hatchR_01.model</model>
+                  <mountPoint>HP_hatchR</mountPoint>
+                  <animatorName>	BombHatchControllerR	</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/cockpit_B_01.model</model>
+                  <mountPoint>HP_cockpit_B</mountPoint>
+                  <animatorName>
+                  </animatorName>
+                </item>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/fuselage_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/cockpit_A_01.model</model>
+                  <mountPoint>HP_cockpit_A</mountPoint>
+                  <animatorName>
+                  </animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/hatchL_01.model</model>
+                  <mountPoint>HP_hatchL</mountPoint>
+                  <animatorName>	BombHatchControllerL	</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/hatchR_01.model</model>
+                  <mountPoint>HP_hatchR</mountPoint>
+                  <animatorName>	BombHatchControllerR	</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/cockpit_B_01.model</model>
+                  <mountPoint>HP_cockpit_B</mountPoint>
+                  <animatorName>
+                  </animatorName>
+                </item>
+              </subItems>
+              <stateAction>	1	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>engineL</name>
+        <partId>	2	</partId>
+        <mountPoint>hull/HP_engineL</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <bBoxes>
+            <bbox>
+              <position>	-2.643300 0.006750 0.590850	</position>
+              <size>	1.277100 1.271700 3.225600	</size>
+              <armorFront>	30.000000 30.000000 60.000000	</armorFront>
+              <armorBack>	30.000000 30.000000 30.000000	</armorBack>
+              <absorption>	1.000000	</absorption>
+              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+          </bBoxes>
+          <health>50%</health>
+          <componentType>Engine</componentType>
+          <componentPosition>	Left	</componentPosition>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/engineL_01.model</model>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/rotorL_01.model</model>
+                  <mountPoint>HP_rotorL</mountPoint>
+                  <animatorName>PropellorController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/propellerL_01.model</model>
+                  <mountPoint>HP_rotorL</mountPoint>
+                  <animatorName>PropellorMeshController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/rotorTextureL_01.model</model>
+                  <mountPoint>HP_rotorL</mountPoint>
+                  <animatorName>PropellorTextureController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/rotorTextureForsageL_01.model</model>
+                  <mountPoint>HP_rotorL</mountPoint>
+                  <animatorName>PropellorTextureForsageController</animatorName>
+                </item>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <effectState>
+              </effectState>
+              <effectsTriggered>
+                <effect>
+                  <trigger>BOMBERS_TRAIL_INIT</trigger>
+                  <name>strike_aim_trail_on_engine</name>
+                  <mountPoint>hull/HP_engineL</mountPoint>
+                </effect>
+              </effectsTriggered>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.400000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/engineL_01.model</model>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/rotorL_01.model</model>
+                  <mountPoint>HP_rotorL</mountPoint>
+                  <animatorName>PropellorController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/propellerL_01.model</model>
+                  <mountPoint>HP_rotorL</mountPoint>
+                  <animatorName>PropellorMeshController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/rotorTextureL_01.model</model>
+                  <mountPoint>HP_rotorL</mountPoint>
+                  <animatorName>PropellorTextureController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/rotorTextureForsageL_01.model</model>
+                  <mountPoint>HP_rotorL</mountPoint>
+                  <animatorName>PropellorTextureForsageController</animatorName>
+                </item>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <effectState>
+                <effect>
+                  <name>crit_engine_damaged_yellow</name>
+                  <mountPoint>plane/HP_nozzle_01</mountPoint>
+                </effect>
+              </effectState>
+              <effectsTriggered>
+                <effect>
+                  <trigger>BOMBERS_TRAIL_INIT</trigger>
+                  <name>strike_aim_trail_on_engine</name>
+                  <mountPoint>hull/HP_engineL</mountPoint>
+                </effect>
+              </effectsTriggered>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.400000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/engineL_01.model</model>
+              <effectOnStart>
+                <effect>
+                  <name>crit_engine_expl</name>
+                  <mountPoint>plane/HP_nozzle_01</mountPoint>
+                </effect>
+              </effectOnStart>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/rotorL_01.model</model>
+                  <mountPoint>HP_rotorL</mountPoint>
+                  <animatorName>PropellorController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/propellerL_01.model</model>
+                  <mountPoint>HP_rotorL</mountPoint>
+                  <animatorName>PropellorMeshController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/rotorTextureL_01.model</model>
+                  <mountPoint>HP_rotorL</mountPoint>
+                  <animatorName>PropellorTextureController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/rotorTextureForsageL_01.model</model>
+                  <mountPoint>HP_rotorL</mountPoint>
+                  <animatorName>PropellorTextureForsageController</animatorName>
+                </item>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <effectState>
+                <effect>
+                  <name>crit_engine_damaged</name>
+                  <mountPoint>plane/HP_nozzle_01</mountPoint>
+                </effect>
+              </effectState>
+              <effectsTriggered>
+                <effect>
+                  <trigger>BOMBERS_TRAIL_INIT</trigger>
+                  <name>strike_aim_trail_on_engine</name>
+                  <mountPoint>hull/HP_engineL</mountPoint>
+                </effect>
+              </effectsTriggered>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/engineL_01.model</model>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/rotorL_01.model</model>
+                  <mountPoint>HP_rotorL</mountPoint>
+                  <animatorName>PropellorController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/propellerL_01.model</model>
+                  <mountPoint>HP_rotorL</mountPoint>
+                  <animatorName>PropellorMeshController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/rotorTextureL_01.model</model>
+                  <mountPoint>HP_rotorL</mountPoint>
+                  <animatorName>PropellorTextureController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/rotorTextureForsageL_01.model</model>
+                  <mountPoint>HP_rotorL</mountPoint>
+                  <animatorName>PropellorTextureForsageController</animatorName>
+                </item>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <effectState>
+                <effect>
+                  <name>crit_engine_damaged</name>
+                  <mountPoint>plane/HP_nozzle_01</mountPoint>
+                </effect>
+              </effectState>
+            </state>
+          </states>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	20.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>engineR</name>
+        <partId>	3	</partId>
+        <mountPoint>hull/HP_engineR</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <bBoxes>
+            <bbox>
+              <position>	2.643300 0.006750 0.590850	</position>
+              <size>	1.277100 1.271700 3.225600	</size>
+              <armorFront>	30.000000 30.000000 60.000000	</armorFront>
+              <armorBack>	30.000000 30.000000 30.000000	</armorBack>
+              <absorption>	1.000000	</absorption>
+              <rotation>	0.000000 0.000000 0.000000 -1.000000	</rotation>
+            </bbox>
+          </bBoxes>
+          <health>50%</health>
+          <componentType>Engine</componentType>
+          <componentPosition>Right</componentPosition>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/engineR_01.model</model>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/rotorR_01.model</model>
+                  <mountPoint>HP_rotorR</mountPoint>
+                  <animatorName>PropellorController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/propellerR_01.model</model>
+                  <mountPoint>HP_rotorR</mountPoint>
+                  <animatorName>PropellorMeshController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/rotorTextureR_01.model</model>
+                  <mountPoint>HP_rotorR</mountPoint>
+                  <animatorName>PropellorTextureController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/rotorTextureForsageR_01.model</model>
+                  <mountPoint>HP_rotorR</mountPoint>
+                  <animatorName>PropellorTextureForsageController</animatorName>
+                </item>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <effectState>
+              </effectState>
+              <effectsTriggered>
+                <effect>
+                  <trigger>BOMBERS_TRAIL_INIT</trigger>
+                  <name>strike_aim_trail_on_engine</name>
+                  <mountPoint>hull/HP_engineR</mountPoint>
+                </effect>
+              </effectsTriggered>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.400000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/engineR_01.model</model>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/rotorR_01.model</model>
+                  <mountPoint>HP_rotorR</mountPoint>
+                  <animatorName>PropellorController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/propellerR_01.model</model>
+                  <mountPoint>HP_rotorR</mountPoint>
+                  <animatorName>PropellorMeshController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/rotorTextureR_01.model</model>
+                  <mountPoint>HP_rotorR</mountPoint>
+                  <animatorName>PropellorTextureController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/rotorTextureForsageL_01.model</model>
+                  <mountPoint>HP_rotorR</mountPoint>
+                  <animatorName>PropellorTextureForsageController</animatorName>
+                </item>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <effectState>
+                <effect>
+                  <name>crit_engine_damaged_yellow</name>
+                  <mountPoint>plane/HP_nozzle_02</mountPoint>
+                </effect>
+              </effectState>
+              <effectsTriggered>
+                <effect>
+                  <trigger>BOMBERS_TRAIL_INIT</trigger>
+                  <name>strike_aim_trail_on_engine</name>
+                  <mountPoint>hull/HP_engineR</mountPoint>
+                </effect>
+              </effectsTriggered>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.400000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/engineR_01.model</model>
+              <effectOnStart>
+                <effect>
+                  <name>crit_engine_expl</name>
+                  <mountPoint>plane/HP_nozzle_02</mountPoint>
+                </effect>
+              </effectOnStart>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/rotorR_01.model</model>
+                  <mountPoint>HP_rotorR</mountPoint>
+                  <animatorName>PropellorController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/propellerR_01.model</model>
+                  <mountPoint>HP_rotorR</mountPoint>
+                  <animatorName>PropellorMeshController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/rotorTextureR_01.model</model>
+                  <mountPoint>HP_rotorR</mountPoint>
+                  <animatorName>PropellorTextureController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/rotorTextureForsageL_01.model</model>
+                  <mountPoint>HP_rotorR</mountPoint>
+                  <animatorName>PropellorTextureForsageController</animatorName>
+                </item>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <effectState>
+                <effect>
+                  <name>crit_engine_damaged</name>
+                  <mountPoint>plane/HP_nozzle_02</mountPoint>
+                </effect>
+              </effectState>
+              <effectsTriggered>
+                <effect>
+                  <trigger>BOMBERS_TRAIL_INIT</trigger>
+                  <name>strike_aim_trail_on_engine</name>
+                  <mountPoint>hull/HP_engineR</mountPoint>
+                </effect>
+              </effectsTriggered>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/engineR_01.model</model>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/rotorL_01.model</model>
+                  <mountPoint>HP_rotorR</mountPoint>
+                  <animatorName>PropellorController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/propellerL_01.model</model>
+                  <mountPoint>HP_rotorR</mountPoint>
+                  <animatorName>PropellorMeshController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/rotorTextureL_01.model</model>
+                  <mountPoint>HP_rotorR</mountPoint>
+                  <animatorName>PropellorTextureController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/rotorTextureForsageL_01.model</model>
+                  <mountPoint>HP_rotorR</mountPoint>
+                  <animatorName>PropellorTextureForsageController</animatorName>
+                </item>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <effectState>
+                <effect>
+                  <name>crit_engine_damaged</name>
+                  <mountPoint>plane/HP_nozzle_02</mountPoint>
+                </effect>
+              </effectState>
+            </state>
+          </states>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	20.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>pilot</name>
+        <partId>	4	</partId>
+        <mountPoint>HP_pilot_01</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <bBoxes>
+            <bbox>
+              <position>	0.000000 0.869400 1.364400	</position>
+              <size>	1.000000 1.000000 1.000000	</size>
+              <armorFront>	5.000000 5.000000 5.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 40.000000	</armorBack>
+              <absorption>	1.000000	</absorption>
+              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+          </bBoxes>
+          <health>10%</health>
+          <componentType>Pilot</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/pilot_01.model</model>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <usage>
+              </usage>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateAnimation>
+              </stateAnimation>
+              <animationController>
+              </animationController>
+            </state>
+            <state>
+              <id>	2	</id>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/pilot_01.model</model>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <usage>
+              </usage>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateAnimation>
+              </stateAnimation>
+              <animationController>
+              </animationController>
+            </state>
+            <state>
+              <id>	3	</id>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>
+              </model>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <usage>fall, crash</usage>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateAnimation>
+              </stateAnimation>
+              <animationController>
+              </animationController>
+            </state>
+            <state>
+              <id>	4	</id>
+              <stateHelthCfc>	-1.000000	</stateHelthCfc>
+              <model>
+              </model>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <usage>hangar</usage>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateAnimation>
+              </stateAnimation>
+              <animationController>
+              </animationController>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>gunner</name>
+        <partId>	5	</partId>
+        <mountPoint>HP_pilot_02</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <bBoxes>
+            <bbox>
+              <position>	0.000000 0.843750 -2.581200	</position>
+              <size>	1.000000 1.000000 1.000000	</size>
+              <armorFront>	5.000000 5.000000 5.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 40.000000	</armorBack>
+              <absorption>	0.800000	</absorption>
+              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+          </bBoxes>
+          <health>10%</health>
+          <componentType>Gunner1</componentType>
+          <componentXml>t-bomber_hp-52-2</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/pilot_02.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <usage>
+              </usage>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/pilot_02.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <usage>
+              </usage>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <usage>fall, crash</usage>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	4	</id>
+              <stateHelthCfc>	-1.000000	</stateHelthCfc>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <usage>hangar</usage>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>gunner_02</name>
+        <partId>	6	</partId>
+        <mountPoint>HP_pilot_03</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <health>10%</health>
+          <componentType>
+          </componentType>
+          <componentXml>
+          </componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/pilot_03.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <usage>
+              </usage>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/pilot_03.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <usage>
+              </usage>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <usage>fall, crash</usage>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	4	</id>
+              <stateHelthCfc>	-1.000000	</stateHelthCfc>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <usage>hangar</usage>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>cockpit</name>
+        <partId>	7	</partId>
+        <mountPoint>HP_cockpit</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <health>20%</health>
+          <componentType>Cockpit</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/cockpit_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.800000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/cockpit_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/cockpit_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>	leftWing	</name>
+        <partId>	8	</partId>
+        <mountPoint>HP_wL</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <bBoxes>
+            <bbox>
+              <position>	-2.769300 0.058050 -1.630800	</position>
+              <size>	4.385700 0.390600 3.907800	</size>
+              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 10.000000	</armorBack>
+              <absorption>	0.200000	</absorption>
+              <rotation>	0.000000 0.000000 -0.020000 1.000000	</rotation>
+            </bbox>
+            <bbox>
+              <position>	-7.604100 0.370350 -0.833400	</position>
+              <size>	5.148900 0.292500 2.280600	</size>
+              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 10.000000	</armorBack>
+              <absorption>	0.200000	</absorption>
+              <rotation>	0.000000 0.000000 -0.049414 0.998778	</rotation>
+            </bbox>
+          </bBoxes>
+          <health>32%</health>
+          <componentType>	LeftWing	</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/wL_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/aileronL_01.model</model>
+                  <mountPoint>HP_aileronL</mountPoint>
+                  <animatorName>LeftAileronController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/FlapL_01.model</model>
+                  <mountPoint>HP_flapL</mountPoint>
+                  <animatorName>FlapsController</animatorName>
+                </item>
+              </subItems>
+              <effectsTriggered>
+                <effect>
+                  <trigger>	LOFT	</trigger>
+                  <name>EFFECT_LOFT</name>
+                  <mountPoint>plane/HP_trailL</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.550000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/wL_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/aileronL_01.model</model>
+                  <mountPoint>HP_aileronL</mountPoint>
+                  <animatorName>LeftAileronController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/FlapL_01.model</model>
+                  <mountPoint>HP_flapL</mountPoint>
+                  <animatorName>FlapsController</animatorName>
+                </item>
+              </subItems>
+              <effectsTriggered>
+                <effect>
+                  <trigger>	LOFT	</trigger>
+                  <name>EFFECT_LOFT</name>
+                  <mountPoint>plane/HP_trailL</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.550000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/wL_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/aileronL_01.model</model>
+                  <mountPoint>HP_aileronL</mountPoint>
+                  <animatorName>LeftAileronController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/FlapL_01.model</model>
+                  <mountPoint>HP_flapL</mountPoint>
+                  <animatorName>FlapsController</animatorName>
+                </item>
+              </subItems>
+              <effectOnStart>
+                <effect>
+                  <name>crit_wing_expl</name>
+                  <mountPoint>plane/HP_trailL</mountPoint>
+                </effect>
+              </effectOnStart>
+              <effectsTriggered>
+                <effect>
+                  <trigger>	LOFT	</trigger>
+                  <name>EFFECT_LOFT</name>
+                  <mountPoint>plane/HP_trailL</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/wLcap_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/FlapL_01.model</model>
+                  <mountPoint>HP_flapL</mountPoint>
+                  <animatorName>FlapsController</animatorName>
+                </item>
+              </subItems>
+              <stateAction>	1	</stateAction>
+              <fallingOutModel>vehicles/airplanes/bots/BT08_HP52/crash/lod0/wLend_01.model</fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>rightWing</name>
+        <partId>	9	</partId>
+        <mountPoint>HP_wR</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <bBoxes>
+            <bbox>
+              <position>	2.769300 0.058050 -1.630800	</position>
+              <size>	4.385700 0.390600 3.907800	</size>
+              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 10.000000	</armorBack>
+              <absorption>	0.200000	</absorption>
+              <rotation>	0.000000 0.000000 -0.020000 -1.000000	</rotation>
+            </bbox>
+            <bbox>
+              <position>	7.604100 0.370350 -0.833400	</position>
+              <size>	5.148900 0.292500 2.280600	</size>
+              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 10.000000	</armorBack>
+              <absorption>	0.200000	</absorption>
+              <rotation>	0.000000 0.000000 -0.049414 -0.998778	</rotation>
+            </bbox>
+          </bBoxes>
+          <health>32%</health>
+          <componentType>RightWing</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/wR_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/aileronR_01.model</model>
+                  <mountPoint>HP_aileronR</mountPoint>
+                  <animatorName>RightAileronController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/FlapR_01.model</model>
+                  <mountPoint>HP_flapR</mountPoint>
+                  <animatorName>FlapsController</animatorName>
+                </item>
+              </subItems>
+              <effectsTriggered>
+                <effect>
+                  <trigger>	LOFT	</trigger>
+                  <name>EFFECT_LOFT</name>
+                  <mountPoint>plane/HP_trailR</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.550000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/wR_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/aileronR_01.model</model>
+                  <mountPoint>HP_aileronR</mountPoint>
+                  <animatorName>RightAileronController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/FlapR_01.model</model>
+                  <mountPoint>HP_flapR</mountPoint>
+                  <animatorName>FlapsController</animatorName>
+                </item>
+              </subItems>
+              <effectsTriggered>
+                <effect>
+                  <trigger>	LOFT	</trigger>
+                  <name>EFFECT_LOFT</name>
+                  <mountPoint>plane/HP_trailR</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.550000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/wR_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/aileronR_01.model</model>
+                  <mountPoint>HP_aileronR</mountPoint>
+                  <animatorName>RightAileronController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/FlapR_01.model</model>
+                  <mountPoint>HP_flapR</mountPoint>
+                  <animatorName>FlapsController</animatorName>
+                </item>
+              </subItems>
+              <effectOnStart>
+                <effect>
+                  <name>crit_wing_expl_right</name>
+                  <mountPoint>plane/HP_trailR</mountPoint>
+                </effect>
+              </effectOnStart>
+              <effectsTriggered>
+                <effect>
+                  <trigger>	LOFT	</trigger>
+                  <name>EFFECT_LOFT</name>
+                  <mountPoint>plane/HP_trailR</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/wRcap_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/FlapR_01.model</model>
+                  <mountPoint>HP_flapR</mountPoint>
+                  <animatorName>FlapsController</animatorName>
+                </item>
+              </subItems>
+              <stateAction>	1	</stateAction>
+              <fallingOutModel>vehicles/airplanes/bots/BT08_HP52/crash/lod0/wRend_01.model</fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>	tail	</name>
+        <partId>	10	</partId>
+        <mountPoint>HP_tail</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <bBoxes>
+            <bbox>
+              <position>	0.000000 0.544050 -11.106450	</position>
+              <size>	5.934600 0.180000 1.530000	</size>
+              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 10.000000	</armorBack>
+              <absorption>	0.200000	</absorption>
+              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+            <bbox>
+              <position>	2.451600 1.017900 -11.355750	</position>
+              <size>	0.180000 1.607400 1.258200	</size>
+              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 10.000000	</armorBack>
+              <absorption>	0.200000	</absorption>
+              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+            <bbox>
+              <position>	-2.451600 1.017900 -11.355750	</position>
+              <size>	0.180000 1.607400 1.258200	</size>
+              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
+              <armorBack>	5.000000 5.000000 10.000000	</armorBack>
+              <absorption>	0.200000	</absorption>
+              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+          </bBoxes>
+          <health>32%</health>
+          <componentType>	Tail	</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/tail_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/elevator_01.model</model>
+                  <mountPoint>HP_elevator</mountPoint>
+                  <animatorName>ElevatorController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/rudderL_01.model</model>
+                  <mountPoint>HP_rudderL</mountPoint>
+                  <animatorName>	RudderController	</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/rudderR_01.model</model>
+                  <mountPoint>HP_rudderR</mountPoint>
+                  <animatorName>	RudderController	</animatorName>
+                </item>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.600000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/tail_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/elevator_01.model</model>
+                  <mountPoint>HP_elevator</mountPoint>
+                  <animatorName>ElevatorController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/rudderL_01.model</model>
+                  <mountPoint>HP_rudderL</mountPoint>
+                  <animatorName>	RudderController	</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/rudderR_01.model</model>
+                  <mountPoint>HP_rudderR</mountPoint>
+                  <animatorName>	RudderController	</animatorName>
+                </item>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.600000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/tail_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/elevator_01.model</model>
+                  <mountPoint>HP_elevator</mountPoint>
+                  <animatorName>ElevatorController</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/rudderL_01.model</model>
+                  <mountPoint>HP_rudderL</mountPoint>
+                  <animatorName>	RudderController	</animatorName>
+                </item>
+                <item>
+                  <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/rudderR_01.model</model>
+                  <mountPoint>HP_rudderR</mountPoint>
+                  <animatorName>	RudderController	</animatorName>
+                </item>
+              </subItems>
+              <effectOnStart>
+                <effect>
+                  <name>crit_tail_expl</name>
+                  <mountPoint>HP_elevator</mountPoint>
+                </effect>
+              </effectOnStart>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	4	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/tailCap_01.model</model>
+              <animationController>
+              </animationController>
+              <effectState>
+                <effect>
+                  <mountPoint>plane/HP_tailHit</mountPoint>
+                </effect>
+              </effectState>
+              <stateAction>	1	</stateAction>
+              <fallingOutModel>vehicles/airplanes/bots/BT08_HP52/crash/lod0/tailEnd_01.model</fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>LeftLandingGear</name>
+        <partId>	11	</partId>
+        <mountPoint>leftWing/HP_landingGearL</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <health>	20	</health>
+          <componentType>LandingGear</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/landingGearL_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/landingGearL_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>hangar</usage>
+              <stateHelthCfc>	-1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/landingGearLopen_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>	RightLandingGear	</name>
+        <partId>	12	</partId>
+        <mountPoint>rightWing/HP_landingGearR</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <health>	20	</health>
+          <componentType>LandingGear</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/landingGearR_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/crash/lod0/landingGearR_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>hangar</usage>
+              <stateHelthCfc>	-1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/landingGearRopen_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>rearLandingGear</name>
+        <partId>	13	</partId>
+        <mountPoint>tail/HP_landingGearRear</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <health>	20	</health>
+          <componentType>LandingGear</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/landingGearRear_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <model>
+              </model>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>hangar</usage>
+              <stateHelthCfc>	-1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/landingGearRearOpen_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>	leftwingFuelTank	</name>
+        <partId>	14	</partId>
+        <mountPoint>HP_engineL</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <fireMountPoint>plane/HP_fuelHit_01</fireMountPoint>
+          <fire>
+            <fire_chance>0.3</fire_chance>
+            <extinguish_time>10.0</extinguish_time>
+            <fire_damage>5%</fire_damage>
+            <tickLength>	2	</tickLength>
+            <extinguish_chance>
+              <baseChance>0.05</baseChance>
+              <vMin>	200	</vMin>
+              <pMin>1.0</pMin>
+              <vMax>	500	</vMax>
+              <pMax>3.0</pMax>
+            </extinguish_chance>
+          </fire>
+          <bBoxes>
+          </bBoxes>
+          <componentType>	FuelTank	</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	1.500000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.800000	</stateHelthCfc>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <effectState>
+                <effect>
+                  <name>Fuel_Leak</name>
+                  <mountPoint>plane/HP_fuelHit_01</mountPoint>
+                </effect>
+              </effectState>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	2.250000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <effectState>
+                <effect>
+                  <name>Fuel_Leak</name>
+                  <mountPoint>plane/HP_fuelHit_01</mountPoint>
+                </effect>
+              </effectState>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	2.250000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+          <health>20.0</health>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>RightwingFuelTank</name>
+        <partId>	15	</partId>
+        <mountPoint>HP_engineR</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <fireMountPoint>plane/HP_fuelHit_02</fireMountPoint>
+          <fire>
+            <fire_chance>0.3</fire_chance>
+            <extinguish_time>10.0</extinguish_time>
+            <fire_damage>5%</fire_damage>
+            <tickLength>	2	</tickLength>
+            <extinguish_chance>
+              <baseChance>0.05</baseChance>
+              <vMin>	200	</vMin>
+              <pMin>1.0</pMin>
+              <vMax>	500	</vMax>
+              <pMax>3.0</pMax>
+            </extinguish_chance>
+          </fire>
+          <bBoxes>
+          </bBoxes>
+          <health>20%</health>
+          <componentType>	FuelTank	</componentType>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	1.500000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	2	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.800000	</stateHelthCfc>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <effectState>
+                <effect>
+                  <name>Fuel_Leak</name>
+                  <mountPoint>plane/HP_fuelHit_02</mountPoint>
+                </effect>
+              </effectState>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	2.250000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <model>
+              </model>
+              <animationController>
+              </animationController>
+              <subItems>
+              </subItems>
+              <effectState>
+                <effect>
+                  <name>Fuel_Leak</name>
+                  <mountPoint>plane/HP_fuelHit_02</mountPoint>
+                </effect>
+              </effectState>
+              <stateAction>	0	</stateAction>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateFireChance>	2.250000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+          </states>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>turret</name>
+        <partId>	16	</partId>
+        <mountPoint>HP_gun_02</mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/gun_02.model</model>
+              <stateAction>	0	</stateAction>
+              <usage>
+              </usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <animationController>
+              </animationController>
+              <fallingOutModel>
+              </fallingOutModel>
+            </state>
+            <state>
+              <id>	2	</id>
+              <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/gun_02.model</model>
+              <stateAction>	0	</stateAction>
+              <usage>crash</usage>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <stateAnimation>
+              </stateAnimation>
+              <animationController>
+              </animationController>
+              <fallingOutModel>
+              </fallingOutModel>
+            </state>
+          </states>
+          <fireMountPoint>
+          </fireMountPoint>
+          <componentType>
+          </componentType>
+          <health>	20.000000	</health>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+      <part>
+        <name>plane</name>
+        <partId>	17	</partId>
+        <mountPoint>
+        </mountPoint>
+        <upgrade>
+          <id>	1	</id>
+          <health>	0	</health>
+          <componentXml>server.todo.xml</componentXml>
+          <states>
+            <state>
+              <id>	1	</id>
+              <usage>
+              </usage>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
+              <model>vehicles/airplanes/bots/BT08_HP52/normal/lod0/plane.model</model>
+              <effectState>
+                <effect>
+                  <name>fly_idle_low</name>
+                  <mountPoint>HP_mass</mountPoint>
+                </effect>
+              </effectState>
+              <effectsTriggered>
+                <effect>
+                  <trigger>	FIRE	</trigger>
+                  <name>airplane_on_fire_metal_big</name>
+                  <mountPoint>HP_kill</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>SMOKE</trigger>
+                  <name>EFFECT_SMOKE</name>
+                  <mountPoint>HP_kill</mountPoint>
+                </effect>
+                <effect>
+                  <trigger>BOMBERS_TRAIL_INIT</trigger>
+                  <name>bombers_trail</name>
+                  <mountPoint>HP_mass</mountPoint>
+                </effect>
+              </effectsTriggered>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+            </state>
+          </states>
+          <componentTypeQuota>	1.000000	</componentTypeQuota>
+          <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+          <componentPosition>Front</componentPosition>
+        </upgrade>
+        <groupId>	0	</groupId>
+      </part>
+    </parts>
+    <visualSettings>
+      <hangarConfig>large</hangarConfig>
+      <camera>	camera03	</camera>
+      <surfaceSettings>
+        <detailTexture>vehicles/airplanes/bots/BT08_HP52/BT08_HP52_detail.dds</detailTexture>
+        <decalsSettings>
+          <decalGroup>
+            <name>decor</name>
+            <decals>
+              <decal>
+                <id>	1	</id>
+                <texture>vehicles/airplanes/common/decals/decoration/byPlane/blank_decor.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/remove_decal.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	199	</id>
+                <texture>vehicles/airplanes/common/decals/decor/flags/44.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/flags/preview/44.dds</icoPath>
+              </decal>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>clan_big</name>
+            <decals>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>platoon_number</name>
+            <decals>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>clan_small</name>
+            <decals>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>	rank	</name>
+            <decals>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>member_number</name>
+            <decals>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>camouflage</name>
+            <decals>
+              <decal>
+                <id>	1	</id>
+                <texture>vehicles/airplanes/bots/BT08_HP52/BT08_HP52_woodland.dds</texture>
+                <icoPath>vehicles/airplanes/bots/BT08_HP52/preview/BT08_HP52_woodland.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	2	</id>
+                <texture>vehicles/airplanes/bots/BT08_HP52/BT08_HP52_base.dds</texture>
+                <icoPath>vehicles/airplanes/bots/BT08_HP52/preview/BT08_HP52_base.dds</icoPath>
+              </decal>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>ground_frags</name>
+            <decals>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>air_frags</name>
+            <decals>
+            </decals>
+          </decalGroup>
+          <decalGroup>
+            <name>	nose	</name>
+            <decals>
+              <decal>
+                <id>	1	</id>
+                <texture>vehicles/airplanes/common/decals/decoration/byPlane/british/BT08_HP52/lvl_02/02.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/remove_decal.dds</icoPath>
+              </decal>
+            </decals>
+          </decalGroup>
+        </decalsSettings>
+      </surfaceSettings>
+      <cameraOffset>	0.098778 0.225000 -1.702367	</cameraOffset>
+      <hudPlaneScheme>ar65_turret</hudPlaneScheme>
+    </visualSettings>
+    <soundSettings>
+      <rotor>engines/engine_germany_bmw_132/engine</rotor>
+      <rotorEnemy>engines/engine_germany_bmw_132/flyby</rotorEnemy>
+      <rotorCockpitMono>engines/engine_germany_bmw_132/cockpit</rotorCockpitMono>
+      <rotorSpectator>engines/engine_germany_bmw_132/engine_spectated</rotorSpectator>
+      <flaps>engines/mechanics/misc/flaps_release_basic</flaps>
+      <downed>engines/mechanics/nosedive/nosedive_prop_heavy</downed>
+      <downedEnv>engines/mechanics/nosedive/nosedive_prop_heavy</downedEnv>
+      <windOutside>engines/engine_germany_bmw_132/air_outside</windOutside>
+      <windCockpit>engines/engine_germany_bmw_132/air_cockpit</windCockpit>
+      <passbyBulletCollisionSphereRadius>	30	</passbyBulletCollisionSphereRadius>
+      <passbyBulletSoundInstanceNumMax>	2	</passbyBulletSoundInstanceNumMax>
+      <rotorForceApplyTerm>5.0</rotorForceApplyTerm>
+      <hitMaterialID>	1	</hitMaterialID>
+    </soundSettings>
+    <description>
+      <textDescription>MARKET_AIRPLANE_DESCRIPTION_BLENHEIM-F</textDescription>
+      <engineCapasityUnit>MARKET_AIRPLANE_ENGINE_CAPACITY_LS</engineCapasityUnit>
+      <MARKET_AIRPLANE_ENGINE_CAPACITY>	425	</MARKET_AIRPLANE_ENGINE_CAPACITY>
+      <MARKET_AIRPLANE_WING_AREA>21.13</MARKET_AIRPLANE_WING_AREA>
+      <MARKET_AIRPLANE_GROUND_MAX_SPEED>	260	</MARKET_AIRPLANE_GROUND_MAX_SPEED>
+      <MARKET_AIRPLANE_HEIGHT_MAX_SPEED>	283	</MARKET_AIRPLANE_HEIGHT_MAX_SPEED>
+      <MARKET_AIRPLANE_RATE_OF_CLIMB>7.7</MARKET_AIRPLANE_RATE_OF_CLIMB>
+      <MARKET_AIRPLANE_FULL_TURN_TIME>-</MARKET_AIRPLANE_FULL_TURN_TIME>
+    </description>
+  </Airplane>
+  <magnetPoints>
+    <magnetPoint>
+      <position>	-8.126546 0.483809 -0.814869	</position>
+      <staticMass>	0.250000	</staticMass>
+    </magnetPoint>
+    <magnetPoint>
+      <position>	-2.554897 0.000000 -1.438137	</position>
+      <staticMass>	1.000000	</staticMass>
+    </magnetPoint>
+    <magnetPoint>
+      <position>	0.000000 0.000000 -1.774516	</position>
+      <staticMass>	1.000000	</staticMass>
+    </magnetPoint>
+    <magnetPoint>
+      <position>	2.554897 0.000000 -1.438137	</position>
+      <staticMass>	1.000000	</staticMass>
+    </magnetPoint>
+    <magnetPoint>
+      <position>	8.126546 0.483809 -0.814869	</position>
+      <staticMass>	0.250000	</staticMass>
+    </magnetPoint>
+  </magnetPoints>
+  <Pivots>
+    <pivot>
+      <name>1/1/0/0/hull/HP_gun_01/HP_flame</name>
+      <position>	0.000000 -1.114000 4.017000	</position>
+      <direction>	0.000000 0.420450 0.000345	</direction>
+    </pivot>
+    <pivot>
+      <name>1/1/1/1/hull/HP_bomb_01/HP_flame_10</name>
+      <position>	-0.203550 -0.835728 0.963534	</position>
+      <direction>	0.000000 0.000000 0.000345	</direction>
+    </pivot>
+    <pivot>
+      <name>1/1/1/1/hull/HP_bomb_01/HP_flame_08</name>
+      <position>	-0.203550 -0.835728 0.963534	</position>
+      <direction>	0.000000 0.000000 0.000345	</direction>
+    </pivot>
+    <pivot>
+      <name>1/1/1/1/hull/HP_bomb_01/HP_flame_09</name>
+      <position>	-0.203550 -0.835728 0.963534	</position>
+      <direction>	0.000000 0.000000 0.000345	</direction>
+    </pivot>
+    <pivot>
+      <name>1/1/1/1/hull/HP_bomb_01/HP_flame_04</name>
+      <position>	-0.203550 -0.835728 0.963534	</position>
+      <direction>	0.000000 0.000000 0.000345	</direction>
+    </pivot>
+    <pivot>
+      <name>1/1/1/1/hull/HP_bomb_01/HP_flame_05</name>
+      <position>	-0.203550 -0.835728 0.963534	</position>
+      <direction>	0.000000 0.000000 0.000345	</direction>
+    </pivot>
+    <pivot>
+      <name>1/1/1/1/hull/HP_bomb_01/HP_flame_06</name>
+      <position>	-0.203550 -0.835728 0.963534	</position>
+      <direction>	0.000000 0.000000 0.000345	</direction>
+    </pivot>
+    <pivot>
+      <name>1/1/1/1/hull/HP_bomb_01/HP_flame_07</name>
+      <position>	-0.203550 -0.835728 0.963534	</position>
+      <direction>	0.000000 0.000000 0.000345	</direction>
+    </pivot>
+    <pivot>
+      <name>1/1/1/1/hull/HP_bomb_01/HP_flame_01</name>
+      <position>	-0.203550 -0.835728 0.963534	</position>
+      <direction>	0.000000 0.000000 0.000345	</direction>
+    </pivot>
+    <pivot>
+      <name>1/1/1/1/hull/HP_bomb_01/HP_flame_02</name>
+      <position>	-0.203550 -0.835728 0.963534	</position>
+      <direction>	0.000000 0.000000 0.000345	</direction>
+    </pivot>
+    <pivot>
+      <name>1/1/1/1/hull/HP_bomb_01/HP_flame_03</name>
+      <position>	-0.203550 -0.835728 0.963534	</position>
+      <direction>	0.000000 0.000000 0.000345	</direction>
+    </pivot>
+  </Pivots>
+  <HPmass>
+    <position>	0.000000 0.000000 -1.650000	</position>
+    <direction>	0.000000 0.000000 0.000345	</direction>
+  </HPmass>
+</bomber_hp-52-2.xml>

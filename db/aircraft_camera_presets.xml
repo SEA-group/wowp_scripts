@@ -1,0 +1,2135 @@
+<aircraft_camera_presets.xml>
+  <camera>
+    <id>	camera01	</id>
+    <minMouseCombatFov>	40	</minMouseCombatFov>
+    <maxFov>	65	</maxFov>
+    <minFov>	65	</minFov>
+    <targetCamPos>0 30.2 -30.0</targetCamPos>
+    <targetCamSpeed>5.0</targetCamSpeed>
+    <camSpeedYawPitch>7.0</camSpeedYawPitch>
+    <camSpeedRoll>4.0</camSpeedRoll>
+    <camSniperSpeedYawPitch>1000.0</camSniperSpeedYawPitch>
+    <camSniperSpeedRoll>1000.0</camSniperSpeedRoll>
+    <camSniperSpeedTarget>1000.0</camSniperSpeedTarget>
+    <backCamPos>0 4 8</backCamPos>
+    <backCamSpeed>	30	</backCamSpeed>
+    <backTargetCamSpeed>	30	</backTargetCamSpeed>
+    <backCamFov>	56	</backCamFov>
+    <rearViewCamPos>0 0 -10</rearViewCamPos>
+    <rearViewCamDir>0 22 -350</rearViewCamDir>
+    <rearViewCamFov>	60	</rearViewCamFov>
+    <leftCamPos>15 2 0</leftCamPos>
+    <leftCamDir>-15 2 0.1</leftCamDir>
+    <rightCamPos>-15 2 0</rightCamPos>
+    <rightCamDir>15 2 0.1</rightCamDir>
+    <topCamPos>0 -15 -0.1</topCamPos>
+    <topCamDir>0 0 0</topCamDir>
+    <bottomCamPos>0 15 -0.1</bottomCamPos>
+    <bottomCamDir>0 0 0</bottomCamDir>
+    <pivotDistMax>	40	</pivotDistMax>
+    <pivotDistMin>	7	</pivotDistMin>
+    <freeCamDistHalflife>0.06</freeCamDistHalflife>
+    <freeCamFovNear>	30	</freeCamFovNear>
+    <freeCamFovFar>	60	</freeCamFovFar>
+    <normalCamInterpolationTime>0.2</normalCamInterpolationTime>
+    <freeCamInterpolationTime>0.2</freeCamInterpolationTime>
+    <freeCamFovInterpolationTime>0.2</freeCamFovInterpolationTime>
+    <freeCamZoomFactor>0.01</freeCamZoomFactor>
+    <backCamInterpolationTime>0.0</backCamInterpolationTime>
+    <bombCamInterpolationTime>0.3</bombCamInterpolationTime>
+    <sideCamInterpolationTime>0.05</sideCamInterpolationTime>
+    <sideCamJInterpolationStartTime>1.0</sideCamJInterpolationStartTime>
+    <sideCamJInterpolationEndTime>1.0</sideCamJInterpolationEndTime>
+    <sideCamJInterpolationTimeTransitionTerm>0.02</sideCamJInterpolationTimeTransitionTerm>
+    <spectatorCamInterpolationTime>0.0</spectatorCamInterpolationTime>
+    <targetCamInterpolationTime>0.2</targetCamInterpolationTime>
+    <freeFixableCamInterpolationTime>0.75</freeFixableCamInterpolationTime>
+    <freeFixableCamSpeed>2.0</freeFixableCamSpeed>
+    <destroyedFall>
+      <stateInterpolationTime>0.5</stateInterpolationTime>
+      <animationNeedTime>10.0</animationNeedTime>
+      <animationStartTime>3.0</animationStartTime>
+      <animationPitch>	0	</animationPitch>
+      <animationYaw>25.0</animationYaw>
+      <animationPitchClockwise>False</animationPitchClockwise>
+      <animationYawClockwise>	True	</animationYawClockwise>
+      <animationDistance>35.0</animationDistance>
+      <animationTime>6.0</animationTime>
+      <animationFov>50.0</animationFov>
+      <animationFadeInTime>3.0</animationFadeInTime>
+      <animationFadeOutTime>3.0</animationFadeOutTime>
+      <animationGroundNeedTime>5.0</animationGroundNeedTime>
+      <animationGroundTime>4.0</animationGroundTime>
+      <animationGroundFov>5.0</animationGroundFov>
+      <animationGroundSpawnRadius>1000.0</animationGroundSpawnRadius>
+      <animationGroundHeight>50.0</animationGroundHeight>
+    </destroyedFall>
+    <destroyedLanded>
+      <stateInterpolationTime>0.0</stateInterpolationTime>
+      <fov>65.0</fov>
+      <pitch>45.0</pitch>
+      <pitchMin>45.0</pitchMin>
+      <yaw>30.0</yaw>
+      <rotationSpeed>0.2</rotationSpeed>
+      <distance>120.0</distance>
+    </destroyedLanded>
+    <zoomTable>
+      <zoomPreset>
+        <id>	normalCombat	</id>
+        <normalZoomData>
+          <position>0 5.5 -34.0</position>
+          <fovPercent>0.84</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 2.4 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>normalAssault</id>
+        <normalZoomData>
+          <position>0 -4.2 -17.5</position>
+          <fovPercent>1.0</fovPercent>
+          <angle>	20	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 -4.2 -0.5</position>
+          <fovPercent>0.45</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>joystickCombat</id>
+        <normalZoomData>
+          <position>0 3.9 -34.0</position>
+          <fovPercent>0.84</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 3.6 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>joystickAssault</id>
+        <normalZoomData>
+          <position>0 -4.2 -17.5</position>
+          <fovPercent>1.0</fovPercent>
+          <angle>	20	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 0.0 -0.5</position>
+          <fovPercent>0.45</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>	directCombat	</id>
+        <normalZoomData>
+          <position>0 6.3 -22.0</position>
+          <fovPercent>0.75</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 2.4 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>	directSniper	</id>
+        <normalZoomData>
+          <position>0 2.4 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 2.4 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>directAssault</id>
+        <normalZoomData>
+          <position>0 -4.2 -17.5</position>
+          <fovPercent>1.0</fovPercent>
+          <angle>	20	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 -4.2 0.0</position>
+          <fovPercent>0.45</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>	directGunner	</id>
+        <normalZoomData>
+          <position>0 5.0 -10</position>
+          <fovPercent>0.75</fovPercent>
+          <angle>	0	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 2.5 0</position>
+          <fovPercent>0.5</fovPercent>
+          <angle>	0	</angle>
+          <hideModel>	0	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+    </zoomTable>
+    <vibrationAmplitudes>0.05 0.1 0.0</vibrationAmplitudes>
+    <vibrationTable>
+      <frequency>0.20 0.20 0.0</frequency>
+      <frequency>0.30 0.25 0.0</frequency>
+      <frequency>0.40 0.30 0.0</frequency>
+    </vibrationTable>
+    <gunnerStateData>
+      <duration>0.1</duration>
+      <distanceCurve>
+        <point>-90 -8</point>
+        <point>0    -6</point>
+        <point>90  1</point>
+      </distanceCurve>
+      <heightCurve>
+        <point>-90  12</point>
+        <point>0  0.5</point>
+        <point>90  0.5</point>
+      </heightCurve>
+    </gunnerStateData>
+  </camera>
+  <camera>
+    <id>	camera02	</id>
+    <minMouseCombatFov>	40	</minMouseCombatFov>
+    <maxFov>	65	</maxFov>
+    <minFov>	65	</minFov>
+    <targetCamPos>0 30.2 -30.0</targetCamPos>
+    <targetCamSpeed>5.0</targetCamSpeed>
+    <camSpeedYawPitch>7.0</camSpeedYawPitch>
+    <camSpeedRoll>4.0</camSpeedRoll>
+    <camSniperSpeedYawPitch>1000.0</camSniperSpeedYawPitch>
+    <camSniperSpeedRoll>1000.0</camSniperSpeedRoll>
+    <camSniperSpeedTarget>1000.0</camSniperSpeedTarget>
+    <backCamPos>0 4 8</backCamPos>
+    <backCamSpeed>	30	</backCamSpeed>
+    <backTargetCamSpeed>	30	</backTargetCamSpeed>
+    <backCamFov>	56	</backCamFov>
+    <rearViewCamPos>0 0 -10</rearViewCamPos>
+    <rearViewCamDir>0 22 -350</rearViewCamDir>
+    <rearViewCamFov>	60	</rearViewCamFov>
+    <leftCamPos>15 2 0</leftCamPos>
+    <leftCamDir>-15 2 0.1</leftCamDir>
+    <rightCamPos>-15 2 0</rightCamPos>
+    <rightCamDir>15 2 0.1</rightCamDir>
+    <topCamPos>0 -15 -0.1</topCamPos>
+    <topCamDir>0 0 0</topCamDir>
+    <bottomCamPos>0 15 -0.1</bottomCamPos>
+    <bottomCamDir>0 0 0</bottomCamDir>
+    <pivotDistMax>	40	</pivotDistMax>
+    <pivotDistMin>	12	</pivotDistMin>
+    <freeCamDistHalflife>0.08</freeCamDistHalflife>
+    <freeCamFovNear>	30	</freeCamFovNear>
+    <freeCamFovFar>	60	</freeCamFovFar>
+    <normalCamInterpolationTime>0.2</normalCamInterpolationTime>
+    <freeCamInterpolationTime>0.2</freeCamInterpolationTime>
+    <freeCamFovInterpolationTime>0.2</freeCamFovInterpolationTime>
+    <freeCamZoomFactor>0.01</freeCamZoomFactor>
+    <backCamInterpolationTime>0.0</backCamInterpolationTime>
+    <bombCamInterpolationTime>0.3</bombCamInterpolationTime>
+    <sideCamInterpolationTime>0.05</sideCamInterpolationTime>
+    <sideCamJInterpolationStartTime>1.0</sideCamJInterpolationStartTime>
+    <sideCamJInterpolationEndTime>1.0</sideCamJInterpolationEndTime>
+    <sideCamJInterpolationTimeTransitionTerm>0.02</sideCamJInterpolationTimeTransitionTerm>
+    <spectatorCamInterpolationTime>0.0</spectatorCamInterpolationTime>
+    <targetCamInterpolationTime>0.2</targetCamInterpolationTime>
+    <freeFixableCamInterpolationTime>0.75</freeFixableCamInterpolationTime>
+    <freeFixableCamSpeed>2.0</freeFixableCamSpeed>
+    <destroyedFall>
+      <stateInterpolationTime>0.5</stateInterpolationTime>
+      <animationNeedTime>10.0</animationNeedTime>
+      <animationStartTime>3.0</animationStartTime>
+      <animationPitch>	0	</animationPitch>
+      <animationYaw>25.0</animationYaw>
+      <animationPitchClockwise>False</animationPitchClockwise>
+      <animationYawClockwise>	True	</animationYawClockwise>
+      <animationDistance>35.0</animationDistance>
+      <animationTime>6.0</animationTime>
+      <animationFov>50.0</animationFov>
+      <animationFadeInTime>3.0</animationFadeInTime>
+      <animationFadeOutTime>3.0</animationFadeOutTime>
+      <animationGroundNeedTime>5.0</animationGroundNeedTime>
+      <animationGroundTime>4.0</animationGroundTime>
+      <animationGroundFov>5.0</animationGroundFov>
+      <animationGroundSpawnRadius>1000.0</animationGroundSpawnRadius>
+      <animationGroundHeight>50.0</animationGroundHeight>
+    </destroyedFall>
+    <destroyedLanded>
+      <stateInterpolationTime>0.0</stateInterpolationTime>
+      <fov>65.0</fov>
+      <pitch>45.0</pitch>
+      <pitchMin>45.0</pitchMin>
+      <yaw>30.0</yaw>
+      <rotationSpeed>0.2</rotationSpeed>
+      <distance>120.0</distance>
+    </destroyedLanded>
+    <zoomTable>
+      <zoomPreset>
+        <id>	normalCombat	</id>
+        <normalZoomData>
+          <position>0 5.5 -34.0</position>
+          <fovPercent>0.84</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 2.4 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>normalAssault</id>
+        <normalZoomData>
+          <position>0 -4.2 -17.5</position>
+          <fovPercent>1.0</fovPercent>
+          <angle>	20	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 -4.2 -0.5</position>
+          <fovPercent>0.45</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>joystickCombat</id>
+        <normalZoomData>
+          <position>0 3.9 -34.0</position>
+          <fovPercent>0.84</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 3.6 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>joystickAssault</id>
+        <normalZoomData>
+          <position>0 -4.2 -17.5</position>
+          <fovPercent>1.0</fovPercent>
+          <angle>	20	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 -4.2 -0.5</position>
+          <fovPercent>0.45</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>	directCombat	</id>
+        <normalZoomData>
+          <position>0 5.3 -22.0</position>
+          <fovPercent>0.75</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 2.4 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>	directSniper	</id>
+        <normalZoomData>
+          <position>0 2.4 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 2.4 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>directAssault</id>
+        <normalZoomData>
+          <position>0 -4.2 -17.5</position>
+          <fovPercent>1.0</fovPercent>
+          <angle>	20	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 -4.2 -0.5</position>
+          <fovPercent>0.45</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>	directGunner	</id>
+        <normalZoomData>
+          <position>0 5.0 -10</position>
+          <fovPercent>0.75</fovPercent>
+          <angle>	0	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 2.5 0</position>
+          <fovPercent>0.5</fovPercent>
+          <angle>	0	</angle>
+          <hideModel>	0	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+    </zoomTable>
+    <vibrationAmplitudes>0.04 0.09 0.0</vibrationAmplitudes>
+    <vibrationTable>
+      <frequency>0.20 0.20 0.0</frequency>
+      <frequency>0.30 0.25 0.0</frequency>
+      <frequency>0.40 0.30 0.0</frequency>
+    </vibrationTable>
+    <gunnerStateData>
+      <duration>0.1</duration>
+      <distanceCurve>
+        <point>-90 -8</point>
+        <point>0    -6</point>
+        <point>90  1</point>
+      </distanceCurve>
+      <heightCurve>
+        <point>-90  12</point>
+        <point>0  0.5</point>
+        <point>90  0.5</point>
+      </heightCurve>
+    </gunnerStateData>
+  </camera>
+  <camera>
+    <id>	camera03	</id>
+    <minMouseCombatFov>	40	</minMouseCombatFov>
+    <maxFov>	65	</maxFov>
+    <minFov>	65	</minFov>
+    <targetCamPos>0 30.2 -30.0</targetCamPos>
+    <targetCamSpeed>5.0</targetCamSpeed>
+    <camSpeedYawPitch>7.0</camSpeedYawPitch>
+    <camSpeedRoll>4.0</camSpeedRoll>
+    <camSniperSpeedYawPitch>1000.0</camSniperSpeedYawPitch>
+    <camSniperSpeedRoll>1000.0</camSniperSpeedRoll>
+    <camSniperSpeedTarget>1000.0</camSniperSpeedTarget>
+    <backCamPos>0 4 8</backCamPos>
+    <backCamSpeed>	30	</backCamSpeed>
+    <backTargetCamSpeed>	30	</backTargetCamSpeed>
+    <backCamFov>	56	</backCamFov>
+    <rearViewCamPos>0 0 -10</rearViewCamPos>
+    <rearViewCamDir>0 22 -350</rearViewCamDir>
+    <rearViewCamFov>	60	</rearViewCamFov>
+    <leftCamPos>15 2 0</leftCamPos>
+    <leftCamDir>-15 2 0.1</leftCamDir>
+    <rightCamPos>-15 2 0</rightCamPos>
+    <rightCamDir>15 2 0.1</rightCamDir>
+    <topCamPos>0 -15 -0.1</topCamPos>
+    <topCamDir>0 0 0</topCamDir>
+    <bottomCamPos>0 15 -0.1</bottomCamPos>
+    <bottomCamDir>0 0 0</bottomCamDir>
+    <pivotDistMax>	40	</pivotDistMax>
+    <pivotDistMin>	12	</pivotDistMin>
+    <freeCamDistHalflife>0.08</freeCamDistHalflife>
+    <freeCamFovNear>	30	</freeCamFovNear>
+    <freeCamFovFar>	60	</freeCamFovFar>
+    <normalCamInterpolationTime>0.2</normalCamInterpolationTime>
+    <freeCamInterpolationTime>0.2</freeCamInterpolationTime>
+    <freeCamFovInterpolationTime>0.2</freeCamFovInterpolationTime>
+    <freeCamZoomFactor>0.01</freeCamZoomFactor>
+    <backCamInterpolationTime>0.0</backCamInterpolationTime>
+    <bombCamInterpolationTime>0.3</bombCamInterpolationTime>
+    <sideCamInterpolationTime>0.05</sideCamInterpolationTime>
+    <sideCamJInterpolationStartTime>1.0</sideCamJInterpolationStartTime>
+    <sideCamJInterpolationEndTime>1.0</sideCamJInterpolationEndTime>
+    <sideCamJInterpolationTimeTransitionTerm>0.02</sideCamJInterpolationTimeTransitionTerm>
+    <spectatorCamInterpolationTime>0.0</spectatorCamInterpolationTime>
+    <targetCamInterpolationTime>0.2</targetCamInterpolationTime>
+    <freeFixableCamInterpolationTime>0.75</freeFixableCamInterpolationTime>
+    <freeFixableCamSpeed>2.0</freeFixableCamSpeed>
+    <destroyedFall>
+      <stateInterpolationTime>0.5</stateInterpolationTime>
+      <animationNeedTime>10.0</animationNeedTime>
+      <animationStartTime>3.0</animationStartTime>
+      <animationPitch>	0	</animationPitch>
+      <animationYaw>25.0</animationYaw>
+      <animationPitchClockwise>False</animationPitchClockwise>
+      <animationYawClockwise>	True	</animationYawClockwise>
+      <animationDistance>35.0</animationDistance>
+      <animationTime>6.0</animationTime>
+      <animationFov>50.0</animationFov>
+      <animationFadeInTime>3.0</animationFadeInTime>
+      <animationFadeOutTime>3.0</animationFadeOutTime>
+      <animationGroundNeedTime>5.0</animationGroundNeedTime>
+      <animationGroundTime>4.0</animationGroundTime>
+      <animationGroundFov>5.0</animationGroundFov>
+      <animationGroundSpawnRadius>1000.0</animationGroundSpawnRadius>
+      <animationGroundHeight>50.0</animationGroundHeight>
+    </destroyedFall>
+    <destroyedLanded>
+      <stateInterpolationTime>0.0</stateInterpolationTime>
+      <fov>65.0</fov>
+      <pitch>45.0</pitch>
+      <pitchMin>45.0</pitchMin>
+      <yaw>30.0</yaw>
+      <rotationSpeed>0.2</rotationSpeed>
+      <distance>120.0</distance>
+    </destroyedLanded>
+    <zoomTable>
+      <zoomPreset>
+        <id>	normalCombat	</id>
+        <normalZoomData>
+          <position>0 5.7 -34.0</position>
+          <fovPercent>0.84</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 2.0 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>normalAssault</id>
+        <normalZoomData>
+          <position>0 -4.2 -19</position>
+          <fovPercent>1.00</fovPercent>
+          <angle>	20	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 -4.3 -0.5</position>
+          <fovPercent>0.45</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>joystickCombat</id>
+        <normalZoomData>
+          <position>0 3.9 -34.0</position>
+          <fovPercent>0.84</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 3.6 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>joystickAssault</id>
+        <normalZoomData>
+          <position>0 -4.2 -19</position>
+          <fovPercent>1.0</fovPercent>
+          <angle>	20	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 -4.3 -0.5</position>
+          <fovPercent>0.45</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>	directCombat	</id>
+        <normalZoomData>
+          <position>0 5.3 -22.0</position>
+          <fovPercent>0.75</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 2.0 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>	directSniper	</id>
+        <normalZoomData>
+          <position>0 2.0 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 2.0 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>directAssault</id>
+        <normalZoomData>
+          <position>0 -4.2 -19</position>
+          <fovPercent>1.0</fovPercent>
+          <angle>	20	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 -4.3 -0.5</position>
+          <fovPercent>0.45</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>	directGunner	</id>
+        <normalZoomData>
+          <position>0 5.0 -10</position>
+          <fovPercent>0.75</fovPercent>
+          <angle>	0	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 2.5 0</position>
+          <fovPercent>0.5</fovPercent>
+          <angle>	0	</angle>
+          <hideModel>	0	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+    </zoomTable>
+    <vibrationAmplitudes>0.03 0.08 0.0</vibrationAmplitudes>
+    <vibrationTable>
+      <frequency>0.20 0.20 0.0</frequency>
+      <frequency>0.30 0.25 0.0</frequency>
+      <frequency>0.40 0.30 0.0</frequency>
+    </vibrationTable>
+    <gunnerStateData>
+      <duration>0.1</duration>
+      <distanceCurve>
+        <point>-90 -8</point>
+        <point>0    -6</point>
+        <point>90  1</point>
+      </distanceCurve>
+      <heightCurve>
+        <point>-90  12</point>
+        <point>0  0.5</point>
+        <point>90  0.5</point>
+      </heightCurve>
+    </gunnerStateData>
+  </camera>
+  <camera>
+    <id>	camera04	</id>
+    <minMouseCombatFov>	40	</minMouseCombatFov>
+    <maxFov>	65	</maxFov>
+    <minFov>	65	</minFov>
+    <targetCamPos>0 30.2 -30.0</targetCamPos>
+    <targetCamSpeed>5.0</targetCamSpeed>
+    <camSpeedYawPitch>7.0</camSpeedYawPitch>
+    <camSpeedRoll>4.0</camSpeedRoll>
+    <camSniperSpeedYawPitch>1000.0</camSniperSpeedYawPitch>
+    <camSniperSpeedRoll>1000.0</camSniperSpeedRoll>
+    <camSniperSpeedTarget>1000.0</camSniperSpeedTarget>
+    <backCamPos>0 4.6 10</backCamPos>
+    <backCamSpeed>	30	</backCamSpeed>
+    <backTargetCamSpeed>	30	</backTargetCamSpeed>
+    <backCamFov>	56	</backCamFov>
+    <rearViewCamPos>0 0 -10</rearViewCamPos>
+    <rearViewCamDir>0 22 -350</rearViewCamDir>
+    <rearViewCamFov>	60	</rearViewCamFov>
+    <leftCamPos>15 2 0</leftCamPos>
+    <leftCamDir>-15 2 0.1</leftCamDir>
+    <rightCamPos>-15 2 0</rightCamPos>
+    <rightCamDir>15 2 0.1</rightCamDir>
+    <topCamPos>0 -15 -0.1</topCamPos>
+    <topCamDir>0 0 0</topCamDir>
+    <bottomCamPos>0 15 -0.1</bottomCamPos>
+    <bottomCamDir>0 0 0</bottomCamDir>
+    <pivotDistMax>	40	</pivotDistMax>
+    <pivotDistMin>	14	</pivotDistMin>
+    <freeCamDistHalflife>0.08</freeCamDistHalflife>
+    <freeCamFovNear>	30	</freeCamFovNear>
+    <freeCamFovFar>	60	</freeCamFovFar>
+    <normalCamInterpolationTime>0.2</normalCamInterpolationTime>
+    <freeCamInterpolationTime>0.2</freeCamInterpolationTime>
+    <freeCamFovInterpolationTime>0.2</freeCamFovInterpolationTime>
+    <freeCamZoomFactor>0.01</freeCamZoomFactor>
+    <backCamInterpolationTime>0.0</backCamInterpolationTime>
+    <bombCamInterpolationTime>0.3</bombCamInterpolationTime>
+    <sideCamInterpolationTime>0.05</sideCamInterpolationTime>
+    <sideCamJInterpolationStartTime>1.0</sideCamJInterpolationStartTime>
+    <sideCamJInterpolationEndTime>1.0</sideCamJInterpolationEndTime>
+    <sideCamJInterpolationTimeTransitionTerm>0.02</sideCamJInterpolationTimeTransitionTerm>
+    <spectatorCamInterpolationTime>0.0</spectatorCamInterpolationTime>
+    <targetCamInterpolationTime>0.2</targetCamInterpolationTime>
+    <freeFixableCamInterpolationTime>0.75</freeFixableCamInterpolationTime>
+    <freeFixableCamSpeed>2.0</freeFixableCamSpeed>
+    <destroyedFall>
+      <stateInterpolationTime>0.5</stateInterpolationTime>
+      <animationNeedTime>10.0</animationNeedTime>
+      <animationStartTime>3.0</animationStartTime>
+      <animationPitch>	0	</animationPitch>
+      <animationYaw>25.0</animationYaw>
+      <animationPitchClockwise>False</animationPitchClockwise>
+      <animationYawClockwise>	True	</animationYawClockwise>
+      <animationDistance>35.0</animationDistance>
+      <animationTime>6.0</animationTime>
+      <animationFov>50.0</animationFov>
+      <animationFadeInTime>3.0</animationFadeInTime>
+      <animationFadeOutTime>3.0</animationFadeOutTime>
+      <animationGroundNeedTime>5.0</animationGroundNeedTime>
+      <animationGroundTime>4.0</animationGroundTime>
+      <animationGroundFov>5.0</animationGroundFov>
+      <animationGroundSpawnRadius>1000.0</animationGroundSpawnRadius>
+      <animationGroundHeight>50.0</animationGroundHeight>
+    </destroyedFall>
+    <destroyedLanded>
+      <stateInterpolationTime>0.0</stateInterpolationTime>
+      <fov>65.0</fov>
+      <pitch>45.0</pitch>
+      <pitchMin>45.0</pitchMin>
+      <yaw>30.0</yaw>
+      <rotationSpeed>0.2</rotationSpeed>
+      <distance>120.0</distance>
+    </destroyedLanded>
+    <zoomTable>
+      <zoomPreset>
+        <id>	normalCombat	</id>
+        <normalZoomData>
+          <position>0 5.4 -34.0</position>
+          <fovPercent>0.84</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 2.6 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>normalAssault</id>
+        <normalZoomData>
+          <position>0 -4 -21</position>
+          <fovPercent>1.00</fovPercent>
+          <angle>	20	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 -5.2 -0.5</position>
+          <fovPercent>0.45</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>joystickCombat</id>
+        <normalZoomData>
+          <position>0 4.8 -34.0</position>
+          <fovPercent>0.84</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 4.6 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>joystickAssault</id>
+        <normalZoomData>
+          <position>0 -4 -21</position>
+          <fovPercent>1.00</fovPercent>
+          <angle>	20	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 -5.2 -0.5</position>
+          <fovPercent>0.45</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>	directCombat	</id>
+        <normalZoomData>
+          <position>0 5.3 -22.0</position>
+          <fovPercent>0.75</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 2.6 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>	directSniper	</id>
+        <normalZoomData>
+          <position>0 2.6 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 2.6 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>directAssault</id>
+        <normalZoomData>
+          <position>0 -4 -21</position>
+          <fovPercent>1.00</fovPercent>
+          <angle>	20	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 -5.2 -0.5</position>
+          <fovPercent>0.45</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>	directGunner	</id>
+        <normalZoomData>
+          <position>0 5.0 -10</position>
+          <fovPercent>0.75</fovPercent>
+          <angle>	0	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 2.5 0</position>
+          <fovPercent>0.5</fovPercent>
+          <angle>	0	</angle>
+          <hideModel>	0	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+    </zoomTable>
+    <vibrationAmplitudes>0.02 0.07 0.0</vibrationAmplitudes>
+    <vibrationTable>
+      <frequency>0.20 0.20 0.0</frequency>
+      <frequency>0.30 0.25 0.0</frequency>
+      <frequency>0.40 0.30 0.0</frequency>
+    </vibrationTable>
+    <gunnerStateData>
+      <duration>0.1</duration>
+      <distanceCurve>
+        <point>-90 -8</point>
+        <point>0    -6</point>
+        <point>90  1</point>
+      </distanceCurve>
+      <heightCurve>
+        <point>-90  12</point>
+        <point>0  0.5</point>
+        <point>90  0.5</point>
+      </heightCurve>
+    </gunnerStateData>
+  </camera>
+  <camera>
+    <id>camera02_Big_Tail</id>
+    <minMouseCombatFov>	40	</minMouseCombatFov>
+    <maxFov>	65	</maxFov>
+    <minFov>	65	</minFov>
+    <targetCamPos>0 30.2 -30.0</targetCamPos>
+    <targetCamSpeed>5.0</targetCamSpeed>
+    <camSpeedYawPitch>7.0</camSpeedYawPitch>
+    <camSpeedRoll>4.0</camSpeedRoll>
+    <camSniperSpeedYawPitch>1000.0</camSniperSpeedYawPitch>
+    <camSniperSpeedRoll>1000.0</camSniperSpeedRoll>
+    <camSniperSpeedTarget>1000.0</camSniperSpeedTarget>
+    <backCamPos>0 4 8</backCamPos>
+    <backCamSpeed>	30	</backCamSpeed>
+    <backTargetCamSpeed>	30	</backTargetCamSpeed>
+    <backCamFov>	56	</backCamFov>
+    <rearViewCamPos>0 0 -10</rearViewCamPos>
+    <rearViewCamDir>0 22 -350</rearViewCamDir>
+    <rearViewCamFov>	60	</rearViewCamFov>
+    <leftCamPos>15 2 0</leftCamPos>
+    <leftCamDir>-15 2 0.1</leftCamDir>
+    <rightCamPos>-15 2 0</rightCamPos>
+    <rightCamDir>15 2 0.1</rightCamDir>
+    <topCamPos>0 -15 -0.1</topCamPos>
+    <topCamDir>0 0 0</topCamDir>
+    <bottomCamPos>0 15 -0.1</bottomCamPos>
+    <bottomCamDir>0 0 0</bottomCamDir>
+    <pivotDistMax>	40	</pivotDistMax>
+    <pivotDistMin>9.5</pivotDistMin>
+    <freeCamDistHalflife>0.07</freeCamDistHalflife>
+    <freeCamFovNear>	30	</freeCamFovNear>
+    <freeCamFovFar>	60	</freeCamFovFar>
+    <normalCamInterpolationTime>0.2</normalCamInterpolationTime>
+    <freeCamInterpolationTime>0.2</freeCamInterpolationTime>
+    <freeCamFovInterpolationTime>0.2</freeCamFovInterpolationTime>
+    <freeCamZoomFactor>0.01</freeCamZoomFactor>
+    <backCamInterpolationTime>0.0</backCamInterpolationTime>
+    <bombCamInterpolationTime>0.3</bombCamInterpolationTime>
+    <sideCamInterpolationTime>0.05</sideCamInterpolationTime>
+    <sideCamJInterpolationStartTime>1.0</sideCamJInterpolationStartTime>
+    <sideCamJInterpolationEndTime>1.0</sideCamJInterpolationEndTime>
+    <sideCamJInterpolationTimeTransitionTerm>0.02</sideCamJInterpolationTimeTransitionTerm>
+    <spectatorCamInterpolationTime>0.0</spectatorCamInterpolationTime>
+    <targetCamInterpolationTime>0.2</targetCamInterpolationTime>
+    <freeFixableCamInterpolationTime>0.75</freeFixableCamInterpolationTime>
+    <freeFixableCamSpeed>2.0</freeFixableCamSpeed>
+    <destroyedFall>
+      <stateInterpolationTime>0.5</stateInterpolationTime>
+      <animationNeedTime>10.0</animationNeedTime>
+      <animationStartTime>3.0</animationStartTime>
+      <animationPitch>	0	</animationPitch>
+      <animationYaw>25.0</animationYaw>
+      <animationPitchClockwise>False</animationPitchClockwise>
+      <animationYawClockwise>	True	</animationYawClockwise>
+      <animationDistance>35.0</animationDistance>
+      <animationTime>6.0</animationTime>
+      <animationFov>50.0</animationFov>
+      <animationFadeInTime>3.0</animationFadeInTime>
+      <animationFadeOutTime>3.0</animationFadeOutTime>
+      <animationGroundNeedTime>5.0</animationGroundNeedTime>
+      <animationGroundTime>4.0</animationGroundTime>
+      <animationGroundFov>5.0</animationGroundFov>
+      <animationGroundSpawnRadius>1000.0</animationGroundSpawnRadius>
+      <animationGroundHeight>50.0</animationGroundHeight>
+    </destroyedFall>
+    <destroyedLanded>
+      <stateInterpolationTime>0.0</stateInterpolationTime>
+      <fov>65.0</fov>
+      <pitch>45.0</pitch>
+      <pitchMin>45.0</pitchMin>
+      <yaw>30.0</yaw>
+      <rotationSpeed>0.2</rotationSpeed>
+      <distance>120.0</distance>
+    </destroyedLanded>
+    <zoomTable>
+      <zoomPreset>
+        <id>	normalCombat	</id>
+        <normalZoomData>
+          <position>0 5.5 -34.0</position>
+          <fovPercent>0.84</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 2.8 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>normalAssault</id>
+        <normalZoomData>
+          <position>0 -4.0 -17.5</position>
+          <fovPercent>1.00</fovPercent>
+          <angle>	20	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 -4 -0.5</position>
+          <fovPercent>0.45</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>joystickCombat</id>
+        <normalZoomData>
+          <position>0 4.2 -34.0</position>
+          <fovPercent>0.84</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 4.0 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>joystickAssault</id>
+        <normalZoomData>
+          <position>0 -4.0 -17.5</position>
+          <fovPercent>1.00</fovPercent>
+          <angle>	20	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 -4 -0.5</position>
+          <fovPercent>0.45</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>	directCombat	</id>
+        <normalZoomData>
+          <position>0 5.3 -22.0</position>
+          <fovPercent>0.75</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 2.8 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>	directSniper	</id>
+        <normalZoomData>
+          <position>0 2.8 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 2.8 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>directAssault</id>
+        <normalZoomData>
+          <position>0 -4.0 -17.5</position>
+          <fovPercent>1.00</fovPercent>
+          <angle>	20	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 -4 -0.5</position>
+          <fovPercent>0.45</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>	directGunner	</id>
+        <normalZoomData>
+          <position>0 5.0 -10</position>
+          <fovPercent>0.75</fovPercent>
+          <angle>	0	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 2.5 0</position>
+          <fovPercent>0.5</fovPercent>
+          <angle>	0	</angle>
+          <hideModel>	0	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+    </zoomTable>
+    <vibrationAmplitudes>0.04 0.09 0.0</vibrationAmplitudes>
+    <vibrationTable>
+      <frequency>0.20 0.20 0.0</frequency>
+      <frequency>0.30 0.25 0.0</frequency>
+      <frequency>0.40 0.30 0.0</frequency>
+    </vibrationTable>
+    <gunnerStateData>
+      <duration>0.1</duration>
+      <distanceCurve>
+        <point>-90 -8</point>
+        <point>0    -6</point>
+        <point>90  1</point>
+      </distanceCurve>
+      <heightCurve>
+        <point>-90  12</point>
+        <point>0  0.5</point>
+        <point>90  0.5</point>
+      </heightCurve>
+    </gunnerStateData>
+  </camera>
+  <camera>
+    <id>camera03_Big_Tail</id>
+    <minMouseCombatFov>	40	</minMouseCombatFov>
+    <maxFov>	65	</maxFov>
+    <minFov>	65	</minFov>
+    <targetCamPos>0 30.2 -30.0</targetCamPos>
+    <targetCamSpeed>5.0</targetCamSpeed>
+    <camSpeedYawPitch>7.0</camSpeedYawPitch>
+    <camSpeedRoll>4.0</camSpeedRoll>
+    <camSniperSpeedYawPitch>1000.0</camSniperSpeedYawPitch>
+    <camSniperSpeedRoll>1000.0</camSniperSpeedRoll>
+    <camSniperSpeedTarget>1000.0</camSniperSpeedTarget>
+    <backCamPos>0 5 10</backCamPos>
+    <backCamSpeed>	30	</backCamSpeed>
+    <backTargetCamSpeed>	30	</backTargetCamSpeed>
+    <backCamFov>	56	</backCamFov>
+    <rearViewCamPos>0 0 -10</rearViewCamPos>
+    <rearViewCamDir>0 22 -350</rearViewCamDir>
+    <rearViewCamFov>	60	</rearViewCamFov>
+    <leftCamPos>15 2 0</leftCamPos>
+    <leftCamDir>-15 2 0.1</leftCamDir>
+    <rightCamPos>-15 2 0</rightCamPos>
+    <rightCamDir>15 2 0.1</rightCamDir>
+    <topCamPos>0 -15 -0.1</topCamPos>
+    <topCamDir>0 0 0</topCamDir>
+    <bottomCamPos>0 15 -0.1</bottomCamPos>
+    <bottomCamDir>0 0 0</bottomCamDir>
+    <pivotDistMax>	40	</pivotDistMax>
+    <pivotDistMin>	12	</pivotDistMin>
+    <freeCamDistHalflife>0.08</freeCamDistHalflife>
+    <freeCamFovNear>	30	</freeCamFovNear>
+    <freeCamFovFar>	60	</freeCamFovFar>
+    <normalCamInterpolationTime>0.2</normalCamInterpolationTime>
+    <freeCamInterpolationTime>0.2</freeCamInterpolationTime>
+    <freeCamFovInterpolationTime>0.2</freeCamFovInterpolationTime>
+    <freeCamZoomFactor>0.01</freeCamZoomFactor>
+    <backCamInterpolationTime>0.0</backCamInterpolationTime>
+    <bombCamInterpolationTime>0.2</bombCamInterpolationTime>
+    <sideCamInterpolationTime>0.05</sideCamInterpolationTime>
+    <sideCamJInterpolationStartTime>1.0</sideCamJInterpolationStartTime>
+    <sideCamJInterpolationEndTime>1.0</sideCamJInterpolationEndTime>
+    <sideCamJInterpolationTimeTransitionTerm>0.02</sideCamJInterpolationTimeTransitionTerm>
+    <spectatorCamInterpolationTime>0.0</spectatorCamInterpolationTime>
+    <targetCamInterpolationTime>0.2</targetCamInterpolationTime>
+    <freeFixableCamInterpolationTime>0.75</freeFixableCamInterpolationTime>
+    <freeFixableCamSpeed>2.0</freeFixableCamSpeed>
+    <destroyedFall>
+      <stateInterpolationTime>0.5</stateInterpolationTime>
+      <animationNeedTime>10.0</animationNeedTime>
+      <animationStartTime>3.0</animationStartTime>
+      <animationPitch>	0	</animationPitch>
+      <animationYaw>25.0</animationYaw>
+      <animationPitchClockwise>False</animationPitchClockwise>
+      <animationYawClockwise>	True	</animationYawClockwise>
+      <animationDistance>35.0</animationDistance>
+      <animationTime>6.0</animationTime>
+      <animationFov>50.0</animationFov>
+      <animationFadeInTime>3.0</animationFadeInTime>
+      <animationFadeOutTime>3.0</animationFadeOutTime>
+      <animationGroundNeedTime>5.0</animationGroundNeedTime>
+      <animationGroundTime>4.0</animationGroundTime>
+      <animationGroundFov>5.0</animationGroundFov>
+      <animationGroundSpawnRadius>1000.0</animationGroundSpawnRadius>
+      <animationGroundHeight>50.0</animationGroundHeight>
+    </destroyedFall>
+    <destroyedLanded>
+      <stateInterpolationTime>0.0</stateInterpolationTime>
+      <fov>65.0</fov>
+      <pitch>45.0</pitch>
+      <pitchMin>45.0</pitchMin>
+      <yaw>30.0</yaw>
+      <rotationSpeed>0.2</rotationSpeed>
+      <distance>120.0</distance>
+    </destroyedLanded>
+    <zoomTable>
+      <zoomPreset>
+        <id>	normalCombat	</id>
+        <normalZoomData>
+          <position>0 5.7 -34.0</position>
+          <fovPercent>0.84</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 3.1 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>normalAssault</id>
+        <normalZoomData>
+          <position>0 -4 -19</position>
+          <fovPercent>1.00</fovPercent>
+          <angle>	20	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 -4.3 -0.5</position>
+          <fovPercent>0.45</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>joystickCombat</id>
+        <normalZoomData>
+          <position>0 4.2 -34.0</position>
+          <fovPercent>0.84</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 3.8 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>joystickAssault</id>
+        <normalZoomData>
+          <position>0 -4 -19</position>
+          <fovPercent>1.00</fovPercent>
+          <angle>	20	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 -4.3 -0.5</position>
+          <fovPercent>0.45</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>	directCombat	</id>
+        <normalZoomData>
+          <position>0 5.3 -22.0</position>
+          <fovPercent>0.75</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 3.1 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>	directSniper	</id>
+        <normalZoomData>
+          <position>0 3.1 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 3.1 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>directAssault</id>
+        <normalZoomData>
+          <position>0 -4 -19</position>
+          <fovPercent>1.00</fovPercent>
+          <angle>	20	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 -4.3 -0.5</position>
+          <fovPercent>0.45</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>	directGunner	</id>
+        <normalZoomData>
+          <position>0 5.0 -10</position>
+          <fovPercent>0.75</fovPercent>
+          <angle>	0	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 2.5 0</position>
+          <fovPercent>0.5</fovPercent>
+          <angle>	0	</angle>
+          <hideModel>	0	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+    </zoomTable>
+    <vibrationAmplitudes>0.03 0.08 0.0</vibrationAmplitudes>
+    <vibrationTable>
+      <frequency>0.20 0.20 0.0</frequency>
+      <frequency>0.30 0.25 0.0</frequency>
+      <frequency>0.40 0.30 0.0</frequency>
+    </vibrationTable>
+    <gunnerStateData>
+      <duration>0.1</duration>
+      <distanceCurve>
+        <point>-90 -8</point>
+        <point>0    -6</point>
+        <point>90  1</point>
+      </distanceCurve>
+      <heightCurve>
+        <point>-90  12</point>
+        <point>0  0.5</point>
+        <point>90  0.5</point>
+      </heightCurve>
+    </gunnerStateData>
+  </camera>
+  <camera>
+    <id>camera04_Big_Tail</id>
+    <minMouseCombatFov>	40	</minMouseCombatFov>
+    <maxFov>	65	</maxFov>
+    <minFov>	65	</minFov>
+    <targetCamPos>0 30.2 -30.0</targetCamPos>
+    <targetCamSpeed>5.0</targetCamSpeed>
+    <camSpeedYawPitch>7.0</camSpeedYawPitch>
+    <camSpeedRoll>4.0</camSpeedRoll>
+    <camSniperSpeedYawPitch>1000.0</camSniperSpeedYawPitch>
+    <camSniperSpeedRoll>1000.0</camSniperSpeedRoll>
+    <camSniperSpeedTarget>1000.0</camSniperSpeedTarget>
+    <backCamPos>0 5.8 12</backCamPos>
+    <backCamSpeed>	30	</backCamSpeed>
+    <backTargetCamSpeed>	30	</backTargetCamSpeed>
+    <backCamFov>	56	</backCamFov>
+    <rearViewCamPos>0 0 -10</rearViewCamPos>
+    <rearViewCamDir>0 22 -350</rearViewCamDir>
+    <rearViewCamFov>	60	</rearViewCamFov>
+    <leftCamPos>15 2 0</leftCamPos>
+    <leftCamDir>-15 2 0.1</leftCamDir>
+    <rightCamPos>-15 2 0</rightCamPos>
+    <rightCamDir>15 2 0.1</rightCamDir>
+    <topCamPos>0 -15 -0.1</topCamPos>
+    <topCamDir>0 0 0</topCamDir>
+    <bottomCamPos>0 15 -0.1</bottomCamPos>
+    <bottomCamDir>0 0 0</bottomCamDir>
+    <pivotDistMax>	40	</pivotDistMax>
+    <pivotDistMin>	16	</pivotDistMin>
+    <freeCamDistHalflife>0.08</freeCamDistHalflife>
+    <freeCamFovNear>	30	</freeCamFovNear>
+    <freeCamFovFar>	60	</freeCamFovFar>
+    <normalCamInterpolationTime>0.2</normalCamInterpolationTime>
+    <freeCamInterpolationTime>0.2</freeCamInterpolationTime>
+    <freeCamFovInterpolationTime>0.2</freeCamFovInterpolationTime>
+    <freeCamZoomFactor>0.01</freeCamZoomFactor>
+    <backCamInterpolationTime>0.0</backCamInterpolationTime>
+    <bombCamInterpolationTime>0.3</bombCamInterpolationTime>
+    <sideCamInterpolationTime>0.05</sideCamInterpolationTime>
+    <sideCamJInterpolationStartTime>1.0</sideCamJInterpolationStartTime>
+    <sideCamJInterpolationEndTime>1.0</sideCamJInterpolationEndTime>
+    <sideCamJInterpolationTimeTransitionTerm>0.02</sideCamJInterpolationTimeTransitionTerm>
+    <spectatorCamInterpolationTime>0.0</spectatorCamInterpolationTime>
+    <targetCamInterpolationTime>0.2</targetCamInterpolationTime>
+    <freeFixableCamInterpolationTime>0.75</freeFixableCamInterpolationTime>
+    <freeFixableCamSpeed>2.0</freeFixableCamSpeed>
+    <destroyedFall>
+      <stateInterpolationTime>0.5</stateInterpolationTime>
+      <animationNeedTime>10.0</animationNeedTime>
+      <animationStartTime>3.0</animationStartTime>
+      <animationPitch>	0	</animationPitch>
+      <animationYaw>25.0</animationYaw>
+      <animationPitchClockwise>False</animationPitchClockwise>
+      <animationYawClockwise>	True	</animationYawClockwise>
+      <animationDistance>35.0</animationDistance>
+      <animationTime>6.0</animationTime>
+      <animationFov>50.0</animationFov>
+      <animationFadeInTime>3.0</animationFadeInTime>
+      <animationFadeOutTime>3.0</animationFadeOutTime>
+      <animationGroundNeedTime>5.0</animationGroundNeedTime>
+      <animationGroundTime>4.0</animationGroundTime>
+      <animationGroundFov>5.0</animationGroundFov>
+      <animationGroundSpawnRadius>1000.0</animationGroundSpawnRadius>
+      <animationGroundHeight>50.0</animationGroundHeight>
+    </destroyedFall>
+    <destroyedLanded>
+      <stateInterpolationTime>0.0</stateInterpolationTime>
+      <fov>65.0</fov>
+      <pitch>45.0</pitch>
+      <pitchMin>45.0</pitchMin>
+      <yaw>30.0</yaw>
+      <rotationSpeed>0.2</rotationSpeed>
+      <distance>120.0</distance>
+    </destroyedLanded>
+    <zoomTable>
+      <zoomPreset>
+        <id>	normalCombat	</id>
+        <normalZoomData>
+          <position>0 5.7 -34.0</position>
+          <fovPercent>0.84</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 4.0 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>normalAssault</id>
+        <normalZoomData>
+          <position>0 -4 -21</position>
+          <fovPercent>1.00</fovPercent>
+          <angle>	20	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 -5.0 -0.5</position>
+          <fovPercent>0.45</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>joystickCombat</id>
+        <normalZoomData>
+          <position>0 4.7 -34.0</position>
+          <fovPercent>0.84</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 4.6 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>joystickAssault</id>
+        <normalZoomData>
+          <position>0 -4 -21</position>
+          <fovPercent>1.00</fovPercent>
+          <angle>	20	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 -5.0 -0.5</position>
+          <fovPercent>0.45</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>	directCombat	</id>
+        <normalZoomData>
+          <position>0 5.3 -26.0</position>
+          <fovPercent>0.75</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 4.0 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>	directSniper	</id>
+        <normalZoomData>
+          <position>0 4.0 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 4.0 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>directAssault</id>
+        <normalZoomData>
+          <position>0 -4 -21</position>
+          <fovPercent>1.00</fovPercent>
+          <angle>	20	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 -5.0 -0.5</position>
+          <fovPercent>0.45</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>	directGunner	</id>
+        <normalZoomData>
+          <position>0 5.0 -10</position>
+          <fovPercent>0.75</fovPercent>
+          <angle>	0	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 2.5 0</position>
+          <fovPercent>0.5</fovPercent>
+          <angle>	0	</angle>
+          <hideModel>	0	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+    </zoomTable>
+    <vibrationAmplitudes>0.02 0.07 0.0</vibrationAmplitudes>
+    <vibrationTable>
+      <frequency>0.20 0.20 0.0</frequency>
+      <frequency>0.30 0.25 0.0</frequency>
+      <frequency>0.40 0.30 0.0</frequency>
+    </vibrationTable>
+    <gunnerStateData>
+      <duration>0.1</duration>
+      <distanceCurve>
+        <point>-90 -8</point>
+        <point>0    -6</point>
+        <point>90  1</point>
+      </distanceCurve>
+      <heightCurve>
+        <point>-90  12</point>
+        <point>0  0.5</point>
+        <point>90  0.5</point>
+      </heightCurve>
+    </gunnerStateData>
+  </camera>
+  <camera>
+    <id>Haunebuii</id>
+    <minMouseCombatFov>	40	</minMouseCombatFov>
+    <maxFov>	65	</maxFov>
+    <minFov>	65	</minFov>
+    <targetCamPos>0 30.2 -30.0</targetCamPos>
+    <targetCamSpeed>5.0</targetCamSpeed>
+    <camSpeedYawPitch>7.0</camSpeedYawPitch>
+    <camSpeedRoll>4.0</camSpeedRoll>
+    <camSniperSpeedYawPitch>1000.0</camSniperSpeedYawPitch>
+    <camSniperSpeedRoll>1000.0</camSniperSpeedRoll>
+    <camSniperSpeedTarget>1000.0</camSniperSpeedTarget>
+    <backCamPos>0 5.8 12</backCamPos>
+    <backCamSpeed>	30	</backCamSpeed>
+    <backTargetCamSpeed>	30	</backTargetCamSpeed>
+    <backCamFov>	56	</backCamFov>
+    <rearViewCamPos>0 0 -10</rearViewCamPos>
+    <rearViewCamDir>0 22 -350</rearViewCamDir>
+    <rearViewCamFov>	60	</rearViewCamFov>
+    <leftCamPos>15 2 0</leftCamPos>
+    <leftCamDir>-15 2 0.1</leftCamDir>
+    <rightCamPos>-15 2 0</rightCamPos>
+    <rightCamDir>15 2 0.1</rightCamDir>
+    <topCamPos>0 -15 -0.1</topCamPos>
+    <topCamDir>0 0 0</topCamDir>
+    <bottomCamPos>0 15 -0.1</bottomCamPos>
+    <bottomCamDir>0 0 0</bottomCamDir>
+    <pivotDistMax>	40	</pivotDistMax>
+    <pivotDistMin>	14	</pivotDistMin>
+    <freeCamDistHalflife>0.08</freeCamDistHalflife>
+    <freeCamFovNear>	30	</freeCamFovNear>
+    <freeCamFovFar>	60	</freeCamFovFar>
+    <normalCamInterpolationTime>0.2</normalCamInterpolationTime>
+    <freeCamInterpolationTime>0.2</freeCamInterpolationTime>
+    <freeCamFovInterpolationTime>0.2</freeCamFovInterpolationTime>
+    <freeCamZoomFactor>0.01</freeCamZoomFactor>
+    <backCamInterpolationTime>0.0</backCamInterpolationTime>
+    <bombCamInterpolationTime>0.3</bombCamInterpolationTime>
+    <sideCamInterpolationTime>0.05</sideCamInterpolationTime>
+    <sideCamJInterpolationStartTime>1.0</sideCamJInterpolationStartTime>
+    <sideCamJInterpolationEndTime>1.0</sideCamJInterpolationEndTime>
+    <sideCamJInterpolationTimeTransitionTerm>0.02</sideCamJInterpolationTimeTransitionTerm>
+    <spectatorCamInterpolationTime>0.0</spectatorCamInterpolationTime>
+    <targetCamInterpolationTime>0.2</targetCamInterpolationTime>
+    <freeFixableCamInterpolationTime>0.75</freeFixableCamInterpolationTime>
+    <freeFixableCamSpeed>2.0</freeFixableCamSpeed>
+    <destroyedFall>
+      <stateInterpolationTime>0.5</stateInterpolationTime>
+      <animationNeedTime>10.0</animationNeedTime>
+      <animationStartTime>3.0</animationStartTime>
+      <animationPitch>	0	</animationPitch>
+      <animationYaw>25.0</animationYaw>
+      <animationPitchClockwise>False</animationPitchClockwise>
+      <animationYawClockwise>	True	</animationYawClockwise>
+      <animationDistance>35.0</animationDistance>
+      <animationTime>6.0</animationTime>
+      <animationFov>50.0</animationFov>
+      <animationFadeInTime>3.0</animationFadeInTime>
+      <animationFadeOutTime>3.0</animationFadeOutTime>
+      <animationGroundNeedTime>5.0</animationGroundNeedTime>
+      <animationGroundTime>4.0</animationGroundTime>
+      <animationGroundFov>5.0</animationGroundFov>
+      <animationGroundSpawnRadius>1000.0</animationGroundSpawnRadius>
+      <animationGroundHeight>50.0</animationGroundHeight>
+    </destroyedFall>
+    <destroyedLanded>
+      <stateInterpolationTime>0.0</stateInterpolationTime>
+      <fov>65.0</fov>
+      <pitch>45.0</pitch>
+      <pitchMin>45.0</pitchMin>
+      <yaw>30.0</yaw>
+      <rotationSpeed>0.2</rotationSpeed>
+      <distance>120.0</distance>
+    </destroyedLanded>
+    <zoomTable>
+      <zoomPreset>
+        <id>	normalCombat	</id>
+        <normalZoomData>
+          <position>0 5.7 -34.0</position>
+          <fovPercent>0.84</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 4.0 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>normalAssault</id>
+        <normalZoomData>
+          <position>0 -4 -21</position>
+          <fovPercent>1.00</fovPercent>
+          <angle>	20	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 -5.0 -0.5</position>
+          <fovPercent>0.45</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>joystickCombat</id>
+        <normalZoomData>
+          <position>0 4.7 -34.0</position>
+          <fovPercent>0.84</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 4.6 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>joystickAssault</id>
+        <normalZoomData>
+          <position>0 -4 -21</position>
+          <fovPercent>1.00</fovPercent>
+          <angle>	20	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 -5.0 -0.5</position>
+          <fovPercent>0.45</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>	directCombat	</id>
+        <normalZoomData>
+          <position>0 5.5 -34.0</position>
+          <fovPercent>0.84</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 4.0 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>	directSniper	</id>
+        <normalZoomData>
+          <position>0 4.0 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 4.0 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>directAssault</id>
+        <normalZoomData>
+          <position>0 -4 -21</position>
+          <fovPercent>1.00</fovPercent>
+          <angle>	20	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 -5.0 -0.5</position>
+          <fovPercent>0.45</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+    </zoomTable>
+    <vibrationAmplitudes>0.02 0.07 0.0</vibrationAmplitudes>
+    <vibrationTable>
+      <frequency>0.20 0.20 0.0</frequency>
+      <frequency>0.30 0.25 0.0</frequency>
+      <frequency>0.40 0.30 0.0</frequency>
+    </vibrationTable>
+  </camera>
+  <camera>
+    <id>medium_bomber</id>
+    <minMouseCombatFov>	40	</minMouseCombatFov>
+    <maxFov>	65	</maxFov>
+    <minFov>	65	</minFov>
+    <targetCamPos>0 30.2 -30.0</targetCamPos>
+    <targetCamSpeed>5.0</targetCamSpeed>
+    <camSpeedYawPitch>7.0</camSpeedYawPitch>
+    <camSpeedRoll>4.0</camSpeedRoll>
+    <camSniperSpeedYawPitch>1000.0</camSniperSpeedYawPitch>
+    <camSniperSpeedRoll>1000.0</camSniperSpeedRoll>
+    <camSniperSpeedTarget>1000.0</camSniperSpeedTarget>
+    <backCamPos>0 4 8</backCamPos>
+    <backCamSpeed>	30	</backCamSpeed>
+    <backTargetCamSpeed>	30	</backTargetCamSpeed>
+    <backCamFov>	56	</backCamFov>
+    <rearViewCamPos>0 0 -10</rearViewCamPos>
+    <rearViewCamDir>0 22 -350</rearViewCamDir>
+    <rearViewCamFov>	60	</rearViewCamFov>
+    <leftCamPos>15 2 0</leftCamPos>
+    <leftCamDir>-15 2 0.1</leftCamDir>
+    <rightCamPos>-15 2 0</rightCamPos>
+    <rightCamDir>15 2 0.1</rightCamDir>
+    <topCamPos>0 -15 -0.1</topCamPos>
+    <topCamDir>0 0 0</topCamDir>
+    <bottomCamPos>0 15 -0.1</bottomCamPos>
+    <bottomCamDir>0 0 0</bottomCamDir>
+    <pivotDistMax>	40	</pivotDistMax>
+    <pivotDistMin>	12	</pivotDistMin>
+    <freeCamDistHalflife>0.08</freeCamDistHalflife>
+    <freeCamFovNear>	30	</freeCamFovNear>
+    <freeCamFovFar>	60	</freeCamFovFar>
+    <normalCamInterpolationTime>0.05</normalCamInterpolationTime>
+    <freeCamInterpolationTime>0.2</freeCamInterpolationTime>
+    <freeCamFovInterpolationTime>0.2</freeCamFovInterpolationTime>
+    <freeCamZoomFactor>0.01</freeCamZoomFactor>
+    <backCamInterpolationTime>0.0</backCamInterpolationTime>
+    <bombCamInterpolationTime>0.01</bombCamInterpolationTime>
+    <sideCamInterpolationTime>0.05</sideCamInterpolationTime>
+    <sideCamJInterpolationStartTime>1.0</sideCamJInterpolationStartTime>
+    <sideCamJInterpolationEndTime>1.0</sideCamJInterpolationEndTime>
+    <sideCamJInterpolationTimeTransitionTerm>0.02</sideCamJInterpolationTimeTransitionTerm>
+    <spectatorCamInterpolationTime>0.0</spectatorCamInterpolationTime>
+    <sniperStateInterpolationTime>0.5</sniperStateInterpolationTime>
+    <targetCamInterpolationTime>0.2</targetCamInterpolationTime>
+    <freeFixableCamInterpolationTime>0.75</freeFixableCamInterpolationTime>
+    <freeFixableCamSpeed>2.0</freeFixableCamSpeed>
+    <destroyedFall>
+      <stateInterpolationTime>0.5</stateInterpolationTime>
+      <animationNeedTime>10.0</animationNeedTime>
+      <animationStartTime>3.0</animationStartTime>
+      <animationPitch>	0	</animationPitch>
+      <animationYaw>25.0</animationYaw>
+      <animationPitchClockwise>False</animationPitchClockwise>
+      <animationYawClockwise>	True	</animationYawClockwise>
+      <animationDistance>35.0</animationDistance>
+      <animationTime>6.0</animationTime>
+      <animationFov>50.0</animationFov>
+      <animationFadeInTime>3.0</animationFadeInTime>
+      <animationFadeOutTime>3.0</animationFadeOutTime>
+      <animationGroundNeedTime>5.0</animationGroundNeedTime>
+      <animationGroundTime>4.0</animationGroundTime>
+      <animationGroundFov>5.0</animationGroundFov>
+      <animationGroundSpawnRadius>1000.0</animationGroundSpawnRadius>
+      <animationGroundHeight>50.0</animationGroundHeight>
+    </destroyedFall>
+    <destroyedLanded>
+      <stateInterpolationTime>0.0</stateInterpolationTime>
+      <fov>65.0</fov>
+      <pitch>45.0</pitch>
+      <pitchMin>45.0</pitchMin>
+      <yaw>30.0</yaw>
+      <rotationSpeed>0.2</rotationSpeed>
+      <distance>120.0</distance>
+    </destroyedLanded>
+    <zoomTable>
+      <zoomPreset>
+        <id>	normalCombat	</id>
+        <normalZoomData>
+          <position>0 5.5 -34.0</position>
+          <fovPercent>0.84</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 2.4 -0.5</position>
+          <fovPercent>0.37</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>normalAssault</id>
+        <normalZoomData>
+          <position>0 -4.2 -17.5</position>
+          <fovPercent>1.0</fovPercent>
+          <angle>	20	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 -4.2 -0.5</position>
+          <fovPercent>0.45</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>joystickCombat</id>
+        <normalZoomData>
+          <position>0 3.9 -34.0</position>
+          <fovPercent>0.84</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 3.6 -0.5</position>
+          <fovPercent>0.37</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>joystickAssault</id>
+        <normalZoomData>
+          <position>0 -4.2 -17.5</position>
+          <fovPercent>1.0</fovPercent>
+          <angle>	20	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 0.0 -0.5</position>
+          <fovPercent>0.45</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>	directCombat	</id>
+        <normalZoomData>
+          <position>0 6.0 -24</position>
+          <fovPercent>0.75</fovPercent>
+          <angle>	4	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 5.3 -20</position>
+          <fovPercent>0.5</fovPercent>
+          <angle>	4	</angle>
+          <hideModel>	0	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>	directSniper	</id>
+        <sniperZoomData>
+          <position>0 5.3 -20</position>
+          <fovPercent>0.5</fovPercent>
+          <angle>	4	</angle>
+          <hideModel>	0	</hideModel>
+        </sniperZoomData>
+        <sniperZoomData>
+          <position>0 5.3 -20</position>
+          <fovPercent>0.5</fovPercent>
+          <angle>	4	</angle>
+          <hideModel>	0	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>directAssault</id>
+        <normalZoomData>
+          <position>0  -4  -4</position>
+          <fovPercent>0.8</fovPercent>
+          <angle>	85	</angle>
+          <hideModel>	1	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0  -4  -4</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>	85	</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>	directGunner	</id>
+        <normalZoomData>
+          <position>0 5.0 -10</position>
+          <fovPercent>0.75</fovPercent>
+          <angle>	0	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 3 0</position>
+          <fovPercent>0.5</fovPercent>
+          <angle>	0	</angle>
+          <hideModel>	0	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+    </zoomTable>
+    <vibrationAmplitudes>0.03 0.08 0.0</vibrationAmplitudes>
+    <gunnerStateData>
+      <duration>0.1</duration>
+      <distanceCurve>
+        <point>-90 -8</point>
+        <point>0    -6</point>
+        <point>90  -2</point>
+      </distanceCurve>
+      <heightCurve>
+        <point>-90  17</point>
+        <point>0  0.5</point>
+        <point>90  0.5</point>
+      </heightCurve>
+    </gunnerStateData>
+    <vibrationTable>
+      <frequency>0.20 0.20 0.0</frequency>
+      <frequency>0.30 0.25 0.0</frequency>
+      <frequency>0.40 0.30 0.0</frequency>
+    </vibrationTable>
+  </camera>
+  <camera>
+    <id>camera_assault</id>
+    <minMouseCombatFov>	40	</minMouseCombatFov>
+    <maxFov>	65	</maxFov>
+    <minFov>	65	</minFov>
+    <targetCamPos>0 30.2 -30.0</targetCamPos>
+    <targetCamSpeed>5.0</targetCamSpeed>
+    <camSpeedYawPitch>7.0</camSpeedYawPitch>
+    <camSpeedRoll>4.0</camSpeedRoll>
+    <camSniperSpeedYawPitch>1000.0</camSniperSpeedYawPitch>
+    <camSniperSpeedRoll>1000.0</camSniperSpeedRoll>
+    <camSniperSpeedTarget>1000.0</camSniperSpeedTarget>
+    <backCamPos>0 4 8</backCamPos>
+    <backCamSpeed>	30	</backCamSpeed>
+    <backTargetCamSpeed>	30	</backTargetCamSpeed>
+    <backCamFov>	56	</backCamFov>
+    <rearViewCamPos>0 0 -10</rearViewCamPos>
+    <rearViewCamDir>0 22 -350</rearViewCamDir>
+    <rearViewCamFov>	60	</rearViewCamFov>
+    <leftCamPos>15 2 0</leftCamPos>
+    <leftCamDir>-15 2 0.1</leftCamDir>
+    <rightCamPos>-15 2 0</rightCamPos>
+    <rightCamDir>15 2 0.1</rightCamDir>
+    <topCamPos>0 -15 -0.1</topCamPos>
+    <topCamDir>0 0 0</topCamDir>
+    <bottomCamPos>0 15 -0.1</bottomCamPos>
+    <bottomCamDir>0 0 0</bottomCamDir>
+    <pivotDistMax>	40	</pivotDistMax>
+    <pivotDistMin>	12	</pivotDistMin>
+    <freeCamDistHalflife>0.08</freeCamDistHalflife>
+    <freeCamFovNear>	30	</freeCamFovNear>
+    <freeCamFovFar>	60	</freeCamFovFar>
+    <normalCamInterpolationTime>0.2</normalCamInterpolationTime>
+    <freeCamInterpolationTime>0.2</freeCamInterpolationTime>
+    <freeCamFovInterpolationTime>0.2</freeCamFovInterpolationTime>
+    <freeCamZoomFactor>0.01</freeCamZoomFactor>
+    <backCamInterpolationTime>0.0</backCamInterpolationTime>
+    <bombCamInterpolationTime>0.3</bombCamInterpolationTime>
+    <sideCamInterpolationTime>0.05</sideCamInterpolationTime>
+    <sideCamJInterpolationStartTime>1.0</sideCamJInterpolationStartTime>
+    <sideCamJInterpolationEndTime>1.0</sideCamJInterpolationEndTime>
+    <sideCamJInterpolationTimeTransitionTerm>0.02</sideCamJInterpolationTimeTransitionTerm>
+    <spectatorCamInterpolationTime>0.0</spectatorCamInterpolationTime>
+    <targetCamInterpolationTime>0.2</targetCamInterpolationTime>
+    <freeFixableCamInterpolationTime>0.75</freeFixableCamInterpolationTime>
+    <freeFixableCamSpeed>2.0</freeFixableCamSpeed>
+    <destroyedFall>
+      <stateInterpolationTime>0.5</stateInterpolationTime>
+      <animationNeedTime>10.0</animationNeedTime>
+      <animationStartTime>3.0</animationStartTime>
+      <animationPitch>	0	</animationPitch>
+      <animationYaw>25.0</animationYaw>
+      <animationPitchClockwise>False</animationPitchClockwise>
+      <animationYawClockwise>	True	</animationYawClockwise>
+      <animationDistance>35.0</animationDistance>
+      <animationTime>6.0</animationTime>
+      <animationFov>50.0</animationFov>
+      <animationFadeInTime>3.0</animationFadeInTime>
+      <animationFadeOutTime>3.0</animationFadeOutTime>
+      <animationGroundNeedTime>5.0</animationGroundNeedTime>
+      <animationGroundTime>4.0</animationGroundTime>
+      <animationGroundFov>5.0</animationGroundFov>
+      <animationGroundSpawnRadius>1000.0</animationGroundSpawnRadius>
+      <animationGroundHeight>50.0</animationGroundHeight>
+    </destroyedFall>
+    <destroyedLanded>
+      <stateInterpolationTime>0.0</stateInterpolationTime>
+      <fov>65.0</fov>
+      <pitch>45.0</pitch>
+      <pitchMin>45.0</pitchMin>
+      <yaw>30.0</yaw>
+      <rotationSpeed>0.2</rotationSpeed>
+      <distance>120.0</distance>
+    </destroyedLanded>
+    <zoomTable>
+      <zoomPreset>
+        <id>	normalCombat	</id>
+        <normalZoomData>
+          <position>0 5.7 -34.0</position>
+          <fovPercent>0.84</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 2.0 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>normalAssault</id>
+        <normalZoomData>
+          <position>0 -4.2 -19</position>
+          <fovPercent>1.00</fovPercent>
+          <angle>	20	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 -4.3 -0.5</position>
+          <fovPercent>0.45</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>joystickCombat</id>
+        <normalZoomData>
+          <position>0 3.9 -34.0</position>
+          <fovPercent>0.84</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 3.6 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>joystickAssault</id>
+        <normalZoomData>
+          <position>0 -4.2 -19</position>
+          <fovPercent>1.0</fovPercent>
+          <angle>	20	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 -4.3 -0.5</position>
+          <fovPercent>0.45</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>	directCombat	</id>
+        <normalZoomData>
+          <position>0 5.3 -22.0</position>
+          <fovPercent>0.75</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 2.0 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>	directSniper	</id>
+        <normalZoomData>
+          <position>0 2.0 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 2.0 -0.5</position>
+          <fovPercent>0.3</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>directAssault</id>
+        <normalZoomData>
+          <position>0 -4.2 -19</position>
+          <fovPercent>1.0</fovPercent>
+          <angle>	20	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 -4.3 -0.5</position>
+          <fovPercent>0.45</fovPercent>
+          <angle>0.0</angle>
+          <hideModel>	1	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+      <zoomPreset>
+        <id>	directGunner	</id>
+        <normalZoomData>
+          <position>0 5.0 -10</position>
+          <fovPercent>0.75</fovPercent>
+          <angle>	0	</angle>
+          <hideModel>	0	</hideModel>
+        </normalZoomData>
+        <sniperZoomData>
+          <position>0 2.5 0</position>
+          <fovPercent>0.5</fovPercent>
+          <angle>	0	</angle>
+          <hideModel>	0	</hideModel>
+        </sniperZoomData>
+      </zoomPreset>
+    </zoomTable>
+    <vibrationAmplitudes>0.03 0.08 0.0</vibrationAmplitudes>
+    <gunnerStateData>
+      <duration>0.1</duration>
+      <distanceCurve>
+        <point>-90 -8</point>
+        <point>0    -6</point>
+        <point>90  1</point>
+      </distanceCurve>
+      <heightCurve>
+        <point>-90  12</point>
+        <point>0  0.5</point>
+        <point>90  0.5</point>
+      </heightCurve>
+    </gunnerStateData>
+    <vibrationTable>
+      <frequency>0.20 0.20 0.0</frequency>
+      <frequency>0.30 0.25 0.0</frequency>
+      <frequency>0.40 0.30 0.0</frequency>
+    </vibrationTable>
+  </camera>
+</aircraft_camera_presets.xml>

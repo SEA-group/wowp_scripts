@@ -1,0 +1,180 @@
+<pacific_001_dry_cargo_ship.xml>
+  <parent>default.xml</parent>
+  <name>LCT</name>
+  <modelPath>content/03_ocean/mechPC_001_dry_cargo_ship_01_anim/mechPC_001_dry_cargo_ship_01.model</modelPath>
+  <modelCrashPath>content/03_ocean/mechPC_001_dry_cargo_ship_01_anim/mechPC_001_dry_cargo_ship_01.model</modelCrashPath>
+  <bBoxes>
+    <mainBox>
+      <size>100 90 100</size>
+    </mainBox>
+  </bBoxes>
+  <damageEffects>
+    <effectFire>EFFECT_fire_med_02</effectFire>
+  </damageEffects>
+  <maxHealth>	900	</maxHealth>
+  <dominationCost>0.08</dominationCost>
+  <respawnDelay>-1.0</respawnDelay>
+  <superiorityPoints>	1	</superiorityPoints>
+  <initialSpawnDelay>0.0</initialSpawnDelay>
+  <type>smallTeamObject</type>
+  <parts>
+    <part>
+      <name>	hull	</name>
+      <partId>	1	</partId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	0.000000 16.650000 0.000000	</position>
+            <size>	21.780000 14.400000 42.930000	</size>
+            <armorFront>	10.000000 10.000000 10.000000	</armorFront>
+            <armorBack>	10.000000 10.000000 10.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+          <bbox>
+            <position>	0.000000 4.950000 -2.880000	</position>
+            <size>	25.740000 13.590000 164.430000	</size>
+            <armorFront>	10.000000 10.000000 10.000000	</armorFront>
+            <armorBack>	10.000000 10.000000 10.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	900	</health>
+        <componentType>	Hull	</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/03_ocean/mechPC_001_dry_cargo_ship_01_anim/mechPC_001_dry_cargo_ship_01.model</model>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_ship_real_02</name>
+                <mountPoint>HP_wave</mountPoint>
+              </effect>
+              <effect>
+                <name>EFFECT_w_ship_smoke_med_01</name>
+                <mountPoint>HP_ship_smoke_01</mountPoint>
+              </effect>
+            </effectState>
+            <stateAnimation>	idle	</stateAnimation>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	2	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <model>content/03_ocean/mechPC_001_dry_cargo_ship_01_anim/mechPC_001_dry_cargo_ship_01.model</model>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_ship_real_02</name>
+                <mountPoint>HP_wave</mountPoint>
+              </effect>
+              <effect>
+                <name>EFFECT_w_ship_smoke_med_01</name>
+                <mountPoint>HP_ship_smoke_01</mountPoint>
+              </effect>
+            </effectState>
+            <stateAnimation>	idle	</stateAnimation>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	3	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <model>content/03_ocean/mechPC_001_dry_cargo_ship_01_anim/mechPC_001_dry_cargo_ship_01.model</model>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_ship_real_02</name>
+                <mountPoint>HP_wave</mountPoint>
+              </effect>
+              <effect>
+                <name>EFFECT_w_ship_smoke_med_01</name>
+                <mountPoint>HP_ship_smoke_01</mountPoint>
+              </effect>
+            </effectState>
+            <stateAnimation>	idle	</stateAnimation>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	4	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/03_ocean/mechPC_001_dry_cargo_ship_01_anim/mechPC_005_dry_cargo_ship_01_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>EFFECT_w_prop_exposion_large</name>
+                <mountPoint>HP_Main_waterSplash1</mountPoint>
+              </effect>
+              <effect>
+                <name>EFFECT_BOMB_EXPLOSION_BIG_WATER_01</name>
+                <mountPoint>HP_Main_waterSplash1</mountPoint>
+              </effect>
+              <effect>
+                <name>EFFECT_BOMB_EXPLOSION_BIG_WATER</name>
+                <mountPoint>HP_Main_waterSplash1</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>EFFECT_w_ship_04</name>
+                <mountPoint>HP_wave</mountPoint>
+              </effect>
+              <effect>
+                <name>EFFECT_w_prop_white_smoke_small_02</name>
+                <mountPoint>HP_fire_01</mountPoint>
+              </effect>
+            </effectState>
+            <stateAnimation>destroy,crash_idle</stateAnimation>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>hull/HP_fire_01</fireMountPoint>
+        <fire>
+          <fire_chance>1.0</fire_chance>
+          <extinguish_time>20.0</extinguish_time>
+          <fire_damage>2%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+      </upgrade>
+    </part>
+  </parts>
+  <modelScaling>	1.000000	</modelScaling>
+</pacific_001_dry_cargo_ship.xml>

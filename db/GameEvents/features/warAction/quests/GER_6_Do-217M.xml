@@ -1,0 +1,432 @@
+<ger_6_do-217m.xml>
+  <header>
+    <type>quest</type>
+    <group>warAction</group>
+    <server>
+      <active>	false	</active>
+      <scope>player</scope>
+      <lifeTime>	86400	</lifeTime>
+      <price>
+        <prolong>
+          <time>	86400	</time>
+          <tickets>	6	</tickets>
+        </prolong>
+      </price>
+    </server>
+    <nested>
+      <subscriber>
+        <type>quest</type>
+        <group>warAction</group>
+        <server>
+          <active>	false	</active>
+          <scope>player</scope>
+        </server>
+      </subscriber>
+    </nested>
+  </header>
+  <include>
+    <nested>
+      <subscriber>
+        <condition>
+          <and>
+            <equal>
+              <context>arena.type</context>
+              <value>normal</value>
+            </equal>
+            <equal>
+              <context>arena.source</context>
+              <value>player</value>
+            </equal>
+          </and>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.plane.level</context>
+            <value>	4	</value>
+          </gte>
+        </condition>
+        <metadata>
+          <doneCount>	true	</doneCount>
+          <firstDoneTime>	true	</firstDoneTime>
+          <lastDoneTime>	true	</lastDoneTime>
+        </metadata>
+      </subscriber>
+    </nested>
+    <metadata>
+      <doneCount>	true	</doneCount>
+      <firstDoneTime>	true	</firstDoneTime>
+      <lastDoneTime>	true	</lastDoneTime>
+    </metadata>
+  </include>
+  <subscriber>
+    <name>Do-217M</name>
+    <client>
+      <order>	1	</order>
+      <name>
+        <locale>LOBBY_REWARD_SPECIAL_QUEST_DO217M</locale>
+      </name>
+      <description>
+        <locale>LOBBY_JA_TR_COMPLETE_QUEST_IN_PIECETIME_GET_FREE_PLANE</locale>
+      </description>
+    </client>
+    <nested>
+      <complete>chain</complete>
+      <display>	true	</display>
+      <subscriber>
+        <name>	1	</name>
+        <client>
+          <order>	1	</order>
+          <name>
+            <locale>LOBBY_QUESTS_2016_DAILY_092_NAME</locale>
+          </name>
+          <description>
+            <locale>LOBBY_QUESTS_2016_DAILY_092</locale>
+          </description>
+        </client>
+        <server>
+          <price>
+            <buy>
+              <tickets>	15	</tickets>
+            </buy>
+          </price>
+        </server>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	kill	</name>
+          <condition>
+            <equal>
+              <context>by</context>
+              <value>gunner</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	2	</value>
+            <display>	true	</display>
+          </count>
+        </event>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>finish</name>
+          <operation>
+            <self>	true	</self>
+            <rollback>	true	</rollback>
+          </operation>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	10000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	2	</name>
+        <client>
+          <order>	2	</order>
+          <name>
+            <locale>LOBBY_QUESTS_2017_DAILY_003_NAME</locale>
+          </name>
+          <description>
+            <locale>LOBBY_QUESTS_2016_DAILY_097</locale>
+          </description>
+        </client>
+        <server>
+          <price>
+            <buy>
+              <tickets>	25	</tickets>
+            </buy>
+          </price>
+        </server>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>sector.capture.participated</name>
+          <count>
+            <value>	80	</value>
+            <display>	true	</display>
+          </count>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>credits</itemType>
+              </idType>
+            </idTypeList>
+            <count>	25000	</count>
+            <kwargs>
+            </kwargs>
+          </item>
+        </transaction>
+      </subscriber>
+      <subscriber>
+        <name>	3	</name>
+        <client>
+          <order>	3	</order>
+          <name>
+            <locale>LOBBY_QUESTS_2016_DAILY_020_NAME</locale>
+          </name>
+          <description>
+            <locale>LOBBY_QUESTS_EVENT_2017_TEXT_7</locale>
+          </description>
+        </client>
+        <server>
+          <price>
+            <buy>
+              <tickets>	35	</tickets>
+            </buy>
+          </price>
+        </server>
+        <event>
+          <type>achievement</type>
+          <context>lang.epic</context>
+          <name>completed</name>
+          <count>
+            <value>	3	</value>
+            <display>	true	</display>
+          </count>
+        </event>
+        <transaction>
+          <item>
+            <type>add</type>
+            <idTypeList>
+              <idType>
+                <itemId>	0	</itemId>
+                <itemType>	slot	</itemType>
+              </idType>
+            </idTypeList>
+            <count>	1	</count>
+            <kwargs>
+            </kwargs>
+            <related>
+              <item>
+                <type>add</type>
+                <idTypeList>
+                  <idType>
+                    <itemId>	1606	</itemId>
+                    <itemType>plane</itemType>
+                  </idType>
+                </idTypeList>
+                <count>	1	</count>
+                <kwargs>
+                </kwargs>
+                <related>
+                  <item>
+                    <type>add</type>
+                    <idTypeList>
+                      <idType>
+                        <itemType>crewmember</itemType>
+                      </idType>
+                      <idType>
+                        <itemId>	1606	</itemId>
+                        <itemType>plane</itemType>
+                      </idType>
+                    </idTypeList>
+                    <count>	1	</count>
+                    <kwargs>
+                      <dictItem>
+                        <dictKey>mainSkillID</dictKey>
+                        <dictValue>	1	</dictValue>
+                      </dictItem>
+                      <dictItem>
+                        <dictKey>skillLevel</dictKey>
+                        <dictValue>	100	</dictValue>
+                      </dictItem>
+                      <dictItem>
+                        <dictKey>boardOnPlaneID</dictKey>
+                        <dictValue>	1606	</dictValue>
+                      </dictItem>
+                    </kwargs>
+                  </item>
+                  <item>
+                    <type>add</type>
+                    <idTypeList>
+                      <idType>
+                        <itemType>crewmember</itemType>
+                      </idType>
+                      <idType>
+                        <itemId>	1606	</itemId>
+                        <itemType>plane</itemType>
+                      </idType>
+                    </idTypeList>
+                    <count>	1	</count>
+                    <kwargs>
+                      <dictItem>
+                        <dictKey>mainSkillID</dictKey>
+                        <dictValue>	2	</dictValue>
+                      </dictItem>
+                      <dictItem>
+                        <dictKey>skillLevel</dictKey>
+                        <dictValue>	100	</dictValue>
+                      </dictItem>
+                      <dictItem>
+                        <dictKey>boardOnPlaneID</dictKey>
+                        <dictValue>	1606	</dictValue>
+                      </dictItem>
+                    </kwargs>
+                  </item>
+                  <item>
+                    <type>add</type>
+                    <idTypeList>
+                      <idType>
+                        <itemId>	-1038003992	</itemId>
+                        <itemType>camouflage</itemType>
+                      </idType>
+                    </idTypeList>
+                    <count>	1	</count>
+                    <kwargs>
+                      <dictItem>
+                        <dictKey>expiryTime</dictKey>
+                        <dictValue>-1.0</dictValue>
+                      </dictItem>
+                    </kwargs>
+                    <related>
+                      <item>
+                        <type>install</type>
+                        <idTypeList>
+                          <idType>
+                            <itemId>	-1038003992	</itemId>
+                            <itemType>camouflage</itemType>
+                          </idType>
+                        </idTypeList>
+                        <kwargs>
+                          <dictItem>
+                            <dictKey>arenaType</dictKey>
+                            <dictValue>	4	</dictValue>
+                          </dictItem>
+                        </kwargs>
+                      </item>
+                      <item>
+                        <type>install</type>
+                        <idTypeList>
+                          <idType>
+                            <itemId>	-1038003992	</itemId>
+                            <itemType>camouflage</itemType>
+                          </idType>
+                        </idTypeList>
+                        <kwargs>
+                          <dictItem>
+                            <dictKey>arenaType</dictKey>
+                            <dictValue>	3	</dictValue>
+                          </dictItem>
+                        </kwargs>
+                      </item>
+                      <item>
+                        <type>install</type>
+                        <idTypeList>
+                          <idType>
+                            <itemId>	-1038003992	</itemId>
+                            <itemType>camouflage</itemType>
+                          </idType>
+                        </idTypeList>
+                        <kwargs>
+                          <dictItem>
+                            <dictKey>arenaType</dictKey>
+                            <dictValue>	2	</dictValue>
+                          </dictItem>
+                        </kwargs>
+                      </item>
+                      <item>
+                        <type>install</type>
+                        <idTypeList>
+                          <idType>
+                            <itemId>	-1038003992	</itemId>
+                            <itemType>camouflage</itemType>
+                          </idType>
+                        </idTypeList>
+                        <kwargs>
+                          <dictItem>
+                            <dictKey>arenaType</dictKey>
+                            <dictValue>	1	</dictValue>
+                          </dictItem>
+                        </kwargs>
+                      </item>
+                    </related>
+                  </item>
+                  <item>
+                    <type>add</type>
+                    <idTypeList>
+                      <idType>
+                        <itemId>	-7746678	</itemId>
+                        <itemType>camouflage</itemType>
+                      </idType>
+                    </idTypeList>
+                    <count>	1	</count>
+                    <kwargs>
+                      <dictItem>
+                        <dictKey>expiryTime</dictKey>
+                        <dictValue>-1.0</dictValue>
+                      </dictItem>
+                    </kwargs>
+                    <related>
+                      <item>
+                        <type>install</type>
+                        <idTypeList>
+                          <idType>
+                            <itemId>	-7746678	</itemId>
+                            <itemType>camouflage</itemType>
+                          </idType>
+                        </idTypeList>
+                        <kwargs>
+                          <dictItem>
+                            <dictKey>arenaType</dictKey>
+                            <dictValue>	0	</dictValue>
+                          </dictItem>
+                        </kwargs>
+                      </item>
+                    </related>
+                  </item>
+                  <item>
+                    <type>add</type>
+                    <idTypeList>
+                      <idType>
+                        <itemId>	930266844	</itemId>
+                        <itemType>camouflage</itemType>
+                      </idType>
+                    </idTypeList>
+                    <count>	1	</count>
+                    <kwargs>
+                      <dictItem>
+                        <dictKey>expiryTime</dictKey>
+                        <dictValue>-1.0</dictValue>
+                      </dictItem>
+                    </kwargs>
+                    <related>
+                      <item>
+                        <type>install</type>
+                        <idTypeList>
+                          <idType>
+                            <itemId>	930266844	</itemId>
+                            <itemType>camouflage</itemType>
+                          </idType>
+                        </idTypeList>
+                        <kwargs>
+                          <dictItem>
+                            <dictKey>arenaType</dictKey>
+                            <dictValue>	0	</dictValue>
+                          </dictItem>
+                        </kwargs>
+                      </item>
+                    </related>
+                  </item>
+                </related>
+              </item>
+            </related>
+          </item>
+        </transaction>
+      </subscriber>
+    </nested>
+  </subscriber>
+</ger_6_do-217m.xml>

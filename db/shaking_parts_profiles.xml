@@ -1,0 +1,2209 @@
+<shaking_parts_profiles.xml>
+  <profiles>
+    <profile>
+      <id>SubtleShake</id>
+      <parts>
+        <LeftMixedAileronElevatorController>
+          <shakable>	true	</shakable>
+          <delay>	35	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>0.35</slowTremblingAmplitude>
+            <slowTremblingPeriod>0.5</slowTremblingPeriod>
+            <fastTremblingAmplitude>0.35</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.2</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>0.7</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.15</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>0.75</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.1</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>0.7</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.15</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>0.75</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.1</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>0.5</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.25</slowTremblingPeriod>
+              <fastTremblingAmplitude>	1	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </LeftMixedAileronElevatorController>
+        <RightMixedAileronElevatorController>
+          <shakable>	true	</shakable>
+          <delay>	0	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>0.35</slowTremblingAmplitude>
+            <slowTremblingPeriod>0.5</slowTremblingPeriod>
+            <fastTremblingAmplitude>0.35</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.2</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>0.7</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.15</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>0.75</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.1</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>0.7</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.15</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>0.75</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.1</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>0.5</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.25</slowTremblingPeriod>
+              <fastTremblingAmplitude>	1	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </RightMixedAileronElevatorController>
+        <LeftAileronController>
+          <shakable>	true	</shakable>
+          <delay>	35	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	1	</slowTremblingAmplitude>
+            <slowTremblingPeriod>0.5</slowTremblingPeriod>
+            <fastTremblingAmplitude>	1	</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	1	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	2	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.1</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	1	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	2	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.1</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	1	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.25</slowTremblingPeriod>
+              <fastTremblingAmplitude>	2	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </LeftAileronController>
+        <RightAileronController>
+          <shakable>	true	</shakable>
+          <delay>	0	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	1	</slowTremblingAmplitude>
+            <slowTremblingPeriod>0.5</slowTremblingPeriod>
+            <fastTremblingAmplitude>	1	</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	1	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	2	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.1</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	1	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	2	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.1</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	1	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.25</slowTremblingPeriod>
+              <fastTremblingAmplitude>	2	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </RightAileronController>
+        <ElevatorController>
+          <shakable>	true	</shakable>
+          <delay>	65	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>2.3</slowTremblingAmplitude>
+            <slowTremblingPeriod>1.5</slowTremblingPeriod>
+            <fastTremblingAmplitude>	1	</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	1	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	2	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.15</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	1	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	2	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.15</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	1	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>	2	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </ElevatorController>
+        <RudderController>
+          <shakable>	true	</shakable>
+          <delay>	0	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	1	</slowTremblingAmplitude>
+            <slowTremblingPeriod>0.5</slowTremblingPeriod>
+            <fastTremblingAmplitude>	2	</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	1	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>1.5</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.15</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	1	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>1.5</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.15</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	4	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.25</slowTremblingPeriod>
+              <fastTremblingAmplitude>	1	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </RudderController>
+        <FlapsControllerL>
+          <shakable>	true	</shakable>
+          <delay>	65	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	0	</slowTremblingAmplitude>
+            <slowTremblingPeriod>	0	</slowTremblingPeriod>
+            <fastTremblingAmplitude>	0	</fastTremblingAmplitude>
+            <fastTremblingPeriod>	0	</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	0	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>	0	</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	0	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>	0	</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	0	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>	0	</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	0	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>	0	</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	2	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>	4	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </FlapsControllerL>
+        <FlapsControllerR>
+          <shakable>	true	</shakable>
+          <delay>	95	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	0	</slowTremblingAmplitude>
+            <slowTremblingPeriod>	0	</slowTremblingPeriod>
+            <fastTremblingAmplitude>	0	</fastTremblingAmplitude>
+            <fastTremblingPeriod>	0	</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	0	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>	0	</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	0	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>	0	</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	0	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>	0	</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	0	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>	0	</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	2	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>	4	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </FlapsControllerR>
+      </parts>
+    </profile>
+    <profile>
+      <id>JetPlanes</id>
+      <parts>
+        <LeftMixedAileronElevatorController>
+          <shakable>	true	</shakable>
+          <delay>	35	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	1	</slowTremblingAmplitude>
+            <slowTremblingPeriod>0.5</slowTremblingPeriod>
+            <fastTremblingAmplitude>	1	</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	1	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	2	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.1</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	1	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	2	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.1</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	1	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.25</slowTremblingPeriod>
+              <fastTremblingAmplitude>	2	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </LeftMixedAileronElevatorController>
+        <RightMixedAileronElevatorController>
+          <shakable>	true	</shakable>
+          <delay>	0	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	1	</slowTremblingAmplitude>
+            <slowTremblingPeriod>0.5</slowTremblingPeriod>
+            <fastTremblingAmplitude>	1	</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	1	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	2	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.1</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	1	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	2	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.1</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	1	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.25</slowTremblingPeriod>
+              <fastTremblingAmplitude>	2	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </RightMixedAileronElevatorController>
+        <LeftAileronController>
+          <shakable>	true	</shakable>
+          <delay>	35	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	1	</slowTremblingAmplitude>
+            <slowTremblingPeriod>0.5</slowTremblingPeriod>
+            <fastTremblingAmplitude>	1	</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	1	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	2	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.1</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	1	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	2	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.1</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	1	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.25</slowTremblingPeriod>
+              <fastTremblingAmplitude>	2	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </LeftAileronController>
+        <RightAileronController>
+          <shakable>	true	</shakable>
+          <delay>	0	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	1	</slowTremblingAmplitude>
+            <slowTremblingPeriod>0.5</slowTremblingPeriod>
+            <fastTremblingAmplitude>	1	</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	1	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	2	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.1</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	1	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	2	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.1</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	1	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.25</slowTremblingPeriod>
+              <fastTremblingAmplitude>	2	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </RightAileronController>
+        <ElevatorController>
+          <shakable>	true	</shakable>
+          <delay>	65	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>2.3</slowTremblingAmplitude>
+            <slowTremblingPeriod>1.5</slowTremblingPeriod>
+            <fastTremblingAmplitude>	1	</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	1	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	2	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.15</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	1	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	2	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.15</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	1	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>	2	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </ElevatorController>
+        <RudderController>
+          <shakable>	true	</shakable>
+          <delay>	0	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	1	</slowTremblingAmplitude>
+            <slowTremblingPeriod>0.5</slowTremblingPeriod>
+            <fastTremblingAmplitude>	2	</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	1	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>1.5</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.15</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	1	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>1.5</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.15</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	4	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.25</slowTremblingPeriod>
+              <fastTremblingAmplitude>	1	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </RudderController>
+        <FlapsControllerL>
+          <shakable>	true	</shakable>
+          <delay>	65	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	0	</slowTremblingAmplitude>
+            <slowTremblingPeriod>	0	</slowTremblingPeriod>
+            <fastTremblingAmplitude>	0	</fastTremblingAmplitude>
+            <fastTremblingPeriod>	0	</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	0	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>	0	</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	0	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>	0	</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	0	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>	0	</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	0	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>	0	</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	2	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>	4	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </FlapsControllerL>
+        <FlapsControllerR>
+          <shakable>	true	</shakable>
+          <delay>	95	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	0	</slowTremblingAmplitude>
+            <slowTremblingPeriod>	0	</slowTremblingPeriod>
+            <fastTremblingAmplitude>	0	</fastTremblingAmplitude>
+            <fastTremblingPeriod>	0	</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	0	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>	0	</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	0	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>	0	</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	0	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>	0	</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	0	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>	0	</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	2	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>	4	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </FlapsControllerR>
+      </parts>
+    </profile>
+    <profile>
+      <id>JetPlanesSmall</id>
+      <parts>
+        <LeftMixedAileronElevatorController>
+          <shakable>	true	</shakable>
+          <delay>	35	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	1	</slowTremblingAmplitude>
+            <slowTremblingPeriod>0.5</slowTremblingPeriod>
+            <fastTremblingAmplitude>	1	</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	1	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	2	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.1</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	1	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	2	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.1</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	1	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.25</slowTremblingPeriod>
+              <fastTremblingAmplitude>	2	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </LeftMixedAileronElevatorController>
+        <RightMixedAileronElevatorController>
+          <shakable>	true	</shakable>
+          <delay>	0	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	1	</slowTremblingAmplitude>
+            <slowTremblingPeriod>0.5</slowTremblingPeriod>
+            <fastTremblingAmplitude>	1	</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	1	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	2	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.1</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	1	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	2	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.1</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	1	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.25</slowTremblingPeriod>
+              <fastTremblingAmplitude>	2	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </RightMixedAileronElevatorController>
+        <LeftAileronController>
+          <shakable>	true	</shakable>
+          <delay>	35	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	1	</slowTremblingAmplitude>
+            <slowTremblingPeriod>0.5</slowTremblingPeriod>
+            <fastTremblingAmplitude>	1	</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	1	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	2	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.1</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	1	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	2	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.1</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	1	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.25</slowTremblingPeriod>
+              <fastTremblingAmplitude>	2	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </LeftAileronController>
+        <RightAileronController>
+          <shakable>	true	</shakable>
+          <delay>	0	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	1	</slowTremblingAmplitude>
+            <slowTremblingPeriod>0.5</slowTremblingPeriod>
+            <fastTremblingAmplitude>	1	</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	1	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	2	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.1</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	1	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	2	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.1</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	1	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.25</slowTremblingPeriod>
+              <fastTremblingAmplitude>	2	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </RightAileronController>
+        <ElevatorController>
+          <shakable>	true	</shakable>
+          <delay>	65	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>4.3</slowTremblingAmplitude>
+            <slowTremblingPeriod>1.5</slowTremblingPeriod>
+            <fastTremblingAmplitude>	2	</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	1	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	3	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.15</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	1	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	3	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.15</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	2	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>	4	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </ElevatorController>
+        <RudderController>
+          <shakable>	true	</shakable>
+          <delay>	0	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	1	</slowTremblingAmplitude>
+            <slowTremblingPeriod>0.5</slowTremblingPeriod>
+            <fastTremblingAmplitude>	2	</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	1	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>1.5</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.15</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	1	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>1.5</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.15</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	4	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.25</slowTremblingPeriod>
+              <fastTremblingAmplitude>	1	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </RudderController>
+        <FlapsControllerL>
+          <shakable>	true	</shakable>
+          <delay>	65	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	0	</slowTremblingAmplitude>
+            <slowTremblingPeriod>	0	</slowTremblingPeriod>
+            <fastTremblingAmplitude>	0	</fastTremblingAmplitude>
+            <fastTremblingPeriod>	0	</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	0	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>	0	</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	0	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>	0	</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	0	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>	0	</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	0	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>	0	</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	2	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>	4	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </FlapsControllerL>
+        <FlapsControllerR>
+          <shakable>	true	</shakable>
+          <delay>	95	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	0	</slowTremblingAmplitude>
+            <slowTremblingPeriod>	0	</slowTremblingPeriod>
+            <fastTremblingAmplitude>	0	</fastTremblingAmplitude>
+            <fastTremblingPeriod>	0	</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	0	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>	0	</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	0	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>	0	</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	0	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>	0	</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	0	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>	0	</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	2	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>	4	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </FlapsControllerR>
+      </parts>
+    </profile>
+    <profile>
+      <id>HeavyPlanes</id>
+      <parts>
+        <LeftAileronController>
+          <shakable>	true	</shakable>
+          <delay>	35	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	5	</slowTremblingAmplitude>
+            <slowTremblingPeriod>	1	</slowTremblingPeriod>
+            <fastTremblingAmplitude>	2	</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	2	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	4	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.15</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	2	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	4	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.15</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	6	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>	4	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </LeftAileronController>
+        <RightAileronController>
+          <shakable>	true	</shakable>
+          <delay>	0	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	5	</slowTremblingAmplitude>
+            <slowTremblingPeriod>	1	</slowTremblingPeriod>
+            <fastTremblingAmplitude>	2	</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	2	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	4	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.15</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	2	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	4	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.15</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	6	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>	4	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </RightAileronController>
+        <ElevatorController>
+          <shakable>	true	</shakable>
+          <delay>	65	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>2.3</slowTremblingAmplitude>
+            <slowTremblingPeriod>1.5</slowTremblingPeriod>
+            <fastTremblingAmplitude>	1	</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	1	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	2	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.15</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	1	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	2	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.15</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	3	</slowTremblingAmplitude>
+              <slowTremblingPeriod>	1	</slowTremblingPeriod>
+              <fastTremblingAmplitude>	1	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            </state>
+          </states>
+        </ElevatorController>
+        <RudderController>
+          <shakable>	true	</shakable>
+          <delay>	0	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>4.3</slowTremblingAmplitude>
+            <slowTremblingPeriod>	4	</slowTremblingPeriod>
+            <fastTremblingAmplitude>2.3</fastTremblingAmplitude>
+            <fastTremblingPeriod>	1	</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	1	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>1.5</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.15</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	1	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>1.5</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.15</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	5	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>	3	</fastTremblingAmplitude>
+              <fastTremblingPeriod>	1	</fastTremblingPeriod>
+            </state>
+          </states>
+        </RudderController>
+        <FlapsControllerL>
+          <shakable>	true	</shakable>
+          <delay>	65	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	0	</slowTremblingAmplitude>
+            <slowTremblingPeriod>	0	</slowTremblingPeriod>
+            <fastTremblingAmplitude>	0	</fastTremblingAmplitude>
+            <fastTremblingPeriod>	0	</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	0	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>	0	</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	0	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>	0	</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	0	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>	0	</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	0	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>	0	</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	1	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>	2	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </FlapsControllerL>
+        <FlapsControllerR>
+          <shakable>	true	</shakable>
+          <delay>	95	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	0	</slowTremblingAmplitude>
+            <slowTremblingPeriod>	0	</slowTremblingPeriod>
+            <fastTremblingAmplitude>	0	</fastTremblingAmplitude>
+            <fastTremblingPeriod>	0	</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	0	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>	0	</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	0	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>	0	</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	0	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>	0	</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	0	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>	0	</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	1	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>	2	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </FlapsControllerR>
+      </parts>
+    </profile>
+    <profile>
+      <id>	MediumPlanes	</id>
+      <parts>
+        <LeftAileronController>
+          <shakable>	true	</shakable>
+          <delay>	35	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	5	</slowTremblingAmplitude>
+            <slowTremblingPeriod>	1	</slowTremblingPeriod>
+            <fastTremblingAmplitude>	2	</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	2	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	4	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.15</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	2	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	4	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.15</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	6	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>	4	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </LeftAileronController>
+        <RightAileronController>
+          <shakable>	true	</shakable>
+          <delay>	0	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	5	</slowTremblingAmplitude>
+            <slowTremblingPeriod>	1	</slowTremblingPeriod>
+            <fastTremblingAmplitude>	2	</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	2	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	4	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.15</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	2	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	4	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.15</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	6	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>	4	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </RightAileronController>
+        <ElevatorController>
+          <shakable>	true	</shakable>
+          <delay>	65	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>4.3</slowTremblingAmplitude>
+            <slowTremblingPeriod>1.5</slowTremblingPeriod>
+            <fastTremblingAmplitude>	2	</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	1	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	3	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.1</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	1	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	3	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.1</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	4	</slowTremblingAmplitude>
+              <slowTremblingPeriod>	1	</slowTremblingPeriod>
+              <fastTremblingAmplitude>	1	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            </state>
+          </states>
+        </ElevatorController>
+        <RudderController>
+          <shakable>	true	</shakable>
+          <delay>	0	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>4.3</slowTremblingAmplitude>
+            <slowTremblingPeriod>	4	</slowTremblingPeriod>
+            <fastTremblingAmplitude>4.3</fastTremblingAmplitude>
+            <fastTremblingPeriod>	1	</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	1	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>1.5</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.15</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	1	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>1.5</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.15</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	5	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>	3	</fastTremblingAmplitude>
+              <fastTremblingPeriod>	1	</fastTremblingPeriod>
+            </state>
+          </states>
+        </RudderController>
+        <FlapsControllerL>
+          <shakable>	true	</shakable>
+          <delay>	65	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	0	</slowTremblingAmplitude>
+            <slowTremblingPeriod>	0	</slowTremblingPeriod>
+            <fastTremblingAmplitude>	0	</fastTremblingAmplitude>
+            <fastTremblingPeriod>	0	</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	0	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>	0	</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	0	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>	0	</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	0	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>	0	</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	0	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>	0	</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	2	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>	4	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </FlapsControllerL>
+        <FlapsControllerR>
+          <shakable>	true	</shakable>
+          <delay>	95	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	0	</slowTremblingAmplitude>
+            <slowTremblingPeriod>	0	</slowTremblingPeriod>
+            <fastTremblingAmplitude>	0	</fastTremblingAmplitude>
+            <fastTremblingPeriod>	0	</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	0	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>	0	</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	0	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>	0	</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	0	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>	0	</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	0	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>	0	</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	2	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>	4	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </FlapsControllerR>
+      </parts>
+    </profile>
+    <profile>
+      <id>LightPlanesAlt</id>
+      <parts>
+        <LeftAileronController>
+          <shakable>	true	</shakable>
+          <delay>	35	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>4.16</slowTremblingAmplitude>
+            <slowTremblingPeriod>	1	</slowTremblingPeriod>
+            <fastTremblingAmplitude>4.16</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>2.86</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>2.16</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.15</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>2.16</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>2.16</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.15</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>6.46</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>3.72</fastTremblingAmplitude>
+              <fastTremblingPeriod>	1	</fastTremblingPeriod>
+            </state>
+          </states>
+        </LeftAileronController>
+        <RightAileronController>
+          <shakable>	true	</shakable>
+          <delay>	0	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>4.16</slowTremblingAmplitude>
+            <slowTremblingPeriod>	1	</slowTremblingPeriod>
+            <fastTremblingAmplitude>4.16</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>2.86</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>2.16</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.15</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>2.16</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>2.16</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.15</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>6.46</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>3.72</fastTremblingAmplitude>
+              <fastTremblingPeriod>	1	</fastTremblingPeriod>
+            </state>
+          </states>
+        </RightAileronController>
+        <ElevatorController>
+          <shakable>	true	</shakable>
+          <delay>	65	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>4.3</slowTremblingAmplitude>
+            <slowTremblingPeriod>1.5</slowTremblingPeriod>
+            <fastTremblingAmplitude>	2	</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>2.86</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>5.72</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.15</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>5.72</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>5.72</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.15</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>7.16</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>	2	</fastTremblingAmplitude>
+              <fastTremblingPeriod>	1	</fastTremblingPeriod>
+            </state>
+          </states>
+        </ElevatorController>
+        <RudderController>
+          <shakable>	true	</shakable>
+          <delay>	0	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>4.3</slowTremblingAmplitude>
+            <slowTremblingPeriod>	4	</slowTremblingPeriod>
+            <fastTremblingAmplitude>4.3</fastTremblingAmplitude>
+            <fastTremblingPeriod>	1	</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	1	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>1.5</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.15</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	1	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>1.5</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.15</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	5	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>	3	</fastTremblingAmplitude>
+              <fastTremblingPeriod>	1	</fastTremblingPeriod>
+            </state>
+          </states>
+        </RudderController>
+        <FlapsControllerL>
+          <shakable>	true	</shakable>
+          <delay>	65	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	0	</slowTremblingAmplitude>
+            <slowTremblingPeriod>	0	</slowTremblingPeriod>
+            <fastTremblingAmplitude>	0	</fastTremblingAmplitude>
+            <fastTremblingPeriod>	0	</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	0	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>	0	</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	0	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>	0	</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	0	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>	0	</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	0	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>	0	</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>2.86</slowTremblingAmplitude>
+              <slowTremblingPeriod>	1	</slowTremblingPeriod>
+              <fastTremblingAmplitude>5.72</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            </state>
+          </states>
+        </FlapsControllerL>
+        <FlapsControllerR>
+          <shakable>	true	</shakable>
+          <delay>	95	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	0	</slowTremblingAmplitude>
+            <slowTremblingPeriod>	0	</slowTremblingPeriod>
+            <fastTremblingAmplitude>	0	</fastTremblingAmplitude>
+            <fastTremblingPeriod>	0	</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	0	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>	0	</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	0	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>	0	</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	0	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>	0	</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	0	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>	0	</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>2.86</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.25</slowTremblingPeriod>
+              <fastTremblingAmplitude>5.72</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            </state>
+          </states>
+        </FlapsControllerR>
+      </parts>
+    </profile>
+    <profile>
+      <id>LightPlanes</id>
+      <parts>
+        <LeftAileronController>
+          <shakable>	true	</shakable>
+          <delay>	35	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>4.16</slowTremblingAmplitude>
+            <slowTremblingPeriod>	1	</slowTremblingPeriod>
+            <fastTremblingAmplitude>4.16</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>2.86</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>2.16</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.15</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>2.16</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>2.16</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.15</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>6.46</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>3.72</fastTremblingAmplitude>
+              <fastTremblingPeriod>	1	</fastTremblingPeriod>
+            </state>
+          </states>
+        </LeftAileronController>
+        <RightAileronController>
+          <shakable>	true	</shakable>
+          <delay>	0	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>4.16</slowTremblingAmplitude>
+            <slowTremblingPeriod>	1	</slowTremblingPeriod>
+            <fastTremblingAmplitude>4.16</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>2.86</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>2.16</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.15</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>2.16</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>2.16</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.15</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>6.46</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>3.72</fastTremblingAmplitude>
+              <fastTremblingPeriod>	1	</fastTremblingPeriod>
+            </state>
+          </states>
+        </RightAileronController>
+        <ElevatorController>
+          <shakable>	true	</shakable>
+          <delay>	65	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>2.3</slowTremblingAmplitude>
+            <slowTremblingPeriod>1.5</slowTremblingPeriod>
+            <fastTremblingAmplitude>	1	</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	1	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	3	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.1</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	1	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	3	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.1</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	4	</slowTremblingAmplitude>
+              <slowTremblingPeriod>	1	</slowTremblingPeriod>
+              <fastTremblingAmplitude>	1	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            </state>
+          </states>
+        </ElevatorController>
+        <RudderController>
+          <shakable>	true	</shakable>
+          <delay>	0	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>4.3</slowTremblingAmplitude>
+            <slowTremblingPeriod>	4	</slowTremblingPeriod>
+            <fastTremblingAmplitude>4.3</fastTremblingAmplitude>
+            <fastTremblingPeriod>	1	</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	1	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>1.5</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.15</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	1	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>1.5</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.15</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	5	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>	3	</fastTremblingAmplitude>
+              <fastTremblingPeriod>	1	</fastTremblingPeriod>
+            </state>
+          </states>
+        </RudderController>
+        <FlapsControllerL>
+          <shakable>	true	</shakable>
+          <delay>	65	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	0	</slowTremblingAmplitude>
+            <slowTremblingPeriod>	0	</slowTremblingPeriod>
+            <fastTremblingAmplitude>	0	</fastTremblingAmplitude>
+            <fastTremblingPeriod>	0	</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	0	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>	0	</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	0	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>	0	</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	0	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>	0	</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	0	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>	0	</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>2.86</slowTremblingAmplitude>
+              <slowTremblingPeriod>	1	</slowTremblingPeriod>
+              <fastTremblingAmplitude>5.72</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            </state>
+          </states>
+        </FlapsControllerL>
+        <FlapsControllerR>
+          <shakable>	true	</shakable>
+          <delay>	95	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	0	</slowTremblingAmplitude>
+            <slowTremblingPeriod>	0	</slowTremblingPeriod>
+            <fastTremblingAmplitude>	0	</fastTremblingAmplitude>
+            <fastTremblingPeriod>	0	</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	0	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>	0	</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	0	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>	0	</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	0	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>	0	</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	0	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>	0	</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>2.86</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.25</slowTremblingPeriod>
+              <fastTremblingAmplitude>5.72</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            </state>
+          </states>
+        </FlapsControllerR>
+      </parts>
+    </profile>
+    <profile>
+      <id>	BiPlanes	</id>
+      <parts>
+        <LeftAileronController>
+          <shakable>	true	</shakable>
+          <delay>	35	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>7.16</slowTremblingAmplitude>
+            <slowTremblingPeriod>	2	</slowTremblingPeriod>
+            <fastTremblingAmplitude>3.86</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>6.46</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.5</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>3.86</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.15</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>6.46</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.5</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>3.86</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.15</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>6.46</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>3.72</fastTremblingAmplitude>
+              <fastTremblingPeriod>	1	</fastTremblingPeriod>
+            </state>
+          </states>
+        </LeftAileronController>
+        <RightAileronController>
+          <shakable>	true	</shakable>
+          <delay>	0	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>7.16</slowTremblingAmplitude>
+            <slowTremblingPeriod>	2	</slowTremblingPeriod>
+            <fastTremblingAmplitude>3.86</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>6.46</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.5</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>3.86</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.15</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>6.46</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.5</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>3.86</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.15</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>6.46</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>3.72</fastTremblingAmplitude>
+              <fastTremblingPeriod>	1	</fastTremblingPeriod>
+            </state>
+          </states>
+        </RightAileronController>
+        <ElevatorController>
+          <shakable>	true	</shakable>
+          <delay>	65	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>3.5</slowTremblingAmplitude>
+            <slowTremblingPeriod>1.5</slowTremblingPeriod>
+            <fastTremblingAmplitude>	1	</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>3.8</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.35</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>3.8</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.15</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>3.8</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.35</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>3.8</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.15</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>7.16</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>	2	</fastTremblingAmplitude>
+              <fastTremblingPeriod>	1	</fastTremblingPeriod>
+            </state>
+          </states>
+        </ElevatorController>
+        <RudderController>
+          <shakable>	true	</shakable>
+          <delay>	0	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>4.3</slowTremblingAmplitude>
+            <slowTremblingPeriod>	4	</slowTremblingPeriod>
+            <fastTremblingAmplitude>4.3</fastTremblingAmplitude>
+            <fastTremblingPeriod>	1	</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	1	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>1.5</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.15</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	1	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>1.5</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.15</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	5	</slowTremblingAmplitude>
+              <slowTremblingPeriod>	2	</slowTremblingPeriod>
+              <fastTremblingAmplitude>	3	</fastTremblingAmplitude>
+              <fastTremblingPeriod>	1	</fastTremblingPeriod>
+            </state>
+          </states>
+        </RudderController>
+        <FlapsControllerL>
+          <shakable>	true	</shakable>
+          <delay>	65	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	0	</slowTremblingAmplitude>
+            <slowTremblingPeriod>	0	</slowTremblingPeriod>
+            <fastTremblingAmplitude>	0	</fastTremblingAmplitude>
+            <fastTremblingPeriod>	0	</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	0	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>	0	</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	0	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>	0	</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	0	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>	0	</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	0	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>	0	</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>2.86</slowTremblingAmplitude>
+              <slowTremblingPeriod>	1	</slowTremblingPeriod>
+              <fastTremblingAmplitude>7.16</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            </state>
+          </states>
+        </FlapsControllerL>
+        <FlapsControllerR>
+          <shakable>	true	</shakable>
+          <delay>	95	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	0	</slowTremblingAmplitude>
+            <slowTremblingPeriod>	0	</slowTremblingPeriod>
+            <fastTremblingAmplitude>	0	</fastTremblingAmplitude>
+            <fastTremblingPeriod>	0	</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	0	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>	0	</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	0	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>	0	</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	0	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>	0	</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	0	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>	0	</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>2.86</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.25</slowTremblingPeriod>
+              <fastTremblingAmplitude>7.16</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            </state>
+          </states>
+        </FlapsControllerR>
+      </parts>
+    </profile>
+    <profile>
+      <id>SovietAssault</id>
+      <parts>
+        <LeftAileronController>
+          <shakable>	true	</shakable>
+          <delay>	35	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	5	</slowTremblingAmplitude>
+            <slowTremblingPeriod>	1	</slowTremblingPeriod>
+            <fastTremblingAmplitude>	2	</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	2	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	4	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.15</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	2	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	4	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.15</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	6	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>	4	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </LeftAileronController>
+        <RightAileronController>
+          <shakable>	true	</shakable>
+          <delay>	0	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	5	</slowTremblingAmplitude>
+            <slowTremblingPeriod>	1	</slowTremblingPeriod>
+            <fastTremblingAmplitude>	2	</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	2	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	4	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.15</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	2	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	4	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.15</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	6	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>	4	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </RightAileronController>
+        <ElevatorController>
+          <shakable>	true	</shakable>
+          <delay>	65	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	2	</slowTremblingAmplitude>
+            <slowTremblingPeriod>	3	</slowTremblingPeriod>
+            <fastTremblingAmplitude>1.5</fastTremblingAmplitude>
+            <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	1	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>1.5</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.13</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	1	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	2	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.13</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>3.5</slowTremblingAmplitude>
+              <slowTremblingPeriod>	1	</slowTremblingPeriod>
+              <fastTremblingAmplitude>	1	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.25</fastTremblingPeriod>
+            </state>
+          </states>
+        </ElevatorController>
+        <RudderController>
+          <shakable>	true	</shakable>
+          <delay>	0	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>4.3</slowTremblingAmplitude>
+            <slowTremblingPeriod>	4	</slowTremblingPeriod>
+            <fastTremblingAmplitude>4.3</fastTremblingAmplitude>
+            <fastTremblingPeriod>	1	</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	1	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>0.25</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>1.5</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>0.15</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	1	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>0.25</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>1.5</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>0.15</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	5	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>	3	</fastTremblingAmplitude>
+              <fastTremblingPeriod>	1	</fastTremblingPeriod>
+            </state>
+          </states>
+        </RudderController>
+        <FlapsControllerL>
+          <shakable>	true	</shakable>
+          <delay>	65	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	0	</slowTremblingAmplitude>
+            <slowTremblingPeriod>	0	</slowTremblingPeriod>
+            <fastTremblingAmplitude>	0	</fastTremblingAmplitude>
+            <fastTremblingPeriod>	0	</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	0	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>	0	</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	0	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>	0	</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	0	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>	0	</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	0	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>	0	</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	2	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>	4	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </FlapsControllerL>
+        <FlapsControllerR>
+          <shakable>	true	</shakable>
+          <delay>	95	</delay>
+          <fadeTime>2.0</fadeTime>
+          <fadeInterpolationFunc>EaseInOutCubic</fadeInterpolationFunc>
+          <defaultState>
+            <slowTremblingAmplitude>	0	</slowTremblingAmplitude>
+            <slowTremblingPeriod>	0	</slowTremblingPeriod>
+            <fastTremblingAmplitude>	0	</fastTremblingAmplitude>
+            <fastTremblingPeriod>	0	</fastTremblingPeriod>
+            <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+            <periodInterFunc>EaseInOutCubic</periodInterFunc>
+          </defaultState>
+          <states>
+            <state>
+              <triggers>FORSAGE,SPEED_OVERLOAD</triggers>
+              <slowTremblingAmplitudeLow>	0	</slowTremblingAmplitudeLow>
+              <slowTremblingPeriodLow>	0	</slowTremblingPeriodLow>
+              <fastTremblingAmplitudeLow>	0	</fastTremblingAmplitudeLow>
+              <fastTremblingPeriodLow>	0	</fastTremblingPeriodLow>
+              <slowTremblingAmplitudeHigh>	0	</slowTremblingAmplitudeHigh>
+              <slowTremblingPeriodHigh>	0	</slowTremblingPeriodHigh>
+              <fastTremblingAmplitudeHigh>	0	</fastTremblingAmplitudeHigh>
+              <fastTremblingPeriodHigh>	0	</fastTremblingPeriodHigh>
+              <amplitudeInterFunc>EaseInOutCubic</amplitudeInterFunc>
+              <periodInterFunc>EaseInOutCubic</periodInterFunc>
+            </state>
+            <state>
+              <triggers>BRAKE</triggers>
+              <slowTremblingAmplitude>	2	</slowTremblingAmplitude>
+              <slowTremblingPeriod>0.5</slowTremblingPeriod>
+              <fastTremblingAmplitude>	4	</fastTremblingAmplitude>
+              <fastTremblingPeriod>0.15</fastTremblingPeriod>
+            </state>
+          </states>
+        </FlapsControllerR>
+      </parts>
+    </profile>
+  </profiles>
+</shaking_parts_profiles.xml>

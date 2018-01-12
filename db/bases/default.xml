@@ -1,0 +1,170 @@
+<default.xml>
+  <name>default</name>
+  <modelPath>content/Buildings/oil_tank_02/normal/lod0/oil_tank_02.model</modelPath>
+  <modelCrashPath>content/Buildings/oil_tank_crash/normal/lod0/oil_tank_crash.model</modelCrashPath>
+  <damageEffects>
+    <destroy>EFFECT_w_prop_exposion_large</destroy>
+    <receive_damage_1>EFFECT_AIRCRAFT_RECEIVE_DAMAGE_1</receive_damage_1>
+    <receive_damage_2>EFFECT_AIRCRAFT_RECEIVE_DAMAGE_2</receive_damage_2>
+    <effectFire>EFFECT_fire_med_01</effectFire>
+  </damageEffects>
+  <bBoxes>
+    <mainBox>
+      <size>50 50 50</size>
+    </mainBox>
+  </bBoxes>
+  <maxHealth>200.0</maxHealth>
+  <dominationCost>0.1</dominationCost>
+  <type>smallTeamObject</type>
+  <battleLevelsSettings>
+    <section>
+      <battleLevel>	0	</battleLevel>
+      <hpK>0.6</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	1	</battleLevel>
+      <hpK>0.6</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	2	</battleLevel>
+      <hpK>0.6</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	3	</battleLevel>
+      <hpK>0.7</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	4	</battleLevel>
+      <hpK>0.85</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	5	</battleLevel>
+      <hpK>1.2</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	6	</battleLevel>
+      <hpK>1.58</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	7	</battleLevel>
+      <hpK>1.82</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	8	</battleLevel>
+      <hpK>2.25</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	9	</battleLevel>
+      <hpK>2.46</hpK>
+      <armorK>	0	</armorK>
+    </section>
+    <section>
+      <battleLevel>	10	</battleLevel>
+      <hpK>2.46</hpK>
+      <armorK>	0	</armorK>
+    </section>
+  </battleLevelsSettings>
+  <parts>
+    <part>
+      <name>	hull	</name>
+      <partId>	1	</partId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>0.000000 0.00000 0.000000</position>
+            <size>20.00000 24.00000 20.000000</size>
+            <armorFront>10 10 10</armorFront>
+            <armorBack>10 10 10</armorBack>
+            <absorption>	1	</absorption>
+          </bbox>
+        </bBoxes>
+        <health>100%</health>
+        <componentType>	Hull	</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <model>content/Buildings/oil_tank_02/normal/lod0/oil_tank_02.model</model>
+            <animationController>
+            </animationController>
+            <subItems>
+            </subItems>
+            <stateAction>	0	</stateAction>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	2	</id>
+            <stateHelthCfc>	0.800000	</stateHelthCfc>
+            <model>content/Buildings/oil_tank_02/normal/lod0/oil_tank_02.model</model>
+            <animationController>
+            </animationController>
+            <subItems>
+            </subItems>
+            <effectState>
+              <effect>
+                <name>Fuel_Leak</name>
+                <mountPoint>plane/HP_fuelHit</mountPoint>
+              </effect>
+            </effectState>
+            <stateAction>	0	</stateAction>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	3	</id>
+            <stateHelthCfc>	0.300000	</stateHelthCfc>
+            <model>content/Buildings/oil_tank_02/normal/lod0/oil_tank_02.model</model>
+            <animationController>
+            </animationController>
+            <subItems>
+            </subItems>
+            <effectState>
+              <effect>
+                <name>Fuel_Leak</name>
+                <mountPoint>plane/HP_fuelHit</mountPoint>
+              </effect>
+            </effectState>
+            <stateAction>	0	</stateAction>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+          <state>
+            <id>	4	</id>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/Buildings/oil_tank_crash/normal/lod0/oil_tank_crash.model</model>
+            <animationController>
+            </animationController>
+            <subItems>
+            </subItems>
+            <effectState>
+              <effect>
+                <name>Fuel_Leak</name>
+                <mountPoint>plane/HP_fuelHit</mountPoint>
+              </effect>
+            </effectState>
+            <stateAction>	1	</stateAction>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+        </states>
+        <fireMountPoint>
+        </fireMountPoint>
+      </upgrade>
+    </part>
+  </parts>
+</default.xml>

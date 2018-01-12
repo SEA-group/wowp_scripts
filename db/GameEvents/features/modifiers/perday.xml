@@ -1,0 +1,67 @@
+<perday.xml>
+  <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
+  <noNamespaceSchemaLocation>../../../../../../../tools/databundler/subscribers.xsd</noNamespaceSchemaLocation>
+  <subscriber>
+    <name>first.win</name>
+    <type>modifiers</type>
+    <group>day.bonus</group>
+    <server>
+      <scope>plane</scope>
+      <active>	true	</active>
+    </server>
+    <condition>
+      <and>
+        <in>
+          <context>arena.type</context>
+          <value>normal</value>
+          <value>warAction</value>
+        </in>
+        <equal>
+          <context>arena.source</context>
+          <value>player</value>
+        </equal>
+      </and>
+    </condition>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>before.result.win</name>
+      <count>
+        <valueFrom>_economics:Economics.dailyBonus.dailyWinBonusRemains</valueFrom>
+      </count>
+    </event>
+    <modify>
+      <type>exp</type>
+      <by>	multiply	</by>
+      <valueFrom>_economics:Economics.dailyBonus.firstWinBonus.xpCoeff</valueFrom>
+    </modify>
+  </subscriber>
+  <subscriber>
+    <name>reset</name>
+    <type>modifiers</type>
+    <group>day.bonus</group>
+    <server>
+      <active>	true	</active>
+      <repeat>	true	</repeat>
+      <scope>player</scope>
+      <overwrite>	true	</overwrite>
+    </server>
+    <event>
+      <type>hangar</type>
+      <context>player</context>
+      <name>day.changed</name>
+      <operation>
+        <id>
+          <name>first.win</name>
+          <type>modifiers</type>
+          <group>day.bonus</group>
+        </id>
+        <scope>plane</scope>
+        <reset>	true	</reset>
+        <set>
+          <completed>	false	</completed>
+        </set>
+      </operation>
+    </event>
+  </subscriber>
+</perday.xml>
