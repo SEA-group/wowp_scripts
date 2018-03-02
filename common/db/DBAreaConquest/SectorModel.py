@@ -31,8 +31,8 @@ class SectorModel(SectorPresetModel):
     rocketV2 = DBModelProperty(factory=RocketV2Model)
     bomberDispatcher = DBModelProperty(factory=BomberDispatcherModel)
 
-    def __init__(self):
-        super(SectorModel, self).__init__()
+    def __init__(self, gameModeDir):
+        super(SectorModel, self).__init__(gameModeDir)
         self.ident = ''
         self.effects = {}
         self.positionPoint = None
@@ -71,9 +71,9 @@ class SectorModel(SectorPresetModel):
         """Sector bonus type
         @rtype: basestring
         """
-        if self.gameplayType == SECTOR_GAMEPLAY_TYPE.MILITARY_BASE and self.gameplayLevel == 1:
+        if self.gameplayType == SECTOR_GAMEPLAY_TYPE.CITADEL:
             return SECTOR_BONUS_TYPE.ROCKET_LAUNCH
-        elif self.gameplayType == SECTOR_GAMEPLAY_TYPE.RADAR and self.gameplayLevel == 1:
+        elif self.gameplayType == SECTOR_GAMEPLAY_TYPE.COMMANDCENTER:
             return SECTOR_BONUS_TYPE.AIR_STRIKE
         else:
             return SECTOR_BONUS_TYPE.POINTS

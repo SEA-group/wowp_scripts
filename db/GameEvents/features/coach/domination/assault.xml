@@ -1,6 +1,28 @@
 <assault.xml>
   <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
   <noNamespaceSchemaLocation>../../../../../../../tools/databundler/subscribers.xsd</noNamespaceSchemaLocation>
+  <include>
+    <condition>
+      <not>
+        <equal>
+          <context>arena.mode</context>
+          <value>	invasion	</value>
+        </equal>
+      </not>
+    </condition>
+    <nested>
+      <subscriber>
+        <condition>
+          <not>
+            <equal>
+              <context>arena.mode</context>
+              <value>	invasion	</value>
+            </equal>
+          </not>
+        </condition>
+      </subscriber>
+    </nested>
+  </include>
   <subscriber>
     <name>attackGroundObjects</name>
     <type>objective</type>

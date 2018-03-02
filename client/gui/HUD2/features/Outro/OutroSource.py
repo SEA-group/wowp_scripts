@@ -10,13 +10,17 @@ from Helpers.i18n import localizeAirplane, localizeLobby
 from GameEvents.features.coach.model import RankModel
 logger = BWLogging.getLogger('HUD.Outro')
 GAME_RESULT_LOC_IDS = {GAME_RESULT.DRAW_TIME_IS_RUNNING_OUT: ['HUD_DRAW_TIME', 'HUD_DRAW_TIME', 'HUD_DRAW_TIME'],
- GAME_RESULT.SUPERIORITY_SUCCESS: ['HUD_WIN_SUPERIORITY_STR', 'HUD_LOOSE_SUPERIORITY_STR', ''],
  GAME_RESULT.AREA_CONQUEST_SUCCESS: ['HUD_WIN_SUPERIORITY_STR', 'HUD_LOOSE_SUPERIORITY_STR', ''],
  GAME_RESULT.ELIMINATION: ['HUD_ENEMIES_ELIMINATION_STR', 'HUD_OWN_ELIMINATION_STR', ''],
  GAME_RESULT.DRAW_ELIMINATION: ['', '', 'HUD_DRAW_PLAYERS'],
  GAME_RESULT.DRAW_ELIMINATION_NO_PLAYERS: ['', '', 'HUD_PVE_NO_PLAYERS'],
  GAME_RESULT.DRAW_SUPERIORITY: ['', '', 'HUD_DRAW_SUPERIORITY_STR'],
- GAME_RESULT.DRAW_AREA_CONQUEST: ['', '', 'HUD_DRAW_SUPERIORITY_STR']}
+ GAME_RESULT.DRAW_AREA_CONQUEST: ['', '', 'HUD_DRAW_SUPERIORITY_STR'],
+ GAME_RESULT.MAIN_TIME_RUNNING_OUT: ['HUD_WIN_TIME_OVER_STR', 'HUD_LOOSE_TIME_OVER_STR', ''],
+ GAME_RESULT.CAPTURE_ALL_SECTORS: ['HUD_WIN_SECTORS_STR', 'HUD_LOOSE_SECTORS_STR', ''],
+ GAME_RESULT.DYNAMIC_TIME_RUNNING_OUT: ['HUD_WIN_TIME_OVER_STR', 'HUD_LOOSE_TIME_OVER_STR', ''],
+ GAME_RESULT.ATTRITION_SUCCESS: ['HUD_WIN_ATTRITION_STR', 'HUD_LOOSE_ATTRITION_STR', ''],
+ GAME_RESULT.ATTRITION_DRAW: ['', '', 'HUD_LOOSE_ATTRITION_STR']}
 
 class OutroSource(DataSource):
 
@@ -37,6 +41,7 @@ class OutroSource(DataSource):
     def _update(self, gameResult, winState):
         playerTeamIndex = self._player.teamIndex
         enemyTeamIndex = 1 - self._player.teamIndex
+        logger.debug('RESULT::::: {0}'.format(gameResult))
         if gameResult in GAME_RESULT_LOC_IDS:
             resIndex = 2 if winState == 2 else int(playerTeamIndex != winState)
             reason = GAME_RESULT_LOC_IDS[gameResult][resIndex]

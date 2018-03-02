@@ -1,8 +1,38 @@
 <navy.xml>
   <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
   <noNamespaceSchemaLocation>../../../../../../../tools/databundler/subscribers.xsd</noNamespaceSchemaLocation>
+  <include>
+    <condition>
+      <and>
+        <equal>
+          <context>arena.mode</context>
+          <value>	invasion	</value>
+        </equal>
+        <equal>
+          <context>player.teamIndex</context>
+          <value>	1	</value>
+        </equal>
+      </and>
+    </condition>
+    <nested>
+      <subscriber>
+        <condition>
+          <and>
+            <equal>
+              <context>arena.mode</context>
+              <value>	invasion	</value>
+            </equal>
+            <equal>
+              <context>player.teamIndex</context>
+              <value>	1	</value>
+            </equal>
+          </and>
+        </condition>
+      </subscriber>
+    </nested>
+  </include>
   <subscriber>
-    <name>attackSectors</name>
+    <name>attackSectors_attack</name>
     <type>objective</type>
     <group>	navy	</group>
     <server>
@@ -293,7 +323,7 @@
     </send>
   </subscriber>
   <subscriber>
-    <name>captureSectors</name>
+    <name>captureSectors_attack</name>
     <type>objective</type>
     <group>	navy	</group>
     <server>
@@ -542,7 +572,7 @@
     </send>
   </subscriber>
   <subscriber>
-    <name>defenceSectors</name>
+    <name>destroyPlanes_attack</name>
     <type>objective</type>
     <group>	navy	</group>
     <server>
@@ -615,7 +645,7 @@
           </equal>
         </condition>
         <count>
-          <value>	5	</value>
+          <value>	4	</value>
         </count>
         <send>
           <event>
@@ -656,7 +686,7 @@
           </equal>
         </condition>
         <count>
-          <value>	7	</value>
+          <value>	6	</value>
         </count>
         <send>
           <event>
@@ -697,7 +727,7 @@
           </equal>
         </condition>
         <count>
-          <value>	10	</value>
+          <value>	8	</value>
         </count>
         <send>
           <event>
@@ -738,7 +768,7 @@
           </equal>
         </condition>
         <count>
-          <value>	15	</value>
+          <value>	12	</value>
         </count>
         <send>
           <event>

@@ -73,6 +73,7 @@ class WEAPON_AIM_TYPE():
 
 DB = Dummy()
 DB.header = Dummy()
+DB.header.activity = []
 DB.header.condition = []
 DB.header.count = []
 DB.header.event = []
@@ -82,6 +83,7 @@ DB.header.nested = Dummy()
 DB.header.nested.subscriber = []
 DB.header.nested.subscriber.insert(0, None)
 DB.header.nested.subscriber[0] = Dummy()
+DB.header.nested.subscriber[0].activity = []
 DB.header.nested.subscriber[0].condition = []
 DB.header.nested.subscriber[0].count = []
 DB.header.nested.subscriber[0].event = []
@@ -99,6 +101,7 @@ DB.header.server.scope.insert(0, None)
 DB.header.server.scope[0] = 'player'
 DB.header.type = 'quest'
 DB.include = Dummy()
+DB.include.activity = []
 DB.include.condition = []
 DB.include.count = []
 DB.include.event = []
@@ -112,6 +115,7 @@ DB.include.nested = Dummy()
 DB.include.nested.subscriber = []
 DB.include.nested.subscriber.insert(0, None)
 DB.include.nested.subscriber[0] = Dummy()
+DB.include.nested.subscriber[0].activity = []
 DB.include.nested.subscriber[0].condition = []
 DB.include.nested.subscriber[0].count = []
 DB.include.nested.subscriber[0].event = []
@@ -128,6 +132,7 @@ DB.include.send = []
 DB.subscriber = []
 DB.subscriber.insert(0, None)
 DB.subscriber[0] = Dummy()
+DB.subscriber[0].activity = []
 DB.subscriber[0].condition = []
 DB.subscriber[0].count = []
 DB.subscriber[0].event = []
@@ -138,6 +143,7 @@ DB.subscriber[0].nested.complete = 'chain'
 DB.subscriber[0].nested.subscriber = []
 DB.subscriber[0].nested.subscriber.insert(0, None)
 DB.subscriber[0].nested.subscriber[0] = Dummy()
+DB.subscriber[0].nested.subscriber[0].activity = []
 DB.subscriber[0].nested.subscriber[0].client = Dummy()
 DB.subscriber[0].nested.subscriber[0].client.description = Dummy()
 DB.subscriber[0].nested.subscriber[0].client.description.locale = 'LOBBY_TUTORIAL_QUEST_1_TEXT_1'
@@ -178,6 +184,7 @@ DB.subscriber[0].nested.subscriber[0].nested.complete = 'repeat'
 DB.subscriber[0].nested.subscriber[0].nested.subscriber = []
 DB.subscriber[0].nested.subscriber[0].nested.subscriber.insert(0, None)
 DB.subscriber[0].nested.subscriber[0].nested.subscriber[0] = Dummy()
+DB.subscriber[0].nested.subscriber[0].nested.subscriber[0].activity = []
 DB.subscriber[0].nested.subscriber[0].nested.subscriber[0].condition = []
 DB.subscriber[0].nested.subscriber[0].nested.subscriber[0].count = []
 DB.subscriber[0].nested.subscriber[0].nested.subscriber[0].event = []
@@ -208,6 +215,14 @@ DB.subscriber[0].nested.subscriber[0].nested.subscriber[0].event[0].condition[0]
 DB.subscriber[0].nested.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].equal[1].value_ = []
 DB.subscriber[0].nested.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].equal[1].value_.insert(0, None)
 DB.subscriber[0].nested.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].equal[1].value_[0] = 'player'
+DB.subscriber[0].nested.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].equal.insert(2, None)
+DB.subscriber[0].nested.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].equal[2] = Dummy()
+DB.subscriber[0].nested.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].context = []
+DB.subscriber[0].nested.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].context.insert(0, None)
+DB.subscriber[0].nested.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].context[0] = 'arena.mode'
+DB.subscriber[0].nested.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].value_ = []
+DB.subscriber[0].nested.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].value_.insert(0, None)
+DB.subscriber[0].nested.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].value_[0] = 'areaconquest'
 DB.subscriber[0].nested.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].gt = []
 DB.subscriber[0].nested.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].gte = []
 DB.subscriber[0].nested.subscriber[0].nested.subscriber[0].event[0].condition[0].and_[0].id = []
@@ -275,6 +290,7 @@ DB.subscriber[0].nested.subscriber[0].operation = []
 DB.subscriber[0].nested.subscriber[0].send = []
 DB.subscriber[0].nested.subscriber.insert(1, None)
 DB.subscriber[0].nested.subscriber[1] = Dummy()
+DB.subscriber[0].nested.subscriber[1].activity = []
 DB.subscriber[0].nested.subscriber[1].client = Dummy()
 DB.subscriber[0].nested.subscriber[1].client.description = Dummy()
 DB.subscriber[0].nested.subscriber[1].client.description.locale = 'LOBBY_TUTORIAL_QUEST_2_TEXT_1'
@@ -315,6 +331,7 @@ DB.subscriber[0].nested.subscriber[1].nested.complete = 'repeat'
 DB.subscriber[0].nested.subscriber[1].nested.subscriber = []
 DB.subscriber[0].nested.subscriber[1].nested.subscriber.insert(0, None)
 DB.subscriber[0].nested.subscriber[1].nested.subscriber[0] = Dummy()
+DB.subscriber[0].nested.subscriber[1].nested.subscriber[0].activity = []
 DB.subscriber[0].nested.subscriber[1].nested.subscriber[0].condition = []
 DB.subscriber[0].nested.subscriber[1].nested.subscriber[0].count = []
 DB.subscriber[0].nested.subscriber[1].nested.subscriber[0].event = []
@@ -345,6 +362,14 @@ DB.subscriber[0].nested.subscriber[1].nested.subscriber[0].event[0].condition[0]
 DB.subscriber[0].nested.subscriber[1].nested.subscriber[0].event[0].condition[0].and_[0].equal[1].value_ = []
 DB.subscriber[0].nested.subscriber[1].nested.subscriber[0].event[0].condition[0].and_[0].equal[1].value_.insert(0, None)
 DB.subscriber[0].nested.subscriber[1].nested.subscriber[0].event[0].condition[0].and_[0].equal[1].value_[0] = 'player'
+DB.subscriber[0].nested.subscriber[1].nested.subscriber[0].event[0].condition[0].and_[0].equal.insert(2, None)
+DB.subscriber[0].nested.subscriber[1].nested.subscriber[0].event[0].condition[0].and_[0].equal[2] = Dummy()
+DB.subscriber[0].nested.subscriber[1].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].context = []
+DB.subscriber[0].nested.subscriber[1].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].context.insert(0, None)
+DB.subscriber[0].nested.subscriber[1].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].context[0] = 'arena.mode'
+DB.subscriber[0].nested.subscriber[1].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].value_ = []
+DB.subscriber[0].nested.subscriber[1].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].value_.insert(0, None)
+DB.subscriber[0].nested.subscriber[1].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].value_[0] = 'areaconquest'
 DB.subscriber[0].nested.subscriber[1].nested.subscriber[0].event[0].condition[0].and_[0].gt = []
 DB.subscriber[0].nested.subscriber[1].nested.subscriber[0].event[0].condition[0].and_[0].gte = []
 DB.subscriber[0].nested.subscriber[1].nested.subscriber[0].event[0].condition[0].and_[0].id = []
@@ -391,6 +416,7 @@ DB.subscriber[0].nested.subscriber[1].operation = []
 DB.subscriber[0].nested.subscriber[1].send = []
 DB.subscriber[0].nested.subscriber.insert(2, None)
 DB.subscriber[0].nested.subscriber[2] = Dummy()
+DB.subscriber[0].nested.subscriber[2].activity = []
 DB.subscriber[0].nested.subscriber[2].client = Dummy()
 DB.subscriber[0].nested.subscriber[2].client.description = Dummy()
 DB.subscriber[0].nested.subscriber[2].client.description.locale = 'LOBBY_TUTORIAL_QUEST_3_TEXT_1'
@@ -408,6 +434,7 @@ DB.subscriber[0].nested.subscriber[2].nested.complete = 'repeat'
 DB.subscriber[0].nested.subscriber[2].nested.subscriber = []
 DB.subscriber[0].nested.subscriber[2].nested.subscriber.insert(0, None)
 DB.subscriber[0].nested.subscriber[2].nested.subscriber[0] = Dummy()
+DB.subscriber[0].nested.subscriber[2].nested.subscriber[0].activity = []
 DB.subscriber[0].nested.subscriber[2].nested.subscriber[0].condition = []
 DB.subscriber[0].nested.subscriber[2].nested.subscriber[0].count = []
 DB.subscriber[0].nested.subscriber[2].nested.subscriber[0].event = []
@@ -438,6 +465,14 @@ DB.subscriber[0].nested.subscriber[2].nested.subscriber[0].event[0].condition[0]
 DB.subscriber[0].nested.subscriber[2].nested.subscriber[0].event[0].condition[0].and_[0].equal[1].value_ = []
 DB.subscriber[0].nested.subscriber[2].nested.subscriber[0].event[0].condition[0].and_[0].equal[1].value_.insert(0, None)
 DB.subscriber[0].nested.subscriber[2].nested.subscriber[0].event[0].condition[0].and_[0].equal[1].value_[0] = 'player'
+DB.subscriber[0].nested.subscriber[2].nested.subscriber[0].event[0].condition[0].and_[0].equal.insert(2, None)
+DB.subscriber[0].nested.subscriber[2].nested.subscriber[0].event[0].condition[0].and_[0].equal[2] = Dummy()
+DB.subscriber[0].nested.subscriber[2].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].context = []
+DB.subscriber[0].nested.subscriber[2].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].context.insert(0, None)
+DB.subscriber[0].nested.subscriber[2].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].context[0] = 'arena.mode'
+DB.subscriber[0].nested.subscriber[2].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].value_ = []
+DB.subscriber[0].nested.subscriber[2].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].value_.insert(0, None)
+DB.subscriber[0].nested.subscriber[2].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].value_[0] = 'areaconquest'
 DB.subscriber[0].nested.subscriber[2].nested.subscriber[0].event[0].condition[0].and_[0].gt = []
 DB.subscriber[0].nested.subscriber[2].nested.subscriber[0].event[0].condition[0].and_[0].gte = []
 DB.subscriber[0].nested.subscriber[2].nested.subscriber[0].event[0].condition[0].and_[0].id = []
@@ -529,6 +564,7 @@ DB.subscriber[0].nested.subscriber[2].operation = []
 DB.subscriber[0].nested.subscriber[2].send = []
 DB.subscriber[0].nested.subscriber.insert(3, None)
 DB.subscriber[0].nested.subscriber[3] = Dummy()
+DB.subscriber[0].nested.subscriber[3].activity = []
 DB.subscriber[0].nested.subscriber[3].client = Dummy()
 DB.subscriber[0].nested.subscriber[3].client.description = Dummy()
 DB.subscriber[0].nested.subscriber[3].client.description.locale = 'LOBBY_TUTORIAL_QUEST_4_TEXT_1'
@@ -546,6 +582,7 @@ DB.subscriber[0].nested.subscriber[3].nested.complete = 'repeat'
 DB.subscriber[0].nested.subscriber[3].nested.subscriber = []
 DB.subscriber[0].nested.subscriber[3].nested.subscriber.insert(0, None)
 DB.subscriber[0].nested.subscriber[3].nested.subscriber[0] = Dummy()
+DB.subscriber[0].nested.subscriber[3].nested.subscriber[0].activity = []
 DB.subscriber[0].nested.subscriber[3].nested.subscriber[0].condition = []
 DB.subscriber[0].nested.subscriber[3].nested.subscriber[0].count = []
 DB.subscriber[0].nested.subscriber[3].nested.subscriber[0].event = []
@@ -576,6 +613,14 @@ DB.subscriber[0].nested.subscriber[3].nested.subscriber[0].event[0].condition[0]
 DB.subscriber[0].nested.subscriber[3].nested.subscriber[0].event[0].condition[0].and_[0].equal[1].value_ = []
 DB.subscriber[0].nested.subscriber[3].nested.subscriber[0].event[0].condition[0].and_[0].equal[1].value_.insert(0, None)
 DB.subscriber[0].nested.subscriber[3].nested.subscriber[0].event[0].condition[0].and_[0].equal[1].value_[0] = 'player'
+DB.subscriber[0].nested.subscriber[3].nested.subscriber[0].event[0].condition[0].and_[0].equal.insert(2, None)
+DB.subscriber[0].nested.subscriber[3].nested.subscriber[0].event[0].condition[0].and_[0].equal[2] = Dummy()
+DB.subscriber[0].nested.subscriber[3].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].context = []
+DB.subscriber[0].nested.subscriber[3].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].context.insert(0, None)
+DB.subscriber[0].nested.subscriber[3].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].context[0] = 'arena.mode'
+DB.subscriber[0].nested.subscriber[3].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].value_ = []
+DB.subscriber[0].nested.subscriber[3].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].value_.insert(0, None)
+DB.subscriber[0].nested.subscriber[3].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].value_[0] = 'areaconquest'
 DB.subscriber[0].nested.subscriber[3].nested.subscriber[0].event[0].condition[0].and_[0].gt = []
 DB.subscriber[0].nested.subscriber[3].nested.subscriber[0].event[0].condition[0].and_[0].gte = []
 DB.subscriber[0].nested.subscriber[3].nested.subscriber[0].event[0].condition[0].and_[0].id = []
@@ -668,6 +713,7 @@ DB.subscriber[0].nested.subscriber[3].operation = []
 DB.subscriber[0].nested.subscriber[3].send = []
 DB.subscriber[0].nested.subscriber.insert(4, None)
 DB.subscriber[0].nested.subscriber[4] = Dummy()
+DB.subscriber[0].nested.subscriber[4].activity = []
 DB.subscriber[0].nested.subscriber[4].client = Dummy()
 DB.subscriber[0].nested.subscriber[4].client.description = Dummy()
 DB.subscriber[0].nested.subscriber[4].client.description.locale = 'LOBBY_TUTORIAL_QUEST_5_TEXT'
@@ -793,6 +839,7 @@ DB.subscriber[0].nested.subscriber[4].operation = []
 DB.subscriber[0].nested.subscriber[4].send = []
 DB.subscriber[0].nested.subscriber.insert(5, None)
 DB.subscriber[0].nested.subscriber[5] = Dummy()
+DB.subscriber[0].nested.subscriber[5].activity = []
 DB.subscriber[0].nested.subscriber[5].client = Dummy()
 DB.subscriber[0].nested.subscriber[5].client.description = Dummy()
 DB.subscriber[0].nested.subscriber[5].client.description.locale = 'LOBBY_TUTORIAL_QUEST_6_TEXT_1'
@@ -833,6 +880,7 @@ DB.subscriber[0].nested.subscriber[5].nested.complete = 'repeat'
 DB.subscriber[0].nested.subscriber[5].nested.subscriber = []
 DB.subscriber[0].nested.subscriber[5].nested.subscriber.insert(0, None)
 DB.subscriber[0].nested.subscriber[5].nested.subscriber[0] = Dummy()
+DB.subscriber[0].nested.subscriber[5].nested.subscriber[0].activity = []
 DB.subscriber[0].nested.subscriber[5].nested.subscriber[0].condition = []
 DB.subscriber[0].nested.subscriber[5].nested.subscriber[0].count = []
 DB.subscriber[0].nested.subscriber[5].nested.subscriber[0].event = []
@@ -863,6 +911,14 @@ DB.subscriber[0].nested.subscriber[5].nested.subscriber[0].event[0].condition[0]
 DB.subscriber[0].nested.subscriber[5].nested.subscriber[0].event[0].condition[0].and_[0].equal[1].value_ = []
 DB.subscriber[0].nested.subscriber[5].nested.subscriber[0].event[0].condition[0].and_[0].equal[1].value_.insert(0, None)
 DB.subscriber[0].nested.subscriber[5].nested.subscriber[0].event[0].condition[0].and_[0].equal[1].value_[0] = 'player'
+DB.subscriber[0].nested.subscriber[5].nested.subscriber[0].event[0].condition[0].and_[0].equal.insert(2, None)
+DB.subscriber[0].nested.subscriber[5].nested.subscriber[0].event[0].condition[0].and_[0].equal[2] = Dummy()
+DB.subscriber[0].nested.subscriber[5].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].context = []
+DB.subscriber[0].nested.subscriber[5].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].context.insert(0, None)
+DB.subscriber[0].nested.subscriber[5].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].context[0] = 'arena.mode'
+DB.subscriber[0].nested.subscriber[5].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].value_ = []
+DB.subscriber[0].nested.subscriber[5].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].value_.insert(0, None)
+DB.subscriber[0].nested.subscriber[5].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].value_[0] = 'areaconquest'
 DB.subscriber[0].nested.subscriber[5].nested.subscriber[0].event[0].condition[0].and_[0].gt = []
 DB.subscriber[0].nested.subscriber[5].nested.subscriber[0].event[0].condition[0].and_[0].gte = []
 DB.subscriber[0].nested.subscriber[5].nested.subscriber[0].event[0].condition[0].and_[0].id = []
@@ -930,6 +986,7 @@ DB.subscriber[0].nested.subscriber[5].operation = []
 DB.subscriber[0].nested.subscriber[5].send = []
 DB.subscriber[0].nested.subscriber.insert(6, None)
 DB.subscriber[0].nested.subscriber[6] = Dummy()
+DB.subscriber[0].nested.subscriber[6].activity = []
 DB.subscriber[0].nested.subscriber[6].client = Dummy()
 DB.subscriber[0].nested.subscriber[6].client.description = Dummy()
 DB.subscriber[0].nested.subscriber[6].client.description.locale = 'LOBBY_TUTORIAL_QUEST_7_TEXT_1'
@@ -970,6 +1027,7 @@ DB.subscriber[0].nested.subscriber[6].nested.complete = 'repeat'
 DB.subscriber[0].nested.subscriber[6].nested.subscriber = []
 DB.subscriber[0].nested.subscriber[6].nested.subscriber.insert(0, None)
 DB.subscriber[0].nested.subscriber[6].nested.subscriber[0] = Dummy()
+DB.subscriber[0].nested.subscriber[6].nested.subscriber[0].activity = []
 DB.subscriber[0].nested.subscriber[6].nested.subscriber[0].condition = []
 DB.subscriber[0].nested.subscriber[6].nested.subscriber[0].count = []
 DB.subscriber[0].nested.subscriber[6].nested.subscriber[0].event = []
@@ -1000,6 +1058,14 @@ DB.subscriber[0].nested.subscriber[6].nested.subscriber[0].event[0].condition[0]
 DB.subscriber[0].nested.subscriber[6].nested.subscriber[0].event[0].condition[0].and_[0].equal[1].value_ = []
 DB.subscriber[0].nested.subscriber[6].nested.subscriber[0].event[0].condition[0].and_[0].equal[1].value_.insert(0, None)
 DB.subscriber[0].nested.subscriber[6].nested.subscriber[0].event[0].condition[0].and_[0].equal[1].value_[0] = 'player'
+DB.subscriber[0].nested.subscriber[6].nested.subscriber[0].event[0].condition[0].and_[0].equal.insert(2, None)
+DB.subscriber[0].nested.subscriber[6].nested.subscriber[0].event[0].condition[0].and_[0].equal[2] = Dummy()
+DB.subscriber[0].nested.subscriber[6].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].context = []
+DB.subscriber[0].nested.subscriber[6].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].context.insert(0, None)
+DB.subscriber[0].nested.subscriber[6].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].context[0] = 'arena.mode'
+DB.subscriber[0].nested.subscriber[6].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].value_ = []
+DB.subscriber[0].nested.subscriber[6].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].value_.insert(0, None)
+DB.subscriber[0].nested.subscriber[6].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].value_[0] = 'areaconquest'
 DB.subscriber[0].nested.subscriber[6].nested.subscriber[0].event[0].condition[0].and_[0].gt = []
 DB.subscriber[0].nested.subscriber[6].nested.subscriber[0].event[0].condition[0].and_[0].gte = []
 DB.subscriber[0].nested.subscriber[6].nested.subscriber[0].event[0].condition[0].and_[0].id = []
@@ -1067,6 +1133,7 @@ DB.subscriber[0].nested.subscriber[6].operation = []
 DB.subscriber[0].nested.subscriber[6].send = []
 DB.subscriber[0].nested.subscriber.insert(7, None)
 DB.subscriber[0].nested.subscriber[7] = Dummy()
+DB.subscriber[0].nested.subscriber[7].activity = []
 DB.subscriber[0].nested.subscriber[7].client = Dummy()
 DB.subscriber[0].nested.subscriber[7].client.description = Dummy()
 DB.subscriber[0].nested.subscriber[7].client.description.locale = 'LOBBY_TUTORIAL_QUEST_8_TEXT_1'
@@ -1107,6 +1174,7 @@ DB.subscriber[0].nested.subscriber[7].nested.complete = 'repeat'
 DB.subscriber[0].nested.subscriber[7].nested.subscriber = []
 DB.subscriber[0].nested.subscriber[7].nested.subscriber.insert(0, None)
 DB.subscriber[0].nested.subscriber[7].nested.subscriber[0] = Dummy()
+DB.subscriber[0].nested.subscriber[7].nested.subscriber[0].activity = []
 DB.subscriber[0].nested.subscriber[7].nested.subscriber[0].condition = []
 DB.subscriber[0].nested.subscriber[7].nested.subscriber[0].count = []
 DB.subscriber[0].nested.subscriber[7].nested.subscriber[0].event = []
@@ -1137,6 +1205,14 @@ DB.subscriber[0].nested.subscriber[7].nested.subscriber[0].event[0].condition[0]
 DB.subscriber[0].nested.subscriber[7].nested.subscriber[0].event[0].condition[0].and_[0].equal[1].value_ = []
 DB.subscriber[0].nested.subscriber[7].nested.subscriber[0].event[0].condition[0].and_[0].equal[1].value_.insert(0, None)
 DB.subscriber[0].nested.subscriber[7].nested.subscriber[0].event[0].condition[0].and_[0].equal[1].value_[0] = 'player'
+DB.subscriber[0].nested.subscriber[7].nested.subscriber[0].event[0].condition[0].and_[0].equal.insert(2, None)
+DB.subscriber[0].nested.subscriber[7].nested.subscriber[0].event[0].condition[0].and_[0].equal[2] = Dummy()
+DB.subscriber[0].nested.subscriber[7].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].context = []
+DB.subscriber[0].nested.subscriber[7].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].context.insert(0, None)
+DB.subscriber[0].nested.subscriber[7].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].context[0] = 'arena.mode'
+DB.subscriber[0].nested.subscriber[7].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].value_ = []
+DB.subscriber[0].nested.subscriber[7].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].value_.insert(0, None)
+DB.subscriber[0].nested.subscriber[7].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].value_[0] = 'areaconquest'
 DB.subscriber[0].nested.subscriber[7].nested.subscriber[0].event[0].condition[0].and_[0].gt = []
 DB.subscriber[0].nested.subscriber[7].nested.subscriber[0].event[0].condition[0].and_[0].gte = []
 DB.subscriber[0].nested.subscriber[7].nested.subscriber[0].event[0].condition[0].and_[0].id = []
@@ -1204,6 +1280,7 @@ DB.subscriber[0].nested.subscriber[7].operation = []
 DB.subscriber[0].nested.subscriber[7].send = []
 DB.subscriber[0].nested.subscriber.insert(8, None)
 DB.subscriber[0].nested.subscriber[8] = Dummy()
+DB.subscriber[0].nested.subscriber[8].activity = []
 DB.subscriber[0].nested.subscriber[8].client = Dummy()
 DB.subscriber[0].nested.subscriber[8].client.description = Dummy()
 DB.subscriber[0].nested.subscriber[8].client.description.locale = 'LOBBY_TUTORIAL_QUEST_9_TEXT_1'
@@ -1221,6 +1298,7 @@ DB.subscriber[0].nested.subscriber[8].nested.complete = 'repeat'
 DB.subscriber[0].nested.subscriber[8].nested.subscriber = []
 DB.subscriber[0].nested.subscriber[8].nested.subscriber.insert(0, None)
 DB.subscriber[0].nested.subscriber[8].nested.subscriber[0] = Dummy()
+DB.subscriber[0].nested.subscriber[8].nested.subscriber[0].activity = []
 DB.subscriber[0].nested.subscriber[8].nested.subscriber[0].condition = []
 DB.subscriber[0].nested.subscriber[8].nested.subscriber[0].count = []
 DB.subscriber[0].nested.subscriber[8].nested.subscriber[0].event = []
@@ -1251,6 +1329,14 @@ DB.subscriber[0].nested.subscriber[8].nested.subscriber[0].event[0].condition[0]
 DB.subscriber[0].nested.subscriber[8].nested.subscriber[0].event[0].condition[0].and_[0].equal[1].value_ = []
 DB.subscriber[0].nested.subscriber[8].nested.subscriber[0].event[0].condition[0].and_[0].equal[1].value_.insert(0, None)
 DB.subscriber[0].nested.subscriber[8].nested.subscriber[0].event[0].condition[0].and_[0].equal[1].value_[0] = 'player'
+DB.subscriber[0].nested.subscriber[8].nested.subscriber[0].event[0].condition[0].and_[0].equal.insert(2, None)
+DB.subscriber[0].nested.subscriber[8].nested.subscriber[0].event[0].condition[0].and_[0].equal[2] = Dummy()
+DB.subscriber[0].nested.subscriber[8].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].context = []
+DB.subscriber[0].nested.subscriber[8].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].context.insert(0, None)
+DB.subscriber[0].nested.subscriber[8].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].context[0] = 'arena.mode'
+DB.subscriber[0].nested.subscriber[8].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].value_ = []
+DB.subscriber[0].nested.subscriber[8].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].value_.insert(0, None)
+DB.subscriber[0].nested.subscriber[8].nested.subscriber[0].event[0].condition[0].and_[0].equal[2].value_[0] = 'areaconquest'
 DB.subscriber[0].nested.subscriber[8].nested.subscriber[0].event[0].condition[0].and_[0].gt = []
 DB.subscriber[0].nested.subscriber[8].nested.subscriber[0].event[0].condition[0].and_[0].gte = []
 DB.subscriber[0].nested.subscriber[8].nested.subscriber[0].event[0].condition[0].and_[0].id = []
@@ -1342,6 +1428,7 @@ DB.subscriber[0].nested.subscriber[8].operation = []
 DB.subscriber[0].nested.subscriber[8].send = []
 DB.subscriber[0].nested.subscriber.insert(9, None)
 DB.subscriber[0].nested.subscriber[9] = Dummy()
+DB.subscriber[0].nested.subscriber[9].activity = []
 DB.subscriber[0].nested.subscriber[9].client = Dummy()
 DB.subscriber[0].nested.subscriber[9].client.description = Dummy()
 DB.subscriber[0].nested.subscriber[9].client.description.locale = 'LOBBY_TUTORIAL_QUEST_10_TEXT_1'

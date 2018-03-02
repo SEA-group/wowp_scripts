@@ -265,4 +265,7 @@ def generateUUID(idTypeList, ifaceName):
 
 
 def generateID(idTypeList, ifaceName):
-    return zlib.crc32(generateUUID(idTypeList, ifaceName))
+    uuid = generateUUID(idTypeList, ifaceName)
+    middle = len(uuid) / 2
+    hashStart, hashEnd = map(zlib.crc32, (uuid[:middle], uuid[middle:]))
+    return (hashStart << 32) + hashEnd

@@ -5,7 +5,9 @@ from debug_utils import LOG_DEBUG
 from gui.HUD2.core.DataPrims import DataController
 from gui.HUD2.core.MessageRouter import message
 from gui.HUD2.hudFeatures import Feature
+from gui.HUD2.HUDExecutionManager import HUDExecutionManager
 from BWUserTypesCommon.FastCommandRequestData import FastCommandRequestData
+from gui.HUD2.features.FastCommands.FastCommandManager import FastCommandManager
 POINT_ID = 'centerPoint'
 BOMBER_ID = 'sector'
 
@@ -41,13 +43,13 @@ class FactCommandController(DataController):
     def selectPlane(self, targetsData):
         callID = self._getCallID(targetsData)
         targetsList = self._getNearestItems(targetsData)
-        self.gameEnvironment.eGetTargetsFromFlash(targetsList, callID)
+        HUDExecutionManager.call(FastCommandManager.onSelectTargetFromFlash, targetsList, callID)
 
     @message('fastCommand.selectSector')
     def selectSector(self, targetsData):
         callID = self._getCallID(targetsData)
         targetsList = self._getNearestItems(targetsData)
-        self.gameEnvironment.eGetTargetsFromFlash(targetsList, callID)
+        HUDExecutionManager.call(FastCommandManager.onSelectTargetFromFlash, targetsList, callID)
 
     def _getNearestItems(self, targetsData):
         targetsList, point = self._parseData(targetsData)

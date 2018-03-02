@@ -16,6 +16,8 @@ from debug_utils import LOG_DEBUG
 from EntityHelpers import EntitySupportedClasses
 import BattleMessageReactionHelper
 from GameServiceBase import GameServiceBase
+from gui.HUD2.HUDExecutionManager import HUDExecutionManager
+from gui.HUD2.features.CombatLog.CombatLogSource import CombatLogSource
 from functools import partial
 import gui.HUDconsts
 ChatMessagesStringID = BATTLE_MESSAGE_TYPE
@@ -335,12 +337,13 @@ class Chat(GameServiceBase):
             self.__switchAllowChat(CHAT_BLOCKER.INTERMISSION)
 
     def __onVisibilityChat(self, visible, isNeedSend):
-        LOG_DEBUG('onVisibilityChat')
+        LOG_DEBUG('onVisibilityChat visible = ', visible)
         if visible:
             self.__squadStateUpdate()
         self.__chatVisible = visible
         self.__ui.call_1('hud.onVisibilityChat', self.__chatVisible, isNeedSend)
         BigWorld.player().setFlyKeyBoardInputAllowed(not self.__chatVisible)
+        HUDExecutionManager.call(CombatLogSource.activateCombatLog, self.__chatVisible)
 
     def __isPlayerIgnored(self, playerID):
         return self.__playersChatStatus.get(playerID) == CHAT_STATUS.IGNORED

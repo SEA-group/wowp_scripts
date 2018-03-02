@@ -7,6 +7,7 @@ from debug_utils import LOG_DEBUG
 class EntitySource(DataSource):
 
     def __init__(self, model, entity, playerIndex, isTeamObject = False, isBomber = False):
+        LOG_DEBUG(' EntitySource :: __init__ ')
         self._model = model
         self._entity = entity
         self._playerIndex = playerIndex
@@ -22,6 +23,7 @@ class EntitySource(DataSource):
     def updateModelByEntityData(self):
         if self._isBomber:
             LOG_DEBUG(' EntitySource :: updateModelByEntityData ', self._entity.id)
+        LOG_DEBUG(' EntitySource :: updateModelByEntityData ', int(ceil(self._entity.health)))
         self._model.health = int(ceil(self._entity.health))
         self._model.maxHealth = int(ceil(self._entity.maxHealth))
         self._model.teamIndex = getClientTeamIndex(self._entity.teamIndex, self._playerIndex)
@@ -30,6 +32,7 @@ class EntitySource(DataSource):
             self._model.isAliveOutOfAOI = self._entity.health > 0
 
     def _eAvatarHealthChanged(self, id, health, lastDamager, oldHealth, maxHealth):
+        LOG_DEBUG(' EntitySource :: _eAvatarHealthChanged ', id, health, lastDamager, oldHealth, maxHealth)
         self._model.health = int(ceil(health))
 
     def _eTeamIndexChanged(self, teamIndex):

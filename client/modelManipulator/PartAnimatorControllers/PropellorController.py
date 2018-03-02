@@ -44,6 +44,9 @@ class PropellorControllerBase(PartAnimatorBase):
         self.__setState(state)
         self.matrixProvider.speed = speed
 
+    def showPropellorBlade(self, visible):
+        self.fashions[PROPELLER_SOLID].callback(visible)
+
     def __setState(self, newState):
         if self.__lastState != newState:
             for i in range(len(self.fashions)):

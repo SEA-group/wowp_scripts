@@ -353,11 +353,11 @@ class db():
         else:
             return self.__soundSettings.woosh.entries
 
-    def getVO(self):
+    def getVO(self, gameModeIndex):
         if self.__soundSettings is None:
             return
         else:
-            return self.__soundSettings.voice
+            return self.__soundSettings.voiceoverSetsHolder.voiceoverSets[gameModeIndex]
 
     def getAirshowParameters(self):
         if self.__soundSettings is None:
@@ -1057,18 +1057,15 @@ class db():
         ResMgr.purge(listPath, True)
         return (d, elems)
 
-    def __createElemDescription(self, dataClass, intID, fileName, fileData, filePath):
+    def __createElemDescription(self, dataClass, intID, fileName, fileData, filePath, isElemHidden = False):
         elemDescription = None
-        if IS_DEVELOPMENT:
-            try:
-                elemDescription = dataClass(intID, fileName, fileData)
-            except:
-                LOG_ERROR('add %s from file %s - failed' % (dataClass.__name__, filePath))
-                import traceback
-                traceback.print_exc()
+        try:
+            elemDescription = dataClass(intID, fileName, fileData, isElemHidden) if dataClass is ArenaType else dataClass(intID, fileName, fileData)
+        except:
+            LOG_ERROR('add %s from file %s - failed' % (dataClass.__name__, filePath))
+            import traceback
+            traceback.print_exc()
 
-        else:
-            elemDescription = dataClass(intID, fileName, fileData)
         return elemDescription
 
     def __readDataWithFixedIDsFromFolder(self, folderPath, dataClass):
@@ -1083,12 +1080,13 @@ class db():
                 continue
             fileName = objSection.readString('name')
             intID = objSection.readInt('id')
+            isArenaHidden = objSection.readBool('hideForTraining')
             filePath = '%s%s.xml' % (folderPath, fileName)
             fileData = ResMgr.openSection(filePath)
             if fileData:
                 if not fileData.readBool('isDev') or IS_DEVELOPMENT:
                     LOG_DEBUG('add %s from file %s' % (dataClass.__name__, filePath))
-                    elemDescription = self.__createElemDescription(dataClass, intID, fileName, fileData, filePath)
+                    elemDescription = self.__createElemDescription(dataClass, intID, fileName, fileData, filePath, isArenaHidden)
                     if elemDescription:
                         intIDMap[intID] = elemDescription
                         strIDMap[fileName.lower()] = elemDescription
@@ -1132,12 +1130,17 @@ class db():
         if IS_EDITOR:
             return self.getEntityDataByName(DBEntities.BASES, name)
 
-    def getArenaList(self, arenaType = ARENA_TYPE.DEV):
+    def getArenaList(self, arenaType = ARENA_TYPE.DEV, battleEntryPoint = None):
         if arenaType == ARENA_TYPE.DEV:
             return self.__entities[DBEntities.ARENAS][1].values()
+        if arenaType == ARENA_TYPE.TRAINING:
+            if not IS_DEVELOPMENT:
+                return [ data for data in self.__entities[DBEntities.ARENAS][1].values() if not data.isArenaHidden ]
+            else:
+                return self.__entities[DBEntities.ARENAS][1].values()
         if arenaType in self.__exclusiveArenas:
             return [ self.__entities[DBEntities.ARENAS][1][arenaID] for arenaID in self.__exclusiveArenas[arenaType] ]
-        return [ data for data in self.__entities[DBEntities.ARENAS][1].values() if (not data.exclusiveGameMods or arenaType in data.exclusiveGameMods) and arenaType not in data.excludeArenaType ]
+        return [ data for data in self.__entities[DBEntities.ARENAS][1].values() if (not data.exclusiveGameMods or arenaType in data.exclusiveGameMods) and arenaType not in data.excludeArenaType and (not battleEntryPoint or battleEntryPoint in data.battleEntryPoint) ]
 
     def getPrebattleAvailableMaps(self):
         return [ arenaData.typeID for arenaData in self.getArenaList(ARENA_TYPE.TRAINING) if 0 <= arenaData.minPlayerCount <= 30 ]
@@ -2220,7 +2223,7 @@ class db():
         devPlanesStr = [ '{0}:{1}'.format(aircraft.id, aircraft.name) for aircraft in _aircrafts_db.DB.aircraft if aircraft.options.isDev ]
         if not IS_DEVELOPMENT:
             if devPlanes:
-                errs += '\nList of dev planes:' + ';'.join(devPlanesStr) + ';'
+                errs += '\nList of dev planes:' + ''.join(devPlanesStr) + ''
             for upg in _upgrades_db.DB.upgrade:
                 for i in xrange(len(upg.variant) - 1, -1, -1):
                     v = upg.variant[i]
@@ -2235,7 +2238,7 @@ class db():
             GlobalIDs = [ gID for gID, conf in _airplanesConfigurations_db.airplanesConfigurations.iteritems() if conf.planeID in devPlanesID ]
             if GlobalIDs:
                 _GlobalIDs = [ str(gID) for gID, conf in _airplanesConfigurations_db.airplanesConfigurations.iteritems() if conf.planeID in devPlanesID ]
-                errs += '\nList of dev globalID:' + ';'.join(_GlobalIDs) + ';'
+                errs += '\nList of dev globalID:' + ''.join(_GlobalIDs) + ''
             for gID in GlobalIDs:
                 errs += "\nError _airplanesConfigurations_db.airplanesConfigurations['{0}']".format(gID)
                 errs += "\nError _performanceCharacteristics_db.airplanes['{0}']".format(gID)
@@ -2261,7 +2264,7 @@ class db():
                 b = _accounttypes.AccountTypesData.bonuses[i]
                 for p in b.initialAircraft:
                     if p in devPlanes:
-                        errs += '\nError (DEV PLANE) in _accounttypes.AccountTypesData.bonuses[{0}].initialAircraft = {1}; .id={2}'.format(i, p, b.id)
+                        errs += '\nError (DEV PLANE) in _accounttypes.AccountTypesData.bonuses[{0}].initialAircraft = {1} .id={2}'.format(i, p, b.id)
 
         else:
             for upg in _upgrades_db.DB.upgrade:
@@ -2294,7 +2297,7 @@ class db():
         GlobalIDs = [ gID for gID, conf in _airplanesConfigurations_db.airplanesConfigurations.iteritems() if conf.planeID not in allPlanesID ]
         if GlobalIDs:
             _GlobalIDs = [ str(gID) for gID, conf in _airplanesConfigurations_db.airplanesConfigurations.iteritems() if conf.planeID not in allPlanesID ]
-            errs += '\nList of globalID for unknown plane:' + ';'.join(_GlobalIDs) + ';'
+            errs += '\nList of globalID for unknown plane:' + ''.join(_GlobalIDs) + ''
         for gID in GlobalIDs:
             errs += "\nError _airplanesConfigurations_db.airplanesConfigurations['{0}']".format(gID)
             errs += "\nError _performanceCharacteristics_db.airplanes['{0}']".format(gID)
@@ -2314,7 +2317,7 @@ class db():
             b = _accounttypes.AccountTypesData.bonuses[i]
             for p in b.initialAircraft:
                 if p not in allPlanes:
-                    errs += '\nError (UNKNOWN PLANE) in _accounttypes.AccountTypesData.bonuses[{0}].initialAircraft = {1}; .id={2}'.format(i, p, b.id)
+                    errs += '\nError (UNKNOWN PLANE) in _accounttypes.AccountTypesData.bonuses[{0}].initialAircraft = {1} .id={2}'.format(i, p, b.id)
 
         tlen = time() - tstart
         LOG_WARNING('Finish check DEV plane. Time = {0} sec'.format(tlen))

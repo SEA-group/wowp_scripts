@@ -1,8 +1,38 @@
 <heavyfighter.xml>
   <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
   <noNamespaceSchemaLocation>../../../../../../../tools/databundler/subscribers.xsd</noNamespaceSchemaLocation>
+  <include>
+    <condition>
+      <and>
+        <equal>
+          <context>arena.mode</context>
+          <value>	invasion	</value>
+        </equal>
+        <equal>
+          <context>player.teamIndex</context>
+          <value>	1	</value>
+        </equal>
+      </and>
+    </condition>
+    <nested>
+      <subscriber>
+        <condition>
+          <and>
+            <equal>
+              <context>arena.mode</context>
+              <value>	invasion	</value>
+            </equal>
+            <equal>
+              <context>player.teamIndex</context>
+              <value>	1	</value>
+            </equal>
+          </and>
+        </condition>
+      </subscriber>
+    </nested>
+  </include>
   <subscriber>
-    <name>attackSectors</name>
+    <name>attackSectors_attack</name>
     <type>objective</type>
     <group>heavy.fighter</group>
     <server>
@@ -293,7 +323,7 @@
     </send>
   </subscriber>
   <subscriber>
-    <name>captureSectors</name>
+    <name>captureSectors_attack</name>
     <type>objective</type>
     <group>heavy.fighter</group>
     <server>
@@ -542,7 +572,7 @@
     </send>
   </subscriber>
   <subscriber>
-    <name>destroyPlanes</name>
+    <name>destroyPlanes_attack</name>
     <type>objective</type>
     <group>heavy.fighter</group>
     <server>

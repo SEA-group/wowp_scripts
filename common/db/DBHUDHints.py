@@ -64,7 +64,13 @@ class BattleNotifications(HudHints):
                 readValue(hint, data, 'coolDown', 0)
                 readValue(hint, data, 'timer', -1)
                 readValue(hint, data, 'addValue', -1)
+                self._readSubItemList(hint, data, 'gameModes', 'mod')
                 self._hints[hint.id] = hint
                 LOG_DEBUG('readData - added battle notification:', hint.id, hint.__dict__)
             else:
                 LOG_ERROR('readData - battle notification without ID. Check it!')
+
+    @staticmethod
+    def _readSubItemList(storage, data, sectionsName, subItemName):
+        dataList = findSection(data, sectionsName).readStrings(subItemName)
+        setattr(storage, sectionsName, list(dataList))

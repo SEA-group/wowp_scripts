@@ -1,23 +1,17 @@
 # Embedded file name: scripts/client/gui/HUD2/features/Consumables/ConsumableController.py
 import functools
 import InputMapping
-from debug_utils import LOG_DEBUG
 from gui.HUD2.core.DataPrims import DataController
-from gui.HUD2.features.Consumables.ConsumableManager import ConsumableManager
 from gui.HUD2.hudFeatures import Feature
 
 class ConsumableController(DataController):
 
     def __init__(self, features):
         self._playerAvatar = features.require(Feature.PLAYER_AVATAR)
-        inputProcessor = features.require(Feature.INPUT).commandProcessor
-        self._processor = inputProcessor
-        self._consumableManager = ConsumableManager(features)
-        self._consumableManager.initConsumables(self._playerAvatar.consumables, None)
+        self._consumableManager = features.require(Feature.CONSUMABLES_MANAGER)
+        self._processor = features.require(Feature.INPUT).commandProcessor
         for command in InputMapping.EQUIPMENT_COMMANDS:
             self._processor.addListeners(command, functools.partial(self._useConsumbale, command))
-
-        return
 
     def _useConsumbale(self, command):
         equipmentCommands = InputMapping.EQUIPMENT_COMMANDS

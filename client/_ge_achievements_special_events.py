@@ -73,6 +73,7 @@ class WEAPON_AIM_TYPE:
 
 DB = Dummy()
 DB.header = Dummy()
+DB.header.activity = []
 DB.header.client = Dummy()
 DB.header.client.place = 'left'
 DB.header.condition = []
@@ -92,6 +93,7 @@ DB.header.server.scope.insert(0, None)
 DB.header.server.scope[0] = 'player'
 DB.header.type = 'achievement'
 DB.include = Dummy()
+DB.include.activity = []
 DB.include.condition = []
 DB.include.count = []
 DB.include.event = []
@@ -106,6 +108,7 @@ DB.include.send = []
 DB.subscriber = []
 DB.subscriber.insert(0, None)
 DB.subscriber[0] = Dummy()
+DB.subscriber[0].activity = []
 DB.subscriber[0].client = Dummy()
 DB.subscriber[0].client.description = Dummy()
 DB.subscriber[0].client.description.locale = 'MEDAL_DESCRIPTION_WG_FEST_2017'

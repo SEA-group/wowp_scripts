@@ -1,0 +1,58 @@
+<foundry.xml>
+  <preset>default</preset>
+  <neutralCapturePoints>	280	</neutralCapturePoints>
+  <ownedCapturePoints>	180	</ownedCapturePoints>
+  <gameplayType>foundry</gameplayType>
+  <holdingPointsDefence>	1	</holdingPointsDefence>
+  <holdingPointsOffense>	1	</holdingPointsOffense>
+  <hud>
+    <battleHintIcon>event_factory2</battleHintIcon>
+    <localizationID>HUD_NAME_SECTOR_FOUNDRY</localizationID>
+    <description>HUD_DESCRIPTION_SECTOR_FOUNDRY_1</description>
+    <sectorIconPath>icons/hud/sectors/sectorType{size}Factory2_{team}</sectorIconPath>
+    <featuresIconPath>icons/hud/sectors/sectorIcon{size}VictoryPoints_{team}</featuresIconPath>
+    <featuresName>HUD_SECTOR_MESSAGES_VICTORY_POINTS_INFLUENCE_INCREASE</featuresName>
+    <miniMapSectorIconPath>sectorType{size}Factory2_{team}</miniMapSectorIconPath>
+    <miniMapFeaturesIconPath>sector{size}IconVictoryPoints_{team}</miniMapFeaturesIconPath>
+    <isNeedToShowTimer>	true	</isNeedToShowTimer>
+    <sectorObjects>
+      <object>	13	</object>
+      <object>	21	</object>
+    </sectorObjects>
+    <descriptionList>
+      <description>HUD_DESCRIPTION_SECTOR_FOUNDRY_1</description>
+    </descriptionList>
+    <isBig>	true	</isBig>
+    <isMulticolorInPermanentLockState>	true	</isMulticolorInPermanentLockState>
+  </hud>
+  <sound>
+    <onCaptureLast>
+      <allyEvent>vo_c_all_factories_captured</allyEvent>
+    </onCaptureLast>
+    <onCapture>
+      <allyEvent>vo_c_factory_captured</allyEvent>
+      <enemyEvent>vo_c_factory_lost</enemyEvent>
+    </onCapture>
+    <onAlarm>
+      <enemyEvent>vo_c_factory_alarm</enemyEvent>
+      <conditions>	6	</conditions>
+    </onAlarm>
+  </sound>
+  <defenderCounter>
+    <count>	0	<defenderType>HEAVY</defenderType></count>
+  </defenderCounter>
+  <pointsProduction>
+    <producers>
+      <producer>
+        <label>default</label>
+        <period>	1	</period>
+        <points>	3	</points>
+      </producer>
+      <producer>
+        <label>bonus</label>
+        <period>	24	</period>
+        <points>	80	</points>
+      </producer>
+    </producers>
+  </pointsProduction>
+</foundry.xml>

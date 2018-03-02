@@ -166,21 +166,16 @@ class CameraStrategyLegacyProxy(object):
         brake.minArgumentValue = 0.0
         brake.planeMatrix = self._planeMtxProvider
         brake.cursorMatrix = self._cursorProvider
-        horizontalStrafe = BigWorld.CameraComponentStrafe()
-        horizontalStrafe.positionSettings.normalizedRotation = 0.85
-        horizontalStrafe.planeMatrix = self._planeMtxProvider
-        horizontalStrafe.cursorMatrix = self._cursorProvider
-        horizontalStrafe.targetEntityId = BigWorld.player().id
         overlook = BigWorld.CameraComponentOverlook()
         overlook.maxFovMultiplier = 1.0
         overlook.duration = 0.005
         overlook.interpolationFunc = BigWorld.EaseInOutExponential
         overviewMode = BigWorld.CameraComponentForsage()
-        overviewMode.maxFovMultiplier = 1.1
+        overviewMode.maxFovMultiplier = 1.0
         overviewMode.positionSettings.planeDistance = -2
-        overviewMode.durationIn = 0.75
+        overviewMode.durationIn = 0.4
         overviewMode.interpolationFuncIn = BigWorld.EaseInOutCubic
-        overviewMode.durationOut = 0.15
+        overviewMode.durationOut = 0.4
         overviewMode.interpolationFuncOut = BigWorld.EaseInOutCubic
         overviewMode.maxArgumentValue = 1.0
         overviewMode.minArgumentValue = 0.0
@@ -206,7 +201,6 @@ class CameraStrategyLegacyProxy(object):
         self._components = {'zoomStateFov': fov,
          'forsage': forsage,
          'brake': brake,
-         'horizontalStrafe': horizontalStrafe,
          'speed': speed,
          'ground': ground,
          'overlook': overlook,
@@ -216,14 +210,12 @@ class CameraStrategyLegacyProxy(object):
     def disableCourseComponents(self):
         self._components['forsage'].isActive = False
         self._components['brake'].isActive = False
-        self._components['horizontalStrafe'].isActive = False
         self._components['speed'].isActive = False
         self._components['ground'].isActive = False
 
     def enableCourseComponents(self):
         self._components['forsage'].isActive = True
         self._components['brake'].isActive = True
-        self._components['horizontalStrafe'].isActive = True
         self._components['speed'].isActive = True
         self._components['ground'].isActive = True
 
@@ -257,6 +249,7 @@ class CameraStrategyLegacyProxy(object):
         verticalOffset = 1.0
         planeDistance = 0.0
         fovMultiplier = 1.0
+        position = Math.Vector3(0.0, 0.0, 0.0)
         for component in self._components.itervalues():
             component.Update(dt)
             rotationAngle += component.positionEffects.rotationAngle
@@ -265,6 +258,7 @@ class CameraStrategyLegacyProxy(object):
             verticalOffset *= component.positionEffects.verticalOffset
             planeDistance += component.positionEffects.planeDistance
             fovMultiplier *= component.fovMultiplier
+            position += component.positionEffects.cameraPosition
 
         self.fovMultiplier = fovMultiplier
         self.__offsetProvider.a.normalizedRotation = normalizedRotation
@@ -272,6 +266,8 @@ class CameraStrategyLegacyProxy(object):
         self.__offsetProvider.a.horizontalOffset = horizontalOffset
         self.__offsetProvider.a.verticalOffset = verticalOffset
         self.__offsetProvider.a.planeDistance = planeDistance
+        if position.max() > 0.0:
+            self.__offsetProvider.a.position = Math.Vector4(position.x, position.y, position.z, 0.0)
         self.__camera.Update(dt)
 
     def Update(self, dt):
@@ -336,13 +332,9 @@ class CameraStrategyLegacyProxy(object):
 
     def overviewModeEnable(self):
         self._components['overviewMode'].setTargetValue(1.0)
-        snapCursorMatrix = Math.Matrix()
-        snapCursorMatrix.set(self._cursorProvider)
-        self._components['horizontalStrafe'].cursorMatrix = snapCursorMatrix
 
     def overviewModeDisable(self):
         self._components['overviewMode'].setTargetValue(0.0)
-        self._components['horizontalStrafe'].cursorMatrix = self._cursorProvider
 
     @property
     def isDebugEnabled(self):
@@ -412,7 +404,13 @@ class CameraStrategyMouse(CameraStrategyLegacyProxy):
 
     def __init__(self, cameraPosition, cameraTarget, sourceMatrix):
         CameraStrategyLegacyProxy.__init__(self, cameraPosition, cameraTarget, sourceMatrix, BigWorld.CursorFree())
-        self._components['horizontalStrafe'].isActive = True
+        self.__horizontalStrafe = BigWorld.CameraComponentStrafe()
+        self.__horizontalStrafe.positionSettings.normalizedRotation = 0.85
+        self.__horizontalStrafe.position = cameraPosition
+        self.__horizontalStrafe.planeMatrix = self._planeMtxProvider
+        self.__horizontalStrafe.cursorMatrix = self._cursorProvider
+        self.__horizontalStrafe.targetEntityId = BigWorld.player().id
+        self._components['horizontalStrafe'] = self.__horizontalStrafe
         self._overlook = False
         self._input.isContinuousFreeInput = False
         self._input.accelerationDuration = 0.075
@@ -430,39 +428,21 @@ class CameraStrategyMouse(CameraStrategyLegacyProxy):
     @behaviorHorizon.setter
     def behaviorHorizon(self, value):
         self.__behaviorHorizon = value
-        if 0 == value:
-            self.__planeAlignedCursor = BigWorld.Cursor()
-            self.__planeAlignedCursor.sourceMatrix = self._planeMtxProvider
-            self.__planeAlignedCursor.alignmentSpeedUp = 3.5
-            self._cameraBasis.b = self.__planeAlignedCursor.matrix
-            self._cursor = BigWorld.CursorFree()
-            self._cursor.sourceMatrix = self.__planeAlignedCursor.matrix
-            self._cursor.targetUp = Math.Vector4Up(self.__planeAlignedCursor.matrix)
-            self._cursor.alignmentSpeedUp = 1000.0
-            self._cursor.maxDeflectionAngle = math.radians(20.0)
-            self._cursor.hasDeflectionLimit = True
-            self._cursorProvider.a = self._cursor.matrix
-        elif 1 == value:
-            self._cursor = BigWorld.CursorFree()
-            self._cursor.sourceMatrix = self._planeMtxProvider
-            self._cursor.planeFollowingSpeed = 3.0
-            self._cursorProvider.a = self._cursor.matrix
-            self._cameraBasis.b = self._cursorProvider
-        else:
-            raise
 
     def ShadowUpdate(self, dt):
-        if 0 == self.__behaviorHorizon:
-            self.__planeAlignedCursor.update(dt, 0.0, 0.0)
         self._cursor.isfollowingPlane = self._input.isInputBlocked
         CameraStrategyLegacyProxy.ShadowUpdate(self, dt)
 
     def overviewModeEnable(self):
         self._overlook = True
+        snapCursorMatrix = Math.Matrix()
+        snapCursorMatrix.set(self._cursorProvider)
+        self.__horizontalStrafe.cursorMatrix = snapCursorMatrix
         CameraStrategyLegacyProxy.overviewModeEnable(self)
 
     def overviewModeDisable(self):
         self._overlook = False
+        self.__horizontalStrafe.cursorMatrix = self._cursorProvider
         CameraStrategyLegacyProxy.overviewModeDisable(self)
 
     @property
@@ -517,7 +497,6 @@ class CameraStrategyGamepad(CameraStrategyMouse):
 
     def __init__(self, cameraPosition, cameraTarget, sourceMatrix):
         CameraStrategyMouse.__init__(self, cameraPosition, cameraTarget, sourceMatrix)
-        self._components['horizontalStrafe'].isActive = False
         self._input.isContinuousFreeInput = True
 
     def rotateCursorSpeed(self, pitch, yaw):
@@ -530,8 +509,6 @@ class CameraStrategyJoystick(CameraStrategyLegacyProxy):
         cursor = BigWorld.Cursor()
         cursor.alignmentSpeedUp = 1000.0
         CameraStrategyLegacyProxy.__init__(self, cameraPosition, cameraTarget, sourceMatrix, cursor)
-        self._components['horizontalStrafe'].isActive = False
-        self._components['horizontalStrafe'].positionSettings.normalizedRotation = 1.0
         self._components['overlook'].duration = 1.5
         self._input.isContinuousFreeInput = True
 
@@ -551,7 +528,6 @@ class CameraStrategyGunner(CameraStrategyLegacyProxy):
         self._cursor.alignmentSpeedUp = 10000.0
         self._cursorProvider.a = self._cursor.matrix
         self._cameraBasis.b = BigWorld.ShiftedMatrixProvider(self._cursorProvider, Math.Vector3(0.0, 0.0, 0.0))
-        self._components['horizontalStrafe'].isActive = False
 
     def __addComponents(self):
         self.disableCourseComponents()

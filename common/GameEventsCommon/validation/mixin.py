@@ -2,7 +2,7 @@
 from __future__ import absolute_import
 from functools import wraps
 from types import ClassType
-from .base import ValidationError, ValidationBase
+from validation_utils import ValidationError, ValidationBase
 
 def getOrCreateValidator(f):
     """Create per class VALIDATOR instance before calling function and if

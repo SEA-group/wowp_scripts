@@ -32,4 +32,5 @@ AchievementModel = Model(backend=BundledBackend(modules=['_ge_achievements_coach
  '_ge_achievements_epic',
  '_ge_achievements_special_events',
  '_ge_achievements_new_year',
- '_ge_achievements_albion']), instance=AchievementObject)
+ '_ge_achievements_albion',
+ '_ge_achievements_marathon']), instances=[(AchievementObject, {})])

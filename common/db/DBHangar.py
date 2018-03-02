@@ -7,6 +7,7 @@ class HangarConfig:
 
     def __init__(self, data):
         params = (('space_name', ''),
+         ('space_settings', ''),
          ('v_scale', 0.0),
          ('v_start_angles', Math.Vector3(0, 0, 0)),
          ('v_start_pos', Math.Vector3(0, 0, 0)),

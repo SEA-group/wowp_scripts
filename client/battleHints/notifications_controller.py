@@ -62,8 +62,10 @@ class NotificationsController(object):
     def linkEvents(self):
         if self._gameMode is not None and not self._linked:
             self._gameMode.addEventHandler(AC_EVENTS.GLOBAL_SCORE_UPDATED, self._onGlobalScoreUpdate)
+            self._gameMode.addEventHandler(AC_EVENTS.GLOBAL_COUNTERS_UPDATED, self._onGlobalCountersUpdate)
             self._gameMode.addEventHandler(AC_EVENTS.SECTOR_STATE_CHANGED, self._onSectorChangeState)
             self._gameMode.addEventHandler(AC_EVENTS.BOMBERS_LAUNCHED, self._onBomberWaveStarted)
+            self._gameMode.addEventHandler(AC_EVENTS.DYNAMIC_TIMER_UPDATE, self._onDynamicTimerUpdate)
             self._gameMode.lastPlayerManager.eUpdateLastPlayer += self.__onUpdateLastPlayer
             self._linked = True
         return
@@ -71,11 +73,28 @@ class NotificationsController(object):
     def unlinkEvents(self):
         if self._gameMode is not None and self._linked:
             self._gameMode.removeEventHandler(AC_EVENTS.GLOBAL_SCORE_UPDATED, self._onGlobalScoreUpdate)
+            self._gameMode.removeEventHandler(AC_EVENTS.GLOBAL_COUNTERS_UPDATED, self._onGlobalCountersUpdate)
             self._gameMode.removeEventHandler(AC_EVENTS.SECTOR_STATE_CHANGED, self._onSectorChangeState)
             self._gameMode.removeEventHandler(AC_EVENTS.BOMBERS_LAUNCHED, self._onBomberWaveStarted)
+            self._gameMode.removeEventHandler(AC_EVENTS.DYNAMIC_TIMER_UPDATE, self._onDynamicTimerUpdate)
             self._gameMode.lastPlayerManager.eUpdateLastPlayer -= self.__onUpdateLastPlayer
             self._linked = False
         return
+
+    def _onGlobalCountersUpdate(self, globalCounters, *args, **kwargs):
+        ownerTeamIndex = self._player.teamIndex
+        enemyTeamIndex = 1 - ownerTeamIndex
+        allyResp = globalCounters['death_limit'][ownerTeamIndex]
+        enemyResp = globalCounters['death_limit'][enemyTeamIndex]
+        if allyResp <= 0:
+            self._messenger.pushMessage(battleHints.NOTIFICATION_ALLY_TEAM_RESPAWN_EMPTY)
+        if enemyResp <= 0:
+            self._messenger.pushMessage(battleHints.NOTIFICATION_ENEMY_TEAM_RESPAWN_EMPTY)
+
+    def _onDynamicTimerUpdate(self, dynamicTime, oldTime, *args, **kwargs):
+        if oldTime > 0:
+            timeChange = dynamicTime - oldTime
+            self._messenger.pushMessage(battleHints.NOTIFICATION_DYNAMIC_TIME_CHANGE, localData=dict(data=timeChange))
 
     def __onUpdateLastPlayer(self, isEnemy, *args, **kwargs):
         if isEnemy:
@@ -87,7 +106,7 @@ class NotificationsController(object):
         pointsToWin = self._gameMode.arenaTypeData._gameModeSettings.pointsToWin
         ownerTeamIndex = self._player.teamIndex
         enemyTeamIndex = 1 - ownerTeamIndex
-        percent = lambda points: 100.0 * points / pointsToWin
+        percent = lambda points: (100.0 * points / pointsToWin if pointsToWin > 0 else 0)
         newScore = map(percent, scoreGlobal)
         if newScore[ownerTeamIndex] >= SCORE_BORDER and self._score[ownerTeamIndex] < SCORE_BORDER:
             self._messenger.pushMessage(battleHints.NOTIFICATION_VICTORY_IS_COM)
@@ -114,6 +133,17 @@ class NotificationsController(object):
              enemyTeamIndex: battleHints.NOTIFICATION_ENEMY_TEAM_CAPTURED_SECTOR}
             sector = self._sectors[sectorId]
             self._messenger.pushMessage(hints.get(teamIndex, -1), localData=dict(postfix=sector.name, icon=sector.icon))
+            self._addMultiply(teamIndex)
+
+    def _addMultiply(self, teamIndex):
+        sectorsCount = self._gameMode.capturedSectors(teamIndex)
+        ownerTeamIndex = self._player.teamIndex
+        enemyTeamIndex = 1 - ownerTeamIndex
+        hints = {ownerTeamIndex: battleHints.NOTIFICATION_SECTOR_MULTIPLY_CHANGE_ALLY,
+         enemyTeamIndex: battleHints.NOTIFICATION_SECTOR_MULTIPLY_CHANGE_ENEMY}
+        count = SETTINGS.ATTRITION_WARFARE_SETTINGS.MULTIPLY[sectorsCount]
+        title = 'x' + str(int(count))
+        self._messenger.pushMessage(hints.get(teamIndex, -1), localData=dict(multiply=count, title=title))
 
     def _onBomberWaveStarted(self, sectorIdent, currentTargetSectorIdent, teamIndex, waveID, bombersIdsStates, startTime):
         hint = battleHints.NOTIFICATION_ALLY_BOMBERS_WAVE_LAUNCHED if self._player.teamIndex == teamIndex else battleHints.NOTIFICATION_ENEMY_BOMBERS_WAVE_LAUNCHED
@@ -127,7 +157,7 @@ class NotificationsController(object):
 
     def _updateBattleEvents(self):
         triggers = self._gameMode.arenaTypeData.gameModeSettings.battleEvents.triggers
-        eventRDTrigger = next((x for x in triggers if x.battleEvent == SETTINGS.BATTLE_EVENT_TYPE.RESPAWN_DISABLE))
+        eventRDTrigger = next((x for x in triggers if x.battleEvent == SETTINGS.BATTLE_EVENT_TYPE.RESPAWN_DISABLE), None)
         if eventRDTrigger is not None:
             csTriggerTime = eventRDTrigger.predicate.options['duration']
             arenaTimePassed = BigWorld.serverTime() - self._player.arenaStartTime

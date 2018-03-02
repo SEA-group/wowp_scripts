@@ -3,7 +3,6 @@ import sys
 import inspect
 import BigWorld
 import db.DBLogic
-from consts import PLANE_TYPE
 from EntityHelpers import isAvatar
 from Component import Component, InputSlot, OutputSlot
 from debug_utils import LOG_ERROR
@@ -54,7 +53,7 @@ class FindAircraftClassById(Component):
         return 'Aircraft'
 
     def slotDefinitions(self):
-        return [InputSlot('aircraft_id', Component.SLOT_INT, None), OutputSlot('aircraft_class', Component.SLOT_STR, FindAircraftClassById._execute)]
+        return [InputSlot('aircraft_id', Component.SLOT_INT, None), OutputSlot('aircraft_class', Component.SLOT_AIRCRAFT_CLASS, FindAircraftClassById._execute)]
 
     def _execute(self, aircraftId):
         settings = db.DBLogic.g_instance.getAircraftData(aircraftId)
@@ -62,7 +61,7 @@ class FindAircraftClassById(Component):
             LOG_ERROR('[VSE] Aircraft does not exist: {0}'.format(aircraftId))
             return -1
         else:
-            return PLANE_TYPE.getName(settings.airplane.planeType)
+            return settings.airplane.planeType
 
 
 def getModuleComponents():

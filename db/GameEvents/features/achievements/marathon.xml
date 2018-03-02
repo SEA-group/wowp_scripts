@@ -1,0 +1,215 @@
+<marathon.xml>
+  <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
+  <noNamespaceSchemaLocation>../../eps/validators/subscribers.xsd</noNamespaceSchemaLocation>
+  <header>
+    <type>achievement</type>
+    <group>	marathon	</group>
+    <server>
+      <active>	true	</active>
+      <scope>player</scope>
+      <hidden>	false	</hidden>
+    </server>
+    <markers>
+      <group>	marathon	</group>
+    </markers>
+    <client>
+      <place>	left	</place>
+    </client>
+  </header>
+  <include>
+    <metadata>
+      <doneCount>	true	</doneCount>
+      <firstDoneTime>	true	</firstDoneTime>
+      <lastDoneTime>	true	</lastDoneTime>
+    </metadata>
+  </include>
+  <subscriber>
+    <name>marathon_axis_XF_15C</name>
+    <client>
+      <order>	1	</order>
+      <page>	1	</page>
+      <multiple>	false	</multiple>
+      <name>
+        <locale>LOBBY_SPECIAL_QUESTLINE_USA_NAME_RELIABLE_SHIELD</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_MARATHON_XF15C</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/signsWestwallAircraftXf15c.dds</small>
+        <big>icons/awards/achievementsInfo/signsWestwallAircraftXf15c.dds</big>
+        <faded>icons/awards/achievements/signsWestwallAircraftXf15c_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>sbz_quest_done</type>
+      <context>medal_xf15c</context>
+      <name>final_dbz</name>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>marathon_axis_Do_335_A_1</name>
+    <client>
+      <order>	1	</order>
+      <page>	1	</page>
+      <multiple>	false	</multiple>
+      <name>
+        <locale>LOBBY_SPECIAL_QUESTLINE_GERMANY_NAME_SPEAR_PUNCH</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_MARATHON_DO335A-1</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/signsWestwallAircraftDo335a1.dds</small>
+        <big>icons/awards/achievementsInfo/signsWestwallAircraftDo335a1.dds</big>
+        <faded>icons/awards/achievements/signsWestwallAircraftDo335a1_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>sbz_quest_done</type>
+      <context>medal_do335a1</context>
+      <name>final_dbz</name>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>marathon_axis_3_2018</name>
+    <client>
+      <order>	3	</order>
+      <page>	1	</page>
+      <multiple>	false	</multiple>
+      <name>
+        <locale>MEDAL_NAME_MARATHON</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_MARATHON</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/signsWestwallParticipant.dds</small>
+        <big>icons/awards/achievementsInfo/signsWestwallParticipant.dds</big>
+        <faded>icons/awards/achievements/signsWestwallParticipant_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>win</name>
+      <condition>
+        <and>
+          <equal>
+            <context>arena.type</context>
+            <value>normal</value>
+          </equal>
+          <equal>
+            <context>arena.source</context>
+            <value>player</value>
+          </equal>
+          <or>
+            <equal>
+              <context>arena.mode</context>
+              <value>	invasion	</value>
+            </equal>
+            <equal>
+              <context>arena.mode</context>
+              <value>	attritionwarfare	</value>
+            </equal>
+          </or>
+        </and>
+      </condition>
+      <count>
+        <value>	5	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>marathon_axis_4_2018</name>
+    <client>
+      <order>	4	</order>
+      <page>	1	</page>
+      <multiple>	false	</multiple>
+      <name>
+        <locale>MEDAL_NAME_INVASION</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_INVASION</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/signsWestwallModeInvasion.dds</small>
+        <big>icons/awards/achievementsInfo/signsWestwallModeInvasion.dds</big>
+        <faded>icons/awards/achievements/signsWestwallModeInvasion_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>win</name>
+      <condition>
+        <and>
+          <equal>
+            <context>arena.type</context>
+            <value>normal</value>
+          </equal>
+          <equal>
+            <context>arena.source</context>
+            <value>player</value>
+          </equal>
+          <equal>
+            <context>arena.mode</context>
+            <value>	invasion	</value>
+          </equal>
+        </and>
+      </condition>
+      <count>
+        <value>	10	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>marathon_axis_5_2018</name>
+    <client>
+      <order>	5	</order>
+      <page>	1	</page>
+      <multiple>	false	</multiple>
+      <name>
+        <locale>MEDAL_NAME_WAR_OF_ATTRITION</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_WAR_OF_ATTRITION</locale>
+      </description>
+      <icon>
+        <small>icons/awards/achievements/signsWestwallModeAttrition.dds</small>
+        <big>icons/awards/achievementsInfo/signsWestwallModeAttrition.dds</big>
+        <faded>icons/awards/achievements/signsWestwallModeAttrition_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>battle</type>
+      <context>player</context>
+      <name>win</name>
+      <condition>
+        <and>
+          <equal>
+            <context>arena.type</context>
+            <value>normal</value>
+          </equal>
+          <equal>
+            <context>arena.source</context>
+            <value>player</value>
+          </equal>
+          <equal>
+            <context>arena.mode</context>
+            <value>	attritionwarfare	</value>
+          </equal>
+        </and>
+      </condition>
+      <count>
+        <value>	10	</value>
+      </count>
+    </event>
+  </subscriber>
+</marathon.xml>

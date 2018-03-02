@@ -1,5 +1,5 @@
 # Embedded file name: scripts/common/db/DBAreaConquest/SectorPresetModel.py
-from consts import DEFENDER_TYPE, PLANE_TYPE, PLANE_TYPE_NAME_REVERSED
+from consts import DEFENDER_TYPE, PLANE_TYPE, PLANE_TYPE_NAME_REVERSED, GAME_MODE_PATH_NAMES
 from debug_utils import LOG_ERROR
 from db.DBModel.DBModelBase import DBModelBase
 from db.DBModel.DBProperty import DBPropertyBase, DBStringProperty, DBIntProperty, DBFloatProperty, DBBoolProperty, DBModelProperty, DBListProperty
@@ -78,6 +78,9 @@ class SectorHudBaseModel(DBModelBase):
     miniMapSectorIconPath = DBStringProperty(default='')
     miniMapFeaturesIconPath = DBStringProperty(default='')
     isNeedToShowTimer = DBBoolProperty(default=True)
+    isBig = DBBoolProperty(default=False)
+    isMulticolorInPermanentLockState = DBBoolProperty(default=True)
+    isHideFeaturesName = DBBoolProperty(default=False)
     description = DBStringProperty(default='')
     sectorObjects = DBListProperty(elementType=DBIntProperty(sectionName='object'))
     descriptionList = DBListProperty(elementType=DBStringProperty(sectionName='description'))
@@ -174,13 +177,16 @@ class SectorPresetModel(DBModelBase):
     """Sector base settings container
     """
     gameplayType = DBStringProperty()
-    gameplayLevel = DBIntProperty()
     teamIndex = DBIntProperty()
     state = DBStringProperty()
     lockTime = DBIntProperty()
     playerSpawnEnabled = DBBoolProperty()
     respawnCooldownReduceEnabled = DBBoolProperty()
     tacticalRespawnEnabled = DBBoolProperty()
+    holdingPointsDefence = DBIntProperty()
+    holdingPointsOffense = DBIntProperty()
+    dynamicTimeIncrease = DBIntProperty()
+    isPermanentLock = DBBoolProperty()
     neutralCapturePoints = DBIntProperty(default=2)
     ownedCapturePoints = DBIntProperty(default=2)
     defenderCounter = SectorDefendersProperty()
@@ -191,13 +197,17 @@ class SectorPresetModel(DBModelBase):
     aiSettings = DBModelProperty(factory=SectorAIModel, sectionName='ai')
     pointsProduction = DBModelProperty(factory=PointsProductionModel)
 
+    def __init__(self, gameModeDir):
+        super(SectorPresetModel, self).__init__()
+        self._gameModeDir = gameModeDir
+
     def read(self, section):
         """Read model data from data section using preset model if specified
         """
         if section.has_key(PRESET_KEY):
             from SectorPresets import getPresetByName
             presetName = section[PRESET_KEY].asString
-            presetModel = getPresetByName(presetName)
+            presetModel = getPresetByName(presetName, self._gameModeDir)
             presetModel.copyTo(self)
         super(SectorPresetModel, self).read(section)
 

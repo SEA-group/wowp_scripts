@@ -5,8 +5,8 @@ from Event import EventDispatcher, eventHandler
 from ArenaHelpers.GameModes.AreaConquest.ACGameModeClient import AC_ARENA_UPDATE_EVENTS
 from ArenaHelpers.GameModes.AreaConquest import AC_EVENTS
 from functools import partial
-from consts import SECTOR_GAMEPLAY_TYPE, TEAM_ID
-from AKConsts import VOICE, MUSIC_SOUND, SECTOR_VOICES, SECTOR_VOICES_TYPE
+from consts import TEAM_ID
+from AKConsts import VOICE, MUSIC_SOUND
 from SoundObjects import MusicSound
 from gui.HUDconsts import PERCENT_BEFORE_DOMINATION_WIN
 from debug_utils import LOG_DEBUG
@@ -37,13 +37,6 @@ class SoundEventDispatcherSettings:
     MINUTES_ARENA_LEFT_TO_WIN = 1
     MINUTES_ARENA_LEFT_TO_LOSE = 1
     SECONDS_ARENA_LEFT_TO_FINISH_BATTLE = 30
-    SectorConditionDict = {SECTOR_GAMEPLAY_TYPE.DEFAULT: [],
-     SECTOR_GAMEPLAY_TYPE.AIRFIELD: [SoundEventSectorCondition(SoundEventSectorCondition.TEAM_ENEMY, 5, VOICE.AIRFIELD_ALARM)],
-     SECTOR_GAMEPLAY_TYPE.FACTORY: [SoundEventSectorCondition(SoundEventSectorCondition.TEAM_ENEMY, 5, VOICE.FACTORY_ALARM)],
-     SECTOR_GAMEPLAY_TYPE.MILITARY_BASE: [SoundEventSectorCondition(SoundEventSectorCondition.TEAM_ENEMY, 5, VOICE.BASE_ALARM)],
-     SECTOR_GAMEPLAY_TYPE.RADAR: [SoundEventSectorCondition(SoundEventSectorCondition.TEAM_ENEMY, 5, VOICE.CENTER_ALARM)],
-     SECTOR_GAMEPLAY_TYPE.NEUTRAL: [],
-     SECTOR_GAMEPLAY_TYPE.SPAWNPOINT: []}
 
 
 class SoundEventDispatcher(EventDispatcher):
@@ -114,23 +107,23 @@ class SoundEventDispatcher(EventDispatcher):
     def onRocketV2HitTarget(self, payload, *args, **kwargs):
         sectorIdent, teamIndex, targetTeamObjectId, targetPositionX, targetPositionY, targetPositionZ, targetTeamIndex = payload
         if teamIndex == self.__friendlyTeamIndex:
-            LOG_DEBUG('SOUNDEVN: event 41 \xd0\xa0\xd0\xb0\xd0\xba\xd0\xb5\xd1\x82\xd0\xb0 \xd0\xa4\xd0\xb0\xd1\x83-2 \xd1\x81\xd0\xbe\xd1\x8e\xd0\xb7\xd0\xbd\xd0\xbe\xd0\xb9 \xd0\xb2\xd0\xbe\xd0\xb5\xd0\xbd\xd0\xbd\xd0\xbe\xd0\xb9 \xd0\xb1\xd0\xb0\xd0\xb7\xd1\x8b \xd0\xbd\xd0\xb0\xd0\xbd\xd0\xb5\xd1\x81\xd0\xbb\xd0\xb0 \xd1\x83\xd1\x80\xd0\xbe\xd0\xbd \xd0\xba\xd0\xbe\xd0\xbc\xd0\xbf\xd0\xbb\xd0\xb5\xd0\xba\xd1\x81\xd1\x83 \xd0\xbf\xd1\x80\xd0\xbe\xd1\x82\xd0\xb8\xd0\xb2\xd0\xbd\xd0\xb8\xd0\xba\xd0\xb0')
+            LOG_DEBUG('SOUNDEVN: event 41 FAU2_LAUNCH_POS')
             self.__playVoice(VOICE.FAU2_LAUNCH_POS)
         elif targetTeamIndex == self.__friendlyTeamIndex:
-            LOG_DEBUG('SOUNDEVN: event 40 \xd0\xa0\xd0\xb0\xd0\xba\xd0\xb5\xd1\x82\xd0\xb0 \xd0\xa4\xd0\xb0\xd1\x83-2 \xd0\xb2\xd0\xbe\xd0\xb5\xd0\xbd\xd0\xbd\xd0\xbe\xd0\xb9 \xd0\xb1\xd0\xb0\xd0\xb7\xd1\x8b \xd0\xbf\xd1\x80\xd0\xbe\xd1\x82\xd0\xb8\xd0\xb2\xd0\xbd\xd0\xb8\xd0\xba\xd0\xb0 \xd0\xbd\xd0\xb0\xd0\xbd\xd0\xb5\xd1\x81\xd0\xbb\xd0\xb0 \xd1\x83\xd1\x80\xd0\xbe\xd0\xbd \xd1\x81\xd0\xbe\xd1\x8e\xd0\xb7\xd0\xbd\xd0\xbe\xd0\xbc\xd1\x83 \xd0\xba\xd0\xbe\xd0\xbc\xd0\xbf\xd0\xbb\xd0\xb5\xd0\xba\xd1\x81\xd1\x83.')
+            LOG_DEBUG('SOUNDEVN: event 40 FAU2_LAUNCH_NEG')
             self.__playVoice(VOICE.FAU2_LAUNCH_NEG)
 
     @eventHandler(AC_EVENTS.BOMBERS_LAUNCHED)
     def onBombersWaveLaunched(self, sectorID, targetID, teamIndex, waveID, bombersIDsStates, startTime, *args, **kwargs):
         if self.__enemyTeamIndex == teamIndex:
-            LOG_DEBUG('SOUNDEVN: event 27 \xd0\x92\xd1\x8b\xd0\xbb\xd0\xb5\xd1\x82\xd0\xb5\xd0\xbb\xd0\xb8 \xd0\xb1\xd0\xbe\xd0\xbc\xd0\xb1\xd0\xb0\xd1\x80\xd0\xb4\xd0\xb8\xd1\x80\xd0\xbe\xd0\xb2\xd1\x89\xd0\xb8\xd0\xba\xd0\xb8 \xd0\xbf\xd1\x80\xd0\xbe\xd1\x82\xd0\xb8\xd0\xb2\xd0\xbd\xd0\xb8\xd0\xba\xd0\xb0(AirStrike)')
+            LOG_DEBUG('SOUNDEVN: event 27 AIRSTRIKE_SPAWNED')
             self.__playVoice(VOICE.AIRSTRIKE_SPAWNED)
 
     @eventHandler(AC_ARENA_UPDATE_EVENTS.AC_BATTLE_EVENT)
     def onBattleEvent(self, payload, *args, **kwargs):
         battleEvent = payload
         if battleEvent == SETTINGS.BATTLE_EVENT_TYPE.RESPAWN_DISABLE:
-            LOG_DEBUG('SOUNDEVN: event 19\t\xd0\xa1\xd0\xbe\xd0\xb1\xd1\x8b\xd1\x82\xd0\xb8\xd0\xb5 \xd0\x93\xd1\x80\xd0\xbe\xd0\xb7\xd0\xbe\xd0\xb2\xd0\xbe\xd0\xb9 \xd1\x84\xd1\x80\xd0\xbe\xd0\xbd\xd1\x82. \xd0\x9e\xd1\x82\xd1\x81\xd1\x87\xd1\x91\xd1\x82 \xd0\xb7\xd0\xb0\xd0\xb2\xd0\xb5\xd1\x80\xd1\x88\xd1\x91\xd0\xbd')
+            LOG_DEBUG('SOUNDEVN: event 19 CDOWN_THUNDERHEAD_END')
             self.__playVoice(VOICE.CDOWN_THUNDERHEAD_END)
             MusicSound.instance().playBattleMusic()
             self.__thunderheadModeStarted = True
@@ -140,7 +133,7 @@ class SoundEventDispatcher(EventDispatcher):
         enemyTeamIndex = 1 - player.teamIndex
         globalScoreAlly = scoreGlobal[player.teamIndex]
         globalScoreEnemy = scoreGlobal[enemyTeamIndex]
-        normalizedPoints = max(float(globalScoreAlly) / self.__pointsToWin, float(globalScoreEnemy) / self.__pointsToWin)
+        normalizedPoints = max(float(globalScoreAlly) / self.__pointsToWin, float(globalScoreEnemy) / self.__pointsToWin) if self.__pointsToWin > 0 else 0
         if not self.__voice_CLOSE_TO_played and normalizedPoints * 100 > PERCENT_BEFORE_DOMINATION_WIN:
             self.__voice_CLOSE_TO_played = True
             if globalScoreAlly > globalScoreEnemy:
@@ -154,7 +147,6 @@ class SoundEventDispatcher(EventDispatcher):
         soundSettings = self.__gameMode.arenaTypeData.sectors.getSector(sectorId).soundSettings
         if teamIndex != oldTeamIndex:
             sectorGameplayType = sector.settings.gameplayType
-            sectorGameplayLevel = sector.settings.gameplayLevel
             if self.__isAllSectorsCaptured(teamIndex):
                 if self.__isTeamate(teamIndex):
                     self.__playVoice(VOICE.ALL_SECTORS_CAPTURED)
@@ -164,7 +156,7 @@ class SoundEventDispatcher(EventDispatcher):
                     MusicSound.instance().playStinger(MUSIC_SOUND.MUSIC_STINGER.NEGATIVE)
                 return
             if self.__isTeamate(teamIndex):
-                if self.__isCapturedLastSectorWithType(sectorGameplayType, sectorGameplayLevel):
+                if self.__isCapturedLastSectorWithType(sectorGameplayType):
                     self.__playVoice(soundSettings.captureLastModel.allyEvent)
                 elif self.__isPlayerHelpCaptureSector(sectorId):
                     self.__playVoice(soundSettings.captureModel.allyEvent)
@@ -174,7 +166,7 @@ class SoundEventDispatcher(EventDispatcher):
 
     def onBattleEventCountdown(self, battleEvent, timeBefore):
         if battleEvent == SETTINGS.BATTLE_EVENT_TYPE.RESPAWN_DISABLE:
-            LOG_DEBUG('SOUNDEVN: event 18\t\xd0\xa1\xd0\xbe\xd0\xb1\xd1\x8b\xd1\x82\xd0\xb8\xd0\xb5 \xd0\x93\xd1\x80\xd0\xbe\xd0\xb7\xd0\xbe\xd0\xb2\xd0\xbe\xd0\xb9 \xd1\x84\xd1\x80\xd0\xbe\xd0\xbd\xd1\x82. \xd0\x97\xd0\xb0\xd0\xbf\xd1\x83\xd1\x81\xd0\xba \xd0\xbe\xd1\x82\xd1\x81\xd1\x87\xd1\x91\xd1\x82\xd0\xb0 (45 \xd1\x81\xd0\xb5\xd0\xba.)')
+            LOG_DEBUG('SOUNDEVN: event 18 CDOWN_THUNDERHEAD_START')
             self.__playVoice(VOICE.CDOWN_THUNDERHEAD_START)
 
     def __prepareForUpdates(self):
@@ -225,14 +217,14 @@ class SoundEventDispatcher(EventDispatcher):
                 m, s = divmod(secondsLeft, 60)
                 win = self.__gameMode.scoreGlobal[self.__friendlyTeamIndex] > self.__gameMode.scoreGlobal[self.__enemyTeamIndex]
                 if win and self.__CheckXMinutesLeftToWin and m <= SoundEventDispatcherSettings.MINUTES_ARENA_LEFT_TO_WIN:
-                    LOG_DEBUG('SOUNDEVN: event 37 \xd0\x94\xd0\xbe \xd0\xba\xd0\xbe\xd0\xbd\xd1\x86\xd0\xb0 \xd0\xb1\xd0\xbe\xd1\x8f \xd0\xbe\xd1\x81\xd1\x82\xd0\xb0\xd0\xbb\xd0\xbe\xd1\x81\xd1\x8c X \xd0\xbc\xd0\xb8\xd0\xbd\xd1\x83\xd1\x82. \xd0\x9a\xd0\xbe\xd0\xbc\xd0\xb0\xd0\xbd\xd0\xb4\xd0\xb0 \xd0\xb8\xd0\xb3\xd1\x80\xd0\xbe\xd0\xba\xd0\xb0 \xd0\xb2\xd1\x8b\xd0\xb8\xd0\xb3\xd1\x80\xd1\x8b\xd0\xb2\xd0\xb0\xd0\xb5\xd1\x82')
+                    LOG_DEBUG('SOUNDEVN: event 37 BATTLE_TIME_NOTIFY_POS')
                     self.__playVoice(VOICE.BATTLE_TIME_NOTIFY_POS)
                     self.__CheckXMinutesLeftToWin = False
                 if not win and self.__CheckXMinutesLeftToLose and m <= SoundEventDispatcherSettings.MINUTES_ARENA_LEFT_TO_LOSE:
                     self.__playVoice(VOICE.BATTLE_TIME_NOTIFY_NEG)
                     self.__CheckXMinutesLeftToLose = False
                 if self.__CheckXSecondsLeftToFinishBattle and secondsLeft <= SoundEventDispatcherSettings.SECONDS_ARENA_LEFT_TO_FINISH_BATTLE:
-                    LOG_DEBUG('SOUNDEVN: event 38 \xd0\x94\xd0\xbe \xd0\xba\xd0\xbe\xd0\xbd\xd1\x86\xd0\xb0 \xd0\xb1\xd0\xbe\xd1\x8f \xd0\xbe\xd1\x81\xd1\x82\xd0\xb0\xd0\xbb\xd0\xbe\xd1\x81\xd1\x8c 30 \xd1\x81\xd0\xb5\xd0\xba\xd1\x83\xd0\xbd\xd0\xb4')
+                    LOG_DEBUG('SOUNDEVN: event 38 BATTLE_30SEC_NOTIFY')
                     self.__playVoice(VOICE.BATTLE_30SEC_NOTIFY)
                     self.__CheckXSecondsLeftToFinishBattle = False
             self.__sectorCountersOld = dict(self.__sectorCounters)
@@ -247,7 +239,7 @@ class SoundEventDispatcher(EventDispatcher):
                     teamIndex = entity.teamIndex
                     isValidPlane = not bool(avatarInfo.get('defendSector')) and not isAirStrikeBomber(entity)
                     if teamIndex == self.__enemyTeamIndex and isValidPlane:
-                        sectorID = self.__gameMode.arenaTypeData.sectors.getSectorIdByPosition(entity.position)
+                        sectorID = self.__gameMode.arenaTypeData.sectors.getSectorIdByPosition(entity.position, entity.sectorRadius)
                         if sectorID:
                             sector = self.__gameMode.sectors[sectorID]
                             if sector.teamIndex != self.__enemyTeamIndex:
@@ -282,11 +274,11 @@ class SoundEventDispatcher(EventDispatcher):
 
         return True
 
-    def __isCapturedLastSectorWithType(self, sector_type, sector_level):
+    def __isCapturedLastSectorWithType(self, sector_type):
         teamIndex = BigWorld.player().teamIndex
         sectors_count = 0
         for sector in self.__gameMode.sectors.values():
-            if sector.settings.gameplayType == sector_type and sector.settings.gameplayLevel == sector_level:
+            if sector.settings.gameplayType == sector_type:
                 if sector.teamIndex != teamIndex:
                     return False
                 sectors_count += 1

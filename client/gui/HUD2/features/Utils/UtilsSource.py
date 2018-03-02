@@ -11,6 +11,8 @@ class UtilsSource(DataSource):
         self._model.cameraIsReady = False
 
     def _onObserver(self):
-        print 'MY_CODE: _onObserver'
         self._model.cameraIsReady = True
         self._model.cameraIsReady = False
+
+    def dispose(self):
+        self._playerAvatar.onObserver -= self._onObserver

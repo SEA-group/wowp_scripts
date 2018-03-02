@@ -16,17 +16,27 @@ def filterByAttrsAndValues(objects, attrs):
                 if value == getattr(obj, prop):
                     continue
             except AttributeError:
-                pass
+                if value is None:
+                    continue
 
             valid = False
+            break
 
         if valid:
             yield obj
 
+    return
+
 
 def findInindex(indexes, attrs):
     """Find objects by searching in indexes dict"""
-    return set((obj for prop, value in attrs.iteritems() for obj in indexes.get(prop, {}).get(value, ())))
+    result = []
+    for prop, value in attrs.iteritems():
+        for obj in indexes.get(prop, {}).get(value, ()):
+            if obj not in result:
+                result.append(obj)
+
+    return result
 
 
 def findHasAttrs(indexes, items, attrs):

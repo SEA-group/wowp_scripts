@@ -72,9 +72,97 @@ class WEAPON_AIM_TYPE():
 
 
 DB = Dummy()
+DB.include = Dummy()
+DB.include.activity = []
+DB.include.condition = []
+DB.include.condition.insert(0, None)
+DB.include.condition[0] = Dummy()
+DB.include.condition[0].and_ = []
+DB.include.condition[0].contains = []
+DB.include.condition[0].equal = []
+DB.include.condition[0].gt = []
+DB.include.condition[0].gte = []
+DB.include.condition[0].id = []
+DB.include.condition[0].in_ = []
+DB.include.condition[0].lt = []
+DB.include.condition[0].lte = []
+DB.include.condition[0].not_ = []
+DB.include.condition[0].not_.insert(0, None)
+DB.include.condition[0].not_[0] = Dummy()
+DB.include.condition[0].not_[0].and_ = []
+DB.include.condition[0].not_[0].contains = []
+DB.include.condition[0].not_[0].equal = []
+DB.include.condition[0].not_[0].equal.insert(0, None)
+DB.include.condition[0].not_[0].equal[0] = Dummy()
+DB.include.condition[0].not_[0].equal[0].context = []
+DB.include.condition[0].not_[0].equal[0].context.insert(0, None)
+DB.include.condition[0].not_[0].equal[0].context[0] = 'arena.mode'
+DB.include.condition[0].not_[0].equal[0].value_ = []
+DB.include.condition[0].not_[0].equal[0].value_.insert(0, None)
+DB.include.condition[0].not_[0].equal[0].value_[0] = 'invasion'
+DB.include.condition[0].not_[0].gt = []
+DB.include.condition[0].not_[0].gte = []
+DB.include.condition[0].not_[0].id = []
+DB.include.condition[0].not_[0].in_ = []
+DB.include.condition[0].not_[0].lt = []
+DB.include.condition[0].not_[0].lte = []
+DB.include.condition[0].not_[0].not_ = []
+DB.include.condition[0].not_[0].or_ = []
+DB.include.condition[0].or_ = []
+DB.include.count = []
+DB.include.event = []
+DB.include.modify = []
+DB.include.nested = Dummy()
+DB.include.nested.subscriber = []
+DB.include.nested.subscriber.insert(0, None)
+DB.include.nested.subscriber[0] = Dummy()
+DB.include.nested.subscriber[0].activity = []
+DB.include.nested.subscriber[0].condition = []
+DB.include.nested.subscriber[0].condition.insert(0, None)
+DB.include.nested.subscriber[0].condition[0] = Dummy()
+DB.include.nested.subscriber[0].condition[0].and_ = []
+DB.include.nested.subscriber[0].condition[0].contains = []
+DB.include.nested.subscriber[0].condition[0].equal = []
+DB.include.nested.subscriber[0].condition[0].gt = []
+DB.include.nested.subscriber[0].condition[0].gte = []
+DB.include.nested.subscriber[0].condition[0].id = []
+DB.include.nested.subscriber[0].condition[0].in_ = []
+DB.include.nested.subscriber[0].condition[0].lt = []
+DB.include.nested.subscriber[0].condition[0].lte = []
+DB.include.nested.subscriber[0].condition[0].not_ = []
+DB.include.nested.subscriber[0].condition[0].not_.insert(0, None)
+DB.include.nested.subscriber[0].condition[0].not_[0] = Dummy()
+DB.include.nested.subscriber[0].condition[0].not_[0].and_ = []
+DB.include.nested.subscriber[0].condition[0].not_[0].contains = []
+DB.include.nested.subscriber[0].condition[0].not_[0].equal = []
+DB.include.nested.subscriber[0].condition[0].not_[0].equal.insert(0, None)
+DB.include.nested.subscriber[0].condition[0].not_[0].equal[0] = Dummy()
+DB.include.nested.subscriber[0].condition[0].not_[0].equal[0].context = []
+DB.include.nested.subscriber[0].condition[0].not_[0].equal[0].context.insert(0, None)
+DB.include.nested.subscriber[0].condition[0].not_[0].equal[0].context[0] = 'arena.mode'
+DB.include.nested.subscriber[0].condition[0].not_[0].equal[0].value_ = []
+DB.include.nested.subscriber[0].condition[0].not_[0].equal[0].value_.insert(0, None)
+DB.include.nested.subscriber[0].condition[0].not_[0].equal[0].value_[0] = 'invasion'
+DB.include.nested.subscriber[0].condition[0].not_[0].gt = []
+DB.include.nested.subscriber[0].condition[0].not_[0].gte = []
+DB.include.nested.subscriber[0].condition[0].not_[0].id = []
+DB.include.nested.subscriber[0].condition[0].not_[0].in_ = []
+DB.include.nested.subscriber[0].condition[0].not_[0].lt = []
+DB.include.nested.subscriber[0].condition[0].not_[0].lte = []
+DB.include.nested.subscriber[0].condition[0].not_[0].not_ = []
+DB.include.nested.subscriber[0].condition[0].not_[0].or_ = []
+DB.include.nested.subscriber[0].condition[0].or_ = []
+DB.include.nested.subscriber[0].count = []
+DB.include.nested.subscriber[0].event = []
+DB.include.nested.subscriber[0].modify = []
+DB.include.nested.subscriber[0].operation = []
+DB.include.nested.subscriber[0].send = []
+DB.include.operation = []
+DB.include.send = []
 DB.subscriber = []
 DB.subscriber.insert(0, None)
 DB.subscriber[0] = Dummy()
+DB.subscriber[0].activity = []
 DB.subscriber[0].client = Dummy()
 DB.subscriber[0].client.countDescription = Dummy()
 DB.subscriber[0].client.countDescription.locale = 'BATTLE_RESULT_PLANES_DESTROYED_1'
@@ -97,6 +185,7 @@ DB.subscriber[0].nested.count = 5
 DB.subscriber[0].nested.subscriber = []
 DB.subscriber[0].nested.subscriber.insert(0, None)
 DB.subscriber[0].nested.subscriber[0] = Dummy()
+DB.subscriber[0].nested.subscriber[0].activity = []
 DB.subscriber[0].nested.subscriber[0].condition = []
 DB.subscriber[0].nested.subscriber[0].condition.insert(0, None)
 DB.subscriber[0].nested.subscriber[0].condition[0] = Dummy()
@@ -155,6 +244,7 @@ DB.subscriber[0].nested.subscriber[0].server.scope.insert(0, None)
 DB.subscriber[0].nested.subscriber[0].server.scope[0] = 'plane.type'
 DB.subscriber[0].nested.subscriber.insert(1, None)
 DB.subscriber[0].nested.subscriber[1] = Dummy()
+DB.subscriber[0].nested.subscriber[1].activity = []
 DB.subscriber[0].nested.subscriber[1].condition = []
 DB.subscriber[0].nested.subscriber[1].condition.insert(0, None)
 DB.subscriber[0].nested.subscriber[1].condition[0] = Dummy()
@@ -213,6 +303,7 @@ DB.subscriber[0].nested.subscriber[1].server.scope.insert(0, None)
 DB.subscriber[0].nested.subscriber[1].server.scope[0] = 'plane.type'
 DB.subscriber[0].nested.subscriber.insert(2, None)
 DB.subscriber[0].nested.subscriber[2] = Dummy()
+DB.subscriber[0].nested.subscriber[2].activity = []
 DB.subscriber[0].nested.subscriber[2].condition = []
 DB.subscriber[0].nested.subscriber[2].condition.insert(0, None)
 DB.subscriber[0].nested.subscriber[2].condition[0] = Dummy()
@@ -271,6 +362,7 @@ DB.subscriber[0].nested.subscriber[2].server.scope.insert(0, None)
 DB.subscriber[0].nested.subscriber[2].server.scope[0] = 'plane.type'
 DB.subscriber[0].nested.subscriber.insert(3, None)
 DB.subscriber[0].nested.subscriber[3] = Dummy()
+DB.subscriber[0].nested.subscriber[3].activity = []
 DB.subscriber[0].nested.subscriber[3].condition = []
 DB.subscriber[0].nested.subscriber[3].condition.insert(0, None)
 DB.subscriber[0].nested.subscriber[3].condition[0] = Dummy()
@@ -329,6 +421,7 @@ DB.subscriber[0].nested.subscriber[3].server.scope.insert(0, None)
 DB.subscriber[0].nested.subscriber[3].server.scope[0] = 'plane.type'
 DB.subscriber[0].nested.subscriber.insert(4, None)
 DB.subscriber[0].nested.subscriber[4] = Dummy()
+DB.subscriber[0].nested.subscriber[4].activity = []
 DB.subscriber[0].nested.subscriber[4].condition = []
 DB.subscriber[0].nested.subscriber[4].condition.insert(0, None)
 DB.subscriber[0].nested.subscriber[4].condition[0] = Dummy()
@@ -387,6 +480,7 @@ DB.subscriber[0].nested.subscriber[4].server.scope.insert(0, None)
 DB.subscriber[0].nested.subscriber[4].server.scope[0] = 'plane.type'
 DB.subscriber[0].nested.subscriber.insert(5, None)
 DB.subscriber[0].nested.subscriber[5] = Dummy()
+DB.subscriber[0].nested.subscriber[5].activity = []
 DB.subscriber[0].nested.subscriber[5].condition = []
 DB.subscriber[0].nested.subscriber[5].condition.insert(0, None)
 DB.subscriber[0].nested.subscriber[5].condition[0] = Dummy()
@@ -452,6 +546,7 @@ DB.subscriber[0].server.scope[0] = 'plane.type'
 DB.subscriber[0].type = 'objective'
 DB.subscriber.insert(1, None)
 DB.subscriber[1] = Dummy()
+DB.subscriber[1].activity = []
 DB.subscriber[1].client = Dummy()
 DB.subscriber[1].client.countDescription = Dummy()
 DB.subscriber[1].client.countDescription.locale = 'BATTLE_RESULT_PLANES_DESTROYED_IN_DEFENCE'
@@ -474,6 +569,7 @@ DB.subscriber[1].nested.count = 5
 DB.subscriber[1].nested.subscriber = []
 DB.subscriber[1].nested.subscriber.insert(0, None)
 DB.subscriber[1].nested.subscriber[0] = Dummy()
+DB.subscriber[1].nested.subscriber[0].activity = []
 DB.subscriber[1].nested.subscriber[0].condition = []
 DB.subscriber[1].nested.subscriber[0].condition.insert(0, None)
 DB.subscriber[1].nested.subscriber[0].condition[0] = Dummy()
@@ -574,6 +670,7 @@ DB.subscriber[1].nested.subscriber[0].server.scope.insert(0, None)
 DB.subscriber[1].nested.subscriber[0].server.scope[0] = 'plane.type'
 DB.subscriber[1].nested.subscriber.insert(1, None)
 DB.subscriber[1].nested.subscriber[1] = Dummy()
+DB.subscriber[1].nested.subscriber[1].activity = []
 DB.subscriber[1].nested.subscriber[1].condition = []
 DB.subscriber[1].nested.subscriber[1].condition.insert(0, None)
 DB.subscriber[1].nested.subscriber[1].condition[0] = Dummy()
@@ -674,6 +771,7 @@ DB.subscriber[1].nested.subscriber[1].server.scope.insert(0, None)
 DB.subscriber[1].nested.subscriber[1].server.scope[0] = 'plane.type'
 DB.subscriber[1].nested.subscriber.insert(2, None)
 DB.subscriber[1].nested.subscriber[2] = Dummy()
+DB.subscriber[1].nested.subscriber[2].activity = []
 DB.subscriber[1].nested.subscriber[2].condition = []
 DB.subscriber[1].nested.subscriber[2].condition.insert(0, None)
 DB.subscriber[1].nested.subscriber[2].condition[0] = Dummy()
@@ -774,6 +872,7 @@ DB.subscriber[1].nested.subscriber[2].server.scope.insert(0, None)
 DB.subscriber[1].nested.subscriber[2].server.scope[0] = 'plane.type'
 DB.subscriber[1].nested.subscriber.insert(3, None)
 DB.subscriber[1].nested.subscriber[3] = Dummy()
+DB.subscriber[1].nested.subscriber[3].activity = []
 DB.subscriber[1].nested.subscriber[3].condition = []
 DB.subscriber[1].nested.subscriber[3].condition.insert(0, None)
 DB.subscriber[1].nested.subscriber[3].condition[0] = Dummy()
@@ -874,6 +973,7 @@ DB.subscriber[1].nested.subscriber[3].server.scope.insert(0, None)
 DB.subscriber[1].nested.subscriber[3].server.scope[0] = 'plane.type'
 DB.subscriber[1].nested.subscriber.insert(4, None)
 DB.subscriber[1].nested.subscriber[4] = Dummy()
+DB.subscriber[1].nested.subscriber[4].activity = []
 DB.subscriber[1].nested.subscriber[4].condition = []
 DB.subscriber[1].nested.subscriber[4].condition.insert(0, None)
 DB.subscriber[1].nested.subscriber[4].condition[0] = Dummy()
@@ -974,6 +1074,7 @@ DB.subscriber[1].nested.subscriber[4].server.scope.insert(0, None)
 DB.subscriber[1].nested.subscriber[4].server.scope[0] = 'plane.type'
 DB.subscriber[1].nested.subscriber.insert(5, None)
 DB.subscriber[1].nested.subscriber[5] = Dummy()
+DB.subscriber[1].nested.subscriber[5].activity = []
 DB.subscriber[1].nested.subscriber[5].condition = []
 DB.subscriber[1].nested.subscriber[5].condition.insert(0, None)
 DB.subscriber[1].nested.subscriber[5].condition[0] = Dummy()
@@ -1081,6 +1182,7 @@ DB.subscriber[1].server.scope[0] = 'plane.type'
 DB.subscriber[1].type = 'objective'
 DB.subscriber.insert(2, None)
 DB.subscriber[2] = Dummy()
+DB.subscriber[2].activity = []
 DB.subscriber[2].client = Dummy()
 DB.subscriber[2].client.countDescription = Dummy()
 DB.subscriber[2].client.countDescription.locale = 'BATTLE_RESULT_CAP_POINT_RECEIVED'
@@ -1103,6 +1205,7 @@ DB.subscriber[2].nested.count = 5
 DB.subscriber[2].nested.subscriber = []
 DB.subscriber[2].nested.subscriber.insert(0, None)
 DB.subscriber[2].nested.subscriber[0] = Dummy()
+DB.subscriber[2].nested.subscriber[0].activity = []
 DB.subscriber[2].nested.subscriber[0].condition = []
 DB.subscriber[2].nested.subscriber[0].condition.insert(0, None)
 DB.subscriber[2].nested.subscriber[0].condition[0] = Dummy()
@@ -1206,6 +1309,7 @@ DB.subscriber[2].nested.subscriber[0].server.scope.insert(0, None)
 DB.subscriber[2].nested.subscriber[0].server.scope[0] = 'plane.type'
 DB.subscriber[2].nested.subscriber.insert(1, None)
 DB.subscriber[2].nested.subscriber[1] = Dummy()
+DB.subscriber[2].nested.subscriber[1].activity = []
 DB.subscriber[2].nested.subscriber[1].condition = []
 DB.subscriber[2].nested.subscriber[1].condition.insert(0, None)
 DB.subscriber[2].nested.subscriber[1].condition[0] = Dummy()
@@ -1309,6 +1413,7 @@ DB.subscriber[2].nested.subscriber[1].server.scope.insert(0, None)
 DB.subscriber[2].nested.subscriber[1].server.scope[0] = 'plane.type'
 DB.subscriber[2].nested.subscriber.insert(2, None)
 DB.subscriber[2].nested.subscriber[2] = Dummy()
+DB.subscriber[2].nested.subscriber[2].activity = []
 DB.subscriber[2].nested.subscriber[2].condition = []
 DB.subscriber[2].nested.subscriber[2].condition.insert(0, None)
 DB.subscriber[2].nested.subscriber[2].condition[0] = Dummy()
@@ -1412,6 +1517,7 @@ DB.subscriber[2].nested.subscriber[2].server.scope.insert(0, None)
 DB.subscriber[2].nested.subscriber[2].server.scope[0] = 'plane.type'
 DB.subscriber[2].nested.subscriber.insert(3, None)
 DB.subscriber[2].nested.subscriber[3] = Dummy()
+DB.subscriber[2].nested.subscriber[3].activity = []
 DB.subscriber[2].nested.subscriber[3].condition = []
 DB.subscriber[2].nested.subscriber[3].condition.insert(0, None)
 DB.subscriber[2].nested.subscriber[3].condition[0] = Dummy()
@@ -1515,6 +1621,7 @@ DB.subscriber[2].nested.subscriber[3].server.scope.insert(0, None)
 DB.subscriber[2].nested.subscriber[3].server.scope[0] = 'plane.type'
 DB.subscriber[2].nested.subscriber.insert(4, None)
 DB.subscriber[2].nested.subscriber[4] = Dummy()
+DB.subscriber[2].nested.subscriber[4].activity = []
 DB.subscriber[2].nested.subscriber[4].condition = []
 DB.subscriber[2].nested.subscriber[4].condition.insert(0, None)
 DB.subscriber[2].nested.subscriber[4].condition[0] = Dummy()
@@ -1618,6 +1725,7 @@ DB.subscriber[2].nested.subscriber[4].server.scope.insert(0, None)
 DB.subscriber[2].nested.subscriber[4].server.scope[0] = 'plane.type'
 DB.subscriber[2].nested.subscriber.insert(5, None)
 DB.subscriber[2].nested.subscriber[5] = Dummy()
+DB.subscriber[2].nested.subscriber[5].activity = []
 DB.subscriber[2].nested.subscriber[5].condition = []
 DB.subscriber[2].nested.subscriber[5].condition.insert(0, None)
 DB.subscriber[2].nested.subscriber[5].condition[0] = Dummy()

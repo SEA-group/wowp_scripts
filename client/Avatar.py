@@ -1,4 +1,4 @@
-# Embedded file name: res/scripts\client\Avatar.py
+# Embedded file name: scripts/client/Avatar.py
 import BigWorld
 import Math
 from BWLogging import getLogger
@@ -7,6 +7,7 @@ import CompoundSystem
 from ArenaHelpers.GameModes.AreaConquest import AC_EVENTS
 from MathExt import clamp
 from _airplanesConfigurations_db import airplanesConfigurations, getAirplaneConfiguration
+import _preparedBattleData_db
 import db.DBLogic
 from consts import *
 from gui.HUDconsts import *
@@ -31,7 +32,7 @@ from clientConsts import BULLET_PARAM, EFFECT_COLLISION_RANGE, TURRET_TRACKER_AX
 import clientConsts
 from SyncedRandom import SyncedRandom
 import random
-from ArenaHelpers.GameModes.AreaConquest.AvatarComponents import TacticalRespawnAvatarMixin
+from ArenaHelpers.GameModes.AreaConquest.AvatarComponents import TacticalRespawnAvatarMixin, pauseInTacticalRespawn
 from Achievements.AvatarAchievementsInterfaceClient import AvatarAchievementsInterfaceClient
 from QuestsCommon.AvatarQuestsInterfaceClient import AvatarQuestsInterfaceClient
 from audio import GameSound
@@ -161,7 +162,16 @@ class Avatar(BigWorld.Entity, ControllerManager, CollidableObject, AvatarMoveHis
         self.planeID = config.planeID
         self.logicalParts = config.logicalParts
         self.weaponSlots = config.weaponSlots
+        self._updateHeightLevels()
         self.loadPlaneSettings()
+        self.aircraftClass = self._settings.airplane.planeType
+        self.planeConfigurationChanged()
+
+    def _updateHeightLevels(self):
+        pbd = _preparedBattleData_db.preparedBattleData[self.globalID]
+        self.heightOptimal = pbd.altimeter[4] * pbd.altimeter[-1]
+        self.heightCritical = pbd.altimeter[5] * pbd.altimeter[-1]
+        self.heightMax = pbd.altimeter[-1]
 
     def set_globalID(self, oldValue):
         if self.globalID != oldValue:
@@ -193,6 +203,7 @@ class Avatar(BigWorld.Entity, ControllerManager, CollidableObject, AvatarMoveHis
         self.eTurretSetTarget = Event(self._eventManager)
         self.eTurretSetFireFlag = Event(self._eventManager)
         self.shellLaunched = Event(self._eventManager)
+        self.planeConfigurationChanged = Event(self._eventManager)
         return True
 
     def debugViewer_addNewKey(self, dvKey, str_data):
@@ -233,9 +244,7 @@ class Avatar(BigWorld.Entity, ControllerManager, CollidableObject, AvatarMoveHis
         self.setGameTeamIndex(self.teamIndex)
         self._createEvents()
         self._lastIsFire = False
-        self.planeID = airplanesConfigurations[self.globalID].planeID
-        self.logicalParts = airplanesConfigurations[self.globalID].logicalParts
-        self.weaponSlots = airplanesConfigurations[self.globalID].weaponSlots
+        self.updatePlaneConfiguration()
         self.__updateEffectsCallback = None
         self.__engineDeltaPosList = None
         self.groundParticleName = {}
@@ -244,8 +253,6 @@ class Avatar(BigWorld.Entity, ControllerManager, CollidableObject, AvatarMoveHis
         self.__prereqsHolder = prereqs
         self.extUpgrades = {LOGICAL_PART.PILOT: self.pilotBodyType}
         LOG_TRACE('Avatar: onEnterWorld', self.id, self.extUpgrades)
-        if self.settings is None:
-            self.loadPlaneSettings()
         self.updateLocalizedName()
         self.prepareMatrices()
         self.__createControllers()
@@ -454,6 +461,7 @@ class Avatar(BigWorld.Entity, ControllerManager, CollidableObject, AvatarMoveHis
     def set_bullets(self, oldData):
         pass
 
+    @pauseInTacticalRespawn
     def set_consumables(self, oldData):
         self.controllers['modelManipulator'].updateConsumablesEffects(self.consumables)
         self.eUpdateConsumables(self.consumables)

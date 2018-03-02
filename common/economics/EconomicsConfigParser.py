@@ -1,5 +1,9 @@
 # Embedded file name: scripts/common/economics/EconomicsConfigParser.py
 import ResMgr
+from consts import GAME_MODE
+import consts
+from itertools import ifilter
+from debug_utils import LOG_WARNING
 ID_FIELD = 'id'
 INDEX_FIELD = 'index'
 TYPE_FIELD = 'type'
@@ -24,6 +28,10 @@ ACTION_FIELD = 'action'
 class PROCESSOR_SUBTYPES:
     TEAM_ACTIONS = 'TeamActions'
 
+
+GAMEMODE_TO_FILENAME_SUFFIX = {GAME_MODE.AREA_CONQUEST: '',
+ GAME_MODE.OFFENSE_DEFENCE: '_od',
+ GAME_MODE.ATTRITION_WARFARE: '_aw'}
 
 def _addProcessor(config, dataSection, index):
     id = dataSection.readString(ID_FIELD)
@@ -108,11 +116,18 @@ def getChild(ds, name):
         return None
 
 
-def getConfig():
+def getConfig(gameModeEnum):
     _config = []
-    data = ResMgr.openSection('scripts/db/config_econom.xml')
+    xmlFile = consts.DB_PATH + 'config_econom' + GAMEMODE_TO_FILENAME_SUFFIX[gameModeEnum] + '.xml'
+    data = ResMgr.openSection(xmlFile)
+    indexesData = ResMgr.openSection(consts.ECONOM_INDEXES_PATH)
     eventProcessors = data.values()[0]
-    for index, processor in enumerate(eventProcessors.values()):
+    for processor in eventProcessors.values():
+        eventID = processor.readString(ID_FIELD)
+        indexSection = next(ifilter(lambda x: x.readString(ID_FIELD).lower() == eventID.lower(), indexesData.values()), None)
+        index = indexSection.readInt(INDEX_FIELD) if indexSection is not None else -1
+        if index == -1:
+            LOG_WARNING('Battle Economics: cannot to find index for the econom event, game_mode = {0}, event_id = {1}'.format(gameModeEnum, eventID))
         _addProcessor(_config, processor, index)
 
     return _config

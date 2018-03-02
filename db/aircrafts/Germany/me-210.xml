@@ -105,11 +105,6 @@
   <Airplane>
     <name>Me-210</name>
     <shakingProfile>HeavyPlanes</shakingProfile>
-    <bBoxes>
-      <mainBox>
-        <size>20 8 20</size>
-      </mainBox>
-    </bBoxes>
     <hudIcoPath>icons/planes/ger/me210.dds</hudIcoPath>
     <iconPath>icons/hangarCarousel/planes/ger/me210.dds</iconPath>
     <treeIconPath>icons/planesTree/ger/me210.dds</treeIconPath>
@@ -126,16 +121,20 @@
           <id>	1	</id>
           <bBoxes>
             <bbox>
-              <position>	0.000000 0.180000 -2.025000	</position>
-              <size>	0.990000 1.530000 9.270000	</size>
-              <armorFront>	10.000000 10.000000 20.000000	</armorFront>
-              <armorBack>	10.000000 10.000000 10.000000	</armorBack>
+              <position>	0.000000 0.093212 -0.287372	</position>
+              <size>	0.990000 1.350000 4.500000	</size>
               <absorption>	0.800000	</absorption>
-              <rotation>	0.020000 0.000000 0.000000 1.000000	</rotation>
+              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+            <bbox>
+              <position>	-0.042323 0.238882 -4.807222	</position>
+              <size>	0.540000 1.080000 4.500000	</size>
+              <absorption>	0.800000	</absorption>
+              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
             </bbox>
           </bBoxes>
           <health>100%</health>
-          <componentType>Pilot</componentType>
+          <componentType>	Hull	</componentType>
           <componentXml>server.todo.xml</componentXml>
           <states>
             <state>
@@ -250,10 +249,8 @@
           <id>	1	</id>
           <bBoxes>
             <bbox>
-              <position>	-2.475000 -0.360000 0.990000	</position>
-              <size>	0.990000 1.170000 3.420000	</size>
-              <armorFront>	50.000000 50.000000 80.000000	</armorFront>
-              <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+              <position>	-2.475000 -0.375470 1.214603	</position>
+              <size>	0.900000 0.990000 3.150000	</size>
               <absorption>	1.000000	</absorption>
               <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
             </bbox>
@@ -542,10 +539,8 @@
           <id>	1	</id>
           <bBoxes>
             <bbox>
-              <position>	2.475000 -0.360000 0.990000	</position>
-              <size>	0.990000 1.170000 3.420000	</size>
-              <armorFront>	50.000000 50.000000 80.000000	</armorFront>
-              <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+              <position>	2.475000 -0.360000 1.215000	</position>
+              <size>	0.900000 0.990000 3.150000	</size>
               <absorption>	1.000000	</absorption>
               <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
             </bbox>
@@ -834,24 +829,14 @@
           <id>	1	</id>
           <bBoxes>
             <bbox>
-              <position>	0.000000 1.035000 0.945000	</position>
-              <size>	0.810000 0.540000 1.890000	</size>
-              <armorFront>	10.000000 20.000000 100.000000	</armorFront>
-              <armorBack>	10.000000 10.000000 10.000000	</armorBack>
-              <absorption>	0.800000	</absorption>
-              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
-            </bbox>
-            <bbox>
               <position>	0.000000 0.770000 1.000000	</position>
-              <size>	0.700000 1.000000 0.700000	</size>
-              <armorFront>	1.000000 1.000000 1.000000	</armorFront>
-              <armorBack>	1.000000 50.000000 80.000000	</armorBack>
-              <absorption>	0.800000	</absorption>
+              <size>	0.900000 0.900000 0.900000	</size>
+              <absorption>	1.000000	</absorption>
               <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
             </bbox>
           </bBoxes>
           <health>10%</health>
-          <componentType>	Hull	</componentType>
+          <componentType>Pilot</componentType>
           <componentXml>server.todo.xml</componentXml>
           <states>
             <state>
@@ -933,34 +918,24 @@
               </stateAnimation>
             </state>
           </states>
-          <fireMountPoint>
-          </fireMountPoint>
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <fireMountPoint>
+          </fireMountPoint>
         </upgrade>
         <upgrade>
           <id>	2	</id>
           <bBoxes>
             <bbox>
-              <position>	0.000000 1.035000 0.945000	</position>
-              <size>	0.810000 0.540000 1.890000	</size>
-              <armorFront>	10.000000 20.000000 100.000000	</armorFront>
-              <armorBack>	10.000000 10.000000 10.000000	</armorBack>
-              <absorption>	0.800000	</absorption>
-              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
-            </bbox>
-            <bbox>
               <position>	0.000000 0.770000 1.000000	</position>
-              <size>	0.700000 1.000000 0.700000	</size>
-              <armorFront>	1.000000 1.000000 1.000000	</armorFront>
-              <armorBack>	1.000000 50.000000 80.000000	</armorBack>
-              <absorption>	0.800000	</absorption>
+              <size>	0.900000 0.900000 0.900000	</size>
+              <absorption>	1.000000	</absorption>
               <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
             </bbox>
           </bBoxes>
           <health>10%</health>
-          <componentType>	Hull	</componentType>
+          <componentType>Pilot</componentType>
           <componentXml>server.todo.xml</componentXml>
           <states>
             <state>
@@ -1038,36 +1013,28 @@
               <stateFireChance>	0.200000	</stateFireChance>
               <stateAnimation>
               </stateAnimation>
+              <model>
+              </model>
             </state>
           </states>
-          <fireMountPoint>
-          </fireMountPoint>
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <fireMountPoint>
+          </fireMountPoint>
         </upgrade>
         <upgrade>
           <id>	3	</id>
           <bBoxes>
             <bbox>
-              <position>	0.000000 1.035000 0.945000	</position>
-              <size>	0.810000 0.540000 1.890000	</size>
-              <armorFront>	10.000000 20.000000 100.000000	</armorFront>
-              <armorBack>	10.000000 10.000000 10.000000	</armorBack>
-              <absorption>	0.800000	</absorption>
-              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
-            </bbox>
-            <bbox>
               <position>	0.000000 0.770000 1.000000	</position>
-              <size>	0.700000 1.000000 0.700000	</size>
-              <armorFront>	1.000000 1.000000 1.000000	</armorFront>
-              <armorBack>	1.000000 50.000000 80.000000	</armorBack>
-              <absorption>	0.800000	</absorption>
+              <size>	0.900000 0.900000 0.900000	</size>
+              <absorption>	1.000000	</absorption>
               <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
             </bbox>
           </bBoxes>
           <health>10%</health>
-          <componentType>	Hull	</componentType>
+          <componentType>Pilot</componentType>
           <componentXml>server.todo.xml</componentXml>
           <states>
             <state>
@@ -1149,11 +1116,11 @@
               </stateAnimation>
             </state>
           </states>
-          <fireMountPoint>
-          </fireMountPoint>
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <fireMountPoint>
+          </fireMountPoint>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -1165,10 +1132,14 @@
           <id>	1	</id>
           <bBoxes>
             <bbox>
-              <position>	0.000000 1.035000 -0.540000	</position>
-              <size>	1.000000 1.000000 1.000000	</size>
-              <armorFront>	0.000000 0.000000 0.000000	</armorFront>
-              <armorBack>	0.000000 0.000000 0.000000	</armorBack>
+              <position>	0.000000 0.763171 -0.193564	</position>
+              <size>	0.900000 0.900000 0.900000	</size>
+              <absorption>	0.800000	</absorption>
+              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+            </bbox>
+            <bbox>
+              <position>	0.000000 0.070687 -2.682447	</position>
+              <size>	1.080000 0.540000 0.900000	</size>
               <absorption>	0.800000	</absorption>
               <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
             </bbox>
@@ -1187,8 +1158,6 @@
                   <model>vehicles/airplanes/common/German_pilot/German_pilot02_Head02.model</model>
                   <mountPoint>HP_head</mountPoint>
                   <animatorName>	GunnerHeadController	</animatorName>
-                  <name>
-                  </name>
                 </item>
               </subItems>
               <animationController>
@@ -1213,8 +1182,6 @@
                   <model>vehicles/airplanes/common/German_pilot/German_pilot02_Head02.model</model>
                   <mountPoint>HP_head</mountPoint>
                   <animatorName>	GunnerHeadController	</animatorName>
-                  <name>
-                  </name>
                 </item>
               </subItems>
               <animationController>
@@ -1239,8 +1206,6 @@
                   <model>vehicles/airplanes/common/German_pilot/German_pilot02_Head02.model</model>
                   <mountPoint>HP_head</mountPoint>
                   <animatorName>	GunnerHeadController	</animatorName>
-                  <name>
-                  </name>
                 </item>
               </subItems>
               <animationController>
@@ -1351,6 +1316,7 @@
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <health>20.0</health>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -1362,12 +1328,16 @@
           <id>	1	</id>
           <bBoxes>
             <bbox>
-              <position>	-4.275000 -0.090000 -0.630000	</position>
-              <size>	7.290000 0.270000 2.520000	</size>
-              <armorFront>	10.000000 10.000000 20.000000	</armorFront>
-              <armorBack>	10.000000 10.000000 10.000000	</armorBack>
+              <position>	-5.941255 -0.015194 -0.709778	</position>
+              <size>	4.050000 0.180000 1.620000	</size>
               <absorption>	0.200000	</absorption>
-              <rotation>	0.000000 -0.030000 -0.040000 1.000000	</rotation>
+              <rotation>	0.000000 0.000000 0.039968 -0.999201	</rotation>
+            </bbox>
+            <bbox>
+              <position>	-2.247065 -0.219272 -0.605471	</position>
+              <size>	3.271796 0.285257 2.840319	</size>
+              <absorption>	0.200000	</absorption>
+              <rotation>	0.000000 0.000000 0.039968 -0.999201	</rotation>
             </bbox>
           </bBoxes>
           <health>32%</health>
@@ -1588,8 +1558,6 @@
               </subItems>
               <effectState>
                 <effect>
-                  <name>
-                  </name>
                   <mountPoint>plane/HP_wLhit</mountPoint>
                 </effect>
               </effectState>
@@ -1619,12 +1587,16 @@
           <id>	1	</id>
           <bBoxes>
             <bbox>
-              <position>	4.275000 -0.090000 -0.630000	</position>
-              <size>	7.290000 0.270000 2.520000	</size>
-              <armorFront>	10.000000 10.000000 20.000000	</armorFront>
-              <armorBack>	10.000000 10.000000 10.000000	</armorBack>
+              <position>	2.247065 -0.219272 -0.605471	</position>
+              <size>	3.271796 0.285257 2.840319	</size>
               <absorption>	0.200000	</absorption>
-              <rotation>	0.000000 0.030000 0.040000 1.000000	</rotation>
+              <rotation>	0.000000 0.000000 0.039968 0.999201	</rotation>
+            </bbox>
+            <bbox>
+              <position>	5.953658 -0.026453 -0.720000	</position>
+              <size>	4.050000 0.180000 1.620000	</size>
+              <absorption>	0.200000	</absorption>
+              <rotation>	0.000000 0.000000 0.039968 0.999201	</rotation>
             </bbox>
           </bBoxes>
           <health>32%</health>
@@ -1850,8 +1822,6 @@
                     </name>
                     <mountPoint>plane/HP_wRhit</mountPoint>
                   </effect>
-                  <name>
-                  </name>
                   <mountPoint>
                   </mountPoint>
                   <trigger>
@@ -1860,8 +1830,6 @@
               </effectsTriggered>
               <effectState>
                 <effect>
-                  <name>
-                  </name>
                   <mountPoint>plane/HP_wRhit</mountPoint>
                 </effect>
               </effectState>
@@ -1891,18 +1859,14 @@
           <id>	1	</id>
           <bBoxes>
             <bbox>
-              <position>	0.000000 1.350000 -7.785000	</position>
-              <size>	0.180000 2.880000 1.980000	</size>
-              <armorFront>	10.000000 10.000000 20.000000	</armorFront>
-              <armorBack>	10.000000 10.000000 10.000000	</armorBack>
+              <position>	0.000000 1.350000 -7.833740	</position>
+              <size>	0.180000 2.790000 1.620000	</size>
               <absorption>	0.200000	</absorption>
               <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
             </bbox>
             <bbox>
-              <position>	0.000000 0.585000 -8.145000	</position>
-              <size>	5.580000 0.180000 1.260000	</size>
-              <armorFront>	10.000000 10.000000 20.000000	</armorFront>
-              <armorBack>	10.000000 10.000000 10.000000	</armorBack>
+              <position>	0.000000 0.585000 -8.155479	</position>
+              <size>	5.210265 0.180000 1.184317	</size>
               <absorption>	0.200000	</absorption>
               <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
             </bbox>
@@ -2036,8 +2000,6 @@
               <fallingOutModel>vehicles/airplanes/german/GR20_ME210/crash/lod0/tailEnd_01.model</fallingOutModel>
               <effectState>
                 <effect>
-                  <name>
-                  </name>
                   <mountPoint>plane/HP_tailHit</mountPoint>
                 </effect>
               </effectState>
@@ -2140,6 +2102,7 @@
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <health>20.0</health>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -2196,6 +2159,7 @@
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <health>20.0</health>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -2282,6 +2246,7 @@
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <health>20.0</health>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -2338,6 +2303,7 @@
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <health>20.0</health>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -2406,6 +2372,7 @@
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <health>20.0</health>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -2474,6 +2441,7 @@
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <health>20.0</health>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -2543,6 +2511,7 @@
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <health>20.0</health>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -2553,7 +2522,7 @@
         </mountPoint>
         <upgrade>
           <id>	1	</id>
-          <componentXml>t-Me210</componentXml>
+          <componentXml>t-me210</componentXml>
           <states>
             <state>
               <id>	1	</id>
@@ -2574,8 +2543,6 @@
                   <model>vehicles/airplanes/german/GR20_ME210/normal/lod0/gun_04_skinned.model</model>
                   <mountPoint>HP_gun_07</mountPoint>
                   <animatorName>	TurretController	</animatorName>
-                  <name>
-                  </name>
                 </item>
               </subItems>
               <usage>
@@ -2611,8 +2578,6 @@
                   <model>vehicles/airplanes/german/GR20_ME210/normal/lod0/gun_04_skinned.model</model>
                   <mountPoint>HP_gun_07</mountPoint>
                   <animatorName>	TurretController	</animatorName>
-                  <name>
-                  </name>
                 </item>
               </subItems>
               <usage>
@@ -2648,8 +2613,6 @@
                   <model>vehicles/airplanes/german/GR20_ME210/normal/lod0/gun_04_skinned.model</model>
                   <mountPoint>HP_gun_07</mountPoint>
                   <animatorName>	TurretController	</animatorName>
-                  <name>
-                  </name>
                 </item>
               </subItems>
               <usage>
@@ -2688,8 +2651,6 @@
                   <mountPoint>HP_gun_07</mountPoint>
                   <animatorName>
                   </animatorName>
-                  <name>
-                  </name>
                 </item>
               </subItems>
               <usage>hangar</usage>
@@ -3751,6 +3712,36 @@
                 <texture>vehicles/airplanes/common/decals/decor/128.dds</texture>
                 <icoPath>vehicles/airplanes/common/decals/decor/preview/128.dds</icoPath>
               </decal>
+              <decal>
+                <id>	201	</id>
+                <texture>vehicles/airplanes/common/decals/decor/129.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/129.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	202	</id>
+                <texture>vehicles/airplanes/common/decals/decor/130.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/130.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	203	</id>
+                <texture>vehicles/airplanes/common/decals/decor/131.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/131.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	204	</id>
+                <texture>vehicles/airplanes/common/decals/decor/132.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/132.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	205	</id>
+                <texture>vehicles/airplanes/common/decals/decor/133.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/133.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	206	</id>
+                <texture>vehicles/airplanes/common/decals/decor/134.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/134.dds</icoPath>
+              </decal>
             </decals>
           </decalGroup>
           <decalGroup>
@@ -4162,7 +4153,7 @@
           </decalGroup>
         </decalsSettings>
       </surfaceSettings>
-      <cameraOffset>	0.000000 0.143243 -2.018093	</cameraOffset>
+      <cameraOffset>	0.000000 0.000000 -0.675000	</cameraOffset>
       <hudPlaneScheme>me210_turret</hudPlaneScheme>
     </visualSettings>
     <description>
@@ -4214,7 +4205,7 @@
       <staticMass>	0.250000	</staticMass>
     </magnetPoint>
     <magnetPoint>
-      <position>	-2.533118 -0.293121 -0.656285	</position>
+      <position>	-2.533118 -0.293121 0.840204	</position>
       <staticMass>	1.000000	</staticMass>
     </magnetPoint>
     <magnetPoint>
@@ -4222,7 +4213,7 @@
       <staticMass>	1.000000	</staticMass>
     </magnetPoint>
     <magnetPoint>
-      <position>	2.533118 -0.293121 -0.656285	</position>
+      <position>	2.533118 -0.293121 0.840204	</position>
       <staticMass>	1.000000	</staticMass>
     </magnetPoint>
     <magnetPoint>
@@ -4231,7 +4222,7 @@
     </magnetPoint>
   </magnetPoints>
   <HPmass>
-    <position>	0.000000 0.000000 0.000000	</position>
+    <position>	0.000000 0.000000 -0.675000	</position>
     <direction>	0.000000 0.000000 0.000000	</direction>
   </HPmass>
 </me-210.xml>

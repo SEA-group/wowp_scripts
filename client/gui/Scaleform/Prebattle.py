@@ -1,5 +1,4 @@
 # Embedded file name: scripts/client/gui/Scaleform/Prebattle.py
-import copy
 import BigWorld
 import Settings
 import wgPickle
@@ -77,7 +76,6 @@ class Prebattle(GUIWindowAccount):
         else:
             LOG_ERROR('Prebattle:initialized - planeSelected is None')
         GUIWindowAccount.initialized(self, data)
-        self.__updateScreen()
         if Settings.g_instance.clusterID == CLASTERS.CN:
             self._startTickerNews()
         return
@@ -90,18 +88,6 @@ class Prebattle(GUIWindowAccount):
         self.removeAllCallbacks()
         import BWPersonality
         BWPersonality.g_lastTimeInQueue = BigWorld.time() - self.__lastCallTime
-
-    def __updateScreen(self):
-        if self.__queueStatistic != None:
-            currentTime = BigWorld.time()
-            levels = copy.deepcopy(self.__queueStatistic['levels'])
-            types = [ self.__queueStatistic['types'][PLANE_TYPES_ORDER[idx] - 1] for idx in xrange(len(PLANE_TYPES_ORDER)) ]
-            deltaTime = currentTime - self.__lastCallTime
-            self.call_1('updateLevels', levels)
-            self.call_1('updateTypes', types)
-            self.call_1('updateWaitTime', deltaTime)
-        self.updateCallback = BigWorld.callback(1.0, self.__updateScreen)
-        return
 
     def setPrebattleStatistic(self, queueStatisticPacked):
         self.__queueStatistic = wgPickle.loads(wgPickle.FromServerToClient, queueStatisticPacked)

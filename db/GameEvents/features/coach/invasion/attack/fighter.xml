@@ -1,8 +1,38 @@
 <fighter.xml>
   <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
   <noNamespaceSchemaLocation>../../../../../../../tools/databundler/subscribers.xsd</noNamespaceSchemaLocation>
+  <include>
+    <condition>
+      <and>
+        <equal>
+          <context>arena.mode</context>
+          <value>	invasion	</value>
+        </equal>
+        <equal>
+          <context>player.teamIndex</context>
+          <value>	1	</value>
+        </equal>
+      </and>
+    </condition>
+    <nested>
+      <subscriber>
+        <condition>
+          <and>
+            <equal>
+              <context>arena.mode</context>
+              <value>	invasion	</value>
+            </equal>
+            <equal>
+              <context>player.teamIndex</context>
+              <value>	1	</value>
+            </equal>
+          </and>
+        </condition>
+      </subscriber>
+    </nested>
+  </include>
   <subscriber>
-    <name>destroyPlanes</name>
+    <name>destroyPlanes_attack</name>
     <type>objective</type>
     <group>fighter</group>
     <server>
@@ -251,7 +281,7 @@
     </send>
   </subscriber>
   <subscriber>
-    <name>defenceSectors</name>
+    <name>captureSectors_attack</name>
     <type>objective</type>
     <group>fighter</group>
     <server>
@@ -261,16 +291,16 @@
     <client>
       <order>	3	</order>
       <name>
-        <locale>TOOLTIPS_HUD_LOBBY_CLASS_QUEST_NAME_DEFENCE_SECTOR_FOR_FIGHTERS-H-FIGHTERS-NAVY</locale>
+        <locale>TOOLTIPS_HUD_LOBBY_CLASS_QUEST_NAME_CAPTURE_SECTORS_FOR_H-FIGHTERS-NAVY-ASSAULT-BOMBERS</locale>
       </name>
       <description>
-        <locale>TOOLTIPS_HUD_LOBBY_CLASS_QUEST_DESCRIPTION_DEFENCE_SECTOR_FOR_FIGHTERS-H-FIGHTERS-NAVY</locale>
+        <locale>TOOLTIPS_HUD_LOBBY_CLASS_QUEST_DESCRIPTION_CAPTURE_SECTORS_FOR_H-FIGHTERS-NAVY-ASSAULT-BOMBERS</locale>
       </description>
       <countDescription>
-        <locale>BATTLE_RESULT_PLANES_DESTROYED_IN_DEFENCE</locale>
+        <locale>BATTLE_RESULT_SECTORS_CAPTURED</locale>
       </countDescription>
       <icon>
-        <template>icons/battleResults/task/{state}/taskDefendTerritory_28x28.dds</template>
+        <template>icons/battleResults/task/{state}/taskCaptureTerritory_28x28.dds</template>
       </icon>
     </client>
     <nested>
@@ -500,7 +530,7 @@
     </send>
   </subscriber>
   <subscriber>
-    <name>dogfightForSectors</name>
+    <name>dogfightForSectors_attack</name>
     <type>objective</type>
     <group>fighter</group>
     <server>

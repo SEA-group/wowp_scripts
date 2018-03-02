@@ -73,6 +73,7 @@ class WEAPON_AIM_TYPE:
 
 DB = Dummy()
 DB.include = Dummy()
+DB.include.activity = []
 DB.include.condition = []
 DB.include.count = []
 DB.include.event = []
@@ -81,6 +82,7 @@ DB.include.nested = Dummy()
 DB.include.nested.subscriber = []
 DB.include.nested.subscriber.insert(0, None)
 DB.include.nested.subscriber[0] = Dummy()
+DB.include.nested.subscriber[0].activity = []
 DB.include.nested.subscriber[0].condition = []
 DB.include.nested.subscriber[0].count = []
 DB.include.nested.subscriber[0].event = []

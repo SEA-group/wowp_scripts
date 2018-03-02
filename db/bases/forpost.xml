@@ -1,0 +1,699 @@
+<forpost.xml>
+  <parent>default.xml</parent>
+  <name>HUD_MEDIUM_ARMORED_OBJECT</name>
+  <modelPath>content/03_ocean/mechPC_61_Fletcher_destructible_01/mechPC_61_Fletcher_destructible_01.model</modelPath>
+  <modelCrashPath>content/03_ocean/mechPC_61_Fletcher_destructible_01/mechPC_61_Fletcher_destructible_01_crash.model</modelCrashPath>
+  <bBoxes>
+    <mainBox>
+      <size>100 90 100</size>
+    </mainBox>
+  </bBoxes>
+  <damageEffects>
+    <effectFire>EFFECT_fire_med_01</effectFire>
+    <destroy>EFFECT_w_part_exposion_small</destroy>
+  </damageEffects>
+  <maxHealth>	3025	</maxHealth>
+  <dominationCost>0.08</dominationCost>
+  <respawnDelay>-1.0</respawnDelay>
+  <superiorityPoints>	0	</superiorityPoints>
+  <superiorityPointsGroup1>	0	</superiorityPointsGroup1>
+  <superiorityPointsGroup2>	1	</superiorityPointsGroup2>
+  <superiorityPointsGroup3>	1	</superiorityPointsGroup3>
+  <superiorityPointsGroup4>	1	</superiorityPointsGroup4>
+  <superiorityPointsGroup5>	1	</superiorityPointsGroup5>
+  <superiorityPointsGroup6>	1	</superiorityPointsGroup6>
+  <superiorityPointsGroup7>	1	</superiorityPointsGroup7>
+  <superiorityPointsGroup8>	1	</superiorityPointsGroup8>
+  <initialSpawnDelay>0.0</initialSpawnDelay>
+  <turretName>t_h</turretName>
+  <type>vehicle</type>
+  <parts>
+    <part>
+      <name>	hull	</name>
+      <partId>	1	</partId>
+      <groupId>	1	</groupId>
+      <mountPoint>
+      </mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+        </bBoxes>
+        <health>	0	</health>
+        <componentType>	Hull	</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <model>content/dest/env/Forpost/Forpost_Layout_lod0.model</model>
+            <effectOnStart>
+            </effectOnStart>
+            <effectState>
+            </effectState>
+            <stateAnimation>
+            </stateAnimation>
+            <stateAction>	0	</stateAction>
+            <animationController>
+            </animationController>
+            <stateFireChance>	0.000000	</stateFireChance>
+            <fallingOutModel>
+            </fallingOutModel>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>
+        </fireMountPoint>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>forpost_1</name>
+      <partId>	2	</partId>
+      <groupId>	2	</groupId>
+      <mountPoint>hull/HP_forpost_1</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	47.205910 4.652995 -21.072030	</position>
+            <size>	18.645550 10.236030 41.208370	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	0.200000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+          <bbox>
+            <position>	34.318550 3.795548 -9.887573	</position>
+            <size>	9.258728 9.276409 18.291650	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	0.200000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+          <bbox>
+            <position>	34.434070 2.278632 -38.738350	</position>
+            <size>	9.258725 6.207131 5.362519	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	0.200000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	550	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/env/Forpost/Forpost_1_lod0.model</model>
+            <effectOnStart>
+            </effectOnStart>
+            <effectState>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <bBoxes>
+              <bbox>
+                <position>	-0.135000 13.995000 21.645000	</position>
+                <size>5 6 4</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/env/Forpost/Forpost_1_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>expl_object_M</name>
+                <mountPoint>HP_explosion2</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>object_onfire_XS</name>
+                <mountPoint>HP_explosion1</mountPoint>
+              </effect>
+              <effect>
+                <name>object_onfire_M_air_base_HP_expl2</name>
+                <mountPoint>HP_explosion2</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>HP_MainObj_Airfield_Big_build_Flame1_B</fireMountPoint>
+        <fire>
+          <effectFire>object_burning_L</effectFire>
+          <fire_chance>0.5</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>forpost_2</name>
+      <partId>	3	</partId>
+      <groupId>	3	</groupId>
+      <mountPoint>hull/HP_forpost_2</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	43.386720 4.025041 46.769860	</position>
+            <size>	34.837210 11.066350 22.153670	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	0.200000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+          <bbox>
+            <position>	27.421960 3.129179 36.573800	</position>
+            <size>	13.683210 8.578737 18.280480	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	0.200000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	550	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/env/Forpost/Forpost_2_lod0.model</model>
+            <effectOnStart>
+            </effectOnStart>
+            <effectState>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <bBoxes>
+              <bbox>
+                <position>	-0.135000 13.995000 21.645000	</position>
+                <size>5 6 4</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/env/Forpost/Forpost_2_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>expl_object_M</name>
+                <mountPoint>HP_explosion_7</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>object_onfire_XS</name>
+                <mountPoint>HP_explosion_7</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>HP_MainObj_Airfield_Build_Flame1_B</fireMountPoint>
+        <fire>
+          <effectFire>object_burning_L</effectFire>
+          <fire_chance>0.5</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>forpost_3</name>
+      <partId>	4	</partId>
+      <groupId>	4	</groupId>
+      <mountPoint>hull/HP_forpost_3</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-34.522600 4.234064 -18.445540	</position>
+            <size>	35.260980 10.890000 23.027330	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	0.200000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+          <bbox>
+            <position>	-20.304320 2.996459 -6.585428	</position>
+            <size>	21.165970 8.307326 12.852020	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	0.200000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	550	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/env/Forpost/Forpost_3_lod0.model</model>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <effectOnStart>
+            </effectOnStart>
+            <effectState>
+            </effectState>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <bBoxes>
+              <bbox>
+                <position>	-0.135000 13.995000 21.645000	</position>
+                <size>5 6 4</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/env/Forpost/Forpost_3_crash.model</model>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <effectOnStart>
+              <effect>
+                <name>expl_object_M</name>
+                <mountPoint>HP_explosion</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>object_onfire_XS</name>
+                <mountPoint>HP_explosion</mountPoint>
+              </effect>
+            </effectState>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>HP_MainObj_Airfield_Control_Room_Flame1_B</fireMountPoint>
+        <fire>
+          <effectFire>object_burning_L</effectFire>
+          <fire_chance>0.5</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>forpost_4</name>
+      <partId>	5	</partId>
+      <groupId>	5	</groupId>
+      <mountPoint>hull/HP_forpost_4</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-24.448060 4.358022 24.197490	</position>
+            <size>	34.181950 11.959060 16.611730	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	0.200000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+          <bbox>
+            <position>	-3.889448 2.077454 29.313000	</position>
+            <size>	7.873551 7.413986 6.930378	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	0.200000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	550	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/env/Forpost/Forpost_4_lod0.model</model>
+            <effectOnStart>
+            </effectOnStart>
+            <effectState>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <bBoxes>
+              <bbox>
+                <position>	-0.135000 13.995000 21.645000	</position>
+                <size>5 6 4</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/env/Forpost/Forpost_4_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>expl_object_M</name>
+                <mountPoint>HP_explosion_4</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>object_onfire_XS</name>
+                <mountPoint>HP_explosion_4</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>HP_MainObj_Airfield_Control_Tower_Flame1_B</fireMountPoint>
+        <fire>
+          <effectFire>object_burning_L</effectFire>
+          <fire_chance>0.5</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>forpost_5</name>
+      <partId>	6	</partId>
+      <groupId>	6	</groupId>
+      <mountPoint>hull/HP_forpost_5</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-23.012820 3.248813 55.490080	</position>
+            <size>	35.325870 6.735015 16.540330	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	0.200000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	550	</health>
+        <componentType>Collidable</componentType>
+        <componentXml>server.todo.xml</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/env/Forpost/Forpost_5_lod0.model</model>
+            <effectOnStart>
+            </effectOnStart>
+            <effectState>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <bBoxes>
+              <bbox>
+                <position>	-0.135000 13.995000 21.645000	</position>
+                <size>5 6 4</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/env/Forpost/Forpost_5_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>expl_object_S</name>
+                <mountPoint>HP_main</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>object_onfire_M</name>
+                <mountPoint>HP_explosion</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>HP_Building_4_03_Flame1_B</fireMountPoint>
+        <fire>
+          <effectFire>object_burning_L</effectFire>
+          <fire_chance>0.5</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+    <part>
+      <name>gun_1</name>
+      <partId>	8	</partId>
+      <groupId>	8	</groupId>
+      <mountPoint>hull/HP_forpost_6</mountPoint>
+      <upgrade>
+        <id>	1	</id>
+        <bBoxes>
+          <bbox>
+            <position>	-6.815689 2.008147 -39.568810	</position>
+            <size>	11.680750 4.297864 11.285500	</size>
+            <armorFront>	50.000000 50.000000 50.000000	</armorFront>
+            <armorBack>	50.000000 50.000000 50.000000	</armorBack>
+            <absorption>	1.000000	</absorption>
+            <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+          </bbox>
+        </bBoxes>
+        <health>	275	</health>
+        <componentType>Gunner</componentType>
+        <componentXml>t_h</componentXml>
+        <states>
+          <state>
+            <id>	1	</id>
+            <usage>
+            </usage>
+            <stateHelthCfc>	1.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/veh/us/US_AckAck_M1/US_AckAck_M1_v2.model</model>
+            <effectOnStart>
+            </effectOnStart>
+            <effectState>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>	TurretController	</animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+          <state>
+            <id>	2	</id>
+            <bBoxes>
+              <bbox>
+                <position>	-0.135000 13.995000 21.645000	</position>
+                <size>5 6 4</size>
+                <armorFront>0.0 0.0 0.0</armorFront>
+                <armorBack>0.0 0.0 0.0</armorBack>
+                <absorption>	1.000000	</absorption>
+                <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
+              </bbox>
+            </bBoxes>
+            <usage>crash</usage>
+            <stateHelthCfc>	0.000000	</stateHelthCfc>
+            <stateAction>	0	</stateAction>
+            <model>content/dest/veh/us/US_AckAck_M1/US_AckAck_M1_v2_crash.model</model>
+            <effectOnStart>
+              <effect>
+                <name>expl_object_XS</name>
+                <mountPoint>HP_explosion_turret</mountPoint>
+              </effect>
+            </effectOnStart>
+            <effectState>
+              <effect>
+                <name>object_onfire_XS</name>
+                <mountPoint>HP_explosion_turret</mountPoint>
+              </effect>
+            </effectState>
+            <stateFireChance>	0.200000	</stateFireChance>
+            <animationController>
+            </animationController>
+            <fallingOutModel>
+            </fallingOutModel>
+            <stateAnimation>
+            </stateAnimation>
+          </state>
+        </states>
+        <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
+        <fireMountPoint>HP_base</fireMountPoint>
+        <fire>
+          <effectFire>object_burning_S</effectFire>
+          <fire_chance>0.5</fire_chance>
+          <extinguish_time>5.0</extinguish_time>
+          <fire_damage>20%</fire_damage>
+          <tickLength>	1	</tickLength>
+          <extinguish_chance>
+            <baseChance>0.05</baseChance>
+            <vMin>	200	</vMin>
+            <pMin>1.0</pMin>
+            <vMax>	500	</vMax>
+            <pMax>3.0</pMax>
+          </extinguish_chance>
+        </fire>
+        <componentTypeQuota>	1.000000	</componentTypeQuota>
+        <componentPosition>Front</componentPosition>
+      </upgrade>
+    </part>
+  </parts>
+  <modelScaling>0.22</modelScaling>
+</forpost.xml>

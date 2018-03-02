@@ -75,6 +75,7 @@ DB = Dummy()
 DB.subscriber = []
 DB.subscriber.insert(0, None)
 DB.subscriber[0] = Dummy()
+DB.subscriber[0].activity = []
 DB.subscriber[0].condition = []
 DB.subscriber[0].condition.insert(0, None)
 DB.subscriber[0].condition[0] = Dummy()
@@ -152,6 +153,7 @@ DB.subscriber[0].server.scope[0] = 'plane'
 DB.subscriber[0].type = 'modifiers'
 DB.subscriber.insert(1, None)
 DB.subscriber[1] = Dummy()
+DB.subscriber[1].activity = []
 DB.subscriber[1].condition = []
 DB.subscriber[1].count = []
 DB.subscriber[1].event = []

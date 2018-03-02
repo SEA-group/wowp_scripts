@@ -75,6 +75,7 @@ DB = Dummy()
 DB.subscriber = []
 DB.subscriber.insert(0, None)
 DB.subscriber[0] = Dummy()
+DB.subscriber[0].activity = []
 DB.subscriber[0].client = Dummy()
 DB.subscriber[0].client.browser = Dummy()
 DB.subscriber[0].client.browser.tag = 'videos'
@@ -96,6 +97,7 @@ DB.subscriber[0].server.scope[0] = 'player'
 DB.subscriber[0].type = 'browser'
 DB.subscriber.insert(1, None)
 DB.subscriber[1] = Dummy()
+DB.subscriber[1].activity = []
 DB.subscriber[1].client = Dummy()
 DB.subscriber[1].client.browser = Dummy()
 DB.subscriber[1].client.browser.tag = 'controls'
@@ -111,6 +113,7 @@ DB.subscriber[1].nested = Dummy()
 DB.subscriber[1].nested.subscriber = []
 DB.subscriber[1].nested.subscriber.insert(0, None)
 DB.subscriber[1].nested.subscriber[0] = Dummy()
+DB.subscriber[1].nested.subscriber[0].activity = []
 DB.subscriber[1].nested.subscriber[0].condition = []
 DB.subscriber[1].nested.subscriber[0].count = []
 DB.subscriber[1].nested.subscriber[0].event = []
@@ -145,6 +148,7 @@ DB.subscriber[1].server.scope[0] = 'player'
 DB.subscriber[1].type = 'browser'
 DB.subscriber.insert(2, None)
 DB.subscriber[2] = Dummy()
+DB.subscriber[2].activity = []
 DB.subscriber[2].client = Dummy()
 DB.subscriber[2].client.browser = Dummy()
 DB.subscriber[2].client.browser.tag = 'beaver'
@@ -160,6 +164,7 @@ DB.subscriber[2].nested = Dummy()
 DB.subscriber[2].nested.subscriber = []
 DB.subscriber[2].nested.subscriber.insert(0, None)
 DB.subscriber[2].nested.subscriber[0] = Dummy()
+DB.subscriber[2].nested.subscriber[0].activity = []
 DB.subscriber[2].nested.subscriber[0].condition = []
 DB.subscriber[2].nested.subscriber[0].count = []
 DB.subscriber[2].nested.subscriber[0].event = []

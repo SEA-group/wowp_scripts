@@ -4,7 +4,9 @@ from ArenaHelpers.GameModes import GameModeClient
 from ArenaHelpers.GameModes.AreaConquest import ACGameModeClient
 from EntityHelpers import extractGameMode
 DEFAULT_GAME_MODE_CLASS = GameModeClient.GameModeClient
-GAME_MODE_CLASSES = {GAME_MODE.AREA_CONQUEST: ACGameModeClient.ACGameModeClient}
+GAME_MODE_CLASSES = {GAME_MODE.AREA_CONQUEST: ACGameModeClient.ACGameModeClient,
+ GAME_MODE.OFFENSE_DEFENCE: ACGameModeClient.ACGameModeClient,
+ GAME_MODE.ATTRITION_WARFARE: ACGameModeClient.ACGameModeClient}
 
 def getGameModeClientClass(gameMode):
     """Return game mode client class

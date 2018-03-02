@@ -9,8 +9,8 @@ from GameEvents.model import GameEventObject
 
 class RankModelBase(Model, RanksDBMixin):
 
-    def __init__(self, backend, instance = None, filters = None):
-        Model.__init__(self, backend, instance, filters)
+    def __init__(self, backend, instances = None, filters = None):
+        Model.__init__(self, backend, instances, filters)
         RanksDBMixin.__init__(self)
 
 
@@ -82,5 +82,15 @@ RankModel = RankModelBase(backend=BundledBackend(modules=['_ge_coach_ranks',
  '_ge_coach_navy',
  '_ge_coach_assault',
  '_ge_coach_bomber',
- '_ge_coach_ranks_empty']), instance=RankObject)
+ '_ge_coach_ranks_empty',
+ '_ge_coach_invasion_attack_assault',
+ '_ge_coach_invasion_attack_bomber',
+ '_ge_coach_invasion_attack_fighter',
+ '_ge_coach_invasion_attack_heavyfighter',
+ '_ge_coach_invasion_attack_navy',
+ '_ge_coach_invasion_defense_assault',
+ '_ge_coach_invasion_defense_bomber',
+ '_ge_coach_invasion_defense_fighter',
+ '_ge_coach_invasion_defense_heavyfighter',
+ '_ge_coach_invasion_defense_navy']), instances=[(RankObject, {})])
 RankModel.loadData()

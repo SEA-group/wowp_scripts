@@ -2,6 +2,7 @@
 from EntityHelpers import EntityStates
 from gui.HUD2.core.DataPrims import DataSource
 from gui.HUD2.hudFeatures import Feature
+import random
 from debug_utils import *
 
 class BattleAlertsSource(DataSource):
@@ -21,7 +22,7 @@ class BattleAlertsSource(DataSource):
             return
         LOG_DEBUG(' BattleAlertsSource: pushMessage ', vars(data))
         self._alertCounter += 1
-        battleAlertData = dict(type=data.type, title=data.title, icon=data.icon, lifetime=data.lifeTime, priority=data.priority, alertCounter=self._alertCounter)
+        battleAlertData = dict(type=data.type, title=data.title, icon=data.icon, lifetime=data.lifeTime, priority=data.priority, alertCounter=self._alertCounter, data=data.data)
         battleAlertData = self._checkOnAddValue(data, self._checkOnTimer(data, battleAlertData))
         self._model.battleAlert = battleAlertData
 

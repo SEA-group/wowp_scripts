@@ -1,6 +1,6 @@
 # Embedded file name: scripts/common/db/DBSoundSettings.py
 from db.DBHelpers import *
-from consts import WORLD_SCALING, SPEED_SCALING
+from consts import WORLD_SCALING, SPEED_SCALING, DB_PATH, GAME_MODE
 from math import radians
 
 class Interval:
@@ -126,6 +126,22 @@ class MusicSound:
     @property
     def events(self):
         return self.__events
+
+
+class VoiceoverSetsHolder:
+
+    def __init__(self, root):
+        self.__voiceoverSets = {}
+        for item in root.items():
+            gameMode = item[0]
+            gameModeVoiceoversXMLPath = DB_PATH + item[1].readString('')
+            voiceoverSet = Voiceovers(ResMgr.openSection(gameModeVoiceoversXMLPath))
+            gameModeIndex = GAME_MODE.NAME_TO_MODE[gameMode] - GAME_MODE.AREA_CONQUEST
+            self.__voiceoverSets[gameModeIndex] = voiceoverSet
+
+    @property
+    def voiceoverSets(self):
+        return self.__voiceoverSets
 
 
 class Voiceovers:
@@ -289,7 +305,7 @@ class SoundSettings:
         self.effects = EffectProfiles(findSection(data, 'Effects'))
         self.musicSound = MusicSound(findSection(data, 'Ambient'))
         self.wooshSphere = EventSet(findSection(data, 'WooshSphere'))
-        self.voice = Voiceovers(findSection(data, 'Voiceovers'))
+        self.voiceoverSetsHolder = VoiceoverSetsHolder(findSection(data, 'Voiceovers'))
         self.ui = EventSet(findSection(data, 'UI'))
         self.airshow = Airshow(findSection(data, 'Airshow'))
         self.wind = Wind(findSection(data, 'Wind'))
@@ -331,8 +347,8 @@ class SoundSettings:
         return self.wooshSphere
 
     @property
-    def voice(self):
-        return self.voice
+    def voiceoverSetsHolder(self):
+        return self.voiceoverSetsHolder
 
     @property
     def ui(self):

@@ -258,9 +258,11 @@ class ObjectDataReader():
                 for (itemPath, effectName), condition in timedEffects.iteritems():
                     builder.addEffect(itemPath, stateEffectPred + [condition], effectName, True)
 
+            if context.fullLoading or consts.IS_EDITOR:
                 for (itemPath, effectName), condition in stateEffects.iteritems():
                     builder.addEffect(itemPath, stateEffectPred + [condition], effectName, False)
 
+            if context.fullLoading:
                 for (itemPath, effectName), conditions in triggerEffects.iteritems():
                     visualCondition = [ condition for condition, trigger in conditions ]
                     triggers = [ trigger for condition, trigger in conditions ]
@@ -305,6 +307,17 @@ class ObjectDataReader():
 class ObjectContext():
     """Container for setup data of compound object"""
     pass
+
+
+class VseTriggerAgentDummy(object):
+
+    @staticmethod
+    def start(*args, **kwargs):
+        pass
+
+    @staticmethod
+    def stop(*args, **kwargs):
+        pass
 
 
 class EventSystem():
@@ -372,6 +385,7 @@ class ModelManipulator3(object):
         context.isActive = True
         context.ikSystems = []
         context.ikSystemByPart = {}
+        self.__vseTriggerAgent = VseTriggerAgentDummy
         from db.DBBaseObject import DBBaseObject
         context.isBaseObject = issubclass(objDBData.__class__, DBBaseObject)
         self.__context = context
@@ -398,7 +412,7 @@ class ModelManipulator3(object):
             if partDb.partId not in self.__context.partsStates:
                 self.__updatePartState(partDb.partId, 1)
 
-        self.setCondition(ObjectDataReader.stateEffect(), self.__context.fullLoading)
+        self.setCondition(ObjectDataReader.stateEffect(), self.__context.fullLoading or consts.IS_EDITOR)
         self.setCondition(ObjectDataReader.fallingParts(), self.__context.fullLoading)
         objectBuilder = builder(self.__animatorsController, self.__boolCombiner, self.__eventSystem, self.__context, self.onLoaded_internal)
         ObjectDataReader.partsRead(objectBuilder, context)
@@ -416,6 +430,9 @@ class ModelManipulator3(object):
         self.eCompoundLoaded = Event.Event(self._eManager)
         self.setCondition(HIDE_ALL_MODELS_CONDITION_KEY, False)
         return
+
+    def _linkTriggerAgent(self, vseTriggerAgent):
+        self.__vseTriggerAgent = vseTriggerAgent
 
     def refreshContextForAvatarCopy(self, avatarCopyID):
         self.__context.entityId = avatarCopyID
@@ -505,6 +522,7 @@ class ModelManipulator3(object):
                 self.__turretGunFlamesMP[gunId] = nodeMatrixProvider
 
             self.eCompoundLoaded()
+            self.__animatorsController.showPropellorBlade(False)
         return
 
     def checkTurretCanShoot(self, gunId):
@@ -602,15 +620,22 @@ class ModelManipulator3(object):
             if self.__context.groundDecalMap.get((partId, partState)):
                 self.__createGroundDecal(partId, partState, True)
 
+    def __callVseTriggerEvent(self, triggerName, value):
+        if value:
+            self.__vseTriggerAgent.start(triggerName)
+        else:
+            self.__vseTriggerAgent.stop(triggerName)
+
     def setEffectVisible(self, effectName, value):
         """Show or hide some triggered effect"""
         if self.__animatorsController:
             self.__animatorsController.setEffectVisible(effectName, value)
         if clientConsts.SNOWBALLS_MOD.ENABLED:
             snowEffectName = clientConsts.SNOWBALLS_MOD.getName(self.consumablesEffects, effectName)
-            self.setCondition(ObjectDataReader.effectId(snowEffectName), value)
-        else:
-            self.setCondition(ObjectDataReader.effectId(effectName), value)
+            if self.setCondition(ObjectDataReader.effectId(snowEffectName), value):
+                self.__callVseTriggerEvent(snowEffectName, value)
+        elif self.setCondition(ObjectDataReader.effectId(effectName), value):
+            self.__callVseTriggerEvent(effectName, value)
 
     def getEffectState(self, effectName):
         return self.getCondition(ObjectDataReader.effectId(effectName))
@@ -660,6 +685,7 @@ class ModelManipulator3(object):
                 self.setEffectVisible('BOMBERS_TRAIL_INIT', True)
                 self.setCondition(ObjectDataReader.fallingParts(), True)
                 self.setCondition(ObjectDataReader.stateEffect(), True)
+                self.__animatorsController.showPropellorBlade(False)
                 self.__resetControlAxises()
             if avatarState & EntityHelpers.EntityStates.DESTROYED:
                 if self.__context.isAircraft:
@@ -803,6 +829,7 @@ class ModelManipulator3(object):
         self._eManager.clear()
         self.setMatrixProvider(None)
         self.__turretGunFlamesMP = None
+        self.__vseTriggerAgent = VseTriggerAgentDummy
         self.__context.ikSystemByPart = None
         self.__context.ikSystems = None
         self.__context.rootNode = None

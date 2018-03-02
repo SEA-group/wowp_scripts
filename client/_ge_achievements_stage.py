@@ -73,6 +73,7 @@ class WEAPON_AIM_TYPE:
 
 DB = Dummy()
 DB.header = Dummy()
+DB.header.activity = []
 DB.header.client = Dummy()
 DB.header.client.multiple = false
 DB.header.client.place = 'right'
@@ -92,6 +93,7 @@ DB.header.server.scope.insert(0, None)
 DB.header.server.scope[0] = 'player'
 DB.header.type = 'achievement'
 DB.include = Dummy()
+DB.include.activity = []
 DB.include.condition = []
 DB.include.condition.insert(0, None)
 DB.include.condition[0] = Dummy()
@@ -148,6 +150,7 @@ DB.include.send = []
 DB.subscriber = []
 DB.subscriber.insert(0, None)
 DB.subscriber[0] = Dummy()
+DB.subscriber[0].activity = []
 DB.subscriber[0].client = Dummy()
 DB.subscriber[0].client.description = Dummy()
 DB.subscriber[0].client.description.locale = 'MEDAL_DESCRIPTION_DILLEI4'
@@ -214,6 +217,7 @@ DB.subscriber[0].operation = []
 DB.subscriber[0].send = []
 DB.subscriber.insert(1, None)
 DB.subscriber[1] = Dummy()
+DB.subscriber[1].activity = []
 DB.subscriber[1].client = Dummy()
 DB.subscriber[1].client.description = Dummy()
 DB.subscriber[1].client.description.locale = 'MEDAL_DESCRIPTION_DILLEI3'
@@ -280,6 +284,7 @@ DB.subscriber[1].operation = []
 DB.subscriber[1].send = []
 DB.subscriber.insert(2, None)
 DB.subscriber[2] = Dummy()
+DB.subscriber[2].activity = []
 DB.subscriber[2].client = Dummy()
 DB.subscriber[2].client.description = Dummy()
 DB.subscriber[2].client.description.locale = 'MEDAL_DESCRIPTION_DILLEI2'
@@ -346,6 +351,7 @@ DB.subscriber[2].operation = []
 DB.subscriber[2].send = []
 DB.subscriber.insert(3, None)
 DB.subscriber[3] = Dummy()
+DB.subscriber[3].activity = []
 DB.subscriber[3].client = Dummy()
 DB.subscriber[3].client.description = Dummy()
 DB.subscriber[3].client.description.locale = 'MEDAL_DESCRIPTION_DILLEI1'
@@ -412,6 +418,7 @@ DB.subscriber[3].operation = []
 DB.subscriber[3].send = []
 DB.subscriber.insert(4, None)
 DB.subscriber[4] = Dummy()
+DB.subscriber[4].activity = []
 DB.subscriber[4].client = Dummy()
 DB.subscriber[4].client.description = Dummy()
 DB.subscriber[4].client.description.locale = 'MEDAL_DESCRIPTION_JOHNSON4'
@@ -457,6 +464,7 @@ DB.subscriber[4].operation = []
 DB.subscriber[4].send = []
 DB.subscriber.insert(5, None)
 DB.subscriber[5] = Dummy()
+DB.subscriber[5].activity = []
 DB.subscriber[5].client = Dummy()
 DB.subscriber[5].client.description = Dummy()
 DB.subscriber[5].client.description.locale = 'MEDAL_DESCRIPTION_JOHNSON3'
@@ -502,6 +510,7 @@ DB.subscriber[5].operation = []
 DB.subscriber[5].send = []
 DB.subscriber.insert(6, None)
 DB.subscriber[6] = Dummy()
+DB.subscriber[6].activity = []
 DB.subscriber[6].client = Dummy()
 DB.subscriber[6].client.description = Dummy()
 DB.subscriber[6].client.description.locale = 'MEDAL_DESCRIPTION_JOHNSON2'
@@ -547,6 +556,7 @@ DB.subscriber[6].operation = []
 DB.subscriber[6].send = []
 DB.subscriber.insert(7, None)
 DB.subscriber[7] = Dummy()
+DB.subscriber[7].activity = []
 DB.subscriber[7].client = Dummy()
 DB.subscriber[7].client.description = Dummy()
 DB.subscriber[7].client.description.locale = 'MEDAL_DESCRIPTION_JOHNSON1'
@@ -592,6 +602,7 @@ DB.subscriber[7].operation = []
 DB.subscriber[7].send = []
 DB.subscriber.insert(8, None)
 DB.subscriber[8] = Dummy()
+DB.subscriber[8].activity = []
 DB.subscriber[8].client = Dummy()
 DB.subscriber[8].client.description = Dummy()
 DB.subscriber[8].client.description.locale = 'MEDAL_DESCRIPTION_POKRYSHKIN4'
@@ -658,6 +669,7 @@ DB.subscriber[8].operation = []
 DB.subscriber[8].send = []
 DB.subscriber.insert(9, None)
 DB.subscriber[9] = Dummy()
+DB.subscriber[9].activity = []
 DB.subscriber[9].client = Dummy()
 DB.subscriber[9].client.description = Dummy()
 DB.subscriber[9].client.description.locale = 'MEDAL_DESCRIPTION_POKRYSHKIN3'
@@ -724,6 +736,7 @@ DB.subscriber[9].operation = []
 DB.subscriber[9].send = []
 DB.subscriber.insert(10, None)
 DB.subscriber[10] = Dummy()
+DB.subscriber[10].activity = []
 DB.subscriber[10].client = Dummy()
 DB.subscriber[10].client.description = Dummy()
 DB.subscriber[10].client.description.locale = 'MEDAL_DESCRIPTION_POKRYSHKIN2'
@@ -790,6 +803,7 @@ DB.subscriber[10].operation = []
 DB.subscriber[10].send = []
 DB.subscriber.insert(11, None)
 DB.subscriber[11] = Dummy()
+DB.subscriber[11].activity = []
 DB.subscriber[11].client = Dummy()
 DB.subscriber[11].client.description = Dummy()
 DB.subscriber[11].client.description.locale = 'MEDAL_DESCRIPTION_POKRYSHKIN1'
@@ -856,6 +870,7 @@ DB.subscriber[11].operation = []
 DB.subscriber[11].send = []
 DB.subscriber.insert(12, None)
 DB.subscriber[12] = Dummy()
+DB.subscriber[12].activity = []
 DB.subscriber[12].client = Dummy()
 DB.subscriber[12].client.description = Dummy()
 DB.subscriber[12].client.description.locale = 'MEDAL_DESCRIPTION_BOYINGTON4'
@@ -902,6 +917,7 @@ DB.subscriber[12].operation = []
 DB.subscriber[12].send = []
 DB.subscriber.insert(13, None)
 DB.subscriber[13] = Dummy()
+DB.subscriber[13].activity = []
 DB.subscriber[13].client = Dummy()
 DB.subscriber[13].client.description = Dummy()
 DB.subscriber[13].client.description.locale = 'MEDAL_DESCRIPTION_BOYINGTON3'
@@ -948,6 +964,7 @@ DB.subscriber[13].operation = []
 DB.subscriber[13].send = []
 DB.subscriber.insert(14, None)
 DB.subscriber[14] = Dummy()
+DB.subscriber[14].activity = []
 DB.subscriber[14].client = Dummy()
 DB.subscriber[14].client.description = Dummy()
 DB.subscriber[14].client.description.locale = 'MEDAL_DESCRIPTION_BOYINGTON2'
@@ -994,6 +1011,7 @@ DB.subscriber[14].operation = []
 DB.subscriber[14].send = []
 DB.subscriber.insert(15, None)
 DB.subscriber[15] = Dummy()
+DB.subscriber[15].activity = []
 DB.subscriber[15].client = Dummy()
 DB.subscriber[15].client.description = Dummy()
 DB.subscriber[15].client.description.locale = 'MEDAL_DESCRIPTION_BOYINGTON1'
@@ -1040,6 +1058,7 @@ DB.subscriber[15].operation = []
 DB.subscriber[15].send = []
 DB.subscriber.insert(16, None)
 DB.subscriber[16] = Dummy()
+DB.subscriber[16].activity = []
 DB.subscriber[16].client = Dummy()
 DB.subscriber[16].client.description = Dummy()
 DB.subscriber[16].client.description.locale = 'MEDAL_DESCRIPTION_MIHALENKOV4'
@@ -1086,6 +1105,7 @@ DB.subscriber[16].operation = []
 DB.subscriber[16].send = []
 DB.subscriber.insert(17, None)
 DB.subscriber[17] = Dummy()
+DB.subscriber[17].activity = []
 DB.subscriber[17].client = Dummy()
 DB.subscriber[17].client.description = Dummy()
 DB.subscriber[17].client.description.locale = 'MEDAL_DESCRIPTION_MIHALENKOV_3'
@@ -1132,6 +1152,7 @@ DB.subscriber[17].operation = []
 DB.subscriber[17].send = []
 DB.subscriber.insert(18, None)
 DB.subscriber[18] = Dummy()
+DB.subscriber[18].activity = []
 DB.subscriber[18].client = Dummy()
 DB.subscriber[18].client.description = Dummy()
 DB.subscriber[18].client.description.locale = 'MEDAL_DESCRIPTION_MIHALENKOV2'
@@ -1178,6 +1199,7 @@ DB.subscriber[18].operation = []
 DB.subscriber[18].send = []
 DB.subscriber.insert(19, None)
 DB.subscriber[19] = Dummy()
+DB.subscriber[19].activity = []
 DB.subscriber[19].client = Dummy()
 DB.subscriber[19].client.description = Dummy()
 DB.subscriber[19].client.description.locale = 'MEDAL_DESCRIPTION_MIHALENKOV1'

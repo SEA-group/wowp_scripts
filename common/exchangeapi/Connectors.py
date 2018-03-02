@@ -131,6 +131,12 @@ def getQuest(obid, account):
     return QuestModel.get(id=obid)
 
 
+def getBattleEntryPoint(obid, account):
+    if not IS_CLIENT:
+        from BattleEntryPoint import BattleEntryPoint
+        return BattleEntryPoint.getBattleEntryPointById(obid)
+
+
 connectors = {'plane': getPlane,
  'planePreset': getPlanePreset,
  'upgrade': getUpgrade,
@@ -149,7 +155,8 @@ connectors = {'plane': getPlane,
  'actionui': getActionUI,
  'bomberPart': getBomberPart,
  'pack': getPack,
- 'quest': getQuest}
+ 'quest': getQuest,
+ 'battleEntryPoint': getBattleEntryPoint}
 
 def getObject(idTypeList, account = None):
     initDB()

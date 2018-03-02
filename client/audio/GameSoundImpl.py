@@ -229,12 +229,22 @@ class GameSoundImpl():
         return
 
     def __onGameResultChanged(self, gameResult, winState):
-        winResults = [GAME_RESULT.SUPERIORITY_SUCCESS, GAME_RESULT.ELIMINATION, GAME_RESULT.AREA_CONQUEST_SUCCESS]
+        winResults = [GAME_RESULT.SUPERIORITY_SUCCESS,
+         GAME_RESULT.ELIMINATION,
+         GAME_RESULT.AREA_CONQUEST_SUCCESS,
+         GAME_RESULT.CAPTURE_ALL_SECTORS,
+         GAME_RESULT.MAIN_TIME_RUNNING_OUT,
+         GAME_RESULT.DYNAMIC_TIME_RUNNING_OUT,
+         GAME_RESULT.ATTRITION_SUCCESS]
         self.__winner = gameResult in winResults and BigWorld.player().teamIndex == winState
         self.__draw = gameResult in [GAME_RESULT.DRAW_ELIMINATION,
          GAME_RESULT.DRAW_ELIMINATION_NO_PLAYERS,
          GAME_RESULT.DRAW_SUPERIORITY,
-         GAME_RESULT.DRAW_TIME_IS_RUNNING_OUT]
+         GAME_RESULT.DRAW_TIME_IS_RUNNING_OUT,
+         GAME_RESULT.DRAW_AREA_CONQUEST,
+         GAME_RESULT.DYNAMIC_TIME_RUNNING_OUT,
+         GAME_RESULT.ATTRITION_DRAW,
+         GAME_RESULT.ATTRITION_TIME_RUNNING_OUT]
         battleType = GameEnvironment.getClientArena().battleType
         if battleType == ARENA_TYPE.TRAINING:
             self.onBattleEnd(False)

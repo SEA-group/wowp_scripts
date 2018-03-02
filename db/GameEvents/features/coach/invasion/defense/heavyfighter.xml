@@ -1,8 +1,38 @@
 <heavyfighter.xml>
   <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
   <noNamespaceSchemaLocation>../../../../../../../tools/databundler/subscribers.xsd</noNamespaceSchemaLocation>
+  <include>
+    <condition>
+      <and>
+        <equal>
+          <context>arena.mode</context>
+          <value>	invasion	</value>
+        </equal>
+        <equal>
+          <context>player.teamIndex</context>
+          <value>	0	</value>
+        </equal>
+      </and>
+    </condition>
+    <nested>
+      <subscriber>
+        <condition>
+          <and>
+            <equal>
+              <context>arena.mode</context>
+              <value>	invasion	</value>
+            </equal>
+            <equal>
+              <context>player.teamIndex</context>
+              <value>	0	</value>
+            </equal>
+          </and>
+        </condition>
+      </subscriber>
+    </nested>
+  </include>
   <subscriber>
-    <name>defenceSectors</name>
+    <name>defenceSectors_defense</name>
     <type>objective</type>
     <group>heavy.fighter</group>
     <server>
@@ -205,7 +235,7 @@
           </and>
         </condition>
         <count>
-          <value>	4	</value>
+          <value>	5	</value>
         </count>
         <send>
           <event>
@@ -258,7 +288,7 @@
           </and>
         </condition>
         <count>
-          <value>	5	</value>
+          <value>	7	</value>
         </count>
         <send>
           <event>
@@ -323,7 +353,7 @@
     </send>
   </subscriber>
   <subscriber>
-    <name>	teamwork	</name>
+    <name>teamwork_defense</name>
     <type>objective</type>
     <group>heavy.fighter</group>
     <server>
@@ -333,16 +363,16 @@
     <client>
       <order>	2	</order>
       <name>
-        <locale>TEAMWORK_NAME</locale>
+        <locale>HUD_QUEST_NAME_TEAM_WORK</locale>
       </name>
       <description>
-        <locale>TEAMWORK_DESCRIPTION</locale>
+        <locale>HUD_QUEST_DESCRIPTION_TEAM_WORK</locale>
       </description>
       <countDescription>
-        <locale>BATTLE_RESULT_TEAMWORK_NAME</locale>
+        <locale>HUD_QUEST_TASK_TEAM_WORK</locale>
       </countDescription>
       <icon>
-        <template>icons/battleResults/task/{state}/taskCaptureTerritory_28x28.dds</template>
+        <template>icons/battleResults/task/{state}/taskTeamWork_28x28.dds</template>
       </icon>
     </client>
     <nested>
@@ -369,15 +399,11 @@
                 <context>victim.object</context>
                 <value>plane</value>
               </equal>
-              <equal>
-                <context>percent</context>
-                <value>normal</value>
-              </equal>
             </and>
           </condition>
         </event>
         <count>
-          <value>	1	</value>
+          <value>	3	</value>
         </count>
         <send>
           <event>
@@ -408,15 +434,11 @@
                 <context>victim.object</context>
                 <value>plane</value>
               </equal>
-              <equal>
-                <context>percent</context>
-                <value>normal</value>
-              </equal>
             </and>
           </condition>
         </event>
         <count>
-          <value>	3	</value>
+          <value>	5	</value>
         </count>
         <send>
           <event>
@@ -459,15 +481,11 @@
                 <context>victim.object</context>
                 <value>plane</value>
               </equal>
-              <equal>
-                <context>percent</context>
-                <value>normal</value>
-              </equal>
             </and>
           </condition>
         </event>
         <count>
-          <value>	5	</value>
+          <value>	7	</value>
         </count>
         <send>
           <event>
@@ -510,15 +528,11 @@
                 <context>victim.object</context>
                 <value>plane</value>
               </equal>
-              <equal>
-                <context>percent</context>
-                <value>normal</value>
-              </equal>
             </and>
           </condition>
         </event>
         <count>
-          <value>	8	</value>
+          <value>	10	</value>
         </count>
         <send>
           <event>
@@ -561,15 +575,11 @@
                 <context>victim.object</context>
                 <value>plane</value>
               </equal>
-              <equal>
-                <context>percent</context>
-                <value>normal</value>
-              </equal>
             </and>
           </condition>
         </event>
         <count>
-          <value>	12	</value>
+          <value>	15	</value>
         </count>
         <send>
           <event>
@@ -606,15 +616,11 @@
             <and>
               <equal>
                 <context>player.plane.type</context>
-                <value>fighter</value>
+                <value>heavy.fighter</value>
               </equal>
               <equal>
                 <context>victim.object</context>
                 <value>plane</value>
-              </equal>
-              <equal>
-                <context>percent</context>
-                <value>normal</value>
               </equal>
             </and>
           </condition>
@@ -632,7 +638,7 @@
     </send>
   </subscriber>
   <subscriber>
-    <name>destroyPlanes</name>
+    <name>destroyPlanes_defense</name>
     <type>objective</type>
     <group>heavy.fighter</group>
     <server>

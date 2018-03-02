@@ -73,11 +73,12 @@ class LinkedDatabase(object):
             adapter = self._adapters.get(name)
             if adapter:
                 adValue = adapter(None, isAll=True)
-                if isinstance(adValue, dict):
-                    resultValue = resultValue.copy()
-                    resultValue.update(adValue)
-                else:
-                    resultValue = value + adValue
+                if adValue:
+                    if isinstance(adValue, dict):
+                        resultValue = resultValue.copy()
+                        resultValue.update(adValue)
+                    else:
+                        resultValue = value + adValue
             self._cache[cacheKey] = resultValue
             return resultValue
 

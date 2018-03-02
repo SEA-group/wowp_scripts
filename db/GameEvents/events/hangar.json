@@ -7,6 +7,57 @@
 
 	"id": {
 		"type": "integer"
+	},
+
+	"lastBattleTime": {
+		"description": "Количество дней с момента последнего входа в бой",
+		"type": "integer"
+	}
+},
+
+
+"activities":{
+	"description": "Контекст активити",
+	"component": {
+		"type": "dict",
+		"schema": {
+			"springmarathon2018": {
+				"description": "название стейта компонента",
+				"type": "string",
+				"allowed": [
+					"1_peace",
+					"1_war",
+					"2_peace",
+					"2_war",
+					"3_peace",
+					"3_war",
+					"4_peace",
+					"4_war",
+					"5_peace",
+					"5_war",
+					"6_peace",
+					"6_war",
+					"7_peace"
+				]
+			}
+		}
+	}
+},
+
+"hangar.afterbattle": {
+	"description": "Контекст данных игрока в ангаре после боя",
+
+	"planes": {
+		"type": "dict",
+		"schema": {
+			"type": {
+				"description": "Класс самолета",
+				"type": "string",
+				"allowed": [
+					"fighter", "assault", "heavy.fighter", "navy", "bomber"
+				]
+			}
+		}
 	}
 }
 
@@ -32,6 +83,30 @@
 		},
 		"player": {
 			"schema": "hangar.player"
+		},
+		"activities": {
+			"schema": "activities"
+		}
+	}
+},
+
+{
+	"description": "Инициализация аккаунта до логина",
+	"active": true,
+
+	"type": "hangar",
+	"context": "player",
+	"name": "init",
+
+	"schema": {
+		"time": {
+			"type": "integer"
+		},
+		"player": {
+			"schema": "hangar.player"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -50,6 +125,9 @@
 		},
 		"player": {
 			"schema": "hangar.player"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -72,7 +150,10 @@
         "days": {
             "type": "integer",
             "description": "Количество дней с момента последнего логина"
-        }
+        },
+		"activities": {
+			"schema": "activities"
+		}
 	}
 },
 
@@ -94,7 +175,25 @@
         "days": {
             "type": "integer",
             "description": "Количество дней с момента последнего логина"
-        }
+        },
+		"activities": {
+			"schema": "activities"
+		}
+	}
+},
+
+{
+	"description": "Игрок попал в ангар после боя",
+	"active": true,
+
+	"type": "hangar",
+	"context": "player",
+	"name": "after.battle.result",
+
+	"schema": {
+		"used": {
+			"schema": "hangar.afterbattle"
+		}
 	}
 }
 

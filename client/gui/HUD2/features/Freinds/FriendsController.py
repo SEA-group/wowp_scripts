@@ -3,6 +3,7 @@ import VOIP
 from gui.HUD2.core.DataPrims import DataController
 from gui.HUD2.core.MessageRouter import message
 from gui.HUD2.hudFeatures import Feature
+from gui.HudElements.IngameChat import CHAT_STATUS
 import BWLogging
 
 class FriendsController(DataController):
@@ -15,6 +16,8 @@ class FriendsController(DataController):
         self._model = features.require(Feature.GAME_MODEL).friends
         self._clientArena = features.require(Feature.CLIENT_ARENA)
         self._xmppChat = features.require(Feature.XMPP_CHAT)
+        self._gameEnvironment = features.require(Feature.GAME_ENVIRONMENT)
+        self._chat = self._gameEnvironment.service('Chat')
 
     @message('friends.editFriendList')
     def editFriendList(self, userId, operationType):
@@ -27,6 +30,7 @@ class FriendsController(DataController):
         dbid, name = self._getDbId(userId)
         operation = int(operationType)
         self._xmppChat.editIgnoreList(dbid, name, operation)
+        self._chat.setUsersChatStatus([(dbid, CHAT_STATUS.IGNORED)])
 
     @message('friends.editMuteList')
     def editMuteList(self, userId, operationType):

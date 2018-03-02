@@ -56,20 +56,20 @@ class InputCommandProcessor:
                         self.firedCount += 1
                         self.startEvent()
                         self.__commandStats.logCommandStart(self.command.id)
-                        events = BigWorld.events()
-                        if events is not None:
-                            event = getattr(events, self.command.id)
-                            if event is not None:
-                                event.post('', {})
-                            else:
-                                LOG_ERROR('[VSCRIPT] Event is not registered')
-                        else:
-                            LOG_ERROR('[VSCRIPT] Event system is not registered')
                     else:
                         self.endEvent()
                         self.__commandStats.logCommandEnd(self.command.id)
                     if waitTime > 0.0 and self.isFired:
                         self.command.lastExecuteTime = BigWorld.time()
+                    events = BigWorld.events()
+                    if events is not None:
+                        event = getattr(events, self.command.id)
+                        if event is not None:
+                            event.post('', {'isFired': self.isFired})
+                        else:
+                            LOG_ERROR('[VSCRIPT] Event is not registered')
+                    else:
+                        LOG_ERROR('[VSCRIPT] Event system is not registered')
                 return self.command.isBlock
             else:
                 return False

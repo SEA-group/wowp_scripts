@@ -6,14 +6,15 @@ class ACSectorState(object):
     """Wrapper for FIXED_DICT representing ACSector state
     """
 
-    def __init__(self, state, teamIndex, nextStateTimestamp, capturedAtTick):
+    def __init__(self, state, teamIndex, nextStateTimestamp, capturedAtTick, isLockForBattle):
         self.state = state
         self.teamIndex = teamIndex
         self.nextStateTimestamp = nextStateTimestamp
         self.capturedAtTick = capturedAtTick
+        self.isLockForBattle = isLockForBattle
 
     def __str__(self):
-        return '<ACSectorState: state={0}, teamIndex={1}, nextStateTimestamp={2}, capturedAtTick={3}>'.format(self.state, self.teamIndex, self.nextStateTimestamp, self.capturedAtTick)
+        return '<ACSectorState: state={0}, teamIndex={1}, nextStateTimestamp={2}, capturedAtTick={3}, isLockForBattle={4}>'.format(self.state, self.teamIndex, self.nextStateTimestamp, self.capturedAtTick, self.isLockForBattle)
 
 
 class ACSectorStateConverter(object):
@@ -28,7 +29,8 @@ class ACSectorStateConverter(object):
         return {'state': obj.state,
          'teamIndex': obj.teamIndex,
          'nextStateTimestamp': obj.nextStateTimestamp,
-         'capturedAtTick': obj.capturedAtTick}
+         'capturedAtTick': obj.capturedAtTick,
+         'isLockForBattle': obj.isLockForBattle}
 
     def createObjFromDict(self, dict_):
         """Convert FIXED_DICT to ACSectorState

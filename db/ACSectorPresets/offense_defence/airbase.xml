@@ -1,0 +1,53 @@
+<airbase.xml>
+  <preset>default</preset>
+  <neutralCapturePoints>	280	</neutralCapturePoints>
+  <ownedCapturePoints>	180	</ownedCapturePoints>
+  <gameplayType>airbase</gameplayType>
+  <playerSpawnEnabled>	true	</playerSpawnEnabled>
+  <tacticalRespawnEnabled>	true	</tacticalRespawnEnabled>
+  <respawnCooldownReduceEnabled>	true	</respawnCooldownReduceEnabled>
+  <holdingPointsDefence>	1	</holdingPointsDefence>
+  <holdingPointsOffense>	1	</holdingPointsOffense>
+  <hud>
+    <battleHintIcon>event_airfield2</battleHintIcon>
+    <localizationID>HUD_NAME_SECTOR_AIRBASE</localizationID>
+    <description>HUD_F1_SECTOR_DESCRIPTION_COMBINED_3_ALT</description>
+    <sectorIconPath>icons/hud/sectors/sectorType{size}Airfield2_{team}</sectorIconPath>
+    <featuresIconPath>icons/hud/sectors/sectorIcon{size}RespawnChoice_{team}</featuresIconPath>
+    <featuresName>HUD_SECTOR_MESSAGES_CAN_SWAP_YOUR_PLANES</featuresName>
+    <miniMapSectorIconPath>sectorType{size}Airfield2_{team}</miniMapSectorIconPath>
+    <miniMapFeaturesIconPath>sector{size}IconRespawnChoice_{team}</miniMapFeaturesIconPath>
+    <isNeedToShowTimer>	false	</isNeedToShowTimer>
+    <sectorObjects>
+      <object>	31	</object>
+      <object>	32	</object>
+      <object>	12	</object>
+      <object>	11	</object>
+    </sectorObjects>
+    <descriptionList>
+      <description>HUD_DESCRIPTION_SECTOR_RUNWAY</description>
+      <description>HUD_DESCRIPTION_SECTOR_AIRBASE_1</description>
+      <description>HUD_DESCRIPTION_SECTOR_AIRBASE_2</description>
+      <description>HUD_DESCRIPTION_SECTOR_AIRBASE_3</description>
+    </descriptionList>
+    <isBig>	true	</isBig>
+    <isMulticolorInPermanentLockState>	true	</isMulticolorInPermanentLockState>
+  </hud>
+  <sound>
+    <onCaptureLast>
+      <allyEvent>vo_c_all_airfields_captured</allyEvent>
+    </onCaptureLast>
+    <onCapture>
+      <allyEvent>vo_c_airfield_captured</allyEvent>
+      <enemyEvent>vo_c_airfield_lost</enemyEvent>
+    </onCapture>
+    <onAlarm>
+      <enemyEvent>vo_c_airfield_alarm</enemyEvent>
+      <conditions>	6	</conditions>
+    </onAlarm>
+  </sound>
+  <defenderCounter>
+    <count>	4	<defenderType>LIGHT</defenderType></count>
+    <count>	2	<defenderType>HEAVY</defenderType></count>
+  </defenderCounter>
+</airbase.xml>

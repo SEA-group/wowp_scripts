@@ -320,6 +320,7 @@ class Lobby(GUIWindowAccount):
          'autodetect.apply': self.__settingsAutodetectApply,
          'autodetect.start': self.__settingsAutodetectStart,
          'settings.getMapping': self.__getKeyMapping,
+         'system.getClientTime': self.__getClientTime,
          'browser2.initialize': self.__onBrowser2Initialize,
          'browser2.dispose': self.__onBrowser2Dispose,
          'openExternalBrowser': self.__openExternalBrowser,
@@ -924,9 +925,14 @@ class Lobby(GUIWindowAccount):
 
     def __onMeasurementSystemChanged(self, measurementSystemIndex):
         self.__lobbyCarouselHelper.refreshSelectedPlane()
+        deleteFromCache(EMPTY_IDTYPELIST, 'IPlaneCharacteristicsBoundaries')
         player = self.getPlayer()
         if player is not None:
-            player.resendIfaces(['IMeasurementSystem'], ['mixed', 'client'])
+            player.resendIfaces(['IPlaneCharacteristicsBoundaries',
+             'IShortConfigSpecs',
+             'IInstalledGlobalID',
+             'IConfigSpecs',
+             'IMeasurementSystem'], ['mixed', 'client'])
         return
 
     def onServerDisconnecting(self):
@@ -1452,3 +1458,11 @@ class Lobby(GUIWindowAccount):
 
             del self._planeLoadedSubsciptions[planeID]
         return
+
+    def __getClientTime(self):
+        player = self.getPlayer()
+        if player:
+            currentTime = player.currentTime - player.deltaTimeClientServer
+        else:
+            currentTime = time.time()
+        return currentTime

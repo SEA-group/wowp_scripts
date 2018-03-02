@@ -66,6 +66,14 @@ def isAirStrikeBomber(entity):
     return entity.className == 'Bomber'
 
 
+def isSector(entity):
+    return entity.className == 'ACSector'
+
+
+def isDefender(entity):
+    return isAvatarBot(entity) and hasattr(entity, 'defendSector') and bool(entity.defendSector)
+
+
 class ENTITY_GROUPS:
     UNDEFINED = 0
     DESTRUCTIBLE_OBJECT = 1
@@ -317,7 +325,7 @@ def getEntityPartDataByID(entity, partID, entityData = None):
 
 
 def testGameMode(gameMode, v):
-    return gameMode & 15 == v
+    return gameMode & 255 == v
 
 
 def testGameFlag(gameMode, v):
@@ -325,7 +333,7 @@ def testGameFlag(gameMode, v):
 
 
 def extractGameMode(gameMode):
-    return gameMode & 15
+    return gameMode & 255
 
 
 def filterPivots(pivots, partTypes, slotTypes):

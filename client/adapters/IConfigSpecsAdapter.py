@@ -1,6 +1,6 @@
 # Embedded file name: scripts/client/adapters/IConfigSpecsAdapter.py
 import db
-from Helpers.PerformanceSpecsHelper import getMainCharacteristicBoundariesForPlane
+from Helpers.PerformanceSpecsHelper import getMainCharacteristicBoundariesForPlane, getGlobalCharacteristicBoundaries
 from Helpers.PerformanceSpecsHelper import getPerformanceSpecsTable
 from adapters.DefaultAdapter import DefaultAdapter
 from consts import SPECS_BOUNDARIES, SPECS_KEY_MAP, MAIN_CHARACTERISTICS_LIST, DEFAULT_CHARACTERISTICS_STATE
@@ -81,7 +81,7 @@ class IConfigSpecsAdapter(DefaultAdapter):
 class IPlaneCharacteristicsGlobalBoundariesAdapter(DefaultAdapter):
 
     def __call__(self, account, obList, **kw):
-        return {'boundaries': SPECS_BOUNDARIES}
+        return {'boundaries': {tag:getGlobalCharacteristicBoundaries(tag) for tag in SPECS_BOUNDARIES}}
 
 
 class IPlaneCharacteristicsBoundariesAdapter(DefaultAdapter):

@@ -336,6 +336,7 @@ class ShellController(AvatarControllerBase):
         shellSettings = self.__shellsCommonData[shellIndex]
         if shellType == UPDATABLE_TYPE.BOMB and not isCorrectBombingAngle(self._owner, self._owner.controllers['flightModel'].rotation):
             self._owner.shellsCount[shellIndex] = self._owner.shellsCount[shellIndex] / shellSettings['portion'] * shellSettings['portion']
+            self._owner.onLaunchShell(shellIndex, 0)
             self._launchSequence[shellIndex].clear()
             return
         sequence = self._launchSequence[shellIndex]

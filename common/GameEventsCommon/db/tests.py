@@ -297,6 +297,47 @@ def test_registeredModel():
         model.has('nested') == set(BomberModel.all())
 
 
+def test_filteredInstances():
+
+    class MyModelBase(Model):
+        pass
+
+    class ObjFilterOne:
+
+        def __init__(self, obj, context, backend):
+            self.id = obj.id
+            self.type = obj.type
+            self.name = obj.name
+            self.group = obj.group
+
+    class ObjFilterTwo:
+
+        def __init__(self, obj, context, backend):
+            self.id = obj.id
+            self.type = obj.type
+            self.name = obj.name
+            self.group = obj.group
+
+    class ObjDefault:
+
+        def __init__(self, obj, context, backend):
+            self.id = obj.id
+            self.type = obj.type
+            self.name = obj.name
+            self.group = obj.group
+
+    MyModel = MyModelBase(backend=BundledBackend(modules=['_ge_achievements_epic']), instances=[(ObjFilterOne, {'name': 'marcel'}), (ObjFilterTwo, {'type': 'achievement.reset'}), (ObjDefault, {})])
+    items = list(MyModel.all())
+    raise items or AssertionError
+    for item in items:
+        if not (item.name == 'marcel' and isinstance(item, ObjFilterOne)):
+            raise AssertionError
+        elif not (item.type == 'achievement.reset' and isinstance(item, ObjFilterTwo)):
+            raise AssertionError
+        else:
+            raise isinstance(item, ObjDefault) or AssertionError
+
+
 def test_applyHeaderToAllSubscribers():
     newDB = copy.deepcopy(DB)
     mapping['db'] = newDB

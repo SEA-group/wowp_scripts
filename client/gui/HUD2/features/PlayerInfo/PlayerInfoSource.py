@@ -40,6 +40,7 @@ class PlayerInfoSource(DataSource):
 
     def _setupModel(self, newInfos):
         avatarInfo = self._clientArena.getAvatarInfo(self._playerAvatar.id)
+        self._model.clanName = unicode(avatarInfo.get('clanAbbrev', ''))
         self._model.nickName = unicode(avatarInfo.get('playerName', 'unknown name'))
         self._model.squadIndex = avatarInfo.get('squadID', 0)
         self._model.state = getLogicState(avatarInfo)

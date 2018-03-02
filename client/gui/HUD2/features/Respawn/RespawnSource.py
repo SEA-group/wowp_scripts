@@ -22,10 +22,12 @@ class RespawnSource(DataSource):
         self._db = features.require(Feature.DB_LOGIC)
         self._gameMode = self._clientArena.gameMode
         self._sectors = {}
+        self._availablePlaneTypes = []
         self._clientArena.onNewAvatarsInfo += self._setupModel
         self._clientArena.onUpdatePlayerStats += self._onUpdatePlayerStats
         self._playerAvatar.ePlaneBattleHintDataReceived += self._ePlaneBattleHintDataReceived
         self._gameMode.addEventHandler(AC_EVENTS.BATTLE_EVENT, self._onBattleEvent)
+        self._gameMode.addEventHandler(AC_EVENTS.GLOBAL_COUNTERS_UPDATED, self._onGlobalCountersUpdate)
         self._isNoRespawn = False
         if self._clientArena.isAllServerDataReceived():
             self._setupModel(None)
@@ -39,6 +41,11 @@ class RespawnSource(DataSource):
         self._model.respawnUnlimited = False
         self._isNoRespawn = True
 
+    def _onGlobalCountersUpdate(self, globalCounters, *args, **kwargs):
+        enemyTeamIndex = 1 - self._playerAvatar.teamIndex
+        self._model.allyResp = globalCounters['death_limit'][self._playerAvatar.teamIndex]
+        self._model.enemyResp = globalCounters['death_limit'][enemyTeamIndex]
+
     def _setupModel(self, newInfos):
         self._clientArena.onNewAvatarsInfo -= self._setupModel
         self._playerAvatar.eRescueTimeChanged -= self._updateRespawnTime
@@ -50,11 +57,14 @@ class RespawnSource(DataSource):
         endTime = int(round(self._playerAvatar.rescueTime - BigWorld.player().arenaStartTime))
         self._model.timeToRespawnPossibility = endTime
         self._model.timeToAutoRespawn = endTime + SETTINGS.RESPAWN.AUTO_RESPAWN_TIME
-        self._model.respawnUnlimited = arenaTypeData.gameModeSettings.respawn.unlimited
         self._model.selectedPlaneID = self._playerAvatar.objTypeID
         self._model.spawnSectorID = self._findInitialSpawnSectorID()
+        self._setAvaibleTypes()
         self.setPlanes()
         self._updateRespawnTime()
+
+    def _setAvaibleTypes(self):
+        self._availablePlaneTypes = self.gameMode.arenaTypeData.gameModeSettings.respawn.respawnModel[self._playerAvatar.teamIndex].availablePlaneTypes
 
     def _onUpdatePlayerStats(self, avatarInfo):
         if avatarInfo['avatarID'] == self._playerAvatar.id:
@@ -96,7 +106,7 @@ class RespawnSource(DataSource):
                 endTime = int(self._playerAvatar.rescueTime)
                 if endTime > BigWorld.serverTime():
                     reduceData = {'teamIndex': teamIndex,
-                     'time': self.gameMode.arenaTypeData.gameModeSettings.respawn.respawnStrategySettings.cooldownReduceStep,
+                     'time': self.gameMode.arenaTypeData.gameModeSettings.respawn.respawnModel[teamIndex].respawnStrategySettings.cooldownReduceStep,
                      'localID': localID}
                     self._model.changeRespawnTimeData = reduceData
                     self._model.changeRespawnTimeData = {}
@@ -121,11 +131,18 @@ class RespawnSource(DataSource):
     def setPlanes(self):
         for planeID in self._playerAvatar.availablePlanes:
             data = self._db.getAircraftData(planeID).airplane
-            isPremium = self._db.isPlanePremium(planeID)
-            isElite = planeID in self._playerAvatar.elitePlanes
-            isPrimary = planeID in self._playerAvatar.primaryPlanes
-            planeStatus = PLANE_CLASS.PREMIUM if isPremium else isElite * PLANE_CLASS.ELITE or PLANE_CLASS.REGULAR
-            self._model.planes.append(planeID=planeID, planeNameShort=localizeAirplane(data.name), planeLevel=data.level, iconPath=data.iconPath, planeType=data.planeType, nation=self._db.getNationIDbyName(data.country), planeStatus=planeStatus, isPrimary=isPrimary, typeIconPath=PLANE_TYPE_ICO_PATH.iconHud(data.planeType, planeStatus))
+            if data.planeType in self._availablePlaneTypes:
+                isPremium = self._db.isPlanePremium(planeID)
+                isElite = planeID in self._playerAvatar.elitePlanes
+                isPrimary = planeID in self._playerAvatar.primaryPlanes
+                planeStatus = PLANE_CLASS.PREMIUM if isPremium else isElite * PLANE_CLASS.ELITE or PLANE_CLASS.REGULAR
+                self._model.planes.append(planeID=planeID, planeNameShort=localizeAirplane(data.name), planeLevel=data.level, iconPath=data.iconPath, planeType=data.planeType, nation=self._db.getNationIDbyName(data.country), planeStatus=planeStatus, isPrimary=isPrimary, typeIconPath=PLANE_TYPE_ICO_PATH.iconHud(data.planeType, planeStatus))
+            self._model.availablePlaneTypes = self._getConvertPlanes()
+
+    def _getConvertPlanes(self):
+        planesDict = dict()
+        planesDict['avaiblePlanes'] = self._availablePlaneTypes
+        return planesDict
 
     def _ePlaneBattleHintDataReceived(self, data):
         globalId = data.globalID
@@ -231,6 +248,7 @@ class RespawnSource(DataSource):
     def dispose(self):
         self._gameMode.removeEventHandler(AC_EVENTS.BATTLE_EVENT, self._onBattleEvent)
         self._gameMode.removeEventHandler(AC_EVENTS.SECTOR_STATE_CHANGED, self._onSectorStateChanged)
+        self._gameMode.removeEventHandler(AC_EVENTS.GLOBAL_COUNTERS_UPDATED, self._onGlobalCountersUpdate)
         self._playerAvatar.eRescueTimeChanged -= self._updateRespawnTime
         self._clientArena.onNewAvatarsInfo -= self._setupModel
         self.gameMode.eGameModeReady -= self._setBaseTeamIndex

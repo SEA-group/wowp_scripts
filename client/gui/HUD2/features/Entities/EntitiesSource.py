@@ -104,7 +104,7 @@ class EntitiesSource(DataSource):
             playerName = untypedName
         else:
             playerName = unicode(untypedName, 'utf-8')
-        return self._model.avatars.append(id=id, playerName=playerName, planeGlobalID=globalID, isDefender=bool(avatarInfo.get('defendSector')), isBot=bool(avatarInfo.get('databaseID') == 0), planeType=settings.airplane.planeType, planeName=localizeAirplane(settings.airplane.name), planeLevel=settings.airplane.level, previewIconPath=settings.airplane.previewIconPath, teamIndex=getClientTeamIndex(avatarInfo['teamIndex'], self._playerAvatar.teamIndex), squadIndex=avatarInfo['squadID'], maxHealth=int(ceil(avatarInfo['maxHealth'])), points=avatarInfo['economics']['totalBattlePoints'], inWorld=False, state=getLogicState(avatarInfo), isLost=checkLost(avatarInfo), rankID=currentRankID)
+        return self._model.avatars.append(id=id, clanName=unicode(avatarInfo.get('clanAbbrev', '')), playerName=playerName, planeGlobalID=globalID, isDefender=bool(avatarInfo.get('defendSector')), isBot=bool(avatarInfo.get('databaseID') == 0), planeType=settings.airplane.planeType, planeName=localizeAirplane(settings.airplane.name), planeLevel=settings.airplane.level, previewIconPath=settings.airplane.previewIconPath, teamIndex=getClientTeamIndex(avatarInfo['teamIndex'], self._playerAvatar.teamIndex), squadIndex=avatarInfo['squadID'], maxHealth=int(ceil(avatarInfo['maxHealth'])), points=avatarInfo['economics']['totalBattlePoints'], inWorld=False, state=getLogicState(avatarInfo), isLost=checkLost(avatarInfo), rankID=currentRankID)
 
     def _onUpdatePlayerStats(self, avatarInfo):
         self._updateStateAvatarInfo(avatarInfo)

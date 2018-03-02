@@ -686,7 +686,7 @@ class ClientHangarSpace():
             BWPersonality.g_settings.hangarSpaceSettings['spaceID'] = self.__spaceName
         self.__onLoadedCallback = onSpaceLoadedCallback
         try:
-            self.__spaceMappingId = BigWorld.addSpaceGeometryMapping(self.__spaceId, None, 'spaces/{0}'.format(self.__spaceName))
+            self.__spaceMappingId = BigWorld.addSpaceGeometryMapping(self.__spaceId, None, 'db/spaces/{0}.settings'.format(self.__spaceName))
         except:
             LOG_CURRENT_EXCEPTION()
 
@@ -1147,6 +1147,7 @@ class ClientHangarSpace():
         return
 
     def __selectHangarType(self, hangarSize = 'large', resetCamera = True):
+        LOG_DEBUG('Load hangar: hangar type: ', self.__hangarConfig, hangarSize)
         if hangarSize not in db.DBLogic.g_instance.hangarConfigList[self.__hangarConfig]:
             LOG_ERROR('Load hangar: unknown size', self.__hangarConfig, hangarSize)
             hangarSize = 'large'

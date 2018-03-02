@@ -446,6 +446,7 @@ class TrainingRoomHelper:
         return
 
     def generateMapASList(self, filtersMap):
+        LOG_DEBUG('generateMapASList', filtersMap)
         maps = []
         for mapID in filtersMap['mapFilters']:
             arenaData = db.DBLogic.g_instance.getArenaData(mapID)
@@ -458,6 +459,7 @@ class TrainingRoomHelper:
                 roomMapVO.selectedIcoPath = arenaData.trainingRoomIcoPathSelected
                 roomMapVO.unselectedIcoPath = arenaData.trainingRoomIcoPathUnselected
                 roomMapVO.schemeName = localizeMap(arenaData.trainingRoomSecondName)
+                LOG_DEBUG('generateMapASList', roomMapVO)
                 maps.append(roomMapVO)
 
         return maps
@@ -475,6 +477,7 @@ class TrainingRoomHelper:
 
         flashVO = FlashVO()
         flashVO.maps = self.generateMapASList(filtersMap)
+        LOG_DEBUG('trainingsRoomCreating.setData', filtersMap, flashVO.maps)
         for planeLevelFrom in filtersMap['planesLevelsFrom']:
             flashVO.planesLevelsFrom.append(planeLevelFrom)
 

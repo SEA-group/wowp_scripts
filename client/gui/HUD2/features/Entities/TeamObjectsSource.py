@@ -39,7 +39,10 @@ class TeamObjectsSource:
     def _onTeamObjectAdded(self, teamObject):
         model = self._teamObjects.first(lambda e: e.id.get() == teamObject.id)
         if model is not None:
-            self._createTeamObject_EntitySource(teamObject, model)
+            groupName = self._clientArena.getTeamObjectGroup(teamObject.id)
+            isLock = self._clientArena.gameMode.checkSectorForLock(groupName)
+            if not isLock:
+                self._createTeamObject_EntitySource(teamObject, model)
         return
 
     def _onTeamObjectRemoved(self, teamObject, isLeaveWorld):
@@ -80,9 +83,10 @@ class TeamObjectsSource:
                 inWorld = entity is not None
                 objectType, featureRadius = self._getTypeRadius(objData)
                 position = self._clientArena.alwaysVisibleObjects.getMapEntry(objID).position
+                groupName = self._clientArena.getTeamObjectGroup(objID)
                 settings = objData['settings']
                 model = self._teamObjects.append(id=objID, position={'x': position.x,
-                 'y': position.z}, maxHealth=int(ceil(objData['maxHealth'])), objectType=objectType, featureRadius=float(featureRadius), turretName=settings.turretName, objectName=localizeObject(settings.name), underRocketAttack=self._underRockerAttackScope.get(objID, False))
+                 'y': position.z}, maxHealth=int(ceil(objData['maxHealth'])), objectType=objectType, featureRadius=float(featureRadius), turretName=settings.turretName, objectName=localizeObject(settings.name), groupName=groupName, underRocketAttack=self._underRockerAttackScope.get(objID, False))
                 if inWorld:
                     self._createTeamObject_EntitySource(entity, model)
                 else:

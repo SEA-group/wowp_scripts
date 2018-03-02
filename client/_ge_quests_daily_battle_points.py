@@ -73,6 +73,7 @@ class WEAPON_AIM_TYPE():
 
 DB = Dummy()
 DB.header = Dummy()
+DB.header.activity = []
 DB.header.condition = []
 DB.header.count = []
 DB.header.event = []
@@ -84,6 +85,7 @@ DB.header.nested = Dummy()
 DB.header.nested.subscriber = []
 DB.header.nested.subscriber.insert(0, None)
 DB.header.nested.subscriber[0] = Dummy()
+DB.header.nested.subscriber[0].activity = []
 DB.header.nested.subscriber[0].condition = []
 DB.header.nested.subscriber[0].count = []
 DB.header.nested.subscriber[0].event = []
@@ -101,6 +103,7 @@ DB.header.server.scope.insert(0, None)
 DB.header.server.scope[0] = 'player'
 DB.header.type = 'quest'
 DB.include = Dummy()
+DB.include.activity = []
 DB.include.condition = []
 DB.include.count = []
 DB.include.event = []
@@ -114,6 +117,7 @@ DB.include.nested = Dummy()
 DB.include.nested.subscriber = []
 DB.include.nested.subscriber.insert(0, None)
 DB.include.nested.subscriber[0] = Dummy()
+DB.include.nested.subscriber[0].activity = []
 DB.include.nested.subscriber[0].condition = []
 DB.include.nested.subscriber[0].condition.insert(0, None)
 DB.include.nested.subscriber[0].condition[0] = Dummy()
@@ -139,6 +143,14 @@ DB.include.nested.subscriber[0].condition[0].and_[0].equal[1].context[0] = 'aren
 DB.include.nested.subscriber[0].condition[0].and_[0].equal[1].value_ = []
 DB.include.nested.subscriber[0].condition[0].and_[0].equal[1].value_.insert(0, None)
 DB.include.nested.subscriber[0].condition[0].and_[0].equal[1].value_[0] = 'player'
+DB.include.nested.subscriber[0].condition[0].and_[0].equal.insert(2, None)
+DB.include.nested.subscriber[0].condition[0].and_[0].equal[2] = Dummy()
+DB.include.nested.subscriber[0].condition[0].and_[0].equal[2].context = []
+DB.include.nested.subscriber[0].condition[0].and_[0].equal[2].context.insert(0, None)
+DB.include.nested.subscriber[0].condition[0].and_[0].equal[2].context[0] = 'arena.mode'
+DB.include.nested.subscriber[0].condition[0].and_[0].equal[2].value_ = []
+DB.include.nested.subscriber[0].condition[0].and_[0].equal[2].value_.insert(0, None)
+DB.include.nested.subscriber[0].condition[0].and_[0].equal[2].value_[0] = 'areaconquest'
 DB.include.nested.subscriber[0].condition[0].and_[0].gt = []
 DB.include.nested.subscriber[0].condition[0].and_[0].gte = []
 DB.include.nested.subscriber[0].condition[0].and_[0].id = []
@@ -172,6 +184,7 @@ DB.include.send = []
 DB.subscriber = []
 DB.subscriber.insert(0, None)
 DB.subscriber[0] = Dummy()
+DB.subscriber[0].activity = []
 DB.subscriber[0].client = Dummy()
 DB.subscriber[0].client.description = Dummy()
 DB.subscriber[0].client.description.locale = 'LOBBY_QUESTS_2016_DAILY_008'
@@ -189,6 +202,7 @@ DB.subscriber[0].nested.complete = 'all'
 DB.subscriber[0].nested.subscriber = []
 DB.subscriber[0].nested.subscriber.insert(0, None)
 DB.subscriber[0].nested.subscriber[0] = Dummy()
+DB.subscriber[0].nested.subscriber[0].activity = []
 DB.subscriber[0].nested.subscriber[0].condition = []
 DB.subscriber[0].nested.subscriber[0].condition.insert(0, None)
 DB.subscriber[0].nested.subscriber[0].condition[0] = Dummy()
@@ -268,6 +282,7 @@ DB.subscriber[0].nested.subscriber[0].operation = []
 DB.subscriber[0].nested.subscriber[0].send = []
 DB.subscriber[0].nested.subscriber.insert(1, None)
 DB.subscriber[0].nested.subscriber[1] = Dummy()
+DB.subscriber[0].nested.subscriber[1].activity = []
 DB.subscriber[0].nested.subscriber[1].condition = []
 DB.subscriber[0].nested.subscriber[1].condition.insert(0, None)
 DB.subscriber[0].nested.subscriber[1].condition[0] = Dummy()
@@ -347,6 +362,7 @@ DB.subscriber[0].nested.subscriber[1].operation = []
 DB.subscriber[0].nested.subscriber[1].send = []
 DB.subscriber[0].nested.subscriber.insert(2, None)
 DB.subscriber[0].nested.subscriber[2] = Dummy()
+DB.subscriber[0].nested.subscriber[2].activity = []
 DB.subscriber[0].nested.subscriber[2].condition = []
 DB.subscriber[0].nested.subscriber[2].condition.insert(0, None)
 DB.subscriber[0].nested.subscriber[2].condition[0] = Dummy()
@@ -428,6 +444,7 @@ DB.subscriber[0].operation = []
 DB.subscriber[0].send = []
 DB.subscriber.insert(1, None)
 DB.subscriber[1] = Dummy()
+DB.subscriber[1].activity = []
 DB.subscriber[1].client = Dummy()
 DB.subscriber[1].client.description = Dummy()
 DB.subscriber[1].client.description.locale = 'LOBBY_QUESTS_2016_DAILY_009'
@@ -445,6 +462,7 @@ DB.subscriber[1].nested.complete = 'all'
 DB.subscriber[1].nested.subscriber = []
 DB.subscriber[1].nested.subscriber.insert(0, None)
 DB.subscriber[1].nested.subscriber[0] = Dummy()
+DB.subscriber[1].nested.subscriber[0].activity = []
 DB.subscriber[1].nested.subscriber[0].condition = []
 DB.subscriber[1].nested.subscriber[0].condition.insert(0, None)
 DB.subscriber[1].nested.subscriber[0].condition[0] = Dummy()
@@ -535,6 +553,7 @@ DB.subscriber[1].nested.subscriber[0].operation = []
 DB.subscriber[1].nested.subscriber[0].send = []
 DB.subscriber[1].nested.subscriber.insert(1, None)
 DB.subscriber[1].nested.subscriber[1] = Dummy()
+DB.subscriber[1].nested.subscriber[1].activity = []
 DB.subscriber[1].nested.subscriber[1].condition = []
 DB.subscriber[1].nested.subscriber[1].condition.insert(0, None)
 DB.subscriber[1].nested.subscriber[1].condition[0] = Dummy()
@@ -625,6 +644,7 @@ DB.subscriber[1].nested.subscriber[1].operation = []
 DB.subscriber[1].nested.subscriber[1].send = []
 DB.subscriber[1].nested.subscriber.insert(2, None)
 DB.subscriber[1].nested.subscriber[2] = Dummy()
+DB.subscriber[1].nested.subscriber[2].activity = []
 DB.subscriber[1].nested.subscriber[2].condition = []
 DB.subscriber[1].nested.subscriber[2].condition.insert(0, None)
 DB.subscriber[1].nested.subscriber[2].condition[0] = Dummy()
@@ -717,6 +737,7 @@ DB.subscriber[1].operation = []
 DB.subscriber[1].send = []
 DB.subscriber.insert(2, None)
 DB.subscriber[2] = Dummy()
+DB.subscriber[2].activity = []
 DB.subscriber[2].client = Dummy()
 DB.subscriber[2].client.description = Dummy()
 DB.subscriber[2].client.description.locale = 'LOBBY_QUESTS_2016_DAILY_011'
@@ -734,6 +755,7 @@ DB.subscriber[2].nested.complete = 'all'
 DB.subscriber[2].nested.subscriber = []
 DB.subscriber[2].nested.subscriber.insert(0, None)
 DB.subscriber[2].nested.subscriber[0] = Dummy()
+DB.subscriber[2].nested.subscriber[0].activity = []
 DB.subscriber[2].nested.subscriber[0].condition = []
 DB.subscriber[2].nested.subscriber[0].condition.insert(0, None)
 DB.subscriber[2].nested.subscriber[0].condition[0] = Dummy()
@@ -827,6 +849,7 @@ DB.subscriber[2].nested.subscriber[0].operation = []
 DB.subscriber[2].nested.subscriber[0].send = []
 DB.subscriber[2].nested.subscriber.insert(1, None)
 DB.subscriber[2].nested.subscriber[1] = Dummy()
+DB.subscriber[2].nested.subscriber[1].activity = []
 DB.subscriber[2].nested.subscriber[1].condition = []
 DB.subscriber[2].nested.subscriber[1].condition.insert(0, None)
 DB.subscriber[2].nested.subscriber[1].condition[0] = Dummy()
@@ -920,6 +943,7 @@ DB.subscriber[2].nested.subscriber[1].operation = []
 DB.subscriber[2].nested.subscriber[1].send = []
 DB.subscriber[2].nested.subscriber.insert(2, None)
 DB.subscriber[2].nested.subscriber[2] = Dummy()
+DB.subscriber[2].nested.subscriber[2].activity = []
 DB.subscriber[2].nested.subscriber[2].condition = []
 DB.subscriber[2].nested.subscriber[2].condition.insert(0, None)
 DB.subscriber[2].nested.subscriber[2].condition[0] = Dummy()
@@ -1015,6 +1039,7 @@ DB.subscriber[2].operation = []
 DB.subscriber[2].send = []
 DB.subscriber.insert(3, None)
 DB.subscriber[3] = Dummy()
+DB.subscriber[3].activity = []
 DB.subscriber[3].client = Dummy()
 DB.subscriber[3].client.description = Dummy()
 DB.subscriber[3].client.description.locale = 'LOBBY_QUESTS_2016_DAILY_050'
@@ -1032,6 +1057,7 @@ DB.subscriber[3].nested.complete = 'all'
 DB.subscriber[3].nested.subscriber = []
 DB.subscriber[3].nested.subscriber.insert(0, None)
 DB.subscriber[3].nested.subscriber[0] = Dummy()
+DB.subscriber[3].nested.subscriber[0].activity = []
 DB.subscriber[3].nested.subscriber[0].condition = []
 DB.subscriber[3].nested.subscriber[0].condition.insert(0, None)
 DB.subscriber[3].nested.subscriber[0].condition[0] = Dummy()
@@ -1097,6 +1123,7 @@ DB.subscriber[3].nested.subscriber[0].operation = []
 DB.subscriber[3].nested.subscriber[0].send = []
 DB.subscriber[3].nested.subscriber.insert(1, None)
 DB.subscriber[3].nested.subscriber[1] = Dummy()
+DB.subscriber[3].nested.subscriber[1].activity = []
 DB.subscriber[3].nested.subscriber[1].condition = []
 DB.subscriber[3].nested.subscriber[1].condition.insert(0, None)
 DB.subscriber[3].nested.subscriber[1].condition[0] = Dummy()
@@ -1162,6 +1189,7 @@ DB.subscriber[3].nested.subscriber[1].operation = []
 DB.subscriber[3].nested.subscriber[1].send = []
 DB.subscriber[3].nested.subscriber.insert(2, None)
 DB.subscriber[3].nested.subscriber[2] = Dummy()
+DB.subscriber[3].nested.subscriber[2].activity = []
 DB.subscriber[3].nested.subscriber[2].condition = []
 DB.subscriber[3].nested.subscriber[2].condition.insert(0, None)
 DB.subscriber[3].nested.subscriber[2].condition[0] = Dummy()
@@ -1229,6 +1257,7 @@ DB.subscriber[3].operation = []
 DB.subscriber[3].send = []
 DB.subscriber.insert(4, None)
 DB.subscriber[4] = Dummy()
+DB.subscriber[4].activity = []
 DB.subscriber[4].client = Dummy()
 DB.subscriber[4].client.description = Dummy()
 DB.subscriber[4].client.description.locale = 'LOBBY_QUESTS_2016_DAILY_051'
@@ -1246,6 +1275,7 @@ DB.subscriber[4].nested.complete = 'all'
 DB.subscriber[4].nested.subscriber = []
 DB.subscriber[4].nested.subscriber.insert(0, None)
 DB.subscriber[4].nested.subscriber[0] = Dummy()
+DB.subscriber[4].nested.subscriber[0].activity = []
 DB.subscriber[4].nested.subscriber[0].condition = []
 DB.subscriber[4].nested.subscriber[0].condition.insert(0, None)
 DB.subscriber[4].nested.subscriber[0].condition[0] = Dummy()
@@ -1332,6 +1362,7 @@ DB.subscriber[4].nested.subscriber[0].operation = []
 DB.subscriber[4].nested.subscriber[0].send = []
 DB.subscriber[4].nested.subscriber.insert(1, None)
 DB.subscriber[4].nested.subscriber[1] = Dummy()
+DB.subscriber[4].nested.subscriber[1].activity = []
 DB.subscriber[4].nested.subscriber[1].condition = []
 DB.subscriber[4].nested.subscriber[1].condition.insert(0, None)
 DB.subscriber[4].nested.subscriber[1].condition[0] = Dummy()
@@ -1418,6 +1449,7 @@ DB.subscriber[4].nested.subscriber[1].operation = []
 DB.subscriber[4].nested.subscriber[1].send = []
 DB.subscriber[4].nested.subscriber.insert(2, None)
 DB.subscriber[4].nested.subscriber[2] = Dummy()
+DB.subscriber[4].nested.subscriber[2].activity = []
 DB.subscriber[4].nested.subscriber[2].condition = []
 DB.subscriber[4].nested.subscriber[2].condition.insert(0, None)
 DB.subscriber[4].nested.subscriber[2].condition[0] = Dummy()
@@ -1506,6 +1538,7 @@ DB.subscriber[4].operation = []
 DB.subscriber[4].send = []
 DB.subscriber.insert(5, None)
 DB.subscriber[5] = Dummy()
+DB.subscriber[5].activity = []
 DB.subscriber[5].client = Dummy()
 DB.subscriber[5].client.description = Dummy()
 DB.subscriber[5].client.description.locale = 'LOBBY_QUESTS_2016_DAILY_052'
@@ -1523,6 +1556,7 @@ DB.subscriber[5].nested.complete = 'all'
 DB.subscriber[5].nested.subscriber = []
 DB.subscriber[5].nested.subscriber.insert(0, None)
 DB.subscriber[5].nested.subscriber[0] = Dummy()
+DB.subscriber[5].nested.subscriber[0].activity = []
 DB.subscriber[5].nested.subscriber[0].condition = []
 DB.subscriber[5].nested.subscriber[0].condition.insert(0, None)
 DB.subscriber[5].nested.subscriber[0].condition[0] = Dummy()
@@ -1609,6 +1643,7 @@ DB.subscriber[5].nested.subscriber[0].operation = []
 DB.subscriber[5].nested.subscriber[0].send = []
 DB.subscriber[5].nested.subscriber.insert(1, None)
 DB.subscriber[5].nested.subscriber[1] = Dummy()
+DB.subscriber[5].nested.subscriber[1].activity = []
 DB.subscriber[5].nested.subscriber[1].condition = []
 DB.subscriber[5].nested.subscriber[1].condition.insert(0, None)
 DB.subscriber[5].nested.subscriber[1].condition[0] = Dummy()
@@ -1695,6 +1730,7 @@ DB.subscriber[5].nested.subscriber[1].operation = []
 DB.subscriber[5].nested.subscriber[1].send = []
 DB.subscriber[5].nested.subscriber.insert(2, None)
 DB.subscriber[5].nested.subscriber[2] = Dummy()
+DB.subscriber[5].nested.subscriber[2].activity = []
 DB.subscriber[5].nested.subscriber[2].condition = []
 DB.subscriber[5].nested.subscriber[2].condition.insert(0, None)
 DB.subscriber[5].nested.subscriber[2].condition[0] = Dummy()
@@ -1783,6 +1819,7 @@ DB.subscriber[5].operation = []
 DB.subscriber[5].send = []
 DB.subscriber.insert(6, None)
 DB.subscriber[6] = Dummy()
+DB.subscriber[6].activity = []
 DB.subscriber[6].client = Dummy()
 DB.subscriber[6].client.description = Dummy()
 DB.subscriber[6].client.description.locale = 'LOBBY_QUESTS_2016_DAILY_053'
@@ -1800,6 +1837,7 @@ DB.subscriber[6].nested.complete = 'all'
 DB.subscriber[6].nested.subscriber = []
 DB.subscriber[6].nested.subscriber.insert(0, None)
 DB.subscriber[6].nested.subscriber[0] = Dummy()
+DB.subscriber[6].nested.subscriber[0].activity = []
 DB.subscriber[6].nested.subscriber[0].condition = []
 DB.subscriber[6].nested.subscriber[0].condition.insert(0, None)
 DB.subscriber[6].nested.subscriber[0].condition[0] = Dummy()
@@ -1886,6 +1924,7 @@ DB.subscriber[6].nested.subscriber[0].operation = []
 DB.subscriber[6].nested.subscriber[0].send = []
 DB.subscriber[6].nested.subscriber.insert(1, None)
 DB.subscriber[6].nested.subscriber[1] = Dummy()
+DB.subscriber[6].nested.subscriber[1].activity = []
 DB.subscriber[6].nested.subscriber[1].condition = []
 DB.subscriber[6].nested.subscriber[1].condition.insert(0, None)
 DB.subscriber[6].nested.subscriber[1].condition[0] = Dummy()
@@ -1972,6 +2011,7 @@ DB.subscriber[6].nested.subscriber[1].operation = []
 DB.subscriber[6].nested.subscriber[1].send = []
 DB.subscriber[6].nested.subscriber.insert(2, None)
 DB.subscriber[6].nested.subscriber[2] = Dummy()
+DB.subscriber[6].nested.subscriber[2].activity = []
 DB.subscriber[6].nested.subscriber[2].condition = []
 DB.subscriber[6].nested.subscriber[2].condition.insert(0, None)
 DB.subscriber[6].nested.subscriber[2].condition[0] = Dummy()
@@ -2060,6 +2100,7 @@ DB.subscriber[6].operation = []
 DB.subscriber[6].send = []
 DB.subscriber.insert(7, None)
 DB.subscriber[7] = Dummy()
+DB.subscriber[7].activity = []
 DB.subscriber[7].client = Dummy()
 DB.subscriber[7].client.description = Dummy()
 DB.subscriber[7].client.description.locale = 'LOBBY_QUESTS_2016_DAILY_054'
@@ -2077,6 +2118,7 @@ DB.subscriber[7].nested.complete = 'all'
 DB.subscriber[7].nested.subscriber = []
 DB.subscriber[7].nested.subscriber.insert(0, None)
 DB.subscriber[7].nested.subscriber[0] = Dummy()
+DB.subscriber[7].nested.subscriber[0].activity = []
 DB.subscriber[7].nested.subscriber[0].condition = []
 DB.subscriber[7].nested.subscriber[0].condition.insert(0, None)
 DB.subscriber[7].nested.subscriber[0].condition[0] = Dummy()
@@ -2163,6 +2205,7 @@ DB.subscriber[7].nested.subscriber[0].operation = []
 DB.subscriber[7].nested.subscriber[0].send = []
 DB.subscriber[7].nested.subscriber.insert(1, None)
 DB.subscriber[7].nested.subscriber[1] = Dummy()
+DB.subscriber[7].nested.subscriber[1].activity = []
 DB.subscriber[7].nested.subscriber[1].condition = []
 DB.subscriber[7].nested.subscriber[1].condition.insert(0, None)
 DB.subscriber[7].nested.subscriber[1].condition[0] = Dummy()
@@ -2249,6 +2292,7 @@ DB.subscriber[7].nested.subscriber[1].operation = []
 DB.subscriber[7].nested.subscriber[1].send = []
 DB.subscriber[7].nested.subscriber.insert(2, None)
 DB.subscriber[7].nested.subscriber[2] = Dummy()
+DB.subscriber[7].nested.subscriber[2].activity = []
 DB.subscriber[7].nested.subscriber[2].condition = []
 DB.subscriber[7].nested.subscriber[2].condition.insert(0, None)
 DB.subscriber[7].nested.subscriber[2].condition[0] = Dummy()
@@ -2337,6 +2381,7 @@ DB.subscriber[7].operation = []
 DB.subscriber[7].send = []
 DB.subscriber.insert(8, None)
 DB.subscriber[8] = Dummy()
+DB.subscriber[8].activity = []
 DB.subscriber[8].client = Dummy()
 DB.subscriber[8].client.description = Dummy()
 DB.subscriber[8].client.description.locale = 'LOBBY_QUESTS_2016_DAILY_060'
@@ -2354,6 +2399,7 @@ DB.subscriber[8].nested.complete = 'all'
 DB.subscriber[8].nested.subscriber = []
 DB.subscriber[8].nested.subscriber.insert(0, None)
 DB.subscriber[8].nested.subscriber[0] = Dummy()
+DB.subscriber[8].nested.subscriber[0].activity = []
 DB.subscriber[8].nested.subscriber[0].condition = []
 DB.subscriber[8].nested.subscriber[0].condition.insert(0, None)
 DB.subscriber[8].nested.subscriber[0].condition[0] = Dummy()
@@ -2433,6 +2479,7 @@ DB.subscriber[8].nested.subscriber[0].operation = []
 DB.subscriber[8].nested.subscriber[0].send = []
 DB.subscriber[8].nested.subscriber.insert(1, None)
 DB.subscriber[8].nested.subscriber[1] = Dummy()
+DB.subscriber[8].nested.subscriber[1].activity = []
 DB.subscriber[8].nested.subscriber[1].condition = []
 DB.subscriber[8].nested.subscriber[1].condition.insert(0, None)
 DB.subscriber[8].nested.subscriber[1].condition[0] = Dummy()
@@ -2512,6 +2559,7 @@ DB.subscriber[8].nested.subscriber[1].operation = []
 DB.subscriber[8].nested.subscriber[1].send = []
 DB.subscriber[8].nested.subscriber.insert(2, None)
 DB.subscriber[8].nested.subscriber[2] = Dummy()
+DB.subscriber[8].nested.subscriber[2].activity = []
 DB.subscriber[8].nested.subscriber[2].condition = []
 DB.subscriber[8].nested.subscriber[2].condition.insert(0, None)
 DB.subscriber[8].nested.subscriber[2].condition[0] = Dummy()
@@ -2593,6 +2641,7 @@ DB.subscriber[8].operation = []
 DB.subscriber[8].send = []
 DB.subscriber.insert(9, None)
 DB.subscriber[9] = Dummy()
+DB.subscriber[9].activity = []
 DB.subscriber[9].client = Dummy()
 DB.subscriber[9].client.description = Dummy()
 DB.subscriber[9].client.description.locale = 'LOBBY_QUESTS_2017_DAILY_004'
@@ -2610,6 +2659,7 @@ DB.subscriber[9].nested.complete = 'all'
 DB.subscriber[9].nested.subscriber = []
 DB.subscriber[9].nested.subscriber.insert(0, None)
 DB.subscriber[9].nested.subscriber[0] = Dummy()
+DB.subscriber[9].nested.subscriber[0].activity = []
 DB.subscriber[9].nested.subscriber[0].condition = []
 DB.subscriber[9].nested.subscriber[0].condition.insert(0, None)
 DB.subscriber[9].nested.subscriber[0].condition[0] = Dummy()
@@ -2714,6 +2764,7 @@ DB.subscriber[9].nested.subscriber[0].operation = []
 DB.subscriber[9].nested.subscriber[0].send = []
 DB.subscriber[9].nested.subscriber.insert(1, None)
 DB.subscriber[9].nested.subscriber[1] = Dummy()
+DB.subscriber[9].nested.subscriber[1].activity = []
 DB.subscriber[9].nested.subscriber[1].condition = []
 DB.subscriber[9].nested.subscriber[1].condition.insert(0, None)
 DB.subscriber[9].nested.subscriber[1].condition[0] = Dummy()
@@ -2818,6 +2869,7 @@ DB.subscriber[9].nested.subscriber[1].operation = []
 DB.subscriber[9].nested.subscriber[1].send = []
 DB.subscriber[9].nested.subscriber.insert(2, None)
 DB.subscriber[9].nested.subscriber[2] = Dummy()
+DB.subscriber[9].nested.subscriber[2].activity = []
 DB.subscriber[9].nested.subscriber[2].condition = []
 DB.subscriber[9].nested.subscriber[2].condition.insert(0, None)
 DB.subscriber[9].nested.subscriber[2].condition[0] = Dummy()
@@ -2924,6 +2976,7 @@ DB.subscriber[9].operation = []
 DB.subscriber[9].send = []
 DB.subscriber.insert(10, None)
 DB.subscriber[10] = Dummy()
+DB.subscriber[10].activity = []
 DB.subscriber[10].client = Dummy()
 DB.subscriber[10].client.description = Dummy()
 DB.subscriber[10].client.description.locale = 'LOBBY_QUESTS_2017_DAILY_005'
@@ -2941,6 +2994,7 @@ DB.subscriber[10].nested.complete = 'all'
 DB.subscriber[10].nested.subscriber = []
 DB.subscriber[10].nested.subscriber.insert(0, None)
 DB.subscriber[10].nested.subscriber[0] = Dummy()
+DB.subscriber[10].nested.subscriber[0].activity = []
 DB.subscriber[10].nested.subscriber[0].condition = []
 DB.subscriber[10].nested.subscriber[0].condition.insert(0, None)
 DB.subscriber[10].nested.subscriber[0].condition[0] = Dummy()
@@ -3047,6 +3101,7 @@ DB.subscriber[10].nested.subscriber[0].operation = []
 DB.subscriber[10].nested.subscriber[0].send = []
 DB.subscriber[10].nested.subscriber.insert(1, None)
 DB.subscriber[10].nested.subscriber[1] = Dummy()
+DB.subscriber[10].nested.subscriber[1].activity = []
 DB.subscriber[10].nested.subscriber[1].condition = []
 DB.subscriber[10].nested.subscriber[1].condition.insert(0, None)
 DB.subscriber[10].nested.subscriber[1].condition[0] = Dummy()
@@ -3153,6 +3208,7 @@ DB.subscriber[10].nested.subscriber[1].operation = []
 DB.subscriber[10].nested.subscriber[1].send = []
 DB.subscriber[10].nested.subscriber.insert(2, None)
 DB.subscriber[10].nested.subscriber[2] = Dummy()
+DB.subscriber[10].nested.subscriber[2].activity = []
 DB.subscriber[10].nested.subscriber[2].condition = []
 DB.subscriber[10].nested.subscriber[2].condition.insert(0, None)
 DB.subscriber[10].nested.subscriber[2].condition[0] = Dummy()

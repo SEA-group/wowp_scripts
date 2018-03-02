@@ -8,6 +8,14 @@ from economics.EconomicsConfigParser import getConfig, TYPE_FIELD, ID_FIELD, TEX
 from economics.EconomicsConfigParser import PROCESSOR_SUBTYPES
 from operator import itemgetter
 from debug_utils import LOG_DEBUG
+from gui.HUD2.features.battleEvent.BattleLogSource import BattleLogSource
+from gui.HUD2.features.CombatLog.CombatLogSource import CombatLogSource
+
+class MODEL_VIEWS_MAP:
+    BATTLE_LOG = BattleLogSource.__name__
+    COMBAT_LOG = CombatLogSource.__name__
+    ALL = (BATTLE_LOG, COMBAT_LOG)
+
 
 class ClientEconomic(EventDispatcher, GameServiceBase):
     """
@@ -17,13 +25,13 @@ class ClientEconomic(EventDispatcher, GameServiceBase):
 
     def __init__(self):
         super(ClientEconomic, self).__init__()
-        self._modelView = None
+        self._modelViews = {}
         self._clientArena = None
         self._totalExp = None
         self._battlePoints = None
         self._shouldResetNewLine = False
-        self._config = {conf[PARAMS_FIELD][ID_FIELD]:conf for conf in getConfig()}
-        self._damageHandler = DamageHandler(self._config)
+        self._config = None
+        self._damageHandler = None
         return
 
     def init(self, gameEnvironment):
@@ -34,15 +42,26 @@ class ClientEconomic(EventDispatcher, GameServiceBase):
         self.__eventManager = EventManager()
         self.onUpdateBattlePoints = Event(self.__eventManager)
 
+    def initConfiguration(self):
+        gameModeEnum = self._clientArena.gameModeEnum
+        self._config = {conf[PARAMS_FIELD][ID_FIELD]:conf for conf in getConfig(gameModeEnum)}
+        self._damageHandler = DamageHandler(self._config)
+
     def assignModelView(self, modelView):
-        self._modelView = modelView
+        if not modelView:
+            self._modelViews = {}
+            return
+        modelViewName = modelView.__class__.__name__
+        if modelViewName not in MODEL_VIEWS_MAP.ALL:
+            return
+        self._modelViews[modelViewName] = modelView
         self._refreshModelViewPoints()
 
     def destroy(self):
         super(ClientEconomic, self).destroy()
         self._damageHandler.destroy()
         self._damageHandler = None
-        self._modelView = None
+        self._modelViews = {}
         self._clientArena = None
         return
 
@@ -53,6 +72,28 @@ class ClientEconomic(EventDispatcher, GameServiceBase):
     @property
     def battlePoints(self):
         return self._battlePoints
+
+    def onCombatEvents(self, events):
+        combatEvents = list()
+        authorId = events[0]
+        combats = events[1]
+        for eventData in combats:
+            eventId = eventData[0]
+            eventConfig = self._config[eventId][PARAMS_FIELD]
+            isKill = self._config[eventId][TYPE_FIELD] == 'Kill'
+            isAssist = self._config[eventId][TYPE_FIELD] == 'Assist'
+            if (isKill or isAssist) and REWARD_FIELD in eventConfig:
+                victimId = eventData[1]
+                isPlayer = BigWorld.player().id == authorId
+                reward = eventConfig[REWARD_FIELD] if isPlayer else 0
+                combatEvents.append({'eventId': eventId,
+                 'killerId': authorId,
+                 'victimId': victimId,
+                 'points': reward})
+
+        modelView = self._modelViews[MODEL_VIEWS_MAP.COMBAT_LOG]
+        modelView.refresh(None, None, combatEvents)
+        return
 
     def onEconomicEvents(self, events):
         viewEvents = list()
@@ -128,8 +169,8 @@ class ClientEconomic(EventDispatcher, GameServiceBase):
                      'icon': icon})
                     LOG_DEBUG('ECOVIEW: eventType = {0}, text {1} :: totalExp{2}'.format(EconomicsModelView.SPECIAL_EVENT_TYPE, text, self._totalExp))
 
-        if self._modelView:
-            self._modelView.refresh(self._battlePoints, self._totalExp, viewEvents)
+        modelView = self._modelViews[MODEL_VIEWS_MAP.BATTLE_LOG]
+        modelView.refresh(self._battlePoints, self._totalExp, viewEvents)
         self.onUpdateBattlePoints(self._battlePoints, self._totalExp)
         return
 
@@ -145,5 +186,6 @@ class ClientEconomic(EventDispatcher, GameServiceBase):
         return updateViewData
 
     def _refreshModelViewPoints(self):
-        if self._modelView:
-            self._modelView.refresh(self.battlePoints, self.experience, [])
+        for modelViewName in MODEL_VIEWS_MAP.ALL:
+            if modelViewName in self._modelViews.keys():
+                self._modelViews[modelViewName].refresh(self.battlePoints, self.experience, [])

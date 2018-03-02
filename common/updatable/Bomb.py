@@ -155,31 +155,19 @@ class Bomb(UpdatableObjectBase):
         collisionTime = self._getCurrentTime()
         prevPos = self.__calcPos(max(0, collisionTime - SERVER_TICK_LENGTH * Bomb.CLIENT_COLLISION_EXPANDING))
         position = self.__calcPos(collisionTime + SERVER_TICK_LENGTH * Bomb.CLIENT_COLLISION_EXPANDING)
-        terrainCollider = self.getTerrainCollider(prevPos, position)
+        terrainCollider = BigWorld.hm_collideSimple(self._owner.spaceID, prevPos, position)
         objCollider = self.getObjectCollider(prevPos, position)
-        if terrainCollider and objCollider:
-            if (self.position - terrainCollider[0]).length > (self.position - objCollider[0]).length:
-                return terrainCollider
-            else:
-                return (objCollider[0], 'object')
-        else:
-            if terrainCollider:
-                return terrainCollider
-            if objCollider:
-                return (objCollider[0], 'object')
-
-    def getTerrainCollider(self, p1, p2):
-        """
-        Try to find collision with ground or water between previous and current bomb's positions
-        @return:
-        (collisionPosition, materialName) or
-        None - when no collision
-        """
-        terrainCollider = BigWorld.hm_collideSimple(self._owner.spaceID, p1, p2)
         if terrainCollider:
-            return (terrainCollider[0], db.DBLogic.g_instance.getMaterialName(terrainCollider[1]))
-        else:
-            return None
+            if objCollider:
+                if (self.position - terrainCollider[0]).length > (self.position - objCollider[0]).length:
+                    return (terrainCollider[0], db.DBLogic.g_instance.getMaterialName(terrainCollider[1]))
+                else:
+                    return (objCollider[0], 'object')
+            else:
+                return (terrainCollider[0], db.DBLogic.g_instance.getMaterialName(terrainCollider[1]))
+        elif objCollider:
+            return (objCollider[0], 'object')
+        return None
 
     def getObjectCollider(self, p1, p2):
         """
@@ -196,7 +184,7 @@ class Bomb(UpdatableObjectBase):
             return None
 
     def __updateServerCollisions(self):
-        terrainCollider = self.getTerrainCollider(self.prevPos, self.position)
+        terrainCollider = BigWorld.hm_collideSimple(self._owner.spaceID, self.prevPos, self.position)
         objCollider = self.getObjectCollider(self.prevPos, self.position)
         if terrainCollider and objCollider:
             if (self.position - terrainCollider[0]).length > (self.position - objCollider[0]).length:

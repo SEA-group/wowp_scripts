@@ -11,7 +11,7 @@ from HelperFunctions import wowpRound
 from Helpers.cache import getFromCache
 from Helpers.i18n import localizeLobby
 from SkillsHelper import calculateCommonAndImprovedSkillValue
-from consts import CHARACTERISTICS_LOCALIZATION_MAP, AIRCRAFT_CHARACTERISTIC, CHARACTERISTICS_HINTS_MAP, SPECS_KEY_MAP, SPECS_BOUNDARIES, MAIN_CHARACTERISTICS_LIST, ADDITIONAL_CHARACTERISTICS_PARENTS_MAP
+from consts import CHARACTERISTICS_LOCALIZATION_MAP, AIRCRAFT_CHARACTERISTIC, CHARACTERISTICS_HINTS_MAP, SPECS_KEY_MAP, SPECS_BOUNDARIES, MAIN_CHARACTERISTICS_LIST, ADDITIONAL_CHARACTERISTICS_PARENTS_MAP, MEASUREMENT_SYSTEMS
 from gui.Scaleform.utils.MeasurementSystem import MeasurementSystem
 
 class ProjectileInfo(object):
@@ -266,6 +266,15 @@ def getGroupedDescriptionFields(descriptionList):
 
 def getMainCharacteristicBoundariesForPlane(planeID, tag):
     minValue, maxValue = db.DBLogic.g_instance.getPlaneMinMaxSpec(planeID, tag)
+    return adjustBoundaries(minValue, maxValue, tag)
+
+
+def getGlobalCharacteristicBoundaries(tag):
+    minValue, maxValue = SPECS_BOUNDARIES[tag]
+    return adjustBoundaries(minValue, maxValue, tag)
+
+
+def adjustBoundaries(minValue, maxValue, tag):
     minValue, _, _ = _adjustSpec(minValue, tag)
     maxValue, _, _ = _adjustSpec(maxValue, tag)
     return (minValue, maxValue)

@@ -69,13 +69,10 @@ class GameEnvironment():
         self.eGetPlanesCharacteristics = Event(self.__em)
         self.eSetUsersChatStatus = Event(self.__em)
         self.eSetChatMute = Event(self.__em)
-        self.eGetTargetsFromFlash = Event(self.__em)
         self.eAllIntreClosed = Event(self.__em)
         self.eTogglePromoHUD = Event(self.__em)
         self.ePlayerGunnerChangedTurret = Event(self.__em)
         self.eTurretEndCritTimeChange = Event(self.__em)
-        self.eShowHint = Event(self.__em)
-        self.eDisableStartHint = Event(self.__em)
         return
 
     def __del__(self):
@@ -110,6 +107,7 @@ class GameEnvironment():
         hints = self.__services['BattleHints']
         replay = BattleReplay.g_replay
         self.__linkPreWorldEvent(clientArena.onEconomicEvents, economics.onEconomicEvents)
+        self.__linkPreWorldEvent(clientArena.onCombatEvents, economics.onCombatEvents)
         self.__linkPreWorldEvent(clientArena.onNewAvatarsInfo, self.eAvatarInfo)
         self.__linkPreWorldEvent(clientArena.onReceiveMarkerMessage, audio.ui.onReceiveMarkerMessage)
         self.__linkPreWorldEvent(clientArena.onTeamObjectDestruction, self.__playerAvatar.reportTeamObjectDestruction)
@@ -118,6 +116,7 @@ class GameEnvironment():
         self.__linkPreWorldEvent(self.__playerAvatar.eEnterWorldEvent, self.__onEnterWorld)
         self.__linkPreWorldEvent(self.__playerAvatar.eEnterWorldEvent, clientArena.initArenaData)
         self.__linkPreWorldEvent(self.__playerAvatar.eEnterWorldEvent, clientArena.createGameMode)
+        self.__linkPreWorldEvent(self.__playerAvatar.eEnterWorldEvent, economics.initConfiguration)
         self.__linkPreWorldEvent(self.__playerAvatar.eEnterWorldEvent, audio.onPlayerEnterWorld)
         self.__linkPreWorldEvent(self.__playerAvatar.eEnterWorldEvent, replay.onEnterWorld)
         self.__linkPreWorldEvent(self.__playerAvatar.eLeaveWorldEvent, audio.onPlayerLeaveWorld)
@@ -265,6 +264,13 @@ class GameEnvironment():
         self.__unlinkEvents()
         for s in self.__services.values():
             s.doLeaveWorld()
+
+    def destroyService(self, serviceName):
+        s = self.__services.get(serviceName)
+        if s is not None:
+            s.destroy()
+            del self.__services[serviceName]
+        return
 
     def __destroyServices(self):
         self.__unlinkPreWorldEvents()

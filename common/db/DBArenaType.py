@@ -14,18 +14,20 @@ from DBBaseClass import DBBaseClass
 from DBSpawnGroup import DBSpawnGroup
 from DBAreaConquest import Sectors
 from DBAreaConquest.GMSettings.ArenaGameModeSettingsModel import ArenaGameModeSettingsModel
+from consts import GAME_MODE, GAME_MODE_PATH_NAMES
 if IS_CLIENT:
     from Helpers import i18n
 
 class ArenaType(DBBaseClass):
 
-    def __init__(self, typeID, fileName, data):
+    def __init__(self, typeID, fileName, data, isArenaHidden = False):
         DBBaseClass.__init__(self, typeID, fileName)
-        self.geometry, self.geometryName, self.spaceBoundsNames = self.readGeometryData(data)
+        self.settings, self.geometry, self.geometryName, self.spaceBoundsNames = self.readGeometryData(data)
         self.__arenaObjects = ArenaObjects(self.geometryName, self.spaceBoundsNames)
         self.__bounds = None
         self._textureMaterials = {}
         self.sectors = Sectors.Sectors()
+        self.__isArenaHidden = isArenaHidden
         self._gameModeSettings = None
         if IS_BASEAPP:
             self.objectGroups = ObjectGroups()
@@ -36,7 +38,15 @@ class ArenaType(DBBaseClass):
         self.camouflageArenaTypeID = CAMOUFLAGE_ARENA_TYPE.getValueByName(self.camouflageArenaType)
         if not self.camouflageArenaTypeID:
             self.__raiseWrongXml("wrong 'camouflageArenaType' value %s" % self.camouflageArenaType)
+        if IS_BASEAPP:
+            import _battle_entry_points
+            if not self.battleEntryPoint or not all((battleEntryPoint in _battle_entry_points.EntryPoints for battleEntryPoint in self.battleEntryPoint)):
+                self.__raiseWrongXml("wrong 'battleEntryPoint' value")
         return
+
+    @property
+    def isArenaHidden(self):
+        return self.__isArenaHidden
 
     @property
     def bounds(self):
@@ -64,7 +74,7 @@ class ArenaType(DBBaseClass):
         return self.__arenaObjects.getTeamObjectData(objID)
 
     def __parseBounds(self, geometry):
-        terrain = ResMgr.openSection(geometry + '/space.settings/terrain', False)
+        terrain = ResMgr.openSection(geometry + '/terrain.xml/terrain', False)
         if terrain:
             numChunks = terrain.readInt('numChunks', 1)
             numChunksPerSide = math.sqrt(numChunks)
@@ -77,8 +87,8 @@ class ArenaType(DBBaseClass):
             normalize = lambda x: x * 100.0
             self.__bounds = ((normalize(minX), normalize(minY)), (normalize(maxX), normalize(maxY)))
 
-    def __parseSpaceScripts(self, geometry):
-        scriptsSection = ResMgr.openSection(geometry + '/space.settings/spaceScripts', False)
+    def __parseSpaceScripts(self, settings):
+        scriptsSection = ResMgr.openSection(settings + '/spaceScripts', False)
         if scriptsSection:
             self.spaceScripts = scriptsSection.readStrings('scrips')
         else:
@@ -98,17 +108,19 @@ class ArenaType(DBBaseClass):
             spawnGroupData = findSection(data, 'spawnGroup')
             if spawnGroupData:
                 self.__spawnGroupDescription = DBSpawnGroup(spawnGroupData)
+            readValue(self, data, 'gameType', 'SaD')
+            gameModeEnum = GAME_MODE.NAME_TO_MODE.get(self.gameType, GAME_MODE.AREA_CONQUEST)
+            self._readGameModeSettings(data)
             sectorData = findSection(data, 'sectors')
             if sectorData:
-                self.sectors.fillSectorData(sectorData)
-            self.sectors.convertPoints(self.arenaObjects.getPointPosition)
-            self._readGameModeSettings(data)
+                self.sectors.fillSectorData(sectorData, GAME_MODE_PATH_NAMES.MODE_TO_PATH[gameModeEnum])
+                self.sectors.convertPoints(self.arenaObjects.getPointPosition)
             if IS_CLIENT:
                 self._readHudSectorsSettings(data)
             readValue(self, data, 'camouflageArenaType', '')
             readValue(self, data, 'hudIcoPath', '')
             self.__parseBounds(self.geometry)
-            self.__parseSpaceScripts(self.geometry)
+            self.__parseSpaceScripts(self.settings)
             readValue(self, data, 'minPlayersInTeam', 0)
             self.trainingRoomIcoPathSelected = data.readString('trainingRoomIcoPath/selected', '')
             self.trainingRoomIcoPathUnselected = data.readString('trainingRoomIcoPath/unselected', '')
@@ -132,7 +144,6 @@ class ArenaType(DBBaseClass):
             self.boundingBox = (bottomLeft, upperRight)
             readValue(self, data, 'isPvEReady', True)
             readValue(self, data, 'visibleEnable', 1)
-            readValue(self, data, 'gameType', 'SaD')
             readValue(self, data, 'minPlayerCount', 0)
             readValue(self, data, 'selectionPriority', 0)
             readValue(self, data, 'minAircraftLevel', 1)
@@ -170,6 +181,7 @@ class ArenaType(DBBaseClass):
                 self.waterFreqZ = data.readFloat('water/freqZ', 1.0)
             if IS_BASEAPP:
                 readValue(self, data, 'kickAfterFinishWaitTime', 0)
+                readValue(self, data, 'battleEntryPoint', '', True)
                 if self.kickAfterFinishWaitTime < 0:
                     self.__raiseWrongXml("wrong 'kickAfterFinishWaitTime' value")
                 readValue(self, data, 'arenaStartDelay', 0)
@@ -184,7 +196,7 @@ class ArenaType(DBBaseClass):
                 if selectGroups:
                     self.objectGroups.readSpawnSequence(selectGroups)
             if IS_CLIENT:
-                weatherPath = self.geometry + '/space.settings/weatherSettings/'
+                weatherPath = self.settings + '/weatherSettings/'
                 weatherData = ResMgr.openSection(weatherPath)
                 if weatherData:
                     self.weatherWindSpeed = weatherData.readVector2('windSpeed')
@@ -224,14 +236,22 @@ class ArenaType(DBBaseClass):
         @return: Geometry path, geometry name, space bounds idents
         @rtype: (basestring, basestring, (basestring, basestring))
         """
-        geometryPath = section['geometry'].asString
+        settings = section['space'].asString
+        LOG_INFO('readGeometryData: settings = ', settings)
+        settings_section = ResMgr.openSection(settings)
+        LOG_INFO('readGeometryData: settings_section = ', settings_section)
+        geometryPath = settings_section['geometry'].asString
+        LOG_INFO('readGeometryData: geometry = ', geometryPath)
         geometryName = geometryPath.rsplit('/')[-1]
         boundsNames = (OBJECT_IDENT_EMPTY, OBJECT_IDENT_EMPTY)
         if section.has_key('spaceBounds'):
             boundsNames = section['spaceBounds'].readStrings('vertex') or boundsNames
         boundsCount = len(boundsNames)
         raise boundsCount == 2 or AssertionError('Expected 2 SpaceBound, {0} got: {1}'.format(boundsCount, boundsNames))
-        return (geometryPath, geometryName, boundsNames)
+        return (settings,
+         geometryPath,
+         geometryName,
+         boundsNames)
 
     def _readGameModeSettings(self, data):
         self._gameModeSettings = ArenaGameModeSettingsModel()

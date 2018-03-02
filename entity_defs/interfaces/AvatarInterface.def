@@ -220,6 +220,10 @@
       <Type>	INT8	</Type>
       <Flags>ALL_CLIENTS</Flags>
     </teamIndex>
+    <aircraftClass>
+      <Type>	INT8	</Type>
+      <Flags>CELL_PUBLIC</Flags>
+    </aircraftClass>
     <battleDuration>
       <Type>INT16</Type>
       <Flags>OWN_CLIENT</Flags>
@@ -325,7 +329,7 @@
       <Flags>CELL_PRIVATE</Flags>
     </normalPosition>
     <gameMode>
-      <Type>	INT8	</Type>
+      <Type>INT16</Type>
       <Flags>OWN_CLIENT</Flags>
     </gameMode>
     <shellsInitialCount>
@@ -336,6 +340,11 @@
       <Type>ARRAY<of>UINT8</of></Type>
       <Flags>ALL_CLIENTS</Flags>
     </shellsCount>
+    <reconnected>
+      <Type>	BOOL	</Type>
+      <Flags>OWN_CLIENT</Flags>
+      <Default>False</Default>
+    </reconnected>
     <ammoBelts>
       <Type>ARRAY<of>KEY_VALUE_PAIR_STRING_UINT16</of></Type>
       <Flags>OWN_CLIENT</Flags>
@@ -575,6 +584,9 @@
     <setArenaStartTime>
       <Arg>FLOAT32</Arg>
     </setArenaStartTime>
+    <setReconnected>
+      <Arg>	BOOL	</Arg>
+    </setReconnected>
     <useConsumable>
       <Exposed>OWN_CLIENT</Exposed>
       <Arg>	INT8	</Arg>

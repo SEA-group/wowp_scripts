@@ -1,0 +1,594 @@
+<config_econom_aw.xml>
+  <events>
+    <event>
+      <type>GameResult</type>
+      <id>stayedInArena</id>
+      <text>HUD_MESSAGES_BATTLE_SCORE_BONUS_FOR_END</text>
+      <reward>	1000	</reward>
+      <predicates>
+        <deserter>False</deserter>
+      </predicates>
+    </event>
+    <event>
+      <type>GlobalScore</type>
+      <subtype>TeamActions</subtype>
+      <id>teamScore25</id>
+      <text>HUD_MESSAGES_25-INFLUENCE</text>
+      <experience>	200	</experience>
+      <icon>battleActionIcon_domination</icon>
+      <once>	True	</once>
+      <predicates>
+        <deserter>False</deserter>
+        <teamScore>1/4</teamScore>
+      </predicates>
+    </event>
+    <event>
+      <type>GlobalScore</type>
+      <subtype>TeamActions</subtype>
+      <id>teamScore50</id>
+      <text>HUD_MESSAGES_50-INFLUENCE</text>
+      <experience>	100	</experience>
+      <icon>battleActionIcon_domination</icon>
+      <once>	True	</once>
+      <predicates>
+        <deserter>False</deserter>
+        <teamScore>1/2</teamScore>
+      </predicates>
+    </event>
+    <event>
+      <type>GlobalScore</type>
+      <subtype>TeamActions</subtype>
+      <id>	teamScore100	</id>
+      <text>HUD_MESSAGES_100-INFLUENCE</text>
+      <experience>	50	</experience>
+      <icon>battleActionIcon_domination</icon>
+      <once>	True	</once>
+      <predicates>
+        <deserter>False</deserter>
+        <teamScore>1/1</teamScore>
+      </predicates>
+    </event>
+    <event>
+      <type>	Kill	</type>
+      <id>killPlayer</id>
+      <text>HUD_ENEMY_PLANES</text>
+      <reward>	200	</reward>
+      <predicates>
+        <type>Player</type>
+        <teammate>False</teammate>
+      </predicates>
+      <group>kills</group>
+    </event>
+    <event>
+      <type>	Kill	</type>
+      <id>killDef</id>
+      <text>HUD_PLANES_DEFENDER</text>
+      <reward>	75	</reward>
+      <predicates>
+        <type>	Defender	</type>
+        <teammate>False</teammate>
+      </predicates>
+      <group>kills</group>
+    </event>
+    <event>
+      <type>	Kill	</type>
+      <id>killBomber</id>
+      <text>HUD_MESSAGES_BATTLE_SCORE_DESTROY_BOMBER</text>
+      <reward>	200	</reward>
+      <predicates>
+        <type>Bomber</type>
+        <teammate>False</teammate>
+      </predicates>
+      <group>kills</group>
+    </event>
+    <event>
+      <type>	Kill	</type>
+      <id>	killAlly	</id>
+      <text>HUD_MESSAGES_BATTLE_SCORE_KILL_ALLY</text>
+      <reward>	-500	</reward>
+      <predicates>
+        <teammate>	True	</teammate>
+      </predicates>
+      <group>kills</group>
+    </event>
+    <event>
+      <type>ToKill</type>
+      <id>killTOSmall</id>
+      <text>HUD_SMALL_OBJECT</text>
+      <reward>	150	</reward>
+      <predicates>
+        <ACType>SMALL|SMALL_ARM</ACType>
+      </predicates>
+    </event>
+    <event>
+      <type>ToKill</type>
+      <id>	killTOMedium	</id>
+      <text>HUD_MEDIUM_OBJECT</text>
+      <reward>	200	</reward>
+      <predicates>
+        <ACType>MEDIUM|MEDIUM_ARM</ACType>
+      </predicates>
+    </event>
+    <event>
+      <type>ToKill</type>
+      <id>killTOBig</id>
+      <text>HUD_HEAVY_ARMORED_OBJECT</text>
+      <reward>	300	</reward>
+      <predicates>
+        <ACType>MEDIUM_ARM2</ACType>
+      </predicates>
+    </event>
+    <event>
+      <type>ToKill</type>
+      <id>killTOSpecial</id>
+      <text>HUD_MESSAGES_BATTLE_SCORE_DESTROY_SPECIAL_OBJECT</text>
+      <reward>	400	</reward>
+      <predicates>
+        <ACType>SPECIAL_AERFIELD|SPECIAL_MILITARY|SPECIAL_COMMAND|SPECIAL_FACTORY|SPECIAL_FACTORY2</ACType>
+      </predicates>
+    </event>
+    <event>
+      <type>ToPartKill</type>
+      <id>killTOPart</id>
+      <text>HUD_MESSAGES_BATTLE_SCORE_DESTROY_PART</text>
+      <reward>	30	</reward>
+      <predicates>
+        <isArmored>False</isArmored>
+      </predicates>
+    </event>
+    <event>
+      <type>ToPartKill</type>
+      <id>killArmoredTOPart</id>
+      <text>HUD_MESSAGES_BATTLE_SCORE_DESTROY_ARMORED_PART</text>
+      <reward>	75	</reward>
+      <predicates>
+        <isArmored>	True	</isArmored>
+      </predicates>
+    </event>
+    <event>
+      <type>Assist</type>
+      <id>assistPlayerHeavy</id>
+      <text>HUD_MESSAGES_BATTLE_SCORE_CRUCIALCONTRIBUTION_ENEMY_PLANES</text>
+      <reward>	125	</reward>
+      <predicates>
+        <type>Player</type>
+        <assistTime>	45	</assistTime>
+        <assistRatioGE>	60	</assistRatioGE>
+      </predicates>
+    </event>
+    <event>
+      <type>Assist</type>
+      <id>assistPlayerLight</id>
+      <text>HUD_MESSAGES_BATTLE_SCORE_ASSIST_ENEMY_PLANES</text>
+      <reward>	75	</reward>
+      <predicates>
+        <type>Player</type>
+        <assistTime>	45	</assistTime>
+        <assistRatioL>	60	</assistRatioL>
+      </predicates>
+    </event>
+    <event>
+      <type>Assist</type>
+      <id>assistDefender</id>
+      <text>HUD_MESSAGES_BATTLE_SCORE_ASSIST_DEFENDER</text>
+      <reward>	30	</reward>
+      <predicates>
+        <type>	Defender	</type>
+        <assistTime>	45	</assistTime>
+        <assistRatioGE>	10	</assistRatioGE>
+      </predicates>
+    </event>
+    <event>
+      <type>Assist</type>
+      <id>	assistBomber	</id>
+      <text>HUD_MESSAGES_BATTLE_SCORE_ASSIST_BOMBER</text>
+      <reward>	50	</reward>
+      <predicates>
+        <type>Bomber</type>
+        <assistTime>	45	</assistTime>
+        <assistRatioGE>	10	</assistRatioGE>
+      </predicates>
+    </event>
+    <event>
+      <type>Assist</type>
+      <id>	assistGround	</id>
+      <text>HUD_MESSAGES_BATTLE_SCORE_ASSIST_GROUND</text>
+      <reward>	10	</reward>
+      <predicates>
+        <type>	GroundObject	</type>
+        <assistTime>	45	</assistTime>
+        <assistRatioGE>	10	</assistRatioGE>
+      </predicates>
+    </event>
+    <event>
+      <type>Damage</type>
+      <id>damageGroundSmall</id>
+      <text>HUD_MESSAGES_BATTLE_SCORE_DAMAGE_SMALL_OBJECT</text>
+      <reward>	5	</reward>
+      <progressStep>	10	</progressStep>
+      <predicates>
+        <type>	GroundObject	</type>
+        <ACType>SMALL|SMALL_ARM</ACType>
+      </predicates>
+    </event>
+    <event>
+      <type>Damage</type>
+      <id>damageGroundMedium</id>
+      <text>HUD_MESSAGES_BATTLE_SCORE_DAMAGE_MEDIUM_OBJECT</text>
+      <reward>	10	</reward>
+      <progressStep>	10	</progressStep>
+      <predicates>
+        <type>	GroundObject	</type>
+        <ACType>MEDIUM|MEDIUM_ARM</ACType>
+      </predicates>
+    </event>
+    <event>
+      <type>Damage</type>
+      <id>damageGroundBig</id>
+      <text>HUD_MESSAGES_BATTLE_SCORE_DAMAGE_HEAVY_ARMORED_OBJECT</text>
+      <reward>	15	</reward>
+      <progressStep>	10	</progressStep>
+      <predicates>
+        <type>	GroundObject	</type>
+        <ACType>MEDIUM_ARM2</ACType>
+      </predicates>
+    </event>
+    <event>
+      <type>Damage</type>
+      <id>damageGroundSpecial</id>
+      <text>HUD_MESSAGES_BATTLE_SCORE_DAMAGE_SPECIAL_OBJECT</text>
+      <reward>	25	</reward>
+      <progressStep>	10	</progressStep>
+      <predicates>
+        <type>	GroundObject	</type>
+        <ACType>SPECIAL_MILITARY|SPECIAL_COMMAND|SPECIAL_FACTORY|SPECIAL_FACTORY2|SPECIAL_AIRFIELD</ACType>
+      </predicates>
+    </event>
+    <event>
+      <type>Damage</type>
+      <id>damageDefender</id>
+      <text>HUD_MESSAGES_BATTLE_SCORE_DAMAGE_DEFENDER</text>
+      <reward>	15	</reward>
+      <progressStep>	5	</progressStep>
+      <predicates>
+        <teammate>False</teammate>
+        <type>	Defender	</type>
+      </predicates>
+    </event>
+    <event>
+      <type>Damage</type>
+      <id>	damagePlayer	</id>
+      <text>HUD_MESSAGES_BATTLE_SCORE_DAMAGE_ENEMY_PLANES</text>
+      <reward>	10	</reward>
+      <progressStep>	1	</progressStep>
+      <predicates>
+        <teammate>False</teammate>
+        <type>Player</type>
+      </predicates>
+    </event>
+    <event>
+      <type>Damage</type>
+      <id>	damageBomber	</id>
+      <text>HUD_MESSAGES_BATTLE_SCORE_DAMAGE_BOMBER</text>
+      <reward>	20	</reward>
+      <progressStep>	5	</progressStep>
+      <predicates>
+        <teammate>False</teammate>
+        <type>Bomber</type>
+      </predicates>
+    </event>
+    <event>
+      <type>Damage</type>
+      <id>damageAlly</id>
+      <text>HUD_MESSAGES_BATTLE_SCORE_DAMAGE_ALLY</text>
+      <reward>	-50	</reward>
+      <progressStep>	10	</progressStep>
+      <predicates>
+        <teammate>	True	</teammate>
+      </predicates>
+    </event>
+    <event>
+      <type>SectorCaptureParticipation</type>
+      <id>sectorCaptureParticipation</id>
+      <text>HUD_MESSAGES_BATTLE_SCORE_PARTICIPATION_CAP_SECTOR</text>
+      <reward>	100	</reward>
+      <predicates>
+      </predicates>
+    </event>
+    <event>
+      <type>SectorKill</type>
+      <id>sectorDefence</id>
+      <text>HUD_MESSAGES_BATTLE_SCORE_DEFEND_SECTOR</text>
+      <reward>	100	</reward>
+      <predicates>
+        <action>defense</action>
+      </predicates>
+      <group>kills</group>
+    </event>
+    <event>
+      <type>SectorKill</type>
+      <id>	activeAttack	</id>
+      <text>HUD_MESSAGES_BATTLE_SCORE_ATTACK_SECTOR</text>
+      <reward>	100	</reward>
+      <predicates>
+        <action>attack</action>
+        <sectorLogicState>ENEMY</sectorLogicState>
+      </predicates>
+    </event>
+    <event>
+      <type>FinalInvestment</type>
+      <id>sectorCapture</id>
+      <text>HUD_MESSAGES_BATTLE_SCORE_CRUCIALCONTRIBUTION_CAP_SECTOR</text>
+      <reward>	150	</reward>
+      <predicates>
+      </predicates>
+    </event>
+    <event>
+      <type>	Kill	</type>
+      <id>killStreak</id>
+      <subject>
+      </subject>
+      <action>HUD_MESSAGES_ENEMY_DESTROYED_VALUE</action>
+      <resetOnDeath>	True	</resetOnDeath>
+      <icon>killStreak</icon>
+      <levels>
+        <level>
+          <experience>	100	</experience>
+          <count>	2	</count>
+        </level>
+        <level>
+          <experience>	80	</experience>
+          <count>	5	</count>
+        </level>
+        <level>
+          <experience>	60	</experience>
+          <count>	8	</count>
+        </level>
+        <level>
+          <experience>	40	</experience>
+          <count>	10	</count>
+        </level>
+        <level>
+          <experience>	20	</experience>
+          <count>	15	</count>
+        </level>
+      </levels>
+      <predicates>
+        <teammate>False</teammate>
+        <type>Player</type>
+      </predicates>
+    </event>
+    <event>
+      <type>Assist</type>
+      <id>	assistStreak	</id>
+      <subject>
+      </subject>
+      <action>HUD_MESSAGES_ASSIST_VALUE</action>
+      <resetOnDeath>	True	</resetOnDeath>
+      <icon>	assistStreak	</icon>
+      <levels>
+        <level>
+          <experience>	100	</experience>
+          <count>	2	</count>
+        </level>
+        <level>
+          <experience>	80	</experience>
+          <count>	5	</count>
+        </level>
+        <level>
+          <experience>	60	</experience>
+          <count>	8	</count>
+        </level>
+        <level>
+          <experience>	40	</experience>
+          <count>	10	</count>
+        </level>
+        <level>
+          <experience>	20	</experience>
+          <count>	15	</count>
+        </level>
+      </levels>
+      <predicates>
+        <type>Player</type>
+      </predicates>
+    </event>
+    <event>
+      <type>	Kill	</type>
+      <id>killDefStreak</id>
+      <subject>
+      </subject>
+      <action>HUD_MESSAGES_DEFENDER_DESTROYED_VALUE</action>
+      <resetOnDeath>	True	</resetOnDeath>
+      <icon>killDefStreak</icon>
+      <levels>
+        <level>
+          <experience>	100	</experience>
+          <count>	2	</count>
+        </level>
+        <level>
+          <experience>	80	</experience>
+          <count>	5	</count>
+        </level>
+        <level>
+          <experience>	60	</experience>
+          <count>	8	</count>
+        </level>
+        <level>
+          <experience>	40	</experience>
+          <count>	10	</count>
+        </level>
+        <level>
+          <experience>	20	</experience>
+          <count>	15	</count>
+        </level>
+      </levels>
+      <predicates>
+        <teammate>False</teammate>
+        <type>	Defender	</type>
+      </predicates>
+    </event>
+    <event>
+      <type>ToKill</type>
+      <id>	toKillStreak	</id>
+      <subject>
+      </subject>
+      <action>HUD_MESSAGES_OBJECTS_DESTROYED_VALUE</action>
+      <resetOnDeath>	True	</resetOnDeath>
+      <icon>	toKillStreak	</icon>
+      <levels>
+        <level>
+          <experience>	100	</experience>
+          <count>	2	</count>
+        </level>
+        <level>
+          <experience>	80	</experience>
+          <count>	5	</count>
+        </level>
+        <level>
+          <experience>	60	</experience>
+          <count>	8	</count>
+        </level>
+        <level>
+          <experience>	40	</experience>
+          <count>	10	</count>
+        </level>
+        <level>
+          <experience>	20	</experience>
+          <count>	15	</count>
+        </level>
+      </levels>
+      <predicates>
+      </predicates>
+    </event>
+    <event>
+      <type>Points</type>
+      <id>pointsCollectedStreak</id>
+      <subject>
+      </subject>
+      <action>HUD_MESSAGES_BATTLE_POINTS_VALUE</action>
+      <resetOnDeath>	True	</resetOnDeath>
+      <icon>pointsCollectedStreak</icon>
+      <levels>
+        <level>
+          <experience>	100	</experience>
+          <count>	1000	</count>
+        </level>
+        <level>
+          <experience>	80	</experience>
+          <count>	2000	</count>
+        </level>
+        <level>
+          <experience>	60	</experience>
+          <count>	4000	</count>
+        </level>
+        <level>
+          <experience>	40	</experience>
+          <count>	7000	</count>
+        </level>
+        <level>
+          <experience>	20	</experience>
+          <count>	10000	</count>
+        </level>
+      </levels>
+    </event>
+    <event>
+      <type>	Kill	</type>
+      <id>killPlayerRamming</id>
+      <title>HUD_NAME_RAMMING</title>
+      <text>HUD_DESCRIPTION_RAMMING</text>
+      <icon>killPlayerRamming</icon>
+      <experience>	20	</experience>
+      <predicates>
+        <type>Player</type>
+        <teammate>False</teammate>
+        <deathReason>ENEMY_RAMMING</deathReason>
+      </predicates>
+      <group>kills</group>
+    </event>
+    <event>
+      <type>	Kill	</type>
+      <id>	killPlayerFiring	</id>
+      <title>HUD_NAME_FLAME_OF_HEAVEN</title>
+      <text>HUD_DESCRIPTION_FLAME_OF_HEAVEN</text>
+      <icon>	killPlayerFiring	</icon>
+      <experience>	20	</experience>
+      <predicates>
+        <type>Player</type>
+        <teammate>False</teammate>
+        <deathReason>FIRING</deathReason>
+      </predicates>
+      <group>kills</group>
+    </event>
+    <event>
+      <type>ToKill</type>
+      <id>	killTOFiring	</id>
+      <title>HUD_NAME_FIRESPITTING</title>
+      <text>HUD_DESCRIPTION_FIRESPITTING</text>
+      <icon>	killTOFiring	</icon>
+      <experience>	20	</experience>
+      <predicates>
+        <teammate>False</teammate>
+        <deathReason>FIRING</deathReason>
+      </predicates>
+      <group>kills</group>
+    </event>
+    <event>
+      <type>	Kill	</type>
+      <id>	killPlayerRocket	</id>
+      <title>HUD_NAME_ROCKETEER</title>
+      <text>HUD_DESCRIPTION_ROCKETEER</text>
+      <icon>	killPlayerRocket	</icon>
+      <experience>	20	</experience>
+      <predicates>
+        <type>Player</type>
+        <teammate>False</teammate>
+        <deathReason>ENEMY_ROCKET</deathReason>
+      </predicates>
+      <group>kills</group>
+    </event>
+    <event>
+      <type>	Kill	</type>
+      <id>killPlayerBomb</id>
+      <title>HUD_NAME_BOMBARDIER</title>
+      <text>HUD_DESCRIPTION_BOMBARDIER</text>
+      <icon>killPlayerBomb</icon>
+      <experience>	20	</experience>
+      <predicates>
+        <type>Player</type>
+        <teammate>False</teammate>
+        <deathReason>ENEMY_BOMB</deathReason>
+      </predicates>
+      <group>kills</group>
+    </event>
+    <event>
+      <type>	Kill	</type>
+      <id>	killPlayerGunner	</id>
+      <title>HUD_NAME_RELIABLE_REAR</title>
+      <text>HUD_DESCRIPTION_RELIABLE_REAR</text>
+      <icon>	killPlayerGunner	</icon>
+      <experience>	20	</experience>
+      <predicates>
+        <type>Player</type>
+        <teammate>False</teammate>
+        <deathReason>GUNNER</deathReason>
+      </predicates>
+      <group>kills</group>
+    </event>
+    <event>
+      <type>Revenge</type>
+      <id>avatarRevenge</id>
+      <title>HUD_NAME_REVENGE</title>
+      <text>HUD_DESCRIPTION_REVENGE</text>
+      <icon>avatarRevenge</icon>
+      <experience>	20	</experience>
+      <predicates>
+        <teammate>False</teammate>
+      </predicates>
+    </event>
+    <event>
+      <type>	AdvantagePointsIncreased	</type>
+      <id>resourcePointsIncreased</id>
+      <experience>	0	</experience>
+    </event>
+  </events>
+</config_econom_aw.xml>

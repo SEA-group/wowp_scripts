@@ -46,6 +46,10 @@ class ACSectorClient(object):
         return self._entity.stateContainer.state
 
     @property
+    def isLockForBattle(self):
+        return self._entity.stateContainer.isLockForBattle
+
+    @property
     def teamIndex(self):
         """Owner team index
         @rtype: int
@@ -118,6 +122,9 @@ class ACSectorClient(object):
         else:
             points = [0, 0]
             points[self.teamIndex] = totalPoints
+        self._capturePointsByTeams = tuple(points)
+
+    def updateCapturePoints(self, points):
         self._capturePointsByTeams = tuple(points)
 
     def addCapturePoints(self, teamIndex, points):

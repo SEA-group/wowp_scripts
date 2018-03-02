@@ -1,8 +1,38 @@
 <navy.xml>
   <xsi>http://www.w3.org/2001/XMLSchema-instance</xsi>
   <noNamespaceSchemaLocation>../../../../../../../tools/databundler/subscribers.xsd</noNamespaceSchemaLocation>
+  <include>
+    <condition>
+      <and>
+        <equal>
+          <context>arena.mode</context>
+          <value>	invasion	</value>
+        </equal>
+        <equal>
+          <context>player.teamIndex</context>
+          <value>	0	</value>
+        </equal>
+      </and>
+    </condition>
+    <nested>
+      <subscriber>
+        <condition>
+          <and>
+            <equal>
+              <context>arena.mode</context>
+              <value>	invasion	</value>
+            </equal>
+            <equal>
+              <context>player.teamIndex</context>
+              <value>	0	</value>
+            </equal>
+          </and>
+        </condition>
+      </subscriber>
+    </nested>
+  </include>
   <subscriber>
-    <name>destroyPlanes</name>
+    <name>destroyPlanes_defense</name>
     <type>objective</type>
     <group>	navy	</group>
     <server>
@@ -251,7 +281,7 @@
     </send>
   </subscriber>
   <subscriber>
-    <name>	teamwork	</name>
+    <name>teamwork_defense</name>
     <type>objective</type>
     <group>	navy	</group>
     <server>
@@ -261,16 +291,16 @@
     <client>
       <order>	3	</order>
       <name>
-        <locale>TEAMWORK_NAME</locale>
+        <locale>HUD_QUEST_NAME_TEAM_WORK</locale>
       </name>
       <description>
-        <locale>TEAMWORK_DESCRIPTION</locale>
+        <locale>HUD_QUEST_DESCRIPTION_TEAM_WORK</locale>
       </description>
       <countDescription>
-        <locale>BATTLE_RESULT_TEAMWORK_NAME</locale>
+        <locale>HUD_QUEST_TASK_TEAM_WORK</locale>
       </countDescription>
       <icon>
-        <template>icons/battleResults/task/{state}/taskCaptureTerritory_28x28.dds</template>
+        <template>icons/battleResults/task/{state}/taskTeamWork_28x28.dds</template>
       </icon>
     </client>
     <nested>
@@ -296,10 +326,6 @@
               <equal>
                 <context>victim.object</context>
                 <value>plane</value>
-              </equal>
-              <equal>
-                <context>percent</context>
-                <value>normal</value>
               </equal>
             </and>
           </condition>
@@ -335,10 +361,6 @@
               <equal>
                 <context>victim.object</context>
                 <value>plane</value>
-              </equal>
-              <equal>
-                <context>percent</context>
-                <value>normal</value>
               </equal>
             </and>
           </condition>
@@ -387,10 +409,6 @@
                 <context>victim.object</context>
                 <value>plane</value>
               </equal>
-              <equal>
-                <context>percent</context>
-                <value>normal</value>
-              </equal>
             </and>
           </condition>
         </event>
@@ -437,10 +455,6 @@
               <equal>
                 <context>victim.object</context>
                 <value>plane</value>
-              </equal>
-              <equal>
-                <context>percent</context>
-                <value>normal</value>
               </equal>
             </and>
           </condition>
@@ -489,10 +503,6 @@
                 <context>victim.object</context>
                 <value>plane</value>
               </equal>
-              <equal>
-                <context>percent</context>
-                <value>normal</value>
-              </equal>
             </and>
           </condition>
         </event>
@@ -534,15 +544,11 @@
             <and>
               <equal>
                 <context>player.plane.type</context>
-                <value>fighter</value>
+                <value>	navy	</value>
               </equal>
               <equal>
                 <context>victim.object</context>
                 <value>plane</value>
-              </equal>
-              <equal>
-                <context>percent</context>
-                <value>normal</value>
               </equal>
             </and>
           </condition>
@@ -560,7 +566,7 @@
     </send>
   </subscriber>
   <subscriber>
-    <name>defenceSectors</name>
+    <name>defenceSectors_defense</name>
     <type>objective</type>
     <group>	navy	</group>
     <server>

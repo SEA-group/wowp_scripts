@@ -3,23 +3,24 @@ from WwiseGameObject import WwiseGameObject, GS
 import BigWorld
 import db.DBLogic
 from consts import TEAM_ID
-from audio.AKConsts import VOICEOVERS_BANKS, SOUND_CASES, VOICEOVERS_QUEUE_SIZE, VOICEOVER_NOISE, VOICE
+from audio.AKConsts import VOICEOVERS_BANKS, SOUND_CASES, VOICEOVERS_QUEUE_SIZE, VOICEOVER_NOISE, VOICE, VOICEOVER_DEFAULTS
 from audio.SoundBanksManager import SoundBanksManager
 import random
 import GameEnvironment
 import collections
 from EntityHelpers import AvatarFlags, EntityStates
 from audio import SoundEventDispatcher
+from consts import GAME_MODE
 import audio.debug
 
 class Voiceover:
 
     def __init__(self, event, db_dict):
         self.event = event
-        self.__probability = int(db_dict['Probability'])
-        self.__counter = int(db_dict['Max'])
-        self.__cooldownTime = int(db_dict['Cooldown'])
-        self.priority = int(db_dict['Priority'])
+        self.__probability = self.__initDefaults(VOICEOVER_DEFAULTS.PROBABILITY, db_dict)
+        self.__counter = self.__initDefaults(VOICEOVER_DEFAULTS.MAX, db_dict)
+        self.__cooldownTime = self.__initDefaults(VOICEOVER_DEFAULTS.COOLDOWN, db_dict)
+        self.priority = self.__initDefaults(VOICEOVER_DEFAULTS.PRIORITY, db_dict)
         self.__cooldownCB = None
         return
 
@@ -48,6 +49,11 @@ class Voiceover:
             return True
         else:
             return False
+
+    def __initDefaults(self, key, db_dict):
+        if key in db_dict:
+            return int(db_dict[key])
+        return VOICEOVER_DEFAULTS.DEFAULTS[key]
 
 
 class VoiceoversQueue:
@@ -88,6 +94,7 @@ class VoiceoversSoundObject(WwiseGameObject):
         self.__isLock = False
         self.__queue = VoiceoversQueue(VOICEOVERS_QUEUE_SIZE - 1)
         self.__clientArena = GameEnvironment.getClientArena()
+        self.__gameModeIndex = self.__clientArena.gameModeEnum - GAME_MODE.AREA_CONQUEST
         self.__player = BigWorld.player()
         self.__initVoiceovers()
         self.load()
@@ -98,7 +105,7 @@ class VoiceoversSoundObject(WwiseGameObject):
 
     def __initVoiceovers(self):
         self.__voiceovers = {}
-        for event, db_dict in db.DBLogic.g_instance.getVO().voiceovers.items():
+        for event, db_dict in db.DBLogic.g_instance.getVO(self.__gameModeIndex).voiceovers.items():
             vo = Voiceover(event, db_dict)
             self.__voiceovers[event] = vo
 

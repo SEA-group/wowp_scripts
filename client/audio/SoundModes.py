@@ -30,7 +30,8 @@ class SoundModeHandler:
 
     def __registerAvatarEvents(self):
         self._avatar = BigWorld.entities.get(self._avatarID)
-        self._avatar.eOnEntityStateChanged += self.__onAvatarStateChanged
+        if self._avatar:
+            self._avatar.eOnEntityStateChanged += self.__onAvatarStateChanged
 
     def __clearAvatarEvents(self):
         if self._avatar:
@@ -106,8 +107,10 @@ class SoundModeHandler:
             self.__strategy.finish()
         if soundModeID is None:
             self.__strategy = None
-        elif not EntityStates.inState(BigWorld.entities.get(self._avatarID), EntityStates.DESTROYED):
-            self.__strategy = self._createSoundStrategy(soundModeID)
+        else:
+            avatar = BigWorld.entities.get(self._avatarID)
+            if avatar and not EntityStates.inState(avatar, EntityStates.DESTROYED):
+                self.__strategy = self._createSoundStrategy(soundModeID)
         return
 
     def __onAvatarDestroy(self):

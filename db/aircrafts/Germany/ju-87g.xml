@@ -200,7 +200,7 @@
               <size>	0.990000 1.260000 2.700000	</size>
               <armorFront>	30.000000 30.000000 60.000000	</armorFront>
               <armorBack>	30.000000 30.000000 30.000000	</armorBack>
-              <absorption>	1	</absorption>
+              <absorption>	1.000000	</absorption>
               <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
             </bbox>
           </bBoxes>
@@ -1011,6 +1011,7 @@
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <health>20.0</health>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -1233,8 +1234,6 @@
               <usage>crash</usage>
               <effectState>
                 <effect>
-                  <name>
-                  </name>
                   <mountPoint>plane/HP_wLhit</mountPoint>
                   <trigger>
                   </trigger>
@@ -1472,8 +1471,6 @@
               <usage>crash</usage>
               <effectState>
                 <effect>
-                  <name>
-                  </name>
                   <mountPoint>plane/HP_wRhit</mountPoint>
                   <trigger>
                   </trigger>
@@ -1648,8 +1645,6 @@
               <usage>crash</usage>
               <effectState>
                 <effect>
-                  <name>
-                  </name>
                   <mountPoint>plane/HP_tailHit</mountPoint>
                   <trigger>
                   </trigger>
@@ -1781,6 +1776,7 @@
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <health>20.0</health>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -1897,6 +1893,7 @@
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <health>20.0</health>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -1965,6 +1962,7 @@
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <health>20.0</health>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -2033,6 +2031,7 @@
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <health>20.0</health>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -2086,6 +2085,7 @@
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <health>20.0</health>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -2095,7 +2095,7 @@
         <mountPoint>HP_gun_03</mountPoint>
         <upgrade>
           <id>	1	</id>
-          <componentXml>t-Ju-87G-1</componentXml>
+          <componentXml>t-ju-87g-1</componentXml>
           <states>
             <state>
               <id>	1	</id>
@@ -2156,7 +2156,7 @@
         </upgrade>
         <upgrade>
           <id>	2	</id>
-          <componentXml>t-Ju-87G-2</componentXml>
+          <componentXml>t-ju-87g-2</componentXml>
           <states>
             <state>
               <id>	1	</id>
@@ -3249,6 +3249,36 @@
                 <texture>vehicles/airplanes/common/decals/decor/128.dds</texture>
                 <icoPath>vehicles/airplanes/common/decals/decor/preview/128.dds</icoPath>
               </decal>
+              <decal>
+                <id>	201	</id>
+                <texture>vehicles/airplanes/common/decals/decor/129.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/129.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	202	</id>
+                <texture>vehicles/airplanes/common/decals/decor/130.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/130.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	203	</id>
+                <texture>vehicles/airplanes/common/decals/decor/131.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/131.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	204	</id>
+                <texture>vehicles/airplanes/common/decals/decor/132.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/132.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	205	</id>
+                <texture>vehicles/airplanes/common/decals/decor/133.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/133.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	206	</id>
+                <texture>vehicles/airplanes/common/decals/decor/134.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/134.dds</icoPath>
+              </decal>
             </decals>
           </decalGroup>
           <decalGroup>
@@ -3335,6 +3365,10 @@
               <decal>
                 <id>	2	</id>
                 <texture>vehicles/airplanes/common/decals/nationality/Germany/Emb_DE_08.dds</texture>
+              </decal>
+              <decal>
+                <id>	3	</id>
+                <texture>vehicles/airplanes/common/decals/nationality/Other/Emb_Romania_01.dds</texture>
               </decal>
             </decals>
           </decalGroup>
@@ -3497,6 +3531,13 @@
                 <icoPath>vehicles/airplanes/german/GR51_JU87G/preview/GR51_JU87G_nation.dds</icoPath>
                 <bottomColor>	0.404000 0.510000 0.529000 1.000000	</bottomColor>
                 <glossinessOffset>	0.000000	</glossinessOffset>
+              </decal>
+              <decal>
+                <id>	17	</id>
+                <texture>vehicles/airplanes/german/GR51_JU87G/GR51_JU87G_flag.dds</texture>
+                <icoPath>vehicles/airplanes/german/GR51_JU87G/preview/GR51_JU87G_flag.dds</icoPath>
+                <bottomColor>	0.404000 0.510000 0.529000 1.000000	</bottomColor>
+                <glossinessOffset>	0.200000	</glossinessOffset>
               </decal>
             </decals>
           </decalGroup>
@@ -3726,7 +3767,7 @@
   </Pivots>
   <magnetPoints>
     <magnetPoint>
-      <position>	-4.972779 -0.041220 1.032705	</position>
+      <position>	-4.972780 -0.041220 1.032705	</position>
       <staticMass>	0.250000	</staticMass>
     </magnetPoint>
     <magnetPoint>
@@ -3734,7 +3775,7 @@
       <staticMass>	1.000000	</staticMass>
     </magnetPoint>
     <magnetPoint>
-      <position>	4.972779 -0.041220 1.032705	</position>
+      <position>	4.972780 -0.041220 1.032705	</position>
       <staticMass>	0.250000	</staticMass>
     </magnetPoint>
   </magnetPoints>

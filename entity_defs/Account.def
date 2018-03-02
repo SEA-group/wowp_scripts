@@ -161,8 +161,8 @@
     </nextOffloadToPeripheryTime>
   </Properties>
   <ClientMethods>
-    <version_233>
-    </version_233>
+    <version_241>
+    </version_241>
     <isPendingResponses>
     </isPendingResponses>
     <respondCommand>
@@ -299,6 +299,16 @@
     </onPrebattleArenaCreationFailed>
   </ClientMethods>
   <BaseMethods>
+    <joinPreBattle>
+      <Arg>	INT8	</Arg>
+      <Arg>STRING</Arg>
+      <Arg>INT32</Arg>
+      <Arg>MAILBOX</Arg>
+    </joinPreBattle>
+    <leavePreBattle>
+      <Arg>STRING</Arg>
+      <Arg>INT32</Arg>
+    </leavePreBattle>
     <processIGRData>
       <Arg>MAILBOX</Arg>
       <Arg>INT32</Arg>
@@ -358,11 +368,6 @@
     <requestTeamspeakIdentity4Squad>
       <Arg>MAILBOX</Arg>
     </requestTeamspeakIdentity4Squad>
-    <squadFromQueue>
-      <Arg>INT32</Arg>
-      <Arg>OBJECT_ID</Arg>
-      <Arg>DB_ID</Arg>
-    </squadFromQueue>
     <responseSender>
       <Arg>ARRAY<of>PYTHON_ARRAY</of></Arg>
       <Arg>STRING</Arg>
@@ -438,11 +443,6 @@
       <Arg>INT16</Arg>
       <Arg>INT32</Arg>
     </setCropKarma>
-    <connect2Queue>
-      <Arg>UINT32</Arg>
-      <Arg>UINT32</Arg>
-      <Arg>	BOOL	</Arg>
-    </connect2Queue>
     <printDebugInformation>
       <Arg>UINT32</Arg>
     </printDebugInformation>
@@ -517,13 +517,6 @@
       <Exposed>
       </Exposed>
     </selectActivePlane>
-    <validateSquadMemberGameQueueConnection>
-      <Arg>INT32</Arg>
-    </validateSquadMemberGameQueueConnection>
-    <connectSquadMemberToQueue>
-      <Arg>INT32</Arg>
-      <Arg>UINT8</Arg>
-    </connectSquadMemberToQueue>
     <prebattleNotCreated>
       <Arg>INT32</Arg>
     </prebattleNotCreated>
@@ -532,13 +525,6 @@
         <rosterID>OBJECT_ID</rosterID>
       </Args>
     </onPrebattleArenaCreationFailed>
-    <leaveQueue>
-      <Arg>INT32</Arg>
-    </leaveQueue>
-    <onLeftQueue>
-      <Arg>INT32</Arg>
-      <Arg>	BOOL	</Arg>
-    </onLeftQueue>
     <sendQueueMessage>
       <Arg>STRING</Arg>
       <Exposed>

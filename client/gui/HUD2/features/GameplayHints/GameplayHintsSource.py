@@ -3,21 +3,16 @@ import BigWorld
 from gui.HUD2.core.DataPrims import DataSource
 from gui.HUD2.hudFeatures import Feature
 import BWLogging
-from consts import HINTS_TYPE, SECTOR_LEVEL_TYPE_TO_SECTOR_GAMEPLAY_TYPE as SECTOR_GT
+from consts import HINTS_TYPE
 
 class GameplayHintsSource(DataSource):
     DISABLED_TIME = -1000
-    SECTOR_HINTS_END_ID = 106
+    SECTOR_HINTS_END_ID = 107
     DELAY_BEFORE_HINT = 2
     DEFAULT_POINTS_LABELS = 'default'
-    SECTORS_BY_HINTID = {101: ('military_base', 0),
-     102: ('airfield', 0),
-     103: ('airfield', 2),
-     104: ('factory', 2),
-     105: ('radar', 1),
-     106: ('military_base', 1)}
 
     def __init__(self, features):
+        self.regicToExecutionManager()
         self._logger = BWLogging.getLogger(self.__class__.__name__)
         self._bigWorld = features.require(Feature.BIG_WORLD)
         self._model = features.require(Feature.GAME_MODEL).gameplayHints
@@ -28,9 +23,6 @@ class GameplayHintsSource(DataSource):
         self._gamePlayHints = features.require(Feature.GAME_PLAY_HINTS)
         self._timer = features.require(Feature.TIMER_SERVICE)
         self._playerAvatar.eOnGameplayHint += self.onGameplayHint
-        self._playerAvatar.eCloseGamePlayHint += self.onCloseGamePlayHint
-        self._gameEnvironment.eShowHint += self.onShowHint
-        self._gameEnvironment.eDisableStartHint += self.onDisableStartHint
         for hintType in HINTS_TYPE.ALL:
             self._playerAvatar.tryToShowHint(hintType)
 
@@ -39,9 +31,6 @@ class GameplayHintsSource(DataSource):
 
     def dispose(self):
         self._playerAvatar.eOnGameplayHint -= self.onGameplayHint
-        self._playerAvatar.eCloseGamePlayHint -= self.onCloseGamePlayHint
-        self._gameEnvironment.eShowHint -= self.onShowHint
-        self._gameEnvironment.eDisableStartHint -= self.onDisableStartHint
         self._timer.eUpdate -= self._onUpdate
 
     @property
@@ -58,9 +47,8 @@ class GameplayHintsSource(DataSource):
     def onGameplayHint(self, hintID, hintName, hintType, force):
         self._logger.info('>>>> onGameplayHint: {0} {1}'.format(hintID, hintName))
         if hintID <= self.SECTOR_HINTS_END_ID:
-            gamePlaySector = SECTOR_GT[hintName]
-            sectorData = dict(gamePlayType=gamePlaySector['gamePlayType'], gamePlayLevel=gamePlaySector['gamePlayLevel'])
-            self._model.sectorData = sectorData
+            sectorGameplayType = hintName
+            self._model.gameplayType = sectorGameplayType
         if hintType == HINTS_TYPE.START:
             self._model.startHintID = hintID
             self._model.startHintTime = self.DISABLED_TIME
@@ -101,7 +89,7 @@ class GameplayHintsSource(DataSource):
             self._timer.eUpdate += self._onUpdate
         else:
             self._model.startHintID = 0
-            self._model.sectorData = {}
+            self._model.gameplayType = ''
             self._model.startHintTime = self.DISABLED_TIME
 
     def _setShootingHintActive(self, active):

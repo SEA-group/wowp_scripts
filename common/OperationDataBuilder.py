@@ -61,17 +61,51 @@ class OperationDataBuilder(object):
         return self
 
     def for_(self, **kwargs):
+        """
+        :rtype: OperationDataBuilder
+        """
         return self.__appendIdType(**kwargs)
 
     def from_(self, **kwargs):
+        """
+        :rtype: OperationDataBuilder
+        """
         return self.__appendIdType(**kwargs)
 
     def to(self, **kwargs):
+        """
+        :rtype: OperationDataBuilder
+        """
         return self.__appendIdType(**kwargs)
 
     def specify(self, **kwargs):
+        """
+        Specify operation kwargs
+        :param kwargs:
+        :rtype: OperationDataBuilder
+        """
+        if 'count' in kwargs:
+            count = kwargs.pop('count')
+            if not isinstance(count, int):
+                raise OperationBuilderException('Wrong value passed. Count must be int.')
+            self.__operationDict['count'] = count
         self.__operationDict.setdefault('kwargs', {}).update(kwargs)
         return self
 
+    def vh(self, **kwargs):
+        """
+        Override vital history params
+        :param kwargs:
+        :rtype: OperationDataBuilder
+        """
+        self.__operationDict.setdefault('vh', {}).update(kwargs)
+        return self
+
+    def msg(self, msgType, msgData):
+        self.__operationDict.setdefault('msg', []).append((msgType, msgData))
+
     def build(self):
+        """
+        :rtype: dict
+        """
         return self.__operationDict

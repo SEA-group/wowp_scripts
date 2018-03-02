@@ -12,14 +12,17 @@ from ArenaHelpers.GameModes.AreaConquest.WaveInfoManager import WaveInfoManager
 from Event import eventHandler, Event, EventManager
 from EventHelpers import CompositeSubscription, EventSubscription
 from GameModeSettings import ACSettings as SETTINGS
-from consts import ARENA_UPDATE, TEAM_ID, AIR_STRIKE_WAVE_STATE
+from consts import ARENA_UPDATE, TEAM_ID, AIR_STRIKE_WAVE_STATE, GAME_MODE
 
 class AC_ARENA_UPDATE_EVENTS:
     """Events for update arena calls.
     You should not use them outside ACGameModeClient, use AC_EVENT instead
     """
     UPDATE_AC_POINTS = 'update_ac_points'
+    UPDATE_GLOBAL_COUNTERS = 'update_global_counters'
+    CHANGE_DYNAMIC_TIME = 'change_dynamic_time'
     AC_ACTION_MESSAGE = 'ac_action_message'
+    AC_SECTORS_STATUS = 'ac_sectors_status'
     AC_GAME_TICK = 'ac_game_tick'
     AC_BATTLE_EVENT = 'ac_battle_event'
     AC_ROCKET_V2_LAUNCHED = 'ac_rocket_v2_launched'
@@ -27,11 +30,18 @@ class AC_ARENA_UPDATE_EVENTS:
     AC_ROCKET_V2_TARGET_OBJECT_CHANGED = 'ac_rocket_v2_target_object_changed'
     AC_BOMBER_IN_WAVE_DIED = 'ac_bomber_in_wave_died'
     AC_BOMBER_DISPATCHER_TARGET_SECTOR_CHANGED = 'ac_bomber_dispatcher_target_sector_changed'
+    AC_SECTOR_PERMANENT_LOCK = 'ac_sector_permanent_lock'
+    UPDATE_RESOURCE_POINTS = 'update_resource_points'
 
 
 class ACGameModeClient(GameModeClient.GameModeClient):
     updateEventsMap = {ARENA_UPDATE.UPDATE_AC_POINTS: AC_ARENA_UPDATE_EVENTS.UPDATE_AC_POINTS,
+     ARENA_UPDATE.UPDATE_GLOBAL_COUNTERS: AC_ARENA_UPDATE_EVENTS.UPDATE_GLOBAL_COUNTERS,
+     ARENA_UPDATE.UPDATE_RESOURCE_POINTS: AC_ARENA_UPDATE_EVENTS.UPDATE_RESOURCE_POINTS,
+     ARENA_UPDATE.CHANGE_DYNAMIC_TIME: AC_ARENA_UPDATE_EVENTS.CHANGE_DYNAMIC_TIME,
+     ARENA_UPDATE.AC_SECTOR_PERMANENT_LOCK: AC_ARENA_UPDATE_EVENTS.AC_SECTOR_PERMANENT_LOCK,
      ARENA_UPDATE.AC_ACTION_MESSAGE: AC_ARENA_UPDATE_EVENTS.AC_ACTION_MESSAGE,
+     ARENA_UPDATE.AC_SECTORS_STATUS: AC_ARENA_UPDATE_EVENTS.AC_SECTORS_STATUS,
      ARENA_UPDATE.AC_GAME_TICK: AC_ARENA_UPDATE_EVENTS.AC_GAME_TICK,
      ARENA_UPDATE.AC_BATTLE_EVENT: AC_ARENA_UPDATE_EVENTS.AC_BATTLE_EVENT,
      ARENA_UPDATE.AC_ROCKET_V2_LAUNCHED: AC_ARENA_UPDATE_EVENTS.AC_ROCKET_V2_LAUNCHED,
@@ -43,9 +53,12 @@ class ACGameModeClient(GameModeClient.GameModeClient):
     def __init__(self, clientArena):
         super(ACGameModeClient, self).__init__(clientArena)
         self._scoreGlobal = (0, 0)
+        self._globalCounters = {}
         self._sectors = {}
         self._currentTick = 0
         self._currentTickStartedAt = self.player.arenaStartTime
+        self._globalTime = 0
+        self._dynamicTime = 0
         self._isReady = False
         self._eManager = EventManager()
         self.eGameModeReady = Event(self._eManager)
@@ -114,6 +127,14 @@ class ACGameModeClient(GameModeClient.GameModeClient):
         """
         return self._waveInfoManager
 
+    @property
+    def uiSettings(self):
+        return self.arenaTypeData.gameModeSettings.uiSettings
+
+    @property
+    def gameModeName(self):
+        return GAME_MODE.NAMES[self.clientArena.gameModeEnum]
+
     @eventHandler(AC_ARENA_UPDATE_EVENTS.AC_BATTLE_EVENT)
     def onBattleEvent(self, payload, *args, **kwargs):
         self._logDebug(':onUpdateACSBattleEvent: onBattleEvent'.format(payload))
@@ -124,8 +145,42 @@ class ACGameModeClient(GameModeClient.GameModeClient):
     def onUpdateACPoints(self, payload, *args, **kwargs):
         points = tuple(payload)
         self._logDebug(':onUpdateACPoints: points={0}'.format(points))
-        self._scoreGlobal = points
+        maxPoints = self._arenaTypeData.gameModeSettings.pointsToWin
+        self._scoreGlobal = (min(points[0], maxPoints), min(points[1], maxPoints))
         self.dispatch(AC_EVENTS.GLOBAL_SCORE_UPDATED, self.scoreGlobal)
+
+    @eventHandler(AC_ARENA_UPDATE_EVENTS.CHANGE_DYNAMIC_TIME)
+    def onChangeDynamicTime(self, payload, *args, **kwargs):
+        time = payload
+        oldTime = self._dynamicTime
+        self._dynamicTime = time
+        self.dispatch(AC_EVENTS.DYNAMIC_TIMER_UPDATE, time, oldTime)
+
+    @eventHandler(AC_ARENA_UPDATE_EVENTS.AC_SECTOR_PERMANENT_LOCK)
+    def onSectorPermanentLock(self, payload, *args, **kwargs):
+        sectorId = payload
+        self.dispatch(AC_EVENTS.SECTOR_PERMANENT_LOCK, sectorId)
+
+    @eventHandler(AC_ARENA_UPDATE_EVENTS.UPDATE_GLOBAL_COUNTERS)
+    def onUpdateGlobalCounters(self, payload, *args, **kwargs):
+        counters = payload
+        self._logDebug(':onUpdateGlobalCounters: counters={0}'.format(counters))
+        self._globalCounters = counters
+        self.dispatch(AC_EVENTS.GLOBAL_COUNTERS_UPDATED, self._globalCounters)
+
+    @eventHandler(AC_ARENA_UPDATE_EVENTS.UPDATE_RESOURCE_POINTS)
+    def onUpdateResourcePoints(self, payload, *args, **kwargs):
+        totalPoints, killerID, victimID, pointsInc = payload
+        self._logDebug(':onUpdateResourcePoints: {},{},{},{}'.format(totalPoints, killerID, victimID, pointsInc))
+        self.dispatch(AC_EVENTS.RESOURCE_POINTS_UPDATED, totalPoints, killerID, victimID, pointsInc)
+
+    @eventHandler(AC_ARENA_UPDATE_EVENTS.AC_SECTORS_STATUS)
+    def onACSectorStatus(self, payload, *args, **kwargs):
+        self._logDebug(':onACSectorStatus: payload={0}'.format(payload))
+        sectorID, sectorPoints, capturePoints = payload
+        sector = self.sectors[sectorID]
+        sector.updateCapturePoints(sectorPoints)
+        self.dispatch(AC_EVENTS.SECTOR_CAPTURE_POINTS_CHANGED, sector.ident, sector.capturePointsByTeams)
 
     @eventHandler(AC_ARENA_UPDATE_EVENTS.AC_ACTION_MESSAGE)
     def onACActionMessage(self, payload, *args, **kwargs):
@@ -212,6 +267,18 @@ class ACGameModeClient(GameModeClient.GameModeClient):
             period = self.arenaTypeData.gameModeSettings.superiorityGlobalTickPeriod
         return period
 
+    def capturedSectors(self, teamIndex):
+        """Return captured sectors
+        """
+        capturedSectors = 0
+        for sector in self._sectors.itervalues():
+            if not sector.isCapturable:
+                continue
+            if sector.teamIndex == teamIndex:
+                capturedSectors += 1
+
+        return capturedSectors
+
     def teamSuperiority(self, teamIndex):
         """Check capture sectors by team
         """
@@ -225,6 +292,11 @@ class ACGameModeClient(GameModeClient.GameModeClient):
                 capturedSectors += 1
 
         return sectors == capturedSectors
+
+    def checkSectorForLock(self, ident):
+        if ident in self._sectors:
+            return self._sectors[ident].isLockForBattle
+        return False
 
     def onSectorStateChanged(self, ident, oldState, state, *args, **kwargs):
         """Event handler for state changed event

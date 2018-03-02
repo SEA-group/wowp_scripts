@@ -3,6 +3,8 @@ from gui.HUD2.core.DataPrims import DataController
 from gui.HUD2.hudFeatures import Feature
 from gui.HUD2.core.MessageRouter import message
 from consts import HINTS_TYPE
+from gui.HUD2.HUDExecutionManager import HUDExecutionManager
+from gui.HUD2.features.GameplayHints.GameplayHintsSource import GameplayHintsSource
 
 class GamePlayHintsController(DataController):
 
@@ -15,15 +17,18 @@ class GamePlayHintsController(DataController):
     @message('hints.closeStartHint')
     def closeStartHint(self):
         self._playerAvatar.closeGamePlayHint(self._model.startHintID.get(), HINTS_TYPE.START, True)
+        HUDExecutionManager.call(GameplayHintsSource.onCloseGamePlayHint, HINTS_TYPE.START)
         self._gamePlayHints.setHintVisibility(False)
         if self._model.shootingHintID.get() > 0:
-            self._gameEnvironment.eShowHint(HINTS_TYPE.SHOOTING)
+            HUDExecutionManager.call(GameplayHintsSource.onShowHint, HINTS_TYPE.SHOOTING)
 
     @message('hints.closeShootingHint')
     def closeShootingHint(self):
         if self._model.shootingHintID.get() > 0:
             self._playerAvatar.closeGamePlayHint(self._model.shootingHintID.get(), HINTS_TYPE.SHOOTING, True)
+            HUDExecutionManager.call(GameplayHintsSource.onCloseGamePlayHint, HINTS_TYPE.SHOOTING)
 
     @message('hints.disableShootingHint')
     def disableShootingHint(self):
         self._playerAvatar.closeGamePlayHint(self._model.shootingHintID.get(), HINTS_TYPE.SHOOTING)
+        HUDExecutionManager.call(GameplayHintsSource.onCloseGamePlayHint, HINTS_TYPE.SHOOTING)

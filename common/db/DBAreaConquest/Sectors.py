@@ -27,17 +27,17 @@ class Sectors(object):
         """
         return self._distances[source][target]
 
-    def getSectorIdByPosition(self, position):
+    def getSectorIdByPosition(self, position, radius = None):
         pos2D = Vector2(position.x, position.z)
         sectors = sorted(self._sectors.values(), key=lambda s: (float('+inf') if s.isFreeZone else (Vector2(s.positionPoint.x, s.positionPoint.z) - pos2D).length))
         for sector in sectors:
-            if sector.geometry.isInside(position):
+            if sector.geometry.isInside(position, radius):
                 return sector.ident
 
-    def fillSectorData(self, data):
+    def fillSectorData(self, data, gameModeDir):
         sectors = self._sectors
         for sectorId, sectorData in data.items():
-            sectors[sectorId] = SectorModel()
+            sectors[sectorId] = SectorModel(gameModeDir)
             sectors[sectorId].ident = sectorId
             sectors[sectorId].read(sectorData)
 

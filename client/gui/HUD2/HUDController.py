@@ -1,7 +1,7 @@
 # Embedded file name: scripts/client/gui/HUD2/HUDController.py
 import BigWorld
-from debug_utils import LOG_DEBUG
 from features.GameModel import GameModel
+from gui.HUD2.BattleSubModelController import BattleGameModelController
 from gui.HUD2.StateManager import StateManager
 from gui.HUD2.core.AutoFilledDataModel import AutoFilledDataModel
 from gui.HUD2.core.DataModel import Type
@@ -10,7 +10,9 @@ from gui.HUD2.core.FeatureBroker import FeatureBroker
 from gui.HUD2.core.MessageRouter import MessageRouter
 from gui.HUD2.hudFeatures import buildHudFeatures
 from gui.Cursor import centerCursor
+from HUDExecutionManager import HUDExecutionManager
 import weakref
+HUD_EXECUTION_MANAGER_TIMER = 0.1
 
 class HUDController:
 
@@ -19,15 +21,21 @@ class HUDController:
         self._dataSources = []
         self._controllersDict = {}
         self._driver = None
+        self._executionMngUpdCallback = 0
+        self._executionManager = HUDExecutionManager()
         self._gameModel = GameModel()
         self._featureBroker = FeatureBroker()
         self._stateManager = StateManager()
+        self._battleGameModeController = BattleGameModelController()
         weakManager = weakref.ref(self._stateManager)
         buildHudFeatures(self._gameModel, self._featureBroker, weakManager)
         self._messageRouter = MessageRouter()
         return
 
     def dispose(self):
+        if self._executionMngUpdCallback:
+            BigWorld.cancelCallback(self._executionMngUpdCallback)
+            self._executionMngUpdCallback = None
         self._featureBroker.clear()
         self._controllersDict.clear()
         for source in self._dataSources:
@@ -42,14 +50,21 @@ class HUDController:
         self._featureBroker = None
         self._gameModel.destroy()
         self._gameModel = None
+        self._executionManager.destroy()
+        self._executionManager = None
         return
 
     def init(self, input, output):
         self._createModelServices(GameModel)
         self._driver = ScaleformDriver(self._messageRouter, self._gameModel)
         self._driver.init(input, output)
+        self._initGameMode()
         self._initStateManager()
         self._driver.updateState(self._stateManager.state)
+
+    def _initGameMode(self):
+        self._battleGameModeController.init(self._featureBroker)
+        self._driver.updateBattleGameMode(self._battleGameModeController.gameModeName)
 
     def _initStateManager(self):
         self._stateManager.eStateChanged += self._onStateChange

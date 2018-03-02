@@ -13,6 +13,8 @@ from gui.HUD2.features.Respawn.RespawnSilentCheckManager import RespawnSilentChe
 from gui.HUD2.hudFeatures import Feature
 from consts import HINTS_TYPE
 from HUDStatesEffectsController import HUDStatesEffectsController
+from gui.HUD2.HUDExecutionManager import HUDExecutionManager
+from gui.HUD2.features.GameplayHints.GameplayHintsSource import GameplayHintsSource
 LOADING_FINISHED = 1
 INTRO_FINISHED = 2
 ON_DEATH = 8
@@ -254,7 +256,7 @@ class StateManager:
         self._stateMachine.addTransition(SPECTATOR_TAB_STATE, SPECTATOR_STATE, TAB_UP)
         self._stateMachine.addTransition(SPECTATOR_TACTICAL_STATE, SPECTATOR_TAB_TACTICAL_STATE, TAB_DOWN)
         self._stateMachine.addTransition(SPECTATOR_TAB_TACTICAL_STATE, SPECTATOR_TACTICAL_STATE, TAB_UP)
-        self._stateMachine.addTransition(BATTLE_DEFAULT | BATTLE_STATS, DEATH_STATE, ON_DEATH)
+        self._stateMachine.addTransition(BATTLE_DEFAULT | BATTLE_STATS, DEATH_STATE, ON_DEATH, lambda *args, **kwargs: self._onDeath())
         self._stateMachine.addTransition(DEATH_STATE | DEATH_TAB_STATE, RESPAWN_STATE, ON_WAITE_RESPAWN)
         self._stateMachine.addTransition(LOADING | LOADING_TAB, RESPAWN_STATE, ON_WAITE_RESPAWN, lambda *args, **kwargs: self._connectToSpectator())
         self._stateMachine.addTransition(DEATH_STATE | DEATH_TAB_STATE, RESPAWN_DISABLED_STATE, ON_WAITE_DISABLED_RESPAWN, lambda *args, **kwargs: self._onRespawnDisabled())
@@ -358,7 +360,7 @@ class StateManager:
         gamePlayHints = self._gameEnvironment.service('GamePlayHints')
         LOG_DEBUG('STATES TEST :  _onIntermissionPress ', self._stateId)
         if gamePlayHints.hintVisible:
-            self._gameEnvironment.eDisableStartHint()
+            HUDExecutionManager.call(GameplayHintsSource.onDisableStartHint)
         elif chat.chatVisible:
             chat.hideChat()
         elif self._stateId & SPECTATOR_STATES:
@@ -399,12 +401,18 @@ class StateManager:
         """
         self._requestShootingHint()
 
+    def _onDeath(self, *args, **kwargs):
+        """Close start hint if it was visible when player died
+        """
+        gamePlayHints = self._gameEnvironment.service('GamePlayHints')
+        gamePlayHints.setHintVisibility(False)
+
     def _showStartHint(self, *args, **kwargs):
         """Reset camera for player to avoid some issues related to reconnect
         """
         gamePlayHints = self._gameEnvironment.service('GamePlayHints')
         if self._playerAvatar.startHintAvailable and not gamePlayHints.hintVisible:
-            self._gameEnvironment.eShowHint(HINTS_TYPE.START)
+            HUDExecutionManager.call(GameplayHintsSource.onShowHint, HINTS_TYPE.START)
 
     def _connectToSpectator(self, *args, **kwargs):
         self._playerAvatar.skipDeadFallState()
@@ -421,7 +429,7 @@ class StateManager:
 
     def _requestShootingHint(self):
         if self._playerAvatar.shootingHintAvailable and not self._playerAvatar.startHintAvailable:
-            self._gameEnvironment.eShowHint(HINTS_TYPE.SHOOTING)
+            HUDExecutionManager.call(GameplayHintsSource.onShowHint, HINTS_TYPE.SHOOTING)
 
     def isRespawnAvailable(self):
         return self._respawnModel.respawnAmount.get() != 0

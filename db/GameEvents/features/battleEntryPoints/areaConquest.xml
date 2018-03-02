@@ -1,0 +1,106 @@
+<areaconquest.xml>
+  <subscriber>
+    <name>	conquest	</name>
+    <type>battle.entry.point</type>
+    <group>default</group>
+    <server>
+      <overwrite>	true	</overwrite>
+      <active>	true	</active>
+      <repeat>	true	</repeat>
+      <scope>player</scope>
+    </server>
+    <condition>
+      <or>
+        <lt>
+          <context>player.plane.level</context>
+          <value>	4	</value>
+        </lt>
+        <not>
+          <in>
+            <context>activities.component.springmarathon2018</context>
+            <value>1_war</value>
+            <value>2_war</value>
+            <value>3_war</value>
+            <value>4_war</value>
+            <value>5_war</value>
+            <value>6_war</value>
+          </in>
+        </not>
+      </or>
+    </condition>
+    <event>
+      <type>pre.battle</type>
+      <context>player</context>
+      <name>verify</name>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>	invasion	</name>
+    <type>battle.entry.point</type>
+    <group>default</group>
+    <server>
+      <overwrite>	true	</overwrite>
+      <active>	true	</active>
+      <repeat>	true	</repeat>
+      <scope>player</scope>
+    </server>
+    <condition>
+      <and>
+        <gte>
+          <context>player.plane.level</context>
+          <value>	4	</value>
+        </gte>
+        <in>
+          <context>activities.component.springmarathon2018</context>
+          <value>1_war</value>
+          <value>3_war</value>
+          <value>5_war</value>
+        </in>
+      </and>
+    </condition>
+    <event>
+      <type>pre.battle</type>
+      <context>player</context>
+      <name>verify</name>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+  <subscriber>
+    <name>attrition_warfare</name>
+    <type>battle.entry.point</type>
+    <group>default</group>
+    <server>
+      <overwrite>	true	</overwrite>
+      <active>	true	</active>
+      <repeat>	true	</repeat>
+      <scope>player</scope>
+    </server>
+    <condition>
+      <and>
+        <gte>
+          <context>player.plane.level</context>
+          <value>	4	</value>
+        </gte>
+        <in>
+          <context>activities.component.springmarathon2018</context>
+          <value>2_war</value>
+          <value>4_war</value>
+          <value>6_war</value>
+        </in>
+      </and>
+    </condition>
+    <event>
+      <type>pre.battle</type>
+      <context>player</context>
+      <name>verify</name>
+      <count>
+        <value>	1	</value>
+      </count>
+    </event>
+  </subscriber>
+</areaconquest.xml>

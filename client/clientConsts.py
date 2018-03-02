@@ -205,12 +205,12 @@ def getHudPlaneIcon(planeType):
 BATTLE_RESULT_TURRET_ICO_PATH = BATTLE_RESULT_ICOS_PATH % 'iconHudTypeTurret.png'
 BATTLE_RESULT_GROUND_OBJECT_ICO_PATH = BATTLE_RESULT_ICOS_PATH % 'iconHudTypeGroundTarget.png'
 BATTLE_RESULT_BASE_OBJECT_ICO_PATH = BATTLE_RESULT_ICOS_PATH % 'iconHudTypeGroundTarget.png'
-BATTLE_NAME_BY_TYPE_HUD_LOC_ID = {ARENA_TYPE.NORMAL: 'lobby_game_type_name_areaconquest',
+BATTLE_NAME_BY_TYPE_HUD_LOC_ID = {ARENA_TYPE.NORMAL: 'BATTLE_SINGLE_FLIGHT_QUEUE_WINDOW',
  ARENA_TYPE.DEV: 'battle_dev',
  ARENA_TYPE.TRAINING: 'battle_training',
  ARENA_TYPE.PVP_WITH_BOTS: 'lobby_game_type_name_areaconquest',
  ARENA_TYPE.JAPANESE_THREAT: 'LOBBY_ALBION_OPERATION_BIG_TEXT'}
-BATTLE_DESC_BY_TYPE_HUD_LOC_ID = {ARENA_TYPE.NORMAL: 'lobby_game_type_description_areaconquest',
+BATTLE_DESC_BY_TYPE_HUD_LOC_ID = {ARENA_TYPE.NORMAL: 'LOBBY_BATTLE_DESCRIPTION_RANDOM_GAMEMODE',
  ARENA_TYPE.DEV: 'pre_battle_description_dev',
  ARENA_TYPE.TRAINING: 'pre_battle_description_training',
  ARENA_TYPE.PVP_WITH_BOTS: 'lobby_game_type_description_areaconquest',

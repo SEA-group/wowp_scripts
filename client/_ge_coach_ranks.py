@@ -75,6 +75,7 @@ DB = Dummy()
 DB.subscriber = []
 DB.subscriber.insert(0, None)
 DB.subscriber[0] = Dummy()
+DB.subscriber[0].activity = []
 DB.subscriber[0].condition = []
 DB.subscriber[0].count = []
 DB.subscriber[0].event = []
@@ -86,6 +87,7 @@ DB.subscriber[0].nested.complete = 'all'
 DB.subscriber[0].nested.subscriber = []
 DB.subscriber[0].nested.subscriber.insert(0, None)
 DB.subscriber[0].nested.subscriber[0] = Dummy()
+DB.subscriber[0].nested.subscriber[0].activity = []
 DB.subscriber[0].nested.subscriber[0].client = Dummy()
 DB.subscriber[0].nested.subscriber[0].client.description = Dummy()
 DB.subscriber[0].nested.subscriber[0].client.description.locale = ''
@@ -120,6 +122,7 @@ DB.subscriber[0].nested.subscriber[0].server.scope.insert(0, None)
 DB.subscriber[0].nested.subscriber[0].server.scope[0] = 'plane.type'
 DB.subscriber[0].nested.subscriber.insert(1, None)
 DB.subscriber[0].nested.subscriber[1] = Dummy()
+DB.subscriber[0].nested.subscriber[1].activity = []
 DB.subscriber[0].nested.subscriber[1].client = Dummy()
 DB.subscriber[0].nested.subscriber[1].client.description = Dummy()
 DB.subscriber[0].nested.subscriber[1].client.description.locale = ''
@@ -154,6 +157,7 @@ DB.subscriber[0].nested.subscriber[1].server.scope.insert(0, None)
 DB.subscriber[0].nested.subscriber[1].server.scope[0] = 'plane.type'
 DB.subscriber[0].nested.subscriber.insert(2, None)
 DB.subscriber[0].nested.subscriber[2] = Dummy()
+DB.subscriber[0].nested.subscriber[2].activity = []
 DB.subscriber[0].nested.subscriber[2].client = Dummy()
 DB.subscriber[0].nested.subscriber[2].client.description = Dummy()
 DB.subscriber[0].nested.subscriber[2].client.description.locale = ''
@@ -188,6 +192,7 @@ DB.subscriber[0].nested.subscriber[2].server.scope.insert(0, None)
 DB.subscriber[0].nested.subscriber[2].server.scope[0] = 'plane.type'
 DB.subscriber[0].nested.subscriber.insert(3, None)
 DB.subscriber[0].nested.subscriber[3] = Dummy()
+DB.subscriber[0].nested.subscriber[3].activity = []
 DB.subscriber[0].nested.subscriber[3].client = Dummy()
 DB.subscriber[0].nested.subscriber[3].client.description = Dummy()
 DB.subscriber[0].nested.subscriber[3].client.description.locale = ''
@@ -222,6 +227,7 @@ DB.subscriber[0].nested.subscriber[3].server.scope.insert(0, None)
 DB.subscriber[0].nested.subscriber[3].server.scope[0] = 'plane.type'
 DB.subscriber[0].nested.subscriber.insert(4, None)
 DB.subscriber[0].nested.subscriber[4] = Dummy()
+DB.subscriber[0].nested.subscriber[4].activity = []
 DB.subscriber[0].nested.subscriber[4].client = Dummy()
 DB.subscriber[0].nested.subscriber[4].client.description = Dummy()
 DB.subscriber[0].nested.subscriber[4].client.description.locale = ''
@@ -275,6 +281,7 @@ DB.subscriber[0].server.scope[0] = 'plane.type'
 DB.subscriber[0].type = 'rank'
 DB.subscriber.insert(1, None)
 DB.subscriber[1] = Dummy()
+DB.subscriber[1].activity = []
 DB.subscriber[1].condition = []
 DB.subscriber[1].count = []
 DB.subscriber[1].event = []
@@ -286,6 +293,7 @@ DB.subscriber[1].nested.complete = 'all'
 DB.subscriber[1].nested.subscriber = []
 DB.subscriber[1].nested.subscriber.insert(0, None)
 DB.subscriber[1].nested.subscriber[0] = Dummy()
+DB.subscriber[1].nested.subscriber[0].activity = []
 DB.subscriber[1].nested.subscriber[0].client = Dummy()
 DB.subscriber[1].nested.subscriber[0].client.description = Dummy()
 DB.subscriber[1].nested.subscriber[0].client.description.locale = ''
@@ -320,6 +328,7 @@ DB.subscriber[1].nested.subscriber[0].server.scope.insert(0, None)
 DB.subscriber[1].nested.subscriber[0].server.scope[0] = 'plane.type'
 DB.subscriber[1].nested.subscriber.insert(1, None)
 DB.subscriber[1].nested.subscriber[1] = Dummy()
+DB.subscriber[1].nested.subscriber[1].activity = []
 DB.subscriber[1].nested.subscriber[1].client = Dummy()
 DB.subscriber[1].nested.subscriber[1].client.description = Dummy()
 DB.subscriber[1].nested.subscriber[1].client.description.locale = ''
@@ -354,6 +363,7 @@ DB.subscriber[1].nested.subscriber[1].server.scope.insert(0, None)
 DB.subscriber[1].nested.subscriber[1].server.scope[0] = 'plane.type'
 DB.subscriber[1].nested.subscriber.insert(2, None)
 DB.subscriber[1].nested.subscriber[2] = Dummy()
+DB.subscriber[1].nested.subscriber[2].activity = []
 DB.subscriber[1].nested.subscriber[2].client = Dummy()
 DB.subscriber[1].nested.subscriber[2].client.description = Dummy()
 DB.subscriber[1].nested.subscriber[2].client.description.locale = ''
@@ -388,6 +398,7 @@ DB.subscriber[1].nested.subscriber[2].server.scope.insert(0, None)
 DB.subscriber[1].nested.subscriber[2].server.scope[0] = 'plane.type'
 DB.subscriber[1].nested.subscriber.insert(3, None)
 DB.subscriber[1].nested.subscriber[3] = Dummy()
+DB.subscriber[1].nested.subscriber[3].activity = []
 DB.subscriber[1].nested.subscriber[3].client = Dummy()
 DB.subscriber[1].nested.subscriber[3].client.description = Dummy()
 DB.subscriber[1].nested.subscriber[3].client.description.locale = ''
@@ -422,6 +433,7 @@ DB.subscriber[1].nested.subscriber[3].server.scope.insert(0, None)
 DB.subscriber[1].nested.subscriber[3].server.scope[0] = 'plane.type'
 DB.subscriber[1].nested.subscriber.insert(4, None)
 DB.subscriber[1].nested.subscriber[4] = Dummy()
+DB.subscriber[1].nested.subscriber[4].activity = []
 DB.subscriber[1].nested.subscriber[4].client = Dummy()
 DB.subscriber[1].nested.subscriber[4].client.description = Dummy()
 DB.subscriber[1].nested.subscriber[4].client.description.locale = ''
@@ -475,6 +487,7 @@ DB.subscriber[1].server.scope[0] = 'plane.type'
 DB.subscriber[1].type = 'rank'
 DB.subscriber.insert(2, None)
 DB.subscriber[2] = Dummy()
+DB.subscriber[2].activity = []
 DB.subscriber[2].condition = []
 DB.subscriber[2].count = []
 DB.subscriber[2].event = []
@@ -486,6 +499,7 @@ DB.subscriber[2].nested.complete = 'all'
 DB.subscriber[2].nested.subscriber = []
 DB.subscriber[2].nested.subscriber.insert(0, None)
 DB.subscriber[2].nested.subscriber[0] = Dummy()
+DB.subscriber[2].nested.subscriber[0].activity = []
 DB.subscriber[2].nested.subscriber[0].client = Dummy()
 DB.subscriber[2].nested.subscriber[0].client.description = Dummy()
 DB.subscriber[2].nested.subscriber[0].client.description.locale = ''
@@ -520,6 +534,7 @@ DB.subscriber[2].nested.subscriber[0].server.scope.insert(0, None)
 DB.subscriber[2].nested.subscriber[0].server.scope[0] = 'plane.type'
 DB.subscriber[2].nested.subscriber.insert(1, None)
 DB.subscriber[2].nested.subscriber[1] = Dummy()
+DB.subscriber[2].nested.subscriber[1].activity = []
 DB.subscriber[2].nested.subscriber[1].client = Dummy()
 DB.subscriber[2].nested.subscriber[1].client.description = Dummy()
 DB.subscriber[2].nested.subscriber[1].client.description.locale = ''
@@ -554,6 +569,7 @@ DB.subscriber[2].nested.subscriber[1].server.scope.insert(0, None)
 DB.subscriber[2].nested.subscriber[1].server.scope[0] = 'plane.type'
 DB.subscriber[2].nested.subscriber.insert(2, None)
 DB.subscriber[2].nested.subscriber[2] = Dummy()
+DB.subscriber[2].nested.subscriber[2].activity = []
 DB.subscriber[2].nested.subscriber[2].client = Dummy()
 DB.subscriber[2].nested.subscriber[2].client.description = Dummy()
 DB.subscriber[2].nested.subscriber[2].client.description.locale = ''
@@ -588,6 +604,7 @@ DB.subscriber[2].nested.subscriber[2].server.scope.insert(0, None)
 DB.subscriber[2].nested.subscriber[2].server.scope[0] = 'plane.type'
 DB.subscriber[2].nested.subscriber.insert(3, None)
 DB.subscriber[2].nested.subscriber[3] = Dummy()
+DB.subscriber[2].nested.subscriber[3].activity = []
 DB.subscriber[2].nested.subscriber[3].client = Dummy()
 DB.subscriber[2].nested.subscriber[3].client.description = Dummy()
 DB.subscriber[2].nested.subscriber[3].client.description.locale = ''
@@ -622,6 +639,7 @@ DB.subscriber[2].nested.subscriber[3].server.scope.insert(0, None)
 DB.subscriber[2].nested.subscriber[3].server.scope[0] = 'plane.type'
 DB.subscriber[2].nested.subscriber.insert(4, None)
 DB.subscriber[2].nested.subscriber[4] = Dummy()
+DB.subscriber[2].nested.subscriber[4].activity = []
 DB.subscriber[2].nested.subscriber[4].client = Dummy()
 DB.subscriber[2].nested.subscriber[4].client.description = Dummy()
 DB.subscriber[2].nested.subscriber[4].client.description.locale = ''
@@ -675,6 +693,7 @@ DB.subscriber[2].server.scope[0] = 'plane.type'
 DB.subscriber[2].type = 'rank'
 DB.subscriber.insert(3, None)
 DB.subscriber[3] = Dummy()
+DB.subscriber[3].activity = []
 DB.subscriber[3].condition = []
 DB.subscriber[3].count = []
 DB.subscriber[3].event = []
@@ -686,6 +705,7 @@ DB.subscriber[3].nested.complete = 'all'
 DB.subscriber[3].nested.subscriber = []
 DB.subscriber[3].nested.subscriber.insert(0, None)
 DB.subscriber[3].nested.subscriber[0] = Dummy()
+DB.subscriber[3].nested.subscriber[0].activity = []
 DB.subscriber[3].nested.subscriber[0].client = Dummy()
 DB.subscriber[3].nested.subscriber[0].client.description = Dummy()
 DB.subscriber[3].nested.subscriber[0].client.description.locale = ''
@@ -720,6 +740,7 @@ DB.subscriber[3].nested.subscriber[0].server.scope.insert(0, None)
 DB.subscriber[3].nested.subscriber[0].server.scope[0] = 'plane.type'
 DB.subscriber[3].nested.subscriber.insert(1, None)
 DB.subscriber[3].nested.subscriber[1] = Dummy()
+DB.subscriber[3].nested.subscriber[1].activity = []
 DB.subscriber[3].nested.subscriber[1].client = Dummy()
 DB.subscriber[3].nested.subscriber[1].client.description = Dummy()
 DB.subscriber[3].nested.subscriber[1].client.description.locale = ''
@@ -754,6 +775,7 @@ DB.subscriber[3].nested.subscriber[1].server.scope.insert(0, None)
 DB.subscriber[3].nested.subscriber[1].server.scope[0] = 'plane.type'
 DB.subscriber[3].nested.subscriber.insert(2, None)
 DB.subscriber[3].nested.subscriber[2] = Dummy()
+DB.subscriber[3].nested.subscriber[2].activity = []
 DB.subscriber[3].nested.subscriber[2].client = Dummy()
 DB.subscriber[3].nested.subscriber[2].client.description = Dummy()
 DB.subscriber[3].nested.subscriber[2].client.description.locale = ''
@@ -788,6 +810,7 @@ DB.subscriber[3].nested.subscriber[2].server.scope.insert(0, None)
 DB.subscriber[3].nested.subscriber[2].server.scope[0] = 'plane.type'
 DB.subscriber[3].nested.subscriber.insert(3, None)
 DB.subscriber[3].nested.subscriber[3] = Dummy()
+DB.subscriber[3].nested.subscriber[3].activity = []
 DB.subscriber[3].nested.subscriber[3].client = Dummy()
 DB.subscriber[3].nested.subscriber[3].client.description = Dummy()
 DB.subscriber[3].nested.subscriber[3].client.description.locale = ''
@@ -822,6 +845,7 @@ DB.subscriber[3].nested.subscriber[3].server.scope.insert(0, None)
 DB.subscriber[3].nested.subscriber[3].server.scope[0] = 'plane.type'
 DB.subscriber[3].nested.subscriber.insert(4, None)
 DB.subscriber[3].nested.subscriber[4] = Dummy()
+DB.subscriber[3].nested.subscriber[4].activity = []
 DB.subscriber[3].nested.subscriber[4].client = Dummy()
 DB.subscriber[3].nested.subscriber[4].client.description = Dummy()
 DB.subscriber[3].nested.subscriber[4].client.description.locale = ''
@@ -875,6 +899,7 @@ DB.subscriber[3].server.scope[0] = 'plane.type'
 DB.subscriber[3].type = 'rank'
 DB.subscriber.insert(4, None)
 DB.subscriber[4] = Dummy()
+DB.subscriber[4].activity = []
 DB.subscriber[4].condition = []
 DB.subscriber[4].count = []
 DB.subscriber[4].event = []
@@ -886,6 +911,7 @@ DB.subscriber[4].nested.complete = 'all'
 DB.subscriber[4].nested.subscriber = []
 DB.subscriber[4].nested.subscriber.insert(0, None)
 DB.subscriber[4].nested.subscriber[0] = Dummy()
+DB.subscriber[4].nested.subscriber[0].activity = []
 DB.subscriber[4].nested.subscriber[0].client = Dummy()
 DB.subscriber[4].nested.subscriber[0].client.description = Dummy()
 DB.subscriber[4].nested.subscriber[0].client.description.locale = ''
@@ -920,6 +946,7 @@ DB.subscriber[4].nested.subscriber[0].server.scope.insert(0, None)
 DB.subscriber[4].nested.subscriber[0].server.scope[0] = 'plane.type'
 DB.subscriber[4].nested.subscriber.insert(1, None)
 DB.subscriber[4].nested.subscriber[1] = Dummy()
+DB.subscriber[4].nested.subscriber[1].activity = []
 DB.subscriber[4].nested.subscriber[1].client = Dummy()
 DB.subscriber[4].nested.subscriber[1].client.description = Dummy()
 DB.subscriber[4].nested.subscriber[1].client.description.locale = ''
@@ -954,6 +981,7 @@ DB.subscriber[4].nested.subscriber[1].server.scope.insert(0, None)
 DB.subscriber[4].nested.subscriber[1].server.scope[0] = 'plane.type'
 DB.subscriber[4].nested.subscriber.insert(2, None)
 DB.subscriber[4].nested.subscriber[2] = Dummy()
+DB.subscriber[4].nested.subscriber[2].activity = []
 DB.subscriber[4].nested.subscriber[2].client = Dummy()
 DB.subscriber[4].nested.subscriber[2].client.description = Dummy()
 DB.subscriber[4].nested.subscriber[2].client.description.locale = ''
@@ -988,6 +1016,7 @@ DB.subscriber[4].nested.subscriber[2].server.scope.insert(0, None)
 DB.subscriber[4].nested.subscriber[2].server.scope[0] = 'plane.type'
 DB.subscriber[4].nested.subscriber.insert(3, None)
 DB.subscriber[4].nested.subscriber[3] = Dummy()
+DB.subscriber[4].nested.subscriber[3].activity = []
 DB.subscriber[4].nested.subscriber[3].client = Dummy()
 DB.subscriber[4].nested.subscriber[3].client.description = Dummy()
 DB.subscriber[4].nested.subscriber[3].client.description.locale = ''
@@ -1022,6 +1051,7 @@ DB.subscriber[4].nested.subscriber[3].server.scope.insert(0, None)
 DB.subscriber[4].nested.subscriber[3].server.scope[0] = 'plane.type'
 DB.subscriber[4].nested.subscriber.insert(4, None)
 DB.subscriber[4].nested.subscriber[4] = Dummy()
+DB.subscriber[4].nested.subscriber[4].activity = []
 DB.subscriber[4].nested.subscriber[4].client = Dummy()
 DB.subscriber[4].nested.subscriber[4].client.description = Dummy()
 DB.subscriber[4].nested.subscriber[4].client.description.locale = ''

@@ -293,6 +293,8 @@
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <fireMountPoint>
+          </fireMountPoint>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -372,6 +374,14 @@
                   <mountPoint>HP_engine</mountPoint>
                 </effect>
               </effectState>
+              <usage>
+              </usage>
+              <animationController>
+              </animationController>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateAnimation>
+              </stateAnimation>
             </state>
             <state>
               <id>	2	</id>
@@ -437,6 +447,14 @@
                   <mountPoint>HP_engine</mountPoint>
                 </effect>
               </effectState>
+              <usage>
+              </usage>
+              <animationController>
+              </animationController>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateAnimation>
+              </stateAnimation>
             </state>
             <state>
               <id>	3	</id>
@@ -508,6 +526,14 @@
                   <mountPoint>plane/HP_nozzle_01</mountPoint>
                 </effect>
               </effectOnStart>
+              <usage>
+              </usage>
+              <animationController>
+              </animationController>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateAnimation>
+              </stateAnimation>
             </state>
             <state>
               <id>	4	</id>
@@ -575,11 +601,21 @@
                   <mountPoint>plane/HP_nozzle_01</mountPoint>
                 </effect>
               </effectOnStart>
+              <usage>
+              </usage>
+              <animationController>
+              </animationController>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateAnimation>
+              </stateAnimation>
             </state>
           </states>
           <repairDestructedAfter>	20.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <fireMountPoint>
+          </fireMountPoint>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -694,6 +730,7 @@
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <health>20.0</health>
         </upgrade>
         <upgrade>
           <id>	2	</id>
@@ -871,6 +908,7 @@
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <health>20.0</health>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -1069,8 +1107,6 @@
               <usage>crash</usage>
               <effectState>
                 <effect>
-                  <name>
-                  </name>
                   <mountPoint>plane/HP_wLhit</mountPoint>
                 </effect>
               </effectState>
@@ -1280,8 +1316,6 @@
               <model>vehicles/airplanes/russian/SU28_Yak7/crash/lod0/wRcap_01.model</model>
               <effectState>
                 <effect>
-                  <name>
-                  </name>
                   <mountPoint>plane/HP_wRhit</mountPoint>
                 </effect>
               </effectState>
@@ -1588,6 +1622,7 @@
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <health>20.0</health>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -1695,6 +1730,7 @@
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <health>20.0</health>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -1778,6 +1814,7 @@
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <health>20.0</health>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -1846,6 +1883,7 @@
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <health>20.0</health>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -1914,6 +1952,7 @@
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <health>20.0</health>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -1983,6 +2022,7 @@
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <health>20.0</health>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -3006,6 +3046,36 @@
                 <texture>vehicles/airplanes/common/decals/decor/128.dds</texture>
                 <icoPath>vehicles/airplanes/common/decals/decor/preview/128.dds</icoPath>
               </decal>
+              <decal>
+                <id>	201	</id>
+                <texture>vehicles/airplanes/common/decals/decor/129.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/129.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	202	</id>
+                <texture>vehicles/airplanes/common/decals/decor/130.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/130.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	203	</id>
+                <texture>vehicles/airplanes/common/decals/decor/131.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/131.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	204	</id>
+                <texture>vehicles/airplanes/common/decals/decor/132.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/132.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	205	</id>
+                <texture>vehicles/airplanes/common/decals/decor/133.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/133.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	206	</id>
+                <texture>vehicles/airplanes/common/decals/decor/134.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/134.dds</icoPath>
+              </decal>
             </decals>
           </decalGroup>
           <decalGroup>
@@ -3250,6 +3320,13 @@
                 <icoPath>vehicles/airplanes/russian/SU28_Yak7/preview/SU28_Yak7_animal.dds</icoPath>
                 <bottomColor>	0.580000 0.733000 0.808000 1.000000	</bottomColor>
                 <glossinessOffset>	-0.200000	</glossinessOffset>
+              </decal>
+              <decal>
+                <id>	17	</id>
+                <texture>vehicles/airplanes/russian/SU28_Yak7/SU28_Yak7_flag.dds</texture>
+                <icoPath>vehicles/airplanes/russian/SU28_Yak7/preview/SU28_Yak7_flag.dds</icoPath>
+                <bottomColor>	0.580000 0.733000 0.808000 1.000000	</bottomColor>
+                <glossinessOffset>	0.050000	</glossinessOffset>
               </decal>
             </decals>
           </decalGroup>

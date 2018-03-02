@@ -1,5 +1,7 @@
 # Embedded file name: scripts/common/GameEventsCommon/helpers/core.py
 import types
+import sys
+import functools
 import weakref
 
 def fastDeepCopy(obj):

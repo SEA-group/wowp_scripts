@@ -12,7 +12,7 @@ from exchangeapi.IfaceUtils import getIface
 DB_NAME = 'cache.dat'
 CACHE_TABLE_NAME = 'cache'
 CHECK_TABLE_EXIST = 'SELECT count(*) FROM sqlite_master WHERE type="table" AND name="%s"' % CACHE_TABLE_NAME
-CREATE_TABLE = 'CREATE table %s (id INTEGER PRIMARY KEY, data BLOB, expiringTime FLOAT)' % CACHE_TABLE_NAME
+CREATE_TABLE = 'CREATE table %s (id INT64 PRIMARY KEY, data BLOB, expiringTime FLOAT)' % CACHE_TABLE_NAME
 GET_DATA = 'SELECT data, expiringTime FROM %s WHERE id = ?' % CACHE_TABLE_NAME
 SET_DATA = 'INSERT OR REPLACE INTO %s VALUES (?, ?, ?)' % CACHE_TABLE_NAME
 DELETE_DATA = 'DELETE FROM %s WHERE id = ?' % CACHE_TABLE_NAME

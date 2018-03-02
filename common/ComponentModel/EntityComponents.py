@@ -3,11 +3,40 @@ import sys
 import inspect
 import BigWorld
 from EntityHelpers import isAvatar, isTeamObject
-from Component import Component, InputSlot, OutputSlot
-from debug_utils import LOG_ERROR
-from consts import METERS_PER_SEC_TO_KMH_FACTOR
+from Component import Component, InputSlot, OutputSlot, ArrayConnection
+from ComponentLoggingHelpers import logEntityDoesNotExistError, logNotSupportedEntityError
+from consts import METERS_PER_SEC_TO_KMH_FACTOR, TEAM_ID
 import _performanceCharacteristics_db
-import _preparedBattleData_db
+
+class FindPlanesInArea(Component):
+
+    @classmethod
+    def componentAspects(cls):
+        return [Component.ASPECT_SERVER]
+
+    @classmethod
+    def componentCategory(cls):
+        return 'Game Objects'
+
+    @classmethod
+    def arrayConnections(cls):
+        return [ArrayConnection('Destination', Component.SLOT_ENTITY)]
+
+    def slotDefinitions(self):
+        return [InputSlot('in', Component.SLOT_EVENT, FindPlanesInArea._execute),
+         InputSlot('position', Component.SLOT_VECTOR3, None),
+         InputSlot('radius', Component.SLOT_FLOAT, None),
+         OutputSlot('out', Component.SLOT_EVENT, None)]
+
+    def _execute(self, dst, pos, radius):
+        del dst[:]
+        e = BigWorld.entities[self.planEntityId]
+        if isAvatar(e) and e.position.distTo(pos) <= radius:
+            dst.append(e.id)
+        avatars = e.entitiesInRange(radius, 'Avatar', pos) + e.entitiesInRange(radius, 'AvatarBot', pos) + e.entitiesInRange(radius, 'Bomber', pos)
+        dst.extend((a.id for a in avatars))
+        return 'out'
+
 
 class HeightAboveGroundByEntityId(Component):
 
@@ -25,10 +54,10 @@ class HeightAboveGroundByEntityId(Component):
     def _execute(self, entityId):
         e = BigWorld.entities.get(entityId)
         if e is None:
-            _logEntityDoesNotExistError(entityId, self)
+            logEntityDoesNotExistError(entityId, self)
             return 0
         elif not isAvatar(e):
-            _logNotSupportedEntityError(e, self)
+            logNotSupportedEntityError(e, self)
             return 0
         else:
             return e.getAltitudeAboveObstacle()
@@ -50,38 +79,13 @@ class SpeedByEntityId(Component):
     def _execute(self, entityId):
         e = BigWorld.entities.get(entityId)
         if e is None:
-            _logEntityDoesNotExistError(entityId, self)
+            logEntityDoesNotExistError(entityId, self)
             return 0
         elif not isAvatar(e):
-            _logNotSupportedEntityError(e, self)
+            logNotSupportedEntityError(e, self)
             return 0
         else:
             return e.getSpeed() * METERS_PER_SEC_TO_KMH_FACTOR
-
-
-class HeightAboveWaterByEntityId(Component):
-
-    @classmethod
-    def componentAspects(cls):
-        return [Component.ASPECT_CLIENT]
-
-    @classmethod
-    def componentCategory(cls):
-        return 'Game Objects'
-
-    def slotDefinitions(self):
-        return [InputSlot('entity_id', Component.SLOT_INT, None), OutputSlot('height', Component.SLOT_FLOAT, HeightAboveWaterByEntityId._execute)]
-
-    def _execute(self, entityId):
-        e = BigWorld.entities.get(entityId)
-        if e is None:
-            _logEntityDoesNotExistError(entityId, self)
-            return 0
-        elif not isAvatar(e):
-            _logNotSupportedEntityError(e, self)
-            return 0
-        else:
-            return e.getAltitudeAboveWaterLevel()
 
 
 class WepSpeedByEntityId(Component):
@@ -100,10 +104,10 @@ class WepSpeedByEntityId(Component):
     def _execute(self, entityId):
         e = BigWorld.entities.get(entityId)
         if e is None:
-            _logEntityDoesNotExistError(entityId, self)
+            logEntityDoesNotExistError(entityId, self)
             return 0
         elif not isAvatar(e):
-            _logNotSupportedEntityError(e, self)
+            logNotSupportedEntityError(e, self)
             return 0
         else:
             return _performanceCharacteristics_db.airplanes[e.globalID].maxSpeed
@@ -125,10 +129,10 @@ class MaxSpeedByEntityId(Component):
     def _execute(self, entityId):
         e = BigWorld.entities.get(entityId)
         if e is None:
-            _logEntityDoesNotExistError(entityId, self)
+            logEntityDoesNotExistError(entityId, self)
             return 0
         elif not isAvatar(e):
-            _logNotSupportedEntityError(e, self)
+            logNotSupportedEntityError(e, self)
             return 0
         else:
             return e.engineSettings.maxSpeed * METERS_PER_SEC_TO_KMH_FACTOR
@@ -151,36 +155,27 @@ class HeightLevelsByEntityId(Component):
          OutputSlot('max', Component.SLOT_FLOAT, HeightLevelsByEntityId._getMax)]
 
     def _getOptimal(self, entityId):
-        pbd = self._getPreparedBattleData(entityId)
-        if pbd is not None:
-            return pbd.altimeter[4] * pbd.altimeter[-1]
-        else:
-            return 0
+        avatar = self._tryGetAvatar(entityId)
+        return avatar.heightOptimal
 
     def _getCritical(self, entityId):
-        pbd = self._getPreparedBattleData(entityId)
-        if pbd is not None:
-            return pbd.altimeter[5] * pbd.altimeter[-1]
-        else:
-            return 0
+        avatar = self._tryGetAvatar(entityId)
+        return avatar.heightCritical
 
     def _getMax(self, entityId):
-        pbd = self._getPreparedBattleData(entityId)
-        if pbd is not None:
-            return pbd.altimeter[-1]
-        else:
-            return 0
+        avatar = self._tryGetAvatar(entityId)
+        return avatar.heightMax
 
-    def _getPreparedBattleData(self, entityId):
+    def _tryGetAvatar(self, entityId):
         e = BigWorld.entities.get(entityId)
         if e is None:
-            _logEntityDoesNotExistError(entityId, self)
+            logEntityDoesNotExistError(entityId, self)
             return
         elif not isAvatar(e):
-            _logNotSupportedEntityError(e, self)
+            logNotSupportedEntityError(e, self)
             return
         else:
-            return _preparedBattleData_db.preparedBattleData[e.globalID]
+            return e
 
 
 class SetEffectTriggerByEntityId(Component):
@@ -203,26 +198,37 @@ class SetEffectTriggerByEntityId(Component):
     def _execute(self, entityId, triggerName, isOn):
         e = BigWorld.entities.get(entityId)
         if e is None:
-            _logEntityDoesNotExistError(entityId, self)
+            logEntityDoesNotExistError(entityId, self)
             return
         elif not isAvatar(e) and not isTeamObject(e):
-            _logNotSupportedEntityError(e, self)
+            logNotSupportedEntityError(e, self)
             return
         else:
             e.controllers['modelManipulator'].setEffectVisible(triggerName, isOn)
             return 'out'
 
 
-def _logError(component, message):
-    LOG_ERROR('[VSE][{}] {}'.format(component.__class__.__name__, message))
+class TEAM_LOGICAL_STATE(object):
+    NEUTRAL = 'NEUTRAL'
+    ALLY = 'ALLY'
+    ENEMY = 'ENEMY'
 
 
-def _logNotSupportedEntityError(e, component):
-    _logError(component, 'This type of entity is not supported yet: {}'.format(e.className))
+class TeamLogicalState(Component):
 
+    @classmethod
+    def componentCategory(cls):
+        return 'Game Objects'
 
-def _logEntityDoesNotExistError(entityId, component):
-    _logError(component, 'Entity does not exist: {}'.format(entityId))
+    def slotDefinitions(self):
+        return [InputSlot('teamIdA', Component.SLOT_TEAM_ID, None), InputSlot('teamIdB', Component.SLOT_TEAM_ID, None), OutputSlot('res', Component.SLOT_STR, TeamLogicalState._execute)]
+
+    def _execute(self, teamIdA, teamIdB):
+        if teamIdA == teamIdB:
+            return TEAM_LOGICAL_STATE.ALLY
+        if teamIdA == TEAM_ID.NEUTRAL or teamIdB == TEAM_ID.NEUTRAL:
+            return TEAM_LOGICAL_STATE.NEUTRAL
+        return TEAM_LOGICAL_STATE.ENEMY
 
 
 def getModuleComponents():

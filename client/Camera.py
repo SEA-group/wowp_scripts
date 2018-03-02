@@ -225,6 +225,7 @@ class Camera(GameServiceBase):
         if self.getState() == CameraState.ReplayFree:
             self.leaveState(CameraState.ReplayFree)
         player.controllers['scenarioCameraController'].onEvent(timelineID, BigWorld.serverTime())
+        player.onObserver()
         return
 
     def setSniperModeType(self, type):

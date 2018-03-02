@@ -8,4 +8,4 @@ class RadarSettingsVO:
         self.radarState = ArrayIndex()
         self.radarSize = ArrayIndex()
         self.radarLockRotation = ArrayIndex()
-        self.showDefendersActive = False
+        self.showDefendersActive = True

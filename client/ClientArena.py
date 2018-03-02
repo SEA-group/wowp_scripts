@@ -10,7 +10,7 @@ from debug_utils import *
 from consts import *
 import consts
 import ClientLog
-from EntityHelpers import EntitySupportedClasses, buildAndGetWeaponsInfo, translateDictThroughAnother, AvatarFlags
+from EntityHelpers import EntitySupportedClasses, buildAndGetWeaponsInfo, translateDictThroughAnother, AvatarFlags, extractGameMode
 import db.DBLogic
 from DestructibleObjectFactory import DestructibleObjectFactory
 from DictKeys import NEW_AVATARS_INFO_KEYS_INVERT_DICT, REPORT_BATTLE_RESULT_KEYS_INVERT_DICT
@@ -59,7 +59,8 @@ class ClientArena(GameServiceBase):
      ARENA_UPDATE.ECONOMIC_DEBUG_INFO: '_ClientArena__onEconomicDebugInfo',
      ARENA_UPDATE.ECONOMIC_PLAYERS_POINTS: '_ClientArena__onEconomicPlayersPoints',
      ARENA_UPDATE.ECONOMIC_EXT_PLAYERS_DATA: '_ClientArena__onEconomicExtPlayersData',
-     ARENA_UPDATE.PLANE_TYPE_RANK_UPDATED: '_ClientArena__onPlaneTypeRankUpdated'}
+     ARENA_UPDATE.PLANE_TYPE_RANK_UPDATED: '_ClientArena__onPlaneTypeRankUpdated',
+     ARENA_UPDATE.COMBAT_EVENTS: '_ClientArena__onEconomicPlayersCombatPoints'}
 
     def __init__(self):
         super(ClientArena, self).__init__()
@@ -116,6 +117,7 @@ class ClientArena(GameServiceBase):
         self.onBeforePlaneChanged = Event.Event(em)
         self.onAvatarPlaneTypeRankChanged = Event.Event(em)
         self.onPlayerEconomicExtDataReceived = Event.Event(em)
+        self.onCombatEvents = Event.Event(em)
         self.onAvatarEnterWorld = Event.Event(em)
         self.onAvatarLeaveWorld = Event.Event(em)
         self._gameMode = None
@@ -129,7 +131,7 @@ class ClientArena(GameServiceBase):
         cls = GameModes.getGameModeClientClass(player.gameMode)
         self._gameMode = cls(self)
         self.onGameModeCreate()
-        LOG_DEBUG('ClientArena::createGameMode: created {0}'.format(self._gameMode))
+        self.logger.info('createGameMode: {0}'.format(GAME_MODE.NAMES[extractGameMode(player.gameMode)]))
 
     @property
     def gameMode(self):
@@ -137,6 +139,14 @@ class ClientArena(GameServiceBase):
         @rtype: ArenaHelpers.GameModes.GameModeClient.GameModeClient
         """
         return self._gameMode
+
+    @property
+    def gameModeEnum(self):
+        return extractGameMode(BigWorld.player().gameMode)
+
+    @property
+    def gameModeName(self):
+        return consts.GAME_MODE.NAMES.get(self.gameModeEnum, consts.GAME_MODE.NAME_DEFAULT)
 
     @property
     def gameActionsManager(self):
@@ -208,6 +218,12 @@ class ClientArena(GameServiceBase):
         else:
             return None
 
+    def getTeamObjectGroup(self, id):
+        if id in self.__allObjectsData:
+            return self.__allObjectsData[id]['groupName']
+        else:
+            return None
+
     def getScenarioObjectByDSName(self, name):
         return self.__scenarioObjectMap.get(name)
 
@@ -264,6 +280,10 @@ class ClientArena(GameServiceBase):
     def __onEconomicPlayersPoints(self, argStr):
         info = wgPickle.loads(wgPickle.FromServerToClient, argStr)
         self.onEconomicPlayersPoints(info)
+
+    def __onEconomicPlayersCombatPoints(self, argStr):
+        events = wgPickle.loads(wgPickle.FromServerToClient, argStr)
+        self.onCombatEvents(events)
 
     def __onReceiveMarkerMessage(self, argStr):
         senderID, posX, posZ, messageStringID = wgPickle.loads(wgPickle.FromServerToClient, argStr)
@@ -402,6 +422,7 @@ class ClientArena(GameServiceBase):
         self.arenaData = {'waterLevel': arenaObjects.waterLevel,
          'bounds': arenaObjects.bounds,
          'battleType': player.battleType}
+        BigWorld.setSeaLevel(arenaSettings.seaLevelForFlightMdel)
         self.onApplyArenaData(self.arenaData)
 
     def __onUpdateObjectsData(self, argStr):

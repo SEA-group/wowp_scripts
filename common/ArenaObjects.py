@@ -108,11 +108,9 @@ class ArenaObjects:
         def generateFilteredList():
             for objID, record in enumerate(self.__teamObjects):
                 editorClassName = record['editorClassName']
-                if record['teamID'] == -1:
-                    LOG_WARNING('ignore object without teamIndex', record)
-                elif gameMode not in record['actualModes'] or battleLevel not in record['battleLevels']:
-                    pass
-                elif generatedGroups and not generatedGroups.getGroupData(record['groupName']):
+                record['teamID'] == -1 and LOG_WARNING('ignore object without teamIndex', record)
+                continue
+                if generatedGroups and not generatedGroups.getGroupData(record['groupName']):
                     pass
                 elif editorClassName != 'TeamObject':
                     LOG_WARNING('Unsupported entity class name', editorClassName)
@@ -186,10 +184,10 @@ class ArenaObjects:
         else:
             self.__uniqueGUIDs.add(guid)
             properties = section['properties']
-            self.__triggers.append(dict(pos=matrix.applyToOrigin(), r=properties.readInt('r') * WORLD_SCALING, h=properties.readInt('h') * WORLD_SCALING, objectsForEvent=properties.readInt('objectsForEvent', 1), event=properties.readString('event'), teamId=properties.readInt('teamId', 2), groupId=properties.readString('groupId'), DsName=properties.readString('DsName'), entityGroups=parseEntityGroups(properties.readString('entityGroups')), actualModes=self.__readListOfIntsFromStringProperty('actualModes', properties, [GAME_MODE.SUPERIORITY]), guid=guid, tag=properties.readInt('tag', 0)))
+            self.__triggers.append(dict(pos=matrix.applyToOrigin(), r=properties.readInt('r') * WORLD_SCALING, h=properties.readInt('h') * WORLD_SCALING, objectsForEvent=properties.readInt('objectsForEvent', 1), event=properties.readString('event'), teamId=properties.readInt('teamId', 2), groupId=properties.readString('groupId'), DsName=properties.readString('DsName'), entityGroups=parseEntityGroups(properties.readString('entityGroups')), actualModes=self.__readListOfIntsFromStringProperty('actualModes', properties, [GAME_MODE.AREA_CONQUEST]), guid=guid, tag=properties.readInt('tag', 0)))
 
     def __addTeamBase(self, section, matrix, editorClassName):
-        self.__addTeamObject(editorClassName, section, matrix, [GAME_MODE.SUPERIORITY])
+        self.__addTeamObject(editorClassName, section, matrix, [GAME_MODE.AREA_CONQUEST])
 
     def __addTeamObject(self, editorClassName, section, matrix, defaultModes):
         guid = section['guid'].asString
@@ -257,7 +255,7 @@ class ArenaObjects:
             LOG_WARNING('There is different count of bomber point pairs for each team', self.__bomberPoints)
 
     def __addSimplePoint(self, section, matrix, editorClassName = None):
-        defaultModes = [GAME_MODE.SUPERIORITY]
+        defaultModes = [GAME_MODE.AREA_CONQUEST]
         guid = section['guid'].asString
         if guid in self.__uniqueGUIDs:
             LOG_ERROR('Duplicate guid found', guid)

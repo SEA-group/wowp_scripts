@@ -93,6 +93,8 @@ def readValue(self, data, name, default = None, isTuple = False, missingCheck = 
         setattr(self, name, data.readVector3s(name))
     elif isinstance(default, Math.Vector2):
         setattr(self, name, data.readVector2s(name))
+    elif isinstance(default, basestring):
+        setattr(self, name, data.readStrings(name))
     else:
         setattr(self, name, data.readFloats(name))
     return True

@@ -7,6 +7,7 @@ from Helpers.i18n import localizeComponents, localizeAirplaneMid, localizeLobby,
 from IfaceAPI import async, view
 from OperationCodes import OPERATION_RETURN_CODE
 import _airplanesConfigurations_db
+import Settings
 from clientConsts import HANGAR_MODE, PLANE_CLASS, PLANE_TYPE_ICO_PATH
 from consts import UPGRADE_TYPE, DEFAULT_MODULE_GROUPS_ORDER_BY_TYPE, COMPONENT_TYPE, MODULE_GROUP_NAME
 from db.DBLogic import createGlobalID
@@ -14,7 +15,7 @@ from debug_utils import LOG_DEBUG, LOG_ERROR, LOG_TRACE
 from gui.Scaleform.LobbyAirplaneHelper import getLobbyAirplane, adjustPlaneConfig
 import db
 from gui.Scaleform.LobbyAirplaneWeapons import EMPTY_WEAPON_NAME_ID
-from Helpers.PerformanceSpecsHelper import getPerformanceSpecsTable, getCharacteristicsList, getGroupedDescriptionFields
+from Helpers.PerformanceSpecsHelper import getPerformanceSpecsTable, getCharacteristicsList, getGroupedDescriptionFields, getMainCharacteristicBoundariesForPlane, getGlobalCharacteristicBoundaries
 from CrewHelpers import previewCrewSpecList, getSpecializationName
 from Helpers.iconPathHelper import get48ModuleIconPath, ICON_MODULE_DEFAULT_PATH, EMPTY_WEAPON_SLOT_ICON_PATH
 
@@ -188,11 +189,16 @@ class LobbyModulesTreeHelper(object):
         self.__selectedAircraft = None
         self.__originPlane = None
         self.__initialized = False
+        Settings.g_instance.onMeasurementSystemChanged -= self.__onMeasurementSystemChanged
         return
+
+    def __onMeasurementSystemChanged(self, measurementSystemIndex):
+        self.sendSpecsToAS()
 
     @async
     def __onInitialized(self, selectedAircraftID):
         self.__initialized = True
+        Settings.g_instance.onMeasurementSystemChanged += self.__onMeasurementSystemChanged
         self.__fillNodes(selectedAircraftID)
         if self.__selectedAircraft.isBought:
             planeID = self.__selectedAircraft.planeID
@@ -564,6 +570,15 @@ class LobbyModulesTreeHelper(object):
                 else:
                     compareSpecs = getPerformanceSpecsTable(compareGlobalID, True, None, equipment, crew)
             descriptionFields = getGroupedDescriptionFields(getCharacteristicsList(specs, globalID, compareSpecs) + self.__selectedAircraft.getWeaponDescriptionList())
+            for dfg in descriptionFields:
+                tag = dfg.main.type
+                minGlobalValue, maxGlobalValue = getGlobalCharacteristicBoundaries(tag)
+                setattr(dfg.main, 'minGlobalValue', minGlobalValue)
+                setattr(dfg.main, 'maxGlobalValue', maxGlobalValue)
+                minPlaneValue, maxPlaneValue = getMainCharacteristicBoundariesForPlane(carouselPlaneID, tag)
+                setattr(dfg.main, 'minPlaneValue', minPlaneValue)
+                setattr(dfg.main, 'maxPlaneValue', maxPlaneValue)
+
             self.__lobby.call_1('moduleTree.setAircraftCharacteristics', AircraftCharacteristicsDataVO(descriptionFields), globalID)
             return
 

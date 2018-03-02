@@ -1,7 +1,56 @@
 <domination.xml>
   <battleDuration>	720	</battleDuration>
+  <pointsToWin>	700	</pointsToWin>
+  <eliminationByDefence>	True	</eliminationByDefence>
+  <eliminationByOffense>	True	</eliminationByOffense>
   <endGameConditions>
+    <condition>timerunningout_ac</condition>
     <condition>elimination</condition>
     <condition>superiority</condition>
   </endGameConditions>
+  <respawn>
+    <respawnModel>
+      <respawn_strategy>
+        <teamIndex>	0	</teamIndex>
+        <unlimited>	True	</unlimited>
+        <avatarLives>	0	</avatarLives>
+        <type>individual</type>
+        <strategy>
+          <cooldownBase>	5	</cooldownBase>
+          <cooldownMinValue>	10	</cooldownMinValue>
+          <cooldownReduceStep>	10	</cooldownReduceStep>
+          <cooldownDeathPenalty>	15	</cooldownDeathPenalty>
+          <deathTeamLimit>	15	</deathTeamLimit>
+        </strategy>
+        <availablePlaneTypes>
+          <planeTypeId>	1	</planeTypeId>
+          <planeTypeId>	2	</planeTypeId>
+          <planeTypeId>	3	</planeTypeId>
+          <planeTypeId>	4	</planeTypeId>
+          <planeTypeId>	5	</planeTypeId>
+        </availablePlaneTypes>
+      </respawn_strategy>
+      <respawn_strategy>
+        <teamIndex>	1	</teamIndex>
+        <unlimited>	True	</unlimited>
+        <avatarLives>	0	</avatarLives>
+        <type>individual</type>
+        <strategy>
+          <cooldownBase>	5	</cooldownBase>
+          <cooldownMinValue>	10	</cooldownMinValue>
+          <cooldownReduceStep>	10	</cooldownReduceStep>
+          <cooldownDeathPenalty>	15	</cooldownDeathPenalty>
+          <deathTeamLimit>	25	</deathTeamLimit>
+        </strategy>
+        <availablePlaneTypes>
+          <planeTypeId>	1	</planeTypeId>
+          <planeTypeId>	2	</planeTypeId>
+          <planeTypeId>	3	</planeTypeId>
+          <planeTypeId>	4	</planeTypeId>
+          <planeTypeId>	5	</planeTypeId>
+        </availablePlaneTypes>
+      </respawn_strategy>
+    </respawnModel>
+  </respawn>
+  <aiPlayerGameModePlan>ai/ACPlayer</aiPlayerGameModePlan>
 </domination.xml>

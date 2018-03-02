@@ -73,6 +73,7 @@ class WEAPON_AIM_TYPE:
 
 DB = Dummy()
 DB.header = Dummy()
+DB.header.activity = []
 DB.header.client = Dummy()
 DB.header.client.place = 'right'
 DB.header.condition = []
@@ -91,6 +92,7 @@ DB.header.server.scope.insert(0, None)
 DB.header.server.scope[0] = 'player'
 DB.header.type = 'achievement'
 DB.include = Dummy()
+DB.include.activity = []
 DB.include.condition = []
 DB.include.condition.insert(0, None)
 DB.include.condition[0] = Dummy()
@@ -202,6 +204,7 @@ DB.include.send = []
 DB.subscriber = []
 DB.subscriber.insert(0, None)
 DB.subscriber[0] = Dummy()
+DB.subscriber[0].activity = []
 DB.subscriber[0].condition = []
 DB.subscriber[0].count = []
 DB.subscriber[0].event = []
@@ -261,6 +264,7 @@ DB.subscriber[0].server.scope = []
 DB.subscriber[0].type = 'achievement.reset'
 DB.subscriber.insert(1, None)
 DB.subscriber[1] = Dummy()
+DB.subscriber[1].activity = []
 DB.subscriber[1].client = Dummy()
 DB.subscriber[1].client.description = Dummy()
 DB.subscriber[1].client.description.locale = 'MEDAL_DESCRIPTION_TEAMWORK_GURU'
@@ -327,6 +331,7 @@ DB.subscriber[1].operation = []
 DB.subscriber[1].send = []
 DB.subscriber.insert(2, None)
 DB.subscriber[2] = Dummy()
+DB.subscriber[2].activity = []
 DB.subscriber[2].client = Dummy()
 DB.subscriber[2].client.description = Dummy()
 DB.subscriber[2].client.description.locale = 'MEDAL_DESCRIPTION_FIGHTER_INTERCEPTOR'
@@ -363,12 +368,21 @@ DB.subscriber[2].event[1].count = []
 DB.subscriber[2].event[1].name = 'destroyPlanes.for.heavy.fighter.completed'
 DB.subscriber[2].event[1].operation = []
 DB.subscriber[2].event[1].type = 'coach'
+DB.subscriber[2].event.insert(2, None)
+DB.subscriber[2].event[2] = Dummy()
+DB.subscriber[2].event[2].condition = []
+DB.subscriber[2].event[2].context = 'objective'
+DB.subscriber[2].event[2].count = []
+DB.subscriber[2].event[2].name = 'destroyPlanes.for.navy.completed'
+DB.subscriber[2].event[2].operation = []
+DB.subscriber[2].event[2].type = 'coach'
 DB.subscriber[2].modify = []
 DB.subscriber[2].name = 'fighterinterceptor'
 DB.subscriber[2].operation = []
 DB.subscriber[2].send = []
 DB.subscriber.insert(3, None)
 DB.subscriber[3] = Dummy()
+DB.subscriber[3].activity = []
 DB.subscriber[3].client = Dummy()
 DB.subscriber[3].client.description = Dummy()
 DB.subscriber[3].client.description.locale = 'MEDAL_DESCRIPTION_FIGHTER_DEFENDER'
@@ -405,12 +419,21 @@ DB.subscriber[3].event[1].count = []
 DB.subscriber[3].event[1].name = 'defenceSectors.for.navy.completed'
 DB.subscriber[3].event[1].operation = []
 DB.subscriber[3].event[1].type = 'coach'
+DB.subscriber[3].event.insert(2, None)
+DB.subscriber[3].event[2] = Dummy()
+DB.subscriber[3].event[2].condition = []
+DB.subscriber[3].event[2].context = 'objective'
+DB.subscriber[3].event[2].count = []
+DB.subscriber[3].event[2].name = 'defenceSectors.for.heavy.fighter.completed'
+DB.subscriber[3].event[2].operation = []
+DB.subscriber[3].event[2].type = 'coach'
 DB.subscriber[3].modify = []
 DB.subscriber[3].name = 'fighterdefender'
 DB.subscriber[3].operation = []
 DB.subscriber[3].send = []
 DB.subscriber.insert(4, None)
 DB.subscriber[4] = Dummy()
+DB.subscriber[4].activity = []
 DB.subscriber[4].client = Dummy()
 DB.subscriber[4].client.description = Dummy()
 DB.subscriber[4].client.description.locale = 'MEDAL_DESCRIPTION_FIGHTER_DOMINATOR'
@@ -445,6 +468,7 @@ DB.subscriber[4].operation = []
 DB.subscriber[4].send = []
 DB.subscriber.insert(5, None)
 DB.subscriber[5] = Dummy()
+DB.subscriber[5].activity = []
 DB.subscriber[5].client = Dummy()
 DB.subscriber[5].client.description = Dummy()
 DB.subscriber[5].client.description.locale = 'MEDAL_DESCRIPTION_FIGHTER_OF_ALL_LIFE'
@@ -487,6 +511,7 @@ DB.subscriber[5].operation = []
 DB.subscriber[5].send = []
 DB.subscriber.insert(6, None)
 DB.subscriber[6] = Dummy()
+DB.subscriber[6].activity = []
 DB.subscriber[6].client = Dummy()
 DB.subscriber[6].client.description = Dummy()
 DB.subscriber[6].client.description.locale = 'MEDAL_DESCRIPTION_CONTROLLER'
@@ -539,12 +564,21 @@ DB.subscriber[6].event[3].count = []
 DB.subscriber[6].event[3].name = 'captureSectors.for.bomber.completed'
 DB.subscriber[6].event[3].operation = []
 DB.subscriber[6].event[3].type = 'coach'
+DB.subscriber[6].event.insert(4, None)
+DB.subscriber[6].event[4] = Dummy()
+DB.subscriber[6].event[4].condition = []
+DB.subscriber[6].event[4].context = 'objective'
+DB.subscriber[6].event[4].count = []
+DB.subscriber[6].event[4].name = 'captureSectors.for.fighter.completed'
+DB.subscriber[6].event[4].operation = []
+DB.subscriber[6].event[4].type = 'coach'
 DB.subscriber[6].modify = []
 DB.subscriber[6].name = 'controller'
 DB.subscriber[6].operation = []
 DB.subscriber[6].send = []
 DB.subscriber.insert(7, None)
 DB.subscriber[7] = Dummy()
+DB.subscriber[7].activity = []
 DB.subscriber[7].client = Dummy()
 DB.subscriber[7].client.description = Dummy()
 DB.subscriber[7].client.description.locale = 'MEDAL_DESCRIPTION_EXTERMINATOR'
@@ -587,6 +621,7 @@ DB.subscriber[7].operation = []
 DB.subscriber[7].send = []
 DB.subscriber.insert(8, None)
 DB.subscriber[8] = Dummy()
+DB.subscriber[8].activity = []
 DB.subscriber[8].client = Dummy()
 DB.subscriber[8].client.description = Dummy()
 DB.subscriber[8].client.description.locale = 'MEDAL_DESCRIPTION_DESTROYER'
@@ -627,6 +662,57 @@ DB.subscriber[8].modify = []
 DB.subscriber[8].name = 'destroyer'
 DB.subscriber[8].operation = []
 DB.subscriber[8].send = []
+DB.subscriber.insert(9, None)
+DB.subscriber[9] = Dummy()
+DB.subscriber[9].activity = []
+DB.subscriber[9].client = Dummy()
+DB.subscriber[9].client.description = Dummy()
+DB.subscriber[9].client.description.locale = 'MEDAL_DESCRIPTION_ASSISTMASTER'
+DB.subscriber[9].client.icon = Dummy()
+DB.subscriber[9].client.icon.big = 'icons/awards/achievementsInfo/acServiceAssistMaster.dds'
+DB.subscriber[9].client.icon.faded = 'icons/awards/achievements/acServiceAssistMaster_Outline.dds'
+DB.subscriber[9].client.icon.small = 'icons/awards/achievements/acServiceAssistMaster.dds'
+DB.subscriber[9].client.level = Dummy()
+DB.subscriber[9].client.level.locale = 'MEDAL_LEVEL_LIMIT'
+DB.subscriber[9].client.multiple = true
+DB.subscriber[9].client.name = Dummy()
+DB.subscriber[9].client.name.locale = 'MEDAL_NAME_ASSISTMASTER'
+DB.subscriber[9].client.order = 9
+DB.subscriber[9].client.page = 0
+DB.subscriber[9].condition = []
+DB.subscriber[9].count = []
+DB.subscriber[9].count.insert(0, None)
+DB.subscriber[9].count[0] = Dummy()
+DB.subscriber[9].count[0].value_ = 1
+DB.subscriber[9].event = []
+DB.subscriber[9].event.insert(0, None)
+DB.subscriber[9].event[0] = Dummy()
+DB.subscriber[9].event[0].condition = []
+DB.subscriber[9].event[0].context = 'objective'
+DB.subscriber[9].event[0].count = []
+DB.subscriber[9].event[0].name = 'teamwork.for.fighter.completed'
+DB.subscriber[9].event[0].operation = []
+DB.subscriber[9].event[0].type = 'coach'
+DB.subscriber[9].event.insert(1, None)
+DB.subscriber[9].event[1] = Dummy()
+DB.subscriber[9].event[1].condition = []
+DB.subscriber[9].event[1].context = 'objective'
+DB.subscriber[9].event[1].count = []
+DB.subscriber[9].event[1].name = 'teamwork.for.navy.completed'
+DB.subscriber[9].event[1].operation = []
+DB.subscriber[9].event[1].type = 'coach'
+DB.subscriber[9].event.insert(2, None)
+DB.subscriber[9].event[2] = Dummy()
+DB.subscriber[9].event[2].condition = []
+DB.subscriber[9].event[2].context = 'objective'
+DB.subscriber[9].event[2].count = []
+DB.subscriber[9].event[2].name = 'teamwork.for.heavy.fighter.completed'
+DB.subscriber[9].event[2].operation = []
+DB.subscriber[9].event[2].type = 'coach'
+DB.subscriber[9].modify = []
+DB.subscriber[9].name = 'assistmaster'
+DB.subscriber[9].operation = []
+DB.subscriber[9].send = []
 DB.subscriber[0].id = 391156213
 DB.subscriber[1].id = 1139684885
 DB.subscriber[2].id = 420116408
@@ -636,15 +722,17 @@ DB.subscriber[5].id = 609147450
 DB.subscriber[6].id = 1445898632
 DB.subscriber[7].id = 376865783
 DB.subscriber[8].id = -628072840
+DB.subscriber[9].id = -933861027
 DB.subscriber[0].eventIds = (761754430, 35456563)
 DB.subscriber[1].eventIds = (1505878768, -1458310531, 1005655320, 1640610640, -1559939534)
-DB.subscriber[2].eventIds = (-2138774230, -251903565)
-DB.subscriber[3].eventIds = (877979666, 623333830)
+DB.subscriber[2].eventIds = (-2138774230, -251903565, -1909434741)
+DB.subscriber[3].eventIds = (877979666, 623333830, 71757719)
 DB.subscriber[4].eventIds = (-554780299,)
 DB.subscriber[5].eventIds = (-1382442359, -1492408551)
-DB.subscriber[6].eventIds = (-1293764618, -953903409, -588048498, -35275748)
+DB.subscriber[6].eventIds = (-1293764618, -953903409, -588048498, -35275748, 641188684)
 DB.subscriber[7].eventIds = (-1633037042, 364859445)
 DB.subscriber[8].eventIds = (325781352, -547306710)
+DB.subscriber[9].eventIds = (-1500964533, 1959961482, 1882899103)
 mapping = {'db': DB,
  'indexes': {'subscriber': {'id': {391156213: (DB.subscriber[0],),
                                    1139684885: (DB.subscriber[1],),
@@ -654,7 +742,8 @@ mapping = {'db': DB,
                                    609147450: (DB.subscriber[5],),
                                    1445898632: (DB.subscriber[6],),
                                    376865783: (DB.subscriber[7],),
-                                   -628072840: (DB.subscriber[8],)},
+                                   -628072840: (DB.subscriber[8],),
+                                   -933861027: (DB.subscriber[9],)},
                             'name': {'reset': (DB.subscriber[0],),
                                      'teamworkguru': (DB.subscriber[1],),
                                      'fighterinterceptor': (DB.subscriber[2],),
@@ -663,7 +752,8 @@ mapping = {'db': DB,
                                      'fighterofalllife': (DB.subscriber[5],),
                                      'controller': (DB.subscriber[6],),
                                      'exterminator': (DB.subscriber[7],),
-                                     'destroyer': (DB.subscriber[8],)},
+                                     'destroyer': (DB.subscriber[8],),
+                                     'assistmaster': (DB.subscriber[9],)},
                             'type': {'achievement.reset': (DB.subscriber[0],),
                                      'achievement': (DB.subscriber[1],
                                                      DB.subscriber[2],
@@ -672,7 +762,8 @@ mapping = {'db': DB,
                                                      DB.subscriber[5],
                                                      DB.subscriber[6],
                                                      DB.subscriber[7],
-                                                     DB.subscriber[8])},
+                                                     DB.subscriber[8],
+                                                     DB.subscriber[9])},
                             'group': {'heroic.coach': (DB.subscriber[0],
                                                        DB.subscriber[1],
                                                        DB.subscriber[2],
@@ -681,16 +772,18 @@ mapping = {'db': DB,
                                                        DB.subscriber[5],
                                                        DB.subscriber[6],
                                                        DB.subscriber[7],
-                                                       DB.subscriber[8])},
+                                                       DB.subscriber[8],
+                                                       DB.subscriber[9])},
                             'eventIds': {(761754430, 35456563): (DB.subscriber[0],),
                                          (1505878768, -1458310531, 1005655320, 1640610640, -1559939534): (DB.subscriber[1],),
-                                         (-2138774230, -251903565): (DB.subscriber[2],),
-                                         (877979666, 623333830): (DB.subscriber[3],),
+                                         (-2138774230, -251903565, -1909434741): (DB.subscriber[2],),
+                                         (877979666, 623333830, 71757719): (DB.subscriber[3],),
                                          (-554780299,): (DB.subscriber[4],),
                                          (-1382442359, -1492408551): (DB.subscriber[5],),
-                                         (-1293764618, -953903409, -588048498, -35275748): (DB.subscriber[6],),
+                                         (-1293764618, -953903409, -588048498, -35275748, 641188684): (DB.subscriber[6],),
                                          (-1633037042, 364859445): (DB.subscriber[7],),
-                                         (325781352, -547306710): (DB.subscriber[8],)},
+                                         (325781352, -547306710): (DB.subscriber[8],),
+                                         (-1500964533, 1959961482, 1882899103): (DB.subscriber[9],)},
                             'parent': {}}},
  'nested': ('subscriber.nested',),
  'type': {'default': 'subscriber',

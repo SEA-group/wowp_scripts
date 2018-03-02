@@ -77,6 +77,7 @@ class PlayerSource(DataSource):
         self._model.planeId = self._playerAvatar.objTypeID
         self._model.planeStatus = self._getPlaneStatus()
         self._model.teamIndex = self._playerAvatar.teamIndex
+        self._model.isReconnected = bool(self._playerAvatar.reconnected)
 
     def _getPlaneStatus(self):
         planeID = self._playerAvatar.objTypeID
@@ -90,6 +91,7 @@ class PlayerSource(DataSource):
         id = self._playerAvatar.id
         avatarInfo = self._clientArena.getAvatarInfo(id)
         self._model.id = id
+        self._model.clanName = unicode(avatarInfo.get('clanAbbrev', ''))
         self._model.nickName = unicode(avatarInfo.get('playerName', 'unknown name'))
         self._model.health = int(ceil(self._playerAvatar.health))
         self._model.healthMax = int(ceil(self._playerAvatar.maxHealth))

@@ -10,45 +10,6 @@
       </predicates>
     </event>
     <event>
-      <type>GlobalScore</type>
-      <subtype>TeamActions</subtype>
-      <id>teamScore25</id>
-      <text>HUD_MESSAGES_25-INFLUENCE</text>
-      <experience>	200	</experience>
-      <icon>battleActionIcon_domination</icon>
-      <once>	True	</once>
-      <predicates>
-        <deserter>False</deserter>
-        <teamScore>1/4</teamScore>
-      </predicates>
-    </event>
-    <event>
-      <type>GlobalScore</type>
-      <subtype>TeamActions</subtype>
-      <id>teamScore50</id>
-      <text>HUD_MESSAGES_50-INFLUENCE</text>
-      <experience>	100	</experience>
-      <icon>battleActionIcon_domination</icon>
-      <once>	True	</once>
-      <predicates>
-        <deserter>False</deserter>
-        <teamScore>1/2</teamScore>
-      </predicates>
-    </event>
-    <event>
-      <type>GlobalScore</type>
-      <subtype>TeamActions</subtype>
-      <id>	teamScore100	</id>
-      <text>HUD_MESSAGES_100-INFLUENCE</text>
-      <experience>	50	</experience>
-      <icon>battleActionIcon_domination</icon>
-      <once>	True	</once>
-      <predicates>
-        <deserter>False</deserter>
-        <teamScore>1/1</teamScore>
-      </predicates>
-    </event>
-    <event>
       <type>	Kill	</type>
       <id>killPlayer</id>
       <text>HUD_ENEMY_PLANES</text>
@@ -583,6 +544,45 @@
       <experience>	20	</experience>
       <predicates>
         <teammate>False</teammate>
+      </predicates>
+    </event>
+    <event>
+      <type>GlobalScore</type>
+      <subtype>TeamActions</subtype>
+      <id>teamScore25</id>
+      <text>HUD_MESSAGES_25-INFLUENCE</text>
+      <experience>	200	</experience>
+      <icon>battleActionIcon_domination</icon>
+      <once>	True	</once>
+      <predicates>
+        <deserter>False</deserter>
+        <teamScore>1/4</teamScore>
+      </predicates>
+    </event>
+    <event>
+      <type>GlobalScore</type>
+      <subtype>TeamActions</subtype>
+      <id>teamScore50</id>
+      <text>HUD_MESSAGES_50-INFLUENCE</text>
+      <experience>	100	</experience>
+      <icon>battleActionIcon_domination</icon>
+      <once>	True	</once>
+      <predicates>
+        <deserter>False</deserter>
+        <teamScore>1/2</teamScore>
+      </predicates>
+    </event>
+    <event>
+      <type>GlobalScore</type>
+      <subtype>TeamActions</subtype>
+      <id>	teamScore100	</id>
+      <text>HUD_MESSAGES_100-INFLUENCE</text>
+      <experience>	50	</experience>
+      <icon>battleActionIcon_domination</icon>
+      <once>	True	</once>
+      <predicates>
+        <deserter>False</deserter>
+        <teamScore>1/1</teamScore>
       </predicates>
     </event>
   </events>

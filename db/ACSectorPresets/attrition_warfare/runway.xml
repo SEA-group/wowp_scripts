@@ -1,0 +1,40 @@
+<runway.xml>
+  <preset>default</preset>
+  <neutralCapturePoints>	180	</neutralCapturePoints>
+  <ownedCapturePoints>	120	</ownedCapturePoints>
+  <gameplayType>runway</gameplayType>
+  <playerSpawnEnabled>	true	</playerSpawnEnabled>
+  <holdingPointsDefence>	1	</holdingPointsDefence>
+  <holdingPointsOffense>	1	</holdingPointsOffense>
+  <hud>
+    <battleHintIcon>event_airfield0</battleHintIcon>
+    <localizationID>HUD_NAME_SECTOR_RUNWAY</localizationID>
+    <description>HUD_F1_SECTOR_DESCRIPTION_COMBINED_1_ALT</description>
+    <sectorIconPath>icons/hud/sectors/sectorType{size}Airfield0_{team}</sectorIconPath>
+    <miniMapSectorIconPath>sectorType{size}Airfield0_{team}</miniMapSectorIconPath>
+    <featuresName>HUD_SECTOR_MESSAGES_SPAWN</featuresName>
+    <isNeedToShowTimer>	false	</isNeedToShowTimer>
+    <sectorObjects>
+      <object>	31	</object>
+      <object>	11	</object>
+      <object>	12	</object>
+    </sectorObjects>
+    <descriptionList>
+      <description>HUD_DESCRIPTION_SECTOR_RUNWAY</description>
+    </descriptionList>
+    <isBig>	false	</isBig>
+    <isMulticolorInPermanentLockState>	true	</isMulticolorInPermanentLockState>
+  </hud>
+  <sound>
+    <onCapture>
+      <allyEvent>vo_c_airfield_captured</allyEvent>
+    </onCapture>
+    <onAlarm>
+      <enemyEvent>vo_c_airfield_alarm</enemyEvent>
+      <conditions>	6	</conditions>
+    </onAlarm>
+  </sound>
+  <defenderCounter>
+    <count>	6	<defenderType>LIGHT</defenderType></count>
+  </defenderCounter>
+</runway.xml>

@@ -2,9 +2,9 @@
 import Math
 import BigWorld
 from ArenaHelpers.GameModes.AreaConquest import AC_EVENTS
-from GameModeSettings.ACSettings import SECTOR_BONUS_TYPE
+from GameModeSettings.ACSettings import SECTOR_BONUS_TYPE, USE_SECTOR_RADIUS_TABLE
 from HelperFunctions import findIf, findSuitableIndex
-from consts import SECTOR_STATE
+from consts import SECTOR_STATE, GAME_MODE
 from db.DBAreaConquest.SectorGeometry import SectorGeometryCircle
 from BWLogging import getLogger
 from gui.HUD2.core.DataPrims import DataSource
@@ -15,6 +15,8 @@ ALLY = 'ally'
 ENEMY = 'enemy'
 BASE_SECTORS_LOCALE = {ALLY: 'HUD_MAP_LOADING_SPAWN_ALL',
  ENEMY: 'HUD_MAP_LOADING_SPAWN_ENEMY'}
+FEATURE_DISABLE = 'feature_disable'
+FEATURE_DISABLE_SETTINGS = {GAME_MODE.NAMES[GAME_MODE.OFFENSE_DEFENCE]: [SECTOR_BONUS_TYPE.ROCKET_LAUNCH, SECTOR_BONUS_TYPE.AIR_STRIKE]}
 
 class TargetItem(object):
 
@@ -76,6 +78,7 @@ class SectorSource(DataSource):
         self._gameMode.addEventHandler(AC_EVENTS.SECTOR_STATE_CHANGED, self._onSectorStateChanged)
         self._gameMode.addEventHandler(AC_EVENTS.BOMBER_DISPATCHER_TARGET_SECTOR_CHANGED, self._onSectorBombersChangeTarget)
         self._gameMode.addEventHandler(AC_EVENTS.ROCKET_V2_TARGET_SECTOR_CHANGED, self._onSectorRocketsChangeTarget)
+        self._gameMode.addEventHandler(AC_EVENTS.SECTOR_PERMANENT_LOCK, self._onSectorpermanentLock)
 
     def _onSectorRocketsChangeTarget(self, sectorId, targetID):
         self._updateSectorTarget(sectorId, targetID, ATTACK_TYPE_ROCKET)
@@ -106,6 +109,11 @@ class SectorSource(DataSource):
                 sectorStructure.isAttack = targetItem.attackType
                 self._updateTargetAfterCapture(sectorId)
 
+    def _onSectorpermanentLock(self, sectorId, *args, **kwargs):
+        sectorStructure = self._sectors.first(lambda e: e.sectorID.get() == sectorId)
+        if sectorStructure:
+            sectorStructure.isPermanentLock = True
+
     def _updateTargetStrc(self):
         return
         for sectorStructure in self._sectors:
@@ -118,8 +126,8 @@ class SectorSource(DataSource):
     def _onCapturePointsChanged(self, sectorId, capturePointsByTeams, *args, **kwargs):
         sectorStructure = self._sectors.first(lambda e: e.sectorID.get() == sectorId)
         if sectorStructure:
-            sectorStructure.currentPoints = capturePointsByTeams[self._playerTeamIndex]
-            sectorStructure.maxPoints = sum(list(capturePointsByTeams))
+            sectorStructure.currentPoints = int(capturePointsByTeams[self._playerTeamIndex])
+            sectorStructure.maxPoints = int(sum(list(capturePointsByTeams)))
 
     def _onGameModeTick(self, tickNumber, *args, **kwargs):
         self._log.debug(' SECTORS_2 _onGameModeTick :')
@@ -150,17 +158,20 @@ class SectorSource(DataSource):
             sectorStructure.lockEndTime = int(lockEndTime)
             sectorStructure.teamIndex = teamIndex
             sectorStructure.pointsInTick = self._getPointsInTick(sectorData.ident, self.gameMode.currentTick)
-            sectorStructure.currentPoints = sectorData.capturePointsByTeams[self._playerTeamIndex]
-            sectorStructure.maxPoints = sum(list(sectorData.capturePointsByTeams))
+            sectorStructure.currentPoints = int(sectorData.capturePointsByTeams[self._playerTeamIndex])
+            sectorStructure.maxPoints = int(sum(list(sectorData.capturePointsByTeams)))
+            sectorStructure.isFeatureDisable = self._isFeatureDisable(sectorData.ident)
         self._updateTargetAfterCapture(sectorId)
 
     def _appendBase(self, sectorData):
         radius = sectorData.geometry.radius if isinstance(sectorData.geometry, SectorGeometryCircle) else 0
-        base = self._bases.append(sectorName='HUD_MAP_LOADING_SPAWN', entityID=-1, sectorID=sectorData.ident, radius=float(radius), teamIndex=sectorData.teamIndex, descriptionList={'array': []}, gameplayType=sectorData.gameplayType, gameplayLevel=sectorData.gameplayLevel)
+        base = self._bases.append(sectorName='HUD_MAP_LOADING_SPAWN', entityID=-1, sectorID=sectorData.ident, radius=float(radius), teamIndex=sectorData.teamIndex, descriptionList={'array': []}, gameplayType=sectorData.gameplayType)
 
     def _appendEmptySector(self, sectorData):
-        radius = sectorData.geometry.radius if isinstance(sectorData.geometry, SectorGeometryCircle) else 0
-        newSector = self._sectors.append(entityID=-1, description=sectorData.hudSettings.description, sectorID=sectorData.ident, radius=float(radius), currentPoints=1, maxPoints=2, sectorTypeIconPath=sectorData.hudSettings.sectorIconPath, featuresIconPath=sectorData.hudSettings.featuresIconPath, miniMapSectorIconPath=sectorData.hudSettings.miniMapSectorIconPath, miniMapFeaturesIconPath=sectorData.hudSettings.miniMapFeaturesIconPath, isNeedToShowTimer=sectorData.hudSettings.isNeedToShowTimer, sectorName=sectorData.hudSettings.localizationID, featureName=sectorData.hudSettings.featuresName, lockEndTime=0, bonusEndTime=0, teamIndex=sectorData.teamIndex, isAttack=-1, pointsInTick=0, playerSpawnEnabled=sectorData.playerSpawnEnabled, gameplayType=sectorData.gameplayType, gameplayLevel=sectorData.gameplayLevel, sectorItems={'array': sectorData.hudSettings.sectorObjects}, descriptionList={'array': sectorData.hudSettings.descriptionList}, zOrder=0)
+        sectorRadius = self._playerAvatar.sectorRadius if USE_SECTOR_RADIUS_TABLE else sectorData.geometry.radius
+        radius = sectorRadius if isinstance(sectorData.geometry, SectorGeometryCircle) else 0
+        sectorFeatureName = sectorData.hudSettings.featuresName if not sectorData.hudSettings.isHideFeaturesName else ''
+        newSector = self._sectors.append(entityID=-1, description=sectorData.hudSettings.description, sectorID=sectorData.ident, radius=float(radius), currentPoints=1, maxPoints=2, sectorTypeIconPath=sectorData.hudSettings.sectorIconPath, featuresIconPath=sectorData.hudSettings.featuresIconPath, miniMapSectorIconPath=sectorData.hudSettings.miniMapSectorIconPath, miniMapFeaturesIconPath=sectorData.hudSettings.miniMapFeaturesIconPath, isNeedToShowTimer=sectorData.hudSettings.isNeedToShowTimer, isBig=sectorData.hudSettings.isBig, isMulticolorInPermanentLockState=sectorData.hudSettings.isMulticolorInPermanentLockState, sectorName=sectorData.hudSettings.localizationID, featureName=sectorFeatureName, lockEndTime=0, bonusEndTime=0, teamIndex=sectorData.teamIndex, isAttack=-1, pointsInTick=0, playerSpawnEnabled=sectorData.playerSpawnEnabled, gameplayType=sectorData.gameplayType, sectorItems={'array': sectorData.hudSettings.sectorObjects}, descriptionList={'array': sectorData.hudSettings.descriptionList}, zOrder=0)
         planesEffectiveness = sectorData.hudSettings.planesEffectiveness
         for effectData in planesEffectiveness:
             newSector.planeEffectiveness.appendSilently(planeType=effectData['planeType'], effectiveness=effectData['effectivness'])
@@ -176,11 +187,13 @@ class SectorSource(DataSource):
                 sector.entityID = entity.id
                 sector.entityPosition = self._makePosition(entity.position)
                 self._log.debug(' SECTORS : updateSectorProperty: %s %s', entity.id, self._makePosition(entity.position))
-                sector.currentPoints = sectorData.capturePointsByTeams[self._playerTeamIndex]
-                sector.maxPoints = sum(list(sectorData.capturePointsByTeams))
+                sector.currentPoints = int(sectorData.capturePointsByTeams[self._playerTeamIndex])
+                sector.maxPoints = int(sum(list(sectorData.capturePointsByTeams)))
                 self._updateBonusEndTime(sectorId)
                 sector.teamIndex = sectorData.teamIndex
+                sector.isPermanentLock = bool(sectorData.isLockForBattle)
                 sector.pointsInTick = self._getPointsInTick(sectorId, self.gameMode.currentTick)
+                sector.isFeatureDisable = self._isFeatureDisable(sectorId)
 
         for base in self._bases:
             baseID = base.sectorID.get()
@@ -248,6 +261,14 @@ class SectorSource(DataSource):
                 sectorStructure.bonusEndTime = bonusEndTime
                 self._log.debug(' SECTORS LOG sectorStructure.bonusEndTime : %s', bonusEndTime)
 
+    def _isFeatureDisable(self, sectorID):
+        sector = self._getSectorByID(sectorID)
+        _bonus = sector.settings.bonusType
+        if sector.teamIndex == 0:
+            if _bonus in FEATURE_DISABLE_SETTINGS.get(self._clientArena.gameModeName, []):
+                return True
+        return False
+
     def dispose(self):
         if self._updateZOrderCallback:
             BigWorld.cancelCallback(self._updateZOrderCallback)
@@ -257,6 +278,7 @@ class SectorSource(DataSource):
         self._gameMode.removeEventHandler(AC_EVENTS.SECTOR_STATE_CHANGED, self._onSectorStateChanged)
         self._gameMode.removeEventHandler(AC_EVENTS.BOMBER_DISPATCHER_TARGET_SECTOR_CHANGED, self._onSectorBombersChangeTarget)
         self._gameMode.removeEventHandler(AC_EVENTS.ROCKET_V2_TARGET_SECTOR_CHANGED, self._onSectorRocketsChangeTarget)
+        self._gameMode.removeEventHandler(AC_EVENTS.SECTOR_PERMANENT_LOCK, self._onSectorpermanentLock)
         self.gameMode.eGameModeReady -= self._setupModel
         self._sectors = None
         self._targetList = None

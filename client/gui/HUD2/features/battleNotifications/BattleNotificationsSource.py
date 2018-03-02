@@ -40,7 +40,7 @@ class BattleNotificationsSource(DataSource):
 
     def pushMessage(self, data):
         self._notificationCounter += 1
-        battleNotificationData = dict(type=data.type, title=data.title, icon=data.icon, lifetime=data.lifeTime, priority=data.priority, description=data.description, key='', notificationCounter=self._notificationCounter)
+        battleNotificationData = dict(type=data.type, title=data.title, icon=data.icon, lifetime=data.lifeTime, priority=data.priority, description=data.description, key='', notificationCounter=self._notificationCounter, data=data.data)
         key, description = self._checkOnDependency(data)
         battleNotificationData['key'] = key
         battleNotificationData['description'] = description

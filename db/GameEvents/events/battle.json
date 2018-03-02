@@ -2,6 +2,35 @@
 
 "schemas": {
 
+"activities":{
+	"description": "Контекст активити",
+	"component": {
+		"type": "dict",
+		"schema": {
+			"springmarathon2018": {
+				"description": "название стейта компонента",
+				"type": "string",
+				"allowed": [
+					"1_peace",
+					"1_war",
+					"2_peace",
+					"2_war",
+					"3_peace",
+					"3_war",
+					"4_peace",
+					"4_war",
+					"5_peace",
+					"5_war",
+					"6_peace",
+					"6_war",
+					"7_peace"
+				]
+			}
+		}
+	}
+},
+
+
 "battle.arena": {
 	"description": "Контекст арены",
 
@@ -14,6 +43,12 @@
 	"source": {
 		"type": "string",
 		"allowed": ["bot", "player"]
+	},
+
+	"mode": {
+		"description": "Тип мода",
+		"type": "string",
+		"allowed": ["invasion", "areaconquest", "attritionwarfare"]
 	}
 },
 
@@ -155,6 +190,9 @@
 		},
 		"player": {
 			"schema": "battle.player"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -176,6 +214,9 @@
 		},
 		"player": {
 			"schema": "battle.player"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -197,6 +238,9 @@
 		},
 		"player": {
 			"schema": "battle.player"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -220,6 +264,9 @@
 			"description": "Индекс проигравшей команды 2 = ничья",
 			"type": "integer",
 			"allowed": [0, 1, 2]
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -241,6 +288,9 @@
 		},
 		"player": {
 			"schema": "battle.player"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -262,6 +312,9 @@
 		},
 		"player": {
 			"schema": "battle.player"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -294,6 +347,9 @@
 					"type": "integer"
 				}
 			}
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -328,6 +384,9 @@
 				"bullet", "rocket", "bomb", "ramming", "gunner", "fire",
 				"other"
 			]
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -357,6 +416,9 @@
 		},
 		"victim": {
 			"schema": "battle.victim"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -391,6 +453,9 @@
 				"bullet", "rocket", "bomb", "ramming", "gunner", "fire",
 				"other"
 			]
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -422,6 +487,9 @@
 		"by": {
 			"type": "string",
 			"allowed": ["rocket", "bomb", "ramming", "gunner", "fire"]
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -449,6 +517,9 @@
 		},
 		"victim": {
 			"schema": "battle.victim"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -483,6 +554,9 @@
 				"bullet", "rocket", "bomb", "ramming", "gunner", "fire",
 				"other"
 			]
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -507,6 +581,9 @@
 		},
 		"player": {
 			"schema": "battle.player"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -555,6 +632,9 @@
 					"type": "integer"
 				}
 			}
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -576,6 +656,9 @@
 		},
 		"player": {
 			"schema": "battle.player"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -597,6 +680,9 @@
 		},
 		"player": {
 			"schema": "battle.player"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -618,6 +704,9 @@
 		},
 		"player": {
 			"schema": "battle.player"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -639,6 +728,9 @@
 		},
 		"player": {
 			"schema": "battle.player"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -660,6 +752,9 @@
 		},
 		"player": {
 			"schema": "battle.player"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -681,6 +776,9 @@
 		},
 		"player": {
 			"schema": "battle.player"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -702,6 +800,9 @@
 		},
 		"player": {
 			"schema": "battle.player"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -723,6 +824,9 @@
 		},
 		"player": {
 			"schema": "battle.player"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -745,6 +849,9 @@
 		},
 		"player": {
 			"schema": "battle.player"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -766,6 +873,9 @@
 		},
 		"player": {
 			"schema": "battle.player"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -787,6 +897,9 @@
 		},
 		"player": {
 			"schema": "battle.player"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -808,6 +921,9 @@
 		},
 		"player": {
 			"schema": "battle.player"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -829,6 +945,9 @@
 		},
 		"player": {
 			"schema": "battle.player"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -850,6 +969,9 @@
 		},
 		"player": {
 			"schema": "battle.player"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -871,6 +993,9 @@
 		},
 		"player": {
 			"schema": "battle.player"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -893,6 +1018,9 @@
 		},
 		"player": {
 			"schema": "battle.player"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -914,6 +1042,9 @@
 		},
 		"player": {
 			"schema": "battle.player"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -935,6 +1066,9 @@
 		},
 		"player": {
 			"schema": "battle.player"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -956,6 +1090,9 @@
 		},
 		"player": {
 			"schema": "battle.player"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -977,6 +1114,9 @@
 		},
 		"player": {
 			"schema": "battle.player"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -998,6 +1138,9 @@
 		},
 		"player": {
 			"schema": "battle.player"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -1019,6 +1162,9 @@
 		},
 		"player": {
 			"schema": "battle.player"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -1041,6 +1187,9 @@
 		},
 		"player": {
 			"schema": "battle.player"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -1062,6 +1211,9 @@
 		},
 		"player": {
 			"schema": "battle.player"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -1083,6 +1235,9 @@
 		},
 		"player": {
 			"schema": "battle.player"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },
@@ -1108,6 +1263,9 @@
 		"experience": {
 			"type": "integer",
 			"description": "Количество полученого опыта [базовый baseXP] сумарно по всем самолетам"
+		},
+		"activities": {
+			"schema": "activities"
 		}
 	}
 },

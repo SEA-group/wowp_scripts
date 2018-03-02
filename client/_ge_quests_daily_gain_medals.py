@@ -73,6 +73,7 @@ class WEAPON_AIM_TYPE:
 
 DB = Dummy()
 DB.header = Dummy()
+DB.header.activity = []
 DB.header.condition = []
 DB.header.count = []
 DB.header.event = []
@@ -84,6 +85,7 @@ DB.header.nested = Dummy()
 DB.header.nested.subscriber = []
 DB.header.nested.subscriber.insert(0, None)
 DB.header.nested.subscriber[0] = Dummy()
+DB.header.nested.subscriber[0].activity = []
 DB.header.nested.subscriber[0].condition = []
 DB.header.nested.subscriber[0].count = []
 DB.header.nested.subscriber[0].event = []
@@ -101,6 +103,7 @@ DB.header.server.scope.insert(0, None)
 DB.header.server.scope[0] = 'player'
 DB.header.type = 'quest'
 DB.include = Dummy()
+DB.include.activity = []
 DB.include.condition = []
 DB.include.count = []
 DB.include.event = []
@@ -114,6 +117,7 @@ DB.include.nested = Dummy()
 DB.include.nested.subscriber = []
 DB.include.nested.subscriber.insert(0, None)
 DB.include.nested.subscriber[0] = Dummy()
+DB.include.nested.subscriber[0].activity = []
 DB.include.nested.subscriber[0].condition = []
 DB.include.nested.subscriber[0].condition.insert(0, None)
 DB.include.nested.subscriber[0].condition[0] = Dummy()
@@ -139,6 +143,14 @@ DB.include.nested.subscriber[0].condition[0].and_[0].equal[1].context[0] = 'aren
 DB.include.nested.subscriber[0].condition[0].and_[0].equal[1].value_ = []
 DB.include.nested.subscriber[0].condition[0].and_[0].equal[1].value_.insert(0, None)
 DB.include.nested.subscriber[0].condition[0].and_[0].equal[1].value_[0] = 'player'
+DB.include.nested.subscriber[0].condition[0].and_[0].equal.insert(2, None)
+DB.include.nested.subscriber[0].condition[0].and_[0].equal[2] = Dummy()
+DB.include.nested.subscriber[0].condition[0].and_[0].equal[2].context = []
+DB.include.nested.subscriber[0].condition[0].and_[0].equal[2].context.insert(0, None)
+DB.include.nested.subscriber[0].condition[0].and_[0].equal[2].context[0] = 'arena.mode'
+DB.include.nested.subscriber[0].condition[0].and_[0].equal[2].value_ = []
+DB.include.nested.subscriber[0].condition[0].and_[0].equal[2].value_.insert(0, None)
+DB.include.nested.subscriber[0].condition[0].and_[0].equal[2].value_[0] = 'areaconquest'
 DB.include.nested.subscriber[0].condition[0].and_[0].gt = []
 DB.include.nested.subscriber[0].condition[0].and_[0].gte = []
 DB.include.nested.subscriber[0].condition[0].and_[0].id = []

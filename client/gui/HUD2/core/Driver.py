@@ -30,6 +30,10 @@ class ScaleformDriver(object):
     def toggleHUDVisibility(self):
         self._protocol.toggleHUDVisibility()
 
+    def updateBattleGameMode(self, mode):
+        LOG_DEBUG('ScaleformDriver updateBattleGameMode: %r' % mode)
+        self._protocol.updateBattleGameMode(mode)
+
     def openInter(self, id):
         self._protocol.openInter(id)
 

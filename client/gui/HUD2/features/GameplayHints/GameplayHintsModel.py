@@ -7,4 +7,4 @@ from gui.HUD2.features.GameplayHints.GameplayHintsController import GamePlayHint
 class GameplayHintsModel(AutoFilledDataModel):
     DATA_SOURCE = GameplayHintsSource
     CONTROLLER = GamePlayHintsController
-    SCHEME = Structure(startHintID=IntT, shootingHintID=IntT, sectorData=DictT, shootingHintTime=IntT, startHintTime=IntT)
+    SCHEME = Structure(startHintID=IntT, shootingHintID=IntT, gameplayType=StringT, shootingHintTime=IntT, startHintTime=IntT)

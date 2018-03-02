@@ -226,6 +226,7 @@ SHELLS_PATH = AIRCRAFTS_PATH + '/components/shells/'
 GUI_TEXTURES_PATH = DB_PATH + 'guiTextures.xml'
 SPLINES_PATH = 'scripts/db/splines'
 CURVES_PATH = 'scripts/db/curves'
+ECONOM_INDEXES_PATH = DB_PATH + 'config_econom_indexes.xml'
 DB_HUD_PATH = DB_PATH + 'Hud/'
 BATTLE_ALERTS_PATH = DB_HUD_PATH + 'battle_alert_hints.xml'
 BATTLE_NOTIFICATION_PATH = DB_HUD_PATH + 'battle_notification_hints.xml'
@@ -327,20 +328,47 @@ AXIS_NAME_TO_INT_MAP = {'horizontal': HORIZONTAL_AXIS,
 
 class GAME_MODE():
     UNDEFINED = -1
-    TEAM_DEATHMATCH = 2
-    SUPERIORITY = 6
-    GM_INTRO = 14
-    SUPERIORITY_2 = 9
     AREA_CONQUEST = 11
-    GM_ANY = 15
+    OFFENSE_DEFENCE = 12
+    ATTRITION_WARFARE = 13
+    GAME_MODE_LIMIT = 256
+    MODES_AREA_CONQUEST = set([AREA_CONQUEST, OFFENSE_DEFENCE, ATTRITION_WARFARE])
+    NAME_DEFAULT = 'AreaConquest'
+    NAMES = {AREA_CONQUEST: 'AreaConquest',
+     OFFENSE_DEFENCE: 'Invasion',
+     ATTRITION_WARFARE: 'AttritionWarfare'}
+    NAME_TO_MODE = {v:k for k, v in NAMES.iteritems()}
+
+
+TEAM_INDEX_TO_INVASION_SIDE = {0: 'defense',
+ 1: 'attack'}
+
+def COACH_SUFFIX_FILTER(arena, playerTeamIndex):
+    gameMode = arena.gameModeEnum
+    if gameMode == GAME_MODE.OFFENSE_DEFENCE:
+        return lambda objectiveName: objectiveName.endswith(playerTeamIndex)
+    else:
+        return lambda objectiveName: not objectiveName.endswith(('defense', 'attack'))
+
+
+class GAME_MODE_PATH_NAMES():
+    DEFAULT = 'default'
+    MODE_TO_PATH = {GAME_MODE.AREA_CONQUEST: DEFAULT,
+     GAME_MODE.OFFENSE_DEFENCE: 'offense_defence',
+     GAME_MODE.ATTRITION_WARFARE: 'attrition_warfare'}
 
 
 PREBATTLE_GAMEMODES_FILTER_MAP = {GAME_MODE.UNDEFINED: 'gm_undefined',
- GAME_MODE.TEAM_DEATHMATCH: 'gm_deathmatch',
- GAME_MODE.SUPERIORITY: 'superiority_radio_text',
- GAME_MODE.AREA_CONQUEST: 'HUD_GAME_TYPE_NAME_AREACONQUEST'}
-GM_QUEUE = 16
-GM_VISIBILITY = 32
+ GAME_MODE.AREA_CONQUEST: 'HUD_GAME_TYPE_NAME_AREACONQUEST',
+ GAME_MODE.OFFENSE_DEFENCE: 'HUD_GAME_TYPE_NAME_AREACONQUEST',
+ GAME_MODE.ATTRITION_WARFARE: 'HUD_GAME_TYPE_NAME_AREACONQUEST'}
+GM_QUEUE = GAME_MODE.GAME_MODE_LIMIT
+GM_VISIBILITY = GAME_MODE.GAME_MODE_LIMIT << 1
+
+class GLOBAL_COUNTERS_TYPES():
+    HOLDING_POINTS = 'holding_points'
+    DEATH_LIMIT = 'death_limit'
+
 
 class WIN_STATE():
     LOSE = 0
@@ -355,9 +383,15 @@ class GAME_RESULT():
     DRAW_SUPERIORITY = 12
     AREA_CONQUEST_SUCCESS = 22
     DRAW_AREA_CONQUEST = 23
+    CAPTURE_ALL_SECTORS = 35
+    DYNAMIC_TIME_RUNNING_OUT = 36
+    MAIN_TIME_RUNNING_OUT = 37
     ELIMINATION = 101
     DRAW_ELIMINATION_NO_PLAYERS = 102
     DRAW_ELIMINATION = 103
+    ATTRITION_TIME_RUNNING_OUT = 106
+    ATTRITION_SUCCESS = 107
+    ATTRITION_DRAW = 108
 
 
 WAITING_QUEUE_MAX_SIZE = 24
@@ -601,10 +635,6 @@ BOT_DEBUG = 0
 BOT_BOMBER = 1
 METERS_PER_SEC_TO_KMH_FACTOR = 3.6
 SIEGE_CANNONS_RELOADING_TIME = 5.0
-SUPERIORITY_TAKEN_DAMAGE_K = 1.0
-SUPERIORITY_INITIAL_DELAY = 30.0
-SUPERIORITY_OBJECT_DESTRUCTION_K = 0.3
-SUPERIORITY_AVATAR_DESTRUCTION_K = 0.15
 INACTIVE_ACCOUNT_DISCONNECT_TIME = 0
 GRAVITY = 9.81
 
@@ -752,6 +782,7 @@ class INVOICE_ASSET():
     PREMIUM = 3
     DATA = 4
     FREE_XP = 5
+    TRANSACTION = 6
 
 
 class STREAM_CLIENT():
@@ -809,6 +840,11 @@ class ARENA_UPDATE():
     ECONOMIC_PLAYERS_POINTS = 48
     ECONOMIC_EXT_PLAYERS_DATA = 49
     PLANE_TYPE_RANK_UPDATED = 50
+    UPDATE_GLOBAL_COUNTERS = 52
+    CHANGE_DYNAMIC_TIME = 53
+    AC_SECTOR_PERMANENT_LOCK = 54
+    UPDATE_RESOURCE_POINTS = 55
+    COMBAT_EVENTS = 56
 
 
 class AWARDS_TYPE():
@@ -996,7 +1032,7 @@ class MESSAGE_TYPE():
     WINDOW_ADVERTISING_SPRING_ASSAULT = 179
     BOT_CHAT_ALL = 180
     BOT_CHAT_TEAM = 181
-    SPEND_BUYING_QUEST = 182
+    BUY_QUEST_SKIP = 182
     WAR_CASH_PAY_TICKET = 183
     WINDOW_ADVERTISING_PREMIUM_BY_TICKETS = 190
     WINDOW_SPRING_ASSAULT_AWARD_PLANE = 191
@@ -1071,6 +1107,8 @@ class MESSAGE_TYPE():
     GOT_WG_FEST_REWARD = 470
     LTO_IL_1 = 471
     GAME_EVENT_OBJECT_COMPLETED = 472
+    GAME_EVENT_OBJECT_ACTIVATED = 473
+    ACHIEVEMENT_ADDED = 474
 
 
 NOT_SEND_TO_CLIENT_MESSAGE_TYPE = [MESSAGE_TYPE.WAR_ACTION_STATE_CHANGE]
@@ -1131,6 +1169,7 @@ class TEAM_ID():
     TEAM_2 = 3
     RANGE = (UNDEFINED, TEAM_0, TEAM_1)
     CHOSEN = (TEAM_0, TEAM_1)
+    NEUTRAL = TEAM_2
 
 
 class PLANE_LEVELS():
@@ -2616,77 +2655,13 @@ BOT_NAME_SUFFIX = '>'
 INTRO_MODE_DEBUG = True
 PLAYER_SCENARIO = 'player_scenario'
 SUPERIORITY_POINTS_GROUPS_MAX = 32
-SUPERIORITY2_BASE_HEALTH = False
 SUPERIORITY2_COLORS = {'green': 1,
  'red': 2,
  'yellow': 3}
-SUPERIORITY2_LIVES_COUNT = 3
-SUPERIORITY2_BATTLE_LEVEL_COEFS = [25,
- 25,
- 30,
- 30,
- 60,
- 60,
- 60,
- 60,
- 60,
- 60]
-SUPERIORITY2_PLAYERS_COUNT_COEFS = [3,
- 3,
- 4,
- 4,
- 5,
- 5,
- 6,
- 6,
- 7,
- 7,
- 8,
- 8,
- 9,
- 9,
- 10]
-SUPERIORITY2_BOT_DATA = [{'plane': 'il-2-1',
-  'globalID': -108304520,
-  'name': 'bot_t0_01',
-  'teamIndex': 0,
-  'spline': 'dota2_T0_BMB01_W01',
-  'speed': 300},
- {'plane': 'il-2-1',
-  'globalID': -108304520,
-  'name': 'bot_t0_02',
-  'teamIndex': 0,
-  'spline': 'dota2_T0_BMB01_W02',
-  'speed': 300},
- {'plane': 'il-2-1',
-  'globalID': -108304520,
-  'name': 'bot_t0_03',
-  'teamIndex': 0,
-  'spline': 'dota2_T0_BMB01_W03',
-  'speed': 300},
- {'plane': 'il-2-1',
-  'globalID': -108304520,
-  'name': 'bot_t1_01',
-  'teamIndex': 1,
-  'spline': 'dota2_T1_BMB01_W01',
-  'speed': 300},
- {'plane': 'il-2-1',
-  'globalID': -108304520,
-  'name': 'bot_t1_02',
-  'teamIndex': 1,
-  'spline': 'dota2_T1_BMB01_W02',
-  'speed': 300},
- {'plane': 'il-2-1',
-  'globalID': -108304520,
-  'name': 'bot_t1_03',
-  'teamIndex': 1,
-  'spline': 'dota2_T1_BMB01_W03',
-  'speed': 300}]
 SUPERIORITY2_TEAM_OBJECTS_DOTA = False
 MOVING_OBJ_RANGE = 100
 MOVING_OBJ_DAMAGE_PERCENT = 0.035
 BASE_OBJ_DAMAGE_PERCENT = 0.009
-IS_SUPERIORITY_1_5 = True
 SUPERIORITY_SCORE_PENALTY_COEF = 1.0
 SUPERIORITY_ONE_PLAYER_MODE = False
 MIN_CALIBER = 21
@@ -3009,19 +2984,23 @@ class SECTOR_GAMEPLAY_TYPE():
     """Gameplay type for Arena Conquest sectors
     """
     DEFAULT = 'default'
-    AIRFIELD = 'airfield'
-    FACTORY = 'factory'
-    MILITARY_BASE = 'military_base'
-    RADAR = 'radar'
+    FOUNDRY = 'foundry'
+    FIELDCAMP = 'fieldcamp'
+    CITADEL = 'citadel'
+    COMMANDCENTER = 'commandcenter'
+    AIRBASE = 'airbase'
+    RUNWAY = 'runway'
     NEUTRAL = 'neutral'
     SPAWNPOINT = 'spawnpoint'
     ALL = (DEFAULT,
-     AIRFIELD,
-     FACTORY,
-     MILITARY_BASE,
-     RADAR,
      NEUTRAL,
-     SPAWNPOINT)
+     SPAWNPOINT,
+     FOUNDRY,
+     FIELDCAMP,
+     CITADEL,
+     COMMANDCENTER,
+     AIRBASE,
+     RUNWAY)
 
 
 class SECTOR_LEVEL_TYPE():
@@ -3034,25 +3013,6 @@ class SECTOR_LEVEL_TYPE():
     AIRBASE = 'airbase'
     FOUNDRY = 'foundry'
 
-
-SECTOR_GAMEPLAY_TYPE_TO_SECTOR_LEVEL_TYPE = {0: {SECTOR_GAMEPLAY_TYPE.MILITARY_BASE: SECTOR_LEVEL_TYPE.FIELDCAMP,
-     SECTOR_GAMEPLAY_TYPE.AIRFIELD: SECTOR_LEVEL_TYPE.RUNWAY},
- 1: {SECTOR_GAMEPLAY_TYPE.RADAR: SECTOR_LEVEL_TYPE.COMMANDCENTER,
-     SECTOR_GAMEPLAY_TYPE.MILITARY_BASE: SECTOR_LEVEL_TYPE.CITADEL},
- 2: {SECTOR_GAMEPLAY_TYPE.AIRFIELD: SECTOR_LEVEL_TYPE.AIRBASE,
-     SECTOR_GAMEPLAY_TYPE.FACTORY: SECTOR_LEVEL_TYPE.FOUNDRY}}
-SECTOR_LEVEL_TYPE_TO_SECTOR_GAMEPLAY_TYPE = {SECTOR_LEVEL_TYPE.FIELDCAMP: {'gamePlayType': SECTOR_GAMEPLAY_TYPE.MILITARY_BASE,
-                               'gamePlayLevel': 0},
- SECTOR_LEVEL_TYPE.RUNWAY: {'gamePlayType': SECTOR_GAMEPLAY_TYPE.AIRFIELD,
-                            'gamePlayLevel': 0},
- SECTOR_LEVEL_TYPE.COMMANDCENTER: {'gamePlayType': SECTOR_GAMEPLAY_TYPE.RADAR,
-                                   'gamePlayLevel': 1},
- SECTOR_LEVEL_TYPE.CITADEL: {'gamePlayType': SECTOR_GAMEPLAY_TYPE.MILITARY_BASE,
-                             'gamePlayLevel': 1},
- SECTOR_LEVEL_TYPE.AIRBASE: {'gamePlayType': SECTOR_GAMEPLAY_TYPE.AIRFIELD,
-                             'gamePlayLevel': 2},
- SECTOR_LEVEL_TYPE.FOUNDRY: {'gamePlayType': SECTOR_GAMEPLAY_TYPE.FACTORY,
-                             'gamePlayLevel': 2}}
 
 class DEFENDER_TYPE():
     LIGHT = 0

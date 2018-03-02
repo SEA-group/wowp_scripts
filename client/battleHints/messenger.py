@@ -16,6 +16,7 @@ class AlertUIData(object):
         self.priority = kwargs.get('priority', -1)
         self.description = kwargs.get('description', '')
         self.consumableDependency = kwargs.get('consumableDependency', '')
+        self.data = kwargs.get('data', -1)
 
 
 class NotificationUIData(object):
@@ -29,6 +30,7 @@ class NotificationUIData(object):
         self.description = kwargs.get('description', '')
         self.timer = kwargs.get('timer', -1)
         self.addValue = kwargs.get('addValue', -1)
+        self.data = kwargs.get('data', -1)
 
     def addPostfix(self, value):
         self.title += value
@@ -67,11 +69,18 @@ class AlertMessage(object):
     def canPush(self):
         return self._coolDownValid() and self._planeTypeValid()
 
+    def isGameModeAvailable(self, value):
+        return True
+
 
 class NotificationMessage(AlertMessage):
 
     def _initUI(self, *args, **kwargs):
         self.ui = NotificationUIData(*args, **kwargs)
+        self._gameModes = kwargs.get('gameModes', [])
+
+    def isGameModeAvailable(self, value):
+        return value in self._gameModes
 
 
 class ProxyMessage(AlertMessage):
@@ -149,7 +158,17 @@ class BattleNotification(BattleAlerts):
     def loadMessages(self):
         data = db.DBLogic.g_instance.getBattleNotificationHints()
         for ID, ms in data.iteritems():
-            self._messages[ms.id] = NotificationMessage(type=ms.type, title=self.localize(ms.title), icon=ms.icon, lifeTime=ms.lifeTime, priority=ms.priority, description=self.localize(ms.description), planeValid=[], spamInterval=ms.coolDown, timer=ms.timer, addValue=ms.addValue)
+            self._messages[ms.id] = NotificationMessage(type=ms.type, title=self.localize(ms.title), icon=ms.icon, lifeTime=ms.lifeTime, priority=ms.priority, description=self.localize(ms.description), planeValid=[], spamInterval=ms.coolDown, timer=ms.timer, addValue=ms.addValue, gameModes=ms.gameModes)
+
+    def onInitGameMode(self, value):
+        self._gameModeName = value
+
+    def pushMessage(self, ID, localData = None):
+        if self._modelView is not None:
+            ms = self._messages.get(ID, _StaticProxyMessage)
+            if ms.canPush() and ms.isGameModeAvailable(self._gameModeName):
+                self._modelView.pushMessage(self.tryOverride(ms.ui, localData))
+        return
 
 
 _dt = 0.333
@@ -157,6 +176,7 @@ _dt = 0.333
 class Messenger(ICMultiUpdate):
 
     def __init__(self, gameEnv):
+        self._gameEnv = gameEnv
         self._battleAlerts = BattleAlerts()
         self._alertsController = AlertsController(gameEnv, self._battleAlerts)
         self._battleNot = BattleNotification()
@@ -176,7 +196,9 @@ class Messenger(ICMultiUpdate):
         self._battleNot.loadMessages()
 
     def onGameModeCreate(self):
+        _gameModeName = self._gameEnv.service('ClientArena').gameModeName
         self._notificationController.onInitGameMode()
+        self._battleNot.onInitGameMode(_gameModeName)
 
     def afterLinking(self, *args, **kwargs):
         pass

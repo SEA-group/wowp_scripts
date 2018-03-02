@@ -1,5 +1,6 @@
 <squad.def>
   <Implements>
+    <Interface>EPSTransfer</Interface>
   </Implements>
   <TempProperties>
     <_Squad__id>
@@ -28,8 +29,6 @@
     </_Squad__voipChannel>
     <_Squad__enterBattleRequestID>
     </_Squad__enterBattleRequestID>
-    <_Squad__accountsInBattleQueue>
-    </_Squad__accountsInBattleQueue>
     <_Squad__becomeEmptyAt>
     </_Squad__becomeEmptyAt>
     <_Squad__arenaType>
@@ -52,12 +51,17 @@
     </peripheryID>
   </Properties>
   <BaseMethods>
-    <onValidateSquadMemberGameQueueConnection>
-      <Arg>DB_ID</Arg>
-      <Arg>	BOOL	</Arg>
-    </onValidateSquadMemberGameQueueConnection>
-    <queueEnterGame>
-    </queueEnterGame>
+    <joinPreBattle>
+      <Arg>	INT8	</Arg>
+      <Arg>STRING</Arg>
+      <Arg>INT32</Arg>
+      <Arg>INT32</Arg>
+    </joinPreBattle>
+    <leavePreBattle>
+      <Arg>INT32</Arg>
+      <Arg>INT32</Arg>
+      <Arg>STRING</Arg>
+    </leavePreBattle>
     <updatePremiumAttr>
       <Arg>DB_ID</Arg>
       <Arg>	BOOL	</Arg>
@@ -89,10 +93,6 @@
       <Arg>	BOOL	</Arg>
       <Arg>OBJECT_ID</Arg>
     </initSquad>
-    <changeArenaType>
-      <Arg>UINT8</Arg>
-      <Arg>OBJECT_ID</Arg>
-    </changeArenaType>
     <removeMembers>
       <Arg>ARRAY<of>DB_ID</of></Arg>
     </removeMembers>
@@ -109,12 +109,6 @@
       <Arg>DB_ID</Arg>
       <Arg>OBJECT_ID</Arg>
     </deleteSquad>
-    <enterQueue>
-      <Arg>MAILBOX</Arg>
-      <Arg>DB_ID</Arg>
-      <Arg>	INT8	</Arg>
-      <Arg>OBJECT_ID</Arg>
-    </enterQueue>
     <getMember>
       <Arg>PYTHON</Arg>
       <Arg>MAILBOX</Arg>

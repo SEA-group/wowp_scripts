@@ -35,6 +35,8 @@ class WeaponGroup(object):
         self.__eventManager = Event.EventManager()
         self.eGunOverHeat = Event.Event(self.__eventManager)
         self.ammoBelt = AmmoBelt(self.gunDescription, ammoBelt, self.__gunProfile)
+        self.temperature = 0.0
+        self.__reloadTimer = 0.0
         self.restart()
 
     def destroy(self):

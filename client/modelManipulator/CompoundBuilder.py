@@ -541,8 +541,7 @@ class ObjectsBuilder:
     def __onLoaded(self):
         self.__context.isLoaded = True
         for drawObject, isVisible in self.__drawObjects:
-            if drawObject.isVisible != isVisible:
-                drawObject.onVisibleChange(drawObject.isVisible)
+            drawObject.onVisibleChange(drawObject.isVisible)
 
         for modelId, syncList in self.__fashionSyncLists.iteritems():
             CompoundSystem.setModelNodeSyncList(self.__context.cidProxy.handle, modelId, syncList)

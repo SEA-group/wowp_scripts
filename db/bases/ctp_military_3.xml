@@ -26,6 +26,7 @@
   <superiorityPointsGroup8>	1	</superiorityPointsGroup8>
   <initialSpawnDelay>0.0</initialSpawnDelay>
   <type>vehicle</type>
+  <turretName>t_h</turretName>
   <parts>
     <part>
       <name>	hull	</name>
@@ -497,8 +498,8 @@
         <id>	1	</id>
         <bBoxes>
           <bbox>
-            <position>	-29.565000 3.015000 -37.035000	</position>
-            <size>	32.580000 6.390000 18.090000	</size>
+            <position>	-27.235170 2.212805 -36.721420	</position>
+            <size>	8.968226 4.064446 7.840832	</size>
             <armorFront>	50.000000 50.000000 50.000000	</armorFront>
             <armorBack>	50.000000 50.000000 50.000000	</armorBack>
             <absorption>	1.000000	</absorption>
@@ -506,8 +507,8 @@
           </bbox>
         </bBoxes>
         <health>	275	</health>
-        <componentType>Collidable</componentType>
-        <componentXml>server.todo.xml</componentXml>
+        <componentType>Gunner</componentType>
+        <componentXml>t_h</componentXml>
         <states>
           <state>
             <id>	1	</id>
@@ -515,7 +516,7 @@
             </usage>
             <stateHelthCfc>	1.000000	</stateHelthCfc>
             <stateAction>	0	</stateAction>
-            <model>content/dest/env/Military/mechNR_018_Missile_destructible_01/mechNR_018_Missile_destructible_01.model</model>
+            <model>content/dest/veh/us/US_AckAck_M1/US_AckAck_M1_v2.model</model>
             <effectOnStart>
             </effectOnStart>
             <effectState>
@@ -543,7 +544,7 @@
             <usage>crash</usage>
             <stateHelthCfc>	0.000000	</stateHelthCfc>
             <stateAction>	0	</stateAction>
-            <model>content/dest/env/Military/mechNR_018_Missile_destructible_01/mechNR_018_Missile_destructible_01_crash.model</model>
+            <model>content/dest/veh/us/US_AckAck_M1/US_AckAck_M1_v2_crash.model</model>
             <effectOnStart>
               <effect>
                 <name>EFFECT_w_part_exposion_small</name>

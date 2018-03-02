@@ -30,6 +30,17 @@ class ENGINE_OVERHEAT:
 DEBUG_AUDIO_TAG = '[AUDIO]'
 SPEED_OF_SOUND = 1191
 
+class VOICEOVER_DEFAULTS:
+    PROBABILITY = 'Probability'
+    MAX = 'Max'
+    COOLDOWN = 'Cooldown'
+    PRIORITY = 'Priority'
+    DEFAULTS = {PROBABILITY: 100,
+     MAX: 1,
+     COOLDOWN: 0,
+     PRIORITY: 1}
+
+
 class SOUND_MODES:
     SWITCH = 'SWITCH_Sound_Mode'
     SPECTATOR = 0
@@ -103,38 +114,6 @@ class VOICE:
     AIRSTRIKE_DEFEATED = 'vo_c_airstrike_defeated'
     FAU2_LAUNCH_NEG = 'vo_c_fau2_launch_neg'
     FAU2_LAUNCH_POS = 'vo_c_fau2_launch_pos'
-
-
-class SECTOR_VOICES_TYPE:
-    CAPTURE = 0
-    CAPTURE_ALL = 1
-    ALARM = 2
-    LOST = 3
-
-
-class SECTOR_VOICES:
-    from consts import SECTOR_GAMEPLAY_TYPE
-    VOICES = {SECTOR_VOICES_TYPE.CAPTURE: {SECTOR_GAMEPLAY_TYPE.AIRFIELD: VOICE.AIRFIELD_CAPTURED,
-                                  SECTOR_GAMEPLAY_TYPE.FACTORY: VOICE.FACTORY_CAPTURED,
-                                  SECTOR_GAMEPLAY_TYPE.MILITARY_BASE: VOICE.BASE_CAPTURED,
-                                  SECTOR_GAMEPLAY_TYPE.RADAR: VOICE.CENTER_CAPTURED},
-     SECTOR_VOICES_TYPE.CAPTURE_ALL: {SECTOR_GAMEPLAY_TYPE.AIRFIELD: VOICE.ALL_AIRFIELDS_CAPTURED,
-                                      SECTOR_GAMEPLAY_TYPE.FACTORY: VOICE.ALL_FACTORIES_CAPTURED,
-                                      SECTOR_GAMEPLAY_TYPE.MILITARY_BASE: VOICE.ALL_BASES_CAPTURED,
-                                      SECTOR_GAMEPLAY_TYPE.RADAR: VOICE.ALL_CENTERS_CAPTURED},
-     SECTOR_VOICES_TYPE.ALARM: {},
-     SECTOR_VOICES_TYPE.LOST: {SECTOR_GAMEPLAY_TYPE.AIRFIELD: VOICE.AIRFIELD_LOST,
-                               SECTOR_GAMEPLAY_TYPE.FACTORY: VOICE.FACTORY_LOST,
-                               SECTOR_GAMEPLAY_TYPE.MILITARY_BASE: VOICE.BASE_LOST,
-                               SECTOR_GAMEPLAY_TYPE.RADAR: VOICE.CENTER_LOST}}
-
-    @staticmethod
-    def getEvent(voice_type, sector_gameplay_type):
-        if voice_type in SECTOR_VOICES.VOICES:
-            voices = SECTOR_VOICES.VOICES[voice_type]
-            if sector_gameplay_type in voices:
-                return voices[sector_gameplay_type]
-        return ''
 
 
 class AIRCRAFT_SFX:

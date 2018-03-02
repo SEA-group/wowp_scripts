@@ -1,4 +1,4 @@
-# Embedded file name: res/scripts\client\Account.py
+# Embedded file name: scripts/client/Account.py
 from functools import partial
 import time
 import cPickle
@@ -49,6 +49,7 @@ from HelperFunctions import createIMessage
 from CrewHelpers import DEFAULT_BOT_AVATAR_BODY_TYPE
 import operator
 from Helpers.cache import isSessionKeyValid, deleteCache, getSessionKey
+from GameEvents.features.activities.manager import ActivitiesManager
 import _warAction
 DATA_STORAGE = {'ifaces': {}}
 PLANE_BLOCK_TYPE = {}
@@ -65,10 +66,11 @@ class PlayerAccount(BigWorld.Entity):
         self.__wasLogin = False
         self.__dynamicHangarUpdateCallback = None
         self.__queueVSECallback = None
+        self.__oneSecondTimerCallback = None
         self.__queueVSEData = collections.deque()
         return
 
-    def version_233(self):
+    def version_241(self):
         pass
 
     def isPendingResponses(self):
@@ -86,6 +88,17 @@ class PlayerAccount(BigWorld.Entity):
     def __prebattleInstance(self):
         return g_windowsManager.getPrebatleUI()
 
+    @property
+    def currentTime(self):
+        if self.__class__ == PlayerAccount:
+            return self.loginClientTime + BigWorld.serverTime() - self.loginServerTime
+        else:
+            return time.time()
+
+    @property
+    def activities(self):
+        return self.__activities
+
     def onStreamComplete(self, id, data):
         try:
             streamID, response = cPickle.loads(zlib.decompress(data))
@@ -102,6 +115,14 @@ class PlayerAccount(BigWorld.Entity):
             LOG_CURRENT_EXCEPTION()
             connectionManager.disconnect()
 
+    def onOneSecondTimer(self):
+        """
+            One second timer. Other systems may call OneSecoundUpdate here
+             or use GlobalEvents.onOneSecondTime event
+        :return:
+        """
+        self.activities.onSecondTimer()
+
     def receivePlayerInfo(self, initPlayerInfoMap):
         databaseID = getattr(initPlayerInfoMap, 'databaseID', BWPersonality.g_initPlayerInfo.databaseID)
         if databaseID != BWPersonality.g_initPlayerInfo.databaseID:
@@ -113,7 +134,10 @@ class PlayerAccount(BigWorld.Entity):
         LOG_INFO_FORMAT(self, 'receivePlayerInfo: serverRunTime={0}; updatePlayerInfoResponse={1}; initPlayerInfoMap: {2}', BigWorld.serverTime(), time.ctime(info.serverLocalTime), initPlayerInfoMap)
         BWPersonality.g_settings.hangarSpaceSettings = BWPersonality.g_settings.getHangarSpaceSettings(info.databaseID)
         SKIP_CLIENT_DIFFTIME = 30
-        deltaTimeClientServer = int(time.time()) - info.serverLocalTime
+        currentTime = int(time.time())
+        self.loginServerTime = int(BigWorld.serverTime())
+        self.loginClientTime = currentTime
+        deltaTimeClientServer = currentTime - info.serverLocalTime
         if abs(deltaTimeClientServer) < SKIP_CLIENT_DIFFTIME:
             deltaTimeClientServer = 0
         self.deltaTimeClientServer = deltaTimeClientServer
@@ -289,7 +313,8 @@ class PlayerAccount(BigWorld.Entity):
              'IBarrackPrice',
              'IPriceSchemes',
              'IPlaneBirthdayEnabled',
-             'ITicketPlanes']
+             'ITicketPlanes',
+             'ICurrentActivities']
 
             def currentPatchResp(oldPatchID, respdata):
                 patchID = respdata[0][0]['ICurrentPatch']['patchID']
@@ -562,9 +587,8 @@ class PlayerAccount(BigWorld.Entity):
             BigWorld.quit()
             return
         else:
-            NEW_YEAR_EVENT = 'NY_2017'
-            if NEW_YEAR_EVENT in BWPersonality.g_initPlayerInfo.activeEvents:
-                BigWorld.player().callVSE('onNewYearEvent', {})
+            accountUI = g_windowsManager.getAccountUI()
+            accountUI.viewIFace([[{'IActivities': {}}, EMPTY_IDTYPELIST]])
             if HANGAR_VISUAL_EVENT.EVENT_NAME in BWPersonality.g_initPlayerInfo.activeEvents:
                 BigWorld.player().callVSE(HANGAR_VISUAL_EVENT.VSE_NAME, {})
             return
@@ -574,12 +598,14 @@ class PlayerAccount(BigWorld.Entity):
         GlobalEvents.onHideModalScreen += self.__onHideModalScreen
         self.__operationReceiver.onReceiveOperation += self.__onReceiveOperation
         GlobalEvents.onHangarLoaded += self.__onHangarLoaded
+        GlobalEvents.onOneSecondTimer += self.onOneSecondTimer
 
     def __unlinkEvents(self):
         GlobalEvents.onMovieLoaded -= self.__onMovieLoaded
         GlobalEvents.onHideModalScreen -= self.__onHideModalScreen
         self.__operationReceiver.onReceiveOperation -= self.__onReceiveOperation
         GlobalEvents.onHangarLoaded -= self.__onHangarLoaded
+        GlobalEvents.onOneSecondTimer -= self.onOneSecondTimer
 
     def onBecomePlayer(self):
         """
@@ -597,6 +623,8 @@ class PlayerAccount(BigWorld.Entity):
         self._premWaiting = False
         self.premiumExpiryTime = 0
         self.deltaTimeClientServer = 0
+        self.loginServerTime = 0
+        self.loginClientTime = int(time.time())
         if db.DBLogic.g_instance == None:
             return
         else:
@@ -619,6 +647,7 @@ class PlayerAccount(BigWorld.Entity):
             self.ifaceHandler = None
             self.requestsAvailable = False
             self.onAddArena = Event(em)
+            self.__oneSecondTimerCallback = BigWorld.callback(1, self.__oneSecondTimer)
             import BattleReplay
             BattleReplay.g_replay.startAutoRecord()
             BigWorld.resetEntityManager(True, False)
@@ -636,6 +665,7 @@ class PlayerAccount(BigWorld.Entity):
             self.interfaceSender = InterfaceSenderQueue(self.accountCmd)
             if BWPersonality.g_lobbyCarouselHelper.inventory:
                 BWPersonality.g_lobbyCarouselHelper.inventory.setOpSender(self.accountCmd)
+            self.__activities = ActivitiesManager(self)
             if messenger.g_xmppChatHandler:
                 messenger.g_xmppChatHandler.onEnterLobbyEvent()
             from gui.Scaleform.WebBrowser import WebBrowser
@@ -878,12 +908,16 @@ class PlayerAccount(BigWorld.Entity):
         if self.__queueVSECallback is not None:
             BigWorld.cancelCallback(self.__queueVSECallback)
             self.__queueVSECallback = None
+        if self.__oneSecondTimerCallback:
+            BigWorld.cancelCallback(self.__oneSecondTimerCallback)
+            self.__oneSecondTimerCallback = None
         if BWPersonality.g_lobbyCarouselHelper:
             BWPersonality.g_lobbyCarouselHelper.clearQueue()
         self.__clearStartingArenaCallback()
         self.__turnOffHangarSpace()
         self.__clearPremiumCallback()
         self.premiumExpiryTime = 0
+        self.__activities.destroy()
         self.__em.clear()
         PartSender().clearCallbacks()
         PartSender().clearAllPools()
@@ -1286,6 +1320,10 @@ class PlayerAccount(BigWorld.Entity):
         VOIP.api().onServerMessage(status, args)
         self.__waitVoipClientStatus = False
 
+    def __oneSecondTimer(self):
+        GlobalEvents.onOneSecondTimer()
+        self.__oneSecondTimerCallback = BigWorld.callback(1, self.__oneSecondTimer)
+
     def clanMembersListDiff(self, clanDBID, membersData):
         membersDiff = cPickle.loads(membersData)
         LOG_INFO('clanMembersListDiff', membersDiff)
@@ -1312,8 +1350,11 @@ class PlayerAccount(BigWorld.Entity):
 
     @staticmethod
     def sendVisualScriptEvent(eventName, eventParams):
-        evt = getattr(BigWorld.events(), eventName)
-        evt.post('', eventParams)
+        try:
+            evt = getattr(BigWorld.events(), eventName)
+            evt.post('', eventParams)
+        except Exception as e:
+            LOG_ERROR('sendVisualScriptEvent failed to call: {0}'.format(e))
 
     def callVSE(self, event, param):
         if self.__isVSEReady():

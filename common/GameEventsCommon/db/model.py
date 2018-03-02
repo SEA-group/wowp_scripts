@@ -6,10 +6,10 @@ class Model(object):
     NAME = 'base'
     DESCRIPTION = 'Base model for any object provided by backend'
 
-    def __init__(self, backend, instance = None, filters = None):
+    def __init__(self, backend, instances = None, filters = None):
         self._backend = backend
         self._context = None
-        self._instance = instance
+        self._instances = instances or {}
         self._filters = filters
         self._contextInstances = []
         self.__class__.registered.add(self)
@@ -62,9 +62,34 @@ class Model(object):
         self._context = None
         return
 
+    def _adaptByFilter(self, obj):
+        foundInstance = None
+        defaultInstance = None
+        for instance, filter_ in self._instances:
+            skip = False
+            for key, value in filter_.iteritems():
+                if obj.__dict__.get(key) != value:
+                    skip = True
+                    break
+
+            if skip:
+                continue
+            elif not filter_:
+                defaultInstance = instance
+                continue
+            else:
+                foundInstance = instance
+                break
+
+        foundInstance = foundInstance or defaultInstance
+        return foundInstance
+
     def _adapt(self, obj):
-        if self._instance and obj:
-            return self._instance(obj, self._context, self)
+        if not obj:
+            return
+        instance = self._adaptByFilter(obj)
+        if instance:
+            return instance(obj, self._context, self)
         return obj
 
     def all(self, type_ = None, includeNested = True):

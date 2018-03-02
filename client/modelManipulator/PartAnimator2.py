@@ -1,6 +1,7 @@
 # Embedded file name: scripts/client/modelManipulator/PartAnimator2.py
 import BigWorld
 from .PartAnimatorControllers import CONTROLLERS, PropellorControllerL, PropellorControllerR, AileronBaseController
+from consts import FORCE_AXIS
 _CONTROLLERS_MAP = dict(((controllerCls.__name__, controllerCls) for controllerCls in CONTROLLERS))
 SHAKE_PERIOD = 0.5
 
@@ -83,6 +84,12 @@ class PartAnimatorController:
             return self.__createController(controllerClass)
         else:
             return
+
+    def showPropellorBlade(self, visible):
+        if FORCE_AXIS in self.__controllerByAxis:
+            for controller in self.__controllerByAxis[FORCE_AXIS]:
+                if controller.__class__ is PropellorControllerL or controller.__class__ is PropellorControllerR:
+                    controller.showPropellorBlade(visible)
 
     def setAxisValue(self, axis, value):
         self.__axisValues[axis] = value

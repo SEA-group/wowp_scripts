@@ -124,7 +124,9 @@ class SectorsGameEffectsSource(DataSource):
                 bomberModel.state = BOMBERS_WAVE_STATE.OUTRO_FLIGHT
             if checkIfReadyToSplice(model.bomberIDsStates):
                 model.strikeState = BOMBERS_WAVE_STATE.OUTRO_FLIGHT
-                self._model.airStrikes.splice(model)
+                waveID = model.waveID.get()
+                if self._model.airStrikes.first(lambda a: a.waveID.get() == waveID):
+                    self._model.airStrikes.splice(model)
             elif checkIfSomebodyIsBombing(model.bomberIDsStates):
                 model.strikeState = BOMBERS_WAVE_STATE.BOMBING
             else:

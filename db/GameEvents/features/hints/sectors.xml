@@ -469,45 +469,45 @@
     </nested>
   </subscriber>
   <subscriber>
-    <name>	areaConquest	</name>
+    <name>	foothold	</name>
     <group>complexes.start</group>
     <client>
       <hints>
         <id>	107	</id>
         <order>
           <name>fighter</name>
-          <value>	95	</value>
+          <value>	70	</value>
         </order>
         <order>
           <name>	navy	</name>
-          <value>	95	</value>
+          <value>	70	</value>
         </order>
         <order>
           <name>heavy.fighter</name>
-          <value>	95	</value>
+          <value>	72	</value>
         </order>
         <order>
           <name>assault</name>
-          <value>	95	</value>
+          <value>	77	</value>
         </order>
         <order>
           <name>bomber</name>
-          <value>	95	</value>
+          <value>	77	</value>
         </order>
       </hints>
     </client>
     <nested>
       <auto>	false	</auto>
       <subscriber>
-        <name>player.notInBattleAreaConquest</name>
+        <name>player.notInBattle</name>
         <server>
           <repeat>	true	</repeat>
         </server>
         <condition>
-          <equal>
-            <context>arena.type</context>
-            <value>normal</value>
-          </equal>
+          <contains>
+            <context>arena.sectors</context>
+            <value>	foothold	</value>
+          </contains>
         </condition>
         <condition>
           <gte>
@@ -531,85 +531,10 @@
           <context>player</context>
           <name>	info	</name>
           <condition>
-            <equal>
-              <context>arena.type</context>
-              <value>normal</value>
-            </equal>
-          </condition>
-          <count>
-            <value>	1	</value>
-          </count>
-        </event>
-      </subscriber>
-    </nested>
-  </subscriber>
-  <subscriber>
-    <name>areaCapture</name>
-    <group>complexes.start</group>
-    <client>
-      <hints>
-        <id>	110	</id>
-        <order>
-          <name>fighter</name>
-          <value>	90	</value>
-        </order>
-        <order>
-          <name>	navy	</name>
-          <value>	90	</value>
-        </order>
-        <order>
-          <name>heavy.fighter</name>
-          <value>	90	</value>
-        </order>
-        <order>
-          <name>assault</name>
-          <value>	90	</value>
-        </order>
-        <order>
-          <name>bomber</name>
-          <value>	90	</value>
-        </order>
-      </hints>
-    </client>
-    <nested>
-      <auto>	false	</auto>
-      <subscriber>
-        <name>player.notInBattleAreaConquest</name>
-        <server>
-          <repeat>	true	</repeat>
-        </server>
-        <condition>
-          <equal>
-            <context>arena.type</context>
-            <value>normal</value>
-          </equal>
-        </condition>
-        <condition>
-          <gte>
-            <context>player.lastBattleTime</context>
-            <value>	14	</value>
-          </gte>
-        </condition>
-        <event>
-          <type>battle</type>
-          <context>player</context>
-          <name>	info	</name>
-          <count>
-            <value>	1	</value>
-          </count>
-        </event>
-      </subscriber>
-      <subscriber>
-        <name>player.showFirstTime</name>
-        <event>
-          <type>battle</type>
-          <context>player</context>
-          <name>	info	</name>
-          <condition>
-            <equal>
-              <context>arena.type</context>
-              <value>normal</value>
-            </equal>
+            <contains>
+              <context>arena.sectors</context>
+              <value>	foothold	</value>
+            </contains>
           </condition>
           <count>
             <value>	1	</value>
@@ -649,16 +574,10 @@
     <nested>
       <auto>	false	</auto>
       <subscriber>
-        <name>player.notInBattleAreaConquest</name>
+        <name>player.notInBattle</name>
         <server>
           <repeat>	true	</repeat>
         </server>
-        <condition>
-          <equal>
-            <context>arena.type</context>
-            <value>normal</value>
-          </equal>
-        </condition>
         <condition>
           <gte>
             <context>player.lastBattleTime</context>
@@ -680,12 +599,6 @@
           <type>battle</type>
           <context>player</context>
           <name>	info	</name>
-          <condition>
-            <equal>
-              <context>arena.type</context>
-              <value>normal</value>
-            </equal>
-          </condition>
           <count>
             <value>	1	</value>
           </count>
@@ -3196,6 +3109,409 @@
               <context>player.plane.type</context>
               <value>bomber</value>
             </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>	areaConquest	</name>
+    <group>complexes.start</group>
+    <client>
+      <hints>
+        <id>	151	</id>
+        <order>
+          <name>fighter</name>
+          <value>	95	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	95	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	95	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	95	</value>
+        </order>
+        <order>
+          <name>bomber</name>
+          <value>	95	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleAreaConquest</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <equal>
+            <context>arena.mode</context>
+            <value>	areaconquest	</value>
+          </equal>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <equal>
+              <context>arena.mode</context>
+              <value>	areaconquest	</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>invasionOffense</name>
+    <group>complexes.start</group>
+    <client>
+      <hints>
+        <id>	152	</id>
+        <order>
+          <name>fighter</name>
+          <value>	95	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	95	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	95	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	95	</value>
+        </order>
+        <order>
+          <name>bomber</name>
+          <value>	95	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleInvasionOffense</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <equal>
+            <context>arena.mode</context>
+            <value>	invasion	</value>
+          </equal>
+        </condition>
+        <condition>
+          <equal>
+            <context>player.teamIndex</context>
+            <value>	1	</value>
+          </equal>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <equal>
+              <context>arena.mode</context>
+              <value>	invasion	</value>
+            </equal>
+          </condition>
+          <condition>
+            <equal>
+              <context>player.teamIndex</context>
+              <value>	1	</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>invasionDefence</name>
+    <group>complexes.start</group>
+    <client>
+      <hints>
+        <id>	153	</id>
+        <order>
+          <name>fighter</name>
+          <value>	95	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	95	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	95	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	95	</value>
+        </order>
+        <order>
+          <name>bomber</name>
+          <value>	95	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleInvasionDefence</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <equal>
+            <context>arena.mode</context>
+            <value>	invasion	</value>
+          </equal>
+        </condition>
+        <condition>
+          <equal>
+            <context>player.teamIndex</context>
+            <value>	0	</value>
+          </equal>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <equal>
+              <context>arena.mode</context>
+              <value>	invasion	</value>
+            </equal>
+          </condition>
+          <condition>
+            <equal>
+              <context>player.teamIndex</context>
+              <value>	0	</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>	attritionWarfare	</name>
+    <group>complexes.start</group>
+    <client>
+      <hints>
+        <id>	154	</id>
+        <order>
+          <name>fighter</name>
+          <value>	95	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	95	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	95	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	95	</value>
+        </order>
+        <order>
+          <name>bomber</name>
+          <value>	95	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleAttritionWarfare</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <equal>
+            <context>arena.mode</context>
+            <value>	attritionwarfare	</value>
+          </equal>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <equal>
+              <context>arena.mode</context>
+              <value>	attritionwarfare	</value>
+            </equal>
+          </condition>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+    </nested>
+  </subscriber>
+  <subscriber>
+    <name>areaCapture</name>
+    <group>complexes.start</group>
+    <client>
+      <hints>
+        <id>	155	</id>
+        <order>
+          <name>fighter</name>
+          <value>	90	</value>
+        </order>
+        <order>
+          <name>	navy	</name>
+          <value>	90	</value>
+        </order>
+        <order>
+          <name>heavy.fighter</name>
+          <value>	90	</value>
+        </order>
+        <order>
+          <name>assault</name>
+          <value>	90	</value>
+        </order>
+        <order>
+          <name>bomber</name>
+          <value>	90	</value>
+        </order>
+      </hints>
+    </client>
+    <nested>
+      <auto>	false	</auto>
+      <subscriber>
+        <name>player.notInBattleAreaCapture</name>
+        <server>
+          <repeat>	true	</repeat>
+        </server>
+        <condition>
+          <not>
+            <equal>
+              <context>arena.mode</context>
+              <value>	invasion	</value>
+            </equal>
+          </not>
+        </condition>
+        <condition>
+          <gte>
+            <context>player.lastBattleTime</context>
+            <value>	14	</value>
+          </gte>
+        </condition>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <count>
+            <value>	1	</value>
+          </count>
+        </event>
+      </subscriber>
+      <subscriber>
+        <name>player.showFirstTime</name>
+        <event>
+          <type>battle</type>
+          <context>player</context>
+          <name>	info	</name>
+          <condition>
+            <not>
+              <equal>
+                <context>arena.mode</context>
+                <value>	invasion	</value>
+              </equal>
+            </not>
           </condition>
           <count>
             <value>	1	</value>

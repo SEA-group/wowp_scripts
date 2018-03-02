@@ -26,15 +26,19 @@
       <name>tailL</name>
       <normalState>
       </normalState>
-      <damageState>icons/hud/aircraft/schemes/bvP210_damLeftTail.dds</damageState>
-      <critState>icons/hud/aircraft/schemes/bvP210_critLeftTail.dds</critState>
+      <damageState>
+      </damageState>
+      <critState>
+      </critState>
     </part>
     <part>
       <name>tailR</name>
       <normalState>
       </normalState>
-      <damageState>icons/hud/aircraft/schemes/bvP210_damRightTail.dds</damageState>
-      <critState>icons/hud/aircraft/schemes/bvP210_critRightTail.dds</critState>
+      <damageState>
+      </damageState>
+      <critState>
+      </critState>
     </part>
     <part>
       <name>	hull	</name>
@@ -51,4 +55,17 @@
       <critState>icons/hud/aircraft/schemes/bvP210_critPilot.dds</critState>
     </part>
   </parts>
+  <groups>
+    <group>
+      <name>tailDep</name>
+      <dependency>
+        <part>tailL</part>
+        <part>tailR</part>
+      </dependency>
+      <normalState>
+      </normalState>
+      <damageState>icons/hud/aircraft/schemes/bvP210_damTail.dds</damageState>
+      <critState>icons/hud/aircraft/schemes/bvP210_critTail.dds</critState>
+    </group>
+  </groups>
 </bvp210.xml>

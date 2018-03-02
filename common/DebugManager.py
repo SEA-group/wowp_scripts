@@ -6,7 +6,7 @@ import zlib
 import config_consts
 from Math import *
 from MultiUpdate import MultiUpdate
-from consts import IS_CLIENT, IS_CELLAPP, IS_BASEAPP
+from consts import IS_CLIENT, IS_CELLAPP, IS_BASEAPP, IS_EDITOR
 from Singleton import singleton
 from debug_utils import LOG_ERROR
 from collections import defaultdict
@@ -59,6 +59,8 @@ def DEFAULT_GROUP_NAME():
         return 'CELL'
     if IS_BASEAPP:
         return 'BASE'
+    if IS_EDITOR:
+        return 'EDITOR'
     raise
 
 

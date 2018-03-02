@@ -184,6 +184,11 @@
       <context>objective</context>
       <name>destroyPlanes.for.heavy.fighter.completed</name>
     </event>
+    <event>
+      <type>coach</type>
+      <context>objective</context>
+      <name>destroyPlanes.for.navy.completed</name>
+    </event>
     <count>
       <value>	1	</value>
     </count>
@@ -218,6 +223,11 @@
       <type>coach</type>
       <context>objective</context>
       <name>defenceSectors.for.navy.completed</name>
+    </event>
+    <event>
+      <type>coach</type>
+      <context>objective</context>
+      <name>defenceSectors.for.heavy.fighter.completed</name>
     </event>
     <count>
       <value>	1	</value>
@@ -329,6 +339,11 @@
       <context>objective</context>
       <name>captureSectors.for.bomber.completed</name>
     </event>
+    <event>
+      <type>coach</type>
+      <context>objective</context>
+      <name>captureSectors.for.fighter.completed</name>
+    </event>
     <count>
       <value>	1	</value>
     </count>
@@ -398,6 +413,46 @@
       <type>coach</type>
       <context>objective</context>
       <name>destroyObjectParts.for.bomber.completed</name>
+    </event>
+    <count>
+      <value>	1	</value>
+    </count>
+  </subscriber>
+  <subscriber>
+    <name>	assistmaster	</name>
+    <client>
+      <order>	9	</order>
+      <page>	0	</page>
+      <multiple>	true	</multiple>
+      <name>
+        <locale>MEDAL_NAME_ASSISTMASTER</locale>
+      </name>
+      <description>
+        <locale>MEDAL_DESCRIPTION_ASSISTMASTER</locale>
+      </description>
+      <level>
+        <locale>MEDAL_LEVEL_LIMIT</locale>
+      </level>
+      <icon>
+        <small>icons/awards/achievements/acServiceAssistMaster.dds</small>
+        <big>icons/awards/achievementsInfo/acServiceAssistMaster.dds</big>
+        <faded>icons/awards/achievements/acServiceAssistMaster_Outline.dds</faded>
+      </icon>
+    </client>
+    <event>
+      <type>coach</type>
+      <context>objective</context>
+      <name>teamwork.for.fighter.completed</name>
+    </event>
+    <event>
+      <type>coach</type>
+      <context>objective</context>
+      <name>teamwork.for.navy.completed</name>
+    </event>
+    <event>
+      <type>coach</type>
+      <context>objective</context>
+      <name>teamwork.for.heavy.fighter.completed</name>
     </event>
     <count>
       <value>	1	</value>

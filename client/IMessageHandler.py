@@ -263,28 +263,24 @@ def ticketsReceived(imsg):
 
 def buyQuestChips(imsg):
     imsg['msgHeader'] = localizeMessages('LOBBY_HEADER_BOUGHT')
-    imsg['msgType'] = MESSAGE_TYPE.BUY_AIRCRAFT
-    questChips = imsg['msgData']['questChips']
+    imsg['msgType'] = MESSAGE_TYPE.BUY_QUEST_CHIPS
+    questChips = imsg['msgData']['count']
     imsg['msgData']['questChips'] = '{0}'.format(abs(int(questChips)))
     imsg['msgData']['msgBody'] = localizeLobby('LOBBY_MESSAGE_SERTIFICATE_SUCCESFULL_PURCHASE')
     return imsg
 
 
 def buyQuestAndSpendCurrency(imsg):
-    imsg['msgType'] = MESSAGE_TYPE.BUY_AIRCRAFT
-    imsg['msgHeader'] = localizeMessages('LOBBY_HEADER_BOUGHT')
-    buy = imsg['msgData']['buy']
-    questChips = imsg['msgData']['questChips']
-    credits = imsg['msgData']['credits']
-    tickets = imsg['msgData']['tickets']
-    gold = imsg['msgData']['gold']
-    questName = imsg['msgData']['name']
-    if questName.isupper():
+    buy = imsg['msgData'].get('buy', True)
+    questChips = imsg['msgData'].get('questChips', 0) + imsg['msgData'].pop('certificates', 0)
+    credits = imsg['msgData'].get('credits', 0)
+    tickets = imsg['msgData'].get('tickets', 0)
+    gold = imsg['msgData'].get('gold', 0)
+    questName = imsg['msgData'].get('name', '')
+    if questName and questName.isupper():
         questName = localizeLobby(questName, color='FFFFFF')
-    groupID = imsg['msgData']['groupID']
-    del imsg['msgData']['buy']
-    del imsg['msgData']['name']
-    del imsg['msgData']['groupID']
+    imsg['msgData'].pop('buy', False)
+    imsg['msgData'].pop('name', None)
     imsg['msgData']['questChips'] = '-{0}'.format(abs(int(questChips))) if questChips != 0 else ''
     imsg['msgData']['credits'] = '-{0}'.format(abs(int(credits))) if credits != 0 else ''
     imsg['msgData']['tickets'] = '-{0}'.format(abs(int(tickets))) if tickets != 0 else ''
@@ -805,7 +801,7 @@ def giftPlaneI15dm2(imsg):
 def giftPlane(imsg):
     imsg['msgHeader'] = localizeLobby('SYSTEM_MESSAGE_I-15BIS-DM2_RECEIVED')
     planeName = db.DBLogic.g_instance.getAircraftName(imsg['msgData']['planeID'])
-    imsg['msgData'] = dict(msgBody='{0} {1}'.format(localizeLobby('LOBBY_CREW_HEADER_PLANE'), localizeAirplane(planeName)), planeID=imsg['msgData']['planeID'])
+    imsg['msgData'] = dict(msgBody='{0} {1}'.format(localizeLobby('LOBBY_CREW_HEADER_PLANE'), localizeAirplane(planeName)), planeID=imsg['msgData']['planeID'], actionSetID=imsg['msgData']['actionSetID'])
     return imsg
 
 
@@ -1418,7 +1414,7 @@ _MESSAGE_HANDLERS = {MESSAGE_TYPE.MOTD: motd,
  MESSAGE_TYPE.END_OF_SELL_GOLD_ITEMS: endOfSellGoldItems,
  MESSAGE_TYPE.COMPENSATION_QUEST_CHIPS: compensationQuestChips,
  MESSAGE_TYPE.BUY_QUEST_CHIPS: buyQuestChips,
- MESSAGE_TYPE.SPEND_BUYING_QUEST: buyQuestAndSpendCurrency,
+ MESSAGE_TYPE.BUY_QUEST_SKIP: buyQuestAndSpendCurrency,
  MESSAGE_TYPE.WAR_CASH_PAY_TICKET: warCashPayTicket,
  MESSAGE_TYPE.WARNING_END_OF_ACTION_SUMMER: endActionSummer,
  MESSAGE_TYPE.WINDOW_BELTS_RECHARGED: beltsRecharged,
@@ -1439,7 +1435,8 @@ _MESSAGE_HANDLERS = {MESSAGE_TYPE.MOTD: motd,
  MESSAGE_TYPE.BUY_PACK_INFO: buyPackInfo,
  MESSAGE_TYPE.SECRET_SANTA_ACHIEVEMENT: handleWithOutTransform,
  MESSAGE_TYPE.BOMBER_ASSEMBLED: handleWithOutTransform,
- MESSAGE_TYPE.GAME_EVENT_OBJECT_COMPLETED: handleWithOutTransform}
+ MESSAGE_TYPE.GAME_EVENT_OBJECT_COMPLETED: handleWithOutTransform,
+ MESSAGE_TYPE.ACHIEVEMENT_ADDED: handleWithOutTransform}
 
 def handle(imsg):
     try:

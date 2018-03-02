@@ -66,11 +66,6 @@
     <battleLoadingIconPath>icons/planesPreview/usa/f15c.dds</battleLoadingIconPath>
     <previewIconPath>icons/planesPreview/usa/f15c.dds</previewIconPath>
     <longName>Curtiss F-15C</longName>
-    <bBoxes>
-      <mainBox>
-        <size>14 4 14</size>
-      </mainBox>
-    </bBoxes>
     <parts>
       <part>
         <name>	hull	</name>
@@ -81,21 +76,25 @@
           <id>	1	</id>
           <bBoxes>
             <bbox>
-              <position>	0.000000 1.260000 -2.655000	</position>
-              <size>	1.440000 1.530000 9.630000	</size>
-              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
-              <armorBack>	5.000000 5.000000 5.000000	</armorBack>
+              <position>	0.000000 1.323910 -2.547506	</position>
+              <size>	0.720000 0.900000 9.900001	</size>
               <absorption>	0.800000	</absorption>
-              <rotation>	0.050000 0.000000 0.000000 1.000000	</rotation>
+              <rotation>	0.031627 0.000000 0.000000 0.999500	</rotation>
+            </bbox>
+            <bbox>
+              <position>	0.000000 0.566826 -0.192973	</position>
+              <size>	1.260000 1.530000 5.400000	</size>
+              <absorption>	0.800000	</absorption>
+              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
             </bbox>
           </bBoxes>
           <health>100%</health>
-          <componentType>Pilot</componentType>
+          <componentType>	Hull	</componentType>
           <componentXml>server.todo.xml</componentXml>
           <states>
             <state>
               <id>	1	</id>
-              <stateHelthCfc>1.0</stateHelthCfc>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
               <model>vehicles/airplanes/american/US50_F15C/normal/lod0/fuselage_01.model</model>
               <animationController>
               </animationController>
@@ -112,7 +111,7 @@
             </state>
             <state>
               <id>	2	</id>
-              <stateHelthCfc>0.55</stateHelthCfc>
+              <stateHelthCfc>	0.550000	</stateHelthCfc>
               <model>vehicles/airplanes/american/US50_F15C/crash/lod0/fuselage_01.model</model>
               <affectedParts>
                 <part>
@@ -143,7 +142,7 @@
               </affectedParts>
               <usage>
               </usage>
-              <stateHelthCfc>0.0</stateHelthCfc>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
               <model>vehicles/airplanes/american/US50_F15C/crash/lod0/fuselage_01.model</model>
               <animationController>
               </animationController>
@@ -161,7 +160,7 @@
             <state>
               <id>	4	</id>
               <usage>crash</usage>
-              <stateHelthCfc>0.0</stateHelthCfc>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
               <model>vehicles/airplanes/american/US50_F15C/crash/lod0/fuselage_01.model</model>
               <animationController>
               </animationController>
@@ -180,6 +179,8 @@
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <fireMountPoint>
+          </fireMountPoint>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -191,10 +192,8 @@
           <id>	1	</id>
           <bBoxes>
             <bbox>
-              <position>	0.000000 0.540000 2.970000	</position>
-              <size>	1.440000 1.620000 1.530000	</size>
-              <armorFront>	30.000000 30.000000 60.000000	</armorFront>
-              <armorBack>	30.000000 30.000000 30.000000	</armorBack>
+              <position>	0.000000 0.540000 3.172846	</position>
+              <size>	1.350000 1.350000 1.350000	</size>
               <absorption>	1.000000	</absorption>
               <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
             </bbox>
@@ -261,6 +260,12 @@
                   <mountPoint>HP_engine_01</mountPoint>
                 </effect>
               </effectState>
+              <animationController>
+              </animationController>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateAnimation>
+              </stateAnimation>
             </state>
             <state>
               <id>	2	</id>
@@ -328,6 +333,12 @@
                   <mountPoint>HP_engine_01</mountPoint>
                 </effect>
               </effectState>
+              <animationController>
+              </animationController>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateAnimation>
+              </stateAnimation>
             </state>
             <state>
               <id>	3	</id>
@@ -401,6 +412,12 @@
                   <mountPoint>plane/HP_nozzle_01</mountPoint>
                 </effect>
               </effectOnStart>
+              <animationController>
+              </animationController>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateAnimation>
+              </stateAnimation>
             </state>
             <state>
               <id>	4	</id>
@@ -441,11 +458,19 @@
                   <mountPoint>plane/HP_nozzle_02</mountPoint>
                 </effect>
               </effectState>
+              <animationController>
+              </animationController>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateAnimation>
+              </stateAnimation>
             </state>
           </states>
           <repairDestructedAfter>	20.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <fireMountPoint>
+          </fireMountPoint>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -457,8 +482,8 @@
           <id>	1	</id>
           <bBoxes>
             <bbox>
-              <position>	0.000000 0.450000 -3.600000	</position>
-              <size>	0.990000 0.900000 1.980000	</size>
+              <position>	0.000000 0.592879 -3.332602	</position>
+              <size>	1.350000 1.350000 1.350000	</size>
               <armorFront>	30.000000 30.000000 60.000000	</armorFront>
               <armorBack>	30.000000 30.000000 30.000000	</armorBack>
               <absorption>	1.000000	</absorption>
@@ -627,24 +652,14 @@
           <id>	1	</id>
           <bBoxes>
             <bbox>
-              <position>	0.000000 1.710000 -0.315000	</position>
-              <size>	0.810000 0.450000 1.530000	</size>
-              <armorFront>	5.000000 5.000000 20.000000	</armorFront>
-              <armorBack>	5.000000 5.000000 5.000000	</armorBack>
-              <absorption>0.8</absorption>
-              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
-            </bbox>
-            <bbox>
-              <position>	0.000000 1.620000 -0.270000	</position>
-              <size>	0.540000 0.990000 1.260000	</size>
-              <armorFront>	5.000000 5.000000 5.000000	</armorFront>
-              <armorBack>	5.000000 5.000000 5.000000	</armorBack>
-              <absorption>0.8</absorption>
+              <position>	0.000000 1.627412 0.045250	</position>
+              <size>	0.900000 0.900000 0.900000	</size>
+              <absorption>	1.000000	</absorption>
               <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
             </bbox>
           </bBoxes>
           <health>10%</health>
-          <componentType>	Hull	</componentType>
+          <componentType>Pilot</componentType>
           <componentXml>server.todo.xml</componentXml>
           <states>
             <state>
@@ -664,14 +679,37 @@
                 </item>
               </subItems>
               <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
               <fallingOutModel>
               </fallingOutModel>
-              <stateFireChance>	0.200000	</stateFireChance>
               <stateAnimation>
               </stateAnimation>
             </state>
             <state>
               <id>	2	</id>
+              <stateHelthCfc>	0.500000	</stateHelthCfc>
+              <usage>
+              </usage>
+              <model>vehicles/airplanes/american/US50_F15C/normal/lod0/pilot_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/american/US50_F15C/normal/lod0/head_01.model</model>
+                  <mountPoint>HP_head</mountPoint>
+                  <animatorName>
+                  </animatorName>
+                </item>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	3	</id>
               <stateHelthCfc>	0.000000	</stateHelthCfc>
               <usage>
               </usage>
@@ -687,14 +725,14 @@
                 </item>
               </subItems>
               <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
               <fallingOutModel>
               </fallingOutModel>
-              <stateFireChance>	0.200000	</stateFireChance>
               <stateAnimation>
               </stateAnimation>
             </state>
             <state>
-              <id>	3	</id>
+              <id>	4	</id>
               <stateHelthCfc>	-1.000000	</stateHelthCfc>
               <usage>fall, crash</usage>
               <model>
@@ -702,14 +740,14 @@
               <animationController>
               </animationController>
               <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
               <fallingOutModel>
               </fallingOutModel>
-              <stateFireChance>	0.200000	</stateFireChance>
               <stateAnimation>
               </stateAnimation>
             </state>
             <state>
-              <id>	4	</id>
+              <id>	5	</id>
               <stateHelthCfc>	-1.000000	</stateHelthCfc>
               <usage>hangar</usage>
               <model>
@@ -717,41 +755,31 @@
               <animationController>
               </animationController>
               <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
               <fallingOutModel>
               </fallingOutModel>
-              <stateFireChance>	0.200000	</stateFireChance>
               <stateAnimation>
               </stateAnimation>
             </state>
           </states>
-          <fireMountPoint>
-          </fireMountPoint>
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <fireMountPoint>
+          </fireMountPoint>
         </upgrade>
         <upgrade>
           <id>	2	</id>
           <bBoxes>
             <bbox>
-              <position>	0.000000 1.710000 -0.315000	</position>
-              <size>	0.810000 0.450000 1.530000	</size>
-              <armorFront>	5.000000 5.000000 20.000000	</armorFront>
-              <armorBack>	5.000000 5.000000 5.000000	</armorBack>
-              <absorption>0.8</absorption>
-              <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
-            </bbox>
-            <bbox>
-              <position>	0.000000 1.620000 -0.270000	</position>
-              <size>	0.540000 0.990000 1.260000	</size>
-              <armorFront>	5.000000 5.000000 5.000000	</armorFront>
-              <armorBack>	5.000000 5.000000 5.000000	</armorBack>
-              <absorption>0.8</absorption>
+              <position>	0.000000 1.720412 -0.003981	</position>
+              <size>	0.900000 0.900000 0.900000	</size>
+              <absorption>	1.000000	</absorption>
               <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
             </bbox>
           </bBoxes>
           <health>10%</health>
-          <componentType>	Hull	</componentType>
+          <componentType>Pilot</componentType>
           <componentXml>server.todo.xml</componentXml>
           <states>
             <state>
@@ -771,9 +799,9 @@
                 </item>
               </subItems>
               <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
               <fallingOutModel>
               </fallingOutModel>
-              <stateFireChance>	0.200000	</stateFireChance>
               <stateAnimation>
               </stateAnimation>
             </state>
@@ -794,14 +822,37 @@
                 </item>
               </subItems>
               <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
               <fallingOutModel>
               </fallingOutModel>
-              <stateFireChance>	0.200000	</stateFireChance>
               <stateAnimation>
               </stateAnimation>
             </state>
             <state>
               <id>	3	</id>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
+              <usage>
+              </usage>
+              <model>vehicles/airplanes/american/US50_F15C/normal/lod0/pilotF_01.model</model>
+              <animationController>
+              </animationController>
+              <subItems>
+                <item>
+                  <model>vehicles/airplanes/american/US50_F15C/normal/lod0/headF_01.model</model>
+                  <mountPoint>HP_head</mountPoint>
+                  <animatorName>
+                  </animatorName>
+                </item>
+              </subItems>
+              <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
+              <fallingOutModel>
+              </fallingOutModel>
+              <stateAnimation>
+              </stateAnimation>
+            </state>
+            <state>
+              <id>	4	</id>
               <stateHelthCfc>	-1.000000	</stateHelthCfc>
               <usage>fall, crash</usage>
               <model>
@@ -809,14 +860,14 @@
               <animationController>
               </animationController>
               <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
               <fallingOutModel>
               </fallingOutModel>
-              <stateFireChance>	0.200000	</stateFireChance>
               <stateAnimation>
               </stateAnimation>
             </state>
             <state>
-              <id>	4	</id>
+              <id>	5	</id>
               <stateHelthCfc>	-1.000000	</stateHelthCfc>
               <usage>hangar</usage>
               <model>
@@ -824,18 +875,18 @@
               <animationController>
               </animationController>
               <stateAction>	0	</stateAction>
+              <stateFireChance>	0.200000	</stateFireChance>
               <fallingOutModel>
               </fallingOutModel>
-              <stateFireChance>	0.200000	</stateFireChance>
               <stateAnimation>
               </stateAnimation>
             </state>
           </states>
-          <fireMountPoint>
-          </fireMountPoint>
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <fireMountPoint>
+          </fireMountPoint>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -916,20 +967,24 @@
           <id>	1	</id>
           <bBoxes>
             <box>
-              <position>	-4.050000 0.315000 -1.080000	</position>
-              <size>	6.570000 0.360000 2.340000	</size>
-              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
-              <armorBack>	5.000000 5.000000 10.000000	</armorBack>
-              <absorption>0.2</absorption>
-              <rotation>	0.000000 0.030000 -0.070000 1.000000	</rotation>
+              <position>	-4.860940 0.526566 -0.945000	</position>
+              <size>	4.050000 0.270000 2.250000	</size>
+              <absorption>	0.200000	</absorption>
+              <rotation>	0.000000 0.000000 -0.069829 0.997559	</rotation>
             </box>
+            <bbox>
+              <position>	-1.845000 0.135000 -1.125000	</position>
+              <size>	2.070000 0.360000 3.150000	</size>
+              <absorption>	0.200000	</absorption>
+              <rotation>	0.000000 0.000000 0.039968 -0.999201	</rotation>
+            </bbox>
           </bBoxes>
           <componentType>	LeftWing	</componentType>
           <componentXml>server.todo.xml</componentXml>
           <states>
             <state>
               <id>	1	</id>
-              <stateHelthCfc>1.0</stateHelthCfc>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
               <model>vehicles/airplanes/american/US50_F15C/normal/lod0/wL_01.model</model>
               <animationController>
               </animationController>
@@ -978,7 +1033,7 @@
             </state>
             <state>
               <id>	2	</id>
-              <stateHelthCfc>0.55</stateHelthCfc>
+              <stateHelthCfc>	0.550000	</stateHelthCfc>
               <model>vehicles/airplanes/american/US50_F15C/crash/lod0/wL_01.model</model>
               <animationController>
               </animationController>
@@ -1033,7 +1088,7 @@
             </state>
             <state>
               <id>	3	</id>
-              <stateHelthCfc>0.55</stateHelthCfc>
+              <stateHelthCfc>	0.550000	</stateHelthCfc>
               <model>vehicles/airplanes/american/US50_F15C/crash/lod0/wL_01.model</model>
               <animationController>
               </animationController>
@@ -1094,7 +1149,7 @@
             </state>
             <state>
               <id>	4	</id>
-              <stateHelthCfc>0.0</stateHelthCfc>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
               <model>vehicles/airplanes/american/US50_F15C/crash/lod0/wLcap_01.model</model>
               <animationController>
               </animationController>
@@ -1109,8 +1164,6 @@
               <usage>crash</usage>
               <effectState>
                 <effect>
-                  <name>
-                  </name>
                   <mountPoint>plane/HP_wLhit</mountPoint>
                 </effect>
               </effectState>
@@ -1125,6 +1178,7 @@
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <health>20.0</health>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -1136,12 +1190,16 @@
           <id>	1	</id>
           <bBoxes>
             <bbox>
-              <position>	4.050000 0.405000 -1.125000	</position>
-              <size>	6.570000 0.360000 2.340000	</size>
-              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
-              <armorBack>	5.000000 5.000000 10.000000	</armorBack>
-              <absorption>0.2</absorption>
-              <rotation>	0.000000 -0.030000 0.060000 1.000000	</rotation>
+              <position>	1.865892 0.121006 -1.122028	</position>
+              <size>	2.070000 0.360000 3.150000	</size>
+              <absorption>	0.200000	</absorption>
+              <rotation>	0.000000 0.000000 0.043662 0.999046	</rotation>
+            </bbox>
+            <bbox>
+              <position>	4.898556 0.529199 -0.945000	</position>
+              <size>	4.050000 0.270000 2.250000	</size>
+              <absorption>	0.200000	</absorption>
+              <rotation>	0.000000 0.000000 -0.069829 -0.997559	</rotation>
             </bbox>
           </bBoxes>
           <componentType>RightWing</componentType>
@@ -1149,7 +1207,7 @@
           <states>
             <state>
               <id>	1	</id>
-              <stateHelthCfc>1.0</stateHelthCfc>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
               <model>vehicles/airplanes/american/US50_F15C/normal/lod0/wR_01.model</model>
               <animationController>
               </animationController>
@@ -1198,7 +1256,7 @@
             </state>
             <state>
               <id>	2	</id>
-              <stateHelthCfc>0.55</stateHelthCfc>
+              <stateHelthCfc>	0.550000	</stateHelthCfc>
               <model>vehicles/airplanes/american/US50_F15C/crash/lod0/wR_01.model</model>
               <animationController>
               </animationController>
@@ -1253,7 +1311,7 @@
             </state>
             <state>
               <id>	3	</id>
-              <stateHelthCfc>0.55</stateHelthCfc>
+              <stateHelthCfc>	0.550000	</stateHelthCfc>
               <model>vehicles/airplanes/american/US50_F15C/crash/lod0/wR_01.model</model>
               <animationController>
               </animationController>
@@ -1314,7 +1372,7 @@
             </state>
             <state>
               <id>	4	</id>
-              <stateHelthCfc>0.0</stateHelthCfc>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
               <model>vehicles/airplanes/american/US50_F15C/crash/lod0/wRcap_01.model</model>
               <animationController>
               </animationController>
@@ -1329,8 +1387,6 @@
               <usage>crash</usage>
               <effectState>
                 <effect>
-                  <name>
-                  </name>
                   <mountPoint>plane/HP_wRhit</mountPoint>
                 </effect>
               </effectState>
@@ -1345,6 +1401,7 @@
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <health>20.0</health>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -1356,19 +1413,15 @@
           <id>	1	</id>
           <bBoxes>
             <bbox>
-              <position>	0.000000 4.140000 -7.875000	</position>
-              <size>	5.940000 0.180000 1.710000	</size>
-              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
-              <armorBack>	5.000000 5.000000 10.000000	</armorBack>
-              <absorption>0.2</absorption>
+              <position>	0.000000 4.139999 -8.052625	</position>
+              <size>	5.058640 0.180000 1.448623	</size>
+              <absorption>	0.200000	</absorption>
               <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
             </bbox>
             <bbox>
-              <position>	0.000000 2.655000 -7.965001	</position>
-              <size>	0.180000 2.790000 2.070000	</size>
-              <armorFront>	5.000000 5.000000 10.000000	</armorFront>
-              <armorBack>	5.000000 5.000000 10.000000	</armorBack>
-              <absorption>0.2</absorption>
+              <position>	0.000000 2.756983 -8.039383	</position>
+              <size>	0.180000 2.520000 1.980000	</size>
+              <absorption>	0.200000	</absorption>
               <rotation>	0.000000 0.000000 0.000000 1.000000	</rotation>
             </bbox>
           </bBoxes>
@@ -1378,7 +1431,7 @@
           <states>
             <state>
               <id>	1	</id>
-              <stateHelthCfc>1.0</stateHelthCfc>
+              <stateHelthCfc>	1.000000	</stateHelthCfc>
               <model>vehicles/airplanes/american/US50_F15C/normal/lod0/tail_01.model</model>
               <animationController>
               </animationController>
@@ -1406,12 +1459,10 @@
               <fallingOutModel>
               </fallingOutModel>
               <stateFireChance>	0.200000	</stateFireChance>
-              <stateAnimation>
-              </stateAnimation>
             </state>
             <state>
               <id>	2	</id>
-              <stateHelthCfc>0.6</stateHelthCfc>
+              <stateHelthCfc>	0.600000	</stateHelthCfc>
               <model>vehicles/airplanes/american/US50_F15C/crash/lod0/tail_01.model</model>
               <animationController>
               </animationController>
@@ -1439,18 +1490,16 @@
               <fallingOutModel>
               </fallingOutModel>
               <stateFireChance>	0.200000	</stateFireChance>
-              <stateAnimation>
-              </stateAnimation>
               <effectState>
                 <effect>
                   <name>crit_tail_damaged_yellow</name>
-                  <mountPoint>HP_elevator</mountPoint>
+                  <mountPoint>HP_rudder</mountPoint>
                 </effect>
               </effectState>
             </state>
             <state>
               <id>	3	</id>
-              <stateHelthCfc>0.6</stateHelthCfc>
+              <stateHelthCfc>	0.600000	</stateHelthCfc>
               <model>vehicles/airplanes/american/US50_F15C/crash/lod0/tail_01.model</model>
               <animationController>
               </animationController>
@@ -1478,44 +1527,34 @@
               <fallingOutModel>
               </fallingOutModel>
               <stateFireChance>	0.200000	</stateFireChance>
-              <stateAnimation>
-              </stateAnimation>
               <effectState>
                 <effect>
                   <name>crit_tail_damaged</name>
-                  <mountPoint>HP_elevator</mountPoint>
+                  <mountPoint>HP_rudder</mountPoint>
                 </effect>
               </effectState>
               <effectOnStart>
                 <effect>
                   <name>crit_tail_expl</name>
-                  <mountPoint>HP_elevator</mountPoint>
+                  <mountPoint>HP_rudder</mountPoint>
                 </effect>
               </effectOnStart>
             </state>
             <state>
               <id>	4	</id>
-              <usage>crash</usage>
-              <stateHelthCfc>0.0</stateHelthCfc>
+              <stateHelthCfc>	0.000000	</stateHelthCfc>
               <model>vehicles/airplanes/american/US50_F15C/crash/lod0/tailCap_01.model</model>
-              <animationController>
-              </animationController>
+              <stateAction>	1	</stateAction>
+              <usage>crash</usage>
+              <fallingOutModel>vehicles/airplanes/american/US50_F15C/crash/lod0/tailEnd_01.model</fallingOutModel>
+              <stateFireChance>	0.200000	</stateFireChance>
               <effectState>
                 <effect>
-                  <name>
-                  </name>
                   <mountPoint>plane/HP_tailHit</mountPoint>
                 </effect>
               </effectState>
-              <stateAction>	1	</stateAction>
-              <fallingOutModel>vehicles/airplanes/american/US50_F15C/crash/lod0/tailEnd_01.model</fallingOutModel>
-              <stateFireChance>	0.200000	</stateFireChance>
-              <stateAnimation>
-              </stateAnimation>
             </state>
           </states>
-          <fireMountPoint>
-          </fireMountPoint>
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
@@ -1601,6 +1640,7 @@
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <health>20.0</health>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -1683,6 +1723,7 @@
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <health>20.0</health>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -1751,6 +1792,7 @@
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <health>20.0</health>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -1819,6 +1861,7 @@
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <health>20.0</health>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -1889,6 +1932,7 @@
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <health>20.0</health>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -1949,6 +1993,7 @@
           <repairDestructedAfter>	-1.000000	</repairDestructedAfter>
           <componentTypeQuota>	1.000000	</componentTypeQuota>
           <componentPosition>Front</componentPosition>
+          <health>20.0</health>
         </upgrade>
         <groupId>	0	</groupId>
       </part>
@@ -1956,8 +2001,8 @@
     <visualSettings>
       <hangarConfig>medium</hangarConfig>
       <hangarLandingPart>rearLandingGear</hangarLandingPart>
-      <rudderMaxAngle>	14	</rudderMaxAngle>
-      <elevatorMaxAngle>	14	</elevatorMaxAngle>
+      <rudderMaxAngle>	20	</rudderMaxAngle>
+      <elevatorMaxAngle>	25	</elevatorMaxAngle>
       <camera>camera04_Big_Tail</camera>
       <surfaceSettings>
         <detailTexture>vehicles/airplanes/american/US50_F15C/US50_F15C_detail.dds</detailTexture>
@@ -2511,6 +2556,11 @@
                 <icoPath>vehicles/airplanes/common/decals/decor/preview/95.dds</icoPath>
               </decal>
               <decal>
+                <id>	119	</id>
+                <texture>vehicles/airplanes/common/decals/decor/usa/28.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/usa/preview/28.dds</icoPath>
+              </decal>
+              <decal>
                 <id>	120	</id>
                 <texture>vehicles/airplanes/common/decals/decor/96.dds</texture>
                 <icoPath>vehicles/airplanes/common/decals/decor/preview/96.dds</icoPath>
@@ -2910,6 +2960,36 @@
                 <texture>vehicles/airplanes/common/decals/decor/128.dds</texture>
                 <icoPath>vehicles/airplanes/common/decals/decor/preview/128.dds</icoPath>
               </decal>
+              <decal>
+                <id>	201	</id>
+                <texture>vehicles/airplanes/common/decals/decor/129.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/129.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	202	</id>
+                <texture>vehicles/airplanes/common/decals/decor/130.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/130.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	203	</id>
+                <texture>vehicles/airplanes/common/decals/decor/131.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/131.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	204	</id>
+                <texture>vehicles/airplanes/common/decals/decor/132.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/132.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	205	</id>
+                <texture>vehicles/airplanes/common/decals/decor/133.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/133.dds</icoPath>
+              </decal>
+              <decal>
+                <id>	206	</id>
+                <texture>vehicles/airplanes/common/decals/decor/134.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decor/preview/134.dds</icoPath>
+              </decal>
             </decals>
           </decalGroup>
           <decalGroup>
@@ -3148,6 +3228,13 @@
                 <bottomColor>	0.847000 0.847000 0.847000 1.000000	</bottomColor>
                 <glossinessOffset>	0.140000	</glossinessOffset>
               </decal>
+              <decal>
+                <id>	13	</id>
+                <texture>vehicles/airplanes/american/US50_F15C/US50_F15C_kit.dds</texture>
+                <icoPath>vehicles/airplanes/american/US50_F15C/preview/US50_F15C_kit.dds</icoPath>
+                <bottomColor>	0.388000 0.506000 0.541000 1.000000	</bottomColor>
+                <glossinessOffset>	0.000000	</glossinessOffset>
+              </decal>
             </decals>
           </decalGroup>
           <decalGroup>
@@ -3324,12 +3411,17 @@
                 <texture>vehicles/airplanes/common/decals/decoration/byPlane/american/US50_F15C/girls/05.dds</texture>
                 <icoPath>vehicles/airplanes/common/decals/decoration/byPlane/american/US50_F15C/girls/preview/05.dds</icoPath>
               </decal>
+              <decal>
+                <id>	22	</id>
+                <texture>vehicles/airplanes/common/decals/decoration/byPlane/american/US50_F15C/lvl_03/06.dds</texture>
+                <icoPath>vehicles/airplanes/common/decals/decoration/byPlane/american/US50_F15C/lvl_03/preview/06.dds</icoPath>
+              </decal>
             </decals>
           </decalGroup>
         </decalsSettings>
       </surfaceSettings>
-      <cameraOffset>	0.000000 0.500000 -0.750000	</cameraOffset>
-      <hudPlaneScheme>mig13</hudPlaneScheme>
+      <cameraOffset>	0.000000 0.500000 -0.900000	</cameraOffset>
+      <hudPlaneScheme>	f15c	</hudPlaneScheme>
     </visualSettings>
     <description>
       <textDescription>MARKET_AIRPLANE_DESCRIPTION_F-15C</textDescription>
@@ -3399,7 +3491,7 @@
     </magnetPoint>
   </magnetPoints>
   <HPmass>
-    <position>	0.000000 0.000000 0.000000	</position>
+    <position>	0.000000 0.495000 -0.900000	</position>
     <direction>	0.000000 0.000000 0.000000	</direction>
   </HPmass>
 </f-15c.xml>

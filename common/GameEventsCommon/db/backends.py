@@ -39,6 +39,10 @@ class ModelBackend(object):
         return NotImplementedError
 
 
+class EMPTY_PARENT_CLASS:
+    pass
+
+
 class BundledBackend(ModelBackend):
     REQUIRED = ('modules',)
 
@@ -67,7 +71,7 @@ class BundledBackend(ModelBackend):
         self._cache[key] = items
         return items
 
-    def get(self, id = None, type = None, group = None, name = None, parent = None):
+    def get(self, id = None, type = None, group = None, name = None, parent = EMPTY_PARENT_CLASS):
         attrs = ('get',
          id,
          type,
@@ -88,7 +92,7 @@ class BundledBackend(ModelBackend):
                 params['group'] = group
             if name is not None:
                 params['name'] = name
-            if parent is not None:
+            if parent != EMPTY_PARENT_CLASS:
                 params['parent'] = parent
             for db in self._databases.itervalues():
                 item = db.get(**params)
@@ -116,7 +120,7 @@ class BundledBackend(ModelBackend):
         self._cache[cacheKey] = items
         return items
 
-    def filter(self, id = None, type = None, group = None, name = None, parent = None):
+    def filter(self, id = None, type = None, group = None, name = None, parent = EMPTY_PARENT_CLASS):
         attrs = ('filter',
          id,
          type,
@@ -137,7 +141,7 @@ class BundledBackend(ModelBackend):
                 params['group'] = group
             if name is not None:
                 params['name'] = name
-            if parent is not None:
+            if parent != EMPTY_PARENT_CLASS:
                 params['parent'] = parent
             for db in self._databases.itervalues():
                 items.extend(db.filter(**params))

@@ -1,5 +1,6 @@
 # Embedded file name: scripts/client/gui/HUD2/hudFeatures.py
 import messenger
+from gui.HUD2.features.Consumables.ConsumableManager import ConsumableManager
 from _preparedBattleData_db import preparedBattleData
 from gui.Scaleform.utils.MeasurementSystem import MeasurementSystem
 from PlayerAvatarProxy import PlayerAvatarProxy
@@ -26,6 +27,7 @@ class Feature:
     STATE_MANAGER = 'StateManager'
     XMPP_CHAT = 'XmppChat'
     BATTLE_REPLAY = 'BattleReplay'
+    CONSUMABLES_MANAGER = 'ConsumablesManager'
 
 
 def buildHudFeatures(gameModel, features, stateManager):
@@ -58,3 +60,4 @@ def buildHudFeatures(gameModel, features, stateManager):
     features.provide(Feature.XMPP_CHAT, messenger.g_xmppChatHandler)
     features.provide(Feature.BATTLE_REPLAY, BattleReplay.g_replay)
     features.provide(Feature.BATTLE_HINTS, GameEnvironment.getBattleHintMessenger())
+    features.provide(Feature.CONSUMABLES_MANAGER, ConsumableManager())

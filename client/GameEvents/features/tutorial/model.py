@@ -21,4 +21,4 @@ class TutorialObject(GameEventObject):
          'tooltip': self.localized.tooltip}
 
 
-TutorialModel = Model(backend=BundledBackend(modules=['_ge_tutorial_new', '_ge_tutorial_old']), instance=TutorialObject)
+TutorialModel = Model(backend=BundledBackend(modules=['_ge_tutorial_new', '_ge_tutorial_old']), instances=[(TutorialObject, {})])

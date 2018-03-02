@@ -1,5 +1,18 @@
 <gameactionsmanager.def>
+  <Implements>
+    <Interface>GameActionsManagerBotInterface</Interface>
+  </Implements>
   <AppealRadius>	2000	</AppealRadius>
+  <TempProperties>
+    <_GameActionsManager__subscribersOnLeavingCell>
+    </_GameActionsManager__subscribersOnLeavingCell>
+    <_GameActionsManager__battleTriggerEventMap>
+    </_GameActionsManager__battleTriggerEventMap>
+    <logger>
+    </logger>
+    <destroyed>
+    </destroyed>
+  </TempProperties>
   <Properties>
     <arena>
       <Type>MAILBOX</Type>
@@ -83,5 +96,10 @@
         <state>UINT8</state>
       </Args>
     </onASBomberStateChanged>
+    <onBattleTriggerEvent>
+      <Args>
+        <triggerEvent>	INT8	</triggerEvent>
+      </Args>
+    </onBattleTriggerEvent>
   </CellMethods>
 </gameactionsmanager.def>

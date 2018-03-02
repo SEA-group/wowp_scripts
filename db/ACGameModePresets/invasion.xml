@@ -1,0 +1,76 @@
+<invasion.xml>
+  <battleDurationDynamic>	240	</battleDurationDynamic>
+  <battleDuration>	1000	</battleDuration>
+  <superiorityGlobalTickPeriod>	5	</superiorityGlobalTickPeriod>
+  <pointsToWin>	0	</pointsToWin>
+  <defenceHPointsToWin>	0	</defenceHPointsToWin>
+  <eliminationByDefence>	True	</eliminationByDefence>
+  <eliminationByOffense>	True	</eliminationByOffense>
+  <winByTimeout>	0	</winByTimeout>
+  <winByDynamicTimeout>	0	</winByDynamicTimeout>
+  <resourcePointsStart>	600	</resourcePointsStart>
+  <endGameConditions>
+    <condition>holdingpoints</condition>
+    <condition>timerunningout</condition>
+    <condition>elimination</condition>
+    <condition>dynamicTimeRunningOut</condition>
+  </endGameConditions>
+  <respawn>
+    <respawnModel>
+      <respawn_strategy>
+        <teamIndex>	0	</teamIndex>
+        <unlimited>	True	</unlimited>
+        <avatarLives>	0	</avatarLives>
+        <type>individual_tl</type>
+        <strategy>
+          <cooldownBase>	5	</cooldownBase>
+          <cooldownMinValue>	10	</cooldownMinValue>
+          <cooldownReduceStep>	10	</cooldownReduceStep>
+          <cooldownDeathPenalty>	15	</cooldownDeathPenalty>
+          <deathTeamLimit>	10	</deathTeamLimit>
+        </strategy>
+        <availablePlaneTypes>
+          <planeTypeId>	1	</planeTypeId>
+          <planeTypeId>	2	</planeTypeId>
+          <planeTypeId>	4	</planeTypeId>
+        </availablePlaneTypes>
+      </respawn_strategy>
+      <respawn_strategy>
+        <teamIndex>	1	</teamIndex>
+        <unlimited>	True	</unlimited>
+        <avatarLives>	0	</avatarLives>
+        <type>individual_tl</type>
+        <strategy>
+          <cooldownBase>	5	</cooldownBase>
+          <cooldownMinValue>	10	</cooldownMinValue>
+          <cooldownReduceStep>	10	</cooldownReduceStep>
+          <cooldownDeathPenalty>	15	</cooldownDeathPenalty>
+          <deathTeamLimit>	20	</deathTeamLimit>
+        </strategy>
+        <availablePlaneTypes>
+          <planeTypeId>	1	</planeTypeId>
+          <planeTypeId>	2	</planeTypeId>
+          <planeTypeId>	3	</planeTypeId>
+          <planeTypeId>	4	</planeTypeId>
+          <planeTypeId>	5	</planeTypeId>
+        </availablePlaneTypes>
+      </respawn_strategy>
+    </respawnModel>
+  </respawn>
+  <uiSettings>
+    <widgetsList>
+      <teamIndex>	0	</teamIndex>
+      <title>袧械 写邪泄褌械 锌褉芯褌懈胁薪懈泻褍 蟹邪褏胁邪褌懈褌褜 胁褋械 褌械褉褉懈褌芯褉懈懈 蟹邪 芯褌胁械写械薪薪芯械 胁褉械屑褟!</title>
+      <isShowSetorsView>	True	</isShowSetorsView>
+      <isShowDominationView>False</isShowDominationView>
+      <isShowTeamRespawnsView>	True	</isShowTeamRespawnsView>
+    </widgetsList>
+    <widgetsList>
+      <teamIndex>	1	</teamIndex>
+      <title>袟邪褏胁邪褌懈褌械 胁褋械 褌械褉褉懈褌芯褉懈懈 蟹邪 芯褌胁械写械薪薪芯械 胁褉械屑褟!</title>
+      <isShowSetorsView>	True	</isShowSetorsView>
+      <isShowDominationView>False</isShowDominationView>
+      <isShowTeamRespawnsView>	True	</isShowTeamRespawnsView>
+    </widgetsList>
+  </uiSettings>
+</invasion.xml>

@@ -54,6 +54,7 @@ class LastPlayerManager(object):
     def _onBattleEvent(self, batleEventID):
         if batleEventID == SETTINGS.BATTLE_EVENT_TYPE.RESPAWN_DISABLE:
             self.__disableRespawns = True
+            BigWorld.setRespawnDisabled(True)
 
     def __checkLastInTeam(self):
         if BigWorld.player().state != EntityStates.GAME_CONTROLLED or not self.__disableRespawns:

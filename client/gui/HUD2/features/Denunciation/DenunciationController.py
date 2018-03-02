@@ -4,6 +4,8 @@ from debug_utils import LOG_DEBUG, LOG_ERROR
 from gui.HUD2.core.DataPrims import DataController
 from gui.HUD2.core.MessageRouter import message
 from gui.HUD2.hudFeatures import Feature
+from gui.HUD2.HUDExecutionManager import HUDExecutionManager
+from gui.HUD2.features.Denunciation.DenunciationSource import DenunciationSource
 TAG = 'Denunciation'
 
 class DenunciationController(DataController):
@@ -26,8 +28,7 @@ class DenunciationController(DataController):
         LOG_DEBUG(TAG + ' ', playerID, demId, violatorKind)
         if DBId is not None:
             self.onDenunciation(DBId, demId, violatorKind)
-            import BWPersonality
-            self._model.denunciationsLeft = BWPersonality.g_initPlayerInfo.denunciationsLeft
+            HUDExecutionManager.call(DenunciationSource.update)
         else:
             LOG_ERROR(TAG + '__onDenunciation - playerID(%s) not in voipMap, or voipMap not defined' % playerID)
         return

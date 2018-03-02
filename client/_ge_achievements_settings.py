@@ -113,3 +113,8 @@ DB.achievements.client.group[10] = Dummy()
 DB.achievements.client.group[10].locale = 'ACHIEVEMENTS_TAB_AWARDS_NEW_YEAR'
 DB.achievements.client.group[10].name = 'newyear'
 DB.achievements.client.group[10].order = 11
+DB.achievements.client.group.insert(11, None)
+DB.achievements.client.group[11] = Dummy()
+DB.achievements.client.group[11].locale = 'LOBBY_EVENT_NAME_WESTWALL'
+DB.achievements.client.group[11].name = 'marathon'
+DB.achievements.client.group[11].order = 12

@@ -173,6 +173,11 @@ class ValidationMixin(object):
     def validationErrors(self):
         return self.validator.errors
 
+    @property
+    @getOrCreateValidator
+    def validationError(self):
+        return self.validator.errors.values()[0]
+
     @classmethod
     @getOrCreateValidator
     def registerValidator(cls, *validators):
@@ -320,3 +325,23 @@ def MultipleDecorators(methods = (), decorators = ()):
             return obj
 
     return MultipleDecoratorsMeta
+
+
+def validate(context, *validators):
+
+    def decorator(f):
+
+        def wrapper(*args, **kwargs):
+            validatorContext = {key:value(*args, **kwargs) for key, value in context.iteritems()}
+            try:
+                for validator in validators:
+                    validator(**validatorContext)
+
+            except ValidationError:
+                return
+
+            return f(*args, **kwargs)
+
+        return wrapper
+
+    return decorator

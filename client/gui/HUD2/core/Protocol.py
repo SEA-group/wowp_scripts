@@ -12,6 +12,9 @@ class ScaleformProtocol:
         """
         self._sender({'updateState': state})
 
+    def updateBattleGameMode(self, gameMode):
+        self._sender({'initBattleGameMode': gameMode})
+
     def toggleHUDVisibility(self):
         self._sender('toggleHUDVisibility')
 
